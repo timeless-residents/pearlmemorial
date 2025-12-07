@@ -130,13 +130,13 @@
         line-height: 1.1;
         margin-bottom: 1rem;
         animation: fadeUp 1.2s ease-out;
-        color: #1a1a1f;
+        color: #f5f3ef;
     }
 
     .hero h1 span {
         display: block;
         font-size: 0.4em;
-        color: #8b6914;
+        color: #d4b156;
         letter-spacing: 0.3em;
         text-transform: uppercase;
         font-family: var(--font-body);
@@ -218,7 +218,7 @@
         font-weight: 400;
         margin-bottom: 2rem;
         line-height: 1.2;
-        color: #2a2a2f;
+        color: #f0ede8;
     }
 
     h3 {
@@ -226,7 +226,7 @@
         font-size: 1.5rem;
         font-weight: 500;
         margin-bottom: 1rem;
-        color: #8b6914;
+        color: #d4b156;
     }
 
     p {
@@ -532,8 +532,8 @@
     .cta-secondary {
         padding: 1.2rem 3rem;
         background: transparent;
-        border: 1px solid #5a5a5f;
-        color: #2a2a2f;
+        border: 1px solid #a0a0a5;
+        color: #f0ede8;
         text-decoration: none;
         font-size: 0.9rem;
         letter-spacing: 0.15em;
@@ -542,8 +542,8 @@
     }
 
     .cta-secondary:hover {
-        border-color: #1a1a1f;
-        color: #1a1a1f;
+        border-color: #ffffff;
+        color: #ffffff;
     }
 
     /* Footer */
@@ -680,6 +680,48 @@
         .cta-buttons {
             flex-direction: column;
             align-items: center;
+        }
+    }
+
+    /* Light mode overrides */
+    @media (prefers-color-scheme: light) {
+        .hero h1 {
+            color: #1a1a1f;
+        }
+        
+        .hero h1 span {
+            color: #8b6914;
+        }
+        
+        h2 {
+            color: #1a1a1f;
+        }
+        
+        h3 {
+            color: #8b6914;
+        }
+        
+        .cta-secondary {
+            border-color: #5a5a5f;
+            color: #2a2a2f;
+        }
+        
+        .cta-secondary:hover {
+            border-color: #1a1a1f;
+            color: #1a1a1f;
+        }
+        
+        .hero-cta {
+            border-color: #8b6914;
+            color: #8b6914;
+        }
+        
+        .hero-tagline {
+            color: #5a5a5f;
+        }
+        
+        p {
+            color: #4a4a4f;
         }
     }
 </style>
