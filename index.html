@@ -63,11 +63,11 @@
         z-index: 100;
         display: flex;
         gap: 0.5rem;
-        background: rgba(10, 10, 15, 0.8);
+        background: rgba(245, 243, 240, 0.95);
         backdrop-filter: blur(10px);
         padding: 0.5rem;
         border-radius: 2rem;
-        border: 1px solid rgba(201, 169, 98, 0.2);
+        border: 1px solid rgba(201, 169, 98, 0.3);
     }
 
     .lang-switch a {
@@ -137,7 +137,7 @@
     .hero h1 span {
         display: block;
         font-size: 0.4em;
-        color: #d4b156;
+        color: var(--color-accent);
         letter-spacing: 0.3em;
         text-transform: uppercase;
         font-family: var(--font-body);
@@ -533,7 +533,7 @@
     .cta-secondary {
         padding: 1.2rem 3rem;
         background: transparent;
-        border: 1px solid #a0a0a5;
+        border: 1px solid var(--color-text-muted);
         color: var(--color-text);
         text-decoration: none;
         font-size: 0.9rem;
@@ -543,7 +543,7 @@
     }
 
     .cta-secondary:hover {
-        border-color: #ffffff;
+        border-color: var(--color-text);
         color: var(--color-text);
     }
 
@@ -681,48 +681,6 @@
         .cta-buttons {
             flex-direction: column;
             align-items: center;
-        }
-    }
-
-    /* Light mode overrides */
-    @media (prefers-color-scheme: light) {
-        .hero h1 {
-            color: #1a1a1f;
-        }
-        
-        .hero h1 span {
-            color: #8b6914;
-        }
-        
-        h2 {
-            color: #1a1a1f;
-        }
-        
-        h3 {
-            color: #8b6914;
-        }
-        
-        .cta-secondary {
-            border-color: #5a5a5f;
-            color: #2a2a2f;
-        }
-        
-        .cta-secondary:hover {
-            border-color: #1a1a1f;
-            color: #1a1a1f;
-        }
-        
-        .hero-cta {
-            border-color: #8b6914;
-            color: #8b6914;
-        }
-        
-        .hero-tagline {
-            color: #5a5a5f;
-        }
-        
-        p {
-            color: #4a4a4f;
         }
     }
 </style>
