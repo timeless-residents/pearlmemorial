@@ -2,63 +2,63 @@
 
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timeless Eternal Hope | 美しい記憶を永遠に刻む</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Noto+Serif+JP:wght@200;300;400;500;600&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --color-bg: #f5f3f0;
-            --color-bg-subtle: #ebe7e1;
-            --color-text: #1a1815;
-            --color-text-muted: #6b6760;
-            --color-accent: #c9a962;
-            --color-accent-glow: rgba(201, 169, 98, 0.15);
-            --color-crystal: #7eb8c9;
-            --color-crystal-glow: rgba(126, 184, 201, 0.15);
-            --font-display: 'Noto Serif JP', 'Cormorant Garamond', Georgia, serif;
-            --font-body: 'Outfit', 'Noto Serif JP', -apple-system, sans-serif;
-        }
+    <!DOCTYPE html>
 
-```
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+    <html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Timeless Eternal Hope | 美しい記憶を永遠に刻む</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Noto+Serif+JP:wght@200;300;400;500;600&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+        <style>
+            :root {
+                --color-bg: #f5f3f0;
+                --color-bg-subtle: #ebe7e1;
+                --color-text: #1a1815;
+                --color-text-muted: #6b6760;
+                --color-accent: #c9a962;
+                --color-accent-glow: rgba(201, 169, 98, 0.15);
+                --color-crystal: #7eb8c9;
+                --color-crystal-glow: rgba(126, 184, 201, 0.15);
+                --font-display: 'Noto Serif JP', 'Cormorant Garamond', Georgia, serif;
+                --font-body: 'Outfit', 'Noto Serif JP', -apple-system, sans-serif;
+            }
 
-    html {
-        scroll-behavior: smooth;
-    }
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
 
-    body {
-        font-family: var(--font-body);
-        background: var(--color-bg);
-        color: var(--color-text);
-        line-height: 1.9;
-        font-weight: 300;
-        overflow-x: hidden;
-    }
+            html {
+                scroll-behavior: smooth;
+            }
 
-    /* Grain overlay */
-    body::before {
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-        opacity: 0.03;
-        pointer-events: none;
-        z-index: 1000;
-    }
+            body {
+                font-family: var(--font-body);
+                background: var(--color-bg);
+                color: var(--color-text);
+                line-height: 1.9;
+                font-weight: 300;
+                overflow-x: hidden;
+            }
 
-    /* Language switcher */
-    .lang-switch {
-        position: fixed;
+            /* Grain overlay */
+            body::before {
+                content: '';
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+                opacity: 0.03;
+                pointer-events: none;
+                z-index: 1000;
+            }
+
         top: 2rem;
         right: 2rem;
         z-index: 100;
@@ -935,6 +935,102 @@
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
             }
+
+            /* Print styles */
+            @media print {
+                body {
+                    background: white !important;
+                    color: black !important;
+                }
+
+                * {
+                    background: transparent !important;
+                    color: black !important;
+                    box-shadow: none !important;
+                    text-shadow: none !important;
+                }
+
+                .lang-switch {
+                    display: none !important;
+                }
+
+                .scroll-hint {
+                    display: none !important;
+                }
+
+                section {
+                    page-break-inside: avoid;
+                }
+
+                .hero {
+                    background: white !important;
+                    color: black !important;
+                    min-height: auto;
+                    padding: 2rem;
+                }
+
+                .hero h1 {
+                    color: black !important;
+                }
+
+                .hero h1 span {
+                    color: #8b6914 !important;
+                }
+
+                h2, h3 {
+                    color: black !important;
+                }
+
+                p {
+                    color: black !important;
+                }
+
+                .hero-cta {
+                    border: 1px solid black !important;
+                    color: black !important;
+                }
+
+                .cta-primary {
+                    background: #8b6914 !important;
+                    color: white !important;
+                }
+
+                .cta-secondary {
+                    border: 1px solid black !important;
+                    color: black !important;
+                }
+
+                .section-label {
+                    color: #8b6914 !important;
+                }
+
+                .material-card,
+                .journey-card,
+                .pearl-story {
+                    border: 1px solid black !important;
+                    background: white !important;
+                }
+
+                .material-card:hover {
+                    box-shadow: none !important;
+                    transform: none !important;
+                }
+
+                .gift-stat {
+                    background: white !important;
+                    border: 1px solid black !important;
+                }
+
+                footer {
+                    border-top: 1px solid black !important;
+                }
+
+                a {
+                    color: black !important;
+                    text-decoration: underline !important;
+                }
+            }
+    </style>
         });
     }, {
         threshold: 0.1,
