@@ -4,1106 +4,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timeless Eternal Hope | Engraving Beautiful Memories Forever</title>
+    <title>Timeless Eternal Hope | You Are Allowed to Exist</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         :root {
-            --color-bg: #f5f3f0;
-            --color-bg-subtle: #ebe7e1;
-            --color-text: #1a1815;
-            --color-text-muted: #6b6760;
+            --color-bg: #0a0a0a;
+            --color-bg-subtle: #111111;
+            --color-text: #f5f0e8;
+            --color-text-muted: #8a8578;
             --color-accent: #c9a962;
             --color-accent-glow: rgba(201, 169, 98, 0.15);
-            --color-crystal: #7eb8c9;
-            --color-crystal-glow: rgba(126, 184, 201, 0.15);
-            --font-display: 'Cormorant Garamond', Georgia, serif;
-            --font-body: 'Outfit', -apple-system, sans-serif;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: var(--font-body);
-            background: var(--color-bg);
-            color: var(--color-text);
-            line-height: 1.7;
-            font-weight: 300;
-            overflow-x: hidden;
-        }
-
-        /* Grain overlay */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-            opacity: 0.03;
-            pointer-events: none;
-            z-index: 1000;
-        }
-
-        /* Language switcher */
-        .lang-switch {
-            position: fixed;
-            top: 2rem;
-            right: 2rem;
-            z-index: 100;
-            display: flex;
-            gap: 0.5rem;
-            background: rgba(245, 243, 240, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 0.5rem;
-            border-radius: 2rem;
-            border: 1px solid rgba(201, 169, 98, 0.3);
-        }
-
-        .lang-switch a {
-            color: var(--color-text-muted);
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 1.5rem;
-            font-size: 0.85rem;
-            font-weight: 400;
-            transition: all 0.3s ease;
-            letter-spacing: 0.05em;
-        }
-
-        .lang-switch a:hover {
-            color: var(--color-text);
-        }
-
-        .lang-switch a.active {
-            background: var(--color-accent);
-            color: var(--color-bg);
-        }
-
-        /* Hero section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 4rem 2rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(ellipse 80% 50% at 50% 0%, var(--color-accent-glow) 0%, transparent 50%),
-                radial-gradient(ellipse 60% 40% at 20% 80%, var(--color-crystal-glow) 0%, transparent 40%),
-                radial-gradient(ellipse 50% 50% at 80% 60%, rgba(201, 169, 98, 0.1) 0%, transparent 40%);
-            pointer-events: none;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 900px;
-        }
-
-        .hero h1 {
-            font-family: var(--font-display);
-            font-size: clamp(3rem, 10vw, 7rem);
-            font-weight: 400;
-            letter-spacing: 0.02em;
-            line-height: 1.1;
-            margin-bottom: 1rem;
-            animation: fadeUp 1.2s ease-out;
-            color: var(--color-text);
-        }
-
-        .hero h1 span {
-            display: block;
-            font-size: 0.4em;
-            color: var(--color-accent);
-            letter-spacing: 0.3em;
-            text-transform: uppercase;
-            font-family: var(--font-body);
-            font-weight: 400;
-            margin-bottom: 1rem;
-        }
-
-        .hero-tagline {
-            font-family: var(--font-display);
-            font-size: clamp(1.2rem, 3vw, 1.8rem);
-            font-style: italic;
-            color: var(--color-text-muted);
-            margin-bottom: 3rem;
-            animation: fadeUp 1.2s ease-out 0.2s backwards;
-        }
-
-        .hero-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 1rem 2.5rem;
-            background: transparent;
-            border: 1px solid var(--color-accent);
-            color: var(--color-text);
-            text-decoration: none;
-            font-size: 0.9rem;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            transition: all 0.4s ease;
-            animation: fadeUp 1.2s ease-out 0.4s backwards;
-        }
-
-        .hero-cta:hover {
-            background: var(--color-accent);
-            color: var(--color-bg);
-            box-shadow: 0 0 40px var(--color-accent-glow);
-        }
-
-        .scroll-hint {
-            position: absolute;
-            bottom: 3rem;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--color-text-muted);
-            font-size: 0.75rem;
-            letter-spacing: 0.2em;
-            animation: float 3s ease-in-out infinite;
-        }
-
-        .scroll-hint::after {
-            content: '';
-            width: 1px;
-            height: 40px;
-            background: linear-gradient(to bottom, var(--color-accent), transparent);
-        }
-
-        /* Section styling */
-        section {
-            padding: 8rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-label {
-            font-size: 0.75rem;
-            letter-spacing: 0.3em;
-            text-transform: uppercase;
-            color: var(--color-accent);
-            margin-bottom: 1rem;
-        }
-
-        h2 {
-            font-family: var(--font-display);
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            font-weight: 400;
-            margin-bottom: 2rem;
-            line-height: 1.2;
-            color: var(--color-text);
-        }
-
-        h3 {
-            font-family: var(--font-display);
-            font-size: 1.5rem;
-            font-weight: 500;
-            margin-bottom: 1rem;
-            color: var(--color-text);
-        }
-
-        p {
-            color: var(--color-text-muted);
-            max-width: 65ch;
-            margin-bottom: 1.5rem;
-        }
-
-        /* Mission section */
-        .mission {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 6rem;
-            align-items: center;
-        }
-
-        .mission-visual {
-            position: relative;
-            height: 500px;
-        }
-
-        .crystal {
-            position: absolute;
-            width: 300px;
-            height: 400px;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%) rotate(-5deg);
-            background: linear-gradient(135deg, 
-                rgba(126, 184, 201, 0.1) 0%,
-                rgba(201, 169, 98, 0.05) 50%,
-                rgba(126, 184, 201, 0.1) 100%);
-            border: 1px solid rgba(126, 184, 201, 0.3);
-            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-            animation: crystalGlow 4s ease-in-out infinite;
-        }
-
-        .crystal::before {
-            content: '';
-            position: absolute;
-            inset: 20px;
-            background: linear-gradient(135deg, 
-                rgba(255, 255, 255, 0.05) 0%,
-                transparent 50%);
-            clip-path: inherit;
-        }
-
-        /* Pearl story */
-        .pearl-story {
-            background: var(--color-bg-subtle);
-            border-radius: 2px;
-            padding: 4rem;
-            border-left: 2px solid var(--color-accent);
-            margin: 4rem 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .pearl-story::before {
-            content: '"';
-            position: absolute;
-            top: 1rem;
-            left: 2rem;
-            font-family: var(--font-display);
-            font-size: 8rem;
-            color: var(--color-accent);
-            opacity: 0.1;
-            line-height: 1;
-        }
-
-        .pearl-name {
-            font-family: var(--font-display);
-            font-size: 1.2rem;
-            color: var(--color-accent);
-            font-style: italic;
-        }
-
-        /* Materials grid */
-        .materials-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            margin-top: 4rem;
-        }
-
-        .material-card {
-            background: linear-gradient(180deg, var(--color-bg-subtle) 0%, var(--color-bg) 100%);
-            border: 1px solid rgba(201, 169, 98, 0.1);
-            padding: 2.5rem 2rem;
-            text-align: center;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .material-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
-            transform: scaleX(0);
-            transition: transform 0.4s ease;
-        }
-
-        .material-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .material-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(201, 169, 98, 0.3);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-        }
-
-        .material-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .material-card h4 {
-            font-family: var(--font-display);
-            font-size: 1.4rem;
-            font-weight: 400;
-            margin-bottom: 0.5rem;
-            color: var(--color-text);
-        }
-
-        .material-subtitle {
-            font-size: 0.8rem;
-            letter-spacing: 0.1em;
-            color: var(--color-accent);
-            margin-bottom: 1rem;
-        }
-
-        .material-card p {
-            font-size: 0.9rem;
-            margin-bottom: 0;
-        }
-
-        .material-lifespan {
-            margin-top: 1.5rem;
-            padding-top: 1rem;
-            border-top: 1px solid rgba(201, 169, 98, 0.1);
-            font-size: 0.75rem;
-            color: var(--color-text-muted);
-            letter-spacing: 0.1em;
-        }
-
-        /* Journey section */
-        .journey-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            margin-top: 4rem;
-        }
-
-        .journey-card {
-            padding: 3rem;
-            background: var(--color-bg-subtle);
-            border: 1px solid rgba(201, 169, 98, 0.1);
-            position: relative;
-        }
-
-        .journey-card h3 {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .journey-number {
-            font-family: var(--font-display);
-            font-size: 3rem;
-            color: var(--color-accent);
-            opacity: 0.3;
-            font-weight: 300;
-        }
-
-        /* Services */
-        .services-list {
-            margin-top: 4rem;
-        }
-
-        .service-item {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 4rem;
-            padding: 4rem 0;
-            border-bottom: 1px solid rgba(201, 169, 98, 0.1);
-            align-items: start;
-        }
-
-        .service-item:last-child {
-            border-bottom: none;
-        }
-
-        .service-icon {
-            font-size: 3rem;
-        }
-
-        /* Family section */
-        .family-section {
-            background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-subtle) 50%, var(--color-bg) 100%);
-            padding: 8rem 2rem;
-        }
-
-        .family-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 3rem;
-            max-width: 1000px;
-            margin: 4rem auto 0;
-        }
-
-        .family-member {
-            text-align: center;
-            padding: 2rem;
-        }
-
-        .family-member h4 {
-            font-family: var(--font-display);
-            font-size: 1.5rem;
-            font-weight: 400;
-            margin-bottom: 0.5rem;
-        }
-
-        .family-role {
-            font-size: 0.8rem;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--color-accent);
-            margin-bottom: 1rem;
-        }
-
-        /* Gift economy */
-        .gift-highlight {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            margin-top: 4rem;
-            align-items: center;
-        }
-
-        .gift-stat {
-            text-align: center;
-            padding: 3rem;
-            background: var(--color-bg-subtle);
-            border: 1px solid rgba(201, 169, 98, 0.2);
-        }
-
-        .gift-stat-value {
-            font-family: var(--font-display);
-            font-size: 4rem;
-            color: var(--color-accent);
-            line-height: 1;
-            margin-bottom: 0.5rem;
-        }
-
-        .gift-stat-label {
-            font-size: 0.9rem;
-            color: var(--color-text-muted);
-        }
-
-        /* CTA section */
-        .cta-section {
-            text-align: center;
-            padding: 10rem 2rem;
-            background: 
-                radial-gradient(ellipse 80% 50% at 50% 100%, var(--color-accent-glow) 0%, transparent 50%);
-        }
-
-        .cta-section h2 {
-            max-width: 800px;
-            margin: 0 auto 2rem;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 3rem;
-        }
-
-        .cta-primary {
-            padding: 1.2rem 3rem;
-            background: var(--color-accent);
-            color: var(--color-bg);
-            text-decoration: none;
-            font-size: 0.9rem;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            transition: all 0.4s ease;
-        }
-
-        .cta-primary:hover {
-            box-shadow: 0 0 50px var(--color-accent-glow);
-            transform: translateY(-2px);
-        }
-
-        .cta-secondary {
-            padding: 1.2rem 3rem;
-            background: transparent;
-            border: 1px solid var(--color-text-muted);
-            color: var(--color-text);
-            text-decoration: none;
-            font-size: 0.9rem;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            transition: all 0.4s ease;
-        }
-
-        .cta-secondary:hover {
-            border-color: var(--color-text);
-            color: var(--color-text);
-        }
-
-        /* Footer */
-        footer {
-            padding: 4rem 2rem;
-            text-align: center;
-            border-top: 1px solid rgba(201, 169, 98, 0.1);
-        }
-
-        .footer-memorial {
-            font-family: var(--font-display);
-            font-style: italic;
-            color: var(--color-text-muted);
-            margin-bottom: 2rem;
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-            margin-bottom: 2rem;
-        }
-
-        .footer-links a {
-            color: var(--color-text-muted);
-            text-decoration: none;
-            font-size: 0.85rem;
-            transition: color 0.3s ease;
-        }
-
-        .footer-links a:hover {
-            color: var(--color-accent);
-        }
-
-        .footer-location {
-            font-size: 0.75rem;
-            letter-spacing: 0.2em;
-            color: var(--color-text-muted);
-        }
-
-        /* Animations */
-        @keyframes fadeUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translateX(-50%) translateY(0);
-            }
-            50% {
-                transform: translateX(-50%) translateY(-10px);
-            }
-        }
-
-        @keyframes crystalGlow {
-            0%, 100% {
-                box-shadow: 0 0 60px var(--color-crystal-glow);
-            }
-            50% {
-                box-shadow: 0 0 100px var(--color-crystal-glow), 0 0 40px var(--color-accent-glow);
-            }
-        }
-
-        /* Scroll animations */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Responsive */
-        @media (max-width: 1024px) {
-            .mission {
-                grid-template-columns: 1fr;
-                gap: 4rem;
-            }
-
-            .mission-visual {
-                height: 300px;
-            }
-
-            .materials-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .journey-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .service-item {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            section {
-                padding: 5rem 1.5rem;
-            }
-
-            .materials-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .family-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .gift-highlight {
-                grid-template-columns: 1fr;
-            }
-
-            .pearl-story {
-                padding: 2.5rem;
-            }
-
-            .lang-switch {
-                top: 1rem;
-                right: 1rem;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-
-        /* Print styles */
-        @media print {
-            body {
-                background: white !important;
-                color: black !important;
-            }
-
-            * {
-                background: transparent !important;
-                color: black !important;
-                box-shadow: none !important;
-                text-shadow: none !important;
-            }
-
-            .lang-switch {
-                display: none !important;
-            }
-
-            .scroll-hint {
-                display: none !important;
-            }
-
-            section {
-                page-break-inside: avoid;
-                padding: 2rem;
-            }
-
-            .hero {
-                background: white !important;
-                color: black !important;
-                min-height: auto;
-                padding: 2rem;
-            }
-
-            .hero::before {
-                display: none !important;
-            }
-
-            .hero h1 {
-                color: black !important;
-            }
-
-            .hero h1 span {
-                color: #8b6914 !important;
-            }
-
-            h2, h3 {
-                color: black !important;
-            }
-
-            p {
-                color: black !important;
-            }
-
-            .hero-cta {
-                border: 1px solid black !important;
-                color: black !important;
-            }
-
-            .cta-primary {
-                background: #8b6914 !important;
-                color: white !important;
-                border: 1px solid #8b6914 !important;
-            }
-
-            .cta-secondary {
-                border: 1px solid black !important;
-                color: black !important;
-            }
-
-            .section-label {
-                color: #8b6914 !important;
-            }
-
-            .material-card,
-            .journey-card,
-            .pearl-story {
-                border: 1px solid black !important;
-                background: white !important;
-            }
-
-            .material-card::before {
-                display: none !important;
-            }
-
-            .material-card:hover {
-                box-shadow: none !important;
-                transform: none !important;
-            }
-
-            .gift-stat {
-                background: white !important;
-                border: 1px solid black !important;
-            }
-
-            .crystal {
-                display: none !important;
-            }
-
-            .pearl-story::before {
-                display: none !important;
-            }
-
-            footer {
-                border-top: 1px solid black !important;
-            }
-
-            a {
-                color: black !important;
-                text-decoration: underline !important;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="lang-switch">
-        <a href="index.html" class="active">EN</a>
-        <a href="index-ja.html">日本語</a>
-    </div>
-<header class="hero">
-    <div class="hero-content">
-        <h1>
-            <span>Engraving Beautiful Memories Forever</span>
-            Timeless Eternal Hope
-        </h1>
-        <p class="hero-tagline">That moment, that place, that person—etched into eternity.</p>
-        <a href="#order" class="hero-cta">
-            Begin Your Story
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
-        </a>
-    </div>
-    <div class="scroll-hint">
-        DISCOVER
-    </div>
-</header>
-
-<section id="mission" class="fade-in">
-    <div class="mission">
-        <div class="mission-content">
-            <span class="section-label">The Mission</span>
-            <h2>Engrave beautiful memories that last forever</h2>
-            <p>A fleeting encounter. Time spent with loved ones. A beloved pet. A landscape lost to time. A promise to keep.</p>
-            <p>They seem destined to fade and disappear. But is that really true?</p>
-            <p>Memories can become eternal when given form. The moment the laser touches the material, what's engraved isn't just letters or patterns—it's your feelings, your story, the very time you've cherished, given an eternal shape.</p>
-        </div>
-        <div class="mission-visual">
-            <div class="crystal"></div>
-        </div>
-    </div>
-</section>
-
-<section id="pearl" class="fade-in">
-    <span class="section-label">Pearl's Story</span>
-    <h2>Named in Memory of Pearl (2007–2025)</h2>
-    
-    <div class="pearl-story">
-        <p>For 18 years, Pearl—a toy poodle—lived as part of our family. He was there for everything, sharing our joys and sorrows.</p>
-        <p>In his final years, Pearl's body could no longer move freely. He needed care, and family outings became difficult. Visiting our hometown, traveling overnight, going far away—we couldn't leave Pearl behind, but we couldn't take him either. For a long time, we gave up our freedom to travel.</p>
-        <p>In January 2025, Pearl quietly passed away.</p>
-        <p>Yet we couldn't let Pearl go. We placed his remains in a portable memorial made of shells and resin. In that moment, we realized: <strong>We could go anywhere with Pearl.</strong></p>
-        <p>The homecoming trips we couldn't take while he was alive. Overseas travel. Showing Pearl the world. By creating a portable grave, we reclaimed our freedom to travel. And Pearl would travel to more places than he ever did in life.</p>
-        <p class="pearl-name">This WiFi network carries his name. Pearl Memorial WiFi.</p>
-    </div>
-</section>
-
-<section id="why" class="fade-in">
-    <span class="section-label">Why We Engrave</span>
-    <h2>From a birthtime unknown</h2>
-    <p>Founder Takuya grew up not knowing the "beginning" of his own story. His birth time was unclear. No accurate record existed. It may seem trivial—just a birth time. But it's the first "imprint" of a life.</p>
-    <p>Without knowing your birth time, you cannot cast a proper horoscope. Your ascendant, your house placements—unreadable. You cannot even ask the stars "Who am I?"</p>
-    <p>That's why we want to engrave someone's existence with certainty. "You were here." "You definitely existed." "Your life had meaning." To leave that proof in a form that won't disappear.</p>
-    <p><strong>That moment, that place, that person only—a beautiful memory for eternity.</strong></p>
-</section>
-
-<section id="materials" class="fade-in">
-    <span class="section-label">Materials</span>
-    <h2>From earth-returning to eternal</h2>
-    <p>We engrave memories across four material tiers, each with its own relationship to time.</p>
-
-    <div class="materials-grid">
-        <div class="material-card">
-            <div class="material-icon">🌿</div>
-            <h4>Moment</h4>
-            <div class="material-subtitle">Returns to Earth</div>
-            <p>Palm leaves, ti leaves, driftwood, natural materials from Maui's land</p>
-            <div class="material-lifespan">Perfect for: Travel memories, chance encounters</div>
-        </div>
-
-        <div class="material-card">
-            <div class="material-icon">🪵</div>
-            <h4>Memory</h4>
-            <div class="material-subtitle">A Lifetime</div>
-            <p>Wood, charcoal, coconut shell, ulu (breadfruit) wood</p>
-            <div class="material-lifespan">Perfect for: Life milestones, gifts for loved ones</div>
-        </div>
-
-        <div class="material-card">
-            <div class="material-icon">🪨</div>
-            <h4>Legacy</h4>
-            <div class="material-subtitle">Across Generations</div>
-            <p>Metal (stainless, aluminum, copper), stone, lava rock</p>
-            <div class="material-lifespan">Perfect for: Family heirlooms, monuments</div>
-        </div>
-
-        <div class="material-card">
-            <div class="material-icon">💎</div>
-            <h4>Eternal</h4>
-            <div class="material-subtitle">Forever</div>
-            <p>Quartz glass with internal engraving—millions of years of durability</p>
-            <div class="material-lifespan">Perfect for: Memories beyond a lifetime</div>
-        </div>
-    </div>
-</section>
-
-<section id="maui" class="fade-in">
-    <span class="section-label">Our Roots in Maui</span>
-    <h2>Ancestors' graves rest on this land</h2>
-    <p>Our coming to Maui was no coincidence. Our main family line's ancestors sleep on this island. We bear the responsibility of grave keepers. We are here not as supporters, but as those rooted in this land.</p>
-    
-    <div class="journey-grid">
-        <div class="journey-card">
-            <h3><span class="journey-number">01</span> Lahaina Strong</h3>
-            <p>After the devastating 2023 Maui wildfires, we witnessed physical memories vanish in an instant—photos, homes, keepsakes, gravestones. Memories are fragile. That's why we need to know how to protect them.</p>
-        </div>
-        <div class="journey-card">
-            <h3><span class="journey-number">02</span> Global Perspective</h3>
-            <p>In Maui, we visited Western and Eastern cemeteries alike. Weathered gravestones. Unreadable names. The same thing was happening everywhere. This is a challenge shared by all humanity.</p>
-        </div>
-    </div>
-</section>
-
-<section id="services" class="fade-in">
-    <span class="section-label">Services</span>
-    <h2>Engraving today's memories today</h2>
-
-    <div class="services-list">
-        <div class="service-item">
-            <div>
-                <div class="service-icon">🔥</div>
-                <h3>Mobile Memorial Workshop</h3>
-            </div>
-            <div>
-                <p>We travel with Starlink satellite communication, portable power, and laser engraving equipment all in one bag. Connect to WiFi, place your order, receive your engraving on the spot.</p>
-                <p>"Today, here, engraved just for you." This isn't buying mass-produced souvenirs at a tourist spot. It's an experience of watching your unique memory take form before your eyes.</p>
-            </div>
-        </div>
-
-        <div class="service-item">
-            <div>
-                <div class="service-icon">🪦</div>
-                <h3>Memorial Stone QR</h3>
-            </div>
-            <div>
-                <p>Physical gravestones will eventually decay. Weathering, acid rain, earthquakes, typhoons, wildfires. No stone can defeat time and disaster.</p>
-                <p>But a QR code engraved on a gravestone connects to the digital world. When visitors scan it with their smartphones, the deceased's photos, videos, voice, and life records appear. Even if the gravestone crumbles, the memory remains.</p>
-            </div>
-        </div>
-
-        <div class="service-item">
-            <div>
-                <div class="service-icon">🛡️</div>
-                <h3>Disaster-Proof Memory</h3>
-            </div>
-            <div>
-                <p>The lesson of the 2023 Maui wildfire: Physical memories vanish in an instant. We propose "multi-layered memory backup."</p>
-                <p>Layer 1: Physical items (wood, metal, stone) — vulnerable to fire and flood. Layer 2: Cloud archive — depends on server stability and access rights. Layer 3: Quartz glass internal engraving — millions of years of durability, self-contained offline.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<div class="family-section fade-in">
-    <section>
-        <span class="section-label">The Sato Family</span>
-        <h2>A family of three living in Maui</h2>
-
-        <div class="family-grid">
-            <div class="family-member">
-                <h4>Takuya</h4>
-                <div class="family-role">Off-grid Infrastructure & Laser Engraving</div>
-                <p>Former Fujitsu engineer, venture CTO, Deloitte senior specialist. Now focused on disaster recovery volunteering.</p>
-            </div>
-            <div class="family-member">
-                <h4>Mina</h4>
-                <div class="family-role">Digital Marketing & Resin Art</div>
-                <p>18 years of pet care experience, dried flower preservation, hair accessory design.</p>
-            </div>
-            <div class="family-member">
-                <h4>Ito (5 years old)</h4>
-                <div class="family-role">Explorer & Dreamer</div>
-                <p>Curious, loves nature and animals, studying English.</p>
-            </div>
-        </div>
-    </section>
-</div>
-
-<section id="gift" class="fade-in">
-    <span class="section-label">Gift Economy</span>
-    <h2>First, we give</h2>
-    <p>Our activities are based on gift economy principles. Distribute handmade soap. Provide free WiFi. Share technology. By giving without expecting anything in return, trust is born. Trust returns in unpredictable forms.</p>
-
-    <div class="gift-highlight">
-        <div class="gift-stat">
-            <div class="gift-stat-value">$3,000+</div>
-            <div class="gift-stat-label">Value created from a few dollars of handmade soap</div>
-        </div>
-        <div>
-            <p>This isn't magic. When the "transaction between strangers" that monetary economy assumes transforms into a "community sharing face and context," the rules of exchange themselves change.</p>
-            <p>Pearl Memorial WiFi is also part of this gift. Connection is free. We ask for nothing. We just hope you'll learn our story.</p>
-        </div>
-    </div>
-</section>
-
-<section id="order" class="cta-section fade-in">
-    <span class="section-label">Order</span>
-    <h2>Engrave today's memory</h2>
-    <p>Your encounter with us through this WiFi connection is also a memory. Today, here, meeting you—that itself is a moment worth engraving for us.</p>
-    
-    <div class="cta-buttons">
-        <a href="https://pearl.memorial" target="_blank" rel="noopener noreferrer" class="cta-primary">Shop Now — Square Online</a>
-        <a href="https://calendly.com/pearlmemorial/pearlmemorialsession" target="_blank" rel="noopener noreferrer" class="cta-secondary">Custom Orders</a>
-    </div>
-</section>
-
-<section id="support" class="fade-in">
-    <span class="section-label">Support</span>
-    <h2>Support our mission</h2>
-    <p>Timeless Eternal Hope operates as the Sato family's mission. Not a corporation—a family project. If our story resonates with you, you can support us in these ways:</p>
-    
-    <div class="journey-grid">
-        <div class="journey-card">
-            <h3>Donation</h3>
-            <p>PayPal and Zelle available. Every contribution helps us continue engraving memories and working toward quartz glass internal engraving technology.</p>
-        </div>
-        <div class="journey-card">
-            <h3>Purchase & Share</h3>
-            <p>Use our memory engraving services. Gift them to someone special. Share our story with others. Find us at Honolua Bay.</p>
-        </div>
-    </div>
-</section>
-
-<footer>
-    <p class="footer-memorial">In loving memory of Pearl (2007–2025)<br>Now watching over the ocean he never saw in life, forever. 🐕</p>
-    
-    <div class="footer-links">
-        <a href="https://calendly.com/pearlmemorial/pearlmemorialsession" target="_blank" rel="noopener noreferrer">Contact</a>
-        <a href="https://www.instagram.com/pearl.memorial/" target="_blank" rel="noopener noreferrer">Instagram</a>
-    </div>
-
-    <div class="footer-links" style="margin-top: 1.5rem;">
-        <a href="https://pearl.memorial" target="_blank" rel="noopener noreferrer">Shop (Square)</a>
-        <a href="https://www.paypal.com/ncp/payment/SVPS6J8WXQU76" target="_blank" rel="noopener noreferrer">PayPal</a>
-        <span style="color: var(--color-text-muted); font-size: 0.85rem;">Zelle: business@satotakuya.jp</span>
-    </div>
-
-    <p class="footer-location">Mahalo 🌺<br>Timeless Eternal Hope · Maui, Hawaii</p>
-</footer>
-
-<script>
-    // Scroll animation
-    const fadeElements = document.querySelectorAll('.fade-in');
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    });
-
-    fadeElements.forEach(el => observer.observe(el));
-
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        });
-    });
-</script>
-</body>
-</html>
-    /* Section styling */
+            --color-warm: #e8d5b7;
+            --color-hope: #7eb8c9;
+            --font-display: 'Cormorant Garamond', serif;
+            --font-body: 'Zen Kaku Gothic New', sans-serif;
+        }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: var(--font-body);
+        font-weight: 300;
+        background: var(--color-bg);
+        color: var(--color-text);
+        line-height: 1.8;
+        font-size: 16px;
+        overflow-x: hidden;
+    }
+
+    /* Language Switch */
+    .lang-switch {
+        position: fixed;
+        top: 2rem;
+        right: 2rem;
+        z-index: 100;
+        display: flex;
+        gap: 0.5rem;
+        background: rgba(10, 10, 10, 0.8);
+        backdrop-filter: blur(10px);
+        padding: 0.5rem;
+        border-radius: 2rem;
+        border: 1px solid rgba(201, 169, 98, 0.2);
+    }
+
+    .lang-switch a {
+        padding: 0.5rem 1rem;
+        color: var(--color-text-muted);
+        text-decoration: none;
+        font-size: 0.8rem;
+        border-radius: 1.5rem;
+        transition: all 0.3s ease;
+    }
+
+    .lang-switch a.active {
+        background: var(--color-accent);
+        color: var(--color-bg);
+    }
+
+    /* Hero Section */
+    .hero {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        padding: 2rem;
+        background: 
+            radial-gradient(ellipse 60% 40% at 50% 0%, rgba(201, 169, 98, 0.08) 0%, transparent 60%),
+            radial-gradient(ellipse 80% 60% at 50% 100%, rgba(126, 184, 201, 0.05) 0%, transparent 50%);
+    }
+
+    .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        opacity: 0.03;
+        pointer-events: none;
+    }
+
+    .hero-content {
+        max-width: 900px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .hero-tagline {
+        font-size: 0.75rem;
+        letter-spacing: 0.4em;
+        text-transform: uppercase;
+        color: var(--color-accent);
+        margin-bottom: 2rem;
+        opacity: 0;
+        animation: fadeUp 1s ease forwards 0.3s;
+    }
+
+    .hero h1 {
+        font-family: var(--font-display);
+        font-size: clamp(3rem, 8vw, 6rem);
+        font-weight: 300;
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+        opacity: 0;
+        animation: fadeUp 1s ease forwards 0.5s;
+    }
+
+    .hero h1 em {
+        font-style: italic;
+        color: var(--color-hope);
+    }
+
+    .hero-subtitle {
+        font-family: var(--font-display);
+        font-size: clamp(1.2rem, 3vw, 1.8rem);
+        font-weight: 300;
+        color: var(--color-text-muted);
+        margin-bottom: 3rem;
+        font-style: italic;
+        opacity: 0;
+        animation: fadeUp 1s ease forwards 0.7s;
+    }
+
+    .hero-cta {
+        display: inline-block;
+        padding: 1.2rem 3rem;
+        border: 1px solid var(--color-accent);
+        color: var(--color-accent);
+        text-decoration: none;
+        font-size: 0.85rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        transition: all 0.4s ease;
+        opacity: 0;
+        animation: fadeUp 1s ease forwards 0.9s;
+    }
+
+    .hero-cta:hover {
+        background: var(--color-accent);
+        color: var(--color-bg);
+        box-shadow: 0 0 40px var(--color-accent-glow);
+    }
+
+    .scroll-indicator {
+        position: absolute;
+        bottom: 3rem;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 0.7rem;
+        letter-spacing: 0.3em;
+        color: var(--color-text-muted);
+        opacity: 0;
+        animation: fadeUp 1s ease forwards 1.2s, float 3s ease-in-out infinite 2s;
+    }
+
+    /* Sections */
     section {
         padding: 8rem 2rem;
-        max-width: 1200px;
+        max-width: 1100px;
         margin: 0 auto;
     }
 
     .section-label {
-        font-size: 0.75rem;
-        letter-spacing: 0.3em;
+        font-size: 0.7rem;
+        letter-spacing: 0.4em;
         text-transform: uppercase;
         color: var(--color-accent);
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
     }
 
     h2 {
         font-family: var(--font-display);
         font-size: clamp(2rem, 5vw, 3.5rem);
-        font-weight: 400;
+        font-weight: 300;
         margin-bottom: 2rem;
         line-height: 1.2;
-        color: var(--color-text);
     }
 
     h3 {
         font-family: var(--font-display);
         font-size: 1.5rem;
-        font-weight: 500;
+        font-weight: 400;
         margin-bottom: 1rem;
-        color: var(--color-text);
     }
 
     p {
@@ -1112,107 +207,279 @@
         margin-bottom: 1.5rem;
     }
 
-    /* Mission section */
-    .mission {
+    /* Core Message Section */
+    .core-message {
+        text-align: center;
+        padding: 10rem 2rem;
+        background: 
+            radial-gradient(ellipse 50% 50% at 50% 50%, rgba(126, 184, 201, 0.03) 0%, transparent 70%);
+    }
+
+    .core-message h2 {
+        font-size: clamp(2.5rem, 6vw, 4.5rem);
+        margin-bottom: 3rem;
+    }
+
+    .core-message .highlight {
+        color: var(--color-hope);
+        font-style: italic;
+    }
+
+    .core-pillars {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+        margin-top: 5rem;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .pillar {
+        padding: 2.5rem;
+        background: linear-gradient(180deg, var(--color-bg-subtle) 0%, transparent 100%);
+        border: 1px solid rgba(201, 169, 98, 0.1);
+        text-align: center;
+        transition: all 0.4s ease;
+    }
+
+    .pillar:hover {
+        border-color: rgba(201, 169, 98, 0.3);
+        transform: translateY(-5px);
+    }
+
+    .pillar-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .pillar h4 {
+        font-family: var(--font-display);
+        font-size: 1.3rem;
+        font-weight: 400;
+        margin-bottom: 0.5rem;
+        color: var(--color-text);
+    }
+
+    .pillar-subtitle {
+        font-size: 0.75rem;
+        letter-spacing: 0.15em;
+        color: var(--color-accent);
+        margin-bottom: 1rem;
+    }
+
+    .pillar p {
+        font-size: 0.9rem;
+        margin-bottom: 0;
+    }
+
+    /* Why Section - Origin Story */
+    .why-section {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 6rem;
         align-items: center;
     }
 
-    .mission-visual {
+    .why-visual {
         position: relative;
         height: 500px;
     }
 
-    .crystal {
+    .void-circle {
         position: absolute;
         width: 300px;
-        height: 400px;
+        height: 300px;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%) rotate(-5deg);
-        background: linear-gradient(135deg, 
-            rgba(126, 184, 201, 0.1) 0%,
-            rgba(201, 169, 98, 0.05) 50%,
-            rgba(126, 184, 201, 0.1) 100%);
-        border: 1px solid rgba(126, 184, 201, 0.3);
-        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-        animation: crystalGlow 4s ease-in-out infinite;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background: radial-gradient(circle at center, 
+            transparent 0%, 
+            transparent 40%, 
+            rgba(201, 169, 98, 0.1) 60%, 
+            rgba(201, 169, 98, 0.2) 100%);
+        animation: pulse 4s ease-in-out infinite;
     }
 
-    .crystal::before {
-        content: '';
+    .void-circle::before {
+        content: '?';
         position: absolute;
-        inset: 20px;
-        background: linear-gradient(135deg, 
-            rgba(255, 255, 255, 0.05) 0%,
-            transparent 50%);
-        clip-path: inherit;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: var(--font-display);
+        font-size: 6rem;
+        font-style: italic;
+        color: rgba(201, 169, 98, 0.15);
     }
 
-    /* Pearl story */
-    .pearl-story {
+    .story-block {
+        padding: 3rem;
         background: var(--color-bg-subtle);
-        border-radius: 2px;
-        padding: 4rem;
         border-left: 2px solid var(--color-accent);
-        margin: 4rem 0;
+        margin: 3rem 0;
         position: relative;
-        overflow: hidden;
     }
 
-    .pearl-story::before {
+    .story-block::before {
         content: '"';
         position: absolute;
         top: 1rem;
-        left: 2rem;
+        left: 1.5rem;
         font-family: var(--font-display);
-        font-size: 8rem;
+        font-size: 5rem;
         color: var(--color-accent);
-        opacity: 0.1;
+        opacity: 0.15;
         line-height: 1;
     }
 
-    .pearl-name {
+    .story-block p {
         font-family: var(--font-display);
         font-size: 1.2rem;
-        color: var(--color-accent);
+        font-style: italic;
+        color: var(--color-warm);
+        line-height: 1.7;
+    }
+
+    /* Off-Grid Section */
+    .offgrid-section {
+        background: linear-gradient(180deg, 
+            var(--color-bg) 0%, 
+            var(--color-bg-subtle) 30%, 
+            var(--color-bg-subtle) 70%, 
+            var(--color-bg) 100%);
+        padding: 10rem 2rem;
+    }
+
+    .offgrid-content {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .offgrid-statement {
+        font-family: var(--font-display);
+        font-size: clamp(1.5rem, 4vw, 2.5rem);
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 5rem;
+        line-height: 1.5;
+    }
+
+    .offgrid-statement em {
+        color: var(--color-hope);
         font-style: italic;
     }
 
-    /* Materials grid */
+    .independence-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .independence-item {
+        padding: 2rem;
+        border: 1px solid rgba(126, 184, 201, 0.2);
+        background: rgba(126, 184, 201, 0.02);
+        text-align: center;
+        transition: all 0.4s ease;
+    }
+
+    .independence-item:hover {
+        border-color: rgba(126, 184, 201, 0.4);
+        background: rgba(126, 184, 201, 0.05);
+    }
+
+    .independence-item h4 {
+        font-family: var(--font-display);
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+        color: var(--color-hope);
+    }
+
+    .independence-item p {
+        font-size: 0.85rem;
+        margin-bottom: 0;
+    }
+
+    /* Pearl Story */
+    .pearl-section {
+        padding: 10rem 2rem;
+    }
+
+    .pearl-content {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .pearl-image {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 3rem;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-warm) 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+        box-shadow: 0 0 60px var(--color-accent-glow);
+    }
+
+    .pearl-content h2 {
+        margin-bottom: 1rem;
+    }
+
+    .pearl-dates {
+        font-family: var(--font-display);
+        font-style: italic;
+        color: var(--color-accent);
+        margin-bottom: 3rem;
+    }
+
+    .pearl-story-text {
+        text-align: left;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .pearl-story-text p {
+        margin-bottom: 1.5rem;
+    }
+
+    .pearl-highlight {
+        padding: 2rem;
+        background: var(--color-bg-subtle);
+        border-left: 2px solid var(--color-hope);
+        margin: 2rem 0;
+    }
+
+    .pearl-highlight p {
+        font-family: var(--font-display);
+        font-size: 1.2rem;
+        font-style: italic;
+        color: var(--color-hope);
+        margin-bottom: 0;
+    }
+
+    /* Materials */
+    .materials-section {
+        padding: 8rem 2rem;
+    }
+
     .materials-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 2rem;
+        gap: 1.5rem;
         margin-top: 4rem;
     }
 
     .material-card {
-        background: linear-gradient(180deg, var(--color-bg-subtle) 0%, var(--color-bg) 100%);
+        padding: 2rem;
+        background: linear-gradient(180deg, var(--color-bg-subtle) 0%, transparent 100%);
         border: 1px solid rgba(201, 169, 98, 0.1);
-        padding: 2.5rem 2rem;
         text-align: center;
         transition: all 0.4s ease;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .material-card::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 2px;
-        background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
-        transform: scaleX(0);
-        transition: transform 0.4s ease;
-    }
-
-    .material-card:hover::before {
-        transform: scaleX(1);
     }
 
     .material-card:hover {
@@ -1222,102 +489,84 @@
     }
 
     .material-icon {
-        font-size: 2.5rem;
-        margin-bottom: 1.5rem;
+        font-size: 2rem;
+        margin-bottom: 1rem;
     }
 
     .material-card h4 {
         font-family: var(--font-display);
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         font-weight: 400;
-        margin-bottom: 0.5rem;
-        color: var(--color-text);
+        margin-bottom: 0.3rem;
     }
 
-    .material-subtitle {
-        font-size: 0.8rem;
+    .material-lifespan {
+        font-size: 0.7rem;
         letter-spacing: 0.1em;
         color: var(--color-accent);
         margin-bottom: 1rem;
     }
 
     .material-card p {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         margin-bottom: 0;
     }
 
-    .material-lifespan {
-        margin-top: 1.5rem;
-        padding-top: 1rem;
-        border-top: 1px solid rgba(201, 169, 98, 0.1);
-        font-size: 0.75rem;
-        color: var(--color-text-muted);
-        letter-spacing: 0.1em;
-    }
-
-    /* Journey section */
-    .journey-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        margin-top: 4rem;
-    }
-
-    .journey-card {
-        padding: 3rem;
-        background: var(--color-bg-subtle);
-        border: 1px solid rgba(201, 169, 98, 0.1);
-        position: relative;
-    }
-
-    .journey-card h3 {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    .journey-number {
-        font-family: var(--font-display);
-        font-size: 3rem;
-        color: var(--color-accent);
-        opacity: 0.3;
-        font-weight: 300;
-    }
-
     /* Services */
-    .services-list {
-        margin-top: 4rem;
+    .services-section {
+        padding: 8rem 2rem;
+        background: var(--color-bg-subtle);
     }
 
-    .service-item {
+    .services-grid {
         display: grid;
-        grid-template-columns: 1fr 2fr;
-        gap: 4rem;
-        padding: 4rem 0;
-        border-bottom: 1px solid rgba(201, 169, 98, 0.1);
-        align-items: start;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin-top: 4rem;
+        max-width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .service-item:last-child {
-        border-bottom: none;
+    .service-card {
+        padding: 2.5rem;
+        border: 1px solid rgba(201, 169, 98, 0.1);
+        background: var(--color-bg);
+        transition: all 0.4s ease;
+    }
+
+    .service-card:hover {
+        border-color: rgba(201, 169, 98, 0.3);
     }
 
     .service-icon {
-        font-size: 3rem;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
     }
 
-    /* Family section */
+    .service-card h4 {
+        font-family: var(--font-display);
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Family & Gift Economy */
     .family-section {
-        background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-subtle) 50%, var(--color-bg) 100%);
         padding: 8rem 2rem;
+    }
+
+    .family-intro {
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto 4rem;
     }
 
     .family-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 3rem;
-        max-width: 1000px;
-        margin: 4rem auto 0;
+        gap: 2rem;
+        max-width: 900px;
+        margin: 0 auto;
     }
 
     .family-member {
@@ -1327,32 +576,34 @@
 
     .family-member h4 {
         font-family: var(--font-display);
-        font-size: 1.5rem;
-        font-weight: 400;
-        margin-bottom: 0.5rem;
+        font-size: 1.4rem;
+        margin-bottom: 0.3rem;
     }
 
     .family-role {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         letter-spacing: 0.15em;
         text-transform: uppercase;
         color: var(--color-accent);
         margin-bottom: 1rem;
     }
 
-    /* Gift economy */
-    .gift-highlight {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        margin-top: 4rem;
-        align-items: center;
+    /* Gift Economy */
+    .gift-section {
+        padding: 8rem 2rem;
+        background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-subtle) 50%, var(--color-bg) 100%);
+    }
+
+    .gift-content {
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
     }
 
     .gift-stat {
-        text-align: center;
+        margin: 4rem 0;
         padding: 3rem;
-        background: var(--color-bg-subtle);
+        background: var(--color-bg);
         border: 1px solid rgba(201, 169, 98, 0.2);
     }
 
@@ -1360,8 +611,6 @@
         font-family: var(--font-display);
         font-size: 4rem;
         color: var(--color-accent);
-        line-height: 1;
-        margin-bottom: 0.5rem;
     }
 
     .gift-stat-label {
@@ -1369,17 +618,23 @@
         color: var(--color-text-muted);
     }
 
-    /* CTA section */
+    /* CTA */
     .cta-section {
-        text-align: center;
         padding: 10rem 2rem;
-        background: 
-            radial-gradient(ellipse 80% 50% at 50% 100%, var(--color-accent-glow) 0%, transparent 50%);
+        text-align: center;
+        background: radial-gradient(ellipse 80% 50% at 50% 100%, var(--color-accent-glow) 0%, transparent 50%);
     }
 
     .cta-section h2 {
-        max-width: 800px;
-        margin: 0 auto 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .cta-subtitle {
+        font-family: var(--font-display);
+        font-size: 1.2rem;
+        font-style: italic;
+        color: var(--color-text-muted);
+        margin-bottom: 3rem;
     }
 
     .cta-buttons {
@@ -1387,7 +642,6 @@
         gap: 1.5rem;
         justify-content: center;
         flex-wrap: wrap;
-        margin-top: 3rem;
     }
 
     .cta-primary {
@@ -1395,7 +649,7 @@
         background: var(--color-accent);
         color: var(--color-bg);
         text-decoration: none;
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         letter-spacing: 0.15em;
         text-transform: uppercase;
         transition: all 0.4s ease;
@@ -1412,7 +666,7 @@
         border: 1px solid var(--color-text-muted);
         color: var(--color-text);
         text-decoration: none;
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         letter-spacing: 0.15em;
         text-transform: uppercase;
         transition: all 0.4s ease;
@@ -1420,7 +674,6 @@
 
     .cta-secondary:hover {
         border-color: var(--color-text);
-        color: var(--color-text);
     }
 
     /* Footer */
@@ -1455,8 +708,30 @@
         color: var(--color-accent);
     }
 
+    .footer-payment {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+    }
+
+    .footer-payment a {
+        color: var(--color-text-muted);
+        text-decoration: none;
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
+        border: 1px solid rgba(201, 169, 98, 0.2);
+        transition: all 0.3s ease;
+    }
+
+    .footer-payment a:hover {
+        border-color: var(--color-accent);
+        color: var(--color-accent);
+    }
+
     .footer-location {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
         letter-spacing: 0.2em;
         color: var(--color-text-muted);
     }
@@ -1474,57 +749,34 @@
     }
 
     @keyframes float {
-        0%, 100% {
-            transform: translateX(-50%) translateY(0);
-        }
-        50% {
-            transform: translateX(-50%) translateY(-10px);
-        }
+        0%, 100% { transform: translateX(-50%) translateY(0); }
+        50% { transform: translateX(-50%) translateY(-10px); }
     }
 
-    @keyframes crystalGlow {
-        0%, 100% {
-            box-shadow: 0 0 60px var(--color-crystal-glow);
-        }
-        50% {
-            box-shadow: 0 0 100px var(--color-crystal-glow), 0 0 40px var(--color-accent-glow);
-        }
-    }
-
-    /* Scroll animations */
-    .fade-in {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: all 0.8s ease-out;
-    }
-
-    .fade-in.visible {
-        opacity: 1;
-        transform: translateY(0);
+    @keyframes pulse {
+        0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+        50% { transform: translate(-50%, -50%) scale(1.05); opacity: 0.8; }
     }
 
     /* Responsive */
     @media (max-width: 1024px) {
-        .mission {
+        .core-pillars,
+        .independence-grid,
+        .services-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .why-section {
             grid-template-columns: 1fr;
             gap: 4rem;
         }
 
-        .mission-visual {
+        .why-visual {
             height: 300px;
         }
 
         .materials-grid {
             grid-template-columns: repeat(2, 1fr);
-        }
-
-        .journey-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .service-item {
-            grid-template-columns: 1fr;
-            gap: 2rem;
         }
     }
 
@@ -1533,403 +785,319 @@
             padding: 5rem 1.5rem;
         }
 
-        .materials-grid {
-            grid-template-columns: 1fr;
-        }
-
+        .materials-grid,
         .family-grid {
             grid-template-columns: 1fr;
-        }
-
-        .gift-highlight {
-            grid-template-columns: 1fr;
-        }
-
-        .pearl-story {
-            padding: 2.5rem;
-        }
-
-        .lang-switch {
-            top: 1rem;
-            right: 1rem;
         }
 
         .cta-buttons {
             flex-direction: column;
             align-items: center;
         }
+
+        .lang-switch {
+            top: 1rem;
+            right: 1rem;
+        }
     }
 </style>
 </head>
 <body>
-    <div class="lang-switch">
-        <a href="index.html" class="active">EN</a>
-        <a href="index-ja.html">日本語</a>
-    </div>
+<!-- Language Switch -->
+<nav class="lang-switch">
+    <a href="#" class="active">EN</a>
+    <a href="index-ja.html">日本語</a>
+</nav>
+
+<!-- Hero -->
 <header class="hero">
     <div class="hero-content">
-        <h1>
-            <span>Engraving Beautiful Memories Forever</span>
-            Timeless Eternal Hope
-        </h1>
-        <p class="hero-tagline">That moment, that place, that person—etched into eternity.</p>
-        <a href="#order" class="hero-cta">
-            Begin Your Story
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
-        </a>
+        <p class="hero-tagline">Timeless Eternal Hope</p>
+        <h1>You Are Allowed<br>to <em>Exist</em></h1>
+        <p class="hero-subtitle">Delivering the permission to be — through memory, infrastructure, and independence</p>
+        <a href="#order" class="hero-cta">Begin Your Story</a>
     </div>
-    <div class="scroll-hint">
-        DISCOVER
-    </div>
+    <div class="scroll-indicator">DISCOVER</div>
 </header>
 
-<section id="mission" class="fade-in">
-    <div class="mission">
-        <div class="mission-content">
-            <span class="section-label">The Mission</span>
-            <h2>Engrave beautiful memories that last forever</h2>
-            <p>A fleeting encounter. Time spent with loved ones. A beloved pet. A landscape lost to time. A promise to keep.</p>
-            <p>They seem destined to fade and disappear. But is that really true?</p>
-            <p>Memories can become eternal when given form. The moment the laser touches the material, what's engraved isn't just letters or patterns—it's your feelings, your story, the very time you've cherished, given an eternal shape.</p>
+<!-- Core Message -->
+<section class="core-message">
+    <p class="section-label">The Mission</p>
+    <h2>We deliver <span class="highlight">"You are allowed to exist"</span><br>to those who need to hear it</h2>
+    <p style="max-width: 700px; margin: 0 auto;">
+        Not just words. We make it tangible — through engraved memories, disaster-proof records, 
+        and infrastructure that frees you from dependency on existing systems.
+    </p>
+
+    <div class="core-pillars">
+        <div class="pillar">
+            <div class="pillar-icon">✦</div>
+            <h4>Engrave</h4>
+            <p class="pillar-subtitle">Proof of Existence</p>
+            <p>"You were here. You existed. Your life had meaning."</p>
         </div>
-        <div class="mission-visual">
-            <div class="crystal"></div>
+        <div class="pillar">
+            <div class="pillar-icon">🛡</div>
+            <h4>Protect</h4>
+            <p class="pillar-subtitle">Disaster-Proof Memory</p>
+            <p>Quartz glass. QR archives. Multi-layered backup for eternity.</p>
+        </div>
+        <div class="pillar">
+            <div class="pillar-icon">⚡</div>
+            <h4>Empower</h4>
+            <p class="pillar-subtitle">Off-Grid Independence</p>
+            <p>Exist without permission from existing systems.</p>
         </div>
     </div>
 </section>
 
-<section id="pearl" class="fade-in">
-    <span class="section-label">Pearl's Story</span>
-    <h2>Named in Memory of Pearl (2007–2025)</h2>
-    
-    <div class="pearl-story">
-        <p>For 18 years, Pearl—a toy poodle—lived as part of our family. He was there for everything, sharing our joys and sorrows.</p>
-        <p>In his final years, Pearl's body could no longer move freely. He needed care, and family outings became difficult. Visiting our hometown, traveling overnight, going far away—we couldn't leave Pearl behind, but we couldn't take him either. For a long time, we gave up our freedom to travel.</p>
-        <p>In January 2025, Pearl quietly passed away.</p>
-        <p>Yet we couldn't let Pearl go. We placed his remains in a portable memorial made of shells and resin. In that moment, we realized: <strong>We could go anywhere with Pearl.</strong></p>
-        <p>The homecoming trips we couldn't take while he was alive. Overseas travel. Showing Pearl the world. By creating a portable grave, we reclaimed our freedom to travel. And Pearl would travel to more places than he ever did in life.</p>
-        <p class="pearl-name">This WiFi network carries his name. Pearl Memorial WiFi.</p>
+<!-- Why Section - Origin Story -->
+<section class="why-section">
+    <div class="why-visual">
+        <div class="void-circle"></div>
+    </div>
+    <div class="why-content">
+        <p class="section-label">Why We Engrave</p>
+        <h2>From a birthtime unknown</h2>
+        <p>
+            Founder Takuya grew up not knowing the "beginning" of his own story. 
+            His birth time was unclear. No accurate record existed.
+        </p>
+        <p>
+            It may seem trivial — just a birth time. But it's the first "imprint" of a life. 
+            Without it, you cannot cast a proper horoscope. You cannot ask the stars "Who am I?"
+        </p>
+        <div class="story-block">
+            <p>
+                When your existence isn't engraved, you're left wondering: 
+                "Am I allowed to be here?"
+            </p>
+        </div>
+        <p>
+            That's why we engrave. To tell someone with certainty: 
+            <strong>"You were here. You existed. Your life had meaning."</strong>
+        </p>
     </div>
 </section>
 
-<section id="why" class="fade-in">
-    <span class="section-label">Why We Engrave</span>
-    <h2>From a birthtime unknown</h2>
-    <p>Founder Takuya grew up not knowing the "beginning" of his own story. His birth time was unclear. No accurate record existed. It may seem trivial—just a birth time. But it's the first "imprint" of a life.</p>
-    <p>Without knowing your birth time, you cannot cast a proper horoscope. Your ascendant, your house placements—unreadable. You cannot even ask the stars "Who am I?"</p>
-    <p>That's why we want to engrave someone's existence with certainty. "You were here." "You definitely existed." "Your life had meaning." To leave that proof in a form that won't disappear.</p>
-    <p><strong>That moment, that place, that person only—a beautiful memory for eternity.</strong></p>
+<!-- Off-Grid Section -->
+<section class="offgrid-section">
+    <div class="offgrid-content">
+        <p class="section-label">Independence</p>
+        <p class="offgrid-statement">
+            You can exist <em>without depending</em> on existing systems.<br>
+            You <em>are allowed</em> to exist.
+        </p>
+
+        <div class="independence-grid">
+            <div class="independence-item">
+                <h4>Without Power Companies</h4>
+                <p>Off-grid solar. Generate your own electricity.</p>
+            </div>
+            <div class="independence-item">
+                <h4>Without Telecom Companies</h4>
+                <p>Starlink satellite. Connect anywhere.</p>
+            </div>
+            <div class="independence-item">
+                <h4>Without Permission</h4>
+                <p>Your existence doesn't require approval.</p>
+            </div>
+        </div>
+
+        <p style="text-align: center; margin-top: 4rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+            In Maui, we built a complete off-grid living environment in 3 days. 
+            24-hour internet. Hybrid power. Comfortable life for a family of three. 
+            This isn't just about electricity — it's about <strong>proving that independence is possible</strong>.
+        </p>
+    </div>
 </section>
 
-<section id="materials" class="fade-in">
-    <span class="section-label">Materials</span>
-    <h2>From earth-returning to eternal</h2>
+<!-- Pearl Story -->
+<section class="pearl-section">
+    <div class="pearl-content">
+        <div class="pearl-image">🐕</div>
+        <p class="section-label">Pearl's Story</p>
+        <h2>Named in Memory of Pearl</h2>
+        <p class="pearl-dates">2007 – 2025</p>
+        
+        <div class="pearl-story-text">
+            <p>
+                For 18 years, Pearl — a toy poodle — lived as part of our family. 
+                In his final years, his body couldn't move freely. Family outings became impossible. 
+                We gave up our freedom to travel.
+            </p>
+            <p>
+                In January 2025, Pearl quietly passed away.
+            </p>
+            <p>
+                We couldn't let him go. We placed his remains in a portable memorial made of shells and resin. 
+                In that moment, we realized:
+            </p>
+
+            <div class="pearl-highlight">
+                <p>We could go anywhere with Pearl. He would see the ocean he never saw in life.</p>
+            </div>
+
+            <p>
+                By creating a portable grave, we reclaimed our freedom. 
+                And Pearl now travels to more places than he ever did in life.
+            </p>
+            <p>
+                This WiFi network carries his name. <strong>Pearl Memorial WiFi.</strong>
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Materials -->
+<section class="materials-section">
+    <p class="section-label">Materials</p>
+    <h2>From Earth-Returning to Eternal</h2>
     <p>We engrave memories across four material tiers, each with its own relationship to time.</p>
 
     <div class="materials-grid">
         <div class="material-card">
             <div class="material-icon">🌿</div>
             <h4>Moment</h4>
-            <div class="material-subtitle">Returns to Earth</div>
-            <p>Palm leaves, ti leaves, driftwood, natural materials from Maui's land</p>
-            <div class="material-lifespan">Perfect for: Travel memories, chance encounters</div>
+            <p class="material-lifespan">Returns to Earth</p>
+            <p>Palm leaves, driftwood, natural materials</p>
         </div>
-
         <div class="material-card">
             <div class="material-icon">🪵</div>
             <h4>Memory</h4>
-            <div class="material-subtitle">A Lifetime</div>
-            <p>Wood, charcoal, coconut shell, ulu (breadfruit) wood</p>
-            <div class="material-lifespan">Perfect for: Life milestones, gifts for loved ones</div>
+            <p class="material-lifespan">A Lifetime</p>
+            <p>Wood, charcoal, coconut shell</p>
         </div>
-
         <div class="material-card">
             <div class="material-icon">🪨</div>
             <h4>Legacy</h4>
-            <div class="material-subtitle">Across Generations</div>
-            <p>Metal (stainless, aluminum, copper), stone, lava rock</p>
-            <div class="material-lifespan">Perfect for: Family heirlooms, monuments</div>
+            <p class="material-lifespan">Across Generations</p>
+            <p>Metal, stone, lava rock</p>
         </div>
-
         <div class="material-card">
             <div class="material-icon">💎</div>
             <h4>Eternal</h4>
-            <div class="material-subtitle">Forever</div>
-            <p>Quartz glass with internal engraving—millions of years of durability</p>
-            <div class="material-lifespan">Perfect for: Memories beyond a lifetime</div>
+            <p class="material-lifespan">Forever</p>
+            <p>Quartz glass internal engraving</p>
         </div>
     </div>
 </section>
 
-<section id="maui" class="fade-in">
-    <span class="section-label">Our Roots in Maui</span>
-    <h2>Ancestors' graves rest on this land</h2>
-    <p>Our coming to Maui was no coincidence. Our main family line's ancestors sleep on this island. We bear the responsibility of grave keepers. We are here not as supporters, but as those rooted in this land.</p>
-    
-    <div class="journey-grid">
-        <div class="journey-card">
-            <h3><span class="journey-number">01</span> Lahaina Strong</h3>
-            <p>After the devastating 2023 Maui wildfires, we witnessed physical memories vanish in an instant—photos, homes, keepsakes, gravestones. Memories are fragile. That's why we need to know how to protect them.</p>
-        </div>
-        <div class="journey-card">
-            <h3><span class="journey-number">02</span> Global Perspective</h3>
-            <p>In Maui, we visited Western and Eastern cemeteries alike. Weathered gravestones. Unreadable names. The same thing was happening everywhere. This is a challenge shared by all humanity.</p>
-        </div>
-    </div>
-</section>
+<!-- Services -->
+<section class="services-section">
+    <div style="max-width: 1100px; margin: 0 auto; text-align: center;">
+        <p class="section-label">Services</p>
+        <h2>How We Deliver</h2>
 
-<section id="services" class="fade-in">
-    <span class="section-label">Services</span>
-    <h2>Engraving today's memories today</h2>
-
-    <div class="services-list">
-        <div class="service-item">
-            <div>
+        <div class="services-grid">
+            <div class="service-card">
                 <div class="service-icon">🔥</div>
-                <h3>Mobile Memorial Workshop</h3>
+                <h4>Mobile Memorial Workshop</h4>
+                <p>Starlink, portable power, laser engraver — all in one bag. Connect to WiFi, order, receive your engraving on the spot.</p>
             </div>
-            <div>
-                <p>We travel with Starlink satellite communication, portable power, and laser engraving equipment all in one bag. Connect to WiFi, place your order, receive your engraving on the spot.</p>
-                <p>"Today, here, engraved just for you." This isn't buying mass-produced souvenirs at a tourist spot. It's an experience of watching your unique memory take form before your eyes.</p>
-            </div>
-        </div>
-
-        <div class="service-item">
-            <div>
+            <div class="service-card">
                 <div class="service-icon">🪦</div>
-                <h3>Memorial Stone QR</h3>
+                <h4>Memorial Stone QR</h4>
+                <p>QR codes on gravestones connecting to digital archives. Even if the stone crumbles, the memory remains.</p>
             </div>
-            <div>
-                <p>Physical gravestones will eventually decay. Weathering, acid rain, earthquakes, typhoons, wildfires. No stone can defeat time and disaster.</p>
-                <p>But a QR code engraved on a gravestone connects to the digital world. When visitors scan it with their smartphones, the deceased's photos, videos, voice, and life records appear. Even if the gravestone crumbles, the memory remains.</p>
-            </div>
-        </div>
-
-        <div class="service-item">
-            <div>
-                <div class="service-icon">🛡️</div>
-                <h3>Disaster-Proof Memory</h3>
-            </div>
-            <div>
-                <p>The lesson of the 2023 Maui wildfire: Physical memories vanish in an instant. We propose "multi-layered memory backup."</p>
-                <p>Layer 1: Physical items (wood, metal, stone) — vulnerable to fire and flood. Layer 2: Cloud archive — depends on server stability and access rights. Layer 3: Quartz glass internal engraving — millions of years of durability, self-contained offline.</p>
+            <div class="service-card">
+                <div class="service-icon">⚡</div>
+                <h4>Off-Grid Infrastructure</h4>
+                <p>Solar systems, satellite internet, power independence. Exist without depending on anyone's permission.</p>
             </div>
         </div>
     </div>
 </section>
 
-<div class="family-section fade-in">
-    <section>
-        <span class="section-label">The Sato Family</span>
-        <h2>A family of three living in Maui</h2>
+<!-- Family -->
+<section class="family-section">
+    <div class="family-intro">
+        <p class="section-label">The Sato Family</p>
+        <h2>A Family of Three in Maui</h2>
+        <p>
+            Our ancestors' graves rest on this island. We are here not as supporters, 
+            but as those rooted in this land — bearing the responsibility of grave keepers.
+        </p>
+    </div>
 
-        <div class="family-grid">
-            <div class="family-member">
-                <h4>Takuya</h4>
-                <div class="family-role">Off-grid Infrastructure & Laser Engraving</div>
-                <p>Former Fujitsu engineer, venture CTO, Deloitte senior specialist. Now focused on disaster recovery volunteering.</p>
-            </div>
-            <div class="family-member">
-                <h4>Mina</h4>
-                <div class="family-role">Digital Marketing & Resin Art</div>
-                <p>18 years of pet care experience, dried flower preservation, hair accessory design.</p>
-            </div>
-            <div class="family-member">
-                <h4>Ito (5 years old)</h4>
-                <div class="family-role">Explorer & Dreamer</div>
-                <p>Curious, loves nature and animals, studying English.</p>
-            </div>
+    <div class="family-grid">
+        <div class="family-member">
+            <h4>Takuya</h4>
+            <p class="family-role">Infrastructure & Engraving</p>
+            <p>Former Fujitsu engineer, venture CTO, Deloitte specialist. Now focused on disaster recovery.</p>
         </div>
-    </section>
-</div>
+        <div class="family-member">
+            <h4>Mina</h4>
+            <p class="family-role">Marketing & Craft</p>
+            <p>18 years of pet care, resin art, dried flower preservation.</p>
+        </div>
+        <div class="family-member">
+            <h4>Ito</h4>
+            <p class="family-role">5 Years Old</p>
+            <p>Explorer. Dreamer. Curious about nature and animals.</p>
+        </div>
+    </div>
+</section>
 
-<section id="gift" class="fade-in">
-    <span class="section-label">Gift Economy</span>
-    <h2>First, we give</h2>
-    <p>Our activities are based on gift economy principles. Distribute handmade soap. Provide free WiFi. Share technology. By giving without expecting anything in return, trust is born. Trust returns in unpredictable forms.</p>
+<!-- Gift Economy -->
+<section class="gift-section">
+    <div class="gift-content">
+        <p class="section-label">Gift Economy</p>
+        <h2>First, We Give</h2>
+        <p>
+            Distribute handmade soap. Provide free WiFi. Share technology. 
+            By giving without expecting anything in return, trust is born.
+        </p>
 
-    <div class="gift-highlight">
         <div class="gift-stat">
             <div class="gift-stat-value">$3,000+</div>
-            <div class="gift-stat-label">Value created from a few dollars of handmade soap</div>
+            <p class="gift-stat-label">Value created from a few dollars of handmade soap</p>
         </div>
-        <div>
-            <p>This isn't magic. When the "transaction between strangers" that monetary economy assumes transforms into a "community sharing face and context," the rules of exchange themselves change.</p>
-            <p>Pearl Memorial WiFi is also part of this gift. Connection is free. We ask for nothing. We just hope you'll learn our story.</p>
-        </div>
+
+        <p>
+            This isn't magic. When "transaction between strangers" transforms into 
+            "community sharing face and context," the rules of exchange change.
+        </p>
+        <p>
+            <strong>Pearl Memorial WiFi is part of this gift.</strong> Connection is free. We ask for nothing.
+        </p>
     </div>
 </section>
 
-<section id="order" class="cta-section fade-in">
-    <span class="section-label">Order</span>
-    <h2>Engrave today's memory</h2>
-    <p>Your encounter with us through this WiFi connection is also a memory. Today, here, meeting you—that itself is a moment worth engraving for us.</p>
-    
+<!-- CTA -->
+<section class="cta-section" id="order">
+    <p class="section-label">Begin</p>
+    <h2>Engrave Your Memory</h2>
+    <p class="cta-subtitle">Your encounter with us is also a memory worth engraving.</p>
+
     <div class="cta-buttons">
-        <a href="https://pearl.memorial" target="_blank" rel="noopener noreferrer" class="cta-primary">Shop Now — Square Online</a>
-        <a href="https://calendly.com/pearlmemorial/pearlmemorialsession" target="_blank" rel="noopener noreferrer" class="cta-secondary">Custom Orders</a>
+        <a href="https://pearl.memorial" class="cta-primary">Shop Now</a>
+        <a href="https://calendly.com/pearlmemorial/pearlmemorialsession" class="cta-secondary">Custom Orders</a>
     </div>
 </section>
 
-<section id="support" class="fade-in">
-    <span class="section-label">Support</span>
-    <h2>Support our mission</h2>
-    <p>Timeless Eternal Hope operates as the Sato family's mission. Not a corporation—a family project. If our story resonates with you, you can support us in these ways:</p>
-    
-    <div class="journey-grid">
-        <div class="journey-card">
-            <h3>Donation</h3>
-            <p>PayPal and Zelle available. Every contribution helps us continue engraving memories and working toward quartz glass internal engraving technology.</p>
-        </div>
-        <div class="journey-card">
-            <h3>Purchase & Share</h3>
-            <p>Use our memory engraving services. Gift them to someone special. Share our story with others. Find us at Honolua Bay.</p>
-        </div>
-    </div>
-</section>
-
+<!-- Footer -->
 <footer>
-    <p class="footer-memorial">In loving memory of Pearl (2007–2025)<br>Now watching over the ocean he never saw in life, forever. 🐕</p>
-    
+    <p class="footer-memorial">
+        In loving memory of Pearl (2007–2025)<br>
+        Now watching over the ocean he never saw in life, forever. 🐕
+    </p>
+
     <div class="footer-links">
-        <a href="https://calendly.com/pearlmemorial/pearlmemorialsession" target="_blank" rel="noopener noreferrer">Contact</a>
-        <a href="https://www.instagram.com/pearl.memorial/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://calendly.com/pearlmemorial/pearlmemorialsession">Contact</a>
+        <a href="https://www.instagram.com/pearl.memorial/">Instagram</a>
     </div>
 
-    <div class="footer-links" style="margin-top: 1.5rem;">
-        <a href="https://pearl.memorial" target="_blank" rel="noopener noreferrer">Shop (Square)</a>
-        <a href="https://www.paypal.com/ncp/payment/SVPS6J8WXQU76" target="_blank" rel="noopener noreferrer">PayPal</a>
-        <span style="color: var(--color-text-muted); font-size: 0.85rem;">Zelle: business@satotakuya.jp</span>
+    <div class="footer-payment">
+        <a href="https://pearl.memorial">Shop (Square)</a>
+        <a href="https://www.paypal.com/ncp/payment/SVPS6J8WXQU76">PayPal</a>
+        <a href="#">Zelle: business@satotakuya.jp</a>
     </div>
 
-    <p class="footer-location">Mahalo 🌺<br>Timeless Eternal Hope · Maui, Hawaii</p>
+    <p class="footer-location">
+        Mahalo 🌺<br>
+        Timeless Eternal Hope · Maui, Hawaii
+    </p>
 </footer>
-
-<script>
-    // Scroll animation
-    const fadeElements = document.querySelectorAll('.fade-in');
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-
-            /* Print styles */
-            @media print {
-                body {
-                    background: white !important;
-                    color: black !important;
-                }
-
-                * {
-                    background: transparent !important;
-                    color: black !important;
-                    box-shadow: none !important;
-                    text-shadow: none !important;
-                }
-
-                .lang-switch {
-                    display: none !important;
-                }
-
-                .scroll-hint {
-                    display: none !important;
-                }
-
-                section {
-                    page-break-inside: avoid;
-                }
-
-                .hero {
-                    background: white !important;
-                    color: black !important;
-                    min-height: auto;
-                    padding: 2rem;
-                }
-
-                .hero h1 {
-                    color: black !important;
-                }
-
-                .hero h1 span {
-                    color: #8b6914 !important;
-                }
-
-                h2, h3 {
-                    color: black !important;
-                }
-
-                p {
-                    color: black !important;
-                }
-
-                .hero-cta {
-                    border: 1px solid black !important;
-                    color: black !important;
-                }
-
-                .cta-primary {
-                    background: #8b6914 !important;
-                    color: white !important;
-                }
-
-                .cta-secondary {
-                    border: 1px solid black !important;
-                    color: black !important;
-                }
-
-                .section-label {
-                    color: #8b6914 !important;
-                }
-
-                .material-card,
-                .journey-card,
-                .pearl-story {
-                    border: 1px solid black !important;
-                    background: white !important;
-                }
-
-                .material-card:hover {
-                    box-shadow: none !important;
-                    transform: none !important;
-                }
-
-                .gift-stat {
-                    background: white !important;
-                    border: 1px solid black !important;
-                }
-
-                footer {
-                    border-top: 1px solid black !important;
-                }
-
-                a {
-                    color: black !important;
-                    text-decoration: underline !important;
-                }
-            }
-    </style>
-        });
-    }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    });
-
-    fadeElements.forEach(el => observer.observe(el));
-
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        });
-    });
-</script>
 </body>
 </html>
