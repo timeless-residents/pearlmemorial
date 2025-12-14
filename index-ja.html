@@ -21,1071 +21,233 @@
             --font-display: 'Shippori Mincho', 'Cormorant Garamond', serif;
             --font-body: 'Zen Kaku Gothic New', sans-serif;
         }
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); font-weight: 300; background: var(--color-bg); color: var(--color-text); line-height: 2; font-size: 16px; overflow-x: hidden; }
+
+```
+.lang-switch { position: fixed; top: 2rem; right: 2rem; z-index: 100; display: flex; gap: 0.5rem; background: rgba(10, 10, 10, 0.8); backdrop-filter: blur(10px); padding: 0.5rem; border-radius: 2rem; border: 1px solid rgba(201, 169, 98, 0.2); }
+.lang-switch a { padding: 0.5rem 1rem; color: var(--color-text-muted); text-decoration: none; font-size: 0.8rem; border-radius: 1.5rem; transition: all 0.3s ease; }
+.lang-switch a.active { background: var(--color-accent); color: var(--color-bg); }
+
+.hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; padding: 2rem; background: radial-gradient(ellipse 60% 40% at 50% 0%, rgba(201, 169, 98, 0.08) 0%, transparent 60%), radial-gradient(ellipse 80% 60% at 50% 100%, rgba(126, 184, 201, 0.05) 0%, transparent 50%); }
+.hero-content { max-width: 900px; position: relative; z-index: 1; }
+.hero-tagline { font-size: 0.75rem; letter-spacing: 0.4em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 2rem; opacity: 0; animation: fadeUp 1s ease forwards 0.3s; }
+.hero h1 { font-family: var(--font-display); font-size: clamp(2.5rem, 7vw, 5rem); font-weight: 400; line-height: 1.3; margin-bottom: 1.5rem; opacity: 0; animation: fadeUp 1s ease forwards 0.5s; }
+.hero h1 em { font-style: normal; color: var(--color-hope); }
+.hero-subtitle { font-family: var(--font-display); font-size: clamp(1rem, 2.5vw, 1.5rem); font-weight: 400; color: var(--color-text-muted); margin-bottom: 3rem; opacity: 0; animation: fadeUp 1s ease forwards 0.7s; }
+.hero-cta { display: inline-block; padding: 1.2rem 3rem; border: 1px solid var(--color-accent); color: var(--color-accent); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.2em; transition: all 0.4s ease; opacity: 0; animation: fadeUp 1s ease forwards 0.9s; }
+.hero-cta:hover { background: var(--color-accent); color: var(--color-bg); box-shadow: 0 0 40px var(--color-accent-glow); }
+.scroll-indicator { position: absolute; bottom: 3rem; left: 50%; transform: translateX(-50%); font-size: 0.7rem; letter-spacing: 0.3em; color: var(--color-text-muted); opacity: 0; animation: fadeUp 1s ease forwards 1.2s, float 3s ease-in-out infinite 2s; }
+
+/* Quick Packages Section */
+.quick-packages { padding: 6rem 2rem; background: var(--color-bg-subtle); text-align: center; }
+.quick-packages h2 { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 400; margin-bottom: 1rem; }
+.quick-packages-subtitle { color: var(--color-text-muted); margin-bottom: 3rem; font-size: 1rem; }
+.packages-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto 3rem; }
+.package-card { padding: 2rem 1.5rem; background: var(--color-bg); border: 1px solid rgba(201, 169, 98, 0.15); transition: all 0.4s ease; }
+.package-card:hover { border-color: rgba(201, 169, 98, 0.4); transform: translateY(-5px); }
+.package-icon { font-size: 2rem; margin-bottom: 1rem; }
+.package-card h4 { font-family: var(--font-display); font-size: 1.3rem; margin-bottom: 0.5rem; }
+.package-price { font-size: 1.1rem; color: var(--color-accent); font-weight: 400; margin-bottom: 0.5rem; }
+.package-desc { font-size: 0.8rem; color: var(--color-text-muted); margin-bottom: 0; }
+.quick-extras { display: flex; justify-content: center; gap: 3rem; margin-top: 2rem; flex-wrap: wrap; }
+.quick-extra-item { text-align: center; }
+.quick-extra-item h5 { font-family: var(--font-display); font-size: 1.1rem; color: var(--color-hope); margin-bottom: 0.3rem; }
+.quick-extra-item p { font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 0; }
+.quick-packages .cta-buttons { margin-top: 3rem; }
+
+section { padding: 8rem 2rem; max-width: 1100px; margin: 0 auto; }
+.section-label { font-size: 0.7rem; letter-spacing: 0.4em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 1.5rem; }
+h2 { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 400; margin-bottom: 2rem; line-height: 1.5; }
+h3 { font-family: var(--font-display); font-size: 1.4rem; font-weight: 400; margin-bottom: 1rem; }
+p { color: var(--color-text-muted); max-width: 65ch; margin-bottom: 1.5rem; }
+
+.core-message { text-align: center; padding: 10rem 2rem; background: radial-gradient(ellipse 50% 50% at 50% 50%, rgba(126, 184, 201, 0.03) 0%, transparent 70%); }
+.core-message h2 { font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 3rem; }
+.core-message .highlight { color: var(--color-hope); }
+.core-pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; margin-top: 5rem; max-width: 1000px; margin-left: auto; margin-right: auto; }
+.pillar { padding: 2.5rem; background: linear-gradient(180deg, var(--color-bg-subtle) 0%, transparent 100%); border: 1px solid rgba(201, 169, 98, 0.1); text-align: center; transition: all 0.4s ease; }
+.pillar:hover { border-color: rgba(201, 169, 98, 0.3); transform: translateY(-5px); }
+.pillar-icon { font-size: 2.5rem; margin-bottom: 1.5rem; }
+.pillar h4 { font-family: var(--font-display); font-size: 1.3rem; font-weight: 400; margin-bottom: 0.5rem; color: var(--color-text); }
+.pillar-subtitle { font-size: 0.75rem; letter-spacing: 0.15em; color: var(--color-accent); margin-bottom: 1rem; }
+.pillar p { font-size: 0.9rem; margin-bottom: 0; }
+
+.why-section { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+.why-visual { position: relative; height: 500px; }
+.void-circle { position: absolute; width: 300px; height: 300px; left: 50%; top: 50%; transform: translate(-50%, -50%); border-radius: 50%; background: radial-gradient(circle at center, transparent 0%, transparent 40%, rgba(201, 169, 98, 0.1) 60%, rgba(201, 169, 98, 0.2) 100%); animation: pulse 4s ease-in-out infinite; }
+.void-circle::before { content: '？'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: var(--font-display); font-size: 5rem; color: rgba(201, 169, 98, 0.15); }
+.story-block { padding: 3rem; background: var(--color-bg-subtle); border-left: 2px solid var(--color-accent); margin: 3rem 0; position: relative; }
+.story-block p { font-family: var(--font-display); font-size: 1.1rem; color: var(--color-warm); line-height: 1.9; }
+
+.offgrid-section { background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-subtle) 30%, var(--color-bg-subtle) 70%, var(--color-bg) 100%); padding: 10rem 2rem; }
+.offgrid-content { max-width: 1100px; margin: 0 auto; }
+.offgrid-statement { font-family: var(--font-display); font-size: clamp(1.3rem, 3.5vw, 2.2rem); font-weight: 400; text-align: center; margin-bottom: 5rem; line-height: 1.8; }
+.offgrid-statement em { color: var(--color-hope); font-style: normal; }
+.independence-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.independence-item { padding: 2rem; border: 1px solid rgba(126, 184, 201, 0.2); background: rgba(126, 184, 201, 0.02); text-align: center; transition: all 0.4s ease; }
+.independence-item:hover { border-color: rgba(126, 184, 201, 0.4); background: rgba(126, 184, 201, 0.05); }
+.independence-item h4 { font-family: var(--font-display); font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--color-hope); }
+.independence-item p { font-size: 0.85rem; margin-bottom: 0; }
+
+.pearl-section { padding: 10rem 2rem; }
+.pearl-content { max-width: 800px; margin: 0 auto; text-align: center; }
+.pearl-image { width: 120px; height: 120px; margin: 0 auto 3rem; border-radius: 50%; background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-warm) 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem; box-shadow: 0 0 60px var(--color-accent-glow); }
+.pearl-content h2 { margin-bottom: 1rem; }
+.pearl-dates { font-family: var(--font-display); color: var(--color-accent); margin-bottom: 3rem; }
+.pearl-story-text { text-align: left; max-width: 700px; margin: 0 auto; }
+.pearl-story-text p { margin-bottom: 1.5rem; }
+.pearl-highlight { padding: 2rem; background: var(--color-bg-subtle); border-left: 2px solid var(--color-hope); margin: 2rem 0; }
+.pearl-highlight p { font-family: var(--font-display); font-size: 1.1rem; color: var(--color-hope); margin-bottom: 0; }
+
+.materials-section { padding: 8rem 2rem; }
+.materials-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 4rem; }
+.material-card { padding: 2rem; background: linear-gradient(180deg, var(--color-bg-subtle) 0%, transparent 100%); border: 1px solid rgba(201, 169, 98, 0.1); text-align: center; transition: all 0.4s ease; }
+.material-card:hover { transform: translateY(-5px); border-color: rgba(201, 169, 98, 0.3); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); }
+.material-icon { font-size: 2rem; margin-bottom: 1rem; }
+.material-card h4 { font-family: var(--font-display); font-size: 1.2rem; font-weight: 400; margin-bottom: 0.3rem; }
+.material-lifespan { font-size: 0.7rem; letter-spacing: 0.1em; color: var(--color-accent); margin-bottom: 1rem; }
+.material-card p { font-size: 0.85rem; margin-bottom: 0; }
+
+.services-section { padding: 8rem 2rem; background: var(--color-bg-subtle); }
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 4rem; max-width: 1100px; margin-left: auto; margin-right: auto; }
+.service-card { padding: 2.5rem; border: 1px solid rgba(201, 169, 98, 0.1); background: var(--color-bg); transition: all 0.4s ease; }
+.service-card:hover { border-color: rgba(201, 169, 98, 0.3); }
+.service-icon { font-size: 2rem; margin-bottom: 1.5rem; }
+.service-card h4 { font-family: var(--font-display); font-size: 1.2rem; margin-bottom: 1rem; }
+
+.family-section { padding: 8rem 2rem; }
+.family-intro { text-align: center; max-width: 700px; margin: 0 auto 4rem; }
+.family-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 900px; margin: 0 auto; }
+.family-member { text-align: center; padding: 2rem; }
+.family-member h4 { font-family: var(--font-display); font-size: 1.4rem; margin-bottom: 0.3rem; }
+.family-role { font-size: 0.75rem; letter-spacing: 0.15em; color: var(--color-accent); margin-bottom: 1rem; }
+
+.gift-section { padding: 8rem 2rem; background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-subtle) 50%, var(--color-bg) 100%); }
+.gift-content { max-width: 900px; margin: 0 auto; text-align: center; }
+.gift-stat { margin: 4rem 0; padding: 3rem; background: var(--color-bg); border: 1px solid rgba(201, 169, 98, 0.2); }
+.gift-stat-value { font-family: var(--font-display); font-size: 4rem; color: var(--color-accent); }
+.gift-stat-label { font-size: 0.9rem; color: var(--color-text-muted); }
+
+.cta-section { padding: 10rem 2rem; text-align: center; background: radial-gradient(ellipse 80% 50% at 50% 100%, var(--color-accent-glow) 0%, transparent 50%); }
+.cta-section h2 { margin-bottom: 1rem; }
+.cta-subtitle { font-family: var(--font-display); font-size: 1.1rem; color: var(--color-text-muted); margin-bottom: 3rem; }
+.cta-buttons { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; }
+.cta-primary { padding: 1.2rem 3rem; background: var(--color-accent); color: var(--color-bg); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.15em; transition: all 0.4s ease; }
+.cta-primary:hover { box-shadow: 0 0 50px var(--color-accent-glow); transform: translateY(-2px); }
+.cta-secondary { padding: 1.2rem 3rem; background: transparent; border: 1px solid var(--color-text-muted); color: var(--color-text); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.15em; transition: all 0.4s ease; }
+.cta-secondary:hover { border-color: var(--color-text); }
+
+footer { padding: 4rem 2rem; text-align: center; border-top: 1px solid rgba(201, 169, 98, 0.1); }
+.footer-memorial { font-family: var(--font-display); color: var(--color-text-muted); margin-bottom: 2rem; }
+.footer-links { display: flex; gap: 2rem; justify-content: center; margin-bottom: 2rem; }
+.footer-links a { color: var(--color-text-muted); text-decoration: none; font-size: 0.85rem; transition: color 0.3s ease; }
+.footer-links a:hover { color: var(--color-accent); }
+.footer-payment { display: flex; gap: 1.5rem; justify-content: center; margin-bottom: 2rem; flex-wrap: wrap; }
+.footer-payment a { color: var(--color-text-muted); text-decoration: none; font-size: 0.8rem; padding: 0.5rem 1rem; border: 1px solid rgba(201, 169, 98, 0.2); transition: all 0.3s ease; }
+.footer-payment a:hover { border-color: var(--color-accent); color: var(--color-accent); }
+.footer-location { font-size: 0.75rem; letter-spacing: 0.2em; color: var(--color-text-muted); }
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes float { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(-10px); } }
+@keyframes pulse { 0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 1; } 50% { transform: translate(-50%, -50%) scale(1.05); opacity: 0.8; } }
+
+@media (max-width: 1024px) {
+    .packages-grid, .core-pillars, .independence-grid, .services-grid { grid-template-columns: 1fr 1fr; }
+    .why-section { grid-template-columns: 1fr; gap: 4rem; }
+    .why-visual { height: 300px; }
+    .materials-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+    section { padding: 5rem 1.5rem; }
+    .packages-grid, .materials-grid, .family-grid { grid-template-columns: 1fr; }
+    .cta-buttons { flex-direction: column; align-items: center; }
+    .quick-extras { flex-direction: column; gap: 1.5rem; }
+    .lang-switch { top: 1rem; right: 1rem; }
+}
+```
 
-    html {
-        scroll-behavior: smooth;
-    }
-
-    body {
-        font-family: var(--font-body);
-        font-weight: 300;
-        background: var(--color-bg);
-        color: var(--color-text);
-        line-height: 2;
-        font-size: 16px;
-        overflow-x: hidden;
-    }
-
-    /* Language Switch */
-    .lang-switch {
-        position: fixed;
-        top: 2rem;
-        right: 2rem;
-        z-index: 100;
-        display: flex;
-        gap: 0.5rem;
-        background: rgba(10, 10, 10, 0.8);
-        backdrop-filter: blur(10px);
-        padding: 0.5rem;
-        border-radius: 2rem;
-        border: 1px solid rgba(201, 169, 98, 0.2);
-    }
-
-    .lang-switch a {
-        padding: 0.5rem 1rem;
-        color: var(--color-text-muted);
-        text-decoration: none;
-        font-size: 0.8rem;
-        border-radius: 1.5rem;
-        transition: all 0.3s ease;
-    }
-
-    .lang-switch a.active {
-        background: var(--color-accent);
-        color: var(--color-bg);
-    }
-
-    /* Hero Section */
-    .hero {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        position: relative;
-        padding: 2rem;
-        background: 
-            radial-gradient(ellipse 60% 40% at 50% 0%, rgba(201, 169, 98, 0.08) 0%, transparent 60%),
-            radial-gradient(ellipse 80% 60% at 50% 100%, rgba(126, 184, 201, 0.05) 0%, transparent 50%);
-    }
-
-    .hero::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-        opacity: 0.03;
-        pointer-events: none;
-    }
-
-    .hero-content {
-        max-width: 900px;
-        position: relative;
-        z-index: 1;
-    }
-
-    .hero-tagline {
-        font-size: 0.75rem;
-        letter-spacing: 0.4em;
-        text-transform: uppercase;
-        color: var(--color-accent);
-        margin-bottom: 2rem;
-        opacity: 0;
-        animation: fadeUp 1s ease forwards 0.3s;
-    }
-
-    .hero h1 {
-        font-family: var(--font-display);
-        font-size: clamp(2.5rem, 7vw, 5rem);
-        font-weight: 400;
-        line-height: 1.3;
-        margin-bottom: 1.5rem;
-        opacity: 0;
-        animation: fadeUp 1s ease forwards 0.5s;
-    }
-
-    .hero h1 em {
-        font-style: normal;
-        color: var(--color-hope);
-    }
-
-    .hero-subtitle {
-        font-family: var(--font-display);
-        font-size: clamp(1rem, 2.5vw, 1.5rem);
-        font-weight: 400;
-        color: var(--color-text-muted);
-        margin-bottom: 3rem;
-        opacity: 0;
-        animation: fadeUp 1s ease forwards 0.7s;
-    }
-
-    .hero-cta {
-        display: inline-block;
-        padding: 1.2rem 3rem;
-        border: 1px solid var(--color-accent);
-        color: var(--color-accent);
-        text-decoration: none;
-        font-size: 0.85rem;
-        letter-spacing: 0.2em;
-        transition: all 0.4s ease;
-        opacity: 0;
-        animation: fadeUp 1s ease forwards 0.9s;
-    }
-
-    .hero-cta:hover {
-        background: var(--color-accent);
-        color: var(--color-bg);
-        box-shadow: 0 0 40px var(--color-accent-glow);
-    }
-
-    .scroll-indicator {
-        position: absolute;
-        bottom: 3rem;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 0.7rem;
-        letter-spacing: 0.3em;
-        color: var(--color-text-muted);
-        opacity: 0;
-        animation: fadeUp 1s ease forwards 1.2s, float 3s ease-in-out infinite 2s;
-    }
-
-    /* Sections */
-    section {
-        padding: 8rem 2rem;
-        max-width: 1100px;
-        margin: 0 auto;
-    }
-
-    .section-label {
-        font-size: 0.7rem;
-        letter-spacing: 0.4em;
-        text-transform: uppercase;
-        color: var(--color-accent);
-        margin-bottom: 1.5rem;
-    }
-
-    h2 {
-        font-family: var(--font-display);
-        font-size: clamp(1.8rem, 4vw, 3rem);
-        font-weight: 400;
-        margin-bottom: 2rem;
-        line-height: 1.5;
-    }
-
-    h3 {
-        font-family: var(--font-display);
-        font-size: 1.4rem;
-        font-weight: 400;
-        margin-bottom: 1rem;
-    }
-
-    p {
-        color: var(--color-text-muted);
-        max-width: 65ch;
-        margin-bottom: 1.5rem;
-    }
-
-    /* Core Message Section */
-    .core-message {
-        text-align: center;
-        padding: 10rem 2rem;
-        background: 
-            radial-gradient(ellipse 50% 50% at 50% 50%, rgba(126, 184, 201, 0.03) 0%, transparent 70%);
-    }
-
-    .core-message h2 {
-        font-size: clamp(2rem, 5vw, 3.5rem);
-        margin-bottom: 3rem;
-    }
-
-    .core-message .highlight {
-        color: var(--color-hope);
-    }
-
-    .core-pillars {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 3rem;
-        margin-top: 5rem;
-        max-width: 1000px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .pillar {
-        padding: 2.5rem;
-        background: linear-gradient(180deg, var(--color-bg-subtle) 0%, transparent 100%);
-        border: 1px solid rgba(201, 169, 98, 0.1);
-        text-align: center;
-        transition: all 0.4s ease;
-    }
-
-    .pillar:hover {
-        border-color: rgba(201, 169, 98, 0.3);
-        transform: translateY(-5px);
-    }
-
-    .pillar-icon {
-        font-size: 2.5rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .pillar h4 {
-        font-family: var(--font-display);
-        font-size: 1.3rem;
-        font-weight: 400;
-        margin-bottom: 0.5rem;
-        color: var(--color-text);
-    }
-
-    .pillar-subtitle {
-        font-size: 0.75rem;
-        letter-spacing: 0.15em;
-        color: var(--color-accent);
-        margin-bottom: 1rem;
-    }
-
-    .pillar p {
-        font-size: 0.9rem;
-        margin-bottom: 0;
-    }
-
-    /* Why Section - Origin Story */
-    .why-section {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 6rem;
-        align-items: center;
-    }
-
-    .why-visual {
-        position: relative;
-        height: 500px;
-    }
-
-    .void-circle {
-        position: absolute;
-        width: 300px;
-        height: 300px;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        border-radius: 50%;
-        background: radial-gradient(circle at center, 
-            transparent 0%, 
-            transparent 40%, 
-            rgba(201, 169, 98, 0.1) 60%, 
-            rgba(201, 169, 98, 0.2) 100%);
-        animation: pulse 4s ease-in-out infinite;
-    }
-
-    .void-circle::before {
-        content: '？';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-family: var(--font-display);
-        font-size: 5rem;
-        color: rgba(201, 169, 98, 0.15);
-    }
-
-    .story-block {
-        padding: 3rem;
-        background: var(--color-bg-subtle);
-        border-left: 2px solid var(--color-accent);
-        margin: 3rem 0;
-        position: relative;
-    }
-
-    .story-block p {
-        font-family: var(--font-display);
-        font-size: 1.1rem;
-        color: var(--color-warm);
-        line-height: 1.9;
-    }
-
-    /* Off-Grid Section */
-    .offgrid-section {
-        background: linear-gradient(180deg, 
-            var(--color-bg) 0%, 
-            var(--color-bg-subtle) 30%, 
-            var(--color-bg-subtle) 70%, 
-            var(--color-bg) 100%);
-        padding: 10rem 2rem;
-    }
-
-    .offgrid-content {
-        max-width: 1100px;
-        margin: 0 auto;
-    }
-
-    .offgrid-statement {
-        font-family: var(--font-display);
-        font-size: clamp(1.3rem, 3.5vw, 2.2rem);
-        font-weight: 400;
-        text-align: center;
-        margin-bottom: 5rem;
-        line-height: 1.8;
-    }
-
-    .offgrid-statement em {
-        color: var(--color-hope);
-        font-style: normal;
-    }
-
-    .independence-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-    }
-
-    .independence-item {
-        padding: 2rem;
-        border: 1px solid rgba(126, 184, 201, 0.2);
-        background: rgba(126, 184, 201, 0.02);
-        text-align: center;
-        transition: all 0.4s ease;
-    }
-
-    .independence-item:hover {
-        border-color: rgba(126, 184, 201, 0.4);
-        background: rgba(126, 184, 201, 0.05);
-    }
-
-    .independence-item h4 {
-        font-family: var(--font-display);
-        font-size: 1.1rem;
-        margin-bottom: 0.5rem;
-        color: var(--color-hope);
-    }
-
-    .independence-item p {
-        font-size: 0.85rem;
-        margin-bottom: 0;
-    }
-
-    /* Pearl Story */
-    .pearl-section {
-        padding: 10rem 2rem;
-    }
-
-    .pearl-content {
-        max-width: 800px;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    .pearl-image {
-        width: 120px;
-        height: 120px;
-        margin: 0 auto 3rem;
-        border-radius: 50%;
-        background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-warm) 100%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 3rem;
-        box-shadow: 0 0 60px var(--color-accent-glow);
-    }
-
-    .pearl-content h2 {
-        margin-bottom: 1rem;
-    }
-
-    .pearl-dates {
-        font-family: var(--font-display);
-        color: var(--color-accent);
-        margin-bottom: 3rem;
-    }
-
-    .pearl-story-text {
-        text-align: left;
-        max-width: 700px;
-        margin: 0 auto;
-    }
-
-    .pearl-story-text p {
-        margin-bottom: 1.5rem;
-    }
-
-    .pearl-highlight {
-        padding: 2rem;
-        background: var(--color-bg-subtle);
-        border-left: 2px solid var(--color-hope);
-        margin: 2rem 0;
-    }
-
-    .pearl-highlight p {
-        font-family: var(--font-display);
-        font-size: 1.1rem;
-        color: var(--color-hope);
-        margin-bottom: 0;
-    }
-
-    /* Materials */
-    .materials-section {
-        padding: 8rem 2rem;
-    }
-
-    .materials-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1.5rem;
-        margin-top: 4rem;
-    }
-
-    .material-card {
-        padding: 2rem;
-        background: linear-gradient(180deg, var(--color-bg-subtle) 0%, transparent 100%);
-        border: 1px solid rgba(201, 169, 98, 0.1);
-        text-align: center;
-        transition: all 0.4s ease;
-    }
-
-    .material-card:hover {
-        transform: translateY(-5px);
-        border-color: rgba(201, 169, 98, 0.3);
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    }
-
-    .material-icon {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-    }
-
-    .material-card h4 {
-        font-family: var(--font-display);
-        font-size: 1.2rem;
-        font-weight: 400;
-        margin-bottom: 0.3rem;
-    }
-
-    .material-lifespan {
-        font-size: 0.7rem;
-        letter-spacing: 0.1em;
-        color: var(--color-accent);
-        margin-bottom: 1rem;
-    }
-
-    .material-card p {
-        font-size: 0.85rem;
-        margin-bottom: 0;
-    }
-
-    /* Services */
-    .services-section {
-        padding: 8rem 2rem;
-        background: var(--color-bg-subtle);
-    }
-
-    .services-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-        margin-top: 4rem;
-        max-width: 1100px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .service-card {
-        padding: 2.5rem;
-        border: 1px solid rgba(201, 169, 98, 0.1);
-        background: var(--color-bg);
-        transition: all 0.4s ease;
-    }
-
-    .service-card:hover {
-        border-color: rgba(201, 169, 98, 0.3);
-    }
-
-    .service-icon {
-        font-size: 2rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .service-card h4 {
-        font-family: var(--font-display);
-        font-size: 1.2rem;
-        margin-bottom: 1rem;
-    }
-
-    /* Family & Gift Economy */
-    .family-section {
-        padding: 8rem 2rem;
-    }
-
-    .family-intro {
-        text-align: center;
-        max-width: 700px;
-        margin: 0 auto 4rem;
-    }
-
-    .family-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-        max-width: 900px;
-        margin: 0 auto;
-    }
-
-    .family-member {
-        text-align: center;
-        padding: 2rem;
-    }
-
-    .family-member h4 {
-        font-family: var(--font-display);
-        font-size: 1.4rem;
-        margin-bottom: 0.3rem;
-    }
-
-    .family-role {
-        font-size: 0.75rem;
-        letter-spacing: 0.15em;
-        color: var(--color-accent);
-        margin-bottom: 1rem;
-    }
-
-    /* Gift Economy */
-    .gift-section {
-        padding: 8rem 2rem;
-        background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-subtle) 50%, var(--color-bg) 100%);
-    }
-
-    .gift-content {
-        max-width: 900px;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    .gift-stat {
-        margin: 4rem 0;
-        padding: 3rem;
-        background: var(--color-bg);
-        border: 1px solid rgba(201, 169, 98, 0.2);
-    }
-
-    .gift-stat-value {
-        font-family: var(--font-display);
-        font-size: 4rem;
-        color: var(--color-accent);
-    }
-
-    .gift-stat-label {
-        font-size: 0.9rem;
-        color: var(--color-text-muted);
-    }
-
-    /* CTA */
-    .cta-section {
-        padding: 10rem 2rem;
-        text-align: center;
-        background: radial-gradient(ellipse 80% 50% at 50% 100%, var(--color-accent-glow) 0%, transparent 50%);
-    }
-
-    .cta-section h2 {
-        margin-bottom: 1rem;
-    }
-
-    .cta-subtitle {
-        font-family: var(--font-display);
-        font-size: 1.1rem;
-        color: var(--color-text-muted);
-        margin-bottom: 3rem;
-    }
-
-    .cta-buttons {
-        display: flex;
-        gap: 1.5rem;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .cta-primary {
-        padding: 1.2rem 3rem;
-        background: var(--color-accent);
-        color: var(--color-bg);
-        text-decoration: none;
-        font-size: 0.85rem;
-        letter-spacing: 0.15em;
-        transition: all 0.4s ease;
-    }
-
-    .cta-primary:hover {
-        box-shadow: 0 0 50px var(--color-accent-glow);
-        transform: translateY(-2px);
-    }
-
-    .cta-secondary {
-        padding: 1.2rem 3rem;
-        background: transparent;
-        border: 1px solid var(--color-text-muted);
-        color: var(--color-text);
-        text-decoration: none;
-        font-size: 0.85rem;
-        letter-spacing: 0.15em;
-        transition: all 0.4s ease;
-    }
-
-    .cta-secondary:hover {
-        border-color: var(--color-text);
-    }
-
-    /* Footer */
-    footer {
-        padding: 4rem 2rem;
-        text-align: center;
-        border-top: 1px solid rgba(201, 169, 98, 0.1);
-    }
-
-    .footer-memorial {
-        font-family: var(--font-display);
-        color: var(--color-text-muted);
-        margin-bottom: 2rem;
-    }
-
-    .footer-links {
-        display: flex;
-        gap: 2rem;
-        justify-content: center;
-        margin-bottom: 2rem;
-    }
-
-    .footer-links a {
-        color: var(--color-text-muted);
-        text-decoration: none;
-        font-size: 0.85rem;
-        transition: color 0.3s ease;
-    }
-
-    .footer-links a:hover {
-        color: var(--color-accent);
-    }
-
-    .footer-payment {
-        display: flex;
-        gap: 1.5rem;
-        justify-content: center;
-        margin-bottom: 2rem;
-        flex-wrap: wrap;
-    }
-
-    .footer-payment a {
-        color: var(--color-text-muted);
-        text-decoration: none;
-        font-size: 0.8rem;
-        padding: 0.5rem 1rem;
-        border: 1px solid rgba(201, 169, 98, 0.2);
-        transition: all 0.3s ease;
-    }
-
-    .footer-payment a:hover {
-        border-color: var(--color-accent);
-        color: var(--color-accent);
-    }
-
-    .footer-location {
-        font-size: 0.75rem;
-        letter-spacing: 0.2em;
-        color: var(--color-text-muted);
-    }
-
-    /* Animations */
-    @keyframes fadeUp {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    @keyframes float {
-        0%, 100% { transform: translateX(-50%) translateY(0); }
-        50% { transform: translateX(-50%) translateY(-10px); }
-    }
-
-    @keyframes pulse {
-        0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
-        50% { transform: translate(-50%, -50%) scale(1.05); opacity: 0.8; }
-    }
-
-    /* Print Styles */
-    @media print {
-        * {
-            background: white !important;
-            color: black !important;
-            box-shadow: none !important;
-            text-shadow: none !important;
-        }
-
-        body {
-            font-size: 10.5pt;
-            line-height: 1.6;
-            background: white;
-            color: black;
-        }
-
-        .lang-switch,
-        .scroll-indicator,
-        .hero-cta,
-        .cta-buttons,
-        .footer-payment {
-            display: none !important;
-        }
-
-        .hero {
-            min-height: auto;
-            padding: 2rem 0;
-            page-break-after: avoid;
-        }
-
-        .hero h1 {
-            font-size: 24pt;
-            color: black !important;
-            animation: none;
-            opacity: 1;
-        }
-
-        .hero h1 em {
-            color: black !important;
-        }
-
-        .hero-tagline,
-        .hero-subtitle {
-            animation: none;
-            opacity: 1;
-            color: #333 !important;
-        }
-
-        section {
-            padding: 1.5rem 0;
-            max-width: 100%;
-            page-break-inside: avoid;
-        }
-
-        .section-label {
-            color: #666 !important;
-            font-weight: 500;
-        }
-
-        h2 {
-            font-size: 16pt;
-            color: black !important;
-            margin-bottom: 1rem;
-            page-break-after: avoid;
-        }
-
-        h3, h4 {
-            font-size: 11pt;
-            color: black !important;
-        }
-
-        p {
-            color: #333 !important;
-            max-width: 100%;
-        }
-
-        .highlight {
-            color: black !important;
-            font-weight: 500;
-        }
-
-        .core-message {
-            padding: 2rem 0;
-        }
-
-        .core-pillars {
-            display: block;
-            margin-top: 1.5rem;
-        }
-
-        .pillar {
-            border: 1px solid #ccc;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            page-break-inside: avoid;
-        }
-
-        .pillar-icon {
-            font-size: 1.5rem;
-        }
-
-        .pillar-subtitle {
-            color: #666 !important;
-        }
-
-        .why-section {
-            display: block;
-        }
-
-        .why-visual {
-            display: none;
-        }
-
-        .story-block {
-            border-left: 3px solid #333;
-            background: #f5f5f5 !important;
-            padding: 1rem;
-            margin: 1rem 0;
-        }
-
-        .story-block p {
-            color: #333 !important;
-        }
-
-        .offgrid-section {
-            padding: 2rem 0;
-        }
-
-        .offgrid-statement {
-            font-size: 13pt;
-        }
-
-        .offgrid-statement em {
-            color: black !important;
-        }
-
-        .independence-grid {
-            display: block;
-        }
-
-        .independence-item {
-            border: 1px solid #ccc;
-            padding: 0.75rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .independence-item h4 {
-            color: black !important;
-        }
-
-        .pearl-section {
-            padding: 2rem 0;
-        }
-
-        .pearl-image {
-            width: 60px;
-            height: 60px;
-            font-size: 2rem;
-            background: #eee !important;
-            box-shadow: none;
-        }
-
-        .pearl-dates {
-            color: #666 !important;
-        }
-
-        .pearl-highlight {
-            border-left: 3px solid #333;
-            background: #f5f5f5 !important;
-            padding: 0.75rem;
-        }
-
-        .pearl-highlight p {
-            color: #333 !important;
-        }
-
-        .materials-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 0.5rem;
-        }
-
-        .material-card {
-            border: 1px solid #ccc;
-            padding: 0.75rem;
-        }
-
-        .material-icon {
-            font-size: 1.5rem;
-        }
-
-        .material-lifespan {
-            color: #666 !important;
-        }
-
-        .services-section {
-            padding: 2rem 0;
-        }
-
-        .services-grid {
-            display: block;
-        }
-
-        .service-card {
-            border: 1px solid #ccc;
-            padding: 1rem;
-            margin-bottom: 0.75rem;
-            page-break-inside: avoid;
-        }
-
-        .service-icon {
-            font-size: 1.5rem;
-        }
-
-        .family-grid {
-            display: block;
-        }
-
-        .family-member {
-            padding: 0.75rem 0;
-            border-bottom: 1px solid #eee;
-        }
-
-        .family-role {
-            color: #666 !important;
-        }
-
-        .gift-section {
-            padding: 2rem 0;
-        }
-
-        .gift-stat {
-            border: 1px solid #ccc;
-            padding: 1rem;
-            margin: 1rem 0;
-        }
-
-        .gift-stat-value {
-            font-size: 2rem;
-            color: black !important;
-        }
-
-        .cta-section {
-            padding: 1.5rem 0;
-        }
-
-        .cta-subtitle {
-            color: #666 !important;
-        }
-
-        footer {
-            border-top: 1px solid #ccc;
-            padding: 1rem 0;
-        }
-
-        .footer-memorial {
-            color: #666 !important;
-        }
-
-        .footer-links {
-            display: none;
-        }
-
-        .footer-location {
-            color: #666 !important;
-        }
-
-        /* Page breaks */
-        .core-message,
-        .pearl-section,
-        .services-section {
-            page-break-before: auto;
-        }
-
-        /* Hide decorative elements */
-        .void-circle,
-        .hero::before {
-            display: none !important;
-        }
-    }
-
-    /* Responsive */
-    @media (max-width: 1024px) {
-        .core-pillars,
-        .independence-grid,
-        .services-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .why-section {
-            grid-template-columns: 1fr;
-            gap: 4rem;
-        }
-
-        .why-visual {
-            height: 300px;
-        }
-
-        .materials-grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-
-    @media (max-width: 768px) {
-        section {
-            padding: 5rem 1.5rem;
-        }
-
-        .materials-grid,
-        .family-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .cta-buttons {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .lang-switch {
-            top: 1rem;
-            right: 1rem;
-        }
-    }
 </style>
 </head>
 <body>
-<!-- Language Switch -->
 <nav class="lang-switch">
     <a href="index.html">EN</a>
     <a href="#" class="active">日本語</a>
 </nav>
 
-<!-- Hero -->
 <header class="hero">
     <div class="hero-content">
         <p class="hero-tagline">Timeless Eternal Hope</p>
         <h1>あなたは<br><em>存在していい</em></h1>
         <p class="hero-subtitle">記憶と、インフラと、自立を通じて<br>「存在の許可」を届ける</p>
-        <a href="#order" class="hero-cta">物語を始める</a>
+        <a href="#packages" class="hero-cta">サービスを見る</a>
     </div>
     <div class="scroll-indicator">DISCOVER</div>
 </header>
 
-<!-- Core Message -->
+<!-- Quick Packages - HERO直後 -->
+
+<section class="quick-packages" id="packages">
+    <p class="section-label">サービス一覧</p>
+    <h2>レーザー刻印メモリアル</h2>
+    <p class="quick-packages-subtitle">あなたの記憶を、時間に耐える素材に刻む。</p>
+
+```
+<div class="packages-grid">
+    <div class="package-card">
+        <div class="package-icon">🌿</div>
+        <h4>モーメント</h4>
+        <p class="package-price">$30–$50</p>
+        <p class="package-desc">土に還る自然素材</p>
+    </div>
+    <div class="package-card">
+        <div class="package-icon">🪵</div>
+        <h4>メモリー</h4>
+        <p class="package-price">$50–$150</p>
+        <p class="package-desc">木材、ココナッツ -- 人の一生</p>
+    </div>
+    <div class="package-card">
+        <div class="package-icon">🪨</div>
+        <h4>レガシー</h4>
+        <p class="package-price">$300–$500</p>
+        <p class="package-desc">溶岩石、金属 -- 世代を超えて</p>
+    </div>
+    <div class="package-card">
+        <div class="package-icon">💎</div>
+        <h4>エターナル</h4>
+        <p class="package-price">$5,000</p>
+        <p class="package-desc">石英ガラス -- 1,000年以上</p>
+    </div>
+</div>
+
+<div class="quick-extras">
+    <div class="quick-extra-item">
+        <h5>🏠 Ohana Home Japan</h5>
+        <p>初回無料 -- 東京近郊＆田舎の家に滞在</p>
+    </div>
+    <div class="quick-extra-item">
+        <h5>⚡ オフグリッドインフラ</h5>
+        <p>評価 $0（Legacy+）| 構築 $500/日</p>
+    </div>
+    <div class="quick-extra-item">
+        <h5>✨ パトロンになる</h5>
+        <p>$100,000 -- 石英ガラスに永遠に名を刻む</p>
+    </div>
+</div>
+
+<div class="cta-buttons">
+    <a href="Catalog-ja.pdf" class="cta-primary">カタログを見る</a>
+    <a href="https://calendly.com/pearlmemorial/pearlmemorialsession" class="cta-secondary">相談を予約</a>
+</div>
+```
+
+</section>
+
 <section class="core-message">
     <p class="section-label">使命</p>
     <h2><span class="highlight">「存在していいよ」</span>を<br>必要な人に届ける</h2>
-    <p style="max-width: 700px; margin: 0 auto;">
-        言葉だけではない。刻まれた記憶、災害に耐える記録、
-        既存システムに依存しなくていいインフラ。形にして届ける。
-    </p>
-
+    <p style="max-width: 700px; margin: 0 auto;">言葉だけではない。刻まれた記憶、災害に耐える記録、既存システムに依存しなくていいインフラ。形にして届ける。</p>
     <div class="core-pillars">
         <div class="pillar">
             <div class="pillar-icon">✦</div>
@@ -1108,272 +270,125 @@
     </div>
 </section>
 
-<!-- Why Section - Origin Story -->
 <section class="why-section">
-    <div class="why-visual">
-        <div class="void-circle"></div>
-    </div>
+    <div class="why-visual"><div class="void-circle"></div></div>
     <div class="why-content">
         <p class="section-label">なぜ刻むのか</p>
         <h2>出生時間すら不明瞭な境遇から</h2>
-        <p>
-            創業者の卓也は、自分自身の「始まり」が刻まれていない境遇で育った。
-            生まれた時間が曖昧。正確な記録がない。
-        </p>
-        <p>
-            たかが出生時間、と思うかもしれない。でも、それは人生の最初の「刻印」だ。
-            出生時間がなければ、ホロスコープを作ることもできない。「あなたは何者か」を星に問うことすらできない。
-        </p>
-        <div class="story-block">
-            <p>
-                自分の存在が刻まれていないとき、こう問い続けることになる。<br>
-                「ここにいていいのか？」
-            </p>
-        </div>
-        <p>
-            だからこそ、誰かの存在を、確かに刻みたい。<br>
-            <strong>「あなたはここにいた。確かに存在した。人生には意味があった。」</strong>
-        </p>
+        <p>創業者の卓也は、自分自身の「始まり」が刻まれていない境遇で育った。生まれた時間が曖昧。正確な記録がない。</p>
+        <p>たかが出生時間、と思うかもしれない。でも、それは人生の最初の「刻印」だ。出生時間がなければ、ホロスコープを作ることもできない。「あなたは何者か」を星に問うことすらできない。</p>
+        <div class="story-block"><p>自分の存在が刻まれていないとき、こう問い続けることになる。<br>「ここにいていいのか？」</p></div>
+        <p>だからこそ、誰かの存在を、確かに刻みたい。<br><strong>「あなたはここにいた。確かに存在した。人生には意味があった。」</strong></p>
     </div>
 </section>
 
-<!-- Off-Grid Section -->
 <section class="offgrid-section">
     <div class="offgrid-content">
         <p class="section-label">自立</p>
-        <p class="offgrid-statement">
-            既存のシステムに<em>依存しなくても</em>、存在できる。<br>
-            あなたは<em>存在していい</em>。
-        </p>
-
+        <p class="offgrid-statement">既存のシステムに<em>依存しなくても</em>、存在できる。<br>あなたは<em>存在していい</em>。</p>
         <div class="independence-grid">
-            <div class="independence-item">
-                <h4>電力会社がなくても</h4>
-                <p>オフグリッドソーラー。自分で電気を作れる。</p>
-            </div>
-            <div class="independence-item">
-                <h4>通信会社がなくても</h4>
-                <p>Starlink衛星通信。どこでも繋がれる。</p>
-            </div>
-            <div class="independence-item">
-                <h4>誰かの許可がなくても</h4>
-                <p>あなたの存在に、承認は必要ない。</p>
-            </div>
+            <div class="independence-item"><h4>電力会社がなくても</h4><p>オフグリッドソーラー。自分で電気を作れる。</p></div>
+            <div class="independence-item"><h4>通信会社がなくても</h4><p>Starlink衛星通信。どこでも繋がれる。</p></div>
+            <div class="independence-item"><h4>誰かの許可がなくても</h4><p>あなたの存在に、承認は必要ない。</p></div>
         </div>
-
-        <p style="text-align: center; margin-top: 4rem; max-width: 700px; margin-left: auto; margin-right: auto;">
-            マウイで、3日で完全なオフグリッド生活環境を構築した。
-            24時間インターネット。ハイブリッド電源。家族3人が快適に暮らせる環境。
-            これは電気の話ではない。<strong>自立が可能であることの証明</strong>だ。
-        </p>
+        <p style="text-align: center; margin-top: 4rem; max-width: 700px; margin-left: auto; margin-right: auto;">マウイで、3日で完全なオフグリッド生活環境を構築した。24時間インターネット。ハイブリッド電源。家族3人が快適に暮らせる環境。これは電気の話ではない。<strong>自立が可能であることの証明</strong>だ。</p>
     </div>
 </section>
 
-<!-- Pearl Story -->
 <section class="pearl-section">
     <div class="pearl-content">
         <div class="pearl-image">🐕</div>
         <p class="section-label">Pearlの物語</p>
         <h2>Pearlの記憶に捧げて</h2>
         <p class="pearl-dates">2007年 – 2025年</p>
-        
         <div class="pearl-story-text">
-            <p>
-                18年間、トイプードルのPearlは家族の一員として共に過ごした。
-                晩年、彼の体は自由に動かなくなった。家族での外出が難しくなった。
-                私たちは長い間、移動の自由を手放していた。
-            </p>
-            <p>
-                2025年1月、Pearlは静かに旅立った。
-            </p>
-            <p>
-                私たちはPearlを手放すことができなかった。貝殻とレジンで作った移動可能なメモリアルに彼の遺骨を納めた。
-                その瞬間、気づいた。
-            </p>
-
-            <div class="pearl-highlight">
-                <p>Pearlと一緒に、どこへでも行ける。生前見ることのなかった海を、見せてあげられる。</p>
-            </div>
-
-            <p>
-                移動できるお墓を作ったことで、私たちは自由を取り戻した。
-                そしてPearlは、生きている時よりも多くの場所へ旅することになった。
-            </p>
-            <p>
-                このプロジェクトは彼の名前を冠している。<strong>Pearl Memorial。</strong>
-            </p>
+            <p>18年間、トイプードルのPearlは家族の一員として共に過ごした。晩年、彼の体は自由に動かなくなった。家族での外出が難しくなった。私たちは長い間、移動の自由を手放していた。</p>
+            <p>2025年1月、Pearlは静かに旅立った。</p>
+            <p>私たちはPearlを手放すことができなかった。貝殻とレジンで作った移動可能なメモリアルに彼の遺骨を納めた。その瞬間、気づいた。</p>
+            <div class="pearl-highlight"><p>Pearlと一緒に、どこへでも行ける。生前見ることのなかった海を、見せてあげられる。</p></div>
+            <p>移動できるお墓を作ったことで、私たちは自由を取り戻した。そしてPearlは、生きている時よりも多くの場所へ旅することになった。</p>
+            <p>このプロジェクトは彼の名前を冠している。<strong>Pearl Memorial。</strong></p>
         </div>
     </div>
 </section>
 
-<!-- Materials -->
 <section class="materials-section">
     <p class="section-label">素材</p>
     <h2>土に還るものから、永遠まで</h2>
     <p>4つの素材ティアで、時間との関係性に応じた記憶を刻む。</p>
-
     <div class="materials-grid">
-        <div class="material-card">
-            <div class="material-icon">🌿</div>
-            <h4>モーメント</h4>
-            <p class="material-lifespan">土に還る</p>
-            <p>椰子の葉、流木、自然素材</p>
-        </div>
-        <div class="material-card">
-            <div class="material-icon">🪵</div>
-            <h4>メモリー</h4>
-            <p class="material-lifespan">人の一生</p>
-            <p>木材、木炭、ココナッツ殻</p>
-        </div>
-        <div class="material-card">
-            <div class="material-icon">🪨</div>
-            <h4>レガシー</h4>
-            <p class="material-lifespan">世代を超えて</p>
-            <p>金属、石、溶岩石</p>
-        </div>
-        <div class="material-card">
-            <div class="material-icon">💎</div>
-            <h4>エターナル</h4>
-            <p class="material-lifespan">永遠に</p>
-            <p>石英ガラス内部刻印</p>
-        </div>
+        <div class="material-card"><div class="material-icon">🌿</div><h4>モーメント</h4><p class="material-lifespan">土に還る</p><p>椰子の葉、流木、自然素材</p></div>
+        <div class="material-card"><div class="material-icon">🪵</div><h4>メモリー</h4><p class="material-lifespan">人の一生</p><p>木材、木炭、ココナッツ殻</p></div>
+        <div class="material-card"><div class="material-icon">🪨</div><h4>レガシー</h4><p class="material-lifespan">世代を超えて</p><p>金属、石、溶岩石</p></div>
+        <div class="material-card"><div class="material-icon">💎</div><h4>エターナル</h4><p class="material-lifespan">永遠に</p><p>石英ガラス内部刻印</p></div>
     </div>
 </section>
 
-<!-- Services -->
 <section class="services-section">
     <div style="max-width: 1100px; margin: 0 auto; text-align: center;">
         <p class="section-label">サービス</p>
         <h2>届ける方法</h2>
-
         <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon">🔥</div>
-                <h4>移動式メモリアル工房</h4>
-                <p>Starlink、ポータブル電源、レーザー彫刻機。すべてバッグ一つに。WiFiに接続し、注文し、その場で刻印を受け取る。</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">🪦</div>
-                <h4>墓石QRシステム</h4>
-                <p>墓石にQRコードを刻印し、デジタルアーカイブへ接続。墓石が崩れても、記憶は残る。</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">⚡</div>
-                <h4>オフグリッドインフラ</h4>
-                <p>ソーラーシステム、衛星インターネット、電力の自立。誰の許可もなく、存在できる基盤を構築。</p>
-            </div>
+            <div class="service-card"><div class="service-icon">🔥</div><h4>移動式メモリアル工房</h4><p>Starlink、ポータブル電源、レーザー彫刻機。すべてバッグ一つに。WiFiに接続し、注文し、その場で刻印を受け取る。</p></div>
+            <div class="service-card"><div class="service-icon">🪦</div><h4>墓石QRシステム</h4><p>墓石にQRコードを刻印し、デジタルアーカイブへ接続。墓石が崩れても、記憶は残る。</p></div>
+            <div class="service-card"><div class="service-icon">⚡</div><h4>オフグリッドインフラ</h4><p>ソーラーシステム、衛星インターネット、電力の自立。誰の許可もなく、存在できる基盤を構築。</p></div>
         </div>
     </div>
 </section>
 
-<!-- Family -->
 <section class="family-section">
     <div class="family-intro">
         <p class="section-label">佐藤家</p>
         <h2>マウイで暮らす家族3人</h2>
-        <p>
-            先祖の墓がこの島に眠っている。私たちは支援者としてではなく、
-            この土地に根を持つ者として、墓守の責任を負って、ここにいる。
-        </p>
+        <p>先祖の墓がこの島に眠っている。私たちは支援者としてではなく、この土地に根を持つ者として、墓守の責任を負って、ここにいる。</p>
     </div>
-
     <div class="family-grid">
-        <div class="family-member">
-            <h4>卓也</h4>
-            <p class="family-role">インフラ & 彫刻</p>
-            <p>富士通エンジニア、ベンチャーCTO、デロイト シニアスペシャリストを経て、災害復旧ボランティア。</p>
-        </div>
-        <div class="family-member">
-            <h4>美那</h4>
-            <p class="family-role">マーケティング & クラフト</p>
-            <p>ペットケア18年、レジンアート、ドライフラワー保存。</p>
-        </div>
-        <div class="family-member">
-            <h4>糸</h4>
-            <p class="family-role">5歳</p>
-            <p>探検家。夢想家。自然と動物が大好き。</p>
-        </div>
+        <div class="family-member"><h4>卓也</h4><p class="family-role">インフラ & 彫刻</p><p>富士通エンジニア、ベンチャーCTO、デロイト シニアスペシャリストを経て、災害復旧ボランティア。</p></div>
+        <div class="family-member"><h4>美那</h4><p class="family-role">マーケティング & クラフト</p><p>ペットケア18年、レジンアート、ドライフラワー保存。</p></div>
+        <div class="family-member"><h4>糸</h4><p class="family-role">5歳</p><p>探検家。夢想家。自然と動物が大好き。</p></div>
     </div>
 </section>
 
-<!-- Gift Economy -->
 <section class="gift-section">
     <div class="gift-content">
         <p class="section-label">ギフトエコノミー</p>
         <h2>まず、与える</h2>
-        <p>
-            手作り石鹸を配る。無料WiFiを提供する。技術を共有する。
-            見返りを期待せずに与えることで、信頼が生まれる。
-        </p>
-
-        <div class="gift-stat">
-            <div class="gift-stat-value">$3,000+</div>
-            <p class="gift-stat-label">数ドルの手作り石鹸から生まれた価値</p>
-        </div>
-
-        <p>
-            これは魔法ではない。「見知らぬ者同士の取引」が
-            「顔と文脈を共有するコミュニティ」に変わったとき、交換のルールそのものが変わる。
-        </p>
+        <p>手作り石鹸を配る。無料WiFiを提供する。技術を共有する。見返りを期待せずに与えることで、信頼が生まれる。</p>
+        <div class="gift-stat"><div class="gift-stat-value">$3,000+</div><p class="gift-stat-label">数ドルの手作り石鹸から生まれた価値</p></div>
+        <p>これは魔法ではない。「見知らぬ者同士の取引」が「顔と文脈を共有するコミュニティ」に変わったとき、交換のルールそのものが変わる。</p>
     </div>
 </section>
 
-<!-- CTA -->
 <section class="cta-section" id="order">
     <p class="section-label">始める</p>
     <h2>記憶を刻む</h2>
     <p class="cta-subtitle">あなたとの出会いも、刻まれるべき記憶です。</p>
-
     <div class="cta-buttons">
         <a href="https://pearl.memorial" class="cta-primary">ショップへ</a>
         <a href="https://calendly.com/pearlmemorial/pearlmemorialsession" class="cta-secondary">カスタムオーダー</a>
     </div>
 </section>
 
-<!-- Partner Resources -->
-<section class="partner-section">
-    <p class="section-label">For Partners</p>
+<section style="text-align: center; padding: 6rem 2rem;">
+    <p class="section-label">パートナー向け</p>
     <h2>パートナー向け資料</h2>
-    <p>このプロジェクトは彼の名前を冠している。Pearl Memorial。</p>
-    <p>パートナー向けの資料とガイドラインをご確認ください</p>
-    <div class="cta-buttons">
-        <a href="Partner-ja.pdf" class="cta-primary">パートナー資料</a>
-    </div>
+    <p style="max-width: 600px; margin: 0 auto 2rem;">パートナー向けの資料とガイドラインをご確認ください</p>
+    <div class="cta-buttons"><a href="Partner-ja.pdf" class="cta-primary">パートナー資料</a></div>
 </section>
 
-<!-- Catalog -->
-<section class="catalog-section">
-    <p class="section-label">カタログ</p>
-    <h2>エンドユーザー向けカタログ</h2>
-    <p>製品・サービスのカタログはこちらからダウンロードできます。</p>
-    <div class="cta-buttons">
-        <a href="Catalog-ja.pdf" class="cta-primary">カタログ</a>
-    </div>
-</section>
-
-<!-- Footer -->
 <footer>
-    <p class="footer-memorial">
-        Pearl（2007–2025）の記憶に捧げて<br>
-        生前見ることのなかった海を、今、永遠に見守っています。🐕
-    </p>
-
+    <p class="footer-memorial">Pearl（2007–2025）の記憶に捧げて<br>生前見ることのなかった海を、今、永遠に見守っています。🐕</p>
     <div class="footer-links">
         <a href="https://calendly.com/pearlmemorial/pearlmemorialsession">お問い合わせ</a>
         <a href="https://www.instagram.com/pearl.memorial/">Instagram</a>
         <a href="Catalog-ja.pdf">カタログ</a>
     </div>
-
     <div class="footer-payment">
         <a href="https://pearl.memorial">Shop (Square)</a>
         <a href="https://www.paypal.com/ncp/payment/SVPS6J8WXQU76">PayPal</a>
         <a href="#">Zelle: business@satotakuya.jp</a>
     </div>
-
-    <p class="footer-location">
-        Mahalo 🌺<br>
-        Timeless Eternal Hope · Maui, Hawaii
-    </p>
+    <p class="footer-location">Mahalo 🌺<br>Timeless Eternal Hope · Maui, Hawaii</p>
 </footer>
 </body>
 </html>
