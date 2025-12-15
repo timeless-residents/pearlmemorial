@@ -39,12 +39,6 @@
 .hero-cta:hover { background: var(–color-accent); color: var(–color-bg); box-shadow: 0 0 40px var(–color-accent-glow); }
 .scroll-indicator { position: absolute; bottom: 3rem; left: 50%; transform: translateX(-50%); font-size: 0.7rem; letter-spacing: 0.3em; color: var(–color-text-muted); opacity: 0; animation: fadeUp 1s ease forwards 1.2s, float 3s ease-in-out infinite 2s; }
 
-/* Evolving Statement */
-.evolving-statement { text-align: center; padding: 4rem 2rem; background: transparent; }
-.evolving-statement h3 { font-family: var(–font-display); font-size: 1.4rem; font-style: italic; color: var(–color-hope); margin-bottom: 0.5rem; font-weight: 300; }
-.evolving-statement p { color: var(–color-text-muted); font-size: 0.95rem; max-width: 500px; margin: 0 auto; }
-
-/* Quick Packages Section */
 .quick-packages { padding: 6rem 2rem; background: var(–color-bg-subtle); text-align: center; }
 .quick-packages h2 { font-family: var(–font-display); font-size: clamp(2rem, 5vw, 3rem); font-weight: 300; margin-bottom: 1rem; }
 .quick-packages-subtitle { color: var(–color-text-muted); margin-bottom: 3rem; font-size: 1rem; }
@@ -106,21 +100,14 @@ p { color: var(–color-text-muted); max-width: 65ch; margin-bottom: 1.5rem; }
 .pearl-highlight { padding: 2rem; background: var(–color-bg-subtle); border-left: 2px solid var(–color-hope); margin: 2rem 0; }
 .pearl-highlight p { font-family: var(–font-display); font-size: 1.2rem; font-style: italic; color: var(–color-hope); margin-bottom: 0; }
 
-.materials-section { padding: 8rem 2rem; }
-.materials-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 4rem; }
-.material-card { padding: 2rem; background: linear-gradient(180deg, var(–color-bg-subtle) 0%, transparent 100%); border: 1px solid rgba(201, 169, 98, 0.1); text-align: center; transition: all 0.4s ease; }
-.material-card:hover { transform: translateY(-5px); border-color: rgba(201, 169, 98, 0.3); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); }
-.material-icon { font-size: 2rem; margin-bottom: 1rem; }
-.material-card h4 { font-family: var(–font-display); font-size: 1.2rem; font-weight: 400; margin-bottom: 0.3rem; }
-.material-lifespan { font-size: 0.7rem; letter-spacing: 0.1em; color: var(–color-accent); margin-bottom: 1rem; }
-.material-card p { font-size: 0.85rem; margin-bottom: 0; }
-
 .services-section { padding: 8rem 2rem; background: var(–color-bg-subtle); }
-.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 4rem; max-width: 1100px; margin-left: auto; margin-right: auto; }
+.services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-top: 4rem; max-width: 1100px; margin-left: auto; margin-right: auto; }
 .service-card { padding: 2.5rem; border: 1px solid rgba(201, 169, 98, 0.1); background: var(–color-bg); transition: all 0.4s ease; }
 .service-card:hover { border-color: rgba(201, 169, 98, 0.3); }
 .service-icon { font-size: 2rem; margin-bottom: 1.5rem; }
 .service-card h4 { font-family: var(–font-display); font-size: 1.3rem; margin-bottom: 1rem; }
+.service-card ul { list-style: none; padding: 0; margin: 1rem 0; }
+.service-card li { padding: 0.3rem 0; color: var(–color-text-muted); font-size: 0.9rem; }
 
 .family-section { padding: 8rem 2rem; }
 .family-intro { text-align: center; max-width: 700px; margin: 0 auto 4rem; }
@@ -168,20 +155,20 @@ footer { padding: 4rem 2rem; text-align: center; border-top: 1px solid rgba(201,
 @keyframes pulse { 0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 1; } 50% { transform: translate(-50%, -50%) scale(1.05); opacity: 0.8; } }
 
 @media (max-width: 1024px) {
-.packages-grid, .core-pillars, .independence-grid, .services-grid { grid-template-columns: 1fr 1fr; }
+.packages-grid, .core-pillars, .independence-grid { grid-template-columns: 1fr 1fr; }
+.services-grid { grid-template-columns: 1fr; }
 .why-section { grid-template-columns: 1fr; gap: 4rem; }
 .why-visual { height: 300px; }
-.materials-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 768px) {
 section { padding: 5rem 1.5rem; }
-.packages-grid, .materials-grid, .family-grid, .core-pillars, .independence-grid, .services-grid { grid-template-columns: 1fr; }
+.packages-grid, .family-grid, .core-pillars, .independence-grid, .services-grid { grid-template-columns: 1fr; }
 .cta-buttons { flex-direction: column; align-items: center; }
 .quick-extras { flex-direction: column; gap: 1.5rem; }
 .lang-switch { top: 1rem; right: 1rem; }
 }
-
 </style>
+
 </head>
 <body>
 <nav class="lang-switch">
@@ -191,7 +178,7 @@ section { padding: 5rem 1.5rem; }
 
 <header class="hero">
     <div class="hero-content">
-        <p class="hero-tagline">Timeless Eternal Hope</p>
+        <p class="hero-tagline">Off-grid Sato Family</p>
         <h1>You Are Allowed<br>to <em>Exist</em></h1>
         <p class="hero-subtitle">Delivering the permission to be -- through memory, infrastructure, and independence</p>
         <a href="#packages" class="hero-cta">See What We Offer</a>
@@ -199,20 +186,17 @@ section { padding: 5rem 1.5rem; }
     <div class="scroll-indicator">DISCOVER</div>
 </header>
 
-<!-- Evolving Statement - RIGHT AFTER HERO -->
-
-<section class="evolving-statement">
-    <h3>We're learning. We're evolving.</h3>
-    <p>We don't have all the answers yet.<br>But we keep improving to serve you better.<br>Feedback always welcome.</p>
+<section style="text-align: center; padding: 4rem 2rem; background: var(--color-bg);">
+    <h3 style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 300; margin-bottom: 1rem; color: var(--color-text);">We're learning. We're evolving.</h3>
+    <p style="color: var(--color-text-muted); max-width: 500px; margin: 0 auto;">We don't have all the answers yet.<br>But we keep improving to serve you better.<br>Feedback always welcome.</p>
 </section>
-
-<!-- Quick Packages -->
 
 <section class="quick-packages" id="packages">
     <p class="section-label">What You Get</p>
     <h2>Laser-Engraved Memorials</h2>
     <p class="quick-packages-subtitle">Preserve your memories in materials that last.</p>
 
+```
 <div class="packages-grid">
     <div class="package-card">
         <div class="package-icon">🌿</div>
@@ -223,7 +207,7 @@ section { padding: 5rem 1.5rem; }
     <div class="package-card">
         <div class="package-icon">🪵</div>
         <h4>Memory</h4>
-        <p class="package-price">$50–$150</p>
+        <p class="package-price">$100–$200</p>
         <p class="package-desc">We come to you</p>
     </div>
     <div class="package-card">
@@ -243,7 +227,7 @@ section { padding: 5rem 1.5rem; }
 <div class="quick-extras">
     <div class="quick-extra-item">
         <h5>🏠 Ohana Home Japan</h5>
-        <p>First stay FREE -- our homes in Tokyo & countryside</p>
+        <p>First week FREE -- our homes in Tokyo & countryside</p>
     </div>
     <div class="quick-extra-item">
         <h5>⚡ Off-Grid Infrastructure</h5>
@@ -259,6 +243,7 @@ section { padding: 5rem 1.5rem; }
     <a href="Catalog.pdf" class="cta-primary">View Full Catalog</a>
     <a href="https://calendly.com/pearlmemorial/pearlmemorialsession" class="cta-secondary">Book Consultation</a>
 </div>
+```
 
 </section>
 
@@ -267,8 +252,35 @@ section { padding: 5rem 1.5rem; }
         <p class="section-label">Services</p>
         <h2>How We Deliver</h2>
         <div class="services-grid">
-            <div class="service-card"><div class="service-icon">🤝</div><h4>How We Work</h4><p><strong>Moment & Memory</strong> -- We come to you. Beach, cafe, anywhere on Maui.</p><p><strong>Legacy & Eternal</strong> -- A deeper experience. Visit our workshop, or journey to Japan.</p><noscript><a href="https://www.instagram.com/pearl.memorial/" class="instagram-link" target="_blank">📸 See samples @pearl.memorial</a></noscript><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/pearl.memorial/?v=20241213" data-instgrm-version="14" loading="lazy" style="max-width:100%; margin: 1rem auto;"></blockquote></div>
-            <div class="service-card"><div class="service-icon">⚡</div><h4>Off-Grid Infrastructure</h4><p>Solar systems, satellite internet, power independence. Exist without depending on anyone's permission.</p><p><strong>We handle everything.</strong><br>We source and configure your Starlink Mini setup on the day -- ready when you are.</p><p><strong>Mobile Starlink Mini available.</strong><br>Stay connected at Haleakala, Iao Valley, Road to Hana -- anywhere on Maui.<br>Charge while driving -- unlimited connectivity on the road.</p><p><strong>After your trip:</strong></p><ul><li>Return it -- donated to Maui communities & disaster relief</li><li>Purchase it -- take it home</li><li>Store it -- we'll keep it ready for your next visit</li></ul><noscript><a href="https://youtu.be/qBj84ceW1RU" class="youtube-link" target="_blank">▶️ Watch our off-grid setup</a></noscript><div class="video-container"><iframe src="https://www.youtube.com/embed/qBj84ceW1RU" loading="lazy" allowfullscreen></iframe></div></div>
+            <div class="service-card">
+                <div class="service-icon">🤝</div>
+                <h4>How We Work</h4>
+                <p><strong>Moment & Memory</strong> -- We come to you. Beach, cafe, anywhere on Maui.</p>
+                <p><strong>Legacy & Eternal</strong> -- A deeper experience. Visit our workshop, or journey to Japan.</p>
+                <noscript><a href="https://www.instagram.com/pearl.memorial/" class="instagram-link" target="_blank">📸 See samples @pearl.memorial</a></noscript>
+                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/pearl.memorial/" data-instgrm-version="14" loading="lazy" style="max-width:100%; margin: 1rem auto;"></blockquote>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">⚡</div>
+                <h4>Off-Grid Infrastructure</h4>
+                <p>Solar systems, satellite internet, power independence. Exist without depending on anyone's permission.</p>
+                <p><strong>Ready when you arrive.</strong><br>We source and configure your Starlink Mini setup on the day -- no hassle, no waiting.</p>
+                <p><strong>Mobile Starlink Mini available.</strong><br>Stay connected at Haleakala, Iao Valley, Road to Hana -- anywhere on Maui.<br>Charge while driving -- unlimited connectivity on the road.</p>
+                <p><strong>After your trip:</strong></p>
+                <ul>
+                    <li>Return it -- donated to Maui communities & disaster relief</li>
+                    <li>Purchase it -- take it home</li>
+                    <li>Store it -- we'll keep it ready for your next visit</li>
+                </ul>
+                <noscript><a href="https://youtu.be/qBj84ceW1RU" class="youtube-link" target="_blank">▶️ Watch our off-grid setup</a></noscript>
+                <div class="video-container"><iframe src="https://www.youtube.com/embed/qBj84ceW1RU" loading="lazy" allowfullscreen></iframe></div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🧼</div>
+                <h4>Handmade Soap</h4>
+                <p>Made off-grid in Maui. A gift for you.</p>
+                <p><strong>Want to make together?</strong><br>Join us for a soap-making experience. Ito (5 years old) will be your helper!</p>
+            </div>
         </div>
     </div>
 </section>
@@ -343,14 +355,26 @@ section { padding: 5rem 1.5rem; }
 
 <section class="family-section">
     <div class="family-intro">
-        <p class="section-label">The Sato Family</p>
+        <p class="section-label">Off-grid Sato Family</p>
         <h2>A Family of Three in Maui</h2>
         <p>Our ancestors' graves rest on this island. We are here not as supporters, but as those rooted in this land -- bearing the responsibility of grave keepers.</p>
     </div>
     <div class="family-grid">
-        <div class="family-member"><h4>Takuya</h4><p class="family-role">Infrastructure & Engraving</p><p>Former Fujitsu engineer, venture CTO, Deloitte specialist. Now focused on disaster recovery.</p></div>
-        <div class="family-member"><h4>Mina</h4><p class="family-role">Marketing & Craft</p><p>18 years of pet care, resin art, dried flower preservation.</p></div>
-        <div class="family-member"><h4>Ito</h4><p class="family-role">5 Years Old</p><p>Explorer. Dreamer. Curious about nature and animals.</p></div>
+        <div class="family-member">
+            <h4>Takuya</h4>
+            <p class="family-role">Infrastructure & Engraving & Soap</p>
+            <p>Former Fujitsu engineer, venture CTO, Deloitte specialist. Now focused on disaster recovery and off-grid systems.</p>
+        </div>
+        <div class="family-member">
+            <h4>Mina</h4>
+            <p class="family-role">Marketing & Craft</p>
+            <p>18 years of pet care, resin art, dried flower preservation.</p>
+        </div>
+        <div class="family-member">
+            <h4>Ito</h4>
+            <p class="family-role">5 Years Old</p>
+            <p>Explorer. Dreamer. Soap-making helper. Loves nature and animals.</p>
+        </div>
     </div>
 </section>
 
@@ -393,7 +417,7 @@ section { padding: 5rem 1.5rem; }
         <a href="https://www.paypal.com/ncp/payment/SVPS6J8WXQU76">PayPal</a>
         <a href="#">Zelle: business@satotakuya.jp</a>
     </div>
-    <p class="footer-location">Mahalo 🌺<br>Timeless Eternal Hope · Maui, Hawaii</p>
+    <p class="footer-location">Mahalo 🌺<br>Off-grid Sato Family · Maui, Hawaii</p>
 </footer>
 <script async src="//www.instagram.com/embed.js"></script>
 </body>

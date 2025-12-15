@@ -39,12 +39,6 @@
 .hero-cta:hover { background: var(–color-accent); color: var(–color-bg); box-shadow: 0 0 40px var(–color-accent-glow); }
 .scroll-indicator { position: absolute; bottom: 3rem; left: 50%; transform: translateX(-50%); font-size: 0.7rem; letter-spacing: 0.3em; color: var(–color-text-muted); opacity: 0; animation: fadeUp 1s ease forwards 1.2s, float 3s ease-in-out infinite 2s; }
 
-/* Evolving Statement */
-.evolving-statement { text-align: center; padding: 4rem 2rem; background: transparent; }
-.evolving-statement h3 { font-family: var(–font-display); font-size: 1.4rem; color: var(–color-hope); margin-bottom: 0.5rem; font-weight: 400; }
-.evolving-statement p { color: var(–color-text-muted); font-size: 0.95rem; max-width: 500px; margin: 0 auto; }
-
-/* Quick Packages Section */
 .quick-packages { padding: 6rem 2rem; background: var(–color-bg-subtle); text-align: center; }
 .quick-packages h2 { font-family: var(–font-display); font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 400; margin-bottom: 1rem; }
 .quick-packages-subtitle { color: var(–color-text-muted); margin-bottom: 3rem; font-size: 1rem; }
@@ -56,7 +50,7 @@
 .package-price { font-size: 1.1rem; color: var(–color-accent); font-weight: 400; margin-bottom: 0.5rem; }
 .package-desc { font-size: 0.8rem; color: var(–color-text-muted); margin-bottom: 0; }
 .quick-extras { display: flex; justify-content: center; gap: 3rem; margin-top: 2rem; flex-wrap: wrap; }
-.quick-extra-item { text-align: center; }
+.quick-extra-item { text-align: center; max-width: 350px; }
 .quick-extra-item h5 { font-family: var(–font-display); font-size: 1.1rem; color: var(–color-hope); margin-bottom: 0.3rem; }
 .quick-extra-item p { font-size: 0.85rem; color: var(–color-text-muted); margin-bottom: 0; }
 .quick-packages .cta-buttons { margin-top: 3rem; }
@@ -104,15 +98,6 @@ p { color: var(–color-text-muted); max-width: 65ch; margin-bottom: 1.5rem; }
 .pearl-story-text p { margin-bottom: 1.5rem; }
 .pearl-highlight { padding: 2rem; background: var(–color-bg-subtle); border-left: 2px solid var(–color-hope); margin: 2rem 0; }
 .pearl-highlight p { font-family: var(–font-display); font-size: 1.1rem; color: var(–color-hope); margin-bottom: 0; }
-
-.materials-section { padding: 8rem 2rem; }
-.materials-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 4rem; }
-.material-card { padding: 2rem; background: linear-gradient(180deg, var(–color-bg-subtle) 0%, transparent 100%); border: 1px solid rgba(201, 169, 98, 0.1); text-align: center; transition: all 0.4s ease; }
-.material-card:hover { transform: translateY(-5px); border-color: rgba(201, 169, 98, 0.3); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); }
-.material-icon { font-size: 2rem; margin-bottom: 1rem; }
-.material-card h4 { font-family: var(–font-display); font-size: 1.2rem; font-weight: 400; margin-bottom: 0.3rem; }
-.material-lifespan { font-size: 0.7rem; letter-spacing: 0.1em; color: var(–color-accent); margin-bottom: 1rem; }
-.material-card p { font-size: 0.85rem; margin-bottom: 0; }
 
 .services-section { padding: 8rem 2rem; background: var(–color-bg-subtle); }
 .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 4rem; max-width: 1100px; margin-left: auto; margin-right: auto; }
@@ -170,11 +155,10 @@ footer { padding: 4rem 2rem; text-align: center; border-top: 1px solid rgba(201,
 .packages-grid, .core-pillars, .independence-grid, .services-grid { grid-template-columns: 1fr 1fr; }
 .why-section { grid-template-columns: 1fr; gap: 4rem; }
 .why-visual { height: 300px; }
-.materials-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 768px) {
 section { padding: 5rem 1.5rem; }
-.packages-grid, .materials-grid, .family-grid, .core-pillars, .independence-grid, .services-grid { grid-template-columns: 1fr; }
+.packages-grid, .family-grid, .core-pillars, .independence-grid, .services-grid { grid-template-columns: 1fr; }
 .cta-buttons { flex-direction: column; align-items: center; }
 .quick-extras { flex-direction: column; gap: 1.5rem; }
 .lang-switch { top: 1rem; right: 1rem; }
@@ -190,7 +174,7 @@ section { padding: 5rem 1.5rem; }
 
 <header class="hero">
     <div class="hero-content">
-        <p class="hero-tagline">Timeless Eternal Hope</p>
+        <p class="hero-tagline">Off-grid 佐藤家</p>
         <h1>あなたは<br><em>存在していい</em></h1>
         <p class="hero-subtitle">記憶と、インフラと、自立を通じて<br>「存在の許可」を届ける</p>
         <a href="#packages" class="hero-cta">サービスを見る</a>
@@ -198,14 +182,10 @@ section { padding: 5rem 1.5rem; }
     <div class="scroll-indicator">DISCOVER</div>
 </header>
 
-<!-- Evolving Statement - HERO直後 -->
-
-<section class="evolving-statement">
-    <h3>学びながら、進化しています。</h3>
-    <p>まだ完璧ではありません。<br>でも、より届くように、変わり続けています。<br>ご意見、いつでもお待ちしています。</p>
+<section style="text-align: center; padding: 4rem 2rem; background: var(--color-bg);">
+    <h3 style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 400; margin-bottom: 1rem; color: var(--color-text);">学びながら、進化しています。</h3>
+    <p style="color: var(--color-text-muted); max-width: 500px; margin: 0 auto;">まだ完璧ではありません。<br>でも、より届くように、変わり続けています。<br>ご意見、いつでもお待ちしています。</p>
 </section>
-
-<!-- Quick Packages -->
 
 <section class="quick-packages" id="packages">
     <p class="section-label">サービス一覧</p>
@@ -222,7 +202,7 @@ section { padding: 5rem 1.5rem; }
     <div class="package-card">
         <div class="package-icon">🪵</div>
         <h4>メモリー</h4>
-        <p class="package-price">$50–$150</p>
+        <p class="package-price">$100–$200</p>
         <p class="package-desc">私たちが伺います</p>
     </div>
     <div class="package-card">
@@ -242,7 +222,7 @@ section { padding: 5rem 1.5rem; }
 <div class="quick-extras">
     <div class="quick-extra-item">
         <h5>🏠 Ohana Home Japan</h5>
-        <p>初回無料 -- 東京近郊＆田舎の家に滞在</p>
+        <p><strong>初回1週間無料</strong> -- 東京近郊＆田舎の家に滞在<br><small>なぜ無料？私たちは年の半分をマウイで過ごします。空けておくより、誰かに使ってもらう方がいい。</small></p>
     </div>
     <div class="quick-extra-item">
         <h5>⚡ オフグリッドインフラ</h5>
@@ -266,8 +246,9 @@ section { padding: 5rem 1.5rem; }
         <p class="section-label">サービス</p>
         <h2>届ける方法</h2>
         <div class="services-grid">
-            <div class="service-card"><div class="service-icon">🤝</div><h4>サービスの流れ</h4><p><strong>Moment & Memory</strong> -- 私たちが伺います。ビーチでも、カフェでも、マウイのどこでも。</p><p><strong>Legacy & Eternal</strong> -- より深い体験を。工房へお越しいただくか、日本への旅を。</p><noscript><a href="https://www.instagram.com/pearl.memorial/" class="instagram-link" target="_blank">📸 @pearl.memorial でサンプルを見る</a></noscript><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/pearl.memorial/?v=20241213" data-instgrm-version="14" loading="lazy" style="max-width:100%; margin: 1rem auto;"></blockquote></div>
-            <div class="service-card"><div class="service-icon">⚡</div><h4>オフグリッドインフラ</h4><p>ソーラーシステム、衛星インターネット、電力の自立。誰の許可もなく、存在できる基盤を構築。</p><p><strong>すべてお任せください。</strong><br>利用日に現地調達・セットアップしてお渡しします。</p><p><strong>車載Starlink Miniで、</strong><br>ハレアカラ、イアオ渓谷、ハナハイウェイでも快適に接続。<br>走行中も充電可能----道中ずっとWiFi。</p><p><strong>利用後は：</strong></p><ul><li>返却 → マウイのコミュニティ・災害復興支援に寄付</li><li>そのまま購入</li><li>倉庫でお預かり----次回すぐ使えます</li></ul><noscript><a href="https://youtu.be/_LQTMXdoRKA" class="youtube-link" target="_blank">▶️ オフグリッド構築を見る</a></noscript><div class="video-container"><iframe src="https://www.youtube.com/embed/_LQTMXdoRKA" loading="lazy" allowfullscreen></iframe></div></div>
+            <div class="service-card"><div class="service-icon">🤝</div><h4>サービスの流れ</h4><p><strong>Moment & Memory</strong> -- 私たちが伺います。ビーチでも、カフェでも、マウイのどこでも。</p><p><strong>Legacy & Eternal</strong> -- より深い体験を。工房へお越しいただくか、日本への旅を。</p><noscript><a href="https://www.instagram.com/pearl.memorial/" class="instagram-link" target="_blank">📸 @pearl.memorial でサンプルを見る</a></noscript><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/pearl.memorial/" data-instgrm-version="14" loading="lazy" style="max-width:100%; margin: 1rem auto;"></blockquote></div>
+            <div class="service-card"><div class="service-icon">⚡</div><h4>オフグリッドインフラ</h4><p>ソーラーシステム、衛星インターネット、電力の自立。誰の許可もなく、存在できる基盤を構築。</p><p><strong>到着日からすぐ使えます。</strong><br>利用日に現地調達・セットアップしてお渡しします。面倒な手続き不要。</p><p><strong>車載Starlink Miniで、</strong><br>ハレアカラ、イアオ渓谷、ハナハイウェイでも快適に接続。<br>走行中も充電可能 -- 道中ずっとWiFi。</p><p><strong>利用後は：</strong></p><ul><li>返却 → マウイのコミュニティ・災害復興支援に寄付</li><li>そのまま購入</li><li>倉庫でお預かり -- 次回すぐ使えます</li></ul><noscript><a href="https://youtu.be/_LQTMXdoRKA" class="youtube-link" target="_blank">▶️ オフグリッド構築を見る</a></noscript><div class="video-container"><iframe src="https://www.youtube.com/embed/_LQTMXdoRKA" loading="lazy" allowfullscreen></iframe></div></div>
+            <div class="service-card"><div class="service-icon">🧼</div><h4>手作り石鹸</h4><p>マウイのオフグリッドで作った石鹸。あなたへのギフト。</p><p><strong>一緒に作りませんか？</strong><br>石鹸作り体験にご参加ください。糸（5歳）がお手伝いします！</p></div>
         </div>
     </div>
 </section>
@@ -342,14 +323,14 @@ section { padding: 5rem 1.5rem; }
 
 <section class="family-section">
     <div class="family-intro">
-        <p class="section-label">佐藤家</p>
+        <p class="section-label">Off-grid 佐藤家</p>
         <h2>マウイで暮らす家族3人</h2>
         <p>先祖の墓がこの島に眠っている。私たちは支援者としてではなく、この土地に根を持つ者として、墓守の責任を負って、ここにいる。</p>
     </div>
     <div class="family-grid">
-        <div class="family-member"><h4>卓也</h4><p class="family-role">インフラ & 彫刻</p><p>富士通エンジニア、ベンチャーCTO、デロイト シニアスペシャリストを経て、災害復旧ボランティア。</p></div>
+        <div class="family-member"><h4>卓也</h4><p class="family-role">インフラ & 彫刻 & 石鹸</p><p>富士通エンジニア、ベンチャーCTO、デロイト シニアスペシャリストを経て、災害復旧とオフグリッドソリューションに注力。</p></div>
         <div class="family-member"><h4>美那</h4><p class="family-role">マーケティング & クラフト</p><p>ペットケア18年、レジンアート、ドライフラワー保存。</p></div>
-        <div class="family-member"><h4>糸</h4><p class="family-role">5歳</p><p>探検家。夢想家。自然と動物が大好き。</p></div>
+        <div class="family-member"><h4>糸</h4><p class="family-role">5歳 • 石鹸作りヘルパー</p><p>探検家。夢想家。自然と動物が大好き。石鹸作りのお手伝い。</p></div>
     </div>
 </section>
 
@@ -392,7 +373,7 @@ section { padding: 5rem 1.5rem; }
         <a href="https://www.paypal.com/ncp/payment/SVPS6J8WXQU76">PayPal</a>
         <a href="#">Zelle: business@satotakuya.jp</a>
     </div>
-    <p class="footer-location">Mahalo 🌺<br>Timeless Eternal Hope · Maui, Hawaii</p>
+    <p class="footer-location">Mahalo 🌺<br>Off-grid 佐藤家 · Maui, Hawaii</p>
 </footer>
 <script async src="//www.instagram.com/embed.js"></script>
 </body>
