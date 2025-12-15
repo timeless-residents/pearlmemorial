@@ -17,8 +17,8 @@
             --color-accent-glow: rgba(201, 169, 98, 0.15);
             --color-warm: #e8d5b7;
             --color-hope: #7eb8c9;
-            --color-christmas: #c41e3a;
-            --color-christmas-glow: rgba(196, 30, 58, 0.2);
+            --color-campaign: #c41e3a;
+            --color-campaign-glow: rgba(196, 30, 58, 0.2);
             --font-display: 'Cormorant Garamond', serif;
             --font-body: 'Zen Kaku Gothic New', sans-serif;
         }
@@ -38,27 +38,37 @@
         .hero-cta:hover { background: var(--color-accent); color: var(--color-bg); box-shadow: 0 0 40px var(--color-accent-glow); }
         .scroll-indicator { position: absolute; bottom: 3rem; left: 50%; transform: translateX(-50%); font-size: 0.7rem; letter-spacing: 0.3em; color: var(--color-text-muted); opacity: 0; animation: fadeUp 1s ease forwards 1.2s, float 3s ease-in-out infinite 2s; }
         
-        /* Christmas Section */
-        .christmas-section { padding: 4rem 2rem; background: linear-gradient(180deg, var(--color-bg) 0%, rgba(196, 30, 58, 0.08) 50%, var(--color-bg) 100%); text-align: center; border-top: 2px solid var(--color-christmas); border-bottom: 2px solid var(--color-christmas); }
-        .christmas-content { max-width: 900px; margin: 0 auto; }
-        .christmas-icon { font-size: 3rem; margin-bottom: 1rem; }
-        .christmas-section h2 { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 300; margin-bottom: 1rem; color: var(--color-text); }
-        .christmas-section h2 span { color: var(--color-christmas); }
-        .christmas-subtitle { font-family: var(--font-display); font-size: 1.1rem; color: var(--color-text-muted); margin-bottom: 1.5rem; font-style: italic; }
-        .christmas-description { color: var(--color-text-muted); margin-bottom: 1.5rem; max-width: 650px; margin-left: auto; margin-right: auto; }
-        .christmas-items { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
-        .christmas-item { padding: 0.8rem 1.2rem; background: rgba(196, 30, 58, 0.1); border: 1px solid rgba(196, 30, 58, 0.3); border-radius: 0.5rem; }
-        .christmas-item-icon { font-size: 1.5rem; margin-bottom: 0.2rem; }
-        .christmas-item-label { font-size: 0.8rem; color: var(--color-text-muted); }
-        .christmas-photos { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin: 1.5rem 0; }
-        .christmas-photo { flex: 1; min-width: 250px; max-width: 380px; }
-        .christmas-photo img { width: 100%; border-radius: 0.5rem; border: 1px solid rgba(196, 30, 58, 0.3); }
-        .christmas-photo p { font-size: 0.75rem; color: var(--color-text-muted); margin-top: 0.5rem; }
-        .christmas-benefits { margin: 1.5rem 0; }
-        .christmas-benefits p { font-size: 0.9rem; margin-bottom: 0.5rem; max-width: 550px; margin-left: auto; margin-right: auto; }
-        .christmas-cta { display: inline-block; padding: 1rem 2.5rem; background: var(--color-christmas); color: white; text-decoration: none; font-size: 0.9rem; letter-spacing: 0.1em; transition: all 0.4s ease; border-radius: 0.3rem; margin-top: 1rem; }
-        .christmas-cta:hover { box-shadow: 0 0 30px var(--color-christmas-glow); transform: translateY(-2px); }
-        .christmas-deadline { font-size: 0.8rem; color: var(--color-text-muted); margin-top: 1rem; }
+        /* Campaign Section */
+        .campaign-section { padding: 4rem 2rem; background: linear-gradient(180deg, var(--color-bg) 0%, rgba(196, 30, 58, 0.08) 50%, var(--color-bg) 100%); text-align: center; border-top: 2px solid var(--color-campaign); border-bottom: 2px solid var(--color-campaign); }
+        .campaign-section.default { background: linear-gradient(180deg, var(--color-bg) 0%, rgba(126, 184, 201, 0.08) 50%, var(--color-bg) 100%); border-color: var(--color-hope); }
+        .campaign-section.lahaina { background: linear-gradient(180deg, var(--color-bg) 0%, rgba(201, 169, 98, 0.08) 50%, var(--color-bg) 100%); border-color: var(--color-accent); }
+        .campaign-content { max-width: 900px; margin: 0 auto; }
+        .campaign-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .campaign-section h2 { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 300; margin-bottom: 1rem; color: var(--color-text); }
+        .campaign-section h2 span { color: var(--color-campaign); }
+        .campaign-section.default h2 span { color: var(--color-hope); }
+        .campaign-section.lahaina h2 span { color: var(--color-accent); }
+        .campaign-subtitle { font-family: var(--font-display); font-size: 1.1rem; color: var(--color-text-muted); margin-bottom: 1.5rem; font-style: italic; }
+        .campaign-description { color: var(--color-text-muted); margin-bottom: 1.5rem; max-width: 650px; margin-left: auto; margin-right: auto; }
+        .campaign-items { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+        .campaign-item { padding: 0.8rem 1.2rem; background: rgba(196, 30, 58, 0.1); border: 1px solid rgba(196, 30, 58, 0.3); border-radius: 0.5rem; }
+        .campaign-section.default .campaign-item { background: rgba(126, 184, 201, 0.1); border-color: rgba(126, 184, 201, 0.3); }
+        .campaign-section.lahaina .campaign-item { background: rgba(201, 169, 98, 0.1); border-color: rgba(201, 169, 98, 0.3); }
+        .campaign-item-icon { font-size: 1.5rem; margin-bottom: 0.2rem; }
+        .campaign-item-label { font-size: 0.8rem; color: var(--color-text-muted); }
+        .campaign-photos { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin: 1.5rem 0; }
+        .campaign-photo { flex: 1; min-width: 250px; max-width: 380px; }
+        .campaign-photo img { width: 100%; border-radius: 0.5rem; border: 1px solid rgba(196, 30, 58, 0.3); }
+        .campaign-section.default .campaign-photo img { border-color: rgba(126, 184, 201, 0.3); }
+        .campaign-section.lahaina .campaign-photo img { border-color: rgba(201, 169, 98, 0.3); }
+        .campaign-photo p { font-size: 0.75rem; color: var(--color-text-muted); margin-top: 0.5rem; }
+        .campaign-benefits { margin: 1.5rem 0; }
+        .campaign-benefits p { font-size: 0.9rem; margin-bottom: 0.5rem; max-width: 550px; margin-left: auto; margin-right: auto; }
+        .campaign-cta { display: inline-block; padding: 1rem 2.5rem; background: var(--color-campaign); color: white; text-decoration: none; font-size: 0.9rem; letter-spacing: 0.1em; transition: all 0.4s ease; border-radius: 0.3rem; margin-top: 1rem; }
+        .campaign-section.default .campaign-cta { background: var(--color-hope); }
+        .campaign-section.lahaina .campaign-cta { background: var(--color-accent); color: var(--color-bg); }
+        .campaign-cta:hover { box-shadow: 0 0 30px var(--color-campaign-glow); transform: translateY(-2px); }
+        .campaign-deadline { font-size: 0.8rem; color: var(--color-text-muted); margin-top: 1rem; }
         
         .quick-packages { padding: 6rem 2rem; background: var(--color-bg-subtle); text-align: center; }
         .quick-packages h2 { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3rem); font-weight: 300; margin-bottom: 1rem; }
@@ -159,8 +169,8 @@
             .cta-buttons { flex-direction: column; align-items: center; }
             .quick-extras { flex-direction: column; gap: 1.5rem; }
             .lang-switch { top: 1rem; right: 1rem; }
-            .christmas-items { flex-direction: column; gap: 0.8rem; }
-            .christmas-photos { flex-direction: column; }
+            .campaign-items { flex-direction: column; gap: 0.8rem; }
+            .campaign-photos { flex-direction: column; }
         }
         @media print {
             * { background: transparent !important; }
@@ -196,13 +206,12 @@
             .offgrid-statement em { color: #2a6a7a !important; }
             h2 { font-size: 14pt !important; margin-bottom: 0.5rem !important; }
             p { font-size: 9pt !important; margin-bottom: 0.5rem !important; }
-            /* Christmas section print */
-            .christmas-section { background: none !important; border: 2px solid #c41e3a !important; padding: 1rem !important; page-break-inside: avoid; }
-            .christmas-section h2 span { color: #c41e3a !important; }
-            .christmas-item { background: none !important; border: 1px solid #c41e3a !important; }
-            .christmas-cta { background: none !important; border: 2px solid #c41e3a !important; color: #c41e3a !important; }
-            .christmas-photo img { max-width: 200px !important; }
-            .christmas-photos { gap: 0.5rem !important; }
+            .campaign-section { background: none !important; border: 2px solid #c41e3a !important; padding: 1rem !important; page-break-inside: avoid; }
+            .campaign-section h2 span { color: #c41e3a !important; }
+            .campaign-item { background: none !important; border: 1px solid #c41e3a !important; }
+            .campaign-cta { background: none !important; border: 2px solid #c41e3a !important; color: #c41e3a !important; }
+            .campaign-photo img { max-width: 200px !important; }
+            .campaign-photos { gap: 0.5rem !important; }
         }
     </style>
 </head>
@@ -218,50 +227,211 @@
     <div class="scroll-indicator">DISCOVER</div>
 </header>
 
-<!-- 🎄 CHRISTMAS GIVING SECTION -->
-<section class="christmas-section" id="christmas">
-    <div class="christmas-content">
-        <div class="christmas-icon">🎄🎅</div>
-        <h2>Christmas Giving for <span>Maui Strong</span></h2>
-        <p class="christmas-subtitle">Help us bring off-grid infrastructure to those who need it</p>
-        <p class="christmas-description">Your donation provides off-grid power, communication, and emergency infrastructure to Maui's farms, temples, churches, and communities still rebuilding. From Lahaina to Hana, this Christmas, give the gift of independence.</p>
+<!-- Dynamic Campaign Section -->
+<section class="campaign-section" id="campaign">
+    <div class="campaign-content">
+        <div class="campaign-icon" id="campaignIcon">⚡🔋</div>
+        <h2 id="campaignTitle">Off-grid Infrastructure -- <span>Global + Local = Strong</span></h2>
+        <p class="campaign-subtitle" id="campaignSubtitle">Ohana grows together</p>
+        <p class="campaign-description" id="campaignDescription">Your donation provides off-grid power, communication, and emergency infrastructure to farms, temples, churches, and communities -- wherever we are. Maui. Japan. Wherever Ohana grows.</p>
         
-        <div class="christmas-items">
-            <div class="christmas-item">
-                <div class="christmas-item-icon">🔋</div>
-                <div class="christmas-item-label">Portable Batteries</div>
+        <div class="campaign-items">
+            <div class="campaign-item">
+                <div class="campaign-item-icon">🔋</div>
+                <div class="campaign-item-label">Portable Batteries</div>
             </div>
-            <div class="christmas-item">
-                <div class="christmas-item-icon">📡</div>
-                <div class="christmas-item-label">Starlink Communication</div>
+            <div class="campaign-item">
+                <div class="campaign-item-icon">📡</div>
+                <div class="campaign-item-label">Starlink Communication</div>
             </div>
-            <div class="christmas-item">
-                <div class="christmas-item-icon">☀️</div>
-                <div class="christmas-item-label">Solar Power Systems</div>
+            <div class="campaign-item">
+                <div class="campaign-item-icon">☀️</div>
+                <div class="campaign-item-label">Solar Power Systems</div>
             </div>
         </div>
         
-        <div class="christmas-photos">
-            <div class="christmas-photo">
+        <div class="campaign-photos">
+            <div class="campaign-photo">
                 <img src="IMG_3344.jpeg" alt="Ito making handmade soap at Honolua Bay">
                 <p>Ito (5) making handmade soap at Honolua Bay</p>
             </div>
-            <div class="christmas-photo">
+            <div class="campaign-photo">
                 <img src="IMG_3369.jpeg" alt="Off-grid power setup">
-                <p>Off-grid infrastructure we build for Maui communities</p>
+                <p>Off-grid infrastructure we build for communities</p>
             </div>
         </div>
         
-        <div class="christmas-benefits">
+        <div class="campaign-benefits">
             <p style="color: var(--color-warm);"><strong>Our Commitment:</strong> Takuya personally handles all procurement and installation, with progress reports shared to all donors.</p>
             <p style="color: var(--color-hope);"><strong>💎 Donor Recognition:</strong> All contributors will be engraved in quartz glass -- your support preserved for over 1,000 years.</p>
-            <p style="color: var(--color-accent);"><strong>🏠 Special Gift:</strong> Donors who wish may also receive a free stay at our Ohana Home in Urayasu, Japan (near Tokyo Disney).</p>
+            <p style="color: var(--color-accent);"><strong>🏠 Special Gift:</strong> Donors who wish may also receive a free stay at our Ohana Home in Japan (Tokyo area or countryside).</p>
         </div>
         
-        <a href="https://www.paypal.com/ncp/payment/SVPS6J8WXQU76" class="christmas-cta">🎁 Donate Now via PayPal</a>
-        <p class="christmas-deadline">Limited time: Through December 25, 2025</p>
+        <a href="https://www.paypal.com/ncp/payment/SVPS6J8WXQU76" class="campaign-cta" id="campaignCta">🎁 Donate Now via PayPal</a>
+        <p class="campaign-deadline" id="campaignDeadline"></p>
     </div>
 </section>
+
+<script>
+// Campaign Configuration - Global + Local = Strong
+const campaigns = {
+    christmas: {
+        icon: '🎄🎅',
+        title: 'Christmas Giving -- <span>Global + Local = Strong</span>',
+        subtitle: 'Ohana grows together',
+        description: 'This Christmas, give the gift of independence. Your donation provides off-grid power, communication, and infrastructure to farms, temples, and communities -- wherever we are. Maui. Japan. Wherever Ohana grows.',
+        cta: '🎁 Donate Now via PayPal',
+        deadline: 'Christmas Campaign: Through December 25',
+        className: ''
+    },
+    newyear: {
+        icon: '🌅✨',
+        title: 'New Year, New Power -- <span>Global + Local = Strong</span>',
+        subtitle: 'A new chapter begins',
+        description: 'Start the year with independence. Your donation helps communities begin fresh with resilient, off-grid infrastructure. Solar, Starlink, batteries -- the foundation for a new beginning.',
+        cta: '🌅 Support the New Year Campaign',
+        deadline: 'New Year Campaign: January',
+        className: 'default'
+    },
+    whale: {
+        icon: '🐋🌊',
+        title: 'Whale Season -- <span>Global + Local = Strong</span>',
+        subtitle: 'They return every year. So does our commitment.',
+        description: 'As the whales return to Hawaiian waters, we continue building resilient infrastructure for communities everywhere. Your support powers farms, temples, and families -- Maui to Japan.',
+        cta: '🐋 Support Whale Season Campaign',
+        deadline: 'Whale Season: February - March',
+        className: 'default'
+    },
+    mothersday: {
+        icon: '💐🌸',
+        title: 'Mother\'s Day -- <span>Global + Local = Strong</span>',
+        subtitle: 'Honor the mothers who nurture our communities',
+        description: 'This Mother\'s Day, give the gift of resilience. Help families -- the mothers, grandmothers, and caregivers -- with reliable off-grid power and communication. From Maui to Japan.',
+        cta: '💐 Give in Her Honor',
+        deadline: 'Mother\'s Day Campaign',
+        className: ''
+    },
+    fathersday: {
+        icon: '👨🔧',
+        title: 'Father\'s Day -- <span>Global + Local = Strong</span>',
+        subtitle: 'For the builders and protectors',
+        description: 'Honor the fathers who build and protect. This Father\'s Day, help us bring off-grid infrastructure to farms, workshops, and family homes -- wherever Ohana grows.',
+        cta: '🔧 Build in His Honor',
+        deadline: 'Father\'s Day Campaign',
+        className: 'default'
+    },
+    independence: {
+        icon: '🎆⚡',
+        title: 'Independence Day -- <span>Global + Local = Strong</span>',
+        subtitle: 'True independence: No grid. No permission.',
+        description: 'Celebrate real independence. Help communities achieve energy and communication freedom with solar, Starlink, and battery systems. Independence knows no borders.',
+        cta: '🎆 Support Independence',
+        deadline: 'Independence Day Campaign',
+        className: 'default'
+    },
+    lahaina: {
+        icon: '🕯️',
+        title: 'We Remember -- <span>Global + Local = Strong</span>',
+        subtitle: 'Ohana grows together',
+        description: 'In memory of August 8th. We honor those we lost by building resilient infrastructure for communities everywhere. Names engraved in quartz. Memories preserved forever.',
+        cta: '🕯️ Honor Their Memory',
+        deadline: 'August 8th Remembrance',
+        className: 'lahaina'
+    },
+    petmemorial: {
+        icon: '🐾🌈',
+        title: 'Pet Memorial -- <span>Global + Local = Strong</span>',
+        subtitle: 'They never left us. They just changed form.',
+        description: 'In memory of Pearl and all beloved companions. Your donation supports communities while honoring the pets who touched our lives. Paw prints in quartz, forever.',
+        cta: '🐾 Honor Their Memory',
+        deadline: 'Pet Memorial Month: September',
+        className: ''
+    },
+    thanksgiving: {
+        icon: '🦃🙏',
+        title: 'Thanksgiving -- <span>Global + Local = Strong</span>',
+        subtitle: 'Grateful for what was. Building what comes.',
+        description: 'This Thanksgiving, give thanks by giving forward. Help farms, temples, and families with off-grid infrastructure. Gratitude in action -- from our Ohana to yours.',
+        cta: '🙏 Give Thanks Forward',
+        deadline: 'Thanksgiving Campaign',
+        className: 'default'
+    },
+    default: {
+        icon: '⚡🔋',
+        title: 'Off-grid Infrastructure -- <span>Global + Local = Strong</span>',
+        subtitle: 'Ohana grows together',
+        description: 'Your donation provides off-grid power, communication, and emergency infrastructure to farms, temples, churches, and communities -- wherever we are. Maui. Japan. Wherever Ohana grows.',
+        cta: '⚡ Donate Now via PayPal',
+        deadline: '',
+        className: 'default'
+    }
+};
+
+// Determine current campaign based on date
+function getCurrentCampaign() {
+    const today = new Date();
+    const month = today.getMonth() + 1; // 1-12
+    const day = today.getDate();
+
+    // Christmas: Dec 1-25
+    if (month === 12 && day >= 1 && day <= 25) return 'christmas';
+    
+    // New Year: Dec 26 - Jan 15
+    if ((month === 12 && day >= 26) || (month === 1 && day <= 15)) return 'newyear';
+    
+    // Whale Season: Jan 16 - Mar 31
+    if ((month === 1 && day >= 16) || month === 2 || month === 3) return 'whale';
+    
+    // Mother's Day: May 1-14 (2nd Sunday)
+    if (month === 5 && day >= 1 && day <= 14) return 'mothersday';
+    
+    // Father's Day: Jun 1-21 (3rd Sunday)
+    if (month === 6 && day >= 1 && day <= 21) return 'fathersday';
+    
+    // Independence Day: Jun 22 - Jul 7
+    if ((month === 6 && day >= 22) || (month === 7 && day <= 7)) return 'independence';
+    
+    // Lahaina Remembrance: Aug 1-15
+    if (month === 8 && day >= 1 && day <= 15) return 'lahaina';
+    
+    // Pet Memorial Month: Sep 1-30
+    if (month === 9) return 'petmemorial';
+    
+    // Thanksgiving: Nov 15-30
+    if (month === 11 && day >= 15 && day <= 30) return 'thanksgiving';
+    
+    // Default for other times
+    return 'default';
+}
+
+// Apply campaign to page
+function applyCampaign() {
+    const campaignKey = getCurrentCampaign();
+    const campaign = campaigns[campaignKey];
+    
+    const section = document.querySelector('.campaign-section');
+    const icon = document.getElementById('campaignIcon');
+    const title = document.getElementById('campaignTitle');
+    const subtitle = document.getElementById('campaignSubtitle');
+    const description = document.getElementById('campaignDescription');
+    const cta = document.getElementById('campaignCta');
+    const deadline = document.getElementById('campaignDeadline');
+    
+    // Apply class for styling
+    section.className = 'campaign-section ' + campaign.className;
+    
+    // Update content
+    icon.textContent = campaign.icon;
+    title.innerHTML = campaign.title;
+    subtitle.textContent = campaign.subtitle;
+    description.textContent = campaign.description;
+    cta.textContent = campaign.cta;
+    deadline.textContent = campaign.deadline;
+}
+
+// Run on page load
+document.addEventListener('DOMContentLoaded', applyCampaign);
+</script>
 
 <section style="text-align: center; padding: 4rem 2rem; background: var(--color-bg);">
     <h3 style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 300; margin-bottom: 1rem; color: var(--color-text);">We're learning. We're evolving.</h3>
@@ -292,9 +462,9 @@
         <p class="section-label">Services</p>
         <h2>How We Deliver</h2>
         <div class="services-grid">
-            <div class="service-card"><div class="service-icon">🤝</div><h4>How We Work</h4><p><strong>Moment & Memory</strong> - We come to you. Beach, cafe, anywhere on Maui.</p><p><strong>Legacy & Eternal</strong> - A deeper experience. Visit our workshop, or journey to Japan.</p></div>
-            <div class="service-card"><div class="service-icon">⚡</div><h4>Off-Grid Infrastructure</h4><p>Solar systems, satellite internet, power independence.</p><p><strong>Mobile Starlink Mini</strong> - Stay connected at Haleakala, Iao Valley, Road to Hana.</p></div>
-            <div class="service-card"><div class="service-icon">🧼</div><h4>Handmade Soap</h4><p>Made off-grid in Maui. A gift for you.</p><p><strong>Want to make together?</strong><br>Ito (5 years old) will be your helper!</p></div>
+            <div class="service-card"><div class="service-icon">🤝</div><h4>How We Work</h4><p><strong>Moment & Memory</strong> - We come to you. Beach, cafe, anywhere.</p><p><strong>Legacy & Eternal</strong> - A deeper experience. Visit our workshop, or journey to Japan.</p></div>
+            <div class="service-card"><div class="service-icon">⚡</div><h4>Off-Grid Infrastructure</h4><p>Solar systems, satellite internet, power independence.</p><p><strong>Mobile Starlink Mini</strong> - Stay connected anywhere.</p></div>
+            <div class="service-card"><div class="service-icon">🧼</div><h4>Handmade Soap</h4><p>Made off-grid. A gift for you.</p><p><strong>Want to make together?</strong><br>Ito (5 years old) will be your helper!</p></div>
         </div>
     </div>
 </section>
@@ -327,7 +497,7 @@
             <div class="independence-item"><h4>Without Telecom Companies</h4><p>Starlink satellite. Connect anywhere.</p></div>
             <div class="independence-item"><h4>Without Permission</h4><p>Your existence doesn't require approval.</p></div>
         </div>
-        <p style="text-align: center; margin-top: 4rem; max-width: 700px; margin-left: auto; margin-right: auto;">In Maui, we built a complete off-grid living environment in 3 days. <strong>Proving that independence is possible.</strong></p>
+        <p style="text-align: center; margin-top: 4rem; max-width: 700px; margin-left: auto; margin-right: auto;">We built a complete off-grid living environment in 3 days. <strong>Proving that independence is possible.</strong></p>
     </div>
 </section>
 <section class="pearl-section">
@@ -346,8 +516,8 @@
 <section class="family-section">
     <div class="family-intro">
         <p class="section-label">Off-grid Sato Family</p>
-        <h2>A Family of Three in Maui</h2>
-        <p>Our ancestors' graves rest on this island. We are here as grave keepers.</p>
+        <h2>A Family of Three</h2>
+        <p>Based between Maui and Japan. Building resilient communities wherever we go.</p>
     </div>
     <div class="family-grid">
         <div class="family-member"><h4>Takuya</h4><p class="family-role">Infrastructure & Engraving & Soap</p><p>Former Fujitsu, venture CTO, Deloitte. Now focused on disaster recovery and off-grid.</p></div>
@@ -383,7 +553,7 @@
         <a href="https://pearl.memorial">Shop (Square)</a>
         <a href="https://www.paypal.com/ncp/payment/SVPS6J8WXQU76">PayPal</a>
     </div>
-    <p class="footer-location">Mahalo 🌺 Off-grid Sato Family · Maui, Hawaii</p>
+    <p class="footer-location">Mahalo 🌺 Off-grid Sato Family · Maui ⇄ Japan</p>
 </footer>
 </body>
 </html>
