@@ -17,6 +17,8 @@
             --color-accent-glow: rgba(201, 169, 98, 0.15);
             --color-warm: #e8d5b7;
             --color-hope: #7eb8c9;
+            --color-christmas: #c41e3a;
+            --color-christmas-glow: rgba(196, 30, 58, 0.2);
             --font-display: 'Shippori Mincho', 'Cormorant Garamond', serif;
             --font-body: 'Zen Kaku Gothic New', sans-serif;
         }
@@ -37,6 +39,28 @@
 .hero-cta { display: inline-block; padding: 1.2rem 3rem; border: 1px solid var(--color-accent); color: var(--color-accent); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.2em; transition: all 0.4s ease; opacity: 0; animation: fadeUp 1s ease forwards 0.9s; }
 .hero-cta:hover { background: var(--color-accent); color: var(--color-bg); box-shadow: 0 0 40px var(--color-accent-glow); }
 .scroll-indicator { position: absolute; bottom: 3rem; left: 50%; transform: translateX(-50%); font-size: 0.7rem; letter-spacing: 0.3em; color: var(--color-text-muted); opacity: 0; animation: fadeUp 1s ease forwards 1.2s, float 3s ease-in-out infinite 2s; }
+
+/* Christmas Section */
+.christmas-section { padding: 4rem 2rem; background: linear-gradient(180deg, var(--color-bg) 0%, rgba(196, 30, 58, 0.08) 50%, var(--color-bg) 100%); text-align: center; border-top: 2px solid var(--color-christmas); border-bottom: 2px solid var(--color-christmas); }
+.christmas-content { max-width: 900px; margin: 0 auto; }
+.christmas-icon { font-size: 3rem; margin-bottom: 1rem; }
+.christmas-section h2 { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 400; margin-bottom: 1rem; color: var(--color-text); }
+.christmas-section h2 span { color: var(--color-christmas); }
+.christmas-subtitle { font-family: var(--font-display); font-size: 1.1rem; color: var(--color-text-muted); margin-bottom: 1.5rem; }
+.christmas-description { color: var(--color-text-muted); margin-bottom: 1.5rem; max-width: 650px; margin-left: auto; margin-right: auto; line-height: 1.8; }
+.christmas-items { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+.christmas-item { padding: 0.8rem 1.2rem; background: rgba(196, 30, 58, 0.1); border: 1px solid rgba(196, 30, 58, 0.3); border-radius: 0.5rem; }
+.christmas-item-icon { font-size: 1.5rem; margin-bottom: 0.2rem; }
+.christmas-item-label { font-size: 0.8rem; color: var(--color-text-muted); }
+.christmas-photos { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin: 1.5rem 0; }
+.christmas-photo { flex: 1; min-width: 250px; max-width: 380px; }
+.christmas-photo img { width: 100%; border-radius: 0.5rem; border: 1px solid rgba(196, 30, 58, 0.3); }
+.christmas-photo p { font-size: 0.75rem; color: var(--color-text-muted); margin-top: 0.5rem; }
+.christmas-benefits { margin: 1.5rem 0; }
+.christmas-benefits p { font-size: 0.9rem; margin-bottom: 0.5rem; max-width: 550px; margin-left: auto; margin-right: auto; }
+.christmas-cta { display: inline-block; padding: 1rem 2.5rem; background: var(--color-christmas); color: white; text-decoration: none; font-size: 0.9rem; letter-spacing: 0.1em; transition: all 0.4s ease; border-radius: 0.3rem; margin-top: 1rem; }
+.christmas-cta:hover { box-shadow: 0 0 30px var(--color-christmas-glow); transform: translateY(-2px); }
+.christmas-deadline { font-size: 0.8rem; color: var(--color-text-muted); margin-top: 1rem; }
 
 .quick-packages { padding: 6rem 2rem; background: var(--color-bg-subtle); text-align: center; }
 .quick-packages h2 { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 400; margin-bottom: 1rem; }
@@ -154,6 +178,8 @@ section { padding: 5rem 1.5rem; }
 .cta-buttons { flex-direction: column; align-items: center; }
 .quick-extras { flex-direction: column; gap: 1.5rem; }
 .lang-switch { top: 1rem; right: 1rem; }
+.christmas-items { flex-direction: column; gap: 0.8rem; }
+.christmas-photos { flex-direction: column; }
 }
 
 /* ========== 印刷用スタイル ========== */
@@ -204,6 +230,13 @@ section { padding: 5rem 1.5rem; }
     h4 { font-size: 11pt !important; }
     p { font-size: 9pt !important; margin-bottom: 0.5rem !important; }
     .pillar p, .independence-item p { font-size: 8pt !important; }
+    /* Christmas section print */
+    .christmas-section { background: none !important; border: 2px solid #c41e3a !important; padding: 1rem !important; page-break-inside: avoid; }
+    .christmas-section h2 span { color: #c41e3a !important; }
+    .christmas-item { background: none !important; border: 1px solid #c41e3a !important; }
+    .christmas-cta { background: none !important; border: 2px solid #c41e3a !important; color: #c41e3a !important; }
+    .christmas-photo img { max-width: 200px !important; }
+    .christmas-photos { gap: 0.5rem !important; }
 }
 </style>
 </head>
@@ -222,6 +255,51 @@ section { padding: 5rem 1.5rem; }
     </div>
     <div class="scroll-indicator">DISCOVER</div>
 </header>
+
+<!-- 🎄 クリスマス寄付セクション -->
+<section class="christmas-section" id="christmas">
+    <div class="christmas-content">
+        <div class="christmas-icon">🎄🎅</div>
+        <h2>クリスマス寄付 for <span>Maui Strong</span></h2>
+        <p class="christmas-subtitle">オフグリッドインフラを必要な人へ届ける</p>
+        <p class="christmas-description">あなたの寄付で、マウイの農場、寺院、教会、そして復興中のコミュニティに、オフグリッド電源・通信・緊急インフラを届けます。ラハイナからハナまで、このクリスマス、「自立」というギフトを。</p>
+        
+        <div class="christmas-items">
+            <div class="christmas-item">
+                <div class="christmas-item-icon">🔋</div>
+                <div class="christmas-item-label">ポータブルバッテリー</div>
+            </div>
+            <div class="christmas-item">
+                <div class="christmas-item-icon">📡</div>
+                <div class="christmas-item-label">Starlink通信</div>
+            </div>
+            <div class="christmas-item">
+                <div class="christmas-item-icon">☀️</div>
+                <div class="christmas-item-label">ソーラー電源システム</div>
+            </div>
+        </div>
+        
+        <div class="christmas-photos">
+            <div class="christmas-photo">
+                <img src="IMG_3344.jpeg" alt="ホノルアベイで石鹸を作る糸">
+                <p>糸（5歳）がホノルアベイで手作り石鹸を製作中</p>
+            </div>
+            <div class="christmas-photo">
+                <img src="IMG_3369.jpeg" alt="オフグリッド電源セットアップ">
+                <p>マウイのコミュニティに構築するオフグリッドインフラ</p>
+            </div>
+        </div>
+        
+        <div class="christmas-benefits">
+            <p style="color: var(--color-warm);"><strong>私たちの約束：</strong> 卓也が責任を持って調達・設置を行い、すべての寄付者に進捗レポートを共有します。</p>
+            <p style="color: var(--color-hope);"><strong>💎 寄付者の記録：</strong> すべての寄付者のお名前を石英ガラスに刻印 -- あなたの支援は1,000年以上残ります。</p>
+            <p style="color: var(--color-accent);"><strong>🏠 特別なお礼：</strong> ご希望の寄付者には、日本・浦安のOhana Home（東京ディズニー近く）への無料宿泊をプレゼント。</p>
+        </div>
+        
+        <a href="https://www.paypal.com/ncp/payment/SVPS6J8WXQU76" class="christmas-cta">🎁 PayPalで寄付する</a>
+        <p class="christmas-deadline">期間限定：2025年12月25日まで</p>
+    </div>
+</section>
 
 <section style="text-align: center; padding: 4rem 2rem; background: var(--color-bg);">
     <h3 style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 400; margin-bottom: 1rem; color: var(--color-text);">学びながら、進化しています。</h3>
