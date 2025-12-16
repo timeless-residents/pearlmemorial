@@ -6,421 +6,208 @@
     <title>Timeless Eternal Hope | 存在していいよ</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Zen+Kaku+Gothic+New:wght@300;400;500&family=Shippori+Mincho:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Zen+Kaku+Gothic+New:wght@300;400;500&family=Shippori+Mincho:wght@400;500&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --color-bg: #0a0a0a;
-            --color-bg-subtle: #111111;
-            --color-text: #f5f0e8;
-            --color-text-muted: #8a8578;
-            --color-accent: #c9a962;
-            --color-accent-glow: rgba(201, 169, 98, 0.15);
-            --color-warm: #e8d5b7;
-            --color-hope: #7eb8c9;
-            --color-campaign: #c41e3a;
-            --color-campaign-glow: rgba(196, 30, 58, 0.2);
-            --font-display: 'Shippori Mincho', 'Cormorant Garamond', serif;
-            --font-body: 'Zen Kaku Gothic New', sans-serif;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { font-family: var(--font-body); font-weight: 300; background: var(--color-bg); color: var(--color-text); line-height: 2; font-size: 16px; overflow-x: hidden; }
-        .lang-switch { position: fixed; top: 2rem; right: 2rem; z-index: 100; display: flex; gap: 0.5rem; background: rgba(10, 10, 10, 0.8); backdrop-filter: blur(10px); padding: 0.5rem; border-radius: 2rem; border: 1px solid rgba(201, 169, 98, 0.2); }
-        .lang-switch a { padding: 0.5rem 1rem; color: var(--color-text-muted); text-decoration: none; font-size: 0.8rem; border-radius: 1.5rem; transition: all 0.3s ease; }
-        .lang-switch a.active { background: var(--color-accent); color: var(--color-bg); }
-        .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; padding: 2rem; background: radial-gradient(ellipse 60% 40% at 50% 0%, rgba(201, 169, 98, 0.08) 0%, transparent 60%), radial-gradient(ellipse 80% 60% at 50% 100%, rgba(126, 184, 201, 0.05) 0%, transparent 50%); }
-        .hero-content { max-width: 900px; position: relative; z-index: 1; }
-        .hero-tagline { font-size: 0.75rem; letter-spacing: 0.4em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 2rem; opacity: 0; animation: fadeUp 1s ease forwards 0.3s; }
-        .hero h1 { font-family: var(--font-display); font-size: clamp(2.5rem, 7vw, 5rem); font-weight: 400; line-height: 1.3; margin-bottom: 1.5rem; opacity: 0; animation: fadeUp 1s ease forwards 0.5s; }
-        .hero h1 em { font-style: normal; color: var(--color-hope); }
-        .hero-subtitle { font-family: var(--font-display); font-size: clamp(1rem, 2.5vw, 1.5rem); font-weight: 400; color: var(--color-text-muted); margin-bottom: 3rem; opacity: 0; animation: fadeUp 1s ease forwards 0.7s; }
-        .hero-cta { display: inline-block; padding: 1.2rem 3rem; border: 1px solid var(--color-accent); color: var(--color-accent); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.2em; transition: all 0.4s ease; opacity: 0; animation: fadeUp 1s ease forwards 0.9s; }
-        .hero-cta:hover { background: var(--color-accent); color: var(--color-bg); box-shadow: 0 0 40px var(--color-accent-glow); }
-        .scroll-indicator { position: absolute; bottom: 3rem; left: 50%; transform: translateX(-50%); font-size: 0.7rem; letter-spacing: 0.3em; color: var(--color-text-muted); opacity: 0; animation: fadeUp 1s ease forwards 1.2s, float 3s ease-in-out infinite 2s; }
-
-        /* Campaign Section */
-        .campaign-section { padding: 4rem 2rem; background: linear-gradient(180deg, var(--color-bg) 0%, rgba(196, 30, 58, 0.08) 50%, var(--color-bg) 100%); text-align: center; border-top: 2px solid var(--color-campaign); border-bottom: 2px solid var(--color-campaign); }
-        .campaign-section.default { background: linear-gradient(180deg, var(--color-bg) 0%, rgba(126, 184, 201, 0.08) 50%, var(--color-bg) 100%); border-color: var(--color-hope); }
-        .campaign-section.lahaina { background: linear-gradient(180deg, var(--color-bg) 0%, rgba(201, 169, 98, 0.08) 50%, var(--color-bg) 100%); border-color: var(--color-accent); }
-        .campaign-content { max-width: 900px; margin: 0 auto; }
-        .campaign-icon { font-size: 3rem; margin-bottom: 1rem; }
-        .campaign-section h2 { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 400; margin-bottom: 1rem; color: var(--color-text); }
-        .campaign-section h2 span { color: var(--color-campaign); }
-        .campaign-section.default h2 span { color: var(--color-hope); }
-        .campaign-section.lahaina h2 span { color: var(--color-accent); }
-        .campaign-subtitle { font-family: var(--font-display); font-size: 1.1rem; color: var(--color-text-muted); margin-bottom: 1.5rem; }
-        .campaign-description { color: var(--color-text-muted); margin-bottom: 1.5rem; max-width: 650px; margin-left: auto; margin-right: auto; line-height: 1.8; }
-        .campaign-items { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
-        .campaign-item { padding: 0.8rem 1.2rem; background: rgba(196, 30, 58, 0.1); border: 1px solid rgba(196, 30, 58, 0.3); border-radius: 0.5rem; }
-        .campaign-section.default .campaign-item { background: rgba(126, 184, 201, 0.1); border-color: rgba(126, 184, 201, 0.3); }
-        .campaign-section.lahaina .campaign-item { background: rgba(201, 169, 98, 0.1); border-color: rgba(201, 169, 98, 0.3); }
-        .campaign-item-icon { font-size: 1.5rem; margin-bottom: 0.2rem; }
-        .campaign-item-label { font-size: 0.8rem; color: var(--color-text-muted); }
-        .campaign-photos { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin: 1.5rem 0; }
-        .campaign-photo { flex: 1; min-width: 250px; max-width: 380px; }
-        .campaign-photo img { width: 100%; border-radius: 0.5rem; border: 1px solid rgba(196, 30, 58, 0.3); }
-        .campaign-section.default .campaign-photo img { border-color: rgba(126, 184, 201, 0.3); }
-        .campaign-section.lahaina .campaign-photo img { border-color: rgba(201, 169, 98, 0.3); }
-        .campaign-photo p { font-size: 0.75rem; color: var(--color-text-muted); margin-top: 0.5rem; }
-        .campaign-benefits { margin: 1.5rem 0; }
-        .campaign-benefits p { font-size: 0.9rem; margin-bottom: 0.5rem; max-width: 550px; margin-left: auto; margin-right: auto; }
-        .campaign-cta { display: inline-block; padding: 1rem 2.5rem; background: var(--color-campaign); color: white; text-decoration: none; font-size: 0.9rem; letter-spacing: 0.1em; transition: all 0.4s ease; border-radius: 0.3rem; margin-top: 1rem; }
-        .campaign-section.default .campaign-cta { background: var(--color-hope); }
-        .campaign-section.lahaina .campaign-cta { background: var(--color-accent); color: var(--color-bg); }
-        .campaign-cta:hover { box-shadow: 0 0 30px var(--color-campaign-glow); transform: translateY(-2px); }
-        .campaign-deadline { font-size: 0.8rem; color: var(--color-text-muted); margin-top: 1rem; }
-
-        .quick-packages { padding: 6rem 2rem; background: var(--color-bg-subtle); text-align: center; }
-        .quick-packages h2 { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 400; margin-bottom: 1rem; }
-        .quick-packages-subtitle { color: var(--color-text-muted); margin-bottom: 3rem; font-size: 1rem; }
-        .packages-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto 3rem; }
-        .package-card { padding: 2rem 1.5rem; background: var(--color-bg); border: 1px solid rgba(201, 169, 98, 0.15); transition: all 0.4s ease; }
-        .package-card:hover { border-color: rgba(201, 169, 98, 0.4); transform: translateY(-5px); }
-        .package-icon { font-size: 2rem; margin-bottom: 1rem; }
-        .package-card h4 { font-family: var(--font-display); font-size: 1.3rem; margin-bottom: 0.5rem; }
-        .package-price { font-size: 1.1rem; color: var(--color-accent); font-weight: 400; margin-bottom: 0.5rem; }
-        .package-desc { font-size: 0.8rem; color: var(--color-text-muted); margin-bottom: 0; }
-        .quick-extras { display: flex; justify-content: center; gap: 3rem; margin-top: 2rem; flex-wrap: wrap; }
-        .quick-extra-item { text-align: center; max-width: 350px; }
-        .quick-extra-item h5 { font-family: var(--font-display); font-size: 1.1rem; color: var(--color-hope); margin-bottom: 0.3rem; }
-        .quick-extra-item p { font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 0; }
-        .quick-packages .cta-buttons { margin-top: 3rem; }
-        section { padding: 8rem 2rem; max-width: 1100px; margin: 0 auto; }
-        .section-label { font-size: 0.7rem; letter-spacing: 0.4em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 1.5rem; }
-        h2 { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 400; margin-bottom: 2rem; line-height: 1.5; }
-        h3 { font-family: var(--font-display); font-size: 1.4rem; font-weight: 400; margin-bottom: 1rem; }
-        p { color: var(--color-text-muted); max-width: 65ch; margin-bottom: 1.5rem; }
-        .core-message { text-align: center; padding: 10rem 2rem; background: radial-gradient(ellipse 50% 50% at 50% 50%, rgba(126, 184, 201, 0.03) 0%, transparent 70%); }
-        .core-message h2 { font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 3rem; }
-        .core-message .highlight { color: var(--color-hope); }
-        .core-pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; margin-top: 5rem; max-width: 1000px; margin-left: auto; margin-right: auto; }
-        .pillar { padding: 2.5rem; background: linear-gradient(180deg, var(--color-bg-subtle) 0%, transparent 100%); border: 1px solid rgba(201, 169, 98, 0.1); text-align: center; transition: all 0.4s ease; }
-        .pillar:hover { border-color: rgba(201, 169, 98, 0.3); transform: translateY(-5px); }
-        .pillar-icon { font-size: 2.5rem; margin-bottom: 1.5rem; }
-        .pillar h4 { font-family: var(--font-display); font-size: 1.3rem; font-weight: 400; margin-bottom: 0.5rem; color: var(--color-text); }
-        .pillar-subtitle { font-size: 0.75rem; letter-spacing: 0.15em; color: var(--color-accent); margin-bottom: 1rem; }
-        .pillar p { font-size: 0.9rem; margin-bottom: 0; }
-        .why-section { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
-        .why-visual { position: relative; height: 500px; }
-        .void-circle { position: absolute; width: 300px; height: 300px; left: 50%; top: 50%; transform: translate(-50%, -50%); border-radius: 50%; background: radial-gradient(circle at center, transparent 0%, transparent 40%, rgba(201, 169, 98, 0.1) 60%, rgba(201, 169, 98, 0.2) 100%); animation: pulse 4s ease-in-out infinite; }
-        .story-block { padding: 3rem; background: var(--color-bg-subtle); border-left: 2px solid var(--color-accent); margin: 3rem 0; position: relative; }
-        .story-block p { font-family: var(--font-display); font-size: 1.1rem; color: var(--color-warm); line-height: 1.9; }
-        .offgrid-section { background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-subtle) 30%, var(--color-bg-subtle) 70%, var(--color-bg) 100%); padding: 10rem 2rem; }
-        .offgrid-content { max-width: 1100px; margin: 0 auto; }
-        .offgrid-statement { font-family: var(--font-display); font-size: clamp(1.3rem, 3.5vw, 2.2rem); font-weight: 400; text-align: center; margin-bottom: 5rem; line-height: 1.8; }
-        .offgrid-statement em { color: var(--color-hope); font-style: normal; }
-        .independence-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-        .independence-item { padding: 2rem; border: 1px solid rgba(126, 184, 201, 0.2); background: rgba(126, 184, 201, 0.02); text-align: center; transition: all 0.4s ease; }
-        .independence-item:hover { border-color: rgba(126, 184, 201, 0.4); background: rgba(126, 184, 201, 0.05); }
-        .independence-item h4 { font-family: var(--font-display); font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--color-hope); }
-        .independence-item p { font-size: 0.85rem; margin-bottom: 0; }
-        .pearl-section { padding: 10rem 2rem; }
-        .pearl-content { max-width: 800px; margin: 0 auto; text-align: center; }
-        .pearl-image { width: 120px; height: 120px; margin: 0 auto 3rem; border-radius: 50%; background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-warm) 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem; box-shadow: 0 0 60px var(--color-accent-glow); }
-        .pearl-content h2 { margin-bottom: 1rem; }
-        .pearl-dates { font-family: var(--font-display); color: var(--color-accent); margin-bottom: 3rem; }
-        .pearl-story-text { text-align: left; max-width: 700px; margin: 0 auto; }
-        .pearl-story-text p { margin-bottom: 1.5rem; }
-        .pearl-highlight { padding: 2rem; background: var(--color-bg-subtle); border-left: 2px solid var(--color-hope); margin: 2rem 0; }
-        .pearl-highlight p { font-family: var(--font-display); font-size: 1.1rem; color: var(--color-hope); margin-bottom: 0; }
-        .services-section { padding: 8rem 2rem; background: var(--color-bg-subtle); }
-        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 4rem; max-width: 1100px; margin-left: auto; margin-right: auto; }
-        .service-card { padding: 2.5rem; border: 1px solid rgba(201, 169, 98, 0.1); background: var(--color-bg); transition: all 0.4s ease; }
-        .service-card:hover { border-color: rgba(201, 169, 98, 0.3); }
-        .service-icon { font-size: 2rem; margin-bottom: 1.5rem; }
-        .service-card h4 { font-family: var(--font-display); font-size: 1.2rem; margin-bottom: 1rem; }
-        .family-section { padding: 8rem 2rem; }
-        .family-intro { text-align: center; max-width: 700px; margin: 0 auto 4rem; }
-        .family-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 900px; margin: 0 auto; }
-        .family-member { text-align: center; padding: 2rem; }
-        .family-member h4 { font-family: var(--font-display); font-size: 1.4rem; margin-bottom: 0.3rem; }
-        .family-role { font-size: 0.75rem; letter-spacing: 0.15em; color: var(--color-accent); margin-bottom: 1rem; }
-        .gift-section { padding: 8rem 2rem; background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-subtle) 50%, var(--color-bg) 100%); }
-        .gift-content { max-width: 900px; margin: 0 auto; text-align: center; }
-        .gift-stat { margin: 4rem 0; padding: 3rem; background: var(--color-bg); border: 1px solid rgba(201, 169, 98, 0.2); }
-        .gift-stat-value { font-family: var(--font-display); font-size: 4rem; color: var(--color-accent); }
-        .gift-stat-label { font-size: 0.9rem; color: var(--color-text-muted); }
-        .cta-section { padding: 10rem 2rem; text-align: center; background: radial-gradient(ellipse 80% 50% at 50% 100%, var(--color-accent-glow) 0%, transparent 50%); }
-        .cta-section h2 { margin-bottom: 1rem; }
-        .cta-subtitle { font-family: var(--font-display); font-size: 1.1rem; color: var(--color-text-muted); margin-bottom: 3rem; }
-        .cta-buttons { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; }
-        .cta-primary { padding: 1.2rem 3rem; background: var(--color-accent); color: var(--color-bg); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.15em; transition: all 0.4s ease; }
-        .cta-primary:hover { box-shadow: 0 0 50px var(--color-accent-glow); transform: translateY(-2px); }
-        .cta-secondary { padding: 1.2rem 3rem; background: transparent; border: 1px solid var(--color-text-muted); color: var(--color-text); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.15em; transition: all 0.4s ease; }
-        .cta-secondary:hover { border-color: var(--color-text); }
-        footer { padding: 4rem 2rem; text-align: center; border-top: 1px solid rgba(201, 169, 98, 0.1); }
-        .footer-memorial { font-family: var(--font-display); color: var(--color-text-muted); margin-bottom: 2rem; }
-        .footer-links { display: flex; gap: 2rem; justify-content: center; margin-bottom: 2rem; }
-        .footer-links a { color: var(--color-text-muted); text-decoration: none; font-size: 0.85rem; transition: color 0.3s ease; }
-        .footer-links a:hover { color: var(--color-accent); }
-        .footer-payment { display: flex; gap: 1.5rem; justify-content: center; margin-bottom: 2rem; flex-wrap: wrap; }
-        .footer-payment a { color: var(--color-text-muted); text-decoration: none; font-size: 0.8rem; padding: 0.5rem 1rem; border: 1px solid rgba(201, 169, 98, 0.2); transition: all 0.3s ease; }
-        .footer-payment a:hover { border-color: var(--color-accent); color: var(--color-accent); }
-        .footer-location { font-size: 0.75rem; letter-spacing: 0.2em; color: var(--color-text-muted); }
-        @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes float { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(-10px); } }
-        @keyframes pulse { 0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 1; } 50% { transform: translate(-50%, -50%) scale(1.05); opacity: 0.8; } }
-        @media (max-width: 1024px) {
-            .packages-grid, .core-pillars, .independence-grid, .services-grid { grid-template-columns: 1fr 1fr; }
-            .why-section { grid-template-columns: 1fr; gap: 4rem; }
-            .why-visual { height: 300px; }
-        }
-        @media (max-width: 768px) {
-            section { padding: 5rem 1.5rem; }
-            .packages-grid, .family-grid, .core-pillars, .independence-grid, .services-grid { grid-template-columns: 1fr; }
-            .cta-buttons { flex-direction: column; align-items: center; }
-            .quick-extras { flex-direction: column; gap: 1.5rem; }
-            .lang-switch { top: 1rem; right: 1rem; }
-            .campaign-items { flex-direction: column; gap: 0.8rem; }
-            .campaign-photos { flex-direction: column; }
-        }
-        @media print {
-            * { background: transparent !important; }
-            body { background: white !important; color: #1a1a1a !important; font-size: 10pt; line-height: 1.4; }
-            .lang-switch, .scroll-indicator, .hero-cta, .cta-buttons, .cta-section, .void-circle, .why-visual { display: none !important; }
-            .hero { min-height: auto !important; padding: 1rem !important; background: none !important; }
-            .hero h1 { opacity: 1 !important; animation: none !important; color: #1a1a1a !important; font-size: 24pt !important; }
-            .hero h1 em { color: #2a6a7a !important; }
-            .hero-tagline, .hero-subtitle { opacity: 1 !important; animation: none !important; color: #444 !important; }
-            section { padding: 1rem 0.5rem !important; max-width: 100% !important; page-break-inside: avoid; }
-            .quick-packages, .services-section, .offgrid-section, .gift-section, .core-message { background: none !important; padding: 1rem 0.5rem !important; }
-            h2, h3, h4, .pillar h4, .independence-item h4 { color: #1a1a1a !important; }
-            p, li, .package-desc { color: #333 !important; }
-            .section-label, .pillar-subtitle { color: #666 !important; }
-            .highlight, .pearl-highlight p { color: #2a6a7a !important; }
-            .packages-grid { grid-template-columns: repeat(4, 1fr) !important; gap: 0.5rem !important; }
-            .package-card, .pillar, .independence-item, .service-card { background: none !important; border: 1px solid #ccc !important; padding: 0.5rem !important; }
-            .package-price { color: #1a1a1a !important; font-weight: 600 !important; }
-            .core-pillars, .independence-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 0.5rem !important; }
-            .services-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 0.5rem !important; }
-            .family-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 0.5rem !important; }
-            .pearl-image { background: #eee !important; box-shadow: none !important; border: 1px solid #ccc !important; width: 60px !important; height: 60px !important; font-size: 1.5rem !important; margin-bottom: 1rem !important; }
-            .pearl-dates, .family-role { color: #666 !important; }
-            .pearl-highlight, .story-block { background: none !important; border-left: 2px solid #666 !important; padding: 0.5rem 1rem !important; }
-            .story-block p { color: #333 !important; }
-            .gift-stat { background: none !important; border: 1px solid #ccc !important; padding: 1rem !important; }
-            .gift-stat-value { color: #1a1a1a !important; font-size: 2rem !important; }
-            .why-section { grid-template-columns: 1fr !important; }
-            footer { border-top: 1px solid #ccc !important; padding: 0.5rem !important; }
-            .footer-memorial, .footer-location { color: #666 !important; font-size: 9pt !important; }
-            .footer-payment { display: none !important; }
-            .quick-extra-item h5 { color: #1a1a1a !important; }
-            .offgrid-statement em { color: #2a6a7a !important; }
-            h2 { font-size: 14pt !important; margin-bottom: 0.5rem !important; }
-            p { font-size: 9pt !important; margin-bottom: 0.5rem !important; }
-            .campaign-section { background: none !important; border: 2px solid #c41e3a !important; padding: 1rem !important; page-break-inside: avoid; }
-            .campaign-section h2 span { color: #c41e3a !important; }
-            .campaign-item { background: none !important; border: 1px solid #c41e3a !important; }
-            .campaign-cta { background: none !important; border: 2px solid #c41e3a !important; color: #c41e3a !important; }
-            .campaign-photo img { max-width: 200px !important; }
-            .campaign-photos { gap: 0.5rem !important; }
-        }
+        :root{--color-bg:#0a0a0a;--color-bg-subtle:#111;--color-text:#f5f0e8;--color-text-muted:#8a8578;--color-accent:#c9a962;--color-accent-glow:rgba(201,169,98,0.15);--color-warm:#e8d5b7;--color-hope:#7eb8c9;--color-campaign:#c41e3a;--font-display:'Shippori Mincho','Cormorant Garamond',serif;--font-body:'Zen Kaku Gothic New',sans-serif}
+        *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:var(--font-body);font-weight:300;background:var(--color-bg);color:var(--color-text);line-height:1.8;font-size:16px}
+        .lang-switch{position:fixed;top:2rem;right:2rem;z-index:100;display:flex;gap:.5rem;background:rgba(10,10,10,.8);backdrop-filter:blur(10px);padding:.5rem;border-radius:2rem;border:1px solid rgba(201,169,98,.2)}
+        .lang-switch a{padding:.5rem 1rem;color:var(--color-text-muted);text-decoration:none;font-size:.8rem;border-radius:1.5rem;transition:all .3s ease}
+        .lang-switch a.active{background:var(--color-accent);color:var(--color-bg)}
+        .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative;padding:2rem;background:radial-gradient(ellipse 60% 40% at 50% 0%,rgba(201,169,98,.08) 0%,transparent 60%)}
+        .hero-content{max-width:900px}.hero-tagline{font-size:.75rem;letter-spacing:.4em;color:var(--color-accent);margin-bottom:2rem;opacity:0;animation:fadeUp 1s ease forwards .3s}
+        .hero h1{font-family:var(--font-display);font-size:clamp(2.5rem,7vw,5rem);font-weight:400;line-height:1.3;margin-bottom:1.5rem;opacity:0;animation:fadeUp 1s ease forwards .5s}
+        .hero h1 em{font-style:normal;color:var(--color-hope)}
+        .hero-subtitle{font-family:var(--font-display);font-size:clamp(1rem,2.5vw,1.5rem);color:var(--color-text-muted);margin-bottom:3rem;opacity:0;animation:fadeUp 1s ease forwards .7s}
+        .hero-cta{display:inline-block;padding:1.2rem 3rem;border:1px solid var(--color-accent);color:var(--color-accent);text-decoration:none;font-size:.85rem;letter-spacing:.2em;transition:all .4s ease;opacity:0;animation:fadeUp 1s ease forwards .9s}
+        .hero-cta:hover{background:var(--color-accent);color:var(--color-bg)}
+        .scroll-indicator{position:absolute;bottom:3rem;left:50%;transform:translateX(-50%);font-size:.7rem;letter-spacing:.3em;color:var(--color-text-muted);opacity:0;animation:fadeUp 1s ease forwards 1.2s,float 3s ease-in-out infinite 2s}
+        .campaign-section{padding:4rem 2rem;background:linear-gradient(180deg,var(--color-bg) 0%,rgba(196,30,58,.08) 50%,var(--color-bg) 100%);text-align:center;border-top:2px solid var(--color-campaign);border-bottom:2px solid var(--color-campaign)}
+        .campaign-section.default{background:linear-gradient(180deg,var(--color-bg) 0%,rgba(126,184,201,.08) 50%,var(--color-bg) 100%);border-color:var(--color-hope)}
+        .campaign-section.lahaina{background:linear-gradient(180deg,var(--color-bg) 0%,rgba(201,169,98,.08) 50%,var(--color-bg) 100%);border-color:var(--color-accent)}
+        .campaign-content{max-width:1100px;margin:0 auto}.campaign-icon{font-size:3rem;margin-bottom:1rem}
+        .campaign-section h2{font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.5rem);font-weight:400;margin-bottom:1rem}
+        .campaign-section h2 span{color:var(--color-campaign)}.campaign-section.default h2 span{color:var(--color-hope)}.campaign-section.lahaina h2 span{color:var(--color-accent)}
+        .campaign-subtitle{font-family:var(--font-display);font-size:1.1rem;color:var(--color-text-muted);margin-bottom:1.5rem}
+        .campaign-description{color:var(--color-text-muted);margin-bottom:2rem;max-width:700px;margin-left:auto;margin-right:auto}
+        .donation-tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:2rem 0}
+        .donation-tier{padding:1.5rem;background:rgba(10,10,10,.8);border:1px solid rgba(201,169,98,.2);border-radius:.5rem;text-align:left;transition:all .3s ease}
+        .donation-tier:hover{border-color:rgba(201,169,98,.5);transform:translateY(-3px)}
+        .donation-tier.featured{border-color:var(--color-accent);background:rgba(201,169,98,.05)}
+        .tier-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:.8rem}
+        .tier-amount{font-family:var(--font-display);font-size:1.6rem;color:var(--color-accent)}
+        .tier-badge{font-size:.65rem;padding:.2rem .5rem;background:var(--color-accent);color:var(--color-bg);border-radius:1rem}
+        .tier-title{font-family:var(--font-display);font-size:1rem;margin-bottom:.4rem}
+        .tier-equipment{font-size:.8rem;color:var(--color-hope);margin-bottom:.6rem;line-height:1.4}
+        .tier-benefits{list-style:none}.tier-benefits li{font-size:.75rem;color:var(--color-text-muted);padding:.2rem 0 .2rem 1rem;position:relative}
+        .tier-benefits li::before{content:'✓';position:absolute;left:0;color:var(--color-accent);font-size:.7rem}
+        .campaign-photos{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin:2rem 0}
+        .campaign-photo{flex:1;min-width:250px;max-width:350px}.campaign-photo img{width:100%;border-radius:.5rem;border:1px solid rgba(201,169,98,.3)}
+        .campaign-photo p{font-size:.75rem;color:var(--color-text-muted);margin-top:.5rem}
+        .rd-section{margin:2.5rem 0;padding:2rem;background:rgba(126,184,201,.05);border:1px solid rgba(126,184,201,.2);border-radius:.5rem}
+        .rd-section h4{font-family:var(--font-display);font-size:1.2rem;color:var(--color-hope);margin-bottom:.5rem;text-align:center}
+        .rd-amount{font-family:var(--font-display);font-size:2rem;color:var(--color-accent);text-align:center;margin-bottom:1.5rem}
+        .rd-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+        .rd-item{text-align:center;padding:1rem}.rd-item-icon{font-size:2rem;margin-bottom:.5rem}
+        .rd-item h5{font-family:var(--font-display);font-size:1rem;margin-bottom:.3rem}
+        .rd-item-sub{font-size:.8rem;color:var(--color-hope);margin-bottom:.5rem}
+        .rd-item p{font-size:.8rem;color:var(--color-text-muted);line-height:1.5}
+        .rd-footer{text-align:center;margin-top:1.5rem;font-size:.9rem;color:var(--color-warm)}
+        .campaign-promise{margin:2rem 0;padding:1.5rem;background:rgba(201,169,98,.05);border:1px solid rgba(201,169,98,.2);border-radius:.5rem;text-align:left}
+        .campaign-promise h4{font-family:var(--font-display);font-size:1.1rem;color:var(--color-accent);margin-bottom:.8rem}
+        .campaign-promise p{font-size:.85rem;color:var(--color-text-muted);margin-bottom:.4rem}
+        .campaign-cta{display:inline-block;padding:1rem 2.5rem;background:var(--color-campaign);color:#fff;text-decoration:none;font-size:.9rem;letter-spacing:.1em;transition:all .4s ease;border-radius:.3rem;margin-top:1rem}
+        .campaign-section.default .campaign-cta{background:var(--color-hope)}.campaign-section.lahaina .campaign-cta{background:var(--color-accent);color:var(--color-bg)}
+        .campaign-cta:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(0,0,0,.3)}
+        .campaign-deadline{font-size:.8rem;color:var(--color-text-muted);margin-top:1rem}
+        .quick-packages{padding:5rem 2rem;background:var(--color-bg-subtle);text-align:center}
+        .quick-packages h2{font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.5rem);font-weight:400;margin-bottom:1rem}
+        .quick-packages-subtitle{color:var(--color-text-muted);margin-bottom:2.5rem}
+        .packages-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;max-width:1000px;margin:0 auto 2rem}
+        .package-card{padding:1.5rem 1rem;background:var(--color-bg);border:1px solid rgba(201,169,98,.15);transition:all .4s ease}
+        .package-card:hover{border-color:rgba(201,169,98,.4);transform:translateY(-5px)}
+        .package-icon{font-size:1.8rem;margin-bottom:.8rem}.package-card h4{font-family:var(--font-display);font-size:1.1rem;margin-bottom:.4rem}
+        .package-price{font-size:1rem;color:var(--color-accent);margin-bottom:.3rem}.package-desc{font-size:.75rem;color:var(--color-text-muted)}
+        .quick-extras{display:flex;justify-content:center;gap:2.5rem;margin-top:2rem;flex-wrap:wrap}
+        .quick-extra-item{text-align:center;max-width:300px}.quick-extra-item h5{font-family:var(--font-display);font-size:1rem;color:var(--color-hope);margin-bottom:.3rem}
+        .quick-extra-item p{font-size:.8rem;color:var(--color-text-muted);line-height:1.5}
+        .cta-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2.5rem}
+        .cta-primary{padding:1rem 2.5rem;background:var(--color-accent);color:var(--color-bg);text-decoration:none;font-size:.8rem;letter-spacing:.15em;transition:all .4s ease}
+        .cta-primary:hover{box-shadow:0 0 50px var(--color-accent-glow);transform:translateY(-2px)}
+        .cta-secondary{padding:1rem 2.5rem;background:transparent;border:1px solid var(--color-text-muted);color:var(--color-text);text-decoration:none;font-size:.8rem;letter-spacing:.15em;transition:all .4s ease}
+        .cta-secondary:hover{border-color:var(--color-text)}
+        section{padding:6rem 2rem;max-width:1100px;margin:0 auto}
+        .section-label{font-size:.7rem;letter-spacing:.4em;color:var(--color-accent);margin-bottom:1.5rem}
+        h2{font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:400;margin-bottom:1.5rem;line-height:1.4}
+        p{color:var(--color-text-muted);max-width:65ch;margin-bottom:1.5rem}
+        .core-message{text-align:center;padding:6rem 2rem}.core-message h2{font-size:clamp(1.8rem,5vw,3rem);margin-bottom:1.5rem}
+        .core-message .highlight{color:var(--color-hope)}
+        .core-pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;max-width:900px;margin-left:auto;margin-right:auto}
+        .pillar{padding:2rem 1.5rem;background:linear-gradient(180deg,var(--color-bg-subtle) 0%,transparent 100%);border:1px solid rgba(201,169,98,.1);text-align:center;transition:all .4s ease}
+        .pillar:hover{border-color:rgba(201,169,98,.3);transform:translateY(-5px)}
+        .pillar-icon{font-size:2rem;margin-bottom:1rem}.pillar h4{font-family:var(--font-display);font-size:1.1rem;margin-bottom:.3rem}
+        .pillar-subtitle{font-size:.7rem;letter-spacing:.12em;color:var(--color-accent);margin-bottom:.6rem}.pillar p{font-size:.8rem;margin-bottom:0}
+        .offgrid-section{background:linear-gradient(180deg,var(--color-bg) 0%,var(--color-bg-subtle) 30%,var(--color-bg-subtle) 70%,var(--color-bg) 100%);padding:6rem 2rem}
+        .offgrid-content{max-width:1000px;margin:0 auto;text-align:center}
+        .offgrid-statement{font-family:var(--font-display);font-size:clamp(1.2rem,3vw,1.8rem);margin-bottom:3rem;line-height:1.7}
+        .offgrid-statement em{color:var(--color-hope);font-style:normal}
+        .independence-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+        .independence-item{padding:1.5rem;border:1px solid rgba(126,184,201,.2);background:rgba(126,184,201,.02);text-align:center;transition:all .4s ease}
+        .independence-item:hover{border-color:rgba(126,184,201,.4)}
+        .independence-item h4{font-family:var(--font-display);font-size:1rem;margin-bottom:.4rem;color:var(--color-hope)}
+        .independence-item p{font-size:.8rem;margin-bottom:0}
+        .pearl-section{padding:6rem 2rem}.pearl-content{max-width:700px;margin:0 auto;text-align:center}
+        .pearl-image{width:100px;height:100px;margin:0 auto 2rem;border-radius:50%;background:linear-gradient(135deg,var(--color-accent),var(--color-warm));display:flex;align-items:center;justify-content:center;font-size:2.5rem;box-shadow:0 0 60px var(--color-accent-glow)}
+        .pearl-dates{font-family:var(--font-display);color:var(--color-accent);margin-bottom:1.5rem}
+        .pearl-highlight{padding:1.5rem;background:var(--color-bg-subtle);border-left:2px solid var(--color-hope);margin:1.5rem 0;text-align:left}
+        .pearl-highlight p{font-family:var(--font-display);font-size:1rem;color:var(--color-hope);margin-bottom:0}
+        .family-section{padding:5rem 2rem}.family-intro{text-align:center;max-width:600px;margin:0 auto 2.5rem}
+        .family-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:800px;margin:0 auto}
+        .family-member{text-align:center;padding:1.5rem}.family-member h4{font-family:var(--font-display);font-size:1.2rem;margin-bottom:.2rem}
+        .family-role{font-size:.7rem;letter-spacing:.12em;color:var(--color-accent);margin-bottom:.6rem}.family-member p{font-size:.8rem}
+        .gift-section{padding:5rem 2rem;background:linear-gradient(180deg,var(--color-bg) 0%,var(--color-bg-subtle) 50%,var(--color-bg) 100%)}
+        .gift-content{max-width:700px;margin:0 auto;text-align:center}
+        .gift-stat{margin:2.5rem 0;padding:2rem;background:var(--color-bg);border:1px solid rgba(201,169,98,.2)}
+        .gift-stat-value{font-family:var(--font-display);font-size:3rem;color:var(--color-accent)}
+        .gift-stat-label{font-size:.85rem;color:var(--color-text-muted)}
+        .cta-section{padding:6rem 2rem;text-align:center}.cta-subtitle{font-family:var(--font-display);font-size:1rem;color:var(--color-text-muted);margin-bottom:2rem}
+        footer{padding:3rem 2rem;text-align:center;border-top:1px solid rgba(201,169,98,.1)}
+        .footer-memorial{font-family:var(--font-display);color:var(--color-text-muted);margin-bottom:1.5rem;font-size:.9rem}
+        .footer-links{display:flex;gap:1.5rem;justify-content:center;margin-bottom:1.5rem;flex-wrap:wrap}
+        .footer-links a{color:var(--color-text-muted);text-decoration:none;font-size:.8rem;transition:color .3s ease}
+        .footer-links a:hover{color:var(--color-accent)}
+        .footer-payment{display:flex;gap:1rem;justify-content:center;margin-bottom:1.5rem;flex-wrap:wrap}
+        .footer-payment a{color:var(--color-text-muted);text-decoration:none;font-size:.75rem;padding:.4rem .8rem;border:1px solid rgba(201,169,98,.2);transition:all .3s ease}
+        .footer-payment a:hover{border-color:var(--color-accent);color:var(--color-accent)}
+        .footer-location{font-size:.7rem;letter-spacing:.2em;color:var(--color-text-muted)}
+        @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+        @keyframes float{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-10px)}}
+        @media(max-width:1024px){.packages-grid{grid-template-columns:1fr 1fr}.core-pillars,.independence-grid{grid-template-columns:1fr 1fr}.donation-tiers{grid-template-columns:1fr 1fr}}
+        @media(max-width:768px){section{padding:4rem 1.5rem}.packages-grid,.family-grid,.core-pillars,.independence-grid{grid-template-columns:1fr}.cta-buttons,.quick-extras{flex-direction:column;align-items:center}.lang-switch{top:1rem;right:1rem}.donation-tiers{grid-template-columns:1fr}.campaign-photos{flex-direction:column;align-items:center}.rd-grid{grid-template-columns:1fr}}
     </style>
 </head>
 <body>
-<nav class="lang-switch">
-    <a href="index.html">EN</a>
-    <a href="#" class="active">日本語</a>
-</nav>
-
+<nav class="lang-switch"><a href="index-global.html">EN</a><a href="#" class="active">日本語</a></nav>
 <header class="hero">
     <div class="hero-content">
         <p class="hero-tagline">Off-grid 佐藤家</p>
         <h1>あなたは<br><em>存在していい</em></h1>
         <p class="hero-subtitle">記憶と、インフラと、自立を通じて<br>「存在の許可」を届ける</p>
-        <a href="#packages" class="hero-cta">サービスを見る</a>
+        <a href="#campaign" class="hero-cta">キャンペーンを見る</a>
     </div>
     <div class="scroll-indicator">DISCOVER</div>
 </header>
-
-<!-- Dynamic Campaign Section -->
 <section class="campaign-section" id="campaign">
     <div class="campaign-content">
-        <div class="campaign-icon" id="campaignIcon">⚡🔋</div>
-        <h2 id="campaignTitle">オフグリッドインフラ -- <span>Global + Local = Strong</span></h2>
+        <div class="campaign-icon" id="campaignIcon">🎄🎅</div>
+        <h2 id="campaignTitle">クリスマス寄付 -- <span>Global + Local = Strong</span></h2>
         <p class="campaign-subtitle" id="campaignSubtitle">Ohanaと共に育つ</p>
-        <p class="campaign-description" id="campaignDescription">あなたの寄付で、農場、寺院、教会、コミュニティにオフグリッド電源・通信・緊急インフラを届けます。マウイでも、日本でも、Ohanaが育つ場所ならどこでも。</p>
-        
-        <div class="campaign-items">
-            <div class="campaign-item">
-                <div class="campaign-item-icon">🔋</div>
-                <div class="campaign-item-label">ポータブルバッテリー</div>
+        <p class="campaign-description" id="campaignDescription">このクリスマス、「自立」というギフトを届けませんか。あなたの寄付で、農場、寺院、コミュニティにオフグリッド電源・通信インフラを届けます。マウイでも、日本でも、Ohanaが育つ場所ならどこでも。</p>
+        <div class="donation-tiers">
+            <div class="donation-tier">
+                <div class="tier-header"><span class="tier-amount">$1,000〜</span></div>
+                <div class="tier-title">🔋 ポータブル電源1台相当</div>
+                <p style="font-size:.85rem;color:var(--color-text-muted);">Jackery 1000 Plus等</p>
             </div>
-            <div class="campaign-item">
-                <div class="campaign-item-icon">📡</div>
-                <div class="campaign-item-label">Starlink通信</div>
+            <div class="donation-tier featured">
+                <div class="tier-header"><span class="tier-amount">$3,000〜</span></div>
+                <div class="tier-title">📡 モバイル通信キット相当</div>
+                <p style="font-size:.85rem;color:var(--color-text-muted);">Starlink Mini + バッテリー + ソーラー</p>
             </div>
-            <div class="campaign-item">
-                <div class="campaign-item-icon">☀️</div>
-                <div class="campaign-item-label">ソーラー電源システム</div>
+            <div class="donation-tier">
+                <div class="tier-header"><span class="tier-amount">$5,000〜</span></div>
+                <div class="tier-title">🏠 小規模拠点インフラ相当</div>
+                <p style="font-size:.85rem;color:var(--color-text-muted);">農場・寺院の基本セット</p>
+            </div>
+            <div class="donation-tier">
+                <div class="tier-header"><span class="tier-amount">$10,000〜</span></div>
+                <div class="tier-title">⚡ 中規模インフラ相当</div>
+                <p style="font-size:.85rem;color:var(--color-text-muted);">複数拠点 or 本格的な設備</p>
             </div>
         </div>
-        
+        <p style="text-align:center;font-size:.9rem;color:var(--color-text-muted);margin-top:1.5rem;">いただいた寄付は、最も必要とするコミュニティに届けます。</p>
         <div class="campaign-photos">
-            <div class="campaign-photo">
-                <img src="IMG_3344.jpeg" alt="ホノルアベイで石鹸を作る糸">
-                <p>糸（5歳）がホノルアベイで手作り石鹸を製作中</p>
-            </div>
-            <div class="campaign-photo">
-                <img src="IMG_3369.jpeg" alt="オフグリッド電源セットアップ">
-                <p>コミュニティに構築するオフグリッドインフラ</p>
-            </div>
+            <div class="campaign-photo"><img src="IMG_3344.jpeg" alt="石鹸を作る糸"><p>糸（5歳）がホノルアベイで手作り石鹸を製作中</p></div>
+            <div class="campaign-photo"><img src="IMG_3369.jpeg" alt="オフグリッド電源"><p>コミュニティに構築するオフグリッドインフラ</p></div>
         </div>
-        
-        <div class="campaign-benefits">
-            <p style="color: var(--color-warm);"><strong>私たちの約束：</strong> 卓也が責任を持って調達・設置を行い、すべての寄付者に進捗レポートを共有します。</p>
-            <p style="color: var(--color-hope);"><strong>💎 寄付者の記録：</strong> すべての寄付者のお名前を石英ガラスに刻印 -- あなたの支援は1,000年以上残ります。</p>
-            <p style="color: var(--color-accent);"><strong>🏠 特別なお礼：</strong> ご希望の寄付者には、日本のOhana Home（東京近郊または田舎）への無料宿泊をプレゼント。</p>
+        <div class="rd-section">
+            <h4>🔬 なぜ私たちに？</h4>
+            <div class="rd-amount">約2,000万円（〜$130,000）の研究開発投資</div>
+            <div class="rd-grid">
+                <div class="rd-item">
+                    <div class="rd-item-icon">💎</div>
+                    <h5>刻印造成技術</h5>
+                    <div class="rd-item-sub">素材 × 加工 × 保存</div>
+                    <p>レーザー彫刻、石英ガラス内部刻印、多素材テスト。1,000年以上残る保存技術を確立。</p>
+                </div>
+                <div class="rd-item">
+                    <div class="rd-item-icon">⚡</div>
+                    <h5>オフグリッドインフラ</h5>
+                    <div class="rd-item-sub">電源 × 通信 × 生活</div>
+                    <p>Jackery、Starlink、ソーラー、メッシュWiFiの統合運用。3日でフル環境構築を実証。</p>
+                </div>
+            </div>
+            <p class="rd-footer">日米両国で実地検証済み。あなたの寄付は、確実にコミュニティに届きます。</p>
         </div>
-        
+        <div class="campaign-promise">
+            <h4>🤝 私たちの約束</h4>
+            <p><strong>透明性：</strong> 卓也が責任を持って調達・設置を行い、すべての寄付者に進捗レポートを共有します。</p>
+            <p><strong>💎 永遠の記録：</strong> すべての寄付者のお名前を石英ガラスに刻印 -- あなたの支援は1,000年以上残ります。</p>
+            <p><strong>🌏 グローバル＆ローカル：</strong> マウイでも、日本でも、Ohanaが育つ場所ならどこでも届けます。</p>
+        </div>
         <a href="https://www.paypal.com/ncp/payment/SVPS6J8WXQU76" class="campaign-cta" id="campaignCta">🎁 PayPalで寄付する</a>
-        <p class="campaign-deadline" id="campaignDeadline"></p>
+        <p style="margin-top:1rem;font-size:.85rem;color:var(--color-text-muted);">
+            <strong>Zelle:</strong> business@satotakuya.jp<br>
+            <span style="font-size:.8rem;">いただいた寄付は責任を持って届けます</span>
+        </p>
+        <p class="campaign-deadline" id="campaignDeadline">クリスマスキャンペーン：12月25日まで</p>
     </div>
 </section>
-
 <script>
-// Campaign Configuration - Global + Local = Strong（日本語版）
-const campaigns = {
-    christmas: {
-        icon: '🎄🎅',
-        title: 'クリスマス寄付 -- <span>Global + Local = Strong</span>',
-        subtitle: 'Ohanaと共に育つ',
-        description: 'このクリスマス、「自立」というギフトを届けよう。あなたの寄付で、農場、寺院、コミュニティにオフグリッド電源・通信インフラを届けます。マウイでも、日本でも、Ohanaが育つ場所ならどこでも。',
-        cta: '🎁 PayPalで寄付する',
-        deadline: 'クリスマスキャンペーン：12月25日まで',
-        className: ''
-    },
-    newyear: {
-        icon: '🌅✨',
-        title: '新年、新しい力 -- <span>Global + Local = Strong</span>',
-        subtitle: '新しい章が始まる',
-        description: '新年を自立と共に始めよう。あなたの寄付で、コミュニティが新しい年をレジリエントなオフグリッドインフラと共にスタートできます。ソーラー、Starlink、バッテリー -- 新しい始まりの基盤。',
-        cta: '🌅 新年キャンペーンを支援',
-        deadline: '新年キャンペーン：1月',
-        className: 'default'
-    },
-    whale: {
-        icon: '🐋🌊',
-        title: 'ホエールシーズン -- <span>Global + Local = Strong</span>',
-        subtitle: '彼らは毎年戻ってくる。私たちのコミットメントも。',
-        description: 'クジラがハワイの海に戻るこの季節、私たちはあらゆる場所のコミュニティのためにレジリエントなインフラを作り続けます。マウイから日本まで、農場、寺院、家族を支えます。',
-        cta: '🐋 ホエールシーズンキャンペーンを支援',
-        deadline: 'ホエールシーズン：2月〜3月',
-        className: 'default'
-    },
-    mothersday: {
-        icon: '💐🌸',
-        title: '母の日 -- <span>Global + Local = Strong</span>',
-        subtitle: 'コミュニティを育む母たちへ',
-        description: 'この母の日、レジリエンスという贈り物を。母、祖母、ケアギバーたち -- 家族を支える人々に、信頼できるオフグリッド電源と通信を届けます。マウイから日本まで。',
-        cta: '💐 母への敬意を込めて',
-        deadline: '母の日キャンペーン',
-        className: ''
-    },
-    fathersday: {
-        icon: '👨🔧',
-        title: '父の日 -- <span>Global + Local = Strong</span>',
-        subtitle: '作り、守る人たちへ',
-        description: '作り、守る父たちへ敬意を。この父の日、農場、作業場、家族の家にオフグリッドインフラを届けます -- Ohanaが育つ場所ならどこでも。',
-        cta: '🔧 父への敬意を込めて',
-        deadline: '父の日キャンペーン',
-        className: 'default'
-    },
-    independence: {
-        icon: '🎆⚡',
-        title: '独立記念日 -- <span>Global + Local = Strong</span>',
-        subtitle: '本当の独立：グリッドなし。許可なし。',
-        description: '本当の独立を祝おう。ソーラー、Starlink、バッテリーシステムで、コミュニティがエネルギーと通信の自由を手に入れるのを助けます。独立に国境はない。',
-        cta: '🎆 独立を支援',
-        deadline: '独立記念日キャンペーン',
-        className: 'default'
-    },
-    lahaina: {
-        icon: '🕯️',
-        title: '忘れない -- <span>Global + Local = Strong</span>',
-        subtitle: 'Ohanaと共に育つ',
-        description: '8月8日を忘れない。失った人々を偲び、あらゆる場所のコミュニティのためにレジリエントなインフラを作ることで敬意を表します。石英ガラスに刻まれた名前。永遠に保存される記憶。',
-        cta: '🕯️ 記憶に敬意を',
-        deadline: '8月8日追悼',
-        className: 'lahaina'
-    },
-    petmemorial: {
-        icon: '🐾🌈',
-        title: 'ペットメモリアル -- <span>Global + Local = Strong</span>',
-        subtitle: '彼らは去っていない。形を変えただけ。',
-        description: 'Pearlと、すべての愛するコンパニオンの記憶に。あなたの寄付は、私たちの人生に触れたペットを偲びながら、コミュニティを支えます。石英ガラスに刻まれた足跡、永遠に。',
-        cta: '🐾 記憶に敬意を',
-        deadline: 'ペットメモリアル月間：9月',
-        className: ''
-    },
-    thanksgiving: {
-        icon: '🦃🙏',
-        title: '感謝祭 -- <span>Global + Local = Strong</span>',
-        subtitle: 'あったものに感謝し、来るものを作る',
-        description: 'この感謝祭、感謝を前に贈ろう。農場、寺院、家族にオフグリッドインフラを届けます。行動する感謝 -- 私たちのOhanaからあなたのOhanaへ。',
-        cta: '🙏 感謝を前に贈る',
-        deadline: '感謝祭キャンペーン',
-        className: 'default'
-    },
-    default: {
-        icon: '⚡🔋',
-        title: 'オフグリッドインフラ -- <span>Global + Local = Strong</span>',
-        subtitle: 'Ohanaと共に育つ',
-        description: 'あなたの寄付で、農場、寺院、教会、コミュニティにオフグリッド電源・通信・緊急インフラを届けます。マウイでも、日本でも、Ohanaが育つ場所ならどこでも。',
-        cta: '⚡ PayPalで寄付する',
-        deadline: '',
-        className: 'default'
-    }
-};
-
-// Determine current campaign based on date
-function getCurrentCampaign() {
-    const today = new Date();
-    const month = today.getMonth() + 1;
-    const day = today.getDate();
-
-    if (month === 12 && day >= 1 && day <= 25) return 'christmas';
-    if ((month === 12 && day >= 26) || (month === 1 && day <= 15)) return 'newyear';
-    if ((month === 1 && day >= 16) || month === 2 || month === 3) return 'whale';
-    if (month === 5 && day >= 1 && day <= 14) return 'mothersday';
-    if (month === 6 && day >= 1 && day <= 21) return 'fathersday';
-    if ((month === 6 && day >= 22) || (month === 7 && day <= 7)) return 'independence';
-    if (month === 8 && day >= 1 && day <= 15) return 'lahaina';
-    if (month === 9) return 'petmemorial';
-    if (month === 11 && day >= 15 && day <= 30) return 'thanksgiving';
-    return 'default';
-}
-
-// Apply campaign to page
-function applyCampaign() {
-    const campaignKey = getCurrentCampaign();
-    const campaign = campaigns[campaignKey];
-    
-    const section = document.querySelector('.campaign-section');
-    const icon = document.getElementById('campaignIcon');
-    const title = document.getElementById('campaignTitle');
-    const subtitle = document.getElementById('campaignSubtitle');
-    const description = document.getElementById('campaignDescription');
-    const cta = document.getElementById('campaignCta');
-    const deadline = document.getElementById('campaignDeadline');
-    
-    section.className = 'campaign-section ' + campaign.className;
-    icon.textContent = campaign.icon;
-    title.innerHTML = campaign.title;
-    subtitle.textContent = campaign.subtitle;
-    description.textContent = campaign.description;
-    cta.textContent = campaign.cta;
-    deadline.textContent = campaign.deadline;
-}
-
-document.addEventListener('DOMContentLoaded', applyCampaign);
+const campaigns={christmas:{icon:'🎄🎅',title:'クリスマス寄付 -- <span>Global + Local = Strong</span>',subtitle:'Ohanaと共に育つ',description:'このクリスマス、「自立」というギフトを届けませんか。あなたの寄付で、農場、寺院、コミュニティにオフグリッド電源・通信インフラを届けます。マウイでも、日本でも、Ohanaが育つ場所ならどこでも。',cta:'🎁 PayPalで寄付する',deadline:'クリスマスキャンペーン：12月25日まで',className:''},newyear:{icon:'🌅✨',title:'新年、新しい力 -- <span>Global + Local = Strong</span>',subtitle:'新しい章が始まる',description:'新年を自立と共に始めませんか。あなたの寄付で、コミュニティが新しいスタートを切るためのオフグリッドインフラを届けます。',cta:'🌅 新年キャンペーンを支援',deadline:'新年キャンペーン：1月',className:'default'},whale:{icon:'🐋🌊',title:'ホエールシーズン -- <span>Global + Local = Strong</span>',subtitle:'彼らは毎年戻ってくる',description:'クジラがハワイの海に戻るこの季節、世界中のコミュニティのためにレジリエントなインフラを作り続けます。',cta:'🐋 ホエールシーズンを支援',deadline:'ホエールシーズン：2月〜3月',className:'default'},lahaina:{icon:'🕯️',title:'忘れない -- <span>Global + Local = Strong</span>',subtitle:'Ohanaと共に育つ',description:'8月8日を忘れない。失った人々を偲び、世界中のコミュニティのためにレジリエントなインフラを構築します。',cta:'🕯️ 記憶を刻む',deadline:'8月8日追悼',className:'lahaina'},default:{icon:'⚡🔋',title:'オフグリッドインフラ -- <span>Global + Local = Strong</span>',subtitle:'Ohanaと共に育つ',description:'農場、寺院、教会、コミュニティにオフグリッド電源・通信・緊急インフラを届けます。マウイでも、日本でも。',cta:'⚡ PayPalで寄付する',deadline:'',className:'default'}};
+function getCurrentCampaign(){const t=new Date(),m=t.getMonth()+1,d=t.getDate();if(m===12&&d>=1&&d<=25)return'christmas';if((m===12&&d>=26)||(m===1&&d<=15))return'newyear';if((m===1&&d>=16)||m===2||m===3)return'whale';if(m===8&&d>=1&&d<=15)return'lahaina';return'default';}
+function applyCampaign(){const c=campaigns[getCurrentCampaign()];document.getElementById('campaignIcon').textContent=c.icon;document.getElementById('campaignTitle').innerHTML=c.title;document.getElementById('campaignSubtitle').textContent=c.subtitle;document.getElementById('campaignDescription').textContent=c.description;document.getElementById('campaignCta').textContent=c.cta;document.getElementById('campaignDeadline').textContent=c.deadline;document.querySelector('.campaign-section').className='campaign-section '+c.className;}
+document.addEventListener('DOMContentLoaded',applyCampaign);
 </script>
-
-<section style="text-align: center; padding: 4rem 2rem; background: var(--color-bg);">
-    <h3 style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 400; margin-bottom: 1rem; color: var(--color-text);">学びながら、進化しています。</h3>
-    <p style="color: var(--color-text-muted); max-width: 500px; margin: 0 auto;">まだ完璧ではありません。<br>でも、より届くように、変わり続けています。<br>ご意見、いつでもお待ちしています。</p>
-</section>
-
 <section class="quick-packages" id="packages">
     <p class="section-label">サービス一覧</p>
     <h2>レーザー刻印メモリアル</h2>
@@ -433,49 +220,23 @@ document.addEventListener('DOMContentLoaded', applyCampaign);
     </div>
     <div class="quick-extras">
         <div class="quick-extra-item"><h5>🏠 Ohana Home Japan</h5><p><strong>初回1週間無料</strong> -- 東京近郊＆田舎の家に滞在</p></div>
-        <div class="quick-extra-item"><h5>⚡ オフグリッドインフラ</h5><p>🏠 ホーム: 評価 $0 | 構築 $500/日<br>🚗 モバイル: 導入 $1,000 | 月額 $160</p></div>
-        <div class="quick-extra-item"><h5>✨ パトロンになる</h5><p>$100,000 -- 石英ガラスに永遠に名を刻む</p></div>
+        <div class="quick-extra-item"><h5>⚡ オフグリッドインフラ</h5><p>🎒 モバイルキット完成: Starlink + Jackery 290 = 約6kg<br>🏠 ホーム: 評価 $0 | 構築 $500/日</p></div>
     </div>
     <div class="cta-buttons">
         <a href="Catalog-ja.pdf" class="cta-primary">カタログを見る</a>
         <a href="https://calendly.com/pearlmemorial/pearlmemorialsession" class="cta-secondary">相談を予約</a>
     </div>
 </section>
-
-<section class="services-section">
-    <div style="max-width: 1100px; margin: 0 auto; text-align: center;">
-        <p class="section-label">サービス</p>
-        <h2>届ける方法</h2>
-        <div class="services-grid">
-            <div class="service-card"><div class="service-icon">🤝</div><h4>サービスの流れ</h4><p><strong>Moment & Memory</strong> -- 私たちが伺います。ビーチでも、カフェでも、どこでも。</p><p><strong>Legacy & Eternal</strong> -- より深い体験を。工房へお越しいただくか、日本への旅を。</p></div>
-            <div class="service-card"><div class="service-icon">⚡</div><h4>オフグリッドインフラ</h4><p>ソーラーシステム、衛星インターネット、電力の自立。</p><p><strong>モバイルStarlink Mini</strong>でどこでも接続。</p></div>
-            <div class="service-card"><div class="service-icon">🧼</div><h4>手作り石鹸</h4><p>オフグリッドで作った石鹸。あなたへのギフト。</p><p><strong>一緒に作りませんか？</strong><br>糸（5歳）がお手伝いします！</p></div>
-        </div>
-    </div>
-</section>
-
 <section class="core-message">
     <p class="section-label">使命</p>
     <h2><span class="highlight">「存在していいよ」</span>を<br>必要な人に届ける</h2>
-    <p style="max-width: 700px; margin: 0 auto;">言葉だけではない。刻まれた記憶、災害に耐える記録、既存システムに依存しなくていいインフラ。形にして届ける。</p>
+    <p style="max-width:650px;margin:0 auto;">言葉だけではない。刻まれた記憶、災害に耐える記録、既存システムに依存しなくていいインフラ。形にして届ける。</p>
     <div class="core-pillars">
-        <div class="pillar"><div class="pillar-icon">✦</div><h4>刻む</h4><p class="pillar-subtitle">存在の証明</p><p>「あなたはここにいた。確かに存在した。人生には意味があった。」</p></div>
-        <div class="pillar"><div class="pillar-icon">🛡</div><h4>守る</h4><p class="pillar-subtitle">災害耐性メモリー</p><p>石英ガラス。QRアーカイブ。永遠のための多層バックアップ。</p></div>
+        <div class="pillar"><div class="pillar-icon">✦</div><h4>刻む</h4><p class="pillar-subtitle">存在の証明</p><p>「あなたはここにいた。確かに存在した。」</p></div>
+        <div class="pillar"><div class="pillar-icon">🛡</div><h4>守る</h4><p class="pillar-subtitle">災害耐性メモリー</p><p>石英ガラス。QRアーカイブ。多層バックアップ。</p></div>
         <div class="pillar"><div class="pillar-icon">⚡</div><h4>支える</h4><p class="pillar-subtitle">オフグリッド自立</p><p>既存システムの許可がなくても、存在できる。</p></div>
     </div>
 </section>
-
-<section class="why-section">
-    <div class="why-visual"><div class="void-circle"></div></div>
-    <div class="why-content">
-        <p class="section-label">なぜ刻むのか</p>
-        <h2>出生時間すら不明瞭な境遇から</h2>
-        <p>創業者の卓也は、自分自身の「始まり」が刻まれていない境遇で育った。生まれた時間が曖昧。正確な記録がない。</p>
-        <div class="story-block"><p>自分の存在が刻まれていないとき、こう問い続けることになる。<br>「ここにいていいのか？」</p></div>
-        <p>だからこそ、誰かの存在を、確かに刻みたい。<br><strong>「あなたはここにいた。確かに存在した。人生には意味があった。」</strong></p>
-    </div>
-</section>
-
 <section class="offgrid-section">
     <div class="offgrid-content">
         <p class="section-label">自立</p>
@@ -485,47 +246,40 @@ document.addEventListener('DOMContentLoaded', applyCampaign);
             <div class="independence-item"><h4>通信会社がなくても</h4><p>Starlink衛星通信。どこでも繋がれる。</p></div>
             <div class="independence-item"><h4>誰かの許可がなくても</h4><p>あなたの存在に、承認は必要ない。</p></div>
         </div>
-        <p style="text-align: center; margin-top: 4rem; max-width: 700px; margin-left: auto; margin-right: auto;">3日で完全なオフグリッド生活環境を構築した。<strong>自立が可能であることの証明</strong>だ。</p>
     </div>
 </section>
-
 <section class="pearl-section">
     <div class="pearl-content">
         <div class="pearl-image">🐕</div>
         <p class="section-label">Pearlの物語</p>
         <h2>Pearlの記憶に捧げて</h2>
         <p class="pearl-dates">2007年 – 2025年</p>
-        <div class="pearl-story-text">
-            <p>18年間、トイプードルのPearlは家族の一員として共に過ごした。2025年1月、Pearlは静かに旅立った。</p>
-            <div class="pearl-highlight"><p>Pearlと一緒に、どこへでも行ける。生前見ることのなかった海を、見せてあげられる。</p></div>
-            <p>移動できるお墓を作ったことで、私たちは自由を取り戻した。このプロジェクトは彼の名前を冠している。<strong>Pearl Memorial。</strong></p>
-        </div>
+        <p>18年間、家族だったPearl。移動できるメモリアルを作ったことで、私たちは自由を取り戻した。</p>
+        <div class="pearl-highlight"><p>Pearlと一緒に、どこへでも行ける。生前見ることのなかった海を、見せてあげられる。</p></div>
+        <p>このプロジェクトは彼の名前を冠している。<strong>Pearl Memorial。</strong></p>
     </div>
 </section>
-
 <section class="family-section">
     <div class="family-intro">
         <p class="section-label">Off-grid 佐藤家</p>
         <h2>家族3人</h2>
-        <p>マウイと日本を行き来しながら、行く先々でレジリエントなコミュニティを作る。</p>
+        <p>マウイと日本を拠点に。行く先々でレジリエントなコミュニティを築く。</p>
     </div>
     <div class="family-grid">
-        <div class="family-member"><h4>卓也</h4><p class="family-role">インフラ & 彫刻 & 石鹸</p><p>富士通、ベンチャーCTO、デロイトを経て、災害復旧とオフグリッドに注力。</p></div>
-        <div class="family-member"><h4>美那</h4><p class="family-role">マーケティング & クラフト</p><p>ペットケア18年、レジンアート、ドライフラワー保存。</p></div>
-        <div class="family-member"><h4>糸</h4><p class="family-role">5歳 • 石鹸作りヘルパー</p><p>探検家。夢想家。自然と動物が大好き。</p></div>
+        <div class="family-member"><h4>卓也</h4><p class="family-role">インフラ & 刻印造成</p><p>災害復旧とオフグリッドに注力。</p></div>
+        <div class="family-member"><h4>美那</h4><p class="family-role">マーケティング & クラフト</p><p>ペットケア18年、レジンアート。</p></div>
+        <div class="family-member"><h4>糸</h4><p class="family-role">5歳 • 石鹸作りヘルパー</p><p>探検家。夢想家。</p></div>
     </div>
 </section>
-
 <section class="gift-section">
     <div class="gift-content">
         <p class="section-label">ギフトエコノミー</p>
         <h2>まず、与える</h2>
-        <p>手作り石鹸を配る。無料WiFiを提供する。見返りを期待せずに与えることで、信頼が生まれる。</p>
-        <div class="gift-stat"><div class="gift-stat-value">$3,000+</div><p class="gift-stat-label">数ドルの手作り石鹸から生まれた価値</p></div>
+        <p>見返りを期待せずに与えることで、信頼が生まれる。</p>
+        <div class="gift-stat"><div class="gift-stat-value">$3,000+</div><p class="gift-stat-label">手作り石鹸から生まれた価値</p></div>
     </div>
 </section>
-
-<section class="cta-section" id="order">
+<section class="cta-section">
     <p class="section-label">始める</p>
     <h2>記憶を刻む</h2>
     <p class="cta-subtitle">あなたとの出会いも、刻まれるべき記憶です。</p>
@@ -534,19 +288,17 @@ document.addEventListener('DOMContentLoaded', applyCampaign);
         <a href="https://calendly.com/pearlmemorial/pearlmemorialsession" class="cta-secondary">カスタムオーダー</a>
     </div>
 </section>
-
 <footer>
     <p class="footer-memorial">Pearl（2007–2025）の記憶に捧げて 🐕</p>
     <div class="footer-links">
         <a href="https://calendly.com/pearlmemorial/pearlmemorialsession">お問い合わせ</a>
         <a href="https://www.instagram.com/pearl.memorial/">Instagram</a>
-        <a href="Catalog-ja.pdf">カタログ</a>
     </div>
     <div class="footer-payment">
         <a href="https://pearl.memorial">Shop (Square)</a>
         <a href="https://www.paypal.com/ncp/payment/SVPS6J8WXQU76">PayPal</a>
     </div>
-    <p class="footer-location">Mahalo 🌺 Off-grid 佐藤家 · Maui ⇄ Japan</p>
+    <p class="footer-location">Mahalo 🌺 Off-grid 佐藤家 · マウイ ⇄ 日本</p>
 </footer>
 </body>
 </html>

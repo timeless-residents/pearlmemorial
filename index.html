@@ -6,486 +6,235 @@
     <title>Timeless Eternal Hope | You Are Allowed to Exist</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --color-bg: #0a0a0a;
-            --color-bg-subtle: #111111;
-            --color-text: #f5f0e8;
-            --color-text-muted: #8a8578;
-            --color-accent: #c9a962;
-            --color-accent-glow: rgba(201, 169, 98, 0.15);
-            --color-warm: #e8d5b7;
-            --color-hope: #7eb8c9;
-            --color-campaign: #c41e3a;
-            --color-campaign-glow: rgba(196, 30, 58, 0.2);
-            --font-display: 'Cormorant Garamond', serif;
-            --font-body: 'Zen Kaku Gothic New', sans-serif;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { font-family: var(--font-body); font-weight: 300; background: var(--color-bg); color: var(--color-text); line-height: 1.8; font-size: 16px; overflow-x: hidden; }
-        .lang-switch { position: fixed; top: 2rem; right: 2rem; z-index: 100; display: flex; gap: 0.5rem; background: rgba(10, 10, 10, 0.8); backdrop-filter: blur(10px); padding: 0.5rem; border-radius: 2rem; border: 1px solid rgba(201, 169, 98, 0.2); }
-        .lang-switch a { padding: 0.5rem 1rem; color: var(--color-text-muted); text-decoration: none; font-size: 0.8rem; border-radius: 1.5rem; transition: all 0.3s ease; }
-        .lang-switch a.active { background: var(--color-accent); color: var(--color-bg); }
-        .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; padding: 2rem; background: radial-gradient(ellipse 60% 40% at 50% 0%, rgba(201, 169, 98, 0.08) 0%, transparent 60%), radial-gradient(ellipse 80% 60% at 50% 100%, rgba(126, 184, 201, 0.05) 0%, transparent 50%); }
-        .hero-content { max-width: 900px; position: relative; z-index: 1; }
-        .hero-tagline { font-size: 0.75rem; letter-spacing: 0.4em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 2rem; opacity: 0; animation: fadeUp 1s ease forwards 0.3s; }
-        .hero h1 { font-family: var(--font-display); font-size: clamp(3rem, 8vw, 6rem); font-weight: 300; line-height: 1.1; margin-bottom: 1.5rem; opacity: 0; animation: fadeUp 1s ease forwards 0.5s; }
-        .hero h1 em { font-style: italic; color: var(--color-hope); }
-        .hero-subtitle { font-family: var(--font-display); font-size: clamp(1.2rem, 3vw, 1.8rem); font-weight: 300; color: var(--color-text-muted); margin-bottom: 3rem; font-style: italic; opacity: 0; animation: fadeUp 1s ease forwards 0.7s; }
-        .hero-cta { display: inline-block; padding: 1.2rem 3rem; border: 1px solid var(--color-accent); color: var(--color-accent); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase; transition: all 0.4s ease; opacity: 0; animation: fadeUp 1s ease forwards 0.9s; }
-        .hero-cta:hover { background: var(--color-accent); color: var(--color-bg); box-shadow: 0 0 40px var(--color-accent-glow); }
-        .scroll-indicator { position: absolute; bottom: 3rem; left: 50%; transform: translateX(-50%); font-size: 0.7rem; letter-spacing: 0.3em; color: var(--color-text-muted); opacity: 0; animation: fadeUp 1s ease forwards 1.2s, float 3s ease-in-out infinite 2s; }
-        
-        /* Campaign Section */
-        .campaign-section { padding: 4rem 2rem; background: linear-gradient(180deg, var(--color-bg) 0%, rgba(196, 30, 58, 0.08) 50%, var(--color-bg) 100%); text-align: center; border-top: 2px solid var(--color-campaign); border-bottom: 2px solid var(--color-campaign); }
-        .campaign-section.default { background: linear-gradient(180deg, var(--color-bg) 0%, rgba(126, 184, 201, 0.08) 50%, var(--color-bg) 100%); border-color: var(--color-hope); }
-        .campaign-section.lahaina { background: linear-gradient(180deg, var(--color-bg) 0%, rgba(201, 169, 98, 0.08) 50%, var(--color-bg) 100%); border-color: var(--color-accent); }
-        .campaign-content { max-width: 900px; margin: 0 auto; }
-        .campaign-icon { font-size: 3rem; margin-bottom: 1rem; }
-        .campaign-section h2 { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 300; margin-bottom: 1rem; color: var(--color-text); }
-        .campaign-section h2 span { color: var(--color-campaign); }
-        .campaign-section.default h2 span { color: var(--color-hope); }
-        .campaign-section.lahaina h2 span { color: var(--color-accent); }
-        .campaign-subtitle { font-family: var(--font-display); font-size: 1.1rem; color: var(--color-text-muted); margin-bottom: 1.5rem; font-style: italic; }
-        .campaign-description { color: var(--color-text-muted); margin-bottom: 1.5rem; max-width: 650px; margin-left: auto; margin-right: auto; }
-        .campaign-items { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
-        .campaign-item { padding: 0.8rem 1.2rem; background: rgba(196, 30, 58, 0.1); border: 1px solid rgba(196, 30, 58, 0.3); border-radius: 0.5rem; }
-        .campaign-section.default .campaign-item { background: rgba(126, 184, 201, 0.1); border-color: rgba(126, 184, 201, 0.3); }
-        .campaign-section.lahaina .campaign-item { background: rgba(201, 169, 98, 0.1); border-color: rgba(201, 169, 98, 0.3); }
-        .campaign-item-icon { font-size: 1.5rem; margin-bottom: 0.2rem; }
-        .campaign-item-label { font-size: 0.8rem; color: var(--color-text-muted); }
-        .campaign-photos { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin: 1.5rem 0; }
-        .campaign-photo { flex: 1; min-width: 250px; max-width: 380px; }
-        .campaign-photo img { width: 100%; border-radius: 0.5rem; border: 1px solid rgba(196, 30, 58, 0.3); }
-        .campaign-section.default .campaign-photo img { border-color: rgba(126, 184, 201, 0.3); }
-        .campaign-section.lahaina .campaign-photo img { border-color: rgba(201, 169, 98, 0.3); }
-        .campaign-photo p { font-size: 0.75rem; color: var(--color-text-muted); margin-top: 0.5rem; }
-        .campaign-benefits { margin: 1.5rem 0; }
-        .campaign-benefits p { font-size: 0.9rem; margin-bottom: 0.5rem; max-width: 550px; margin-left: auto; margin-right: auto; }
-        .campaign-cta { display: inline-block; padding: 1rem 2.5rem; background: var(--color-campaign); color: white; text-decoration: none; font-size: 0.9rem; letter-spacing: 0.1em; transition: all 0.4s ease; border-radius: 0.3rem; margin-top: 1rem; }
-        .campaign-section.default .campaign-cta { background: var(--color-hope); }
-        .campaign-section.lahaina .campaign-cta { background: var(--color-accent); color: var(--color-bg); }
-        .campaign-cta:hover { box-shadow: 0 0 30px var(--color-campaign-glow); transform: translateY(-2px); }
-        .campaign-deadline { font-size: 0.8rem; color: var(--color-text-muted); margin-top: 1rem; }
-        
-        .quick-packages { padding: 6rem 2rem; background: var(--color-bg-subtle); text-align: center; }
-        .quick-packages h2 { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3rem); font-weight: 300; margin-bottom: 1rem; }
-        .quick-packages-subtitle { color: var(--color-text-muted); margin-bottom: 3rem; font-size: 1rem; }
-        .packages-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto 3rem; }
-        .package-card { padding: 2rem 1.5rem; background: var(--color-bg); border: 1px solid rgba(201, 169, 98, 0.15); transition: all 0.4s ease; }
-        .package-card:hover { border-color: rgba(201, 169, 98, 0.4); transform: translateY(-5px); }
-        .package-icon { font-size: 2rem; margin-bottom: 1rem; }
-        .package-card h4 { font-family: var(--font-display); font-size: 1.3rem; margin-bottom: 0.5rem; }
-        .package-price { font-size: 1.1rem; color: var(--color-accent); font-weight: 400; margin-bottom: 0.5rem; }
-        .package-desc { font-size: 0.8rem; color: var(--color-text-muted); margin-bottom: 0; }
-        .quick-extras { display: flex; justify-content: center; gap: 3rem; margin-top: 2rem; flex-wrap: wrap; }
-        .quick-extra-item { text-align: center; max-width: 350px; }
-        .quick-extra-item h5 { font-family: var(--font-display); font-size: 1.1rem; color: var(--color-hope); margin-bottom: 0.3rem; }
-        .quick-extra-item p { font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 0; }
-        .quick-packages .cta-buttons { margin-top: 3rem; }
-        section { padding: 8rem 2rem; max-width: 1100px; margin: 0 auto; }
-        .section-label { font-size: 0.7rem; letter-spacing: 0.4em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 1.5rem; }
-        h2 { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 300; margin-bottom: 2rem; line-height: 1.2; }
-        p { color: var(--color-text-muted); max-width: 65ch; margin-bottom: 1.5rem; }
-        .core-message { text-align: center; padding: 10rem 2rem; background: radial-gradient(ellipse 50% 50% at 50% 50%, rgba(126, 184, 201, 0.03) 0%, transparent 70%); }
-        .core-message h2 { font-size: clamp(2.5rem, 6vw, 4.5rem); margin-bottom: 3rem; }
-        .core-message .highlight { color: var(--color-hope); font-style: italic; }
-        .core-pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; margin-top: 5rem; max-width: 1000px; margin-left: auto; margin-right: auto; }
-        .pillar { padding: 2.5rem; background: linear-gradient(180deg, var(--color-bg-subtle) 0%, transparent 100%); border: 1px solid rgba(201, 169, 98, 0.1); text-align: center; transition: all 0.4s ease; }
-        .pillar:hover { border-color: rgba(201, 169, 98, 0.3); transform: translateY(-5px); }
-        .pillar-icon { font-size: 2.5rem; margin-bottom: 1.5rem; }
-        .pillar h4 { font-family: var(--font-display); font-size: 1.3rem; font-weight: 400; margin-bottom: 0.5rem; color: var(--color-text); }
-        .pillar-subtitle { font-size: 0.75rem; letter-spacing: 0.15em; color: var(--color-accent); margin-bottom: 1rem; }
-        .pillar p { font-size: 0.9rem; margin-bottom: 0; }
-        .why-section { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
-        .why-visual { position: relative; height: 500px; }
-        .void-circle { position: absolute; width: 300px; height: 300px; left: 50%; top: 50%; transform: translate(-50%, -50%); border-radius: 50%; background: radial-gradient(circle at center, transparent 0%, transparent 40%, rgba(201, 169, 98, 0.1) 60%, rgba(201, 169, 98, 0.2) 100%); animation: pulse 4s ease-in-out infinite; }
-        .story-block { padding: 3rem; background: var(--color-bg-subtle); border-left: 2px solid var(--color-accent); margin: 3rem 0; }
-        .story-block p { font-family: var(--font-display); font-size: 1.2rem; font-style: italic; color: var(--color-warm); line-height: 1.7; }
-        .offgrid-section { background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-subtle) 30%, var(--color-bg-subtle) 70%, var(--color-bg) 100%); padding: 10rem 2rem; }
-        .offgrid-content { max-width: 1100px; margin: 0 auto; }
-        .offgrid-statement { font-family: var(--font-display); font-size: clamp(1.5rem, 4vw, 2.5rem); font-weight: 300; text-align: center; margin-bottom: 5rem; line-height: 1.5; }
-        .offgrid-statement em { color: var(--color-hope); font-style: italic; }
-        .independence-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-        .independence-item { padding: 2rem; border: 1px solid rgba(126, 184, 201, 0.2); background: rgba(126, 184, 201, 0.02); text-align: center; transition: all 0.4s ease; }
-        .independence-item:hover { border-color: rgba(126, 184, 201, 0.4); background: rgba(126, 184, 201, 0.05); }
-        .independence-item h4 { font-family: var(--font-display); font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--color-hope); }
-        .independence-item p { font-size: 0.85rem; margin-bottom: 0; }
-        .pearl-section { padding: 10rem 2rem; }
-        .pearl-content { max-width: 800px; margin: 0 auto; text-align: center; }
-        .pearl-image { width: 120px; height: 120px; margin: 0 auto 3rem; border-radius: 50%; background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-warm) 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem; box-shadow: 0 0 60px var(--color-accent-glow); }
-        .pearl-content h2 { margin-bottom: 1rem; }
-        .pearl-dates { font-family: var(--font-display); font-style: italic; color: var(--color-accent); margin-bottom: 3rem; }
-        .pearl-story-text { text-align: left; max-width: 700px; margin: 0 auto; }
-        .pearl-highlight { padding: 2rem; background: var(--color-bg-subtle); border-left: 2px solid var(--color-hope); margin: 2rem 0; }
-        .pearl-highlight p { font-family: var(--font-display); font-size: 1.2rem; font-style: italic; color: var(--color-hope); margin-bottom: 0; }
-        .services-section { padding: 8rem 2rem; background: var(--color-bg-subtle); }
-        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 4rem; max-width: 1100px; margin-left: auto; margin-right: auto; }
-        .service-card { padding: 2.5rem; border: 1px solid rgba(201, 169, 98, 0.1); background: var(--color-bg); transition: all 0.4s ease; }
-        .service-card:hover { border-color: rgba(201, 169, 98, 0.3); }
-        .service-icon { font-size: 2rem; margin-bottom: 1.5rem; }
-        .service-card h4 { font-family: var(--font-display); font-size: 1.3rem; margin-bottom: 1rem; }
-        .family-section { padding: 8rem 2rem; }
-        .family-intro { text-align: center; max-width: 700px; margin: 0 auto 4rem; }
-        .family-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 900px; margin: 0 auto; }
-        .family-member { text-align: center; padding: 2rem; }
-        .family-member h4 { font-family: var(--font-display); font-size: 1.4rem; margin-bottom: 0.3rem; }
-        .family-role { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 1rem; }
-        .gift-section { padding: 8rem 2rem; background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-subtle) 50%, var(--color-bg) 100%); }
-        .gift-content { max-width: 900px; margin: 0 auto; text-align: center; }
-        .gift-stat { margin: 4rem 0; padding: 3rem; background: var(--color-bg); border: 1px solid rgba(201, 169, 98, 0.2); }
-        .gift-stat-value { font-family: var(--font-display); font-size: 4rem; color: var(--color-accent); }
-        .gift-stat-label { font-size: 0.9rem; color: var(--color-text-muted); }
-        .cta-section { padding: 10rem 2rem; text-align: center; background: radial-gradient(ellipse 80% 50% at 50% 100%, var(--color-accent-glow) 0%, transparent 50%); }
-        .cta-section h2 { margin-bottom: 1rem; }
-        .cta-subtitle { font-family: var(--font-display); font-size: 1.2rem; font-style: italic; color: var(--color-text-muted); margin-bottom: 3rem; }
-        .cta-buttons { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; }
-        .cta-primary { padding: 1.2rem 3rem; background: var(--color-accent); color: var(--color-bg); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.15em; text-transform: uppercase; transition: all 0.4s ease; }
-        .cta-primary:hover { box-shadow: 0 0 50px var(--color-accent-glow); transform: translateY(-2px); }
-        .cta-secondary { padding: 1.2rem 3rem; background: transparent; border: 1px solid var(--color-text-muted); color: var(--color-text); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.15em; text-transform: uppercase; transition: all 0.4s ease; }
-        .cta-secondary:hover { border-color: var(--color-text); }
-        footer { padding: 4rem 2rem; text-align: center; border-top: 1px solid rgba(201, 169, 98, 0.1); }
-        .footer-memorial { font-family: var(--font-display); font-style: italic; color: var(--color-text-muted); margin-bottom: 2rem; }
-        .footer-links { display: flex; gap: 2rem; justify-content: center; margin-bottom: 2rem; }
-        .footer-links a { color: var(--color-text-muted); text-decoration: none; font-size: 0.85rem; transition: color 0.3s ease; }
-        .footer-links a:hover { color: var(--color-accent); }
-        .footer-payment { display: flex; gap: 1.5rem; justify-content: center; margin-bottom: 2rem; flex-wrap: wrap; }
-        .footer-payment a { color: var(--color-text-muted); text-decoration: none; font-size: 0.8rem; padding: 0.5rem 1rem; border: 1px solid rgba(201, 169, 98, 0.2); transition: all 0.3s ease; }
-        .footer-payment a:hover { border-color: var(--color-accent); color: var(--color-accent); }
-        .footer-location { font-size: 0.7rem; letter-spacing: 0.2em; color: var(--color-text-muted); }
-        @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes float { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(-10px); } }
-        @keyframes pulse { 0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 1; } 50% { transform: translate(-50%, -50%) scale(1.05); opacity: 0.8; } }
-        @media (max-width: 1024px) {
-            .packages-grid, .core-pillars, .independence-grid, .services-grid { grid-template-columns: 1fr 1fr; }
-            .why-section { grid-template-columns: 1fr; gap: 4rem; }
-            .why-visual { height: 300px; }
-        }
-        @media (max-width: 768px) {
-            section { padding: 5rem 1.5rem; }
-            .packages-grid, .family-grid, .core-pillars, .independence-grid, .services-grid { grid-template-columns: 1fr; }
-            .cta-buttons { flex-direction: column; align-items: center; }
-            .quick-extras { flex-direction: column; gap: 1.5rem; }
-            .lang-switch { top: 1rem; right: 1rem; }
-            .campaign-items { flex-direction: column; gap: 0.8rem; }
-            .campaign-photos { flex-direction: column; }
-        }
-        @media print {
-            * { background: transparent !important; }
-            body { background: white !important; color: #1a1a1a !important; font-size: 10pt; line-height: 1.4; }
-            .lang-switch, .scroll-indicator, .hero-cta, .cta-buttons, .cta-section, .void-circle, .why-visual { display: none !important; }
-            .hero { min-height: auto !important; padding: 1rem !important; background: none !important; }
-            .hero h1 { opacity: 1 !important; animation: none !important; color: #1a1a1a !important; font-size: 24pt !important; }
-            .hero h1 em { color: #2a6a7a !important; }
-            .hero-tagline, .hero-subtitle { opacity: 1 !important; animation: none !important; color: #444 !important; }
-            section { padding: 1rem 0.5rem !important; max-width: 100% !important; page-break-inside: avoid; }
-            .quick-packages, .services-section, .offgrid-section, .gift-section, .core-message { background: none !important; padding: 1rem 0.5rem !important; }
-            h2, h3, h4, .pillar h4, .independence-item h4 { color: #1a1a1a !important; }
-            p, li, .package-desc { color: #333 !important; }
-            .section-label, .pillar-subtitle { color: #666 !important; }
-            .highlight, .pearl-highlight p { color: #2a6a7a !important; }
-            .packages-grid { grid-template-columns: repeat(4, 1fr) !important; gap: 0.5rem !important; }
-            .package-card, .pillar, .independence-item, .service-card { background: none !important; border: 1px solid #ccc !important; padding: 0.5rem !important; }
-            .package-price { color: #1a1a1a !important; font-weight: 600 !important; }
-            .core-pillars, .independence-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 0.5rem !important; }
-            .services-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 0.5rem !important; }
-            .family-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 0.5rem !important; }
-            .pearl-image { background: #eee !important; box-shadow: none !important; border: 1px solid #ccc !important; width: 60px !important; height: 60px !important; font-size: 1.5rem !important; margin-bottom: 1rem !important; }
-            .pearl-dates, .family-role { color: #666 !important; }
-            .pearl-highlight, .story-block { background: none !important; border-left: 2px solid #666 !important; padding: 0.5rem 1rem !important; }
-            .story-block p { color: #333 !important; }
-            .gift-stat { background: none !important; border: 1px solid #ccc !important; padding: 1rem !important; }
-            .gift-stat-value { color: #1a1a1a !important; font-size: 2rem !important; }
-            .why-section { grid-template-columns: 1fr !important; }
-            footer { border-top: 1px solid #ccc !important; padding: 0.5rem !important; }
-            .footer-memorial, .footer-location { color: #666 !important; font-size: 9pt !important; }
-            .footer-payment { display: none !important; }
-            .quick-extra-item h5 { color: #1a1a1a !important; }
-            .offgrid-statement em { color: #2a6a7a !important; }
-            h2 { font-size: 14pt !important; margin-bottom: 0.5rem !important; }
-            p { font-size: 9pt !important; margin-bottom: 0.5rem !important; }
-            .campaign-section { background: none !important; border: 2px solid #c41e3a !important; padding: 1rem !important; page-break-inside: avoid; }
-            .campaign-section h2 span { color: #c41e3a !important; }
-            .campaign-item { background: none !important; border: 1px solid #c41e3a !important; }
-            .campaign-cta { background: none !important; border: 2px solid #c41e3a !important; color: #c41e3a !important; }
-            .campaign-photo img { max-width: 200px !important; }
-            .campaign-photos { gap: 0.5rem !important; }
-        }
+        :root{--color-bg:#0a0a0a;--color-bg-subtle:#111;--color-text:#f5f0e8;--color-text-muted:#8a8578;--color-accent:#c9a962;--color-accent-glow:rgba(201,169,98,0.15);--color-warm:#e8d5b7;--color-hope:#7eb8c9;--color-campaign:#c41e3a;--font-display:'Cormorant Garamond',serif;--font-body:'Zen Kaku Gothic New',sans-serif}
+        *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:var(--font-body);font-weight:300;background:var(--color-bg);color:var(--color-text);line-height:1.8;font-size:16px}
+        .lang-switch{position:fixed;top:2rem;right:2rem;z-index:100;display:flex;gap:.5rem;background:rgba(10,10,10,.8);backdrop-filter:blur(10px);padding:.5rem;border-radius:2rem;border:1px solid rgba(201,169,98,.2)}
+        .lang-switch a{padding:.5rem 1rem;color:var(--color-text-muted);text-decoration:none;font-size:.8rem;border-radius:1.5rem;transition:all .3s ease}
+        .lang-switch a.active{background:var(--color-accent);color:var(--color-bg)}
+        .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative;padding:2rem;background:radial-gradient(ellipse 60% 40% at 50% 0%,rgba(201,169,98,.08) 0%,transparent 60%)}
+        .hero-content{max-width:900px}.hero-tagline{font-size:.75rem;letter-spacing:.4em;color:var(--color-accent);margin-bottom:2rem;opacity:0;animation:fadeUp 1s ease forwards .3s}
+        .hero h1{font-family:var(--font-display);font-size:clamp(3rem,8vw,6rem);font-weight:300;line-height:1.1;margin-bottom:1.5rem;opacity:0;animation:fadeUp 1s ease forwards .5s}
+        .hero h1 em{font-style:italic;color:var(--color-hope)}
+        .hero-subtitle{font-family:var(--font-display);font-size:clamp(1.2rem,3vw,1.8rem);font-weight:300;color:var(--color-text-muted);font-style:italic;margin-bottom:3rem;opacity:0;animation:fadeUp 1s ease forwards .7s}
+        .hero-cta{display:inline-block;padding:1.2rem 3rem;border:1px solid var(--color-accent);color:var(--color-accent);text-decoration:none;font-size:.85rem;letter-spacing:.2em;text-transform:uppercase;transition:all .4s ease;opacity:0;animation:fadeUp 1s ease forwards .9s}
+        .hero-cta:hover{background:var(--color-accent);color:var(--color-bg)}
+        .scroll-indicator{position:absolute;bottom:3rem;left:50%;transform:translateX(-50%);font-size:.7rem;letter-spacing:.3em;color:var(--color-text-muted);opacity:0;animation:fadeUp 1s ease forwards 1.2s,float 3s ease-in-out infinite 2s}
+        .campaign-section{padding:4rem 2rem;background:linear-gradient(180deg,var(--color-bg) 0%,rgba(196,30,58,.08) 50%,var(--color-bg) 100%);text-align:center;border-top:2px solid var(--color-campaign);border-bottom:2px solid var(--color-campaign)}
+        .campaign-section.default{background:linear-gradient(180deg,var(--color-bg) 0%,rgba(126,184,201,.08) 50%,var(--color-bg) 100%);border-color:var(--color-hope)}
+        .campaign-section.lahaina{background:linear-gradient(180deg,var(--color-bg) 0%,rgba(201,169,98,.08) 50%,var(--color-bg) 100%);border-color:var(--color-accent)}
+        .campaign-content{max-width:1100px;margin:0 auto}.campaign-icon{font-size:3rem;margin-bottom:1rem}
+        .campaign-section h2{font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.5rem);font-weight:300;margin-bottom:1rem}
+        .campaign-section h2 span{color:var(--color-campaign)}.campaign-section.default h2 span{color:var(--color-hope)}.campaign-section.lahaina h2 span{color:var(--color-accent)}
+        .campaign-subtitle{font-family:var(--font-display);font-size:1.1rem;font-style:italic;color:var(--color-text-muted);margin-bottom:1.5rem}
+        .campaign-description{color:var(--color-text-muted);margin-bottom:2rem;max-width:700px;margin-left:auto;margin-right:auto}
+        .donation-tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:2rem 0}
+        .donation-tier{padding:1.5rem;background:rgba(10,10,10,.8);border:1px solid rgba(201,169,98,.2);border-radius:.5rem;text-align:left;transition:all .3s ease}
+        .donation-tier:hover{border-color:rgba(201,169,98,.5);transform:translateY(-3px)}
+        .donation-tier.featured{border-color:var(--color-accent);background:rgba(201,169,98,.05)}
+        .tier-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:.8rem}
+        .tier-amount{font-family:var(--font-display);font-size:1.6rem;color:var(--color-accent)}
+        .tier-badge{font-size:.65rem;padding:.2rem .5rem;background:var(--color-accent);color:var(--color-bg);border-radius:1rem}
+        .tier-title{font-family:var(--font-display);font-size:1rem;margin-bottom:.4rem}
+        .tier-equipment{font-size:.8rem;color:var(--color-hope);margin-bottom:.6rem;line-height:1.4}
+        .tier-benefits{list-style:none}.tier-benefits li{font-size:.75rem;color:var(--color-text-muted);padding:.2rem 0 .2rem 1rem;position:relative}
+        .tier-benefits li::before{content:'✓';position:absolute;left:0;color:var(--color-accent);font-size:.7rem}
+        .campaign-photos{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin:2rem 0}
+        .campaign-photo{flex:1;min-width:250px;max-width:350px}.campaign-photo img{width:100%;border-radius:.5rem;border:1px solid rgba(201,169,98,.3)}
+        .campaign-photo p{font-size:.75rem;color:var(--color-text-muted);margin-top:.5rem}
+        .rd-section{margin:2.5rem 0;padding:2rem;background:rgba(126,184,201,.05);border:1px solid rgba(126,184,201,.2);border-radius:.5rem}
+        .rd-section h4{font-family:var(--font-display);font-size:1.2rem;color:var(--color-hope);margin-bottom:.5rem;text-align:center}
+        .rd-amount{font-family:var(--font-display);font-size:2rem;color:var(--color-accent);text-align:center;margin-bottom:1.5rem}
+        .rd-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+        .rd-item{text-align:center;padding:1rem}.rd-item-icon{font-size:2rem;margin-bottom:.5rem}
+        .rd-item h5{font-family:var(--font-display);font-size:1rem;margin-bottom:.3rem}
+        .rd-item-sub{font-size:.8rem;color:var(--color-hope);margin-bottom:.5rem}
+        .rd-item p{font-size:.8rem;color:var(--color-text-muted);line-height:1.5}
+        .rd-footer{text-align:center;margin-top:1.5rem;font-size:.9rem;color:var(--color-warm)}
+        .campaign-promise{margin:2rem 0;padding:1.5rem;background:rgba(201,169,98,.05);border:1px solid rgba(201,169,98,.2);border-radius:.5rem;text-align:left}
+        .campaign-promise h4{font-family:var(--font-display);font-size:1.1rem;color:var(--color-accent);margin-bottom:.8rem}
+        .campaign-promise p{font-size:.85rem;color:var(--color-text-muted);margin-bottom:.4rem}
+        .campaign-cta{display:inline-block;padding:1rem 2.5rem;background:var(--color-campaign);color:#fff;text-decoration:none;font-size:.9rem;letter-spacing:.1em;text-transform:uppercase;transition:all .4s ease;border-radius:.3rem;margin-top:1rem}
+        .campaign-section.default .campaign-cta{background:var(--color-hope)}.campaign-section.lahaina .campaign-cta{background:var(--color-accent);color:var(--color-bg)}
+        .campaign-cta:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(0,0,0,.3)}
+        .campaign-deadline{font-size:.8rem;color:var(--color-text-muted);margin-top:1rem}
+        .quick-packages{padding:5rem 2rem;background:var(--color-bg-subtle);text-align:center}
+        .quick-packages h2{font-family:var(--font-display);font-size:clamp(2rem,5vw,3rem);font-weight:300;margin-bottom:1rem}
+        .quick-packages-subtitle{color:var(--color-text-muted);margin-bottom:2.5rem}
+        .packages-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;max-width:1000px;margin:0 auto 2rem}
+        .package-card{padding:1.5rem 1rem;background:var(--color-bg);border:1px solid rgba(201,169,98,.15);transition:all .4s ease}
+        .package-card:hover{border-color:rgba(201,169,98,.4);transform:translateY(-5px)}
+        .package-icon{font-size:1.8rem;margin-bottom:.8rem}.package-card h4{font-family:var(--font-display);font-size:1.2rem;margin-bottom:.4rem}
+        .package-price{font-size:1rem;color:var(--color-accent);margin-bottom:.3rem}.package-desc{font-size:.75rem;color:var(--color-text-muted)}
+        .quick-extras{display:flex;justify-content:center;gap:2.5rem;margin-top:2rem;flex-wrap:wrap}
+        .quick-extra-item{text-align:center;max-width:300px}.quick-extra-item h5{font-family:var(--font-display);font-size:1rem;color:var(--color-hope);margin-bottom:.3rem}
+        .quick-extra-item p{font-size:.8rem;color:var(--color-text-muted);line-height:1.5}
+        .cta-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2.5rem}
+        .cta-primary{padding:1rem 2.5rem;background:var(--color-accent);color:var(--color-bg);text-decoration:none;font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;transition:all .4s ease}
+        .cta-primary:hover{box-shadow:0 0 50px var(--color-accent-glow);transform:translateY(-2px)}
+        .cta-secondary{padding:1rem 2.5rem;background:transparent;border:1px solid var(--color-text-muted);color:var(--color-text);text-decoration:none;font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;transition:all .4s ease}
+        .cta-secondary:hover{border-color:var(--color-text)}
+        section{padding:6rem 2rem;max-width:1100px;margin:0 auto}
+        .section-label{font-size:.7rem;letter-spacing:.4em;text-transform:uppercase;color:var(--color-accent);margin-bottom:1.5rem}
+        h2{font-family:var(--font-display);font-size:clamp(2rem,5vw,3.5rem);font-weight:300;margin-bottom:1.5rem;line-height:1.2}
+        p{color:var(--color-text-muted);max-width:65ch;margin-bottom:1.5rem}
+        .core-message{text-align:center;padding:6rem 2rem}.core-message h2{font-size:clamp(2rem,6vw,4rem);margin-bottom:1.5rem}
+        .core-message .highlight{color:var(--color-hope);font-style:italic}
+        .core-pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;max-width:900px;margin-left:auto;margin-right:auto}
+        .pillar{padding:2rem 1.5rem;background:linear-gradient(180deg,var(--color-bg-subtle) 0%,transparent 100%);border:1px solid rgba(201,169,98,.1);text-align:center;transition:all .4s ease}
+        .pillar:hover{border-color:rgba(201,169,98,.3);transform:translateY(-5px)}
+        .pillar-icon{font-size:2rem;margin-bottom:1rem}.pillar h4{font-family:var(--font-display);font-size:1.2rem;margin-bottom:.3rem}
+        .pillar-subtitle{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--color-accent);margin-bottom:.6rem}.pillar p{font-size:.8rem;margin-bottom:0}
+        .offgrid-section{background:linear-gradient(180deg,var(--color-bg) 0%,var(--color-bg-subtle) 30%,var(--color-bg-subtle) 70%,var(--color-bg) 100%);padding:6rem 2rem}
+        .offgrid-content{max-width:1000px;margin:0 auto;text-align:center}
+        .offgrid-statement{font-family:var(--font-display);font-size:clamp(1.3rem,3.5vw,2rem);font-weight:300;margin-bottom:3rem;line-height:1.5}
+        .offgrid-statement em{color:var(--color-hope);font-style:italic}
+        .independence-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+        .independence-item{padding:1.5rem;border:1px solid rgba(126,184,201,.2);background:rgba(126,184,201,.02);text-align:center;transition:all .4s ease}
+        .independence-item:hover{border-color:rgba(126,184,201,.4)}
+        .independence-item h4{font-family:var(--font-display);font-size:1rem;margin-bottom:.4rem;color:var(--color-hope)}
+        .independence-item p{font-size:.8rem;margin-bottom:0}
+        .pearl-section{padding:6rem 2rem}.pearl-content{max-width:700px;margin:0 auto;text-align:center}
+        .pearl-image{width:100px;height:100px;margin:0 auto 2rem;border-radius:50%;background:linear-gradient(135deg,var(--color-accent),var(--color-warm));display:flex;align-items:center;justify-content:center;font-size:2.5rem;box-shadow:0 0 60px var(--color-accent-glow)}
+        .pearl-dates{font-family:var(--font-display);font-style:italic;color:var(--color-accent);margin-bottom:1.5rem}
+        .pearl-highlight{padding:1.5rem;background:var(--color-bg-subtle);border-left:2px solid var(--color-hope);margin:1.5rem 0;text-align:left}
+        .pearl-highlight p{font-family:var(--font-display);font-size:1rem;font-style:italic;color:var(--color-hope);margin-bottom:0}
+        .family-section{padding:5rem 2rem}.family-intro{text-align:center;max-width:600px;margin:0 auto 2.5rem}
+        .family-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:800px;margin:0 auto}
+        .family-member{text-align:center;padding:1.5rem}.family-member h4{font-family:var(--font-display);font-size:1.3rem;margin-bottom:.2rem}
+        .family-role{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--color-accent);margin-bottom:.6rem}.family-member p{font-size:.8rem}
+        .gift-section{padding:5rem 2rem;background:linear-gradient(180deg,var(--color-bg) 0%,var(--color-bg-subtle) 50%,var(--color-bg) 100%)}
+        .gift-content{max-width:700px;margin:0 auto;text-align:center}
+        .gift-stat{margin:2.5rem 0;padding:2rem;background:var(--color-bg);border:1px solid rgba(201,169,98,.2)}
+        .gift-stat-value{font-family:var(--font-display);font-size:3rem;color:var(--color-accent)}
+        .gift-stat-label{font-size:.85rem;color:var(--color-text-muted)}
+        .cta-section{padding:6rem 2rem;text-align:center}.cta-subtitle{font-family:var(--font-display);font-size:1.1rem;font-style:italic;color:var(--color-text-muted);margin-bottom:2rem}
+        footer{padding:3rem 2rem;text-align:center;border-top:1px solid rgba(201,169,98,.1)}
+        .footer-memorial{font-family:var(--font-display);font-style:italic;color:var(--color-text-muted);margin-bottom:1.5rem;font-size:.9rem}
+        .footer-links{display:flex;gap:1.5rem;justify-content:center;margin-bottom:1.5rem;flex-wrap:wrap}
+        .footer-links a{color:var(--color-text-muted);text-decoration:none;font-size:.8rem;transition:color .3s ease}
+        .footer-links a:hover{color:var(--color-accent)}
+        .footer-payment{display:flex;gap:1rem;justify-content:center;margin-bottom:1.5rem;flex-wrap:wrap}
+        .footer-payment a{color:var(--color-text-muted);text-decoration:none;font-size:.75rem;padding:.4rem .8rem;border:1px solid rgba(201,169,98,.2);transition:all .3s ease}
+        .footer-payment a:hover{border-color:var(--color-accent);color:var(--color-accent)}
+        .footer-location{font-size:.7rem;letter-spacing:.2em;color:var(--color-text-muted)}
+        @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+        @keyframes float{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-10px)}}
+        @media(max-width:1024px){.packages-grid{grid-template-columns:1fr 1fr}.core-pillars,.independence-grid{grid-template-columns:1fr 1fr}.donation-tiers{grid-template-columns:1fr 1fr}}
+        @media(max-width:768px){section{padding:4rem 1.5rem}.packages-grid,.family-grid,.core-pillars,.independence-grid{grid-template-columns:1fr}.cta-buttons,.quick-extras{flex-direction:column;align-items:center}.lang-switch{top:1rem;right:1rem}.donation-tiers{grid-template-columns:1fr}.campaign-photos{flex-direction:column;align-items:center}.rd-grid{grid-template-columns:1fr}}
     </style>
 </head>
 <body>
-<nav class="lang-switch"><a href="#" class="active">EN</a><a href="index-ja.html">日本語</a></nav>
+<nav class="lang-switch"><a href="#" class="active">EN</a><a href="index-ja-global.html">日本語</a></nav>
 <header class="hero">
     <div class="hero-content">
         <p class="hero-tagline">Off-grid Sato Family</p>
         <h1>You Are Allowed<br>to <em>Exist</em></h1>
         <p class="hero-subtitle">Delivering the permission to be -- through memory, infrastructure, and independence</p>
-        <a href="#packages" class="hero-cta">See What We Offer</a>
+        <a href="#campaign" class="hero-cta">See Campaign</a>
     </div>
     <div class="scroll-indicator">DISCOVER</div>
 </header>
-
-<!-- Dynamic Campaign Section -->
 <section class="campaign-section" id="campaign">
     <div class="campaign-content">
-        <div class="campaign-icon" id="campaignIcon">⚡🔋</div>
-        <h2 id="campaignTitle">Off-grid Infrastructure -- <span>Global + Local = Strong</span></h2>
-        <p class="campaign-subtitle" id="campaignSubtitle">Ohana grows together</p>
-        <p class="campaign-description" id="campaignDescription">Your donation provides off-grid power, communication, and emergency infrastructure to farms, temples, churches, and communities -- wherever we are. Maui. Japan. Wherever Ohana grows.</p>
-        
-        <div class="campaign-items">
-            <div class="campaign-item">
-                <div class="campaign-item-icon">🔋</div>
-                <div class="campaign-item-label">Portable Batteries</div>
+        <div class="campaign-icon" id="campaignIcon">🎄🎅</div>
+        <h2 id="campaignTitle">Christmas Giving -- <span>Global + Local = Strong</span></h2>
+        <p class="campaign-subtitle" id="campaignSubtitle">Growing with Ohana</p>
+        <p class="campaign-description" id="campaignDescription">This Christmas, give the gift of independence. Your donation delivers off-grid power and communication infrastructure to farms, temples, and communities -- in Maui, Japan, and wherever Ohana grows.</p>
+        <div class="donation-tiers">
+            <div class="donation-tier">
+                <div class="tier-header"><span class="tier-amount">$1,000+</span></div>
+                <div class="tier-title">🔋 Portable Power Station</div>
+                <p style="font-size:.85rem;color:var(--color-text-muted);">Jackery 1000 Plus, etc.</p>
             </div>
-            <div class="campaign-item">
-                <div class="campaign-item-icon">📡</div>
-                <div class="campaign-item-label">Starlink Communication</div>
+            <div class="donation-tier featured">
+                <div class="tier-header"><span class="tier-amount">$3,000+</span></div>
+                <div class="tier-title">📡 Mobile Connectivity Kit</div>
+                <p style="font-size:.85rem;color:var(--color-text-muted);">Starlink Mini + Battery + Solar</p>
             </div>
-            <div class="campaign-item">
-                <div class="campaign-item-icon">☀️</div>
-                <div class="campaign-item-label">Solar Power Systems</div>
+            <div class="donation-tier">
+                <div class="tier-header"><span class="tier-amount">$5,000+</span></div>
+                <div class="tier-title">🏠 Small-Scale Infrastructure</div>
+                <p style="font-size:.85rem;color:var(--color-text-muted);">Basic setup for farms & temples</p>
+            </div>
+            <div class="donation-tier">
+                <div class="tier-header"><span class="tier-amount">$10,000+</span></div>
+                <div class="tier-title">⚡ Mid-Scale Infrastructure</div>
+                <p style="font-size:.85rem;color:var(--color-text-muted);">Multiple sites or serious equipment</p>
             </div>
         </div>
-        
+        <p style="text-align:center;font-size:.9rem;color:var(--color-text-muted);margin-top:1.5rem;">Your donation goes where it's needed most.</p>
         <div class="campaign-photos">
-            <div class="campaign-photo">
-                <img src="IMG_3344.jpeg" alt="Ito making handmade soap at Honolua Bay">
-                <p>Ito (5) making handmade soap at Honolua Bay</p>
-            </div>
-            <div class="campaign-photo">
-                <img src="IMG_3369.jpeg" alt="Off-grid power setup">
-                <p>Off-grid infrastructure we build for communities</p>
-            </div>
+            <div class="campaign-photo"><img src="IMG_3344.jpeg" alt="Ito making soap"><p>Ito (5) making handmade soap at Honolua Bay</p></div>
+            <div class="campaign-photo"><img src="IMG_3369.jpeg" alt="Off-grid setup"><p>Off-grid infrastructure for communities</p></div>
         </div>
-        
-        <div class="campaign-benefits">
-            <p style="color: var(--color-warm);"><strong>Our Commitment:</strong> Takuya personally handles all procurement and installation, with progress reports shared to all donors.</p>
-            <p style="color: var(--color-hope);"><strong>💎 Donor Recognition:</strong> All contributors will be engraved in quartz glass -- your support preserved for over 1,000 years.</p>
-            <p style="color: var(--color-accent);"><strong>🏠 Special Gift:</strong> Donors who wish may also receive a free stay at our Ohana Home in Japan (Tokyo area or countryside).</p>
+        <div class="rd-section">
+            <h4>🔬 Why Us?</h4>
+            <div class="rd-amount">~$130,000 (¥20M) R&D Investment</div>
+            <div class="rd-grid">
+                <div class="rd-item">
+                    <div class="rd-item-icon">💎</div>
+                    <h5>Inscription Technology</h5>
+                    <div class="rd-item-sub">Material × Process × Preservation</div>
+                    <p>Laser engraving, quartz glass internal inscription, multi-material testing. Preservation technology proven to last 1,000+ years.</p>
+                </div>
+                <div class="rd-item">
+                    <div class="rd-item-icon">⚡</div>
+                    <h5>Off-Grid Infrastructure</h5>
+                    <div class="rd-item-sub">Power × Communication × Living</div>
+                    <p>Integrated Jackery, Starlink, solar, and mesh WiFi systems. Full environment built in 3 days, proven.</p>
+                </div>
+            </div>
+            <p class="rd-footer">Field-tested in both USA and Japan. Your donation reaches communities, guaranteed.</p>
         </div>
-        
-        <a href="https://www.paypal.com/ncp/payment/SVPS6J8WXQU76" class="campaign-cta" id="campaignCta">🎁 Donate Now via PayPal</a>
-        <p class="campaign-deadline" id="campaignDeadline"></p>
+        <div class="campaign-promise">
+            <h4>🤝 Our Promise</h4>
+            <p><strong>Transparency:</strong> Takuya personally handles procurement and installation, with progress reports to all donors.</p>
+            <p><strong>💎 Eternal Record:</strong> Every donor's name engraved in quartz glass -- your support lasts 1,000+ years.</p>
+            <p><strong>🌏 Global & Local:</strong> We deliver to Maui, Japan, and wherever Ohana grows.</p>
+        </div>
+        <a href="https://www.paypal.com/ncp/payment/SVPS6J8WXQU76" class="campaign-cta" id="campaignCta">🎁 Donate via PayPal</a>
+        <p style="margin-top:1rem;font-size:.85rem;color:var(--color-text-muted);">
+            <strong>Zelle:</strong> business@satotakuya.jp<br>
+            <span style="font-size:.8rem;">Your donation is delivered with care.</span>
+        </p>
+        <p class="campaign-deadline" id="campaignDeadline">Christmas Campaign: Through December 25</p>
     </div>
 </section>
-
 <script>
-// Campaign Configuration - Global + Local = Strong
-const campaigns = {
-    christmas: {
-        icon: '🎄🎅',
-        title: 'Christmas Giving -- <span>Global + Local = Strong</span>',
-        subtitle: 'Ohana grows together',
-        description: 'This Christmas, give the gift of independence. Your donation provides off-grid power, communication, and infrastructure to farms, temples, and communities -- wherever we are. Maui. Japan. Wherever Ohana grows.',
-        cta: '🎁 Donate Now via PayPal',
-        deadline: 'Christmas Campaign: Through December 25',
-        className: ''
-    },
-    newyear: {
-        icon: '🌅✨',
-        title: 'New Year, New Power -- <span>Global + Local = Strong</span>',
-        subtitle: 'A new chapter begins',
-        description: 'Start the year with independence. Your donation helps communities begin fresh with resilient, off-grid infrastructure. Solar, Starlink, batteries -- the foundation for a new beginning.',
-        cta: '🌅 Support the New Year Campaign',
-        deadline: 'New Year Campaign: January',
-        className: 'default'
-    },
-    whale: {
-        icon: '🐋🌊',
-        title: 'Whale Season -- <span>Global + Local = Strong</span>',
-        subtitle: 'They return every year. So does our commitment.',
-        description: 'As the whales return to Hawaiian waters, we continue building resilient infrastructure for communities everywhere. Your support powers farms, temples, and families -- Maui to Japan.',
-        cta: '🐋 Support Whale Season Campaign',
-        deadline: 'Whale Season: February - March',
-        className: 'default'
-    },
-    mothersday: {
-        icon: '💐🌸',
-        title: 'Mother\'s Day -- <span>Global + Local = Strong</span>',
-        subtitle: 'Honor the mothers who nurture our communities',
-        description: 'This Mother\'s Day, give the gift of resilience. Help families -- the mothers, grandmothers, and caregivers -- with reliable off-grid power and communication. From Maui to Japan.',
-        cta: '💐 Give in Her Honor',
-        deadline: 'Mother\'s Day Campaign',
-        className: ''
-    },
-    fathersday: {
-        icon: '👨🔧',
-        title: 'Father\'s Day -- <span>Global + Local = Strong</span>',
-        subtitle: 'For the builders and protectors',
-        description: 'Honor the fathers who build and protect. This Father\'s Day, help us bring off-grid infrastructure to farms, workshops, and family homes -- wherever Ohana grows.',
-        cta: '🔧 Build in His Honor',
-        deadline: 'Father\'s Day Campaign',
-        className: 'default'
-    },
-    independence: {
-        icon: '🎆⚡',
-        title: 'Independence Day -- <span>Global + Local = Strong</span>',
-        subtitle: 'True independence: No grid. No permission.',
-        description: 'Celebrate real independence. Help communities achieve energy and communication freedom with solar, Starlink, and battery systems. Independence knows no borders.',
-        cta: '🎆 Support Independence',
-        deadline: 'Independence Day Campaign',
-        className: 'default'
-    },
-    lahaina: {
-        icon: '🕯️',
-        title: 'We Remember -- <span>Global + Local = Strong</span>',
-        subtitle: 'Ohana grows together',
-        description: 'In memory of August 8th. We honor those we lost by building resilient infrastructure for communities everywhere. Names engraved in quartz. Memories preserved forever.',
-        cta: '🕯️ Honor Their Memory',
-        deadline: 'August 8th Remembrance',
-        className: 'lahaina'
-    },
-    petmemorial: {
-        icon: '🐾🌈',
-        title: 'Pet Memorial -- <span>Global + Local = Strong</span>',
-        subtitle: 'They never left us. They just changed form.',
-        description: 'In memory of Pearl and all beloved companions. Your donation supports communities while honoring the pets who touched our lives. Paw prints in quartz, forever.',
-        cta: '🐾 Honor Their Memory',
-        deadline: 'Pet Memorial Month: September',
-        className: ''
-    },
-    thanksgiving: {
-        icon: '🦃🙏',
-        title: 'Thanksgiving -- <span>Global + Local = Strong</span>',
-        subtitle: 'Grateful for what was. Building what comes.',
-        description: 'This Thanksgiving, give thanks by giving forward. Help farms, temples, and families with off-grid infrastructure. Gratitude in action -- from our Ohana to yours.',
-        cta: '🙏 Give Thanks Forward',
-        deadline: 'Thanksgiving Campaign',
-        className: 'default'
-    },
-    default: {
-        icon: '⚡🔋',
-        title: 'Off-grid Infrastructure -- <span>Global + Local = Strong</span>',
-        subtitle: 'Ohana grows together',
-        description: 'Your donation provides off-grid power, communication, and emergency infrastructure to farms, temples, churches, and communities -- wherever we are. Maui. Japan. Wherever Ohana grows.',
-        cta: '⚡ Donate Now via PayPal',
-        deadline: '',
-        className: 'default'
-    }
-};
-
-// Determine current campaign based on date
-function getCurrentCampaign() {
-    const today = new Date();
-    const month = today.getMonth() + 1; // 1-12
-    const day = today.getDate();
-
-    // Christmas: Dec 1-25
-    if (month === 12 && day >= 1 && day <= 25) return 'christmas';
-    
-    // New Year: Dec 26 - Jan 15
-    if ((month === 12 && day >= 26) || (month === 1 && day <= 15)) return 'newyear';
-    
-    // Whale Season: Jan 16 - Mar 31
-    if ((month === 1 && day >= 16) || month === 2 || month === 3) return 'whale';
-    
-    // Mother's Day: May 1-14 (2nd Sunday)
-    if (month === 5 && day >= 1 && day <= 14) return 'mothersday';
-    
-    // Father's Day: Jun 1-21 (3rd Sunday)
-    if (month === 6 && day >= 1 && day <= 21) return 'fathersday';
-    
-    // Independence Day: Jun 22 - Jul 7
-    if ((month === 6 && day >= 22) || (month === 7 && day <= 7)) return 'independence';
-    
-    // Lahaina Remembrance: Aug 1-15
-    if (month === 8 && day >= 1 && day <= 15) return 'lahaina';
-    
-    // Pet Memorial Month: Sep 1-30
-    if (month === 9) return 'petmemorial';
-    
-    // Thanksgiving: Nov 15-30
-    if (month === 11 && day >= 15 && day <= 30) return 'thanksgiving';
-    
-    // Default for other times
-    return 'default';
-}
-
-// Apply campaign to page
-function applyCampaign() {
-    const campaignKey = getCurrentCampaign();
-    const campaign = campaigns[campaignKey];
-    
-    const section = document.querySelector('.campaign-section');
-    const icon = document.getElementById('campaignIcon');
-    const title = document.getElementById('campaignTitle');
-    const subtitle = document.getElementById('campaignSubtitle');
-    const description = document.getElementById('campaignDescription');
-    const cta = document.getElementById('campaignCta');
-    const deadline = document.getElementById('campaignDeadline');
-    
-    // Apply class for styling
-    section.className = 'campaign-section ' + campaign.className;
-    
-    // Update content
-    icon.textContent = campaign.icon;
-    title.innerHTML = campaign.title;
-    subtitle.textContent = campaign.subtitle;
-    description.textContent = campaign.description;
-    cta.textContent = campaign.cta;
-    deadline.textContent = campaign.deadline;
-}
-
-// Run on page load
-document.addEventListener('DOMContentLoaded', applyCampaign);
+const campaigns={christmas:{icon:'🎄🎅',title:'Christmas Giving -- <span>Global + Local = Strong</span>',subtitle:'Growing with Ohana',description:'This Christmas, give the gift of independence. Your donation delivers off-grid power and communication infrastructure to farms, temples, and communities -- in Maui, Japan, and wherever Ohana grows.',cta:'🎁 Donate via PayPal',deadline:'Christmas Campaign: Through December 25',className:''},newyear:{icon:'🌅✨',title:'New Year, New Power -- <span>Global + Local = Strong</span>',subtitle:'A New Chapter Begins',description:'Start the new year with independence. Your donation helps communities begin fresh with off-grid infrastructure.',cta:'🌅 Support New Year Campaign',deadline:'New Year Campaign: January',className:'default'},whale:{icon:'🐋🌊',title:'Whale Season -- <span>Global + Local = Strong</span>',subtitle:'They Return Every Year. So Does Our Commitment.',description:'As whales return to Hawaiian waters, we continue building resilient infrastructure for communities worldwide.',cta:'🐋 Support Whale Season',deadline:'Whale Season: February–March',className:'default'},lahaina:{icon:'🕯️',title:'Never Forget -- <span>Global + Local = Strong</span>',subtitle:'Growing with Ohana',description:'We remember August 8. Honoring those lost while building resilient infrastructure for communities worldwide.',cta:'🕯️ Inscribe a Memory',deadline:'August 8 Remembrance',className:'lahaina'},default:{icon:'⚡🔋',title:'Off-Grid Infrastructure -- <span>Global + Local = Strong</span>',subtitle:'Growing with Ohana',description:'We deliver off-grid power, communication, and emergency infrastructure to farms, temples, churches, and communities -- in Maui, Japan, and beyond.',cta:'⚡ Donate via PayPal',deadline:'',className:'default'}};
+function getCurrentCampaign(){const t=new Date(),m=t.getMonth()+1,d=t.getDate();if(m===12&&d>=1&&d<=25)return'christmas';if((m===12&&d>=26)||(m===1&&d<=15))return'newyear';if((m===1&&d>=16)||m===2||m===3)return'whale';if(m===8&&d>=1&&d<=15)return'lahaina';return'default';}
+function applyCampaign(){const c=campaigns[getCurrentCampaign()];document.getElementById('campaignIcon').textContent=c.icon;document.getElementById('campaignTitle').innerHTML=c.title;document.getElementById('campaignSubtitle').textContent=c.subtitle;document.getElementById('campaignDescription').textContent=c.description;document.getElementById('campaignCta').textContent=c.cta;document.getElementById('campaignDeadline').textContent=c.deadline;document.querySelector('.campaign-section').className='campaign-section '+c.className;}
+document.addEventListener('DOMContentLoaded',applyCampaign);
 </script>
-
-<section style="text-align: center; padding: 4rem 2rem; background: var(--color-bg);">
-    <h3 style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 300; margin-bottom: 1rem; color: var(--color-text);">We're learning. We're evolving.</h3>
-    <p style="color: var(--color-text-muted); max-width: 500px; margin: 0 auto;">We don't have all the answers yet.<br>But we keep improving to serve you better.<br>Feedback always welcome.</p>
-</section>
 <section class="quick-packages" id="packages">
-    <p class="section-label">What You Get</p>
+    <p class="section-label">Services</p>
     <h2>Laser-Engraved Memorials</h2>
     <p class="quick-packages-subtitle">Preserve your memories in materials that last.</p>
     <div class="packages-grid">
-        <div class="package-card"><div class="package-icon">🌿</div><h4>Moment</h4><p class="package-price">$30-$50</p><p class="package-desc">We come to you</p></div>
-        <div class="package-card"><div class="package-icon">🪵</div><h4>Memory</h4><p class="package-price">$100-$200</p><p class="package-desc">We come to you</p></div>
-        <div class="package-card"><div class="package-icon">🪨</div><h4>Legacy</h4><p class="package-price">$300-$500</p><p class="package-desc">Visit our workshop or Japan</p></div>
+        <div class="package-card"><div class="package-icon">🌿</div><h4>Moment</h4><p class="package-price">$30–$50</p><p class="package-desc">We come to you</p></div>
+        <div class="package-card"><div class="package-icon">🪵</div><h4>Memory</h4><p class="package-price">$100–$200</p><p class="package-desc">We come to you</p></div>
+        <div class="package-card"><div class="package-icon">🪨</div><h4>Legacy</h4><p class="package-price">$300–$500</p><p class="package-desc">Visit our workshop or Japan</p></div>
         <div class="package-card"><div class="package-icon">💎</div><h4>Eternal</h4><p class="package-price">$5,000</p><p class="package-desc">Crafted at our Japan studio</p></div>
     </div>
     <div class="quick-extras">
-        <div class="quick-extra-item"><h5>🏠 Ohana Home Japan</h5><p><strong>First week FREE</strong> - our homes in Tokyo & countryside</p></div>
-        <div class="quick-extra-item"><h5>⚡ Off-Grid Infrastructure</h5><p>🏠 Home: Assessment $0 | Build $500/day<br>🚗 Mobile: Setup $1,000 | $160/month</p></div>
-        <div class="quick-extra-item"><h5>✨ Become a Patron</h5><p>$100,000 - Your name in quartz glass, forever</p></div>
+        <div class="quick-extra-item"><h5>🏠 Ohana Home Japan</h5><p><strong>First week FREE</strong> -- Stay at our homes in Tokyo area & countryside</p></div>
+        <div class="quick-extra-item"><h5>⚡ Off-Grid Infrastructure</h5><p>🎒 Mobile Kit Ready: Starlink + Jackery 290 = ~6kg<br>🏠 Home: Assessment $0 | Build $500/day</p></div>
     </div>
     <div class="cta-buttons">
-        <a href="Catalog.pdf" class="cta-primary">View Full Catalog</a>
+        <a href="Catalog.pdf" class="cta-primary">View Catalog</a>
         <a href="https://calendly.com/pearlmemorial/pearlmemorialsession" class="cta-secondary">Book Consultation</a>
-    </div>
-</section>
-<section class="services-section">
-    <div style="max-width: 1100px; margin: 0 auto; text-align: center;">
-        <p class="section-label">Services</p>
-        <h2>How We Deliver</h2>
-        <div class="services-grid">
-            <div class="service-card"><div class="service-icon">🤝</div><h4>How We Work</h4><p><strong>Moment & Memory</strong> - We come to you. Beach, cafe, anywhere.</p><p><strong>Legacy & Eternal</strong> - A deeper experience. Visit our workshop, or journey to Japan.</p></div>
-            <div class="service-card"><div class="service-icon">⚡</div><h4>Off-Grid Infrastructure</h4><p>Solar systems, satellite internet, power independence.</p><p><strong>Mobile Starlink Mini</strong> - Stay connected anywhere.</p></div>
-            <div class="service-card"><div class="service-icon">🧼</div><h4>Handmade Soap</h4><p>Made off-grid. A gift for you.</p><p><strong>Want to make together?</strong><br>Ito (5 years old) will be your helper!</p></div>
-        </div>
     </div>
 </section>
 <section class="core-message">
     <p class="section-label">The Mission</p>
     <h2>We deliver <span class="highlight">"You are allowed to exist"</span><br>to those who need to hear it</h2>
-    <p style="max-width: 700px; margin: 0 auto;">Not just words. We make it tangible - through engraved memories, disaster-proof records, and infrastructure that frees you from dependency.</p>
+    <p style="max-width:650px;margin:0 auto;">Not just words. We make it tangible -- through engraved memories, disaster-proof records, and infrastructure that frees you from dependency.</p>
     <div class="core-pillars">
-        <div class="pillar"><div class="pillar-icon">✦</div><h4>Engrave</h4><p class="pillar-subtitle">Proof of Existence</p><p>"You were here. You existed. Your life had meaning."</p></div>
-        <div class="pillar"><div class="pillar-icon">🛡</div><h4>Protect</h4><p class="pillar-subtitle">Disaster-Proof Memory</p><p>Quartz glass. QR archives. Multi-layered backup for eternity.</p></div>
+        <div class="pillar"><div class="pillar-icon">✦</div><h4>Engrave</h4><p class="pillar-subtitle">Proof of Existence</p><p>"You were here. You existed."</p></div>
+        <div class="pillar"><div class="pillar-icon">🛡</div><h4>Protect</h4><p class="pillar-subtitle">Disaster-Proof Memory</p><p>Quartz glass. QR archives. Multi-layer backup.</p></div>
         <div class="pillar"><div class="pillar-icon">⚡</div><h4>Empower</h4><p class="pillar-subtitle">Off-Grid Independence</p><p>Exist without permission from existing systems.</p></div>
-    </div>
-</section>
-<section class="why-section">
-    <div class="why-visual"><div class="void-circle"></div></div>
-    <div class="why-content">
-        <p class="section-label">Why We Engrave</p>
-        <h2>From a birthtime unknown</h2>
-        <p>Founder Takuya grew up not knowing the "beginning" of his own story. His birth time was unclear. No accurate record existed.</p>
-        <div class="story-block"><p>When your existence isn't engraved, you're left wondering: "Am I allowed to be here?"</p></div>
-        <p>That's why we engrave. To tell someone with certainty: <strong>"You were here. You existed. Your life had meaning."</strong></p>
     </div>
 </section>
 <section class="offgrid-section">
@@ -497,7 +246,6 @@ document.addEventListener('DOMContentLoaded', applyCampaign);
             <div class="independence-item"><h4>Without Telecom Companies</h4><p>Starlink satellite. Connect anywhere.</p></div>
             <div class="independence-item"><h4>Without Permission</h4><p>Your existence doesn't require approval.</p></div>
         </div>
-        <p style="text-align: center; margin-top: 4rem; max-width: 700px; margin-left: auto; margin-right: auto;">We built a complete off-grid living environment in 3 days. <strong>Proving that independence is possible.</strong></p>
     </div>
 </section>
 <section class="pearl-section">
@@ -505,35 +253,33 @@ document.addEventListener('DOMContentLoaded', applyCampaign);
         <div class="pearl-image">🐕</div>
         <p class="section-label">Pearl's Story</p>
         <h2>Named in Memory of Pearl</h2>
-        <p class="pearl-dates">2007 - 2025</p>
-        <div class="pearl-story-text">
-            <p>For 18 years, Pearl - a toy poodle - lived as part of our family. In January 2025, Pearl quietly passed away.</p>
-            <div class="pearl-highlight"><p>We could go anywhere with Pearl. He would see the ocean he never saw in life.</p></div>
-            <p>By creating a portable grave, we reclaimed our freedom. This project carries his name. <strong>Pearl Memorial.</strong></p>
-        </div>
+        <p class="pearl-dates">2007 – 2025</p>
+        <p>For 18 years, Pearl was family. By creating a portable memorial, we reclaimed our freedom.</p>
+        <div class="pearl-highlight"><p>We could go anywhere with Pearl. He would see the ocean he never saw in life.</p></div>
+        <p>This project carries his name. <strong>Pearl Memorial.</strong></p>
     </div>
 </section>
 <section class="family-section">
     <div class="family-intro">
         <p class="section-label">Off-grid Sato Family</p>
         <h2>A Family of Three</h2>
-        <p>Based between Maui and Japan. Building resilient communities wherever we go.</p>
+        <p>Based in Maui and Japan. Building resilient communities wherever we go.</p>
     </div>
     <div class="family-grid">
-        <div class="family-member"><h4>Takuya</h4><p class="family-role">Infrastructure & Engraving & Soap</p><p>Former Fujitsu, venture CTO, Deloitte. Now focused on disaster recovery and off-grid.</p></div>
-        <div class="family-member"><h4>Mina</h4><p class="family-role">Marketing & Craft</p><p>18 years of pet care, resin art, dried flower preservation.</p></div>
-        <div class="family-member"><h4>Ito</h4><p class="family-role">5 Years Old</p><p>Explorer. Dreamer. Loves nature and animals.</p></div>
+        <div class="family-member"><h4>Takuya</h4><p class="family-role">Infrastructure & Inscription</p><p>Focused on disaster recovery and off-grid systems.</p></div>
+        <div class="family-member"><h4>Mina</h4><p class="family-role">Marketing & Craft</p><p>18 years pet care, resin art.</p></div>
+        <div class="family-member"><h4>Ito</h4><p class="family-role">5 Years Old • Soap Helper</p><p>Explorer. Dreamer.</p></div>
     </div>
 </section>
 <section class="gift-section">
     <div class="gift-content">
         <p class="section-label">Gift Economy</p>
         <h2>First, We Give</h2>
-        <p>Distribute handmade soap. Provide free WiFi. By giving without expecting anything in return, trust is born.</p>
-        <div class="gift-stat"><div class="gift-stat-value">$3,000+</div><p class="gift-stat-label">Value created from a few dollars of handmade soap</p></div>
+        <p>By giving without expecting anything in return, trust is born.</p>
+        <div class="gift-stat"><div class="gift-stat-value">$3,000+</div><p class="gift-stat-label">Value created from handmade soap</p></div>
     </div>
 </section>
-<section class="cta-section" id="order">
+<section class="cta-section">
     <p class="section-label">Begin</p>
     <h2>Engrave Your Memory</h2>
     <p class="cta-subtitle">Your encounter with us is also a memory worth engraving.</p>
@@ -543,11 +289,10 @@ document.addEventListener('DOMContentLoaded', applyCampaign);
     </div>
 </section>
 <footer>
-    <p class="footer-memorial">In loving memory of Pearl (2007-2025) 🐕</p>
+    <p class="footer-memorial">In loving memory of Pearl (2007–2025) 🐕</p>
     <div class="footer-links">
         <a href="https://calendly.com/pearlmemorial/pearlmemorialsession">Contact</a>
         <a href="https://www.instagram.com/pearl.memorial/">Instagram</a>
-        <a href="Catalog.pdf">Catalog</a>
     </div>
     <div class="footer-payment">
         <a href="https://pearl.memorial">Shop (Square)</a>
