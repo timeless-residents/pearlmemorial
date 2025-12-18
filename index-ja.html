@@ -23,6 +23,33 @@
         .evolving-statement{text-align:center;padding:4rem 2rem;background:var(--color-bg)}
         .evolving-statement h3{font-family:var(--font-display);font-size:1.5rem;font-weight:300;margin-bottom:1rem;color:var(--color-text)}
         .evolving-statement p{color:var(--color-text-muted);max-width:500px;margin:0 auto;line-height:1.8}
+        .boundarist-section{padding:5rem 2rem;background:linear-gradient(180deg,var(--color-bg) 0%,rgba(126,184,201,.06) 50%,var(--color-bg) 100%);border-top:1px solid rgba(126,184,201,.2);border-bottom:1px solid rgba(126,184,201,.2)}
+        .boundarist-content{max-width:900px;margin:0 auto;text-align:center}
+        .boundarist-section h2{font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.5rem);font-weight:400;margin-bottom:2.5rem;line-height:1.4}
+        .two-types{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-bottom:3rem}
+        .type-block{padding:1.5rem;border-radius:.5rem}
+        .type-block.outside{background:rgba(126,184,201,.05);border:1px solid rgba(126,184,201,.2)}
+        .type-block.inside{background:rgba(201,169,98,.05);border:1px solid rgba(201,169,98,.2)}
+        .type-block h3{font-family:var(--font-display);font-size:1.05rem;font-weight:400;margin-bottom:1.5rem;line-height:1.6}
+        .type-block.outside h3{color:var(--color-hope)}
+        .type-block.inside h3{color:var(--color-accent)}
+        .experience-list{display:flex;flex-direction:column;gap:.6rem}
+        .experience-item{font-size:.95rem;color:var(--color-text-muted);padding:.7rem 1rem;background:rgba(0,0,0,.2);border-left:3px solid var(--color-hope);text-align:left;transition:all .3s ease}
+        .type-block.inside .experience-item{border-left-color:var(--color-accent)}
+        .experience-item:hover{background:rgba(255,255,255,.05);color:var(--color-text)}
+        .boundary-definition{margin:3rem 0;padding:2rem}
+        .boundary-definition p{font-family:var(--font-display);font-size:1.3rem;line-height:1.6;margin-bottom:1rem}
+        .boundary-definition strong{color:var(--color-hope)}
+        .boundary-definition .boundary-sub{font-size:1rem;color:var(--color-text-muted)}
+        .we-are-too{margin:3rem 0;padding:2rem;background:rgba(201,169,98,.05);border:1px solid rgba(201,169,98,.2);border-radius:.5rem}
+        .we-are-too h3{font-family:var(--font-display);font-size:1.2rem;margin-bottom:1rem;color:var(--color-accent)}
+        .we-are-too p{font-size:1rem;line-height:1.8;color:var(--color-text-muted)}
+        .we-are-too em{color:var(--color-text);font-style:normal}
+        .core-message-box{margin:3rem 0}
+        .core-message-box p{font-size:1.1rem;color:var(--color-text-muted);margin-bottom:1rem}
+        .core-message-box .the-message{font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.5rem);color:var(--color-hope);margin-bottom:.5rem}
+        .core-message-box .sub-message{font-size:1rem;color:var(--color-accent)}
+        @media(max-width:768px){.two-types{grid-template-columns:1fr}}
         .campaign-section{padding:4rem 2rem;background:linear-gradient(180deg,var(--color-bg) 0%,rgba(196,30,58,.08) 50%,var(--color-bg) 100%);text-align:center;border-top:2px solid var(--color-campaign);border-bottom:2px solid var(--color-campaign)}
         .campaign-section.default{background:linear-gradient(180deg,var(--color-bg) 0%,rgba(126,184,201,.08) 50%,var(--color-bg) 100%);border-color:var(--color-hope)}
         .campaign-section.lahaina{background:linear-gradient(180deg,var(--color-bg) 0%,rgba(201,169,98,.08) 50%,var(--color-bg) 100%);border-color:var(--color-accent)}
@@ -37,11 +64,7 @@
         .donation-tier.featured{border-color:var(--color-accent);background:rgba(201,169,98,.05)}
         .tier-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:.8rem}
         .tier-amount{font-family:var(--font-display);font-size:1.6rem;color:var(--color-accent)}
-        .tier-badge{font-size:.65rem;padding:.2rem .5rem;background:var(--color-accent);color:var(--color-bg);border-radius:1rem}
         .tier-title{font-family:var(--font-display);font-size:1rem;margin-bottom:.4rem}
-        .tier-equipment{font-size:.8rem;color:var(--color-hope);margin-bottom:.6rem;line-height:1.4}
-        .tier-benefits{list-style:none}.tier-benefits li{font-size:.75rem;color:var(--color-text-muted);padding:.2rem 0 .2rem 1rem;position:relative}
-        .tier-benefits li::before{content:'✓';position:absolute;left:0;color:var(--color-accent);font-size:.7rem}
         .campaign-photos{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin:2rem 0}
         .campaign-photo{flex:1;min-width:250px;max-width:350px}.campaign-photo img{width:100%;border-radius:.5rem;border:1px solid rgba(201,169,98,.3)}
         .campaign-photo p{font-size:.75rem;color:var(--color-text-muted);margin-top:.5rem}
@@ -108,9 +131,6 @@
         .family-role{font-size:.7rem;letter-spacing:.12em;color:var(--color-accent);margin-bottom:.6rem}.family-member p{font-size:.8rem}
         .gift-section{padding:5rem 2rem;background:linear-gradient(180deg,var(--color-bg) 0%,var(--color-bg-subtle) 50%,var(--color-bg) 100%)}
         .gift-content{max-width:700px;margin:0 auto;text-align:center}
-        .gift-stat{margin:2.5rem 0;padding:2rem;background:var(--color-bg);border:1px solid rgba(201,169,98,.2)}
-        .gift-stat-value{font-family:var(--font-display);font-size:3rem;color:var(--color-accent)}
-        .gift-stat-label{font-size:.85rem;color:var(--color-text-muted)}
         .gift-story{margin:2.5rem 0;padding:2rem;background:var(--color-bg);border-left:3px solid var(--color-accent);text-align:left}
         .gift-story p{margin:.75rem 0;font-size:1.1rem;font-style:italic}
         .gift-conclusion{margin-top:2rem;font-size:1.1rem;line-height:1.8}
@@ -126,9 +146,8 @@
         .footer-location{font-size:.7rem;letter-spacing:.2em;color:var(--color-text-muted)}
         @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
         @keyframes float{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-10px)}}
-        @media(max-width:1024px){.packages-grid{grid-template-columns:1fr 1fr}.core-pillars,.independence-grid{grid-template-columns:1fr 1fr}.donation-tiers{grid-template-columns:1fr 1fr}}
-        @media(max-width:768px){section{padding:4rem 1.5rem}.packages-grid,.family-grid,.core-pillars,.independence-grid{grid-template-columns:1fr}.cta-buttons,.quick-extras{flex-direction:column;align-items:center}.lang-switch{top:1rem;right:1rem}.donation-tiers{grid-template-columns:1fr}.campaign-photos{flex-direction:column;align-items:center}.rd-grid{grid-template-columns:1fr}}
-        @media print{*{background:transparent!important}body{background:white!important;color:#1a1a1a!important;font-size:10pt;line-height:1.4}.lang-switch,.scroll-indicator,.hero-cta,.cta-buttons,.cta-section,.video-container,.void-circle,.why-visual,blockquote,iframe,footer .footer-payment{display:none!important}.hero{min-height:auto!important;padding:1rem!important;background:none!important}.hero h1{opacity:1!important;animation:none!important;color:#1a1a1a!important;font-size:24pt!important}.hero h1 em{color:#2a6a7a!important}.hero-tagline,.hero-subtitle{opacity:1!important;animation:none!important;color:#444!important}section{padding:1rem 0.5rem!important;max-width:100%!important;page-break-inside:avoid}.quick-packages,.services-section,.offgrid-section,.gift-section,.core-message,.campaign-section,.evolving-statement{background:none!important;padding:1rem 0.5rem!important}h2,h3,h4,.pillar h4,.independence-item h4{color:#1a1a1a!important}p,li,.package-desc{color:#333!important}.section-label,.pillar-subtitle{color:#666!important}.highlight,.pearl-highlight p{color:#2a6a7a!important}.packages-grid{grid-template-columns:repeat(4,1fr)!important;gap:0.5rem!important}.package-card{background:none!important;border:1px solid #ccc!important;padding:0.5rem!important}.package-price{color:#1a1a1a!important;font-weight:600!important}.package-icon{font-size:1.5rem!important;margin-bottom:0.3rem!important}.core-pillars,.independence-grid{grid-template-columns:repeat(3,1fr)!important;gap:0.5rem!important}.family-grid{grid-template-columns:repeat(3,1fr)!important;gap:0.5rem!important}.pillar,.independence-item,.service-card{background:none!important;border:1px solid #ccc!important;padding:0.5rem!important}.pearl-image{background:#eee!important;box-shadow:none!important;border:1px solid #ccc!important;width:60px!important;height:60px!important;font-size:1.5rem!important;margin-bottom:1rem!important}.pearl-dates,.family-role{color:#666!important}.pearl-highlight,.story-block,.gift-story{background:none!important;border-left:2px solid #666!important;padding:0.5rem!important}footer{border-top:1px solid #ccc!important;padding:1rem 0.5rem!important}.donation-tiers{grid-template-columns:repeat(2,1fr)!important;gap:0.5rem!important}.donation-tier{background:none!important;border:1px solid #ccc!important;padding:0.5rem!important}.tier-amount{color:#1a1a1a!important}}
+        @media(max-width:1024px){.packages-grid{grid-template-columns:1fr 1fr}.core-pillars,.independence-grid{grid-template-columns:1fr 1fr}.donation-tiers{grid-template-columns:1fr 1fr}.target-grid{grid-template-columns:1fr 1fr}}
+        @media(max-width:768px){section{padding:4rem 1.5rem}.packages-grid,.family-grid,.core-pillars,.independence-grid{grid-template-columns:1fr}.cta-buttons,.quick-extras{flex-direction:column;align-items:center}.lang-switch{top:1rem;right:1rem}.donation-tiers{grid-template-columns:1fr}.campaign-photos{flex-direction:column;align-items:center}.rd-grid{grid-template-columns:1fr}.target-grid{grid-template-columns:1fr}.boundary-table{font-size:.8rem}.boundary-table th,.boundary-table td{padding:.7rem}}
     </style>
 </head>
 <body>
@@ -138,10 +157,65 @@
         <p class="hero-tagline">Off-grid 佐藤家</p>
         <h1>あなたは<br><em>存在していい</em></h1>
         <p class="hero-subtitle">記憶と、インフラと、自立を通じて<br>「存在の許可」を届ける</p>
-        <a href="#campaign" class="hero-cta">キャンペーンを見る</a>
+        <a href="#boundarist" class="hero-cta">届ける人</a>
     </div>
     <div class="scroll-indicator">DISCOVER</div>
 </header>
+<section class="boundarist-section" id="boundarist">
+    <div class="boundarist-content">
+        
+        <h2>こんな経験、<br>ありませんか？</h2>
+        
+        <div class="two-types">
+            <div class="type-block outside">
+                <h3>当たり前だったものが、揺らいだ時</h3>
+                <div class="experience-list">
+                    <div class="experience-item">突然、住む場所がなくなった</div>
+                    <div class="experience-item">大切な人を失った</div>
+                    <div class="experience-item">お金の不安で眠れない夜がある</div>
+                    <div class="experience-item">ビザや資格で「壁」を感じた</div>
+                    <div class="experience-item">繋がれなくて孤立した</div>
+                    <div class="experience-item">「自分は何者だろう」と思った</div>
+                </div>
+            </div>
+
+            <div class="type-block inside">
+                <h3>目の前の人に、システムが機能しなかった時</h3>
+                <div class="experience-list">
+                    <div class="experience-item">ルールでは「ダメ」、でもこの人は助けが必要</div>
+                    <div class="experience-item">「おかしい」と思っても、組織は動かない</div>
+                    <div class="experience-item">動きたいけど「許可」がない</div>
+                    <div class="experience-item">「できません」で終わらせたくない</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="boundary-definition">
+            <p>どちらも<strong>「境界に立っている」</strong></p>
+            <p class="boundary-sub">システムの外にいても、中でその限界を見ていても。</p>
+        </div>
+
+        <div class="we-are-too">
+            <h3>私たちも、両方を経験しました。</h3>
+            <p>
+                「住所がないとダメ」と言われた。でも別の人は「なんとかしましょう」と。<br>
+                「リファレンスを出して」と言われた。でも私たちを見て、信じてくれた。<br>
+                <em>その瞬間が、すべてを変えた。</em>
+            </p>
+        </div>
+
+        <div class="core-message-box">
+            <p>システムの外にいても、中にいても：</p>
+            <p class="the-message">「許可はいらない」</p>
+            <p class="sub-message">存在するのに。助けるのに。動くのに。</p>
+        </div>
+
+        <div class="cta-buttons" style="margin-top:2rem;">
+            <a href="https://calendly.com/pearlmemorial/pearlmemorialsession" class="cta-primary">あなたの話を聞かせてください</a>
+        </div>
+
+    </div>
+</section>
 <section class="evolving-statement">
     <h3>学びながら、進化しています。</h3>
     <p>まだ完璧ではありません。<br>でも、より届くように、変わり続けています。<br>ご意見、いつでもお待ちしています。</p>
@@ -151,28 +225,12 @@
         <div class="campaign-icon" id="campaignIcon">🎄🎅</div>
         <h2 id="campaignTitle">クリスマス寄付 -- <span>Global + Local = Strong</span></h2>
         <p class="campaign-subtitle" id="campaignSubtitle">Ohanaと共に育つ</p>
-        <p class="campaign-description" id="campaignDescription">このクリスマス、「自立」というギフトを届けませんか。あなたの寄付で、農場、寺院、コミュニティにオフグリッド電源・通信インフラを届けます。マウイでも、日本でも、Ohanaが育つ場所ならどこでも。</p>
+        <p class="campaign-description" id="campaignDescription">このクリスマス、「自立」というギフトを届けませんか。あなたの寄付で、農場、寺院、コミュニティにオフグリッド電源・通信インフラを届けます。</p>
         <div class="donation-tiers">
-            <div class="donation-tier">
-                <div class="tier-header"><span class="tier-amount">$1,000〜</span></div>
-                <div class="tier-title">🔋 ポータブル電源1台相当</div>
-                <p style="font-size:.85rem;color:var(--color-text-muted);">Jackery 1000 Plus等</p>
-            </div>
-            <div class="donation-tier featured">
-                <div class="tier-header"><span class="tier-amount">$3,000〜</span></div>
-                <div class="tier-title">📡 モバイル通信キット相当</div>
-                <p style="font-size:.85rem;color:var(--color-text-muted);">Starlink Mini + バッテリー + ソーラー</p>
-            </div>
-            <div class="donation-tier">
-                <div class="tier-header"><span class="tier-amount">$5,000〜</span></div>
-                <div class="tier-title">🏠 小規模拠点インフラ相当</div>
-                <p style="font-size:.85rem;color:var(--color-text-muted);">農場・寺院の基本セット</p>
-            </div>
-            <div class="donation-tier">
-                <div class="tier-header"><span class="tier-amount">$10,000〜</span></div>
-                <div class="tier-title">⚡ 中規模インフラ相当</div>
-                <p style="font-size:.85rem;color:var(--color-text-muted);">複数拠点 or 本格的な設備</p>
-            </div>
+            <div class="donation-tier"><div class="tier-header"><span class="tier-amount">$1,000〜</span></div><div class="tier-title">🔋 ポータブル電源1台相当</div><p style="font-size:.85rem;color:var(--color-text-muted);">Jackery 1000 Plus等</p></div>
+            <div class="donation-tier featured"><div class="tier-header"><span class="tier-amount">$3,000〜</span></div><div class="tier-title">📡 モバイル通信キット相当</div><p style="font-size:.85rem;color:var(--color-text-muted);">Starlink Mini + バッテリー + ソーラー</p></div>
+            <div class="donation-tier"><div class="tier-header"><span class="tier-amount">$5,000〜</span></div><div class="tier-title">🏠 小規模拠点インフラ相当</div><p style="font-size:.85rem;color:var(--color-text-muted);">農場・寺院の基本セット</p></div>
+            <div class="donation-tier"><div class="tier-header"><span class="tier-amount">$10,000〜</span></div><div class="tier-title">⚡ 中規模インフラ相当</div><p style="font-size:.85rem;color:var(--color-text-muted);">複数拠点 or 本格的な設備</p></div>
         </div>
         <p style="text-align:center;font-size:.9rem;color:var(--color-text-muted);margin-top:1.5rem;">いただいた寄付は、最も必要とするコミュニティに届けます。</p>
         <div class="campaign-photos">
@@ -183,18 +241,8 @@
             <h4>🔬 なぜ私たちに？</h4>
             <div class="rd-amount">約2,000万円（〜$130,000）の研究開発投資</div>
             <div class="rd-grid">
-                <div class="rd-item">
-                    <div class="rd-item-icon">💎</div>
-                    <h5>刻印造成技術</h5>
-                    <div class="rd-item-sub">素材 × 加工 × 保存</div>
-                    <p>レーザー彫刻、石英ガラス内部刻印、多素材テスト。1,000年以上残る保存技術を確立。</p>
-                </div>
-                <div class="rd-item">
-                    <div class="rd-item-icon">⚡</div>
-                    <h5>オフグリッドインフラ</h5>
-                    <div class="rd-item-sub">電源 × 通信 × 生活</div>
-                    <p>Jackery、Starlink、ソーラー、メッシュWiFiの統合運用。3日でフル環境構築を実証。</p>
-                </div>
+                <div class="rd-item"><div class="rd-item-icon">💎</div><h5>刻印造成技術</h5><div class="rd-item-sub">素材 × 加工 × 保存</div><p>レーザー彫刻、石英ガラス内部刻印、多素材テスト。1,000年以上残る保存技術を確立。</p></div>
+                <div class="rd-item"><div class="rd-item-icon">⚡</div><h5>オフグリッドインフラ</h5><div class="rd-item-sub">電源 × 通信 × 生活</div><p>Jackery、Starlink、ソーラー、メッシュWiFiの統合運用。3日でフル環境構築を実証。</p></div>
             </div>
             <p class="rd-footer">日米両国で実地検証済み。あなたの寄付は、確実にコミュニティに届きます。</p>
         </div>
@@ -205,15 +253,12 @@
             <p><strong>🌏 グローバル＆ローカル：</strong> マウイでも、日本でも、Ohanaが育つ場所ならどこでも届けます。</p>
         </div>
         <a href="https://www.paypal.com/ncp/payment/SVPS6J8WXQU76" class="campaign-cta" id="campaignCta">🎁 PayPalで寄付する</a>
-        <p style="margin-top:1rem;font-size:.85rem;color:var(--color-text-muted);">
-            <strong>Zelle:</strong> business@satotakuya.jp<br>
-            <span style="font-size:.8rem;">いただいた寄付は責任を持って届けます</span>
-        </p>
+        <p style="margin-top:1rem;font-size:.85rem;color:var(--color-text-muted);"><strong>Zelle:</strong> business@satotakuya.jp<br><span style="font-size:.8rem;">いただいた寄付は責任を持って届けます</span></p>
         <p class="campaign-deadline" id="campaignDeadline">クリスマスキャンペーン：12月25日まで</p>
     </div>
 </section>
 <script>
-const campaigns={christmas:{icon:'🎄🎅',title:'クリスマス寄付 -- <span>Global + Local = Strong</span>',subtitle:'Ohanaと共に育つ',description:'このクリスマス、「自立」というギフトを届けませんか。あなたの寄付で、農場、寺院、コミュニティにオフグリッド電源・通信インフラを届けます。マウイでも、日本でも、Ohanaが育つ場所ならどこでも。',cta:'🎁 PayPalで寄付する',deadline:'クリスマスキャンペーン：12月25日まで',className:''},newyear:{icon:'🌅✨',title:'新年、新しい力 -- <span>Global + Local = Strong</span>',subtitle:'新しい章が始まる',description:'新年を自立と共に始めませんか。あなたの寄付で、コミュニティが新しいスタートを切るためのオフグリッドインフラを届けます。',cta:'🌅 新年キャンペーンを支援',deadline:'新年キャンペーン：1月',className:'default'},whale:{icon:'🐋🌊',title:'ホエールシーズン -- <span>Global + Local = Strong</span>',subtitle:'彼らは毎年戻ってくる',description:'クジラがハワイの海に戻るこの季節、世界中のコミュニティのためにレジリエントなインフラを作り続けます。',cta:'🐋 ホエールシーズンを支援',deadline:'ホエールシーズン：2月〜3月',className:'default'},lahaina:{icon:'🕯️',title:'忘れない -- <span>Global + Local = Strong</span>',subtitle:'Ohanaと共に育つ',description:'8月8日を忘れない。失った人々を偲び、世界中のコミュニティのためにレジリエントなインフラを構築します。',cta:'🕯️ 記憶を刻む',deadline:'8月8日追悼',className:'lahaina'},default:{icon:'⚡🔋',title:'オフグリッドインフラ -- <span>Global + Local = Strong</span>',subtitle:'Ohanaと共に育つ',description:'農場、寺院、教会、コミュニティにオフグリッド電源・通信・緊急インフラを届けます。マウイでも、日本でも。',cta:'⚡ PayPalで寄付する',deadline:'',className:'default'}};
+const campaigns={christmas:{icon:'🎄🎅',title:'クリスマス寄付 -- <span>Global + Local = Strong</span>',subtitle:'Ohanaと共に育つ',description:'このクリスマス、「自立」というギフトを届けませんか。あなたの寄付で、農場、寺院、コミュニティにオフグリッド電源・通信インフラを届けます。',cta:'🎁 PayPalで寄付する',deadline:'クリスマスキャンペーン：12月25日まで',className:''},newyear:{icon:'🌅✨',title:'新年、新しい力 -- <span>Global + Local = Strong</span>',subtitle:'新しい章が始まる',description:'新年を自立と共に始めませんか。',cta:'🌅 新年キャンペーンを支援',deadline:'新年キャンペーン：1月',className:'default'},whale:{icon:'🐋🌊',title:'ホエールシーズン -- <span>Global + Local = Strong</span>',subtitle:'彼らは毎年戻ってくる',description:'クジラがハワイの海に戻るこの季節、世界中のコミュニティのためにレジリエントなインフラを作り続けます。',cta:'🐋 ホエールシーズンを支援',deadline:'ホエールシーズン：2月〜3月',className:'default'},lahaina:{icon:'🕯️',title:'忘れない -- <span>Global + Local = Strong</span>',subtitle:'Ohanaと共に育つ',description:'8月8日を忘れない。',cta:'🕯️ 記憶を刻む',deadline:'8月8日追悼',className:'lahaina'},default:{icon:'⚡🔋',title:'オフグリッドインフラ -- <span>Global + Local = Strong</span>',subtitle:'Ohanaと共に育つ',description:'農場、寺院、教会、コミュニティにオフグリッド電源・通信・緊急インフラを届けます。',cta:'⚡ PayPalで寄付する',deadline:'',className:'default'}};
 function getCurrentCampaign(){const t=new Date(),m=t.getMonth()+1,d=t.getDate();if(m===12&&d>=1&&d<=25)return'christmas';if((m===12&&d>=26)||(m===1&&d<=15))return'newyear';if((m===1&&d>=16)||m===2||m===3)return'whale';if(m===8&&d>=1&&d<=15)return'lahaina';return'default';}
 function applyCampaign(){const c=campaigns[getCurrentCampaign()];document.getElementById('campaignIcon').textContent=c.icon;document.getElementById('campaignTitle').innerHTML=c.title;document.getElementById('campaignSubtitle').textContent=c.subtitle;document.getElementById('campaignDescription').textContent=c.description;document.getElementById('campaignCta').textContent=c.cta;document.getElementById('campaignDeadline').textContent=c.deadline;document.querySelector('.campaign-section').className='campaign-section '+c.className;}
 document.addEventListener('DOMContentLoaded',applyCampaign);

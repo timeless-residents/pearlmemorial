@@ -24,6 +24,34 @@
         .evolving-statement{text-align:center;padding:4rem 2rem;background:var(--color-bg)}
         .evolving-statement h3{font-family:var(--font-display);font-size:1.5rem;font-weight:300;margin-bottom:1rem;color:var(--color-text)}
         .evolving-statement p{color:var(--color-text-muted);max-width:500px;margin:0 auto;line-height:1.8}
+        /* Boundarist Section */
+        .boundarist-section{padding:5rem 2rem;background:linear-gradient(180deg,var(--color-bg) 0%,rgba(126,184,201,.06) 50%,var(--color-bg) 100%);border-top:1px solid rgba(126,184,201,.2);border-bottom:1px solid rgba(126,184,201,.2)}
+        .boundarist-content{max-width:900px;margin:0 auto;text-align:center}
+        .boundarist-section h2{font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.5rem);font-weight:300;margin-bottom:2.5rem;line-height:1.4}
+        .two-types{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-bottom:3rem}
+        .type-block{padding:1.5rem;border-radius:.5rem}
+        .type-block.outside{background:rgba(126,184,201,.05);border:1px solid rgba(126,184,201,.2)}
+        .type-block.inside{background:rgba(201,169,98,.05);border:1px solid rgba(201,169,98,.2)}
+        .type-block h3{font-family:var(--font-display);font-size:1.1rem;font-weight:300;margin-bottom:1.5rem;line-height:1.5}
+        .type-block.outside h3{color:var(--color-hope)}
+        .type-block.inside h3{color:var(--color-accent)}
+        .experience-list{display:flex;flex-direction:column;gap:.6rem}
+        .experience-item{font-size:.95rem;color:var(--color-text-muted);padding:.7rem 1rem;background:rgba(0,0,0,.2);border-left:3px solid var(--color-hope);text-align:left;transition:all .3s ease}
+        .type-block.inside .experience-item{border-left-color:var(--color-accent)}
+        .experience-item:hover{background:rgba(255,255,255,.05);color:var(--color-text)}
+        .boundary-definition{margin:3rem 0;padding:2rem}
+        .boundary-definition p{font-family:var(--font-display);font-size:1.4rem;line-height:1.6;margin-bottom:1rem}
+        .boundary-definition strong{color:var(--color-hope)}
+        .boundary-definition .boundary-sub{font-size:1rem;color:var(--color-text-muted)}
+        .we-are-too{margin:3rem 0;padding:2rem;background:rgba(201,169,98,.05);border:1px solid rgba(201,169,98,.2);border-radius:.5rem}
+        .we-are-too h3{font-family:var(--font-display);font-size:1.3rem;margin-bottom:1rem;color:var(--color-accent)}
+        .we-are-too p{font-size:1rem;line-height:1.8;color:var(--color-text-muted)}
+        .we-are-too em{color:var(--color-text);font-style:normal}
+        .core-message-box{margin:3rem 0}
+        .core-message-box p{font-size:1.1rem;color:var(--color-text-muted);margin-bottom:1rem}
+        .core-message-box .the-message{font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.5rem);color:var(--color-hope);font-style:italic;margin-bottom:.5rem}
+        .core-message-box .sub-message{font-size:1rem;color:var(--color-accent)}
+        @media(max-width:768px){.two-types{grid-template-columns:1fr}}
         .campaign-section{padding:4rem 2rem;background:linear-gradient(180deg,var(--color-bg) 0%,rgba(196,30,58,.08) 50%,var(--color-bg) 100%);text-align:center;border-top:2px solid var(--color-campaign);border-bottom:2px solid var(--color-campaign)}
         .campaign-section.default{background:linear-gradient(180deg,var(--color-bg) 0%,rgba(126,184,201,.08) 50%,var(--color-bg) 100%);border-color:var(--color-hope)}
         .campaign-section.lahaina{background:linear-gradient(180deg,var(--color-bg) 0%,rgba(201,169,98,.08) 50%,var(--color-bg) 100%);border-color:var(--color-accent)}
@@ -127,9 +155,9 @@
         .footer-location{font-size:.7rem;letter-spacing:.2em;color:var(--color-text-muted)}
         @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
         @keyframes float{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-10px)}}
-        @media(max-width:1024px){.packages-grid{grid-template-columns:1fr 1fr}.core-pillars,.independence-grid{grid-template-columns:1fr 1fr}.donation-tiers{grid-template-columns:1fr 1fr}}
-        @media(max-width:768px){section{padding:4rem 1.5rem}.packages-grid,.family-grid,.core-pillars,.independence-grid{grid-template-columns:1fr}.cta-buttons,.quick-extras{flex-direction:column;align-items:center}.lang-switch{top:1rem;right:1rem}.donation-tiers{grid-template-columns:1fr}.campaign-photos{flex-direction:column;align-items:center}.rd-grid{grid-template-columns:1fr}}
-        @media print{*{background:transparent!important}body{background:white!important;color:#1a1a1a!important;font-size:10pt;line-height:1.4}.lang-switch,.scroll-indicator,.hero-cta,.cta-buttons,.cta-section,.video-container,.void-circle,.why-visual,blockquote,iframe,footer .footer-payment{display:none!important}.hero{min-height:auto!important;padding:1rem!important;background:none!important}.hero h1{opacity:1!important;animation:none!important;color:#1a1a1a!important;font-size:24pt!important}.hero h1 em{color:#2a6a7a!important}.hero-tagline,.hero-subtitle{opacity:1!important;animation:none!important;color:#444!important}section{padding:1rem 0.5rem!important;max-width:100%!important;page-break-inside:avoid}.quick-packages,.services-section,.offgrid-section,.gift-section,.core-message,.campaign-section,.evolving-statement{background:none!important;padding:1rem 0.5rem!important}h2,h3,h4,.pillar h4,.independence-item h4{color:#1a1a1a!important}p,li,.package-desc{color:#333!important}.section-label,.pillar-subtitle{color:#666!important}.highlight,.pearl-highlight p{color:#2a6a7a!important}.packages-grid{grid-template-columns:repeat(4,1fr)!important;gap:0.5rem!important}.package-card{background:none!important;border:1px solid #ccc!important;padding:0.5rem!important}.package-price{color:#1a1a1a!important;font-weight:600!important}.package-icon{font-size:1.5rem!important;margin-bottom:0.3rem!important}.core-pillars,.independence-grid{grid-template-columns:repeat(3,1fr)!important;gap:0.5rem!important}.family-grid{grid-template-columns:repeat(3,1fr)!important;gap:0.5rem!important}.pillar,.independence-item,.service-card{background:none!important;border:1px solid #ccc!important;padding:0.5rem!important}.pearl-image{background:#eee!important;box-shadow:none!important;border:1px solid #ccc!important;width:60px!important;height:60px!important;font-size:1.5rem!important;margin-bottom:1rem!important}.pearl-dates,.family-role{color:#666!important}.pearl-highlight,.story-block,.gift-story{background:none!important;border-left:2px solid #666!important;padding:0.5rem!important}footer{border-top:1px solid #ccc!important;padding:1rem 0.5rem!important}.donation-tiers{grid-template-columns:repeat(2,1fr)!important;gap:0.5rem!important}.donation-tier{background:none!important;border:1px solid #ccc!important;padding:0.5rem!important}.tier-amount{color:#1a1a1a!important}}
+        @media(max-width:1024px){.packages-grid{grid-template-columns:1fr 1fr}.core-pillars,.independence-grid{grid-template-columns:1fr 1fr}.donation-tiers{grid-template-columns:1fr 1fr}.target-grid{grid-template-columns:1fr 1fr}}
+        @media(max-width:768px){section{padding:4rem 1.5rem}.packages-grid,.family-grid,.core-pillars,.independence-grid{grid-template-columns:1fr}.cta-buttons,.quick-extras{flex-direction:column;align-items:center}.lang-switch{top:1rem;right:1rem}.donation-tiers{grid-template-columns:1fr}.campaign-photos{flex-direction:column;align-items:center}.rd-grid{grid-template-columns:1fr}.target-grid{grid-template-columns:1fr}.boundary-table{font-size:.8rem}.boundary-table th,.boundary-table td{padding:.7rem}}
+        @media print{*{background:transparent!important}body{background:white!important;color:#1a1a1a!important;font-size:10pt;line-height:1.4}.lang-switch,.scroll-indicator,.hero-cta,.cta-buttons,.cta-section,.video-container,.void-circle,.why-visual,blockquote,iframe,footer .footer-payment{display:none!important}.hero{min-height:auto!important;padding:1rem!important;background:none!important}.hero h1{opacity:1!important;animation:none!important;color:#1a1a1a!important;font-size:24pt!important}.hero h1 em{color:#2a6a7a!important}.hero-tagline,.hero-subtitle{opacity:1!important;animation:none!important;color:#444!important}section{padding:1rem 0.5rem!important;max-width:100%!important;page-break-inside:avoid}.quick-packages,.services-section,.offgrid-section,.gift-section,.core-message,.campaign-section,.evolving-statement,.boundarist-section{background:none!important;padding:1rem 0.5rem!important}h2,h3,h4,.pillar h4,.independence-item h4{color:#1a1a1a!important}p,li,.package-desc{color:#333!important}.section-label,.pillar-subtitle{color:#666!important}.highlight,.pearl-highlight p{color:#2a6a7a!important}.packages-grid{grid-template-columns:repeat(4,1fr)!important;gap:0.5rem!important}.package-card{background:none!important;border:1px solid #ccc!important;padding:0.5rem!important}.package-price{color:#1a1a1a!important;font-weight:600!important}.package-icon{font-size:1.5rem!important;margin-bottom:0.3rem!important}.core-pillars,.independence-grid{grid-template-columns:repeat(3,1fr)!important;gap:0.5rem!important}.family-grid{grid-template-columns:repeat(3,1fr)!important;gap:0.5rem!important}.pillar,.independence-item,.service-card{background:none!important;border:1px solid #ccc!important;padding:0.5rem!important}.pearl-image{background:#eee!important;box-shadow:none!important;border:1px solid #ccc!important;width:60px!important;height:60px!important;font-size:1.5rem!important;margin-bottom:1rem!important}.pearl-dates,.family-role{color:#666!important}.pearl-highlight,.story-block,.gift-story{background:none!important;border-left:2px solid #666!important;padding:0.5rem!important}footer{border-top:1px solid #ccc!important;padding:1rem 0.5rem!important}.donation-tiers{grid-template-columns:repeat(2,1fr)!important;gap:0.5rem!important}.donation-tier{background:none!important;border:1px solid #ccc!important;padding:0.5rem!important}.tier-amount{color:#1a1a1a!important}}
     </style>
 </head>
 <body>
@@ -139,10 +167,68 @@
         <p class="hero-tagline">Off-grid Sato Family</p>
         <h1>You Are Allowed<br>to <em>Exist</em></h1>
         <p class="hero-subtitle">Delivering the permission to be -- through memory, infrastructure, and independence</p>
-        <a href="#campaign" class="hero-cta">See Campaign</a>
+        <a href="#boundarist" class="hero-cta">Who We Serve</a>
     </div>
     <div class="scroll-indicator">DISCOVER</div>
 </header>
+
+<!-- Boundarist Section (NEW) -->
+<section class="boundarist-section" id="boundarist">
+    <div class="boundarist-content">
+        
+        <h2>Have you ever experienced<br>something like this?</h2>
+        
+        <div class="two-types">
+            <div class="type-block outside">
+                <h3>When what you took for granted started to shake</h3>
+                <div class="experience-list">
+                    <div class="experience-item">Suddenly lost your place to live</div>
+                    <div class="experience-item">Lost someone important to you</div>
+                    <div class="experience-item">Sleepless nights worrying about money</div>
+                    <div class="experience-item">Hit a wall with visas or credentials</div>
+                    <div class="experience-item">Felt isolated when you couldn't connect</div>
+                    <div class="experience-item">Wondered "Who am I, really?"</div>
+                </div>
+            </div>
+
+            <div class="type-block inside">
+                <h3>When the system didn't work for someone in front of you</h3>
+                <div class="experience-list">
+                    <div class="experience-item">The rules say no, but the person needs help</div>
+                    <div class="experience-item">You knew something was wrong, but the organization wouldn't move</div>
+                    <div class="experience-item">You wanted to act, but didn't have "permission"</div>
+                    <div class="experience-item">You don't want to end it with "We can't do that"</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="boundary-definition">
+            <p>Both are <strong>"standing at the boundary."</strong></p>
+            <p class="boundary-sub">Outside the system, or inside seeing its limits.</p>
+        </div>
+
+        <div class="we-are-too">
+            <h3>We've been on both sides.</h3>
+            <p>
+                "You need an address." But someone else said, "Let me figure this out."<br>
+                "We need references." But they looked at us, and chose to trust.<br>
+                <em>That moment changed everything.</em>
+            </p>
+        </div>
+
+        <div class="core-message-box">
+            <p>Whether you're outside or inside the system:</p>
+            <p class="the-message">"You don't need permission."</p>
+            <p class="sub-message">To exist. To help. To act.</p>
+        </div>
+
+        <div class="cta-buttons" style="margin-top:2rem;">
+            <a href="https://calendly.com/pearlmemorial/pearlmemorialsession" class="cta-primary">Tell Us Your Story</a>
+        </div>
+
+    </div>
+</section>
+
 <section class="evolving-statement">
     <h3>We're learning. We're evolving.</h3>
     <p>We don't have all the answers yet.<br>But we keep improving to serve you better.<br>Feedback always welcome.</p>
