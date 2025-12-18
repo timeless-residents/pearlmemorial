@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>許可はいらない | Boundarist Movement</title>
+    <title>共鳴が道を開く | Boundarist Movement</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
@@ -13,6 +13,7 @@
             --gold-light: #e8d5a8;
             --gold-glow: rgba(201, 169, 98, 0.25);
             --hope-blue: #7EB8C9;
+            --hope-blue-glow: rgba(126, 184, 201, 0.2);
             --bg-deep: #0a0a0c;
             --bg-subtle: #101014;
             --bg-card: #16161a;
@@ -22,161 +23,842 @@
             --font-display: 'Shippori Mincho', serif;
             --font-body: 'Zen Kaku Gothic New', sans-serif;
         }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        
         html { scroll-behavior: smooth; }
-        body { font-family: var(--font-body); font-weight: 300; background: var(--bg-deep); color: var(--text-main); line-height: 1.9; font-size: 16px; overflow-x: hidden; }
-        .lang-switch { position: fixed; top: 1.5rem; right: 1.5rem; z-index: 1000; display: flex; gap: 0.3rem; background: rgba(10, 10, 12, 0.85); backdrop-filter: blur(12px); padding: 0.4rem; border-radius: 2rem; border: 1px solid rgba(201, 169, 98, 0.15); }
-        .lang-switch a { padding: 0.4rem 1rem; color: var(--text-muted); text-decoration: none; font-size: 0.75rem; border-radius: 1.5rem; transition: all 0.3s ease; }
-        .lang-switch a.active { background: var(--gold); color: var(--bg-deep); }
-        .lang-switch a:hover:not(.active) { color: var(--text-main); }
-        .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; padding: 2rem; background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(201, 169, 98, 0.08) 0%, transparent 50%), var(--bg-deep); }
-        .hero-content { max-width: 900px; position: relative; z-index: 1; }
-        .hero-tagline { font-size: 0.7rem; letter-spacing: 0.5em; color: var(--gold); margin-bottom: 2.5rem; opacity: 0; animation: fadeUp 1s ease forwards 0.2s; }
-        .hero h1 { font-family: var(--font-display); font-size: clamp(2.8rem, 10vw, 6rem); font-weight: 500; line-height: 1.15; margin-bottom: 1.5rem; opacity: 0; animation: fadeUp 1s ease forwards 0.4s; }
-        .hero h1 .gold { color: var(--gold); text-shadow: 0 0 60px var(--gold-glow); }
-        .hero-sub { font-family: var(--font-display); font-size: clamp(1rem, 2.5vw, 1.4rem); color: var(--text-muted); margin-bottom: 3.5rem; opacity: 0; animation: fadeUp 1s ease forwards 0.6s; }
-        .hero-cta { display: inline-block; padding: 1.1rem 3rem; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.2em; transition: all 0.4s ease; opacity: 0; animation: fadeUp 1s ease forwards 0.8s; }
-        .hero-cta:hover { background: var(--gold); color: var(--bg-deep); box-shadow: 0 0 40px var(--gold-glow); }
-        .scroll-hint { position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%); font-size: 0.65rem; letter-spacing: 0.4em; color: var(--text-dim); opacity: 0; animation: fadeUp 1s ease forwards 1.2s, float 3s ease-in-out infinite 2s; }
-        section { padding: 6rem 2rem; max-width: 1000px; margin: 0 auto; }
-        .section-label { font-size: 0.65rem; letter-spacing: 0.5em; color: var(--gold); margin-bottom: 1.5rem; text-align: center; }
-        h2 { font-family: var(--font-display); font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 500; margin-bottom: 2rem; line-height: 1.5; text-align: center; }
+        
+        body {
+            font-family: var(--font-body);
+            font-weight: 300;
+            background: var(--bg-deep);
+            color: var(--text-main);
+            line-height: 1.9;
+            font-size: 16px;
+            overflow-x: hidden;
+        }
+
+        .lang-switch {
+            position: fixed;
+            top: 1.5rem;
+            right: 1.5rem;
+            z-index: 1000;
+            display: flex;
+            gap: 0.3rem;
+            background: rgba(10, 10, 12, 0.85);
+            backdrop-filter: blur(12px);
+            padding: 0.4rem;
+            border-radius: 2rem;
+            border: 1px solid rgba(201, 169, 98, 0.15);
+        }
+        .lang-switch a {
+            padding: 0.4rem 1rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.75rem;
+            border-radius: 1.5rem;
+            transition: all 0.3s ease;
+            letter-spacing: 0.05em;
+        }
+        .lang-switch a.active {
+            background: var(--gold);
+            color: var(--bg-deep);
+        }
+        .lang-switch a:hover:not(.active) {
+            color: var(--text-main);
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            padding: 2rem;
+            background: 
+                radial-gradient(ellipse 80% 50% at 50% 0%, rgba(201, 169, 98, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse 60% 40% at 20% 80%, rgba(126, 184, 201, 0.04) 0%, transparent 50%),
+                var(--bg-deep);
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-tagline {
+            font-size: 0.7rem;
+            letter-spacing: 0.5em;
+            color: var(--gold);
+            margin-bottom: 2.5rem;
+            opacity: 0;
+            animation: fadeUp 1s ease forwards 0.2s;
+        }
+
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.2rem, 8vw, 4.5rem);
+            font-weight: 500;
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            animation: fadeUp 1s ease forwards 0.4s;
+            letter-spacing: 0.05em;
+        }
+
+        .hero h1 .gold {
+            color: var(--gold);
+            text-shadow: 0 0 60px var(--gold-glow);
+        }
+
+        .hero-sub {
+            font-family: var(--font-display);
+            font-size: clamp(1rem, 2.5vw, 1.4rem);
+            color: var(--text-muted);
+            margin-bottom: 3.5rem;
+            opacity: 0;
+            animation: fadeUp 1s ease forwards 0.6s;
+            letter-spacing: 0.1em;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            padding: 1.1rem 3rem;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 0.8rem;
+            letter-spacing: 0.25em;
+            transition: all 0.4s ease;
+            opacity: 0;
+            animation: fadeUp 1s ease forwards 0.8s;
+        }
+        .hero-cta:hover {
+            background: var(--gold);
+            color: var(--bg-deep);
+            box-shadow: 0 0 40px var(--gold-glow);
+        }
+
+        .scroll-hint {
+            position: absolute;
+            bottom: 2.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.65rem;
+            letter-spacing: 0.4em;
+            color: var(--text-dim);
+            opacity: 0;
+            animation: fadeUp 1s ease forwards 1.2s, float 3s ease-in-out infinite 2s;
+        }
+
+        section {
+            padding: 6rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            font-size: 0.65rem;
+            letter-spacing: 0.5em;
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.6rem, 4vw, 2.4rem);
+            font-weight: 500;
+            margin-bottom: 2rem;
+            line-height: 1.5;
+            text-align: center;
+            letter-spacing: 0.03em;
+        }
+
         h2 .highlight { color: var(--hope-blue); }
         h2 .gold { color: var(--gold); }
-        p { color: var(--text-muted); max-width: 60ch; margin: 0 auto 1.5rem; }
-        .boundarist-question { padding: 7rem 2rem; background: linear-gradient(180deg, var(--bg-deep) 0%, rgba(126, 184, 201, 0.03) 30%, rgba(201, 169, 98, 0.03) 70%, var(--bg-deep) 100%); border-top: 1px solid rgba(201, 169, 98, 0.1); }
-        .two-types { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; max-width: 900px; margin: 0 auto 4rem; }
-        .type-card { padding: 2rem; border-radius: 0.5rem; transition: all 0.4s ease; }
-        .type-card.outside { background: rgba(126, 184, 201, 0.04); border: 1px solid rgba(126, 184, 201, 0.15); }
-        .type-card.inside { background: rgba(201, 169, 98, 0.04); border: 1px solid rgba(201, 169, 98, 0.15); }
+
+        p {
+            color: var(--text-muted);
+            max-width: 60ch;
+            margin: 0 auto 1.5rem;
+        }
+
+        .boundarist-question {
+            padding: 7rem 2rem;
+            background: 
+                linear-gradient(180deg, var(--bg-deep) 0%, rgba(126, 184, 201, 0.03) 30%, rgba(201, 169, 98, 0.03) 70%, var(--bg-deep) 100%);
+            border-top: 1px solid rgba(201, 169, 98, 0.1);
+        }
+
+        .boundarist-question h2 { margin-bottom: 3.5rem; }
+
+        .two-types {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            max-width: 900px;
+            margin: 0 auto 4rem;
+        }
+
+        .type-card {
+            padding: 2rem;
+            border-radius: 0.5rem;
+            transition: all 0.4s ease;
+        }
+        .type-card.outside {
+            background: rgba(126, 184, 201, 0.04);
+            border: 1px solid rgba(126, 184, 201, 0.15);
+        }
+        .type-card.inside {
+            background: rgba(201, 169, 98, 0.04);
+            border: 1px solid rgba(201, 169, 98, 0.15);
+        }
         .type-card:hover { transform: translateY(-4px); }
-        .type-card h3 { font-family: var(--font-display); font-size: 1rem; font-weight: 500; margin-bottom: 1.5rem; line-height: 1.7; }
+        .type-card.outside:hover {
+            border-color: rgba(126, 184, 201, 0.35);
+            box-shadow: 0 20px 60px rgba(126, 184, 201, 0.08);
+        }
+        .type-card.inside:hover {
+            border-color: rgba(201, 169, 98, 0.35);
+            box-shadow: 0 20px 60px rgba(201, 169, 98, 0.08);
+        }
+
+        .type-card h3 {
+            font-family: var(--font-display);
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
         .type-card.outside h3 { color: var(--hope-blue); }
         .type-card.inside h3 { color: var(--gold); }
-        .experience-list { display: flex; flex-direction: column; gap: 0.6rem; }
-        .experience-item { font-size: 0.9rem; color: var(--text-muted); padding: 0.7rem 1rem; background: rgba(0, 0, 0, 0.25); border-left: 3px solid; transition: all 0.3s ease; }
+
+        .experience-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .experience-item {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            padding: 0.7rem 1rem;
+            background: rgba(0, 0, 0, 0.25);
+            border-left: 3px solid;
+            transition: all 0.3s ease;
+        }
         .type-card.outside .experience-item { border-color: var(--hope-blue); }
         .type-card.inside .experience-item { border-color: var(--gold); }
-        .experience-item:hover { background: rgba(255, 255, 255, 0.03); color: var(--text-main); }
-        .definition-box { text-align: center; margin: 4rem auto; max-width: 700px; }
-        .definition-box p { font-family: var(--font-display); font-size: 1.4rem; line-height: 1.7; color: var(--text-main); margin-bottom: 0.8rem; }
+        .experience-item:hover {
+            background: rgba(255, 255, 255, 0.03);
+            color: var(--text-main);
+        }
+
+        .definition-box {
+            text-align: center;
+            margin: 4rem auto;
+            max-width: 700px;
+        }
+
+        .definition-box p {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            line-height: 1.7;
+            color: var(--text-main);
+            margin-bottom: 0.8rem;
+        }
+
         .definition-box strong { color: var(--hope-blue); }
-        .definition-box .sub { font-family: var(--font-body); font-size: 0.95rem; color: var(--text-muted); }
-        .our-story { margin: 4rem auto; padding: 2.5rem; max-width: 750px; background: rgba(201, 169, 98, 0.04); border: 1px solid rgba(201, 169, 98, 0.15); border-radius: 0.5rem; }
-        .our-story h3 { font-family: var(--font-display); font-size: 1.15rem; color: var(--gold); margin-bottom: 1.2rem; text-align: center; }
-        .our-story p { font-size: 0.95rem; line-height: 2; text-align: center; max-width: none; }
-        .our-story em { color: var(--text-main); font-style: normal; }
-        .core-message-section { text-align: center; margin: 4rem auto; }
-        .core-message-section .lead { font-size: 1rem; color: var(--text-muted); margin-bottom: 1rem; }
-        .the-message { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3rem); color: var(--gold); margin-bottom: 0.8rem; text-shadow: 0 0 80px var(--gold-glow); letter-spacing: 0.1em; }
-        .sub-message { font-size: 1rem; color: var(--hope-blue); letter-spacing: 0.15em; }
-        .contrast-section { padding: 6rem 2rem; background: var(--bg-subtle); }
-        .contrast-content { max-width: 900px; margin: 0 auto; }
-        .contrast-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 3rem; }
-        .contrast-card { padding: 2rem; border-radius: 0.5rem; }
-        .contrast-card.fail { background: rgba(100, 80, 80, 0.1); border: 1px solid rgba(150, 100, 100, 0.2); }
-        .contrast-card.success { background: rgba(201, 169, 98, 0.06); border: 1px solid rgba(201, 169, 98, 0.25); }
-        .contrast-card h4 { font-family: var(--font-display); font-size: 1.1rem; margin-bottom: 1.2rem; }
+
+        .definition-box .sub {
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .our-story {
+            margin: 4rem auto;
+            padding: 2.5rem;
+            max-width: 750px;
+            background: rgba(201, 169, 98, 0.04);
+            border: 1px solid rgba(201, 169, 98, 0.15);
+            border-radius: 0.5rem;
+        }
+
+        .our-story h3 {
+            font-family: var(--font-display);
+            font-size: 1.15rem;
+            color: var(--gold);
+            margin-bottom: 1.2rem;
+            text-align: center;
+        }
+
+        .our-story p {
+            font-size: 0.95rem;
+            line-height: 2;
+            text-align: center;
+            max-width: none;
+        }
+
+        .our-story em {
+            color: var(--text-main);
+            font-style: normal;
+        }
+
+        .core-message-section {
+            text-align: center;
+            margin: 4rem auto;
+        }
+
+        .core-message-section .lead {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .the-message {
+            font-family: var(--font-display);
+            font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+            color: var(--gold);
+            margin-bottom: 0.8rem;
+            text-shadow: 0 0 80px var(--gold-glow);
+            letter-spacing: 0.1em;
+        }
+
+        .sub-message {
+            font-size: 1rem;
+            color: var(--hope-blue);
+            letter-spacing: 0.15em;
+        }
+
+        .contrast-section {
+            padding: 6rem 2rem;
+            background: var(--bg-subtle);
+        }
+
+        .contrast-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .contrast-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .contrast-card {
+            padding: 2rem;
+            border-radius: 0.5rem;
+        }
+
+        .contrast-card.fail {
+            background: rgba(100, 80, 80, 0.1);
+            border: 1px solid rgba(150, 100, 100, 0.2);
+        }
+
+        .contrast-card.success {
+            background: rgba(201, 169, 98, 0.06);
+            border: 1px solid rgba(201, 169, 98, 0.25);
+        }
+
+        .contrast-card h4 {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            margin-bottom: 1.2rem;
+        }
+
         .contrast-card.fail h4 { color: var(--text-muted); }
         .contrast-card.success h4 { color: var(--gold); }
-        .contrast-item { display: flex; justify-content: space-between; padding: 0.6rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.05); font-size: 0.85rem; }
+
+        .contrast-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.6rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.85rem;
+        }
+
         .contrast-item:last-child { border-bottom: none; }
+
         .contrast-item .label { color: var(--text-dim); }
         .contrast-item .value { color: var(--text-muted); }
         .contrast-card.success .contrast-item .value { color: var(--text-main); }
-        .contrast-insight { margin-top: 3rem; text-align: center; padding: 2rem; background: rgba(201, 169, 98, 0.05); border-radius: 0.5rem; }
-        .contrast-insight p { font-family: var(--font-display); font-size: 1.1rem; color: var(--text-main); margin-bottom: 0; }
+
+        .contrast-insight {
+            margin-top: 3rem;
+            text-align: center;
+            padding: 2rem;
+            background: rgba(201, 169, 98, 0.05);
+            border-radius: 0.5rem;
+        }
+
+        .contrast-insight p {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            color: var(--text-main);
+            margin-bottom: 0;
+        }
+
         .contrast-insight strong { color: var(--gold); }
+
         .pillars-section { padding: 6rem 2rem; }
-        .pillars-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 900px; margin: 3rem auto 0; }
-        .pillar { padding: 2rem 1.5rem; text-align: center; background: linear-gradient(180deg, var(--bg-card) 0%, transparent 100%); border: 1px solid rgba(201, 169, 98, 0.1); transition: all 0.4s ease; }
-        .pillar:hover { border-color: rgba(201, 169, 98, 0.3); transform: translateY(-5px); }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            max-width: 900px;
+            margin: 3rem auto 0;
+        }
+
+        .pillar {
+            padding: 2rem 1.5rem;
+            text-align: center;
+            background: linear-gradient(180deg, var(--bg-card) 0%, transparent 100%);
+            border: 1px solid rgba(201, 169, 98, 0.1);
+            transition: all 0.4s ease;
+        }
+
+        .pillar:hover {
+            border-color: rgba(201, 169, 98, 0.3);
+            transform: translateY(-5px);
+        }
+
         .pillar-icon { font-size: 2rem; margin-bottom: 1rem; }
-        .pillar h4 { font-family: var(--font-display); font-size: 1.15rem; margin-bottom: 0.3rem; }
-        .pillar-sub { font-size: 0.65rem; letter-spacing: 0.2em; color: var(--gold); margin-bottom: 0.8rem; }
+
+        .pillar h4 {
+            font-family: var(--font-display);
+            font-size: 1.15rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .pillar-sub {
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            color: var(--gold);
+            margin-bottom: 0.8rem;
+        }
+
         .pillar p { font-size: 0.8rem; margin-bottom: 0; }
-        .services-section { padding: 6rem 2rem; background: var(--bg-subtle); }
-        .services-content { max-width: 1000px; margin: 0 auto; text-align: center; }
-        .packages-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin: 3rem 0 2rem; }
-        .package-card { padding: 1.5rem 1rem; background: var(--bg-deep); border: 1px solid rgba(201, 169, 98, 0.1); transition: all 0.4s ease; }
-        .package-card:hover { border-color: rgba(201, 169, 98, 0.35); transform: translateY(-5px); }
+
+        .services-section {
+            padding: 6rem 2rem;
+            background: var(--bg-subtle);
+        }
+
+        .services-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin: 3rem 0 2rem;
+        }
+
+        .package-card {
+            padding: 1.5rem 1rem;
+            background: var(--bg-deep);
+            border: 1px solid rgba(201, 169, 98, 0.1);
+            transition: all 0.4s ease;
+        }
+
+        .package-card:hover {
+            border-color: rgba(201, 169, 98, 0.35);
+            transform: translateY(-5px);
+        }
+
         .package-icon { font-size: 1.8rem; margin-bottom: 0.8rem; }
-        .package-card h4 { font-family: var(--font-display); font-size: 1.05rem; margin-bottom: 0.4rem; }
-        .package-price { font-size: 0.95rem; color: var(--gold); margin-bottom: 0.3rem; }
-        .package-desc { font-size: 0.7rem; color: var(--text-dim); }
-        .services-extras { display: flex; justify-content: center; gap: 3rem; margin-top: 2.5rem; flex-wrap: wrap; }
-        .extra-item { text-align: center; max-width: 280px; }
-        .extra-item h5 { font-family: var(--font-display); font-size: 0.95rem; color: var(--hope-blue); margin-bottom: 0.4rem; }
-        .extra-item p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.6; }
-        .campaign-section { padding: 5rem 2rem; background: linear-gradient(180deg, var(--bg-deep) 0%, rgba(201, 169, 98, 0.06) 50%, var(--bg-deep) 100%); border-top: 1px solid rgba(201, 169, 98, 0.2); border-bottom: 1px solid rgba(201, 169, 98, 0.2); }
-        .campaign-content { max-width: 900px; margin: 0 auto; text-align: center; }
+        
+        .package-card h4 {
+            font-family: var(--font-display);
+            font-size: 1.05rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .package-price {
+            font-size: 0.95rem;
+            color: var(--gold);
+            margin-bottom: 0.3rem;
+        }
+
+        .package-desc {
+            font-size: 0.7rem;
+            color: var(--text-dim);
+        }
+
+        .services-extras {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .extra-item {
+            text-align: center;
+            max-width: 280px;
+        }
+
+        .extra-item h5 {
+            font-family: var(--font-display);
+            font-size: 0.95rem;
+            color: var(--hope-blue);
+            margin-bottom: 0.4rem;
+        }
+
+        .extra-item p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .campaign-section {
+            padding: 5rem 2rem;
+            background: linear-gradient(180deg, var(--bg-deep) 0%, rgba(201, 169, 98, 0.06) 50%, var(--bg-deep) 100%);
+            border-top: 1px solid rgba(201, 169, 98, 0.2);
+            border-bottom: 1px solid rgba(201, 169, 98, 0.2);
+        }
+
+        .campaign-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
         .campaign-icon { font-size: 3rem; margin-bottom: 1rem; }
+
         .campaign-section h2 span { color: var(--gold); }
-        .campaign-subtitle { font-family: var(--font-display); font-size: 1rem; color: var(--text-muted); margin-bottom: 1.5rem; }
-        .campaign-description { color: var(--text-muted); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
-        .donation-tiers { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin: 2rem 0; }
-        .donation-tier { padding: 1.3rem; background: rgba(10, 10, 12, 0.7); border: 1px solid rgba(201, 169, 98, 0.15); border-radius: 0.4rem; text-align: left; transition: all 0.3s ease; }
-        .donation-tier:hover { border-color: rgba(201, 169, 98, 0.4); transform: translateY(-3px); }
-        .tier-amount { font-family: var(--font-display); font-size: 1.3rem; color: var(--gold); margin-bottom: 0.5rem; }
+
+        .campaign-subtitle {
+            font-family: var(--font-display);
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .campaign-description {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .donation-tiers {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .donation-tier {
+            padding: 1.3rem;
+            background: rgba(10, 10, 12, 0.7);
+            border: 1px solid rgba(201, 169, 98, 0.15);
+            border-radius: 0.4rem;
+            text-align: left;
+            transition: all 0.3s ease;
+        }
+
+        .donation-tier:hover {
+            border-color: rgba(201, 169, 98, 0.4);
+            transform: translateY(-3px);
+        }
+
+        .tier-amount {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+
         .tier-title { font-size: 0.85rem; margin-bottom: 0.3rem; }
+
         .tier-desc { font-size: 0.75rem; color: var(--text-dim); }
-        .campaign-cta { display: inline-block; padding: 1rem 2.5rem; background: var(--gold); color: var(--bg-deep); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; border-radius: 0.3rem; margin-top: 1.5rem; transition: all 0.4s ease; }
-        .campaign-cta:hover { transform: translateY(-2px); box-shadow: 0 15px 40px rgba(201, 169, 98, 0.25); }
-        .campaign-note { margin-top: 1rem; font-size: 0.8rem; color: var(--text-dim); }
+
+        .campaign-cta {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--gold);
+            color: var(--bg-deep);
+            text-decoration: none;
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            border-radius: 0.3rem;
+            margin-top: 1.5rem;
+            transition: all 0.4s ease;
+        }
+
+        .campaign-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(201, 169, 98, 0.25);
+        }
+
+        .campaign-note {
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            color: var(--text-dim);
+        }
+
         .family-section { padding: 6rem 2rem; }
-        .family-content { max-width: 800px; margin: 0 auto; text-align: center; }
-        .family-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
-        .family-member { text-align: center; padding: 1.5rem; }
-        .family-member h4 { font-family: var(--font-display); font-size: 1.2rem; margin-bottom: 0.2rem; }
-        .family-role { font-size: 0.65rem; letter-spacing: 0.15em; color: var(--gold); margin-bottom: 0.6rem; }
+
+        .family-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .family-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .family-member {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .family-member h4 {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .family-role {
+            font-size: 0.65rem;
+            letter-spacing: 0.15em;
+            color: var(--gold);
+            margin-bottom: 0.6rem;
+        }
+
         .family-member p { font-size: 0.8rem; margin-bottom: 0; }
-        .pearl-section { padding: 6rem 2rem; background: var(--bg-subtle); }
-        .pearl-content { max-width: 650px; margin: 0 auto; text-align: center; }
-        .pearl-image { width: 90px; height: 90px; margin: 0 auto 2rem; border-radius: 50%; background: linear-gradient(135deg, var(--gold), var(--gold-light)); display: flex; align-items: center; justify-content: center; font-size: 2.2rem; box-shadow: 0 0 60px var(--gold-glow); }
-        .pearl-dates { font-family: var(--font-display); color: var(--gold); margin-bottom: 1.5rem; }
-        .pearl-highlight { padding: 1.5rem; background: var(--bg-deep); border-left: 2px solid var(--hope-blue); margin: 1.5rem 0; text-align: left; }
-        .pearl-highlight p { font-family: var(--font-display); font-size: 0.95rem; color: var(--hope-blue); margin-bottom: 0; }
-        .cta-section { padding: 6rem 2rem; text-align: center; }
-        .cta-subtitle { font-family: var(--font-display); font-size: 1rem; color: var(--text-muted); margin-bottom: 2rem; }
-        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-        .cta-primary { padding: 1rem 2.5rem; background: var(--gold); color: var(--bg-deep); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.15em; transition: all 0.4s ease; }
-        .cta-primary:hover { box-shadow: 0 0 50px var(--gold-glow); transform: translateY(-2px); }
-        .cta-secondary { padding: 1rem 2.5rem; background: transparent; border: 1px solid var(--text-dim); color: var(--text-main); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.15em; transition: all 0.4s ease; }
+
+        .pearl-section {
+            padding: 6rem 2rem;
+            background: var(--bg-subtle);
+        }
+
+        .pearl-content {
+            max-width: 650px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .pearl-image {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 2rem;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            box-shadow: 0 0 60px var(--gold-glow);
+        }
+
+        .pearl-dates {
+            font-family: var(--font-display);
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .pearl-highlight {
+            padding: 1.5rem;
+            background: var(--bg-deep);
+            border-left: 2px solid var(--hope-blue);
+            margin: 1.5rem 0;
+            text-align: left;
+        }
+
+        .pearl-highlight p {
+            font-family: var(--font-display);
+            font-size: 0.95rem;
+            color: var(--hope-blue);
+            margin-bottom: 0;
+        }
+
+        .cta-section {
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .cta-subtitle {
+            font-family: var(--font-display);
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-primary {
+            padding: 1rem 2.5rem;
+            background: var(--gold);
+            color: var(--bg-deep);
+            text-decoration: none;
+            font-size: 0.8rem;
+            letter-spacing: 0.15em;
+            transition: all 0.4s ease;
+        }
+
+        .cta-primary:hover {
+            box-shadow: 0 0 50px var(--gold-glow);
+            transform: translateY(-2px);
+        }
+
+        .cta-secondary {
+            padding: 1rem 2.5rem;
+            background: transparent;
+            border: 1px solid var(--text-dim);
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.8rem;
+            letter-spacing: 0.15em;
+            transition: all 0.4s ease;
+        }
+
         .cta-secondary:hover { border-color: var(--text-main); }
-        footer { padding: 3rem 2rem; text-align: center; border-top: 1px solid rgba(201, 169, 98, 0.1); }
-        .footer-memorial { font-family: var(--font-display); color: var(--text-muted); margin-bottom: 1.5rem; font-size: 0.85rem; }
-        .footer-links { display: flex; gap: 1.5rem; justify-content: center; margin-bottom: 1.5rem; flex-wrap: wrap; }
-        .footer-links a { color: var(--text-dim); text-decoration: none; font-size: 0.75rem; transition: color 0.3s ease; }
+
+        footer {
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(201, 169, 98, 0.1);
+        }
+
+        .footer-memorial {
+            font-family: var(--font-display);
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 0.85rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 0.75rem;
+            transition: color 0.3s ease;
+        }
+
         .footer-links a:hover { color: var(--gold); }
-        .footer-payment { display: flex; gap: 1rem; justify-content: center; margin-bottom: 1.5rem; flex-wrap: wrap; }
-        .footer-payment a { color: var(--text-dim); text-decoration: none; font-size: 0.7rem; padding: 0.4rem 0.8rem; border: 1px solid rgba(201, 169, 98, 0.15); transition: all 0.3s ease; }
-        .footer-payment a:hover { border-color: var(--gold); color: var(--gold); }
-        .footer-location { font-size: 0.65rem; letter-spacing: 0.2em; color: var(--text-dim); }
-        @keyframes fadeUp { from { opacity: 0; transform: translateY(25px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes float { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(-8px); } }
-        @media (max-width: 1024px) { .packages-grid, .donation-tiers { grid-template-columns: 1fr 1fr; } .pillars-grid { grid-template-columns: 1fr 1fr; } }
-        @media (max-width: 768px) { section { padding: 4rem 1.5rem; } .two-types, .contrast-grid, .packages-grid, .donation-tiers, .pillars-grid, .family-grid { grid-template-columns: 1fr; } .cta-buttons, .services-extras { flex-direction: column; align-items: center; } .lang-switch { top: 1rem; right: 1rem; } }
+
+        .footer-payment {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-payment a {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 0.7rem;
+            padding: 0.4rem 0.8rem;
+            border: 1px solid rgba(201, 169, 98, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .footer-payment a:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .footer-location {
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            color: var(--text-dim);
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(25px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(-8px); }
+        }
+
+        @media (max-width: 1024px) {
+            .packages-grid,
+            .donation-tiers { grid-template-columns: 1fr 1fr; }
+            .pillars-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            section { padding: 4rem 1.5rem; }
+            .two-types,
+            .contrast-grid,
+            .packages-grid,
+            .donation-tiers,
+            .pillars-grid,
+            .family-grid { grid-template-columns: 1fr; }
+            .cta-buttons,
+            .services-extras { flex-direction: column; align-items: center; }
+            .lang-switch { top: 1rem; right: 1rem; }
+        }
     </style>
 </head>
 <body>
+
 <nav class="lang-switch">
     <a href="index.html">EN</a>
     <a href="#" class="active">日本語</a>
 </nav>
+
 <header class="hero">
     <div class="hero-content">
         <p class="hero-tagline">BOUNDARIST MOVEMENT</p>
-        <h1><span class="gold">許可はいらない</span></h1>
-        <p class="hero-sub">存在するのに。助けるのに。動くのに。</p>
-        <a href="#question" class="hero-cta">境界に立っていますか？</a>
+        <h1><span class="gold">共鳴が道を開く</span></h1>
+        <p class="hero-sub">存在へ。行動へ。</p>
+        <a href="#question" class="hero-cta">あなたも境界に立っている？</a>
     </div>
     <div class="scroll-hint">SCROLL</div>
 </header>
+
 <section class="boundarist-question" id="question">
     <h2>こんな経験、<br>ありませんか？</h2>
+
     <div class="two-types">
         <div class="type-card outside">
-            <h3>「当たり前」が<br>揺らいだ時</h3>
+            <h3>当たり前だったものが、<br>揺らいだ時</h3>
             <div class="experience-list">
                 <div class="experience-item">突然、住む場所がなくなった</div>
                 <div class="experience-item">大切な人を失った</div>
@@ -186,8 +868,9 @@
                 <div class="experience-item">「自分は何者だろう」と思った</div>
             </div>
         </div>
+
         <div class="type-card inside">
-            <h3>目の前の人を<br>助けられなかった時</h3>
+            <h3>目の前の人に、<br>システムが機能しなかった時</h3>
             <div class="experience-list">
                 <div class="experience-item">ルールでは「ダメ」、でもこの人は助けが必要</div>
                 <div class="experience-item">「おかしい」と思っても、組織は動かない</div>
@@ -196,48 +879,88 @@
             </div>
         </div>
     </div>
+
     <div class="definition-box">
         <p>どちらも<strong>「境界に立っている」</strong></p>
         <p class="sub">システムの外にいても、中でその限界を見ていても。</p>
     </div>
+
     <div class="our-story">
         <h3>私たちも、両方を経験しました。</h3>
-        <p>「住所がないとダメ」と言われた。でも別の窓口では「なんとかしましょう」と言ってくれた。<br><br>「リファレンスが必要」と言われた。でも、私たちを見て、信頼してくれた人がいた。<br><br><em>その瞬間が、すべてを変えた。</em></p>
+        <p>
+            「住所がないとダメ」と言われた。<br>
+            でも別の人は「なんとかしましょう」と。<br><br>
+            「リファレンスを出して」と言われた。<br>
+            でも私たちを見て、信じてくれた。<br><br>
+            <em>その瞬間が、すべてを変えた。</em>
+        </p>
     </div>
+
     <div class="core-message-section">
         <p class="lead">システムの外にいても、中にいても：</p>
-        <p class="the-message">「許可はいらない」</p>
-        <p class="sub-message">存在するのに。助けるのに。動くのに。</p>
+        <p class="the-message">「共鳴が道を開く」</p>
+        <p class="sub-message">存在へ。行動へ。</p>
     </div>
 </section>
+
 <section class="contrast-section">
     <div class="contrast-content">
         <p class="section-label">私たちが経験したこと</p>
-        <h2>同じ状況。同じ家族。<br><span class="gold">違いは、目の前の人を見たかどうか。</span></h2>
+        <h2>同じ状況。同じ家族。<br><span class="gold">違ったのは、目の前の人を見たかどうか。</span></h2>
+
         <div class="contrast-grid">
             <div class="contrast-card fail">
-                <h4>ある窓口では</h4>
-                <div class="contrast-item"><span class="label">状況</span><span class="value">住所がない</span></div>
-                <div class="contrast-item"><span class="label">対応</span><span class="value">「住所が決まったら来てください」</span></div>
-                <div class="contrast-item"><span class="label">人を見た？</span><span class="value">見てない</span></div>
-                <div class="contrast-item"><span class="label">結果</span><span class="value">門前払い</span></div>
+                <h4>ある窓口で</h4>
+                <div class="contrast-item">
+                    <span class="label">私たちの状況</span>
+                    <span class="value">住所がない</span>
+                </div>
+                <div class="contrast-item">
+                    <span class="label">反応</span>
+                    <span class="value">「住所決まったら来て」</span>
+                </div>
+                <div class="contrast-item">
+                    <span class="label">目の前の人を見た？</span>
+                    <span class="value">見なかった</span>
+                </div>
+                <div class="contrast-item">
+                    <span class="label">結果</span>
+                    <span class="value">門前払い</span>
+                </div>
             </div>
+
             <div class="contrast-card success">
-                <h4>別の窓口では</h4>
-                <div class="contrast-item"><span class="label">状況</span><span class="value">住所がない</span></div>
-                <div class="contrast-item"><span class="label">対応</span><span class="value">「なんとかしましょう」</span></div>
-                <div class="contrast-item"><span class="label">人を見た？</span><span class="value">見た</span></div>
-                <div class="contrast-item"><span class="label">結果</span><span class="value">道が開けた</span></div>
+                <h4>別の窓口で</h4>
+                <div class="contrast-item">
+                    <span class="label">私たちの状況</span>
+                    <span class="value">住所がない</span>
+                </div>
+                <div class="contrast-item">
+                    <span class="label">反応</span>
+                    <span class="value">「なんとかしましょう」</span>
+                </div>
+                <div class="contrast-item">
+                    <span class="label">目の前の人を見た？</span>
+                    <span class="value">見た</span>
+                </div>
+                <div class="contrast-item">
+                    <span class="label">結果</span>
+                    <span class="value">道が開けた</span>
+                </div>
             </div>
         </div>
+
         <div class="contrast-insight">
-            <p>同じシステム内でも、<strong>個人の判断で結果は変わる。</strong><br>「許可」は外から与えられるものじゃない。<strong>自分で取るもの。</strong></p>
+            <p>同じシステム内でも、<strong>個人の判断で結果は変わる。</strong><br>
+            共鳴があれば、<strong>道が開く。</strong></p>
         </div>
     </div>
 </section>
+
 <section class="pillars-section">
-    <p class="section-label">私たちがすること</p>
-    <h2><span class="highlight">「存在していいよ」</span>を<br>形にして届ける</h2>
+    <p class="section-label">私たちができること</p>
+    <h2><span class="highlight">共鳴し合う世界を広げる</span></h2>
+
     <div class="pillars-grid">
         <div class="pillar">
             <div class="pillar-icon">✦</div>
@@ -249,47 +972,50 @@
             <div class="pillar-icon">🛡</div>
             <h4>守る</h4>
             <p class="pillar-sub">災害耐性メモリー</p>
-            <p>クォーツガラス。QRアーカイブ。<br>多層バックアップ。</p>
+            <p>石英ガラス。QRアーカイブ。<br>多層バックアップ。</p>
         </div>
         <div class="pillar">
             <div class="pillar-icon">⚡</div>
             <h4>支える</h4>
             <p class="pillar-sub">オフグリッド自立</p>
-            <p>既存システムの許可なしで<br>存在できる。</p>
+            <p>共鳴が道を開く。<br>システムではなく。</p>
         </div>
     </div>
 </section>
+
 <section class="services-section" id="services">
     <div class="services-content">
         <p class="section-label">サービス</p>
-        <h2>レーザー彫刻メモリアル</h2>
-        <p>記憶を、時を超える素材に刻みます。</p>
+        <h2>レーザー刻印メモリアル</h2>
+        <p>あなたの記憶を、時間に耐える素材に刻む。</p>
+
         <div class="packages-grid">
             <div class="package-card">
                 <div class="package-icon">🌿</div>
-                <h4>Moment</h4>
+                <h4>モーメント</h4>
                 <p class="package-price">$30–$50</p>
-                <p class="package-desc">出張彫刻</p>
+                <p class="package-desc">私たちが伺います</p>
             </div>
             <div class="package-card">
                 <div class="package-icon">🪵</div>
-                <h4>Memory</h4>
+                <h4>メモリー</h4>
                 <p class="package-price">$100–$200</p>
-                <p class="package-desc">出張彫刻</p>
+                <p class="package-desc">私たちが伺います</p>
             </div>
             <div class="package-card">
                 <div class="package-icon">🪨</div>
-                <h4>Legacy</h4>
+                <h4>レガシー</h4>
                 <p class="package-price">$300–$500</p>
-                <p class="package-desc">工房または日本で</p>
+                <p class="package-desc">工房へお越し or 日本で</p>
             </div>
             <div class="package-card">
                 <div class="package-icon">💎</div>
-                <h4>Eternal</h4>
+                <h4>エターナル</h4>
                 <p class="package-price">$5,000</p>
-                <p class="package-desc">日本スタジオで制作</p>
+                <p class="package-desc">日本の工房で制作</p>
             </div>
         </div>
+
         <div class="services-extras">
             <div class="extra-item">
                 <h5>🏠 Ohana Home Japan</h5>
@@ -297,105 +1023,116 @@
             </div>
             <div class="extra-item">
                 <h5>⚡ オフグリッドインフラ</h5>
-                <p>🎒 モバイルキット: Starlink + Jackery = 約6kg<br>🏠 住宅: 評価無料 | 構築$500/日</p>
+                <p>🎒 モバイルキット: Starlink + Jackery = 約6kg<br>🏠 ホーム構築: 評価$0 | 構築$500/日</p>
             </div>
         </div>
+
         <div class="cta-buttons" style="margin-top: 2.5rem;">
             <a href="Catalog-ja.pdf" class="cta-primary">カタログを見る</a>
-            <a href="Partner-ja.pdf" class="cta-secondary">パートナー資料</a>
             <a href="https://calendly.com/pearlmemorial/pearlmemorialsession" class="cta-secondary">相談を予約</a>
         </div>
     </div>
 </section>
+
 <section class="campaign-section" id="campaign">
     <div class="campaign-content">
         <div class="campaign-icon">🎄🎅</div>
-        <h2>クリスマス・ギビング -- <span>Global + Local = Strong</span></h2>
+        <h2>クリスマス寄付 -- <span>Global + Local = Strong</span></h2>
         <p class="campaign-subtitle">Ohanaと共に育つ</p>
-        <p class="campaign-description">このクリスマス、自立の贈り物を。<br>あなたの寄付が、農場、寺院、コミュニティにオフグリッドインフラを届けます。</p>
+        <p class="campaign-description">このクリスマス、「自立」というギフトを届けませんか。<br>あなたの寄付で、農場、寺院、コミュニティにオフグリッドインフラを届けます。</p>
+
         <div class="donation-tiers">
             <div class="donation-tier">
-                <div class="tier-amount">$1,000+</div>
+                <div class="tier-amount">$1,000〜</div>
                 <div class="tier-title">🔋 ポータブル電源</div>
                 <div class="tier-desc">Jackery 1000 Plus等</div>
             </div>
             <div class="donation-tier">
-                <div class="tier-amount">$3,000+</div>
-                <div class="tier-title">📡 接続キット</div>
+                <div class="tier-amount">$3,000〜</div>
+                <div class="tier-title">📡 通信キット</div>
                 <div class="tier-desc">Starlink + バッテリー + ソーラー</div>
             </div>
             <div class="donation-tier">
-                <div class="tier-amount">$5,000+</div>
-                <div class="tier-title">🏠 小規模</div>
-                <div class="tier-desc">基本的な農場/寺院セットアップ</div>
+                <div class="tier-amount">$5,000〜</div>
+                <div class="tier-title">🏠 小規模拠点</div>
+                <div class="tier-desc">農場・寺院の基本セット</div>
             </div>
             <div class="donation-tier">
-                <div class="tier-amount">$10,000+</div>
-                <div class="tier-title">⚡ 中規模</div>
-                <div class="tier-desc">複数拠点または本格的機材</div>
+                <div class="tier-amount">$10,000〜</div>
+                <div class="tier-title">⚡ 中規模インフラ</div>
+                <div class="tier-desc">複数拠点 or 本格設備</div>
             </div>
         </div>
-        <a href="https://www.paypal.com/ncp/payment/SVPS6J8WXQU76" class="campaign-cta">🎁 PayPalで寄付</a>
+
+        <a href="https://www.paypal.com/ncp/payment/SVPS6J8WXQU76" class="campaign-cta">🎁 PayPalで寄付する</a>
         <p class="campaign-note">Zelle: business@satotakuya.jp</p>
     </div>
 </section>
+
 <section class="family-section">
     <div class="family-content">
-        <p class="section-label">オフグリッド佐藤家</p>
-        <h2>3人家族</h2>
-        <p>マウイと日本を拠点に。行く先々でレジリエントなコミュニティを構築。</p>
+        <p class="section-label">Off-grid 佐藤家</p>
+        <h2>家族3人</h2>
+        <p>マウイと日本を拠点に。行く先々でレジリエントなコミュニティを築く。</p>
+
         <div class="family-grid">
             <div class="family-member">
                 <h4>卓也</h4>
-                <p class="family-role">インフラ＆彫刻</p>
-                <p>災害復旧とオフグリッドシステムに注力。</p>
+                <p class="family-role">インフラ & 刻印</p>
+                <p>共鳴を支えるインフラを作る。</p>
             </div>
             <div class="family-member">
                 <h4>美那</h4>
-                <p class="family-role">マーケティング＆クラフト</p>
-                <p>18年のペットケア、レジンアート。</p>
+                <p class="family-role">マーケティング & クラフト</p>
+                <p>ペットケア18年、レジンアート。</p>
             </div>
             <div class="family-member">
                 <h4>糸</h4>
-                <p class="family-role">5歳・石鹸ヘルパー</p>
-                <p>探検家。夢見る人。</p>
+                <p class="family-role">5歳 • 石鹸作りヘルパー</p>
+                <p>探検家。夢想家。</p>
             </div>
         </div>
     </div>
 </section>
+
 <section class="pearl-section">
     <div class="pearl-content">
         <div class="pearl-image">🐕</div>
-        <p class="section-label">パールの物語</p>
-        <h2>パールの記憶に捧げて</h2>
-        <p class="pearl-dates">2007 – 2025</p>
-        <p>18年間、パールは家族でした。ポータブルメモリアルを作ることで、私たちは自由を取り戻しました。</p>
+        <p class="section-label">Pearlの物語</p>
+        <h2>「共鳴」が生まれた場所</h2>
+        <p class="pearl-dates">2007年 – 2025年</p>
+        <p>18年間、家族だったPearl。晩年、彼は声が出なくなっていた。</p>
         <div class="pearl-highlight">
-            <p>パールとどこへでも行ける。生前見ることのなかった海を、パールに見せられる。</p>
+            <p>元気な鳴き声をしていた頃の彼を残したくて、喉仏を娘が拾った四葉のクローバーと花びらと一緒に、はまぐりの貝殻に入れてレジンで固めた。どこへでも連れていける、移動できるお墓。</p>
         </div>
-        <p>このプロジェクトは彼の名前を運びます。<strong>Pearl Memorial.</strong></p>
+        <p>そこから音声QRを開発した。共鳴をいつまでも残す技術。</p>
+        <p><strong>「共鳴が道を開く」— この言葉は、パールとの共鳴から生まれた。</strong></p>
+        <p>彼との共鳴が、今も私たちと共に道を開いている。<strong>Pearl Memorial。</strong></p>
     </div>
 </section>
+
 <section class="cta-section">
-    <p class="section-label">はじめる</p>
-    <h2>あなたの物語を聞かせてください</h2>
-    <p class="cta-subtitle">境界に立っている人に届けたい。</p>
+    <p class="section-label">始める</p>
+    <h2>あなたの話を聞かせてください</h2>
+    <p class="cta-subtitle">境界に立っている人に、私たちは届けたい。</p>
     <div class="cta-buttons">
         <a href="https://calendly.com/pearlmemorial/pearlmemorialsession" class="cta-primary">話を聞いてほしい</a>
-        <a href="https://pearl.memorial" class="cta-secondary">ショップ</a>
+        <a href="https://pearl.memorial" class="cta-secondary">ショップへ</a>
     </div>
 </section>
+
 <footer>
-    <p class="footer-memorial">パールの記憶に捧げて (2007–2025) 🐕</p>
+    <p class="footer-memorial">Pearl（2007–2025）の記憶に捧げて 🐕</p>
     <div class="footer-links">
         <a href="https://calendly.com/pearlmemorial/pearlmemorialsession">お問い合わせ</a>
         <a href="https://www.instagram.com/pearl.memorial/">Instagram</a>
     </div>
     <div class="footer-payment">
-        <a href="https://pearl.memorial">ショップ (Square)</a>
+        <a href="https://pearl.memorial">Shop (Square)</a>
         <a href="https://www.paypal.com/ncp/payment/SVPS6J8WXQU76">PayPal</a>
     </div>
-    <p class="footer-location">Mahalo 🌺 オフグリッド佐藤家 · マウイ ⇄ 日本</p>
+    <p class="footer-location">Mahalo 🌺 Off-grid 佐藤家 · マウイ ⇄ 日本</p>
 </footer>
+
 </body>
 </html>
