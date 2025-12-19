@@ -21,7 +21,7 @@
                     titleSub: 'A fresh start for communities',
                     subtitle: 'Help rebuild and reconnect',
                     description: 'Start the year by supporting off-grid infrastructure and community projects around the world.',
-                    cta: { text: 'Donate via PayPal', link: 'https://www.paypal.com/donate/?business=business%40satotakuya.jp&currency_code=USD' },
+                    cta: { text: 'Donate via PayPal', link: 'https://www.paypal.com/ncp/payment/SVPS6J8WXQU76' },
                     tiers: [
                         { amount: '$500+', title: 'Starter Kit', desc: 'Basic power + connectivity' },
                         { amount: '$2,000+', title: 'Community Kit', desc: 'Power + Solar + Training' }
@@ -34,7 +34,7 @@
                     titleSub: 'コミュニティに新しい始まりを',
                     subtitle: 'オフグリッドの支援をはじめましょう',
                     description: '年のはじめに、農村や寺院へのインフラ支援をお願いします。',
-                    cta: { text: 'PayPalで寄付', link: 'https://www.paypal.com/donate/?business=business%40satotakuya.jp&currency_code=USD' },
+                    cta: { text: 'PayPalで寄付', link: 'https://www.paypal.com/ncp/payment/SVPS6J8WXQU76' },
                     tiers: [
                         { amount: '¥50,000〜', title: 'スターターキット', desc: '基本の電力＋接続' },
                         { amount: '¥200,000〜', title: 'コミュニティキット', desc: '電力＋ソーラー＋研修' }
@@ -54,7 +54,7 @@
                     titleSub: 'Care for families and farms',
                     subtitle: 'Give with care',
                     description: 'This month we focus on small families and independent farms needing early-season support.',
-                    cta: { text: 'Give Now', link: 'https://www.paypal.com/donate/?business=business%40satotakuya.jp&currency_code=USD' },
+                    cta: { text: 'Give Now', link: 'https://www.paypal.com/ncp/payment/SVPS6J8WXQU76' },
                     tiers: [
                         { amount: '$100+', title: 'Meal & Care', desc: 'Support essentials' },
                         { amount: '$500+', title: 'Starter Power', desc: 'Portable power + support' }
@@ -67,7 +67,7 @@
                     titleSub: '家族と農家に寄り添う',
                     subtitle: '思いやりを届ける',
                     description: '今月は小さな家族や農家への支援に注力します。',
-                    cta: { text: '今すぐ寄付', link: 'https://www.paypal.com/donate/?business=business%40satotakuya.jp&currency_code=USD' },
+                    cta: { text: '今すぐ寄付', link: 'https://www.paypal.com/ncp/payment/SVPS6J8WXQU76' },
                     tiers: [
                         { amount: '¥10,000〜', title: '食事とケア', desc: '必需品の支援' },
                         { amount: '¥50,000〜', title: 'スターターパワー', desc: '携帯電源＋サポート' }
@@ -87,7 +87,7 @@
                     titleSub: 'Keep communities powered',
                     subtitle: 'Seasonal infrastructure',
                     description: 'Support summer programs to harden local resilience and cook up community projects.',
-                    cta: { text: 'Support Summer', link: 'https://www.paypal.com/donate/?business=business%40satotakuya.jp&currency_code=USD' },
+                    cta: { text: 'Support Summer', link: 'https://www.paypal.com/ncp/payment/SVPS6J8WXQU76' },
                     tiers: [
                         { amount: '$1,000+', title: 'Mini Grid', desc: 'Local shared power' },
                         { amount: '$5,000+', title: 'Village Support', desc: 'Larger installs' }
@@ -100,7 +100,7 @@
                     titleSub: '地域を支える電力',
                     subtitle: '季節のインフラ支援',
                     description: '夏季の支援で地域の強靭化を進めます。',
-                    cta: { text: 'サポートする', link: 'https://www.paypal.com/donate/?business=business%40satotakuya.jp&currency_code=USD' },
+                    cta: { text: 'サポートする', link: 'https://www.paypal.com/ncp/payment/SVPS6J8WXQU76' },
                     tiers: [
                         { amount: '¥100,000〜', title: 'ミニグリッド', desc: '地域共有電力' },
                         { amount: '¥500,000〜', title: '村サポート', desc: '大規模設置' }
@@ -120,7 +120,7 @@
                     titleSub: 'Global + Local = Strong',
                     subtitle: 'Growing with Ohana',
                     description: 'This Christmas, give the gift of independence. Your donation delivers off-grid infrastructure to farms, temples, and communities.',
-                    cta: { text: '🎁 Donate via PayPal', link: 'https://www.paypal.com/donate/?business=business%40satotakuya.jp&currency_code=USD' },
+                    cta: { text: '🎁 Donate via PayPal', link: 'https://www.paypal.com/ncp/payment/SVPS6J8WXQU76' },
                     tiers: [
                         { amount: '$1,000+', title: 'Portable Power', desc: 'Jackery 1000 Plus, etc.' },
                         { amount: '$3,000+', title: 'Connectivity Kit', desc: 'Starlink + Battery + Solar' },
@@ -134,7 +134,7 @@
                     titleSub: 'グローバル＋ローカルで強く',
                     subtitle: 'Ohanaと共に成長する',
                     description: 'このクリスマス、独立の贈り物を届けましょう。寄付は農地や寺院へのインフラ支援になります。',
-                    cta: { text: '🎁 PayPalで寄付', link: 'https://www.paypal.com/donate/?business=business%40satotakuya.jp&currency_code=USD' },
+                    cta: { text: '🎁 PayPalで寄付', link: 'https://www.paypal.com/ncp/payment/SVPS6J8WXQU76' },
                     tiers: [
                         { amount: '¥100,000〜', title: '携帯電源', desc: 'Jackery 1000 Plus等' },
                         { amount: '¥300,000〜', title: '接続キット', desc: 'Starlink + バッテリー + ソーラー' },
@@ -153,7 +153,7 @@
             titleSub: '',
             subtitle: 'Support our ongoing projects',
             description: 'Help us continue delivering resilient infrastructure year-round.',
-            cta: { text: 'Donate', link: 'https://www.paypal.com/donate/?business=business%40satotakuya.jp&currency_code=USD' },
+            cta: { text: 'Donate', link: 'https://www.paypal.com/ncp/payment/SVPS6J8WXQU76' },
             tiers: [],
             note: ''
         },
@@ -163,7 +163,7 @@
             titleSub: '',
             subtitle: '通年でプロジェクトを支援する',
             description: '通年でインフラ支援を継続するための寄付をお願いします。',
-            cta: { text: '寄付する', link: 'https://www.paypal.com/donate/?business=business%40satotakuya.jp&currency_code=USD' },
+            cta: { text: '寄付する', link: 'https://www.paypal.com/ncp/payment/SVPS6J8WXQU76' },
             tiers: [],
             note: ''
         }
