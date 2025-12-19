@@ -122,7 +122,7 @@
                     description: 'This Christmas, give the gift of independence. Your donation delivers off-grid infrastructure to farms, temples, and communities.',
                     cta: { text: '🎁 Donate via PayPal', link: 'https://www.paypal.com/ncp/payment/SVPS6J8WXQU76' },
                     tiers: [
-                        { amount: '$1,000+', title: 'Portable Power', desc: 'Jackery 1000 Plus, etc.' },
+                        { amount: '$1,000+', title: 'Portable Power', desc: 'Jackery 1000 Plus (stationary) / 290W (mobile)' },
                         { amount: '$3,000+', title: 'Connectivity Kit', desc: 'Starlink + Battery + Solar' },
                         { amount: '$5,000+', title: 'Small-Scale', desc: 'Basic farm/temple setup' }
                     ],
@@ -136,7 +136,7 @@
                     description: 'このクリスマス、独立の贈り物を届けましょう。寄付は農地や寺院へのインフラ支援になります。',
                     cta: { text: '🎁 PayPalで寄付', link: 'https://www.paypal.com/ncp/payment/SVPS6J8WXQU76' },
                     tiers: [
-                        { amount: '¥100,000〜', title: '携帯電源', desc: 'Jackery 1000 Plus等' },
+                        { amount: '¥100,000〜', title: '携帯電源', desc: 'Jackery 1000 Plus（据置）/ 290W（車載）' },
                         { amount: '¥300,000〜', title: '接続キット', desc: 'Starlink + バッテリー + ソーラー' },
                         { amount: '¥500,000〜', title: '小規模構築', desc: '農地／寺院の基本設備' }
                     ],
