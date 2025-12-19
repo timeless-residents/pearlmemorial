@@ -863,6 +863,21 @@ footer {
     html, body { background: #fff !important; color: #000 !important; -webkit-print-color-adjust: exact; }
     * { background: transparent !important; color: #000 !important; text-shadow: none !important; box-shadow: none !important; -webkit-text-fill-color: #000 !important; }
 
+    /* アニメーション要素を表示（opacity: 0 を解除） */
+    .hero-tagline, .hero h1, .hero-sub, .hero-cta,
+    [style*="animation"], [class*="fade"] {
+        opacity: 1 !important;
+        animation: none !important;
+    }
+
+    /* heroセクションの高さを自動に（空白ページ防止） */
+    .hero {
+        min-height: auto !important;
+        height: auto !important;
+        padding: 2rem 1rem !important;
+    }
+    .hero::before { display: none !important; }
+
     /* リンクに URL を追記 */
     a[href]:after { content: " (" attr(href) ")"; color: #000; font-size: 0.9em; }
 
