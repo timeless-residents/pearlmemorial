@@ -13,7 +13,6 @@
             --gold-light: #e8d5a8;
             --gold-glow: rgba(201, 169, 98, 0.25);
             --hope-blue: #7EB8C9;
-            --hope-blue-glow: rgba(126, 184, 201, 0.2);
             --bg-deep: #0a0a0c;
             --bg-subtle: #101014;
             --bg-card: #16161a;
@@ -23,1098 +22,147 @@
             --font-display: 'Cormorant Garamond', serif;
             --font-body: 'Zen Kaku Gothic New', sans-serif;
         }
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
         html { scroll-behavior: smooth; }
-        
-        body {
-            font-family: var(--font-body);
-            font-weight: 300;
-            background: var(--bg-deep);
-            color: var(--text-main);
-            line-height: 1.9;
-            font-size: 16px;
-            overflow-x: hidden;
-        }
-
-        /* ====== LANGUAGE SWITCH ====== */
-        .lang-switch {
-            position: fixed;
-            top: 1.5rem;
-            right: 1.5rem;
-            z-index: 1000;
-            display: flex;
-            gap: 0.3rem;
-            background: rgba(10, 10, 12, 0.85);
-            backdrop-filter: blur(12px);
-            padding: 0.4rem;
-            border-radius: 2rem;
-            border: 1px solid rgba(201, 169, 98, 0.15);
-        }
-        .lang-switch a {
-            padding: 0.4rem 1rem;
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.75rem;
-            border-radius: 1.5rem;
-            transition: all 0.3s ease;
-            letter-spacing: 0.05em;
-        }
-        .lang-switch a.active {
-            background: var(--gold);
-            color: var(--bg-deep);
-        }
-        .lang-switch a:hover:not(.active) {
-            color: var(--text-main);
-        }
-
-        /* ====== HERO ====== */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            position: relative;
-            padding: 2rem;
-            background: 
-                radial-gradient(ellipse 80% 50% at 50% 0%, rgba(201, 169, 98, 0.08) 0%, transparent 50%),
-                radial-gradient(ellipse 60% 40% at 20% 80%, rgba(126, 184, 201, 0.04) 0%, transparent 50%),
-                var(--bg-deep);
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-            opacity: 0.03;
-            pointer-events: none;
-        }
-
-        .hero-content {
-            max-width: 900px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-tagline {
-            font-size: 0.7rem;
-            letter-spacing: 0.5em;
-            color: var(--gold);
-            margin-bottom: 2.5rem;
-            opacity: 0;
-            animation: fadeUp 1s ease forwards 0.2s;
-        }
-
-        .hero h1 {
-            font-family: var(--font-display);
-            font-size: clamp(2.4rem, 8vw, 5rem);
-            font-weight: 400;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-            opacity: 0;
-            animation: fadeUp 1s ease forwards 0.4s;
-            letter-spacing: 0.02em;
-        }
-
-        .hero h1 .gold {
-            color: var(--gold);
-            text-shadow: 0 0 60px var(--gold-glow);
-        }
-
-        .hero-sub {
-            font-family: var(--font-display);
-            font-size: clamp(1rem, 2.5vw, 1.4rem);
-            color: var(--text-muted);
-            margin-bottom: 3.5rem;
-            opacity: 0;
-            animation: fadeUp 1s ease forwards 0.6s;
-            letter-spacing: 0.08em;
-            font-style: italic;
-        }
-
-        .hero-cta {
-            display: inline-block;
-            padding: 1.1rem 3rem;
-            border: 1px solid var(--gold);
-            color: var(--gold);
-            text-decoration: none;
-            font-size: 0.8rem;
-            letter-spacing: 0.25em;
-            text-transform: uppercase;
-            transition: all 0.4s ease;
-            opacity: 0;
-            animation: fadeUp 1s ease forwards 0.8s;
-        }
-        .hero-cta:hover {
-            background: var(--gold);
-            color: var(--bg-deep);
-            box-shadow: 0 0 40px var(--gold-glow);
-        }
-
-        .scroll-hint {
-            position: absolute;
-            bottom: 2.5rem;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 0.65rem;
-            letter-spacing: 0.4em;
-            color: var(--text-dim);
-            opacity: 0;
-            animation: fadeUp 1s ease forwards 1.2s, float 3s ease-in-out infinite 2s;
-        }
-
-        /* ====== SECTION SHARED ====== */
-        section {
-            padding: 6rem 2rem;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .section-label {
-            font-size: 0.65rem;
-            letter-spacing: 0.5em;
-            color: var(--gold);
-            margin-bottom: 1.5rem;
-            text-align: center;
-            text-transform: uppercase;
-        }
-
-        h2 {
-            font-family: var(--font-display);
-            font-size: clamp(1.6rem, 4vw, 2.4rem);
-            font-weight: 400;
-            margin-bottom: 2rem;
-            line-height: 1.4;
-            text-align: center;
-            letter-spacing: 0.02em;
-        }
-
-        h2 .highlight {
-            color: var(--hope-blue);
-            font-style: italic;
-        }
-
-        h2 .gold {
-            color: var(--gold);
-        }
-
-        p {
-            color: var(--text-muted);
-            max-width: 60ch;
-            margin: 0 auto 1.5rem;
-        }
-
-        /* ====== BOUNDARIST QUESTION ====== */
-        .boundarist-question {
-            padding: 7rem 2rem;
-            background: 
-                linear-gradient(180deg, var(--bg-deep) 0%, rgba(126, 184, 201, 0.03) 30%, rgba(201, 169, 98, 0.03) 70%, var(--bg-deep) 100%);
-            border-top: 1px solid rgba(201, 169, 98, 0.1);
-        }
-
-        .boundarist-question h2 {
-            margin-bottom: 3.5rem;
-        }
-
-        .two-types {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            max-width: 900px;
-            margin: 0 auto 4rem;
-        }
-
-        .type-card {
-            padding: 2rem;
-            border-radius: 0.5rem;
-            transition: all 0.4s ease;
-        }
-        .type-card.outside {
-            background: rgba(126, 184, 201, 0.04);
-            border: 1px solid rgba(126, 184, 201, 0.15);
-        }
-        .type-card.inside {
-            background: rgba(201, 169, 98, 0.04);
-            border: 1px solid rgba(201, 169, 98, 0.15);
-        }
-        .type-card:hover {
-            transform: translateY(-4px);
-        }
-        .type-card.outside:hover {
-            border-color: rgba(126, 184, 201, 0.35);
-            box-shadow: 0 20px 60px rgba(126, 184, 201, 0.08);
-        }
-        .type-card.inside:hover {
-            border-color: rgba(201, 169, 98, 0.35);
-            box-shadow: 0 20px 60px rgba(201, 169, 98, 0.08);
-        }
-
-        .type-card h3 {
-            font-family: var(--font-display);
-            font-size: 1.05rem;
-            font-weight: 400;
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
+        body { font-family: var(--font-body); font-weight: 300; background: var(--bg-deep); color: var(--text-main); line-height: 1.9; font-size: 16px; overflow-x: hidden; }
+        .lang-switch { position: fixed; top: 1.5rem; right: 1.5rem; z-index: 1000; display: flex; gap: 0.3rem; background: rgba(10, 10, 12, 0.85); backdrop-filter: blur(12px); padding: 0.4rem; border-radius: 2rem; border: 1px solid rgba(201, 169, 98, 0.15); }
+        .lang-switch a { padding: 0.4rem 1rem; color: var(--text-muted); text-decoration: none; font-size: 0.75rem; border-radius: 1.5rem; transition: all 0.3s ease; letter-spacing: 0.05em; }
+        .lang-switch a.active { background: var(--gold); color: var(--bg-deep); }
+        .lang-switch a:hover:not(.active) { color: var(--text-main); }
+        .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; padding: 2rem; background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(201, 169, 98, 0.08) 0%, transparent 50%), radial-gradient(ellipse 60% 40% at 20% 80%, rgba(126, 184, 201, 0.04) 0%, transparent 50%), var(--bg-deep); }
+        .hero-content { max-width: 900px; position: relative; z-index: 1; }
+        .hero-tagline { font-size: 0.7rem; letter-spacing: 0.5em; color: var(--gold); margin-bottom: 2.5rem; opacity: 0; animation: fadeUp 1s ease forwards 0.2s; }
+        .hero h1 { font-family: var(--font-display); font-size: clamp(2.4rem, 8vw, 5rem); font-weight: 400; line-height: 1.1; margin-bottom: 1.5rem; opacity: 0; animation: fadeUp 1s ease forwards 0.4s; letter-spacing: 0.02em; }
+        .hero h1 .gold { color: var(--gold); text-shadow: 0 0 60px var(--gold-glow); }
+        .hero-sub { font-family: var(--font-display); font-size: clamp(1rem, 2.5vw, 1.4rem); color: var(--text-muted); margin-bottom: 3.5rem; opacity: 0; animation: fadeUp 1s ease forwards 0.6s; letter-spacing: 0.08em; font-style: italic; }
+        .hero-cta { display: inline-block; padding: 1.1rem 3rem; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.25em; text-transform: uppercase; transition: all 0.4s ease; opacity: 0; animation: fadeUp 1s ease forwards 0.8s; }
+        .hero-cta:hover { background: var(--gold); color: var(--bg-deep); box-shadow: 0 0 40px var(--gold-glow); }
+        .scroll-hint { position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%); font-size: 0.65rem; letter-spacing: 0.4em; color: var(--text-dim); opacity: 0; animation: fadeUp 1s ease forwards 1.2s, float 3s ease-in-out infinite 2s; }
+        section { padding: 6rem 2rem; max-width: 1000px; margin: 0 auto; }
+        .section-label { font-size: 0.65rem; letter-spacing: 0.5em; color: var(--gold); margin-bottom: 1.5rem; text-align: center; text-transform: uppercase; }
+        h2 { font-family: var(--font-display); font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 400; margin-bottom: 2rem; line-height: 1.4; text-align: center; letter-spacing: 0.02em; }
+        h2 .highlight { color: var(--hope-blue); font-style: italic; }
+        h2 .gold { color: var(--gold); }
+        p { color: var(--text-muted); max-width: 60ch; margin: 0 auto 1.5rem; }
+        .boundarist-question { padding: 7rem 2rem; background: linear-gradient(180deg, var(--bg-deep) 0%, rgba(126, 184, 201, 0.03) 30%, rgba(201, 169, 98, 0.03) 70%, var(--bg-deep) 100%); border-top: 1px solid rgba(201, 169, 98, 0.1); }
+        .boundarist-question h2 { margin-bottom: 3.5rem; }
+        .two-types { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; max-width: 900px; margin: 0 auto 4rem; }
+        .type-card { padding: 2rem; border-radius: 0.5rem; transition: all 0.4s ease; }
+        .type-card.outside { background: rgba(126, 184, 201, 0.04); border: 1px solid rgba(126, 184, 201, 0.15); }
+        .type-card.inside { background: rgba(201, 169, 98, 0.04); border: 1px solid rgba(201, 169, 98, 0.15); }
+        .type-card:hover { transform: translateY(-4px); }
+        .type-card.outside:hover { border-color: rgba(126, 184, 201, 0.35); box-shadow: 0 20px 60px rgba(126, 184, 201, 0.08); }
+        .type-card.inside:hover { border-color: rgba(201, 169, 98, 0.35); box-shadow: 0 20px 60px rgba(201, 169, 98, 0.08); }
+        .type-card h3 { font-family: var(--font-display); font-size: 1.05rem; font-weight: 400; margin-bottom: 1.5rem; line-height: 1.6; }
         .type-card.outside h3 { color: var(--hope-blue); }
         .type-card.inside h3 { color: var(--gold); }
-
-        .experience-list {
-            display: flex;
-            flex-direction: column;
-            gap: 0.6rem;
-        }
-
-        .experience-item {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            padding: 0.7rem 1rem;
-            background: rgba(0, 0, 0, 0.25);
-            border-left: 3px solid;
-            transition: all 0.3s ease;
-        }
+        .experience-list { display: flex; flex-direction: column; gap: 0.6rem; }
+        .experience-item { font-size: 0.9rem; color: var(--text-muted); padding: 0.7rem 1rem; background: rgba(0, 0, 0, 0.25); border-left: 3px solid; transition: all 0.3s ease; }
         .type-card.outside .experience-item { border-color: var(--hope-blue); }
         .type-card.inside .experience-item { border-color: var(--gold); }
-        .experience-item:hover {
-            background: rgba(255, 255, 255, 0.03);
-            color: var(--text-main);
-        }
-
-        /* ====== DEFINITION ====== */
-        .definition-box {
-            text-align: center;
-            margin: 4rem auto;
-            max-width: 700px;
-        }
-
-        .definition-box p {
-            font-family: var(--font-display);
-            font-size: 1.4rem;
-            line-height: 1.7;
-            color: var(--text-main);
-            margin-bottom: 0.8rem;
-        }
-
-        .definition-box strong {
-            color: var(--hope-blue);
-        }
-
-        .definition-box .sub {
-            font-family: var(--font-body);
-            font-size: 0.95rem;
-            color: var(--text-muted);
-        }
-
-        /* ====== OUR STORY ====== */
-        .our-story {
-            margin: 4rem auto;
-            padding: 2.5rem;
-            max-width: 750px;
-            background: rgba(201, 169, 98, 0.04);
-            border: 1px solid rgba(201, 169, 98, 0.15);
-            border-radius: 0.5rem;
-        }
-
-        .our-story h3 {
-            font-family: var(--font-display);
-            font-size: 1.15rem;
-            color: var(--gold);
-            margin-bottom: 1.2rem;
-            text-align: center;
-        }
-
-        .our-story p {
-            font-size: 0.95rem;
-            line-height: 2;
-            text-align: center;
-            max-width: none;
-        }
-
-        .our-story em {
-            color: var(--text-main);
-            font-style: italic;
-        }
-
-        /* ====== CORE MESSAGE ====== */
-        .core-message-section {
-            text-align: center;
-            margin: 4rem auto;
-        }
-
-        .core-message-section .lead {
-            font-size: 1rem;
-            color: var(--text-muted);
-            margin-bottom: 1rem;
-        }
-
-        .the-message {
-            font-family: var(--font-display);
-            font-size: clamp(1.8rem, 4.5vw, 2.8rem);
-            color: var(--gold);
-            margin-bottom: 0.8rem;
-            text-shadow: 0 0 80px var(--gold-glow);
-            letter-spacing: 0.05em;
-            font-style: italic;
-        }
-
-        .sub-message {
-            font-size: 1rem;
-            color: var(--hope-blue);
-            letter-spacing: 0.1em;
-        }
-
-        /* ====== CONTRAST STORY ====== */
-        .contrast-section {
-            padding: 6rem 2rem;
-            background: var(--bg-subtle);
-        }
-
-        .contrast-content {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .contrast-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .contrast-card {
-            padding: 2rem;
-            border-radius: 0.5rem;
-        }
-
-        .contrast-card.fail {
-            background: rgba(100, 80, 80, 0.1);
-            border: 1px solid rgba(150, 100, 100, 0.2);
-        }
-
-        .contrast-card.success {
-            background: rgba(201, 169, 98, 0.06);
-            border: 1px solid rgba(201, 169, 98, 0.25);
-        }
-
-        .contrast-card h4 {
-            font-family: var(--font-display);
-            font-size: 1.1rem;
-            margin-bottom: 1.2rem;
-        }
-
+        .experience-item:hover { background: rgba(255, 255, 255, 0.03); color: var(--text-main); }
+        .definition-box { text-align: center; margin: 4rem auto; max-width: 700px; }
+        .definition-box p { font-family: var(--font-display); font-size: 1.4rem; line-height: 1.7; color: var(--text-main); margin-bottom: 0.8rem; }
+        .definition-box strong { color: var(--hope-blue); }
+        .definition-box .sub { font-family: var(--font-body); font-size: 0.95rem; color: var(--text-muted); }
+        .our-story { margin: 4rem auto; padding: 2.5rem; max-width: 750px; background: rgba(201, 169, 98, 0.04); border: 1px solid rgba(201, 169, 98, 0.15); border-radius: 0.5rem; }
+        .our-story h3 { font-family: var(--font-display); font-size: 1.15rem; color: var(--gold); margin-bottom: 1.2rem; text-align: center; }
+        .our-story p { font-size: 0.95rem; line-height: 2; text-align: center; max-width: none; }
+        .our-story em { color: var(--text-main); font-style: italic; }
+        .core-message-section { text-align: center; margin: 4rem auto; }
+        .core-message-section .lead { font-size: 1rem; color: var(--text-muted); margin-bottom: 1rem; }
+        .the-message { font-family: var(--font-display); font-size: clamp(1.8rem, 4.5vw, 2.8rem); color: var(--gold); margin-bottom: 0.8rem; text-shadow: 0 0 80px var(--gold-glow); letter-spacing: 0.05em; font-style: italic; }
+        .sub-message { font-size: 1rem; color: var(--hope-blue); letter-spacing: 0.1em; }
+        .contrast-section { padding: 6rem 2rem; background: var(--bg-subtle); }
+        .contrast-content { max-width: 900px; margin: 0 auto; }
+        .contrast-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 3rem; }
+        .contrast-card { padding: 2rem; border-radius: 0.5rem; }
+        .contrast-card.fail { background: rgba(100, 80, 80, 0.1); border: 1px solid rgba(150, 100, 100, 0.2); }
+        .contrast-card.success { background: rgba(201, 169, 98, 0.06); border: 1px solid rgba(201, 169, 98, 0.25); }
+        .contrast-card h4 { font-family: var(--font-display); font-size: 1.1rem; margin-bottom: 1.2rem; }
         .contrast-card.fail h4 { color: var(--text-muted); }
         .contrast-card.success h4 { color: var(--gold); }
-
-        .contrast-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 0.6rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            font-size: 0.85rem;
-        }
-
+        .contrast-item { display: flex; justify-content: space-between; padding: 0.6rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.05); font-size: 0.85rem; }
         .contrast-item:last-child { border-bottom: none; }
-
         .contrast-item .label { color: var(--text-dim); }
         .contrast-item .value { color: var(--text-muted); }
         .contrast-card.success .contrast-item .value { color: var(--text-main); }
-
-        .contrast-insight {
-            margin-top: 3rem;
-            text-align: center;
-            padding: 2rem;
-            background: rgba(201, 169, 98, 0.05);
-            border-radius: 0.5rem;
-        }
-
-        .contrast-insight p {
-            font-family: var(--font-display);
-            font-size: 1.1rem;
-            color: var(--text-main);
-            margin-bottom: 0;
-        }
-
-        .contrast-insight strong {
-            color: var(--gold);
-        }
-
-        /* ====== THREE PILLARS ====== */
-        .pillars-section {
-            padding: 6rem 2rem;
-        }
-
-        .pillars-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            max-width: 900px;
-            margin: 3rem auto 0;
-        }
-
-        .pillar {
-            padding: 2rem 1.5rem;
-            text-align: center;
-            background: linear-gradient(180deg, var(--bg-card) 0%, transparent 100%);
-            border: 1px solid rgba(201, 169, 98, 0.1);
-            transition: all 0.4s ease;
-        }
-
-        .pillar:hover {
-            border-color: rgba(201, 169, 98, 0.3);
-            transform: translateY(-5px);
-        }
-
-        .pillar-icon {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .pillar h4 {
-            font-family: var(--font-display);
-            font-size: 1.15rem;
-            margin-bottom: 0.3rem;
-        }
-
-        .pillar-sub {
-            font-size: 0.65rem;
-            letter-spacing: 0.2em;
-            color: var(--gold);
-            margin-bottom: 0.8rem;
-            text-transform: uppercase;
-        }
-
-        .pillar p {
-            font-size: 0.8rem;
-            margin-bottom: 0;
-        }
-
-        /* ====== SERVICES ====== */
-        .services-section {
-            padding: 6rem 2rem;
-            background: var(--bg-subtle);
-        }
-
-        .services-content {
-            max-width: 1000px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .packages-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1rem;
-            margin: 3rem 0 2rem;
-        }
-
-        .package-card {
-            padding: 1.5rem 1rem;
-            background: var(--bg-deep);
-            border: 1px solid rgba(201, 169, 98, 0.1);
-            transition: all 0.4s ease;
-        }
-
-        .package-card:hover {
-            border-color: rgba(201, 169, 98, 0.35);
-            transform: translateY(-5px);
-        }
-
+        .contrast-insight { margin-top: 3rem; text-align: center; padding: 2rem; background: rgba(201, 169, 98, 0.05); border-radius: 0.5rem; }
+        .contrast-insight p { font-family: var(--font-display); font-size: 1.1rem; color: var(--text-main); margin-bottom: 0; }
+        .contrast-insight strong { color: var(--gold); }
+        .pillars-section { padding: 6rem 2rem; }
+        .pillars-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 900px; margin: 3rem auto 0; }
+        .pillar { padding: 2rem 1.5rem; text-align: center; background: linear-gradient(180deg, var(--bg-card) 0%, transparent 100%); border: 1px solid rgba(201, 169, 98, 0.1); transition: all 0.4s ease; }
+        .pillar:hover { border-color: rgba(201, 169, 98, 0.3); transform: translateY(-5px); }
+        .pillar-icon { font-size: 2rem; margin-bottom: 1rem; }
+        .pillar h4 { font-family: var(--font-display); font-size: 1.15rem; margin-bottom: 0.3rem; }
+        .pillar-sub { font-size: 0.65rem; letter-spacing: 0.2em; color: var(--gold); margin-bottom: 0.8rem; text-transform: uppercase; }
+        .pillar p { font-size: 0.8rem; margin-bottom: 0; }
+        .services-section { padding: 6rem 2rem; background: var(--bg-subtle); }
+        .services-content { max-width: 1000px; margin: 0 auto; text-align: center; }
+        .packages-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin: 3rem 0 2rem; }
+        .package-card { padding: 1.5rem 1rem; background: var(--bg-deep); border: 1px solid rgba(201, 169, 98, 0.1); transition: all 0.4s ease; }
+        .package-card:hover { border-color: rgba(201, 169, 98, 0.35); transform: translateY(-5px); }
         .package-icon { font-size: 1.8rem; margin-bottom: 0.8rem; }
-        
-        .package-card h4 {
-            font-family: var(--font-display);
-            font-size: 1.05rem;
-            margin-bottom: 0.4rem;
-        }
-
-        .package-price {
-            font-size: 0.95rem;
-            color: var(--gold);
-            margin-bottom: 0.3rem;
-        }
-
-        .package-desc {
-            font-size: 0.7rem;
-            color: var(--text-dim);
-        }
-
-        .services-extras {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            margin-top: 2.5rem;
-            flex-wrap: wrap;
-        }
-
-        .extra-item {
-            text-align: center;
-            max-width: 280px;
-        }
-
-        .extra-item h5 {
-            font-family: var(--font-display);
-            font-size: 0.95rem;
-            color: var(--hope-blue);
-            margin-bottom: 0.4rem;
-        }
-
-        .extra-item p {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            line-height: 1.6;
-        }
-
-        /* ====== CAMPAIGN ====== */
-        .campaign-section {
-            padding: 5rem 2rem;
-            background: linear-gradient(180deg, var(--bg-deep) 0%, rgba(201, 169, 98, 0.06) 50%, var(--bg-deep) 100%);
-            border-top: 1px solid rgba(201, 169, 98, 0.2);
-            border-bottom: 1px solid rgba(201, 169, 98, 0.2);
-        }
-
-        .campaign-content {
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .campaign-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .campaign-section h2 span {
-            color: var(--gold);
-        }
-
-        .campaign-subtitle {
-            font-family: var(--font-display);
-            font-size: 1rem;
-            color: var(--text-muted);
-            margin-bottom: 1.5rem;
-            font-style: italic;
-        }
-
-        .campaign-description {
-            color: var(--text-muted);
-            margin-bottom: 2rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .donation-tiers {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1rem;
-            margin: 2rem 0;
-        }
-
-        .donation-tier {
-            padding: 1.3rem;
-            background: rgba(10, 10, 12, 0.7);
-            border: 1px solid rgba(201, 169, 98, 0.15);
-            border-radius: 0.4rem;
-            text-align: left;
-            transition: all 0.3s ease;
-        }
-
-        .donation-tier:hover {
-            border-color: rgba(201, 169, 98, 0.4);
-            transform: translateY(-3px);
-        }
-
-        .tier-amount {
-            font-family: var(--font-display);
-            font-size: 1.3rem;
-            color: var(--gold);
-            margin-bottom: 0.5rem;
-        }
-
-        .tier-title {
-            font-size: 0.85rem;
-            margin-bottom: 0.3rem;
-        }
-
-        .tier-desc {
-            font-size: 0.75rem;
-            color: var(--text-dim);
-        }
-
-        .campaign-cta {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            background: var(--gold);
-            color: var(--bg-deep);
-            text-decoration: none;
-            font-size: 0.85rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            border-radius: 0.3rem;
-            margin-top: 1.5rem;
-            transition: all 0.4s ease;
-        }
-
-        .campaign-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 15px 40px rgba(201, 169, 98, 0.25);
-        }
-
-        .campaign-note {
-            margin-top: 1rem;
-            font-size: 0.8rem;
-            color: var(--text-dim);
-        }
-
-        /* ====== FAMILY ====== */
-        .family-section {
-            padding: 6rem 2rem;
-        }
-
-        .family-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .family-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            margin-top: 3rem;
-        }
-
-        .family-member {
-            text-align: center;
-            padding: 1.5rem;
-        }
-
-        .family-member h4 {
-            font-family: var(--font-display);
-            font-size: 1.2rem;
-            margin-bottom: 0.2rem;
-        }
-
-        .family-role {
-            font-size: 0.65rem;
-            letter-spacing: 0.15em;
-            color: var(--gold);
-            margin-bottom: 0.6rem;
-            text-transform: uppercase;
-        }
-
-        .family-member p {
-            font-size: 0.8rem;
-            margin-bottom: 0;
-        }
-
-        /* ====== PEARL ====== */
-        .pearl-section {
-            padding: 6rem 2rem;
-            background: var(--bg-subtle);
-        }
-
-        .pearl-content {
-            max-width: 650px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .pearl-image {
-            width: 90px;
-            height: 90px;
-            margin: 0 auto 2rem;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--gold), var(--gold-light));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.2rem;
-            box-shadow: 0 0 60px var(--gold-glow);
-        }
-
-        .pearl-dates {
-            font-family: var(--font-display);
-            color: var(--gold);
-            margin-bottom: 1.5rem;
-            font-style: italic;
-        }
-
-        .pearl-highlight {
-            padding: 1.5rem;
-            background: var(--bg-deep);
-            border-left: 2px solid var(--hope-blue);
-            margin: 1.5rem 0;
-            text-align: left;
-        }
-
-        .pearl-highlight p {
-            font-family: var(--font-display);
-            font-size: 0.95rem;
-            color: var(--hope-blue);
-            margin-bottom: 0;
-            font-style: italic;
-        }
-
-        /* ====== CTA FINAL ====== */
-        .cta-section {
-            padding: 6rem 2rem;
-            text-align: center;
-        }
-
-        .cta-subtitle {
-            font-family: var(--font-display);
-            font-size: 1rem;
-            color: var(--text-muted);
-            margin-bottom: 2rem;
-            font-style: italic;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .cta-primary {
-            padding: 1rem 2.5rem;
-            background: var(--gold);
-            color: var(--bg-deep);
-            text-decoration: none;
-            font-size: 0.8rem;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            transition: all 0.4s ease;
-        }
-
-        .cta-primary:hover {
-            box-shadow: 0 0 50px var(--gold-glow);
-            transform: translateY(-2px);
-        }
-
-        .cta-secondary {
-            padding: 1rem 2.5rem;
-            background: transparent;
-            border: 1px solid var(--text-dim);
-            color: var(--text-main);
-            text-decoration: none;
-            font-size: 0.8rem;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            transition: all 0.4s ease;
-        }
-
-        .cta-secondary:hover {
-            border-color: var(--text-main);
-        }
-
-        /* ====== FOOTER ====== */
-        footer {
-            padding: 3rem 2rem;
-            text-align: center;
-            border-top: 1px solid rgba(201, 169, 98, 0.1);
-        }
-
-        .footer-memorial {
-            font-family: var(--font-display);
-            color: var(--text-muted);
-            margin-bottom: 1.5rem;
-            font-size: 0.85rem;
-            font-style: italic;
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .footer-links a {
-            color: var(--text-dim);
-            text-decoration: none;
-            font-size: 0.75rem;
-            transition: color 0.3s ease;
-        }
-
+        .package-card h4 { font-family: var(--font-display); font-size: 1.05rem; margin-bottom: 0.4rem; }
+        .package-price { font-size: 0.95rem; color: var(--gold); margin-bottom: 0.3rem; }
+        .package-desc { font-size: 0.7rem; color: var(--text-dim); }
+        .services-extras { display: flex; justify-content: center; gap: 3rem; margin-top: 2.5rem; flex-wrap: wrap; }
+        .extra-item { text-align: center; max-width: 280px; }
+        .extra-item h5 { font-family: var(--font-display); font-size: 0.95rem; color: var(--hope-blue); margin-bottom: 0.4rem; }
+        .extra-item p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.6; }
+        .campaign-section { padding: 5rem 2rem; background: linear-gradient(180deg, var(--bg-deep) 0%, rgba(201, 169, 98, 0.06) 50%, var(--bg-deep) 100%); border-top: 1px solid rgba(201, 169, 98, 0.2); border-bottom: 1px solid rgba(201, 169, 98, 0.2); }
+        .campaign-content { max-width: 900px; margin: 0 auto; text-align: center; }
+        .campaign-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .campaign-section h2 span { color: var(--gold); }
+        .campaign-subtitle { font-family: var(--font-display); font-size: 1rem; color: var(--text-muted); margin-bottom: 1.5rem; font-style: italic; }
+        .campaign-description { color: var(--text-muted); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .donation-tiers { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin: 2rem 0; }
+        .donation-tier { padding: 1.3rem; background: rgba(10, 10, 12, 0.7); border: 1px solid rgba(201, 169, 98, 0.15); border-radius: 0.4rem; text-align: left; transition: all 0.3s ease; }
+        .donation-tier:hover { border-color: rgba(201, 169, 98, 0.4); transform: translateY(-3px); }
+        .tier-amount { font-family: var(--font-display); font-size: 1.3rem; color: var(--gold); margin-bottom: 0.5rem; }
+        .tier-title { font-size: 0.85rem; margin-bottom: 0.3rem; }
+        .tier-desc { font-size: 0.75rem; color: var(--text-dim); }
+        .campaign-cta { display: inline-block; padding: 1rem 2.5rem; background: var(--gold); color: var(--bg-deep); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; border-radius: 0.3rem; margin-top: 1.5rem; transition: all 0.4s ease; }
+        .campaign-cta:hover { transform: translateY(-2px); box-shadow: 0 15px 40px rgba(201, 169, 98, 0.25); }
+        .campaign-note { margin-top: 1rem; font-size: 0.8rem; color: var(--text-dim); }
+        .family-section { padding: 6rem 2rem; }
+        .family-content { max-width: 800px; margin: 0 auto; text-align: center; }
+        .family-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+        .family-member { text-align: center; padding: 1.5rem; }
+        .family-member h4 { font-family: var(--font-display); font-size: 1.2rem; margin-bottom: 0.2rem; }
+        .family-role { font-size: 0.65rem; letter-spacing: 0.15em; color: var(--gold); margin-bottom: 0.6rem; text-transform: uppercase; }
+        .family-member p { font-size: 0.8rem; margin-bottom: 0; }
+        .pearl-section { padding: 6rem 2rem; background: var(--bg-subtle); }
+        .pearl-content { max-width: 650px; margin: 0 auto; text-align: center; }
+        .pearl-image { width: 90px; height: 90px; margin: 0 auto 2rem; border-radius: 50%; background: linear-gradient(135deg, var(--gold), var(--gold-light)); display: flex; align-items: center; justify-content: center; font-size: 2.2rem; box-shadow: 0 0 60px var(--gold-glow); }
+        .pearl-dates { font-family: var(--font-display); color: var(--gold); margin-bottom: 1.5rem; font-style: italic; }
+        .pearl-highlight { padding: 1.5rem; background: var(--bg-deep); border-left: 2px solid var(--hope-blue); margin: 1.5rem 0; text-align: left; }
+        .pearl-highlight p { font-family: var(--font-display); font-size: 0.95rem; color: var(--hope-blue); margin-bottom: 0; font-style: italic; }
+        .cta-section { padding: 6rem 2rem; text-align: center; }
+        .cta-subtitle { font-family: var(--font-display); font-size: 1rem; color: var(--text-muted); margin-bottom: 2rem; font-style: italic; }
+        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        .cta-primary { padding: 1rem 2.5rem; background: var(--gold); color: var(--bg-deep); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; transition: all 0.4s ease; }
+        .cta-primary:hover { box-shadow: 0 0 50px var(--gold-glow); transform: translateY(-2px); }
+        .cta-secondary { padding: 1rem 2.5rem; background: transparent; border: 1px solid var(--text-dim); color: var(--text-main); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; transition: all 0.4s ease; }
+        .cta-secondary:hover { border-color: var(--text-main); }
+        footer { padding: 3rem 2rem; text-align: center; border-top: 1px solid rgba(201, 169, 98, 0.1); }
+        .footer-memorial { font-family: var(--font-display); color: var(--text-muted); margin-bottom: 1.5rem; font-size: 0.85rem; font-style: italic; }
+        .footer-links { display: flex; gap: 1.5rem; justify-content: center; margin-bottom: 1.5rem; flex-wrap: wrap; }
+        .footer-links a { color: var(--text-dim); text-decoration: none; font-size: 0.75rem; transition: color 0.3s ease; }
         .footer-links a:hover { color: var(--gold); }
-
-        .footer-payment {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .footer-payment a {
-            color: var(--text-dim);
-            text-decoration: none;
-            font-size: 0.7rem;
-            padding: 0.4rem 0.8rem;
-            border: 1px solid rgba(201, 169, 98, 0.15);
-            transition: all 0.3s ease;
-        }
-
-        .footer-payment a:hover {
-            border-color: var(--gold);
-            color: var(--gold);
-        }
-
-        .footer-location {
-            font-size: 0.65rem;
-            letter-spacing: 0.2em;
-            color: var(--text-dim);
-        }
-
-        /* ====== ANIMATIONS ====== */
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(25px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateX(-50%) translateY(0); }
-            50% { transform: translateX(-50%) translateY(-8px); }
-        }
-
-        /* ====== RESPONSIVE ====== */
-        @media (max-width: 1024px) {
-            .packages-grid,
-            .donation-tiers { grid-template-columns: 1fr 1fr; }
-            .pillars-grid { grid-template-columns: 1fr 1fr; }
-        }
-
-        @media (max-width: 768px) {
-            section { padding: 4rem 1.5rem; }
-            .two-types,
-            .contrast-grid,
-            .packages-grid,
-            .donation-tiers,
-            .pillars-grid,
-            .family-grid { grid-template-columns: 1fr; }
-            .cta-buttons,
-            .services-extras { flex-direction: column; align-items: center; }
-            .lang-switch { top: 1rem; right: 1rem; }
-        }
-
-        /* ====== PRINT STYLES ====== */
-        @media print {
-            * {
-                background: transparent !important;
-                color: #1a1a1a !important;
-                box-shadow: none !important;
-                text-shadow: none !important;
-            }
-
-            body {
-                background: white !important;
-                font-size: 10pt;
-                line-height: 1.5;
-            }
-
-            .lang-switch,
-            .scroll-hint,
-            .hero-cta,
-            .cta-buttons,
-            .cta-section,
-            .campaign-section,
-            .campaign-cta,
-            .footer-payment,
-            footer { display: none !important; }
-
-            .hero {
-                min-height: auto !important;
-                padding: 1.5rem 1rem !important;
-                page-break-after: avoid;
-            }
-            .hero::before { display: none; }
-            .hero h1 {
-                font-size: 28pt !important;
-                opacity: 1 !important;
-                animation: none !important;
-            }
-            .hero h1 .gold { color: #8a7a4a !important; }
-            .hero-tagline,
-            .hero-sub {
-                opacity: 1 !important;
-                animation: none !important;
-                color: #444 !important;
-            }
-
-            section {
-                padding: 1.5rem 0.5rem !important;
-                max-width: 100% !important;
-                page-break-inside: avoid;
-            }
-
-            .boundarist-question,
-            .contrast-section,
-            .pillars-section,
-            .services-section,
-            .family-section,
-            .pearl-section {
-                background: none !important;
-                border: none !important;
-                padding: 1rem 0.5rem !important;
-            }
-
-            h2 {
-                font-size: 14pt !important;
-                color: #1a1a1a !important;
-                page-break-after: avoid;
-            }
-            h2 .highlight { color: #3a7a8a !important; }
-            h2 .gold { color: #8a7a4a !important; }
-
-            p, .experience-item, .contrast-item .value {
-                color: #333 !important;
-            }
-
-            .section-label {
-                color: #666 !important;
-            }
-
-            .two-types {
-                grid-template-columns: 1fr 1fr !important;
-                gap: 1rem !important;
-            }
-            .type-card {
-                background: none !important;
-                border: 1px solid #ccc !important;
-                padding: 1rem !important;
-            }
-            .type-card h3 {
-                font-size: 10pt !important;
-            }
-            .type-card.outside h3 { color: #3a7a8a !important; }
-            .type-card.inside h3 { color: #8a7a4a !important; }
-            .experience-item {
-                background: none !important;
-                border-left: 2px solid #999 !important;
-                padding: 0.3rem 0.5rem !important;
-                font-size: 9pt !important;
-            }
-
-            .contrast-grid {
-                grid-template-columns: 1fr 1fr !important;
-                gap: 1rem !important;
-            }
-            .contrast-card {
-                background: none !important;
-                border: 1px solid #ccc !important;
-                padding: 1rem !important;
-            }
-            .contrast-card h4 {
-                font-size: 11pt !important;
-                color: #1a1a1a !important;
-            }
-            .contrast-item {
-                font-size: 9pt !important;
-                border-bottom: 1px solid #eee !important;
-            }
-            .contrast-insight {
-                background: none !important;
-                border: 1px solid #ccc !important;
-                margin-top: 1rem !important;
-            }
-            .contrast-insight strong { color: #8a7a4a !important; }
-
-            .definition-box p {
-                font-size: 12pt !important;
-            }
-            .definition-box strong { color: #3a7a8a !important; }
-
-            .our-story {
-                background: none !important;
-                border: 1px solid #ccc !important;
-                padding: 1rem !important;
-            }
-            .our-story h3 { color: #8a7a4a !important; }
-
-            .the-message {
-                font-size: 18pt !important;
-                color: #8a7a4a !important;
-            }
-            .sub-message { color: #3a7a8a !important; }
-
-            .pillars-grid {
-                grid-template-columns: repeat(3, 1fr) !important;
-                gap: 0.5rem !important;
-            }
-            .pillar {
-                background: none !important;
-                border: 1px solid #ccc !important;
-                padding: 0.8rem !important;
-            }
-            .pillar-icon { font-size: 1.5rem !important; }
-            .pillar h4 { font-size: 10pt !important; }
-            .pillar-sub { color: #8a7a4a !important; }
-            .pillar p { font-size: 8pt !important; }
-
-            .packages-grid {
-                grid-template-columns: repeat(4, 1fr) !important;
-                gap: 0.5rem !important;
-            }
-            .package-card {
-                background: none !important;
-                border: 1px solid #ccc !important;
-                padding: 0.5rem !important;
-            }
-            .package-icon { font-size: 1.2rem !important; margin-bottom: 0.3rem !important; }
-            .package-card h4 { font-size: 9pt !important; }
-            .package-price { color: #8a7a4a !important; font-size: 9pt !important; }
-            .package-desc { font-size: 7pt !important; }
-
-            .services-extras {
-                flex-direction: row !important;
-                gap: 1rem !important;
-            }
-            .extra-item h5 { color: #3a7a8a !important; font-size: 9pt !important; }
-            .extra-item p { font-size: 8pt !important; }
-
-            .family-grid {
-                grid-template-columns: repeat(3, 1fr) !important;
-                gap: 0.5rem !important;
-            }
-            .family-member { padding: 0.5rem !important; }
-            .family-member h4 { font-size: 10pt !important; }
-            .family-role { color: #8a7a4a !important; font-size: 7pt !important; }
-            .family-member p { font-size: 8pt !important; }
-
-            .pearl-image {
-                width: 50px !important;
-                height: 50px !important;
-                font-size: 1.5rem !important;
-                background: #eee !important;
-                border: 1px solid #ccc !important;
-            }
-            .pearl-dates { color: #8a7a4a !important; }
-            .pearl-highlight {
-                background: none !important;
-                border-left: 2px solid #3a7a8a !important;
-                padding: 0.5rem !important;
-            }
-            .pearl-highlight p { color: #3a7a8a !important; font-size: 9pt !important; }
-        }
+        .footer-payment { display: flex; gap: 1rem; justify-content: center; margin-bottom: 1.5rem; flex-wrap: wrap; }
+        .footer-payment a { color: var(--text-dim); text-decoration: none; font-size: 0.7rem; padding: 0.4rem 0.8rem; border: 1px solid rgba(201, 169, 98, 0.15); transition: all 0.3s ease; }
+        .footer-payment a:hover { border-color: var(--gold); color: var(--gold); }
+        .footer-location { font-size: 0.65rem; letter-spacing: 0.2em; color: var(--text-dim); }
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(25px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes float { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(-8px); } }
+        @media (max-width: 1024px) { .packages-grid, .donation-tiers { grid-template-columns: 1fr 1fr; } .pillars-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 768px) { section { padding: 4rem 1.5rem; } .two-types, .contrast-grid, .packages-grid, .donation-tiers, .pillars-grid, .family-grid { grid-template-columns: 1fr; } .cta-buttons, .services-extras { flex-direction: column; align-items: center; } .lang-switch { top: 1rem; right: 1rem; } }
     </style>
 </head>
 <body>
-
-<nav class="lang-switch">
-    <a href="#" class="active">EN</a>
-    <a href="index-ja.html">日本語</a>
-</nav>
-
-<!-- ====== HERO ====== -->
+<nav class="lang-switch"><a href="#" class="active">EN</a><a href="index-ja.html">日本語</a></nav>
 <header class="hero">
     <div class="hero-content">
         <p class="hero-tagline">BOUNDARIST MOVEMENT</p>
@@ -1124,11 +172,8 @@
     </div>
     <div class="scroll-hint">SCROLL</div>
 </header>
-
-<!-- ====== BOUNDARIST QUESTION ====== -->
 <section class="boundarist-question" id="question">
     <h2>Have you ever experienced<br>something like this?</h2>
-
     <div class="two-types">
         <div class="type-card outside">
             <h3>When what you took for granted<br>started to shake</h3>
@@ -1141,7 +186,6 @@
                 <div class="experience-item">Wondered "Who am I, really?"</div>
             </div>
         </div>
-
         <div class="type-card inside">
             <h3>When the system didn't work<br>for someone in front of you</h3>
             <div class="experience-list">
@@ -1152,226 +196,102 @@
             </div>
         </div>
     </div>
-
     <div class="definition-box">
         <p>Both are <strong>"standing at the boundary."</strong></p>
         <p class="sub">Outside the system, or inside seeing its limits.</p>
     </div>
-
     <div class="our-story">
         <h3>We've been on both sides.</h3>
-        <p>
-            "You need an address." But someone else said, "Let me figure this out."<br><br>
-            "We need references." But they looked at us, and chose to trust.<br><br>
-            <em>That moment changed everything.</em>
-        </p>
+        <p>"You need an address." But someone else said, "Let me figure this out."<br><br>"We need references." But they looked at us, and chose to trust.<br><br><em>That moment changed everything.</em></p>
     </div>
-
     <div class="core-message-section">
         <p class="lead">Whether you're outside or inside the system:</p>
         <p class="the-message">"Resonance opens the way."</p>
         <p class="sub-message">To exist. To act. To eternal.</p>
     </div>
 </section>
-
-<!-- ====== CONTRAST STORY ====== -->
 <section class="contrast-section">
     <div class="contrast-content">
         <p class="section-label">What We Experienced</p>
         <h2>Same situation. Same family.<br><span class="gold">The difference was whether they saw the person in front of them.</span></h2>
-
         <div class="contrast-grid">
             <div class="contrast-card fail">
                 <h4>At one counter</h4>
-                <div class="contrast-item">
-                    <span class="label">Our situation</span>
-                    <span class="value">No address</span>
-                </div>
-                <div class="contrast-item">
-                    <span class="label">Response</span>
-                    <span class="value">"Come back when you have an address"</span>
-                </div>
-                <div class="contrast-item">
-                    <span class="label">Did they see us?</span>
-                    <span class="value">No</span>
-                </div>
-                <div class="contrast-item">
-                    <span class="label">Result</span>
-                    <span class="value">Turned away</span>
-                </div>
+                <div class="contrast-item"><span class="label">Our situation</span><span class="value">No address</span></div>
+                <div class="contrast-item"><span class="label">Response</span><span class="value">"Come back when you have an address"</span></div>
+                <div class="contrast-item"><span class="label">Did they see us?</span><span class="value">No</span></div>
+                <div class="contrast-item"><span class="label">Result</span><span class="value">Turned away</span></div>
             </div>
-
             <div class="contrast-card success">
                 <h4>At another counter</h4>
-                <div class="contrast-item">
-                    <span class="label">Our situation</span>
-                    <span class="value">No address</span>
-                </div>
-                <div class="contrast-item">
-                    <span class="label">Response</span>
-                    <span class="value">"Let me figure this out"</span>
-                </div>
-                <div class="contrast-item">
-                    <span class="label">Did they see us?</span>
-                    <span class="value">Yes</span>
-                </div>
-                <div class="contrast-item">
-                    <span class="label">Result</span>
-                    <span class="value">A path opened</span>
-                </div>
+                <div class="contrast-item"><span class="label">Our situation</span><span class="value">No address</span></div>
+                <div class="contrast-item"><span class="label">Response</span><span class="value">"Let me figure this out"</span></div>
+                <div class="contrast-item"><span class="label">Did they see us?</span><span class="value">Yes</span></div>
+                <div class="contrast-item"><span class="label">Result</span><span class="value">A path opened</span></div>
             </div>
         </div>
-
-        <div class="contrast-insight">
-            <p>Even within the same system, <strong>individual judgment changes outcomes.</strong><br>
-            When there's resonance, <strong>a way opens.</strong></p>
-        </div>
+        <div class="contrast-insight"><p>Even within the same system, <strong>individual judgment changes outcomes.</strong><br>When there's resonance, <strong>a way opens.</strong></p></div>
     </div>
 </section>
-
-<!-- ====== THREE PILLARS ====== -->
 <section class="pillars-section">
     <p class="section-label">What We Do</p>
     <h2><span class="highlight">Expanding a world of resonance</span></h2>
-
     <div class="pillars-grid">
-        <div class="pillar">
-            <div class="pillar-icon">✦</div>
-            <h4>Engrave</h4>
-            <p class="pillar-sub">Proof of Existence</p>
-            <p>"You were here.<br>You existed."</p>
-        </div>
-        <div class="pillar">
-            <div class="pillar-icon">🛡</div>
-            <h4>Protect</h4>
-            <p class="pillar-sub">Disaster-Proof Memory</p>
-            <p>Quartz glass. QR archives.<br>Multi-layer backup.</p>
-        </div>
-        <div class="pillar">
-            <div class="pillar-icon">⚡</div>
-            <h4>Empower</h4>
-            <p class="pillar-sub">Off-Grid Independence</p>
-            <p>Resonance opens the way,<br>not systems.</p>
-        </div>
+        <div class="pillar"><div class="pillar-icon">✦</div><h4>Engrave</h4><p class="pillar-sub">Proof of Existence</p><p>"You were here.<br>You existed."</p></div>
+        <div class="pillar"><div class="pillar-icon">🛡</div><h4>Protect</h4><p class="pillar-sub">Disaster-Proof Memory</p><p>Quartz glass. QR archives.<br>Multi-layer backup.</p></div>
+        <div class="pillar"><div class="pillar-icon">⚡</div><h4>Empower</h4><p class="pillar-sub">Off-Grid Independence</p><p>Resonance opens the way,<br>not systems.</p></div>
     </div>
 </section>
-
-<!-- ====== SERVICES ====== -->
 <section class="services-section" id="services">
     <div class="services-content">
         <p class="section-label">Services</p>
         <h2>Laser-Engraved Memorials</h2>
         <p>Preserve your memories in materials that last.</p>
-
         <div class="packages-grid">
-            <div class="package-card">
-                <div class="package-icon">🌿</div>
-                <h4>Moment</h4>
-                <p class="package-price">$30–$50</p>
-                <p class="package-desc">We come to you</p>
-            </div>
-            <div class="package-card">
-                <div class="package-icon">🪵</div>
-                <h4>Memory</h4>
-                <p class="package-price">$100–$200</p>
-                <p class="package-desc">We come to you</p>
-            </div>
-            <div class="package-card">
-                <div class="package-icon">🪨</div>
-                <h4>Legacy</h4>
-                <p class="package-price">$300–$500</p>
-                <p class="package-desc">Visit our workshop or Japan</p>
-            </div>
-            <div class="package-card">
-                <div class="package-icon">💎</div>
-                <h4>Eternal</h4>
-                <p class="package-price">$5,000</p>
-                <p class="package-desc">Crafted at our Japan studio</p>
-            </div>
+            <div class="package-card"><div class="package-icon">🌿</div><h4>Moment</h4><p class="package-price">$30–$50</p><p class="package-desc">We come to you</p></div>
+            <div class="package-card"><div class="package-icon">🪵</div><h4>Memory</h4><p class="package-price">$100–$200</p><p class="package-desc">We come to you</p></div>
+            <div class="package-card"><div class="package-icon">🪨</div><h4>Legacy</h4><p class="package-price">$300–$500</p><p class="package-desc">Visit our workshop or Japan</p></div>
+            <div class="package-card"><div class="package-icon">💎</div><h4>Eternal</h4><p class="package-price">$5,000</p><p class="package-desc">Crafted at our Japan studio</p></div>
         </div>
-
         <div class="services-extras">
-            <div class="extra-item">
-                <h5>🏠 Ohana Home Japan</h5>
-                <p><strong>First week FREE</strong><br>Stay at our homes in Tokyo area & countryside</p>
-            </div>
-            <div class="extra-item">
-                <h5>⚡ Off-Grid Infrastructure</h5>
-                <p>🎒 Mobile Kit: Starlink + Jackery = ~6kg<br>🏠 Home: Assessment $0 | Build $500/day</p>
-            </div>
+            <div class="extra-item"><h5>🏠 Ohana Home Japan</h5><p><strong>First week FREE</strong><br>Stay at our homes in Tokyo area & countryside</p></div>
+            <div class="extra-item"><h5>⚡ Off-Grid Infrastructure</h5><p>🎒 Mobile Kit: Starlink + Jackery = ~6kg<br>🏠 Home: Assessment $0 | Build $500/day</p></div>
         </div>
-
         <div class="cta-buttons" style="margin-top: 2.5rem;">
             <a href="Catalog.pdf" class="cta-primary">View Catalog</a>
+            <a href="Partner.pdf" class="cta-secondary">Partner Info</a>
             <a href="https://calendly.com/pearlmemorial/pearlmemorialsession" class="cta-secondary">Book Consultation</a>
         </div>
     </div>
 </section>
-
-<!-- ====== CAMPAIGN ====== -->
 <section class="campaign-section" id="campaign">
     <div class="campaign-content">
         <div class="campaign-icon">🎄🎅</div>
         <h2>Christmas Giving -- <span>Global + Local = Strong</span></h2>
         <p class="campaign-subtitle">Growing with Ohana</p>
         <p class="campaign-description">This Christmas, give the gift of independence.<br>Your donation delivers off-grid infrastructure to farms, temples, and communities.</p>
-
         <div class="donation-tiers">
-            <div class="donation-tier">
-                <div class="tier-amount">$1,000+</div>
-                <div class="tier-title">🔋 Portable Power</div>
-                <div class="tier-desc">Jackery 1000 Plus, etc.</div>
-            </div>
-            <div class="donation-tier">
-                <div class="tier-amount">$3,000+</div>
-                <div class="tier-title">📡 Connectivity Kit</div>
-                <div class="tier-desc">Starlink + Battery + Solar</div>
-            </div>
-            <div class="donation-tier">
-                <div class="tier-amount">$5,000+</div>
-                <div class="tier-title">🏠 Small-Scale</div>
-                <div class="tier-desc">Basic farm/temple setup</div>
-            </div>
-            <div class="donation-tier">
-                <div class="tier-amount">$10,000+</div>
-                <div class="tier-title">⚡ Mid-Scale</div>
-                <div class="tier-desc">Multiple sites or serious equipment</div>
-            </div>
+            <div class="donation-tier"><div class="tier-amount">$1,000+</div><div class="tier-title">🔋 Portable Power</div><div class="tier-desc">Jackery 1000 Plus, etc.</div></div>
+            <div class="donation-tier"><div class="tier-amount">$3,000+</div><div class="tier-title">📡 Connectivity Kit</div><div class="tier-desc">Starlink + Battery + Solar</div></div>
+            <div class="donation-tier"><div class="tier-amount">$5,000+</div><div class="tier-title">🏠 Small-Scale</div><div class="tier-desc">Basic farm/temple setup</div></div>
+            <div class="donation-tier"><div class="tier-amount">$10,000+</div><div class="tier-title">⚡ Mid-Scale</div><div class="tier-desc">Multiple sites or serious equipment</div></div>
         </div>
-
         <a href="https://www.paypal.com/ncp/payment/SVPS6J8WXQU76" class="campaign-cta">🎁 Donate via PayPal</a>
         <p class="campaign-note">Zelle: business@satotakuya.jp</p>
     </div>
 </section>
-
-<!-- ====== FAMILY ====== -->
 <section class="family-section">
     <div class="family-content">
         <p class="section-label">Off-grid Sato Family</p>
         <h2>A Family of Three</h2>
         <p>Based in Maui and Japan. Building resilient communities wherever we go.</p>
-
         <div class="family-grid">
-            <div class="family-member">
-                <h4>Takuya</h4>
-                <p class="family-role">Infrastructure & Inscription</p>
-                <p>Building infrastructure that supports resonance.</p>
-            </div>
-            <div class="family-member">
-                <h4>Mina</h4>
-                <p class="family-role">Marketing & Craft</p>
-                <p>18 years pet care, resin art.</p>
-            </div>
-            <div class="family-member">
-                <h4>Ito</h4>
-                <p class="family-role">5 Years Old • Soap Helper</p>
-                <p>Explorer. Dreamer.</p>
-            </div>
+            <div class="family-member"><h4>Takuya</h4><p class="family-role">Infrastructure & Inscription</p><p>Building infrastructure that supports resonance.</p></div>
+            <div class="family-member"><h4>Mina</h4><p class="family-role">Marketing & Craft</p><p>18 years pet care, resin art.</p></div>
+            <div class="family-member"><h4>Ito</h4><p class="family-role">5 Years Old • Soap Helper</p><p>Explorer. Dreamer.</p></div>
         </div>
     </div>
 </section>
-
-<!-- ====== PEARL ====== -->
 <section class="pearl-section">
     <div class="pearl-content">
         <div class="pearl-image">🐕</div>
@@ -1379,16 +299,12 @@
         <h2>Where "Resonance" Began</h2>
         <p class="pearl-dates">2007 – 2025</p>
         <p>For 18 years, Pearl was family. In his final years, he lost his voice.</p>
-        <div class="pearl-highlight">
-            <p>We wanted to preserve the Pearl who once barked with life. So we placed his throat bone in a clamshell with a four-leaf clover our daughter found and flower petals she picked. Sealed in resin. A portable grave we could carry anywhere.</p>
-        </div>
+        <div class="pearl-highlight"><p>We wanted to preserve the Pearl who once barked with life. So we placed his throat bone in a clamshell with a four-leaf clover our daughter found and flower petals she picked. Sealed in resin. A portable grave we could carry anywhere.</p></div>
         <p>That's how we developed Audio QR—technology to preserve resonance forever.</p>
         <p><strong>"Resonance opens the way"—this phrase was born from our resonance with Pearl.</strong></p>
         <p>His resonance still opens the way, alongside us. <strong>Pearl Memorial.</strong></p>
     </div>
 </section>
-
-<!-- ====== CTA ====== -->
 <section class="cta-section">
     <p class="section-label">Begin</p>
     <h2>Tell Us Your Story</h2>
@@ -1398,13 +314,12 @@
         <a href="https://pearl.memorial" class="cta-secondary">Shop Now</a>
     </div>
 </section>
-
-<!-- ====== FOOTER ====== -->
 <footer>
     <p class="footer-memorial">In loving memory of Pearl (2007–2025) 🐕</p>
     <div class="footer-links">
         <a href="https://calendly.com/pearlmemorial/pearlmemorialsession">Contact</a>
         <a href="https://www.instagram.com/pearl.memorial/">Instagram</a>
+        <a href="Partner.pdf">Partner Info</a>
     </div>
     <div class="footer-payment">
         <a href="https://pearl.memorial">Shop (Square)</a>
@@ -1412,6 +327,5 @@
     </div>
     <p class="footer-location">Mahalo 🌺 Off-grid Sato Family · Maui ⇄ Japan</p>
 </footer>
-
 </body>
 </html>
