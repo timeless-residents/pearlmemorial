@@ -156,6 +156,21 @@ footer { padding: 3rem 2rem; text-align: center; border-top: 1px solid rgba(201,
     html, body { background: #fff !important; color: #000 !important; -webkit-print-color-adjust: exact; }
     * { background: transparent !important; color: #000 !important; text-shadow: none !important; box-shadow: none !important; -webkit-text-fill-color: #000 !important; }
 
+    /* show animated elements (fix opacity: 0) */
+    .hero-tagline, .hero h1, .hero-sub, .hero-cta,
+    [style*="animation"], [class*="fade"] {
+        opacity: 1 !important;
+        animation: none !important;
+    }
+
+    /* fix hero section height (prevent blank first page) */
+    .hero {
+        min-height: auto !important;
+        height: auto !important;
+        padding: 2rem 1rem !important;
+    }
+    .hero::before { display: none !important; }
+
     /* make links readable on paper */
     a[href]:after { content: " (" attr(href) ")"; color: #000; font-size: 0.9em; }
 
