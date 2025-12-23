@@ -81,7 +81,7 @@ p { color: var(--text-muted); max-width: 60ch; margin: 0 auto 1.5rem; }
 .contrast-insight p { font-family: var(--font-display); font-size: 1.1rem; color: var(--text-main); margin-bottom: 0; }
 .contrast-insight strong { color: var(--gold); }
 .pillars-section { padding: 6rem 2rem; }
-.pillars-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 900px; margin: 3rem auto 0; }
+.pillars-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; max-width: 1000px; margin: 3rem auto 0; }
 .pillar { padding: 2rem 1.5rem; text-align: center; background: linear-gradient(180deg, var(--bg-card) 0%, transparent 100%); border: 1px solid rgba(201, 169, 98, 0.1); transition: all 0.4s ease; }
 .pillar:hover { border-color: rgba(201, 169, 98, 0.3); transform: translateY(-5px); }
 .pillar-icon { font-size: 2rem; margin-bottom: 1rem; }
@@ -101,6 +101,21 @@ p { color: var(--text-muted); max-width: 60ch; margin: 0 auto 1.5rem; }
 .extra-item { text-align: center; max-width: 280px; }
 .extra-item h5 { font-family: var(--font-display); font-size: 0.95rem; color: var(--hope-blue); margin-bottom: 0.4rem; }
 .extra-item p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.6; }
+/* Soul Carrier Section */
+.soul-carrier-section { margin-top: 4rem; padding-top: 3rem; border-top: 1px solid rgba(201, 169, 98, 0.15); }
+.soul-carrier-section h2 { font-family: var(--font-display); font-size: clamp(1.4rem, 3vw, 1.8rem); color: var(--gold); margin-bottom: 1.5rem; }
+.soul-carrier-intro { max-width: 700px; margin: 0 auto 1.5rem; color: var(--text-muted); line-height: 1.8; }
+.soul-carrier-tagline { color: var(--text-main); font-weight: 400; margin-bottom: 1rem; }
+.soul-carrier-list { list-style: none; max-width: 400px; margin: 0 auto 1.5rem; text-align: left; }
+.soul-carrier-list li { padding: 0.6rem 0 0.6rem 1.5rem; color: var(--text-muted); position: relative; border-left: 2px solid var(--gold); margin-bottom: 0.5rem; background: rgba(201, 169, 98, 0.03); }
+.soul-carrier-quote { font-family: var(--font-display); font-size: 1.2rem; color: var(--gold); font-style: italic; margin: 2rem 0; }
+.why-us-section { margin-top: 3rem; padding: 2rem; background: rgba(126, 184, 201, 0.04); border: 1px solid rgba(126, 184, 201, 0.15); border-radius: 0.5rem; max-width: 700px; margin-left: auto; margin-right: auto; }
+.why-us-section h3 { font-family: var(--font-display); font-size: 1.3rem; color: var(--hope-blue); margin-bottom: 0.8rem; }
+.why-us-tagline { color: var(--text-main); font-style: italic; margin-bottom: 1.5rem; }
+.why-us-list { list-style: none; text-align: left; margin: 0 0 1.5rem 0; padding: 0; }
+.why-us-list li { padding: 0.5rem 0 0.5rem 1.2rem; color: var(--text-muted); position: relative; }
+.why-us-list li::before { content: "•"; color: var(--hope-blue); position: absolute; left: 0; }
+.why-us-closing { font-family: var(--font-display); font-size: 1rem; color: var(--text-main); font-style: italic; margin-bottom: 0; }
 .campaign-section { padding: 5rem 2rem; background: linear-gradient(180deg, var(--bg-deep) 0%, rgba(201, 169, 98, 0.06) 50%, var(--bg-deep) 100%); border-top: 1px solid rgba(201, 169, 98, 0.2); border-bottom: 1px solid rgba(201, 169, 98, 0.2); }
 .campaign-content { max-width: 900px; margin: 0 auto; text-align: center; }
 .campaign-icon { font-size: 3rem; margin-bottom: 1rem; }
@@ -147,7 +162,7 @@ footer { padding: 3rem 2rem; text-align: center; border-top: 1px solid rgba(201,
 .footer-location { font-size: 0.65rem; letter-spacing: 0.2em; color: var(--text-dim); }
 @keyframes fadeUp { from { opacity: 0; transform: translateY(25px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes float { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(-8px); } }
-@media (max-width: 1024px) { .packages-grid, .donation-tiers { grid-template-columns: 1fr 1fr; } .pillars-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 1024px) { .packages-grid, .donation-tiers { grid-template-columns: 1fr 1fr; } .pillars-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 768px) { section { padding: 4rem 1.5rem; } .two-types, .contrast-grid, .packages-grid, .donation-tiers, .pillars-grid, .family-grid { grid-template-columns: 1fr; } .cta-buttons, .services-extras { flex-direction: column; align-items: center; } .lang-switch { top: 1rem; right: 1rem; } }
 
 /* Print: simple black & white */
