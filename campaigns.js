@@ -122,12 +122,9 @@
                     description: 'This Christmas, give the gift of independence. Your donation delivers off-grid infrastructure to farms, temples, and communities.',
                     cta: { text: '🎁 Donate via PayPal', link: 'https://www.paypal.com/ncp/payment/SVPS6J8WXQU76' },
                     tiers: [
-                        { amount: '$1,000+', title: 'Portable Power', desc: 'Jackery 1000 Plus (stationary) / 290W (mobile)' },
-                        { amount: '$2,000+', title: 'Generator', desc: 'Backup power for extended outages' },
-                        { amount: '$3,000+', title: 'Connectivity Kit', desc: 'Starlink + Battery + Solar' },
-                        { amount: '$5,000+', title: 'Full Setup', desc: 'Power + Generator + Connectivity' }
+                        { amount: '$3,000', title: 'Full Independence Kit', desc: 'Power (stationary + mobile) + Solar & Generator + Starlink & Wi-Fi' }
                     ],
-                    note: 'Zelle: business@satotakuya.jp'
+                    note: 'One set delivers complete off-grid independence. Zelle: business@satotakuya.jp'
                 },
                 ja: {
                     icon: '🎄🎅',
@@ -137,10 +134,7 @@
                     description: 'このクリスマス、独立の贈り物を届けましょう。寄付は農地や寺院へのインフラ支援になります。',
                     cta: { text: '🎁 PayPalで寄付', link: 'https://www.paypal.com/ncp/payment/SVPS6J8WXQU76' },
                     tiers: [
-                        { amount: '¥100,000〜', title: '携帯電源', desc: 'Jackery 1000 Plus（据置）/ 290W（車載）' },
-                        { amount: '¥200,000〜', title: 'ジェネレーター', desc: '長時間停電時のバックアップ電源' },
-                        { amount: '¥300,000〜', title: '接続キット', desc: 'Starlink + バッテリー + ソーラー' },
-                        { amount: '¥500,000〜', title: 'フルセットアップ', desc: '電源 + ジェネレーター + 接続' }
+                        { amount: '¥450,000', title: '独立キット一式', desc: '電源（据置＋携帯）+ 発電（ソーラー＋静音ジェネレーター）+ 通信（Starlink mini＋Wi-Fi）' }
                     ],
                     note: 'Zelle: business@satotakuya.jp'
                 }
