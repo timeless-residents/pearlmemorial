@@ -161,6 +161,7 @@ People crossed the ocean. For different reasons, in different eras. Over the yea
 
 - **Ashes to ancestral homes** — Return remains to family graves in Japan
 - **Families to their roots** — Reconnect with relatives, registries, and history
+- **Family crests to memory** — Research your kamon for engraving on memorials
 - **Stories to completion** — Close the circle that distance left open
 
 > "Loss doesn't have to be the end."
@@ -186,7 +187,7 @@ After creating a portable grave for Pearl, we visited Pearl Harbor as a family. 
 | Service | Price | Description |
 |---|---|---|
 | Consultation | Free | 30-minute call to understand your situation |
-| Research | $500 | Locate family records, graves, and contacts |
+| Research | $500 | Locate family records, graves, contacts, and kamon |
 | Coordination | $1,000 | Arrange ceremonies, temple visits, and logistics |
 | Accompaniment / Proxy | $2,000+ | We travel with you — or on your behalf (+ travel expenses) |
 
