@@ -150,57 +150,49 @@ Materials: Quartz glass internal engraving (1,000+ years)
 
 ---
 
-## Preserve — Disaster-Resistant Memory
+## Preserve — Places to Keep & Visit
 
-**Your memories, protected from time and disaster.**
+**Your memories, protected. Your presence, welcomed.**
 
-| Service | Price | Description |
-|---|---|---|
-| QR Archive | $50 | Link physical memorial to digital archive (photos, videos, voice) |
-| Quartz Glass | $500+ | 1,000+ year storage, included in Eternal package |
-| Physical Vault | $100/year | Secure storage in Japan or Hana, Maui (fireproof, disaster-resistant) |
-| Dual Location Vault | $150/year | Both Japan + Hawaii for maximum redundancy |
-| Multi-layer Backup | $200 | Cloud + physical + distributed storage |
+A place to store. A place to return.
 
-> "What's engraved can be lost. What's archived endures."
-
----
-
-## Ohana Home Japan
-
-**Live like a local, not a tourist.**
-
-**First stay: FREE (1 week)** | Repeat: Pearl Memorial order or donation
-
-### Why free?
-
-We spend half the year in Maui. While we're away, our homes in Japan sit empty.
-
-Rather than leave them unused, we share them with you.
-
-### Urban — Akemi
+### Urayasu — Near Tokyo
 - 30 min to Tokyo
-- Near Disney Resort (fireworks view from home)
+- Near Disney Resort (fireworks view)
 - 4LDK Frank Lloyd Wright Organic House
-- Sleeps up to 9 guests
-- 2-car parking, EV charging
+- Storage + stay for visits
 - Starlink Wi-Fi
 
-### Rural — Kurihara
+### Kurihara — Countryside
 - Traditional farmhouse
 - All tatami rooms
 - Rice paddies & nature
 - Homemade meals by Mina's mother
-- Natural hot spring by car
+- Storage + stay for visits
 - Starlink Wi-Fi
 
+### Hana, Maui — Pacific
+- Remote east coast of Maui
+- Ocean & nature
+- Storage + stay for visits
+- Off-grid ready
+
 **Available:** Jan–Mar, Jun–Jul, Nov–Dec
+
+### Additional Archive Options
+| Service | Price | Description |
+|---|---|---|
+| QR Archive | $50 | Link physical memorial to digital archive |
+| Quartz Glass | $500+ | 1,000+ year storage |
+| Multi-layer Backup | $200 | Cloud + physical + distributed |
+
+> "A place to keep. A place to return."
 
 ---
 
 ## Sustain — Your Own Micro Datacenter
 
-**Own your data. No big-tech dependency. Eternal preservation on your terms.**
+**Own your data. Eternal preservation on your terms.**
 
 ### The Stack
 - **Solar Panel** — Off-grid power
