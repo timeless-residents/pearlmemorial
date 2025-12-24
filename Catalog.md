@@ -42,15 +42,16 @@ Standing at the boundary = when these systems shake:
 
 ---
 
-## Timeless Eternal Hope — Three Pillars
+## Timeless Eternal Hope — Four Pillars
 
-Pearl Memorial is part of **Timeless Eternal Hope**, built on three pillars:
+Pearl Memorial is part of **Timeless Eternal Hope**, built on four pillars:
 
 | Pillar | What it means | How we do it |
 |---|---|---|
+| 🕊 **Carry** | Soul Carrier | We carry souls home |
 | 🔥 **Inscribe** | Proof of existence | Laser engraving preserves memories |
 | 🛡 **Preserve** | Disaster-resistant memory | Quartz glass, QR archives |
-| ⚡ **Sustain** | Off-grid independence | Exist without system permission |
+| ⚡ **Sustain** | Digital independence | Your own micro datacenter for eternal preservation |
 
 ---
 
@@ -147,6 +148,50 @@ Rather than leave them unused, we share them with you.
 | Construction | $500/day | Solar, battery, Starlink setup. Full environment in 3 days. |
 
 > We built a full off-grid setup in Maui in 3 days. Mac Studio running, 24hr internet, family of 3 comfortable.
+
+---
+
+## Soul Carrier — Reuniting Roots
+
+**We carry souls home.**
+
+People crossed the ocean. For different reasons, in different eras. Over the years, connections to their homeland faded.
+
+### We help deliver:
+
+- **Ashes to ancestral homes** — Return remains to family graves in Japan
+- **Families to their roots** — Reconnect with relatives, registries, and history
+- **Family crests to memory** — Research your kamon with English report on its history and significance
+- **Stories to completion** — Close the circle that distance left open
+
+> "Loss doesn't have to be the end."
+
+### Why Us?
+
+**We stand at the boundary ourselves.**
+
+| What we offer | Why it matters |
+|---|---|
+| Japanese natives living between Hawaii and Japan | We understand both worlds |
+| Fluent in both languages and cultures | No translation barriers |
+| We have homes in Japan ready to welcome you | Stay with family, not hotels |
+| We know the systems: family registries, temples, cemeteries | We navigate the bureaucracy for you |
+| We've experienced loss — Pearl (2007-2025) led us here | We understand grief firsthand |
+
+After creating a portable grave for Pearl, we visited Pearl Harbor as a family. With his remains, we prayed for peace. 80 years after the war — times have changed, but the wish for peace transcends generations. This experience awakened our family's mission.
+
+**We don't just research. We walk with you. We carry your story home.**
+
+### Pricing
+
+| Service | Price | Description |
+|---|---|---|
+| Consultation | Free | 30-minute call to understand your situation |
+| Research | $500 | Locate family records, graves, contacts, and kamon |
+| Coordination | $1,000 | Arrange ceremonies, temple visits, and logistics |
+| Accompaniment / Proxy | $2,000+ | We travel with you — or on your behalf (+ travel expenses) |
+
+*Custom packages available. Contact us to discuss your needs.*
 
 ---
 
