@@ -122,9 +122,9 @@
                     description: 'This Christmas, give the gift of independence. Your donation delivers off-grid infrastructure to farms, temples, and communities.',
                     cta: { text: '🎁 Donate via PayPal', link: 'https://www.paypal.com/ncp/payment/SVPS6J8WXQU76' },
                     tiers: [
-                        { amount: '$1,000+', title: 'Portable Power', desc: 'Jackery 1000 Plus (stationary) / 290W (mobile)' },
-                        { amount: '$3,000+', title: 'Connectivity Kit', desc: 'Starlink + Battery + Solar' },
-                        { amount: '$5,000+', title: 'Small-Scale', desc: 'Basic farm/temple setup' }
+                        { amount: '$2,000', title: 'Fuel & Oil (1 year)', desc: 'Gasoline + engine oil for generator' },
+                        { amount: '$2,000', title: 'Connectivity (1 year)', desc: 'Starlink subscription for 12 months' },
+                        { amount: '$3,000', title: 'Full Independence Kit', desc: 'Power + Solar & Generator + Starlink & Wi-Fi' }
                     ],
                     note: 'Zelle: business@satotakuya.jp'
                 },
@@ -136,9 +136,9 @@
                     description: 'このクリスマス、独立の贈り物を届けましょう。寄付は農地や寺院へのインフラ支援になります。',
                     cta: { text: '🎁 PayPalで寄付', link: 'https://www.paypal.com/ncp/payment/SVPS6J8WXQU76' },
                     tiers: [
-                        { amount: '¥100,000〜', title: '携帯電源', desc: 'Jackery 1000 Plus（据置）/ 290W（車載）' },
-                        { amount: '¥300,000〜', title: '接続キット', desc: 'Starlink + バッテリー + ソーラー' },
-                        { amount: '¥500,000〜', title: '小規模構築', desc: '農地／寺院の基本設備' }
+                        { amount: '¥300,000', title: '燃料＆オイル（1年分）', desc: 'ガソリン＋エンジンオイル' },
+                        { amount: '¥300,000', title: '通信費（1年分）', desc: 'Starlink月額12ヶ月' },
+                        { amount: '¥450,000', title: '独立キット一式', desc: '電源 + 発電 + 通信機材' }
                     ],
                     note: 'Zelle: business@satotakuya.jp'
                 }

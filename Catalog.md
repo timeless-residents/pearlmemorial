@@ -2,9 +2,9 @@
 
 ## Engraved Memorials — Packages & Pricing
 
-### Resonance Opens the Way
+### Cross Boundaries Through Resonance
 
-To exist. To act. To eternal.
+To exist. To act. To eternity.
 
 **Your story matters.**
 
@@ -51,7 +51,64 @@ Pearl Memorial is part of **Timeless Eternal Hope**, built on four pillars:
 | 🕊 **Carry** | Soul Carrier | We carry souls home |
 | 🔥 **Inscribe** | Proof of existence | Laser engraving preserves memories |
 | 🛡 **Preserve** | Disaster-resistant memory | Quartz glass, QR archives |
-| ⚡ **Sustain** | Digital independence | Your own micro datacenter for eternal preservation |
+| ⚡ **Sustain** | Digital independence | Your own micro datacenter, protection on your terms |
+
+---
+
+## Soul Carrier — Reuniting Roots
+
+**We carry souls home.**
+
+People crossed the ocean. For different reasons, in different eras. Over the years, connections to their homeland faded.
+
+### We help deliver:
+
+- **Ashes to ancestral homes** — Return remains to family graves in Japan
+- **Families to their roots** — Reconnect with relatives, registries, and history
+- **Family crests to memory** — Research your kamon with English report on its history and significance
+- **Stories to completion** — Close the circle that distance left open
+
+> "Loss doesn't have to be the end."
+
+### Why existing services struggle
+
+It's not anyone's fault. But there are walls.
+
+| Wall | Reality |
+|---|---|
+| Language | City halls and temples rarely offer English support |
+| Systems | Family registries and cemetery procedures require a Japanese address |
+| Continuity | No one handles research, coordination, and accompaniment as one journey |
+| Heart | Few treat this as "completing a story" rather than "processing paperwork" |
+
+We stand on both sides of these walls.
+
+### Why Us?
+
+**We stand at the boundary ourselves.**
+
+| What we offer | Why it matters |
+|---|---|
+| Japanese natives living between Hawaii and Japan | We understand both worlds |
+| Fluent in both languages and cultures | No translation barriers |
+| We have homes in Japan ready to welcome you | Stay with family, not hotels |
+| We know the systems: family registries, temples, cemeteries | We navigate the bureaucracy for you |
+| We've experienced loss — Pearl (2007-2025) led us here | We understand grief firsthand |
+
+Pearl was family for 18 years. After creating a portable grave for him, we visited Pearl Harbor as a family. With his remains, we prayed for peace. 80 years after the war — times have changed, but the wish for peace transcends generations. This experience awakened our family's mission.
+
+**We don't just research. We walk with you. We carry your story home.**
+
+### Pricing
+
+| Service | Price | Description |
+|---|---|---|
+| Consultation | Free | 30-minute call to understand your situation |
+| Research | $500 | Locate family records, graves, contacts, and kamon |
+| Coordination | $1,000 | Arrange ceremonies, temple visits, and logistics |
+| Accompaniment / Proxy | $2,000+ | We travel with you — or on your behalf (+ travel expenses) |
+
+*Custom packages available. Contact us to discuss your needs.*
 
 ---
 
@@ -82,10 +139,6 @@ Materials: Lava rock, metal
 
 *Visit our workshop or Japan*
 
-**Includes:**
-- Ohana Home Japan (1 week)
-- Off-grid assessment report (disaster resilience diagnosis)
-
 ---
 
 ### Eternal — Forever
@@ -95,103 +148,75 @@ Materials: Quartz glass internal engraving (1,000+ years)
 
 *Crafted at our Japan studio*
 
-**Includes:**
-- Ohana Home Japan (2 weeks, lifetime access)
-- Both Akemi (Tokyo) & Kurihara (countryside)
-- Off-grid assessment + 20% off construction
-- Mt. Fuji 5th Station Starlink experience
-- Secret family local guide
-
 ---
 
-## Ohana Home Japan
+## Preserve — Places to Keep & Visit
 
-**Live like a local, not a tourist.**
+**Your memories, protected. Your presence, welcomed.**
 
-**First stay: FREE (1 week)** | Repeat: Pearl Memorial order or donation
+A place to store. A place to return.
 
-### Why free?
-
-We spend half the year in Maui. While we're away, our homes in Japan sit empty.
-
-Rather than leave them unused, we share them with you.
-
-### Urban — Akemi
+### Urayasu — Near Tokyo
 - 30 min to Tokyo
-- Near Disney Resort (fireworks view from home)
+- Near Disney Resort (fireworks view)
 - 4LDK Frank Lloyd Wright Organic House
-- Sleeps up to 9 guests
-- 2-car parking, EV charging
+- Storage + stay for visits
 - Starlink Wi-Fi
 
-### Rural — Kurihara
+### Kurihara — Countryside
 - Traditional farmhouse
 - All tatami rooms
 - Rice paddies & nature
 - Homemade meals by Mina's mother
-- Natural hot spring by car
+- Storage + stay for visits
 - Starlink Wi-Fi
+
+### Hana, Maui — Pacific
+- Remote east coast of Maui
+- Ocean & nature
+- Storage + stay for visits
+- Off-grid ready
 
 **Available:** Jan–Mar, Jun–Jul, Nov–Dec
 
----
+### Storage Tiers
+| Tier | Locations | Shikinen | Description |
+|---|---|---|---|
+| Single | 1 site | — | Urayasu or Kurihara or Hana |
+| Dual | 2 sites | — | Domestic + overseas redundancy |
+| Triple | 3 sites | ✓ | All sites + renewal every 20 years |
 
-## Off-Grid Infrastructure
+**Shikinen Renewal:** Every 20 years, data migrates to new storage media with ceremonial verification.
 
-**Exist without depending on existing systems.**
-
-| Service | Price | Description |
-|---|---|---|
-| Assessment | $0 (normally $500) | Included with Legacy & Eternal. Evaluate home disaster resilience. |
-| Proposal | $500 | Custom improvement plan based on assessment. |
-| Procurement | $500 | Equipment selection and ordering support. |
-| Construction | $500/day | Solar, battery, Starlink setup. Full environment in 3 days. |
-
-> We built a full off-grid setup in Maui in 3 days. Mac Studio running, 24hr internet, family of 3 comfortable.
+> "A place to keep. A place to return."
 
 ---
 
-## Soul Carrier — Reuniting Roots
+## Sustain — Your Own Micro Datacenter
 
-**We carry souls home.**
+**Own your data. Data protection on your terms.**
 
-People crossed the ocean. For different reasons, in different eras. Over the years, connections to their homeland faded.
+### The Stack
+- **Solar Panel** — Off-grid power
+- **Jackery 290W** — Portable battery (car-mountable)
+- **Starlink Mini** — Satellite internet anywhere
+- **Mac Mini** — Your personal server
 
-### We help deliver:
+### Service
 
-- **Ashes to ancestral homes** — Return remains to family graves in Japan
-- **Families to their roots** — Reconnect with relatives, registries, and history
-- **Family crests to memory** — Research your kamon with English report on its history and significance
-- **Stories to completion** — Close the circle that distance left open
-
-> "Loss doesn't have to be the end."
-
-### Why Us?
-
-**We stand at the boundary ourselves.**
-
-| What we offer | Why it matters |
-|---|---|
-| Japanese natives living between Hawaii and Japan | We understand both worlds |
-| Fluent in both languages and cultures | No translation barriers |
-| We have homes in Japan ready to welcome you | Stay with family, not hotels |
-| We know the systems: family registries, temples, cemeteries | We navigate the bureaucracy for you |
-| We've experienced loss — Pearl (2007-2025) led us here | We understand grief firsthand |
-
-After creating a portable grave for Pearl, we visited Pearl Harbor as a family. With his remains, we prayed for peace. 80 years after the war — times have changed, but the wish for peace transcends generations. This experience awakened our family's mission.
-
-**We don't just research. We walk with you. We carry your story home.**
-
-### Pricing
-
-| Service | Price | Description |
+| Package | Price | What you get |
 |---|---|---|
-| Consultation | Free | 30-minute call to understand your situation |
-| Research | $500 | Locate family records, graves, contacts, and kamon |
-| Coordination | $1,000 | Arrange ceremonies, temple visits, and logistics |
-| Accompaniment / Proxy | $2,000+ | We travel with you — or on your behalf (+ travel expenses) |
+| Micro DC Setup | $3,000 | Equipment + setup + handover. Ready to use. |
+| Managed Hosting | $100/month | We maintain your datacenter remotely |
+| DIY Support | $500 | Consultation + equipment list. You build it. |
 
-*Custom packages available. Contact us to discuss your needs.*
+**How it works:**
+1. We procure and configure the equipment
+2. We set up at your location (or ship pre-configured)
+3. We hand over access credentials
+4. Your data lives on YOUR hardware
+
+> "Your memories don't belong to a corporation. They belong to you."
 
 ---
 
@@ -199,7 +224,7 @@ After creating a portable grave for Pearl, we visited Pearl Harbor as a family. 
 
 **The movement is replicable. You can start too.**
 
-**Gold = The color of the movement. The symbol of "Resonance opens the way."**
+**Gold = The color of the movement. The symbol of "Cross boundaries through resonance."**
 
 ### Handmade Soap (for Gifting)
 
@@ -212,15 +237,15 @@ After creating a portable grave for Pearl, we visited Pearl Harbor as a family. 
 | Silicone Molds | $10–20 | Amazon / Dollar store | Cookie molds, bento cups work too |
 | Mesh Drawstring Bags | $10–15/50pcs | Amazon / Dollar store | Doubles as lather pouch |
 | OPP Bags | $5–10/100pcs | Amazon / Dollar store | Individual wrap, moisture protection |
-| Gold Label Tape | $15–20 | Amazon | Add your message |
+| Label | $15–20 | Amazon | e.g., P-touch 18mm+, gold, clear, etc. |
 
-**How to:** Melt MP soap in double boiler → Mix in oil, scent, color → Pour into molds → Cool → Place in mesh bag → Wrap in OPP bag → Add gold label → Done
+**How to:** Melt MP soap in double boiler → Mix in oil, scent, color → Pour into molds → Cool → Place in mesh bag → Wrap in OPP bag → Add label → Done
 
 **Cost per batch (~10 bars):** $5–10
 
-### Gold Label Message
+### Label Message (Example)
 
-The gold label on each soap carries the movement's message:
+Sample message. Feel free to customize:
 
 **Left side:**
 > Standing at the boundary?
@@ -229,8 +254,8 @@ The gold label on each soap carries the movement's message:
 > bit.ly/boundarist
 
 **Right side:**
-> Resonance opens the way.
-> To exist. To act. To eternal.
+> Cross boundaries through resonance.
+> To exist. To act. To eternity.
 > Your story matters.
 > by Pearl Memorial.
 
@@ -393,8 +418,8 @@ A: Yes. Everything in this catalog is public. Reach out if you have questions.
 
 *In memory of Pearl (2007–2025)* 🐩
 
-> "Resonance opens the way."
-> To exist. To act. To eternal.
+> "Cross boundaries through resonance."
+> To exist. To act. To eternity.
 
 > Everything in this catalog is open.
 > Anyone, anywhere, can start.
