@@ -122,9 +122,11 @@
                     description: 'This Christmas, give the gift of independence. Your donation delivers off-grid infrastructure to farms, temples, and communities.',
                     cta: { text: '🎁 Donate via PayPal', link: 'https://www.paypal.com/ncp/payment/SVPS6J8WXQU76' },
                     tiers: [
-                        { amount: '$3,000', title: 'Full Independence Kit', desc: 'Power (stationary + mobile) + Solar & Generator + Starlink & Wi-Fi' }
+                        { amount: '$2,000', title: 'Fuel & Oil (1 year)', desc: 'Gasoline + engine oil for generator' },
+                        { amount: '$2,000', title: 'Connectivity (1 year)', desc: 'Starlink subscription for 12 months' },
+                        { amount: '$3,000', title: 'Full Independence Kit', desc: 'Power + Solar & Generator + Starlink & Wi-Fi' }
                     ],
-                    note: 'One set delivers complete off-grid independence. Zelle: business@satotakuya.jp'
+                    note: 'Zelle: business@satotakuya.jp'
                 },
                 ja: {
                     icon: '🎄🎅',
@@ -134,7 +136,9 @@
                     description: 'このクリスマス、独立の贈り物を届けましょう。寄付は農地や寺院へのインフラ支援になります。',
                     cta: { text: '🎁 PayPalで寄付', link: 'https://www.paypal.com/ncp/payment/SVPS6J8WXQU76' },
                     tiers: [
-                        { amount: '¥450,000', title: '独立キット一式', desc: '電源（据置＋携帯）+ 発電（ソーラー＋静音ジェネレーター）+ 通信（Starlink mini＋Wi-Fi）' }
+                        { amount: '¥300,000', title: '燃料＆オイル（1年分）', desc: 'ガソリン＋エンジンオイル' },
+                        { amount: '¥300,000', title: '通信費（1年分）', desc: 'Starlink月額12ヶ月' },
+                        { amount: '¥450,000', title: '独立キット一式', desc: '電源 + 発電 + 通信機材' }
                     ],
                     note: 'Zelle: business@satotakuya.jp'
                 }
