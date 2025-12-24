@@ -48,10 +48,10 @@ Pearl Memorial is part of **Timeless Eternal Hope**, built on four pillars:
 
 | Pillar | What it means | How we do it |
 |---|---|---|
+| 🕊 **Carry** | Soul Carrier | We carry souls home |
 | 🔥 **Inscribe** | Proof of existence | Laser engraving preserves memories |
 | 🛡 **Preserve** | Disaster-resistant memory | Quartz glass, QR archives |
-| ⚡ **Sustain** | Off-grid independence | Exist without system permission |
-| 🕊 **Carry** | Soul Carrier | We carry souls home |
+| ⚡ **Sustain** | Digital independence | Your own micro datacenter for eternal preservation |
 
 ---
 
