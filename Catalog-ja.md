@@ -42,15 +42,16 @@
 
 ---
 
-## Timeless Eternal Hope — 3つの柱
+## Timeless Eternal Hope — 4つの柱
 
-Pearl Memorialは**Timeless Eternal Hope**の一部。3つの柱で構成されている：
+Pearl Memorialは**Timeless Eternal Hope**の一部。4つの柱で構成されている：
 
 | 柱 | 意味 | 実践方法 |
 |---|---|---|
 | 🔥 **刻む（Inscribe）** | 存在の証明 | レーザー彫刻で記憶を刻む |
 | 🛡 **守る（Preserve）** | 災害耐性メモリー | 石英ガラス、QRアーカイブ |
 | ⚡ **支える（Sustain）** | オフグリッド自立 | 既存システムの許可なしで存在できる |
+| 🕊 **届ける（Carry）** | Soul Carrier | 魂を故郷へ届ける |
 
 ---
 

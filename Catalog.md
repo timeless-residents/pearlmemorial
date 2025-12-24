@@ -42,15 +42,16 @@ Standing at the boundary = when these systems shake:
 
 ---
 
-## Timeless Eternal Hope — Three Pillars
+## Timeless Eternal Hope — Four Pillars
 
-Pearl Memorial is part of **Timeless Eternal Hope**, built on three pillars:
+Pearl Memorial is part of **Timeless Eternal Hope**, built on four pillars:
 
 | Pillar | What it means | How we do it |
 |---|---|---|
 | 🔥 **Inscribe** | Proof of existence | Laser engraving preserves memories |
 | 🛡 **Preserve** | Disaster-resistant memory | Quartz glass, QR archives |
 | ⚡ **Sustain** | Off-grid independence | Exist without system permission |
+| 🕊 **Carry** | Soul Carrier | We carry souls home |
 
 ---
 
