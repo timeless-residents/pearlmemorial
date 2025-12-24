@@ -4,7 +4,7 @@
 
 ### Cross Boundaries Through Resonance
 
-To exist. To act. To eternal.
+To exist. To act. To eternity.
 
 **Your story matters.**
 
@@ -419,7 +419,7 @@ A: Yes. Everything in this catalog is public. Reach out if you have questions.
 *In memory of Pearl (2007–2025)* 🐩
 
 > "Cross boundaries through resonance."
-> To exist. To act. To eternal.
+> To exist. To act. To eternity.
 
 > Everything in this catalog is open.
 > Anyone, anywhere, can start.
