@@ -2,7 +2,7 @@
 
 ## Engraved Memorials — Packages & Pricing
 
-### Beyond Boundaries, to Eternity
+### Cross Boundaries Through Resonance
 
 To exist. To act. To eternal.
 
@@ -222,7 +222,7 @@ A place to store. A place to return.
 
 **The movement is replicable. You can start too.**
 
-**Gold = The color of the movement. The symbol of "Beyond boundaries, to eternity."**
+**Gold = The color of the movement. The symbol of "Cross boundaries through resonance."**
 
 ### Handmade Soap (for Gifting)
 
@@ -252,7 +252,7 @@ The gold label on each soap carries the movement's message:
 > bit.ly/boundarist
 
 **Right side:**
-> Beyond boundaries, to eternity.
+> Cross boundaries through resonance.
 > To exist. To act. To eternal.
 > Your story matters.
 > by Pearl Memorial.
@@ -416,7 +416,7 @@ A: Yes. Everything in this catalog is public. Reach out if you have questions.
 
 *In memory of Pearl (2007–2025)* 🐩
 
-> "Beyond boundaries, to eternity."
+> "Cross boundaries through resonance."
 > To exist. To act. To eternal.
 
 > Everything in this catalog is open.
