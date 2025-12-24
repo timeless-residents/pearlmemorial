@@ -161,7 +161,7 @@ People crossed the ocean. For different reasons, in different eras. Over the yea
 
 - **Ashes to ancestral homes** — Return remains to family graves in Japan
 - **Families to their roots** — Reconnect with relatives, registries, and history
-- **Family crests to memory** — Research your kamon for engraving on memorials
+- **Family crests to memory** — Research your kamon with English report on its history and significance
 - **Stories to completion** — Close the circle that distance left open
 
 > "Loss doesn't have to be the end."
