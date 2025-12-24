@@ -158,7 +158,8 @@ Materials: Quartz glass internal engraving (1,000+ years)
 |---|---|---|
 | QR Archive | $50 | Link physical memorial to digital archive (photos, videos, voice) |
 | Quartz Glass | $500+ | 1,000+ year storage, included in Eternal package |
-| Physical Vault | $100/year | Secure storage in Japan (fireproof, earthquake-resistant) |
+| Physical Vault | $100/year | Secure storage in Japan or Hana, Maui (fireproof, disaster-resistant) |
+| Dual Location Vault | $150/year | Both Japan + Hawaii for maximum redundancy |
 | Multi-layer Backup | $200 | Cloud + physical + distributed storage |
 
 > "What's engraved can be lost. What's archived endures."
