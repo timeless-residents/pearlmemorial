@@ -70,6 +70,19 @@ People crossed the ocean. For different reasons, in different eras. Over the yea
 
 > "Loss doesn't have to be the end."
 
+### Why existing services struggle
+
+It's not anyone's fault. But there are walls.
+
+| Wall | Reality |
+|---|---|
+| Language | City halls and temples rarely offer English support |
+| Systems | Family registries and cemetery procedures require a Japanese address |
+| Continuity | No one handles research, coordination, and accompaniment as one journey |
+| Heart | Few treat this as "completing a story" rather than "processing paperwork" |
+
+We stand on both sides of these walls.
+
 ### Why Us?
 
 **We stand at the boundary ourselves.**
