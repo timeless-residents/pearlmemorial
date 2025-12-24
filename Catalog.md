@@ -151,6 +151,47 @@ Rather than leave them unused, we share them with you.
 
 ---
 
+## Soul Carrier — Reuniting Roots
+
+**We carry souls home.**
+
+People crossed the ocean. For different reasons, in different eras. Over the years, connections to their homeland faded.
+
+### We help deliver:
+
+- **Ashes to ancestral homes** — Return remains to family graves in Japan
+- **Families to their roots** — Reconnect with relatives, registries, and history
+- **Stories to completion** — Close the circle that distance left open
+
+> "Loss doesn't have to be the end."
+
+### Why Us?
+
+**We stand at the boundary ourselves.**
+
+| What we offer | Why it matters |
+|---|---|
+| Japanese natives living between Hawaii and Japan | We understand both worlds |
+| Fluent in both languages and cultures | No translation barriers |
+| We have homes in Japan ready to welcome you | Stay with family, not hotels |
+| We know the systems: family registries, temples, cemeteries | We navigate the bureaucracy for you |
+| We've experienced loss — Pearl (2007-2025) led us here | We understand grief firsthand |
+
+**We don't just research. We walk with you. We carry your story home.**
+
+### Pricing
+
+| Service | Price | Description |
+|---|---|---|
+| Consultation | Free | 30-minute call to understand your situation |
+| Research | $500 | Locate family records, graves, and contacts |
+| Coordination | $1,000 | Arrange ceremonies, temple visits, and logistics |
+| Accompaniment | $2,000+ | We travel with you to Japan |
+
+*Custom packages available. Contact us to discuss your needs.*
+
+---
+
 ## Start Yourself — Equipment & Sourcing
 
 **The movement is replicable. You can start too.**
