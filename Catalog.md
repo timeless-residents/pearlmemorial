@@ -51,7 +51,7 @@ Pearl Memorial is part of **Timeless Eternal Hope**, built on four pillars:
 | 🕊 **Carry** | Soul Carrier | We carry souls home |
 | 🔥 **Inscribe** | Proof of existence | Laser engraving preserves memories |
 | 🛡 **Preserve** | Disaster-resistant memory | Quartz glass, QR archives |
-| ⚡ **Sustain** | Digital independence | Your own micro datacenter for eternal preservation |
+| ⚡ **Sustain** | Digital independence | Your own micro datacenter, protection on your terms |
 
 ---
 
@@ -192,7 +192,7 @@ A place to store. A place to return.
 
 ## Sustain — Your Own Micro Datacenter
 
-**Own your data. Eternal preservation on your terms.**
+**Own your data. Data protection on your terms.**
 
 ### The Stack
 - **Solar Panel** — Off-grid power
