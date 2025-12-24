@@ -188,7 +188,7 @@ After creating a portable grave for Pearl, we visited Pearl Harbor as a family. 
 | Consultation | Free | 30-minute call to understand your situation |
 | Research | $500 | Locate family records, graves, and contacts |
 | Coordination | $1,000 | Arrange ceremonies, temple visits, and logistics |
-| Accompaniment / Proxy | $2,000+ | We travel with you — or on your behalf |
+| Accompaniment / Proxy | $2,000+ | We travel with you — or on your behalf (+ travel expenses) |
 
 *Custom packages available. Contact us to discuss your needs.*
 
