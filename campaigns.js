@@ -123,8 +123,9 @@
                     cta: { text: '🎁 Donate via PayPal', link: 'https://www.paypal.com/ncp/payment/SVPS6J8WXQU76' },
                     tiers: [
                         { amount: '$1,000+', title: 'Portable Power', desc: 'Jackery 1000 Plus (stationary) / 290W (mobile)' },
+                        { amount: '$2,000+', title: 'Generator', desc: 'Backup power for extended outages' },
                         { amount: '$3,000+', title: 'Connectivity Kit', desc: 'Starlink + Battery + Solar' },
-                        { amount: '$5,000+', title: 'Small-Scale', desc: 'Basic farm/temple setup' }
+                        { amount: '$5,000+', title: 'Full Setup', desc: 'Power + Generator + Connectivity' }
                     ],
                     note: 'Zelle: business@satotakuya.jp'
                 },
@@ -137,8 +138,9 @@
                     cta: { text: '🎁 PayPalで寄付', link: 'https://www.paypal.com/ncp/payment/SVPS6J8WXQU76' },
                     tiers: [
                         { amount: '¥100,000〜', title: '携帯電源', desc: 'Jackery 1000 Plus（据置）/ 290W（車載）' },
+                        { amount: '¥200,000〜', title: 'ジェネレーター', desc: '長時間停電時のバックアップ電源' },
                         { amount: '¥300,000〜', title: '接続キット', desc: 'Starlink + バッテリー + ソーラー' },
-                        { amount: '¥500,000〜', title: '小規模構築', desc: '農地／寺院の基本設備' }
+                        { amount: '¥500,000〜', title: 'フルセットアップ', desc: '電源 + ジェネレーター + 接続' }
                     ],
                     note: 'Zelle: business@satotakuya.jp'
                 }
