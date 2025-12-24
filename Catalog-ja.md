@@ -2,7 +2,7 @@
 
 ## 刻印メモリアル — パッケージ＆価格
 
-### 「共鳴が道を開く」
+### 「境界を越えて、永遠へ」
 
 存在へ。行動へ。永遠へ。
 
@@ -231,7 +231,7 @@ Pearl Memorialは**Timeless Eternal Hope**の一部。4つの柱で構成され�
 
 **ムーブメントは再現可能。あなたも始められる。**
 
-**金色 = ムーブメントのカラー。「共鳴が道を開く」の象徴。**
+**金色 = ムーブメントのカラー。「境界を越えて、永遠へ」の象徴。**
 
 ### 手作り石鹸（ギフト用）
 
@@ -261,7 +261,7 @@ Pearl Memorialは**Timeless Eternal Hope**の一部。4つの柱で構成され�
 > bit.ly/boundarist
 
 **右側：**
-> Resonance opens the way.
+> Beyond boundaries, to eternity.
 > To exist. To act. To eternal.
 > Your story matters.
 > by Pearl Memorial.
@@ -425,7 +425,7 @@ A: はい。このカタログの情報で始められます。質問があれ�
 
 *Pearl（2007–2025）の記憶に捧げて* 🐩
 
-> 「共鳴が道を開く」"Resonance opens the way."
+> 「境界を越えて、永遠へ」"Beyond boundaries, to eternity."
 > 存在へ。行動へ。永遠へ。
 
 > このカタログの情報はすべて公開。

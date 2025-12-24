@@ -2,7 +2,7 @@
 
 ## Engraved Memorials — Packages & Pricing
 
-### Resonance Opens the Way
+### Beyond Boundaries, to Eternity
 
 To exist. To act. To eternal.
 
@@ -230,7 +230,7 @@ Rather than leave them unused, we share them with you.
 
 **The movement is replicable. You can start too.**
 
-**Gold = The color of the movement. The symbol of "Resonance opens the way."**
+**Gold = The color of the movement. The symbol of "Beyond boundaries, to eternity."**
 
 ### Handmade Soap (for Gifting)
 
@@ -260,7 +260,7 @@ The gold label on each soap carries the movement's message:
 > bit.ly/boundarist
 
 **Right side:**
-> Resonance opens the way.
+> Beyond boundaries, to eternity.
 > To exist. To act. To eternal.
 > Your story matters.
 > by Pearl Memorial.
@@ -424,7 +424,7 @@ A: Yes. Everything in this catalog is public. Reach out if you have questions.
 
 *In memory of Pearl (2007–2025)* 🐩
 
-> "Resonance opens the way."
+> "Beyond boundaries, to eternity."
 > To exist. To act. To eternal.
 
 > Everything in this catalog is open.
