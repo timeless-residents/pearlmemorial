@@ -237,15 +237,15 @@ A place to store. A place to return.
 | Silicone Molds | $10–20 | Amazon / Dollar store | Cookie molds, bento cups work too |
 | Mesh Drawstring Bags | $10–15/50pcs | Amazon / Dollar store | Doubles as lather pouch |
 | OPP Bags | $5–10/100pcs | Amazon / Dollar store | Individual wrap, moisture protection |
-| Gold Label Tape | $15–20 | Amazon | Add your message |
+| Label | $15–20 | Amazon | e.g., P-touch 18mm+, gold, clear, etc. |
 
-**How to:** Melt MP soap in double boiler → Mix in oil, scent, color → Pour into molds → Cool → Place in mesh bag → Wrap in OPP bag → Add gold label → Done
+**How to:** Melt MP soap in double boiler → Mix in oil, scent, color → Pour into molds → Cool → Place in mesh bag → Wrap in OPP bag → Add label → Done
 
 **Cost per batch (~10 bars):** $5–10
 
-### Gold Label Message
+### Label Message (Example)
 
-The gold label on each soap carries the movement's message:
+Sample message. Feel free to customize:
 
 **Left side:**
 > Standing at the boundary?
@@ -255,7 +255,7 @@ The gold label on each soap carries the movement's message:
 
 **Right side:**
 > Cross boundaries through resonance.
-> To exist. To act. To eternal.
+> To exist. To act. To eternity.
 > Your story matters.
 > by Pearl Memorial.
 
