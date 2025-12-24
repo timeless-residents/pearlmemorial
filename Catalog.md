@@ -95,7 +95,7 @@ We stand on both sides of these walls.
 | We know the systems: family registries, temples, cemeteries | We navigate the bureaucracy for you |
 | We've experienced loss — Pearl (2007-2025) led us here | We understand grief firsthand |
 
-After creating a portable grave for Pearl, we visited Pearl Harbor as a family. With his remains, we prayed for peace. 80 years after the war — times have changed, but the wish for peace transcends generations. This experience awakened our family's mission.
+Pearl was family for 18 years. After creating a portable grave for him, we visited Pearl Harbor as a family. With his remains, we prayed for peace. 80 years after the war — times have changed, but the wish for peace transcends generations. This experience awakened our family's mission.
 
 **We don't just research. We walk with you. We carry your story home.**
 
