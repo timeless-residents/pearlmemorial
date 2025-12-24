@@ -139,10 +139,6 @@ Materials: Lava rock, metal
 
 *Visit our workshop or Japan*
 
-**Includes:**
-- Ohana Home Japan (1 week)
-- Off-grid assessment report (disaster resilience diagnosis)
-
 ---
 
 ### Eternal — Forever
@@ -152,12 +148,20 @@ Materials: Quartz glass internal engraving (1,000+ years)
 
 *Crafted at our Japan studio*
 
-**Includes:**
-- Ohana Home Japan (2 weeks, lifetime access)
-- Both Akemi (Tokyo) & Kurihara (countryside)
-- Off-grid assessment + 20% off construction
-- Mt. Fuji 5th Station Starlink experience
-- Secret family local guide
+---
+
+## Preserve — Disaster-Resistant Memory
+
+**Your memories, protected from time and disaster.**
+
+| Service | Price | Description |
+|---|---|---|
+| QR Archive | $50 | Link physical memorial to digital archive (photos, videos, voice) |
+| Quartz Glass | $500+ | 1,000+ year storage, included in Eternal package |
+| Physical Vault | $100/year | Secure storage in Japan (fireproof, earthquake-resistant) |
+| Multi-layer Backup | $200 | Cloud + physical + distributed storage |
+
+> "What's engraved can be lost. What's archived endures."
 
 ---
 
@@ -193,18 +197,31 @@ Rather than leave them unused, we share them with you.
 
 ---
 
-## Digital Independence Infrastructure
+## Sustain — Your Own Micro Datacenter
 
-**Your own micro datacenter. No big-tech dependency.**
+**Own your data. No big-tech dependency. Eternal preservation on your terms.**
 
-| Service | Price | Description |
+### The Stack
+- **Solar Panel** — Off-grid power
+- **Jackery 290W** — Portable battery (car-mountable)
+- **Starlink Mini** — Satellite internet anywhere
+- **Mac Mini** — Your personal server
+
+### Service
+
+| Package | Price | What you get |
 |---|---|---|
-| Assessment | $0 (normally $500) | Included with Legacy & Eternal. Evaluate home disaster resilience. |
-| Proposal | $500 | Custom improvement plan based on assessment. |
-| Procurement | $500 | Equipment selection and ordering support. |
-| Construction | $500/day | Solar, battery, Starlink setup. Full environment in 3 days. |
+| Micro DC Setup | $3,000 | Equipment + setup + handover. Ready to use. |
+| Managed Hosting | $100/month | We maintain your datacenter remotely |
+| DIY Support | $500 | Consultation + equipment list. You build it. |
 
-> We built a full off-grid setup in Maui in 3 days. Mac Studio running, 24hr internet, family of 3 comfortable.
+**How it works:**
+1. We procure and configure the equipment
+2. We set up at your location (or ship pre-configured)
+3. We hand over access credentials
+4. Your data lives on YOUR hardware
+
+> "Your memories don't belong to a corporation. They belong to you."
 
 ---
 
