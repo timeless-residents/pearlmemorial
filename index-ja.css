@@ -436,9 +436,9 @@ p {
 
 .pillars-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 3rem auto 0;
 }
 
@@ -546,6 +546,109 @@ p {
     font-size: 0.8rem;
     color: var(--text-muted);
     line-height: 1.6;
+}
+
+/* Soul Carrier Section */
+.soul-carrier-section {
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(201, 169, 98, 0.15);
+}
+
+.soul-carrier-section h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+}
+
+.soul-carrier-intro {
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+}
+
+.soul-carrier-tagline {
+    color: var(--text-main);
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.soul-carrier-list {
+    list-style: none;
+    max-width: 400px;
+    margin: 0 auto 1.5rem;
+    text-align: left;
+}
+
+.soul-carrier-list li {
+    padding: 0.6rem 0 0.6rem 1.5rem;
+    color: var(--text-muted);
+    position: relative;
+    border-left: 2px solid var(--gold);
+    margin-bottom: 0.5rem;
+    background: rgba(201, 169, 98, 0.03);
+}
+
+.soul-carrier-quote {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    color: var(--gold);
+    font-style: italic;
+    margin: 2rem 0;
+}
+
+.why-us-section {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: rgba(126, 184, 201, 0.04);
+    border: 1px solid rgba(126, 184, 201, 0.15);
+    border-radius: 0.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.why-us-section h3 {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    color: var(--hope-blue);
+    margin-bottom: 0.8rem;
+}
+
+.why-us-tagline {
+    color: var(--text-main);
+    font-style: italic;
+    margin-bottom: 1.5rem;
+}
+
+.why-us-list {
+    list-style: none;
+    text-align: left;
+    margin: 0 0 1.5rem 0;
+    padding: 0;
+}
+
+.why-us-list li {
+    padding: 0.5rem 0 0.5rem 1.2rem;
+    color: var(--text-muted);
+    position: relative;
+}
+
+.why-us-list li::before {
+    content: "•";
+    color: var(--hope-blue);
+    position: absolute;
+    left: 0;
+}
+
+.why-us-closing {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    color: var(--text-main);
+    font-style: italic;
+    margin-bottom: 0;
 }
 
 /* Campaign Section */
@@ -841,7 +944,7 @@ footer {
 @media (max-width: 1024px) {
     .packages-grid,
     .donation-tiers { grid-template-columns: 1fr 1fr; }
-    .pillars-grid { grid-template-columns: 1fr 1fr; }
+    .pillars-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
