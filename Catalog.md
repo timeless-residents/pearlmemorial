@@ -179,12 +179,14 @@ A place to store. A place to return.
 
 **Available:** Jan–Mar, Jun–Jul, Nov–Dec
 
-### Additional Archive Options
-| Service | Price | Description |
-|---|---|---|
-| QR Archive | $50 | Link physical memorial to digital archive |
-| Quartz Glass | $500+ | 1,000+ year storage |
-| Multi-layer Backup | $200 | Cloud + physical + distributed |
+### Storage Tiers
+| Tier | Locations | Shikinen | Description |
+|---|---|---|---|
+| Single | 1 site | — | Urayasu or Kurihara or Hana |
+| Dual | 2 sites | — | Domestic + overseas redundancy |
+| Triple | 3 sites | ✓ | All sites + renewal every 20 years |
+
+**Shikinen Renewal:** Every 20 years, data migrates to new storage media with ceremonial verification.
 
 > "A place to keep. A place to return."
 
