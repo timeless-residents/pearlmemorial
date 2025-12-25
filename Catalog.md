@@ -247,17 +247,11 @@ A place to store. A place to return.
 
 Sample message. Feel free to customize:
 
-**Left side:**
-> Standing at the boundary?
-> You're not alone.
-> We've been there too.
-> bit.ly/boundarist
-
-**Right side:**
-> Cross boundaries through resonance.
+> At the boundary? You're not alone.
+> Cross Boundaries Through Resonance.
 > To exist. To act. To eternity.
-> Your story matters.
-> by Pearl Memorial.
+> Boundarist Movement by Pearl Memorial
+> https://bit.ly/boundarist
 
 ---
 
