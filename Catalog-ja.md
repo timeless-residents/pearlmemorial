@@ -188,6 +188,8 @@ Pearl Memorialは**Timeless Eternal Hope**の一部。4つの柱で構成され�
 
 **式年遷宮:** 20年ごとにデータを新しいストレージへ移行し、継続を確認する儀式。
 
+*※ アーカイブ拠点は順次拡張予定。新拠点はお知らせします。*
+
 > 「預ける場所。帰る場所。」
 
 ---
@@ -248,17 +250,11 @@ Pearl Memorialは**Timeless Eternal Hope**の一部。4つの柱で構成され�
 
 参考メッセージ。自由にカスタマイズ可能：
 
-**左側：**
-> Standing at the boundary?
-> You're not alone.
-> We've been there too.
-> bit.ly/boundarist
-
-**右側：**
-> Cross boundaries through resonance.
+> At the boundary? You're not alone.
+> Cross Boundaries Through Resonance.
 > To exist. To act. To eternity.
-> Your story matters.
-> by Pearl Memorial.
+> Boundarist Movement by Pearl Memorial
+> https://bit.ly/boundarist
 
 ---
 
