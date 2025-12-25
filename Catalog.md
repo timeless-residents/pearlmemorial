@@ -188,6 +188,8 @@ A place to store. A place to return.
 
 **Shikinen Renewal:** Every 20 years, data migrates to new storage media with ceremonial verification.
 
+*Archive locations expanding. New sites announced as they come online.*
+
 > "A place to keep. A place to return."
 
 ---
