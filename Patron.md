@@ -258,6 +258,19 @@ We've built a sustainable life without traditional employment, using Guest Hospi
 
 ---
 
+## Transportation Support
+
+| Need | Why It Matters |
+|------|----------------|
+| **Flights (Japan ⇄ Hawaii)** | We split our year between two countries — airfare for 3 is significant |
+| **Inter-island flights** | Reaching communities across Hawaii (Maui, Big Island, Oahu) |
+| **Rental vehicles** | No car ownership — we rely on rentals for on-site work |
+| **Airline miles/points** | Any carrier, any alliance — we can use them |
+
+*A single round-trip flight can cost $3,000-5,000 for our family of 3. Miles donations directly enable our work.*
+
+---
+
 ## Accommodation & Hospitality
 
 | What We Need | Why |
