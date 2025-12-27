@@ -184,7 +184,7 @@ We've built a sustainable life without traditional employment, using Guest Hospi
 
 | Level | Contribution | What It Enables |
 |-------|--------------|-----------------|
-| **Starter** | $500-4,000 | Gift economy workshop supplies (soap base, essential oils, food coloring, OPP bags, drawstring bags, propane gas, propane burner) |
+| **Starter** | $500-4,000 | Workshop supplies & setup (soap base, essential oils, food coloring, OPP bags, drawstring bags, propane gas, propane burner), transportation, self-storage |
 | **Builder** | $4,000-6,000 | Full household backup (generator, portable power station, solar panel, lighting, satellite communication, fan, refrigerator/freezer, mobile batteries) |
 | **Operate** | $6,000+ | Builder kit + fuel & connectivity (gasoline, engine oil, propane gas, satellite communication fees) |
 | **Visionary** | $100,000+ | Community-scale resilience infrastructure |
