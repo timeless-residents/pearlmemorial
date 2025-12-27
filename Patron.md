@@ -43,10 +43,10 @@ We're not an organization. We're a family living our philosophy.
 
 | Year | Achievement |
 |------|-------------|
-| **2023** | Witnessed Maui fires, committed to support, built first off-grid system |
+| **2023** | Witnessed Maui fires, began planning support |
 | **2024** | Installed solar infrastructure for religious organization |
 | **2024** | Large-scale property improvements at permaculture farm |
-| **2025 H1** | Began independent R&D on disaster recovery technology |
+| **2025 H1** | Stepped away from foreign consulting firm framework, began independent R&D in Japan |
 | **2025 H2** | Gift economy practice at Wailuku Halloween event, off-grid system support for religious organization, off-grid system support for permaculture farm, formal lodging agreement with church |
 
 *Every contribution has multiplied into community impact.*
