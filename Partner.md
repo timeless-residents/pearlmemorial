@@ -368,16 +368,70 @@ Every industry has "Inside Boundarists." People who don't want to just follow th
 
 ---
 
-## About Fees
+## About Fees — Guest Hospitality Model
 
-Depends on partnership structure. We operate on **gift economy principles** — value exchange takes many forms.
+We operate on **gift economy principles** through a proven legal framework: the **Guest Hospitality Agreement**.
+
+### What This Means
+
+This is a **hospitality arrangement**, NOT consulting or employment. We become your guests, and any contributions we make are:
+
+- Entirely voluntary and self-directed
+- An expression of gratitude, not obligation
+- Based on mutual respect and shared purpose
+
+### How It Works
+
+| Element | Traditional Consulting | Our Hospitality Model |
+|---------|----------------------|----------------------|
+| **Relationship** | Vendor-client | Friends & partners |
+| **Obligation** | Contractual deliverables | Voluntary contribution |
+| **Compensation** | Hourly/project fees | Gift of hospitality |
+| **Duration** | Fixed project term | Flexible, relationship-based |
+| **Outcome** | Defined scope | Organic, often exceeds expectations |
+
+### What We Ask For
+
+- **Family-friendly accommodation** for 3 (we move as a unit — non-negotiable)
+- Kitchen, laundry, space for our daughter to play
+- Access to facilities and relevant teams
+- The freedom to contribute as we see fit
+
+### What You Receive
+
+- Our full expertise, initiative, and labor
+- Skills honed through disaster conditions
+- Documentation and storytelling of your sustainability journey
+- A genuine partnership, not a transactional relationship
+
+### Our Track Record
+
+This model has produced remarkable outcomes:
+
+| Partner | Contribution | Result |
+|---------|--------------|--------|
+| Religious organization | Complete off-grid solar infrastructure | Fully operational temporary housing |
+| Permaculture farm | Large-scale property improvements | Sustainable systems still running |
+| Historic Hana church | Community integration | Formal accommodation support agreement |
+
+### Legal Framework
+
+Our Guest Hospitality Agreement is designed to:
+
+- Protect both parties legally
+- Ensure compliance with applicable laws
+- Clarify that this is friendship-based hospitality, not employment
+- Allow genuine contribution without work-for-accommodation concerns
+
+### Alternative Arrangements
+
+For organizations that require traditional fee structures:
 
 | Model | Description |
 |-------|-------------|
-| **Accommodation Exchange** | We provide expertise; you provide housing |
+| **Project Fee** | Defined scope with fixed pricing |
 | **Revenue Share** | Success-based compensation |
-| **Traditional Fee** | Project-based pricing available |
-| **Hybrid** | Combination of above |
+| **Hybrid** | Hospitality + supplemental fees |
 
 Let's discuss what makes sense for both sides.
 
