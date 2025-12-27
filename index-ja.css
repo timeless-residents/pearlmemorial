@@ -599,6 +599,56 @@ p {
     margin: 2rem 0;
 }
 
+.walls-section {
+    margin-top: 2.5rem;
+    padding: 1.5rem;
+    background: rgba(201, 169, 98, 0.03);
+    border: 1px solid rgba(201, 169, 98, 0.12);
+    border-radius: 0.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.walls-section h3 {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 0.8rem;
+}
+
+.walls-intro {
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.walls-list {
+    list-style: none;
+    text-align: left;
+    margin: 0 0 1rem 0;
+    padding: 0;
+}
+
+.walls-list li {
+    padding: 0.4rem 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.walls-list li strong {
+    color: var(--gold);
+}
+
+.walls-closing {
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    color: var(--hope-blue);
+    font-style: italic;
+    margin: 0;
+}
+
 .why-us-section {
     margin-top: 3rem;
     padding: 2rem;
