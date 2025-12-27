@@ -65,7 +65,7 @@ People crossed the ocean. For different reasons, in different eras. Over the yea
 
 - **Ashes to ancestral homes** — Return remains to family graves in Japan
 - **Families to their roots** — Reconnect with relatives, registries, and history
-- **Family crests to memory** — Research your kamon with English report on its history and significance
+- **Family crests to memory** — Research your kamon with EN/JP report on its history and significance
 - **Stories to completion** — Close the circle that distance left open
 
 > "Loss doesn't have to be the end."
@@ -106,7 +106,7 @@ Pearl was family for 18 years. After creating a portable grave for him, we visit
 | Consultation | Free | 30-minute call to understand your situation |
 | Research | $500 | Locate family records, graves, contacts, and kamon |
 | Coordination | $1,000 | Arrange ceremonies, temple visits, and logistics |
-| Accompaniment / Proxy | $2,000+ | We travel with you — or on your behalf (+ travel expenses) |
+| Accompaniment / Proxy | $2,000+ | We travel with you — or on your behalf (+ travel expenses, typically $1,500–$3,000) |
 
 *Custom packages available. Contact us to discuss your needs.*
 
@@ -197,6 +197,8 @@ A place to store. A place to return.
 ## Sustain — Your Own Micro Datacenter
 
 **Own your data. Data protection on your terms.**
+
+*Tested and running on Maui since 2023.*
 
 ### The Stack
 - **Solar Panel** — Off-grid power
@@ -407,6 +409,8 @@ A: Yes. Everything in this catalog is public. Reach out if you have questions.
 - **Email:** business@satotakuya.jp
 - **Instagram:** @pearl.memorial
 - **Our story:** bit.ly/boundarist
+- **Media:** press-kit.html
+- **Partners:** Partner.pdf / Partner-ja.pdf
 
 ---
 
