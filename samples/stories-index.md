@@ -8,9 +8,9 @@
 
 | Patron | Level | Theme |
 |--------|-------|-------|
-| [Yuki T.](story-01-yuki.md) | Builder | Discovering Japan's connection to Maui / 日本とマウイの繋がりを発見 |
-| [Kenji M.](story-02-kenji.md) | Builder | Reconnecting with ancestral roots / 先祖のルーツとの再会 |
-| [Sakura H.](story-03-sakura.md) | Starter | A student's first step / 学生の最初の一歩 |
+| [Yuki T.](story-01-yuki.md) | Builder | "I learned that my roots were burning" / 「自分のルーツが燃えていると知った」 |
+| [Kenji M.](story-02-kenji.md) | Builder | "I never knew where my last name came from" / 「自分の名字がどこから来たのか知らなかった」 |
+| [Sakura H.](story-03-sakura.md) | Starter | "I can't donate thousands, but I can start somewhere" / 「何千ドルも出せないけど、どこかから始められる」 |
 
 ---
 
