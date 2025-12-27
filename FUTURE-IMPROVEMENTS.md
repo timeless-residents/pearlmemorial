@@ -99,7 +99,7 @@ SECTION 5: NEXT STEPS
             <li>Founders: Takuya & Mina Sato (Japanese nationals)</li>
             <li>Services: Family registry research, Kamon identification, Accompanied visits</li>
             <li>Locations: Maui, Hawaii ⇄ Urayasu & Kurihara, Japan</li>
-            <li>Partnership: Formal agreement with historic Hana church (Dec 24, 2025)</li>
+            <li>Church Support: Lodging support from historic Hana church (Dec 24, 2025)</li>
         </ul>
     </div>
 
