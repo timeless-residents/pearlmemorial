@@ -104,7 +104,7 @@ We don't just talk about sustainability. We live off-grid with a 5-year-old. Eve
 | Level | Contribution | What It Enables |
 |-------|--------------|-----------------|
 | **Starter** | $500-4,000 | Gift economy workshop supplies: soap base, essential oils, food coloring, OPP bags, drawstring bags, propane gas, propane burner |
-| **Builder** | $4,000-6,000 | Full household backup: generator, portable power station, solar panel, lighting, satellite communication, fan, refrigerator/freezer, mobile batteries, propane burner |
+| **Builder** | $4,000-6,000 | Full household backup: generator, portable power station, solar panel, lighting, satellite communication, fan, refrigerator/freezer, mobile batteries |
 | **Operate** | $6,000+ | Builder kit + fuel & connectivity: gasoline, engine oil, propane gas, satellite communication fees |
 | **Visionary** | $10,000+ | Community-scale resilience infrastructure |
 
