@@ -273,6 +273,11 @@ We honor our patrons (with permission):
 | **Builder ($4,000+)** | Featured in our storytelling content |
 | **Visionary ($100,000+)** | Permanent recognition on our website |
 
+**See samples:**
+- [Annual Gratitude Report](samples/annual-report-sample.pdf)
+- [Patron Stories](samples/stories-index.pdf)
+- [Website Recognition](samples/website-recognition-sample.pdf)
+
 **About Quartz Glass Engraving:**
 Your name is laser-engraved onto quartz glass — a medium designed to last 10,000+ years. The same technology we use for Pearl Memorial and our most valued supporters. Your support becomes part of our permanent archive, stored across 3 locations (Maui, Japan mainland x2).
 
