@@ -294,9 +294,13 @@ He listened to Takuya's story. And said:
 
 R's mother was Japanese.
 
-A woman who married an American soldier after the war and moved to Hawaii. She passed away a few years earlier.
+A woman who married an American soldier after the war and moved to Hawaii. She would tell her children about her homeland, but R himself never visited Japan. A few years ago, he saw his mother off.
 
-R cherished his roots as someone of Japanese descent. So when he saw the Japanese family before him, something moved within him.
+"Someday, I want to visit my mother's homeland."
+
+That wish still lives in R's heart.
+
+So when he saw the Japanese family before him, something moved within him.
 
 "My mother was Japanese too. That makes you a little special."
 
@@ -386,6 +390,8 @@ The church made its decision as an independent charitable activity.
 **Churches have their own standards for helping people in need.**
 
 This can operate on a different level from nationality or visa issues. They were recognized as people before any institutional questions were asked.
+
+> *Note: We are not promoting any particular religion. This story is one example of how community goodwill can function.*
 
 The Sato family was welcomed into that place.
 
@@ -566,6 +572,16 @@ Takuya gave his off-grid skills. Mina gave her marketing skills. Ito gave her sm
 
 Everything begins from giving.
 
+**What you can give even with nothing:**
+
+- **Presence** — Just being there can support someone
+- **Listening** — Hearing someone's story
+- **A smile** — Like Ito gave
+- **Information** — Sharing what you know
+- **Time** — Being with someone
+
+> Even without money, even without skills, you can give.
+
 **2. Resonance Is Born**
 
 Through giving, something resonates.
@@ -593,6 +609,20 @@ Everyone will someday stand on a boundary. Will experience the moment when syste
 When that time comes, this truth will help.
 
 **Give first. Resonance is born. Boundaries disappear.**
+
+---
+
+### Checklist for Reproduction
+
+Steps to reproduce this experience:
+
+- [ ] **Clarify your value** — Inventory specific skills you can provide
+- [ ] **Invest first** — Provide value 3+ times without expecting return
+- [ ] **Find common ground** — Discover connections like "Japanese bond"
+- [ ] **Set parameters** — Clarify evaluation deadlines and success criteria
+- [ ] **Document** — Put agreements in writing
+
+> When trust is established, people tend to deprioritize institutional verification. This is the mechanism behind "boundaries not mattering."
 
 ---
 
@@ -760,7 +790,24 @@ Even in difficult situations, connections with people can sometimes open a path.
 
 *This book was written based on the actual experiences of the Sato family.*
 
-*All events are factual, and evidence exists.*
+---
+
+### About Facts and Interpretation
+
+**Verifiable facts:**
+- Signed agreement with L Church on December 24, 2025 (documented)
+- Church supported lodging expenses (expense records exist)
+- Off-grid support activities at the farm (photo records exist)
+
+**Author's interpretation:**
+- We call this "resonance"
+- We view it as a change in generational patterns
+- We describe boundaries as "not mattering"
+
+**Media inquiries:**
+For questions about this book, please contact us at [calendly.com/pearlmemorial](https://calendly.com/pearlmemorial/pearlmemorialsession).
+
+---
 
 *May this story become hope for everyone who stands on a boundary.*
 
@@ -798,13 +845,26 @@ Your Japanese family history. Your family crest. Your ancestors' resting place. 
 
 Our "Soul Carrier" service was born to deliver feelings like R's. For those who lost someone precious before they could visit their homeland. For those who want to complete their journey of tracing roots.
 
+**What we can do:**
+
+- Create family trees through family registry research
+- Identify family crests with English reports
+- Locate ancestors' graves and accompany you on visits
+- Support reunions with Japanese relatives
+
 **Details:** [Soul Carrier Service](https://bit.ly/boundarist)
 
 ---
 
 ### To the Maui Community
 
-This story was not made by us alone.
+We are still learning about Maui.
+
+On this island rising from the fire, what we can offer is limited. Installing solar panels. Building battery systems. Troubleshooting satellite communications.
+
+Still, we kept saying "Yes, free." Sometimes we weren't accepted. Sometimes we were misunderstood.
+
+Yet the people of this island gave us opportunities.
 
 The family who rented a car for us. The resort that provided shower facilities. The farm host who trusted us while setting clear evaluation points. And R, who extended his hand saying "Japanese bond."
 
