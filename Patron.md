@@ -124,7 +124,7 @@ We don't just talk about sustainability. We live off-grid with a 5-year-old. Eve
 - Looking for direct, personal connection to recovery efforts
 
 **[Why This Resonates]**
-We were there. We lost our housing. We rebuilt. Now we help our neighbors do the same — not with distant donations, but with hands-on work and knowledge sharing.
+We weren't there. But we've invested 3 years and all our personal funds — including all credit lines — into R&D, and continue hands-on support on-site. Not distant donations, but real work and knowledge sharing.
 
 **[How You Can Support]**
 
