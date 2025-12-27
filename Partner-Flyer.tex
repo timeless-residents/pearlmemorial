@@ -4,6 +4,7 @@
 \usepackage{enumitem}
 \usepackage{titlesec}
 \usepackage{fontspec}
+\usepackage{qrcode}
 \setmainfont{DejaVu Sans}
 \setlist{nosep,leftmargin=*}
 \titlespacing*{\section}{0pt}{8pt}{4pt}
@@ -82,12 +83,22 @@ A Japanese family bridging Japan and Hawaii — 150 years of shared history. 3 y
 \end{itemize}
 
 \subsection*{Let's Talk}
+
+\begin{minipage}[t]{0.55\linewidth}
+\textbf{Learn more:}\\
+bit.ly/boundarist
+
 \textbf{Book a conversation:}\\
 calendly.com/pearlmemorial/pearlmemorialsession
 
 \textbf{Email:} business@satotakuya.jp
 
 \textbf{Instagram:} @pearl.memorial
+\end{minipage}%
+\begin{minipage}[t]{0.45\linewidth}
+\raggedleft
+\qrcode[height=1.2in]{https://bit.ly/boundarist}
+\end{minipage}
 
 \vspace{6pt}
 \textit{We accept bank transfers (US \& Japan), crypto, and alternative arrangements.}
