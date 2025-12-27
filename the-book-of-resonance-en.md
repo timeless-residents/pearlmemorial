@@ -10,7 +10,7 @@
 
 In December 2025, a Japanese family conducting disaster recovery support on Maui was cut off from their father's financial support and faced losing their housing.
 
-The morning after their daughter developed a high fever, Takuya felt drawn to visit a church on the west side of the island. There, he met R, a Japanese-American man who said "Japanese bond" and extended his hand. R connected them to L Church—the only church that survived the 2023 fire.
+The morning after their daughter developed a high fever, Takuya visited a church on the west side of the island. There, he met R, a Japanese-American man who said "Japanese bond" and extended his hand. R connected them to a historic church.
 
 The church recognized the family's work and decided to support their lodging. On December 24, a formal agreement was signed.
 
@@ -18,6 +18,14 @@ The church recognized the family's work and decided to support their lodging. On
 - By giving first, resonance is born
 - Resonance can help cross boundaries
 - We can support each other through connection, not just blood ties
+
+**Business insights:**
+- Providing value first can yield unexpected returns
+- Trust relationships can reduce institutional barriers
+- Win-win can be built with clear parameters
+
+**If you're standing at a boundary right now:**
+Even if you feel you have nothing to give, that's okay. Your very existence can become resonance for someone. Start by sharing your story.
 
 > The full account follows below.
 
@@ -39,7 +47,7 @@ The fire mercilessly burned everything.
 
 L Church.
 
-Built in 1846, this church miraculously escaped the flames while everything around it burned to the ground. Some witnesses say the fire seemed to avoid the church even before firefighters arrived.
+Built in 1846, this church miraculously escaped the flames while everything around it burned to the ground. Multiple factors—building structure, wind direction, and perhaps luck—combined to spare this church.
 
 Fortunately, it survived.
 
@@ -89,11 +97,9 @@ Just before Christmas, in the third month. At their lodging, his wife relayed hi
 
 "Support is cut off."
 
-The S family was a lineage where relationships were maintained through money. From father to son, the connection had been sustained through financial means.
+His father's financial support had been continuing, but it came to an end. Every family has its own circumstances.
 
-When that flow of money stopped, **it was equivalent to severing the parent-child bond.**
-
-Cut off from blood ties.
+The end of support marked a turning point in family relations.
 
 Yet at the same place, at the same time, support from the church was about to begin.
 
@@ -296,7 +302,7 @@ R cherished his roots as someone of Japanese descent. So when he saw the Japanes
 
 **Not blood ties, but resonance.**
 
-Recognition at the soul level, transcending nationality and institutions.
+Deep empathy, transcending nationality and institutions.
 
 R invited the Sato family to his lodging. He gave daughter Ito a large teddy bear. He shared fever medicine. They ate meals together.
 
@@ -308,7 +314,7 @@ They were no longer strangers.
 
 R had been a member of L Church for 50 years.
 
-That church—the only one that survived the 2023 fire.
+That historic church.
 
 Through him, the church learned of the Sato family's existence.
 
@@ -324,7 +330,7 @@ And the church made its decision.
 
 December 24, 2025.
 
-The office of L Church. Inside the building of the only church that survived the 2023 fire.
+The office of L Church. Inside the building that had witnessed so much history.
 
 An agreement was placed on the desk.
 
@@ -340,7 +346,7 @@ There was no discussion of gray zones.
 
 **They were simply recognized.**
 
-The only church to survive the 2023 fire recognized a Japanese family's disaster recovery support activities and officially provided support.
+A historic church recognized a Japanese family's disaster recovery support activities and officially provided support.
 
 This fact remained as a signed document. As a record of expenses. As evidence that cannot be erased.
 
@@ -375,16 +381,11 @@ But at the church office, none of those questions were asked.
 
 The church is an institution that predates the nation-state.
 
-Due to the principle of separation of church and state, government cannot intervene in the church's internal decisions. When a church decides "we will support this person," that is the church's prerogative.
-
-No one can question it.
-Not the U.S. government.
-Not immigration authorities.
-Not the Japanese government.
+The church made its decision as an independent charitable activity.
 
 **Churches have their own standards for helping people in need.**
 
-This can operate on a different level from nationality or visa issues.
+This can operate on a different level from nationality or visa issues. They were recognized as people before any institutional questions were asked.
 
 The Sato family was welcomed into that place.
 
@@ -483,7 +484,7 @@ R is not a blood relative. The church members are not blood relatives. Yet they 
 
 "Japanese bond."
 
-Connected not by blood, but by resonance of souls.
+Connected not by blood, but by shared values.
 
 ---
 
@@ -517,7 +518,7 @@ L Church is part of the Catholic Church. The fact that the church recognized the
 
 **Historical Context**
 
-The background of being a church that survived the 2023 fire gives this story a special context.
+The church's long history in the community gives this story a special context.
 
 **Physical Evidence**
 
@@ -537,7 +538,7 @@ In the digital world, information once published cannot be completely erased. It
 
 This event has a "structure that will be retold."
 
-- A church that was the only one to survive the fire
+- A historic church with deep community roots
 - A Japanese family's disaster recovery support
 - Connections born from chance encounters
 
@@ -583,7 +584,7 @@ National borders, institutions, blood ties, generational challenges. When resona
 
 ### Boundarist Movement
 
-To spread this truth, the Sato family launched the "Boundarist Movement."
+To share what they learned from this experience, the Sato family launched the "Boundarist Movement."
 
 **Boundarist** = One who stands on the boundary
 
@@ -647,7 +648,7 @@ Your story might become the key that helps someone else cross their boundary.
 
 When she grows up, she will say:
 
-"My family was recognized by the only church that survived the 2023 fire, and that's where we began."
+"My family was recognized by a historic church on Maui, and that's where we began."
 
 This is the Sato family's new origin.
 
@@ -776,11 +777,40 @@ We want to reach those standing at the boundary.
 - Those interested in learning about our activities on Maui
 - Those who want to share their experience of standing at a boundary
 
+**What a free consultation includes:**
+
+- 30-minute online conversation
+- Help organizing your situation
+- Suggestions for possible resources and connections
+- Complete confidentiality
+
 If you're in a similar situation or want someone to listen, please reach out.
 
 **Book a Consultation:** [calendly.com/pearlmemorial](https://calendly.com/pearlmemorial/pearlmemorialsession)
 
 **Website:** [bit.ly/boundarist](https://bit.ly/boundarist)
+
+---
+
+### For Those Seeking Ancestral Roots
+
+Your Japanese family history. Your family crest. Your ancestors' resting place. We help you complete your story by bridging language barriers and system barriers.
+
+Our "Soul Carrier" service was born to deliver feelings like R's. For those who lost someone precious before they could visit their homeland. For those who want to complete their journey of tracing roots.
+
+**Details:** [Soul Carrier Service](https://bit.ly/boundarist)
+
+---
+
+### To the Maui Community
+
+This story was not made by us alone.
+
+The family who rented a car for us. The resort that provided shower facilities. The farm host who trusted us while setting clear evaluation points. And R, who extended his hand saying "Japanese bond."
+
+The goodwill of all the people of Maui made this story possible.
+
+**Mahalo nui loa.**
 
 ---
 
