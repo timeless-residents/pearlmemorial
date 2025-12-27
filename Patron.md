@@ -46,6 +46,7 @@ We're not an organization. We're a family living our philosophy.
 | **2023** | Witnessed Maui fires, began planning support |
 | **2024** | Smart city demonstration cases and social issue solution support at foreign consulting firm in Japan |
 | **2025 H1** | Stepped away from consulting firm framework, began independent R&D in Japan |
+| **2025** | Traveled to disaster-affected Maui, began hands-on recovery support |
 | **2025 H2** | Gift economy practice at Wailuku Halloween event, off-grid system support for religious organization, off-grid system support for permaculture farm, formal lodging agreement with church |
 
 *Every contribution has multiplied into community impact.*
