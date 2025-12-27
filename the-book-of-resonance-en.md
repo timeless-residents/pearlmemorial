@@ -1,6 +1,6 @@
 # The Book of Resonance
 
-## A New Testament
+## A Personal Account
 
 *Written in December 2025, on the island of Maui*
 
@@ -24,12 +24,11 @@ L Church.
 
 Built in 1846, this church miraculously escaped the flames while everything around it burned to the ground. Some witnesses say the fire seemed to avoid the church even before firefighters arrived.
 
-Science cannot explain it.
-Coincidence cannot dismiss it.
+Fortunately, it survived.
 
-**The fire purified the town. And left behind a sanctuary.**
+**In the midst of the fire, this church remained.**
 
-The meaning of why this church was spared would become clear two years later.
+This church would later become connected to a family's turning point.
 
 ---
 
@@ -493,41 +492,23 @@ The story that begins from here will be entirely different.
 
 ---
 
-# Chapter Six: Layers of Protection
+# Chapter Six: What Remains as Record
 
-Why won't this event disappear?
-
-Why can no one deny it?
-
-Why is it protected at the level of human history?
+This event is recorded in several forms.
 
 ---
 
-### Six Layers of Protection
+### Records That Remain
 
-The layers protecting the S family are sixfold.
+**Relationship with the Church**
 
-**Layer One: Religious Authority**
+L Church is part of the Catholic Church. The fact that the church recognized the S family's activities and decided to support them remains as a church record.
 
-L Church is part of the Catholic Church. The Catholic Church is the world's largest religious organization with over 2 billion followers. Its authority transcends the state.
+**Historical Context**
 
-The fact that the church "recognized" them is backed by this immense authority.
+The background of being a church that survived the 2023 fire gives this story a special context.
 
-**Layer Two: Historical Symbolism**
-
-The only church to survive the 2023 fire. This symbolism is immeasurable.
-
-Fire is a symbol of purification. A church that survived that fire is recognized as a sacred place. Media worldwide reported on it. Everyone knows of that miracle.
-
-A family recognized by that church. The power of symbolism protects the S family.
-
-**Layer Three: Legal Inviolability**
-
-Due to the principle of separation of church and state, government cannot intervene in the church's internal decisions.
-
-The U.S. government cannot say "that support was inappropriate." Neither can the Japanese government. The church's decisions exist in a realm beyond secular law.
-
-**Layer Four: Physical Evidence**
+**Physical Evidence**
 
 The agreement bears signatures. There are expense records. Dates. Names of signatories.
 
@@ -545,152 +526,13 @@ In the digital world, information once published cannot be completely erased. It
 
 This event has a "structure that will be retold."
 
-- The only church to survive the fire
-- Japanese bond
-- The severing of karma
-- Synchronicity
-- Awakening as a family unit
-
-A perfect structure as a story. People naturally want to tell this story. To spread it.
-
-Stories are engraved in humanity's memory.
-
 ---
 
-### The History of Sanctuary
+# Chapter Seven: What We Learned
 
-The concept of "Sanctuary" has existed since ancient times.
+What can be learned from the S family's experience is simple.
 
-In ancient Greece, those who fled to temples were protected. The same in Roman times. In medieval Europe, church grounds were places where secular law did not reach.
-
-In 1486, there is a record of a British felon fleeing into a church. The king's soldiers had no choice but to wait outside the church for 40 days. That's what canon law dictated.
-
-This principle lives on in modern times, in different forms.
-
-In 2017, when immigration enforcement was strengthened in America, many churches declared themselves "Sanctuary Churches." "We will protect those who flee to this church."
-
-The S family entered that modern sanctuary.
-
----
-
-### Protection Beyond the State
-
-What protects the S family is neither Japan nor America.
-
-**The church—an institution that predates the nation-state.**
-
-Nations are born and die. Governments change. Laws are amended.
-
-But the church has existed for over 2,000 years. It is older than nations and may continue longer.
-
-A family recognized by that church.
-
-**Protected at the level of human history.**
-
----
-
-# Chapter Seven: Another Path
-
-In human history, there have been several "stories of salvation."
-
-The most widely known is the story of Christ.
-
-This is not to say the S family is equal to Christ. It simply shows that salvation can take multiple forms.
-
----
-
-### Christ's Salvation
-
-Jesus Christ opened the way alone.
-
-- He was persecuted
-- He was betrayed
-- He was crucified
-- He died
-- And he was resurrected
-
-His salvation was achieved through **sacrifice**. By offering his own life, he redeemed humanity's sins.
-
-This story has been told for 2,000 years. Billions of people have believed in this form of salvation.
-
----
-
-### The S Family's Awakening
-
-The S family's story has a different structure.
-
-- They were not persecuted
-- They did not die
-- They were not sacrificed
-- **The path opened through resonance**
-
-| Christ | The S Family |
-|---|---|
-| Alone | Family (three people) |
-| Sacrifice | Resonance |
-| Death and resurrection | Alive |
-| Persecution | Acceptance |
-| Recorded later by disciples | Recorded now by themselves |
-| Individual salvation | Family unit awakening |
-
----
-
-### A New Paradigm
-
-Christ's story teaches:
-
-"Accept suffering. Become a sacrifice. Salvation lies beyond."
-
-The S family's story shows:
-
-**"Give first. Resonance will be born. Boundaries will disappear."**
-
-- You don't have to fight
-- You don't have to die
-- You don't have to be sacrificed
-- As a family, while living, you can transcend
-
-This may be showing another path.
-
----
-
-### Rarity
-
-Consider the rarity of this awakening.
-
-**Being Conscious**
-
-Many awakenings happen unconsciously. Transformation occurs without the person realizing it.
-
-The S family is consciously documenting. Understanding what is happening, articulating it, putting it in writing.
-
-**Being a Family Unit**
-
-Many awakenings happen to individuals. One saint, one prophet, one enlightened being.
-
-The S family is awakening as a family. Husband, wife, and child, three people as one unit.
-
-**Evidence Remaining**
-
-Many awakenings are recorded later by disciples or believers. Stories are formed after the person's death.
-
-The S family is recording in real-time. Social media, documents, agreements. Everything remains as evidence.
-
-**Being Alive**
-
-Many saviors are completed by death. Christ's cross, martyrs' deaths.
-
-The S family is alive. The story continues.
-
-An experience where all these conditions align is rare indeed.
-
----
-
-# Chapter Eight: What Has Been Shown
-
-The truth shown by the S family's story is simple.
-
-**"Resonance transcends boundaries."**
+**"Resonance can help cross boundaries."**
 
 ---
 
@@ -828,17 +670,15 @@ Those children will pass it to the next generation.
 
 **Resonance spreads across generations.**
 
-The story that began on December 21, 2025, may still be told 100 years, 1,000 years from now.
-
-As a new scripture.
+The story that began on December 21, 2025, will be passed down as family history.
 
 ---
 
 ### Spreading to the World
 
-The S family's story is a story of a Japanese family, but it is also a story of humanity.
+The S family's story may serve as a reference for those in similar situations.
 
-This truth has the potential to reach everyone who stands on a boundary.
+It has the potential to reach people on the boundary as one account of experience.
 
 - Those who have left their country
 - Those who have lost their family
@@ -846,13 +686,9 @@ This truth has the potential to reach everyone who stands on a boundary.
 - Those with no place to belong
 - Those who don't fit into systems
 
-A story that shows hope to all Boundarists.
+Even in difficult situations, connections with people can sometimes open a path.
 
-**"Give first. Resonance is born. Boundaries disappear."**
-
-**"You don't have to fight. You don't have to die. You don't have to be sacrificed."**
-
-**"As a family, while living, you can transcend."**
+**"Give first. Resonance may be born. It can help cross boundaries."**
 
 ---
 
@@ -860,7 +696,7 @@ A story that shows hope to all Boundarists.
 
 ## The Book of Resonance
 
-**A New Testament**
+**A Personal Account**
 
 ---
 
