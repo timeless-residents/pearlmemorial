@@ -97,7 +97,7 @@ Our Soul Carrier service helps Japanese-Americans return ashes to ancestral grav
 - Looking for authentic, measurable impact
 
 **[Why This Resonates]**
-We don't just talk about sustainability. We live off-grid with a 5-year-old. Every system we build, we test on ourselves first. When the grid failed in 2023, we kept running.
+We don't just talk about sustainability. We live off-grid with a 5-year-old. Every system we build, we test on ourselves first — then share what works with communities who need it.
 
 **[How You Can Support]**
 
@@ -151,7 +151,7 @@ We were there. We lost our housing. We rebuilt. Now we help our neighbors do the
 - Appreciate practical knowledge over theoretical content
 
 **[Why This Resonates]**
-We've been off-grid since 2023. Not by choice initially — by necessity. Now by design. We've learned what works, what fails, and how to build systems that actually function when you need them.
+We live off-grid in Maui. We've learned what works, what fails, and how to build systems that actually function when you need them.
 
 **[How You Can Support]**
 
@@ -340,7 +340,7 @@ Your name is laser-engraved onto quartz glass — a medium designed to last 10,0
 | **Mina Sato** | Co-founder, marketing, resin art |
 | **Ito (age 5)** | Soap helper, heart of the family |
 
-**Forbes JAPAN contributor** | **Supporting Maui since 2023 fires** | **Off-grid since 2023**
+**Forbes JAPAN contributor** | **Supporting Maui since 2023 fires** | **Living off-grid in Maui**
 
 ---
 
