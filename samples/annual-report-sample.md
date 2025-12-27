@@ -30,13 +30,13 @@ In 2025, we took a significant step forward in Maui recovery support. This was o
 *該当者なし — あなたが最初になりませんか？*
 
 ### Builder / ビルダー ($4,000+)
-- [Name / お名前] (Tokyo)
-- [Name / お名前] (Maui, HI)
+- Yuki T. (Tokyo)
+- Kenji M. (Maui, HI)
 
 ### Starter / スターター ($500+)
-- [Name / お名前]
-- [Name / お名前]
-- [Name / お名前]
+- Sakura H. (Osaka)
+- Takeshi N. (Fukuoka)
+- Emily Tanaka (Los Angeles)
 - Anonymous (2)
 
 ---

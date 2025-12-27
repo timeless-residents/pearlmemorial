@@ -29,7 +29,7 @@
 │                                                             │
 │   ┌─────────────────────────────────────────────────┐      │
 │   │                                                 │      │
-│   │   [PHOTO]     [Name / お名前]                   │      │
+│   │   [PHOTO]     Hiroshi Yamamoto                  │      │
 │   │               Tokyo, Japan                      │      │
 │   │                                                 │      │
 │   │   "Recovery can't be done alone.               │      │

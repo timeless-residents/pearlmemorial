@@ -8,15 +8,15 @@
 ## "I learned that my roots were burning"
 ## 「自分のルーツが燃えていると知った」
 
-**[Name / お名前]** (Tokyo, 40s, IT professional / 東京在住・40代・IT企業勤務)
+**Yuki T.** (Tokyo, 40s, IT professional / 東京在住・40代・IT企業勤務)
 
 ---
 
 ### The Connection I Never Knew | 知らなかった繋がり
 
-When [Name] saw the news about the Lahaina fires in August 2023, something felt different from other disasters.
+When Yuki saw the news about the Lahaina fires in August 2023, something felt different from other disasters.
 
-2023年8月、マウイ島ラハイナの火災ニュースを見た時、[お名前]さんは他の災害とは違う何かを感じたという。
+2023年8月、マウイ島ラハイナの火災ニュースを見た時、Yukiさんは他の災害とは違う何かを感じたという。
 
 > "I started researching Maui after seeing the news. That's when I learned — over 100 years ago, many Japanese immigrated to Hawaii as plantation workers. Their descendants still live there. The Lahaina Jodo Mission, Buddhist temples, Japanese cemeteries... our ancestors built a community there."
 >
@@ -26,7 +26,7 @@ When [Name] saw the news about the Lahaina fires in August 2023, something felt 
 
 ### A Fading Connection | 失われつつある繋がり
 
-[Name] discovered that while Japanese-Americans make up a significant part of Maui's population, the connection to Japan has been fading with each generation.
+Yuki discovered that while Japanese-Americans make up a significant part of Maui's population, the connection to Japan has been fading with each generation.
 
 マウイの人口の大きな割合を日系アメリカ人が占める一方で、日本との繋がりは世代を重ねるごとに薄れつつあることを知った。
 
@@ -38,7 +38,7 @@ When [Name] saw the news about the Lahaina fires in August 2023, something felt 
 
 ### Finding Pearl Memorial | Pearl Memorialとの出会い
 
-Through social media, [Name] found Pearl Memorial — a Japanese family who had spent 3 years researching resilience systems, left their consulting careers, invested their personal savings, and moved to Maui to help with hands-on recovery.
+Through social media, Yuki found Pearl Memorial — a Japanese family who had spent 3 years researching resilience systems, left their consulting careers, invested their personal savings, and moved to Maui to help with hands-on recovery.
 
 SNSを通じて、Pearl Memorialを見つけた。3年間レジリエンスシステムを研究し、コンサルのキャリアを捨て、私財を投じ、マウイに渡って現地で復興支援をしている日本人家族。
 
@@ -50,9 +50,9 @@ SNSを通じて、Pearl Memorialを見つけた。3年間レジリエンスシ�
 
 ### Supporting as a Builder | ビルダーとしての支援
 
-[Name] chose the $5,000 Builder level. This support funded a complete off-grid backup system for one household — a Japanese-American family whose home survived the fire but lost grid power for months.
+Yuki chose the $5,000 Builder level. This support funded a complete off-grid backup system for one household — a Japanese-American family whose home survived the fire but lost grid power for months.
 
-[お名前]さんは$5,000のビルダー支援を選択。この支援は、1世帯分の完全オフグリッドバックアップシステムに使われた — 火災は免れたものの、何ヶ月も電力を失っていた日系アメリカ人家族のために。
+Yukiさんは$5,000のビルダー支援を選択。この支援は、1世帯分の完全オフグリッドバックアップシステムに使われた — 火災は免れたものの、何ヶ月も電力を失っていた日系アメリカ人家族のために。
 
 > "When I heard that an elderly Nisei woman could keep her refrigerator running because of my support... I cried. It felt like I was helping my own grandmother."
 >
@@ -68,8 +68,8 @@ SNSを通じて、Pearl Memorialを見つけた。3年間レジリエンスシ�
 
 ---
 
-*[Name]'s support was delivered to a Japanese-American household in the Wailuku district.*
+*Yuki's support was delivered to a Japanese-American household in the Wailuku district.*
 *Builder-level patrons and above are featured in storytelling content like this (with permission).*
 
-*[お名前]さんの支援は、ワイルク地区の日系アメリカ人世帯に届けられました。*
+*Yukiさんの支援は、ワイルク地区の日系アメリカ人世帯に届けられました。*
 *ビルダー以上のパトロンの皆様は、このようなストーリーテリングコンテンツでご紹介させていただきます（許可制）。*
