@@ -104,7 +104,7 @@ We don't just talk about sustainability. We live off-grid with a 5-year-old. Eve
 | Level | Contribution | What It Enables |
 |-------|--------------|-----------------|
 | **Starter** | $50-500 | Basic supplies for community workshop |
-| **Builder** | $4,000 | Full household backup: generator, portable power station, lighting, satellite communication, fan, refrigerator/freezer, mobile batteries |
+| **Builder** | $4,000 | Full household backup: generator, portable power station, lighting, satellite communication, fan, refrigerator/freezer, mobile batteries, propane burner |
 | **Architect** | $5,000-10,000 | Complete off-grid starter kit for a family |
 | **Visionary** | $10,000+ | Community-scale resilience infrastructure |
 
