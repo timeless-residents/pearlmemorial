@@ -5,53 +5,71 @@
 
 ---
 
-## "I wanted to support people who take action, even from afar"
-## 「遠くからでも、手を動かす人を支えたかった」
+## "I learned that my roots were burning"
+## 「自分のルーツが燃えていると知った」
 
 **[Name / お名前]** (Tokyo, 40s, IT professional / 東京在住・40代・IT企業勤務)
 
 ---
 
-When [Name] saw the news about the Lahaina fires in August 2023, they felt compelled to do something.
+### The Connection I Never Knew | 知らなかった繋がり
 
-2023年8月、マウイ島ラハイナの火災ニュースを見た時、[お名前]さんは何かしなければと感じたという。
+When [Name] saw the news about the Lahaina fires in August 2023, something felt different from other disasters.
 
-> "Many organizations accept donations. But what drew me was people actually working on the ground."
+2023年8月、マウイ島ラハイナの火災ニュースを見た時、[お名前]さんは他の災害とは違う何かを感じたという。
+
+> "I started researching Maui after seeing the news. That's when I learned — over 100 years ago, many Japanese immigrated to Hawaii as plantation workers. Their descendants still live there. The Lahaina Jodo Mission, Buddhist temples, Japanese cemeteries... our ancestors built a community there."
 >
-> 「寄付はたくさんの団体がやっている。でも私が惹かれたのは、実際に現地で手を動かしている人たちだった」
-
-They discovered Pearl Memorial through social media — the off-grid system builds, gift economy workshops, and the story of 3 years of R&D before arriving on-site resonated deeply.
-
-Pearl Memorialの活動を知ったのはSNSがきっかけ。オフグリッドシステムの構築、ギフトエコノミーワークショップ、そして3年間の研究開発を経て現地入りしたというストーリーに共感したという。
-
-> "Leaving a consulting firm and investing personal funds — that shows real commitment."
->
-> 「コンサルファームを辞めて、私財を投じてまでやるって、本気度が違うと思った」
+> 「ニュースを見て、マウイのことを調べ始めたんです。そこで初めて知りました — 100年以上前、多くの日本人がプランテーション労働者としてハワイに渡ったこと。その子孫が今もそこに住んでいること。ラハイナ浄土院、仏教寺院、日本人墓地...私たちの先祖がそこにコミュニティを築いていたんです」
 
 ---
 
-## Supporting as a Builder | ビルダーとしての支援
+### A Fading Connection | 失われつつある繋がり
 
-[Name] chose the $5,000 Builder level. This support funded a complete off-grid backup system for one household (generator, portable power station, solar panel, satellite communication).
+[Name] discovered that while Japanese-Americans make up a significant part of Maui's population, the connection to Japan has been fading with each generation.
 
-[お名前]さんは$5,000のビルダー支援を選択。この支援は、1世帯分の完全オフグリッドバックアップシステム（ジェネレーター、ポータブル電源、ソーラーパネル、衛星通信）の設置に使われた。
+マウイの人口の大きな割合を日系アメリカ人が占める一方で、日本との繋がりは世代を重ねるごとに薄れつつあることを知った。
 
-> "My money is concretely supporting someone's life. That tangible feeling makes me happy."
+> "Third, fourth generation — many don't speak Japanese anymore. The temples are aging. The community elders are passing. And then the fire came and destroyed so much of what remained. I thought: as a Japanese person, shouldn't I do something?"
 >
-> 「自分のお金が、具体的に誰かの生活を支えている。その実感があるのが嬉しい」
+> 「3世、4世...もう日本語を話さない人も多い。お寺も老朽化している。コミュニティの長老たちも亡くなっていく。そこに火災が来て、残っていたものの多くを奪っていった。同じ日本人として、何かすべきじゃないかと思ったんです」
 
 ---
 
-## Message to Potential Supporters | 支援者へのメッセージ
+### Finding Pearl Memorial | Pearl Memorialとの出会い
 
-> "You don't need a large amount — you can start from Starter level. I hesitated at first too, but I'm glad I did it. Having your name engraved on quartz glass... there's something romantic about that, right? (laughs)"
+Through social media, [Name] found Pearl Memorial — a Japanese family who had spent 3 years researching resilience systems, left their consulting careers, invested their personal savings, and moved to Maui to help with hands-on recovery.
+
+SNSを通じて、Pearl Memorialを見つけた。3年間レジリエンスシステムを研究し、コンサルのキャリアを捨て、私財を投じ、マウイに渡って現地で復興支援をしている日本人家族。
+
+> "What struck me was that they weren't just sending money. They were there — installing solar panels, running workshops, living off-grid alongside the community. A Japanese family, reconnecting Japan to Maui through action, not just words."
 >
-> 「大きな金額じゃなくても、スターターからでも始められる。私も最初は迷ったけど、やって良かった。石英ガラスに名前が刻まれるって、なんかロマンがあるじゃないですか（笑）」
+> 「心を打たれたのは、ただお金を送っているんじゃないということ。彼らはそこにいた — ソーラーパネルを設置し、ワークショップを開き、コミュニティと一緒にオフグリッドで暮らしている。言葉じゃなく、行動で日本とマウイを再び繋ごうとしている日本人家族」
 
 ---
 
-*[Name]'s support was delivered to a household in the Wailuku district.*
+### Supporting as a Builder | ビルダーとしての支援
+
+[Name] chose the $5,000 Builder level. This support funded a complete off-grid backup system for one household — a Japanese-American family whose home survived the fire but lost grid power for months.
+
+[お名前]さんは$5,000のビルダー支援を選択。この支援は、1世帯分の完全オフグリッドバックアップシステムに使われた — 火災は免れたものの、何ヶ月も電力を失っていた日系アメリカ人家族のために。
+
+> "When I heard that an elderly Nisei woman could keep her refrigerator running because of my support... I cried. It felt like I was helping my own grandmother."
+>
+> 「私の支援のおかげで、ある二世のおばあちゃんが冷蔵庫を動かし続けられたと聞いた時...泣きました。自分のおばあちゃんを助けているような気持ちでした」
+
+---
+
+### Message to Fellow Japanese | 日本の皆さんへのメッセージ
+
+> "Many Japanese don't know about our connection to Hawaii. 150 years ago, our ancestors crossed the ocean with nothing, built lives, raised families. Their descendants are still there. The fire reminded us how fragile that heritage is. You don't need to go there yourself — but you can support those who do. That's what being a patron means to me."
+>
+> 「多くの日本人は、ハワイとの繋がりを知らない。150年前、私たちの先祖は何も持たずに海を渡り、生活を築き、家族を育てた。その子孫が今もそこにいる。火災は、その遺産がいかに脆いかを思い出させてくれた。自分で行く必要はない — でも、行く人を支援することはできる。それが私にとってのパトロンの意味です」
+
+---
+
+*[Name]'s support was delivered to a Japanese-American household in the Wailuku district.*
 *Builder-level patrons and above are featured in storytelling content like this (with permission).*
 
-*[お名前]さんの支援は、ワイルク地区の1世帯に届けられました。*
+*[お名前]さんの支援は、ワイルク地区の日系アメリカ人世帯に届けられました。*
 *ビルダー以上のパトロンの皆様は、このようなストーリーテリングコンテンツでご紹介させていただきます（許可制）。*
