@@ -1,0 +1,311 @@
+# Become a Patron
+
+**Support the Boundarist Movement** | Timeless Eternal Hope / Maui, Hawaii
+
+---
+
+## "Resonance opens the way."
+
+To exist. To act. To eternity.
+
+*A Japanese family living off-grid in Maui — moved to action by the 2023 fires — building disaster resilience while reconnecting Japanese-Americans with their ancestral roots. This isn't charity. It's participation in a movement.*
+
+---
+
+## Why Support Us?
+
+We're not an organization. We're a family living our philosophy.
+
+| What We Do | Impact |
+|------------|--------|
+| **Build resilience systems** | Communities that function when the grid fails |
+| **Reconnect roots** | Japanese-Americans returning ashes to ancestral graves |
+| **Document the journey** | Stories that inspire others to act |
+| **Share knowledge** | Free workshops, open-source learning |
+
+**Your support doesn't fund an office. It funds action.**
+
+---
+
+## What Your Support Enables
+
+| Need | Why It Matters |
+|------|----------------|
+| **Equipment & materials** | Solar panels, batteries, tools for community projects |
+| **Travel between islands** | Reaching communities across Hawaii |
+| **Documentation** | Cameras, editing, storytelling that spreads the movement |
+| **Family sustenance** | Food, supplies, daily needs for a family of 3 |
+| **Emergency reserves** | Flexibility to respond when disasters strike |
+
+---
+
+## Our Track Record
+
+| Year | Achievement |
+|------|-------------|
+| **2023** | Witnessed Maui fires, began planning support |
+| **2024** | Smart city demonstration cases and social issue solution support at foreign consulting firm in Japan |
+| **2025 H1** | Stepped away from consulting firm framework, began self-funded independent R&D in Japan |
+| **2025** | Traveled to disaster-affected Maui, began hands-on recovery support |
+| **2025 H2** | Gift economy practice at Wailuku Halloween event, off-grid system support for religious organization, off-grid system support for permaculture farm, formal lodging agreement with church |
+
+*Every contribution has multiplied into community impact.*
+
+---
+
+\newpage
+
+# Who Supports Us — And Why
+
+**Different paths, same resonance.**
+
+---
+
+## Japanese-Americans Reconnecting with Roots
+
+**[Your Story]**
+- Parents or grandparents immigrated from Japan
+- Family graves in Japan you've never visited
+- Wondering if you still "belong" to that heritage
+- Want your children to understand where they came from
+
+**[Why This Resonates]**
+Our Soul Carrier service helps Japanese-Americans return ashes to ancestral graves — but it's more than logistics. It's about answering the question: "Do I still belong?"
+
+**[What You Receive]**
+- Updates on Soul Carrier missions
+- Invitation to virtual storytelling sessions
+- Your name in our "Bridges Across the Pacific" honor roll (optional)
+
+---
+
+## Sustainability-Conscious Individuals
+
+**[Your Story]**
+- Tired of "green" marketing that's just words
+- Want to support people actually living sustainably
+- Believe in action over advocacy
+- Looking for authentic, measurable impact
+
+**[Why This Resonates]**
+We don't just talk about sustainability. We live off-grid with a 5-year-old. Every system we build, we test on ourselves first — then share what works with communities who need it.
+
+**[What You Receive]**
+- Quarterly impact reports with real numbers
+- Behind-the-scenes content of our off-grid life
+- Technical documentation you can use for your own projects
+
+---
+
+## Those Who Care About Maui's Recovery
+
+**[Your Story]**
+- Watched the 2023 fires with heartbreak
+- Donated to relief funds but wonder where it went
+- Want to support long-term rebuilding, not just emergency response
+- Looking for direct, personal connection to recovery efforts
+
+**[Why This Resonates]**
+We weren't there. But we've invested 3 years and all our personal funds — including all credit lines — into R&D, and continue hands-on support on-site. Not distant donations, but real work and knowledge sharing.
+
+**[What You Receive]**
+- Direct updates from Maui (not filtered through organizations)
+- Photos and stories from the families you've helped
+- Invitation to visit and see the impact firsthand
+
+---
+
+## Off-Grid & Self-Sufficiency Enthusiasts
+
+**[Your Story]**
+- Fascinated by off-grid living
+- Planning your own solar/battery setup
+- Want to learn from people actually doing it
+- Appreciate practical knowledge over theoretical content
+
+**[Why This Resonates]**
+We live off-grid in Maui. We've learned what works, what fails, and how to build systems that actually function when you need them.
+
+**[What You Receive]**
+- Detailed technical guides (what we actually use, not affiliate links)
+- Video walkthroughs of our systems
+- Direct Q&A sessions about off-grid living
+- Early access to new documentation
+
+---
+
+## Parents & Families
+
+**[Your Story]**
+- Raising kids in uncertain times
+- Want your children to be resilient, not just comfortable
+- Inspired by families who live differently
+- Looking for role models of alternative paths
+
+**[Why This Resonates]**
+We're raising a 5-year-old off-grid in Hawaii. She helps make soap, understands where power comes from, and has lived through a disaster. It's not easy. It's meaningful.
+
+**[What You Receive]**
+- Updates on Ito's journey (the heart of our family)
+- Content about raising kids off-grid
+- Invitation to family-focused virtual sessions
+- Your family recognized as part of our extended 'ohana
+
+---
+
+## Entrepreneurs & Forbes Readers
+
+**[Your Story]**
+- Built something from nothing
+- Appreciate unconventional paths to success
+- Interested in new economic models (gift economy, hospitality agreements)
+- Looking for inspiring stories for your own content/community
+
+**[Why This Resonates]**
+We've built a sustainable life without traditional employment, using Guest Hospitality Agreements and gift economy principles. Forbes JAPAN featured our journey. We're proof that alternative models work.
+
+**[What You Receive]**
+- Deep-dive case studies on our economic model
+- Speaking/interview availability
+- Co-branding opportunities for aligned initiatives
+- Advisory access for your own alternative ventures
+
+---
+
+\newpage
+
+# Ways to Support
+
+**Beyond money — what we actually need.**
+
+---
+
+## Financial Support — Unified Tiers
+
+| Level | Contribution | What It Enables |
+|-------|--------------|-----------------|
+| **Starter** | $500-4,000 | Workshop supplies & setup (soap base, essential oils, food coloring, OPP bags, drawstring bags, propane gas, propane burner), transportation, self-storage |
+| **Builder** | $4,000-6,000 | Full household backup (generator, portable power station, solar panel, lighting, satellite communication, fan, refrigerator/freezer, mobile batteries) |
+| **Operate** | $6,000+ | Builder kit + fuel & connectivity (gasoline, engine oil, propane gas, satellite communication fees) |
+| **Visionary** | $100,000+ | Community-scale resilience infrastructure |
+
+*Payment methods: Bank transfer (Japan & US), crypto, or alternatives — contact us to arrange.*
+
+---
+
+## In-Kind Support
+
+| Category | Examples |
+|----------|----------|
+| **Power equipment** | Solar panels, portable power stations, batteries, inverters, generators |
+| **Appliances** | Refrigerator/freezer, fans, lighting, mobile batteries |
+| **Communication** | Satellite terminals, laptops, cameras |
+| **Supplies** | Building materials, emergency supplies, tools |
+| **For our daughter** | Toys, educational toys, picture books, learning opportunities (classes, workshops) |
+
+---
+
+## Professional Services
+
+| Area | Examples |
+|------|----------|
+| **Professional** | Legal, accounting, tax |
+| **Creative** | Design, translation, video editing |
+
+---
+
+## Transportation Support
+
+| Need | Why It Matters |
+|------|----------------|
+| **Used car / EV** | No car ownership — a vehicle for on-site work would be a huge help |
+| **Flights (Japan ⇄ Hawaii)** | We split our year between two countries — airfare for 3 is significant |
+| **Inter-island flights** | Reaching communities across Hawaii (Maui, Big Island, Oahu) |
+| **Rental vehicles** | On-site work relies on rentals when we don't have a car |
+| **Airline miles/points** | Any carrier, any alliance — we can use them |
+
+*A single round-trip flight can cost $3,000-5,000 for our family of 3. Miles donations directly enable our work.*
+
+---
+
+## Accommodation & Hospitality
+
+| What We Need | Why |
+|--------------|-----|
+| **Family-friendly housing** | We move as a unit (3 people, non-negotiable) |
+| **Access to facilities** | Kitchen, laundry, space for Ito to play |
+| **On-site presence** | We work better when embedded in communities |
+
+*This is our primary model — the Guest Hospitality Agreement. Your hospitality becomes our platform for contribution.*
+
+---
+
+## Network & Introductions
+
+| Connection | Value |
+|------------|-------|
+| **Hotels & resorts** | Potential hospitality partnerships |
+| **Japanese-American organizations** | Soul Carrier referrals |
+| **Media contacts** | Story amplification |
+| **Sustainability networks** | Knowledge exchange |
+
+---
+
+## Spread the Word
+
+| Action | Impact |
+|--------|--------|
+| **Share our story** | bit.ly/boundarist |
+| **Follow on Instagram** | @pearl.memorial |
+| **Forward to one person** | The right connection changes everything |
+
+---
+
+## Recognition
+
+We honor our patrons (with permission):
+
+| Level | Recognition |
+|-------|-------------|
+| **All patrons** | Listed in our annual gratitude report |
+| **All patrons** | **Permanent engraving on quartz glass** — same archival treatment as our church supporters |
+| **Starter ($500+)** | Named in specific project documentation |
+| **Builder ($4,000+)** | Featured in our storytelling content |
+| **Visionary ($100,000+)** | Permanent recognition on our website |
+
+**See samples:**
+- [Annual Gratitude Report](samples/annual-report-sample.pdf)
+- [Patron Stories](samples/stories-index.pdf)
+- [Website Recognition](samples/website-recognition-sample.pdf)
+
+**About Quartz Glass Engraving:**
+Your name is laser-engraved onto quartz glass — a medium designed to last 10,000+ years. The same technology we use for Pearl Memorial and our most valued supporters. Your support becomes part of our permanent archive, stored across 3 locations (Maui, Japan mainland x2).
+
+*Anonymous giving is always welcomed and respected.*
+
+---
+
+## Contact
+
+- **Book a conversation:** [calendly.com/pearlmemorial/pearlmemorialsession](https://calendly.com/pearlmemorial/pearlmemorialsession)
+- **Email:** business@satotakuya.jp
+- **Instagram:** @pearl.memorial
+- **Our story:** bit.ly/boundarist
+
+---
+
+## About Us
+
+| Member | Role |
+|--------|------|
+| **Takuya Sato** | Founder, technology, strategy, handmade soap |
+| **Mina Sato** | Co-founder, marketing, resin art |
+| **Ito (age 5)** | Soap helper, heart of the family |
+
+**Forbes JAPAN contributor** | **Supporting Maui since 2023 fires** | **Living off-grid in Maui**
+
+---
+
+> "If it resonates, that's enough. If it doesn't, that's okay too. It just needs to reach those who need it."
+
+*In memory of Pearl (2007–2025)* | **Timeless Eternal Hope** / Maui, Hawaii
