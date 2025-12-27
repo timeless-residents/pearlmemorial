@@ -1,11 +1,11 @@
 # Website Recognition Sample
 # ウェブサイト掲載サンプル
 
-*ビジョナリー ($100,000+) パトロン向け*
+*For Visionary Patrons ($100,000+) / ビジョナリー ($100,000+) パトロン向け*
 
 ---
 
-## ウェブサイト掲載イメージ
+## Website Display Image | ウェブサイト掲載イメージ
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -23,16 +23,19 @@
 │   ║                                                   ║    │
 │   ║   "Without these partners, our work would        ║    │
 │   ║    not be possible."                             ║    │
+│   ║   「この方々なしに、私たちの活動は成り立ちません」    ║    │
 │   ║                                                   ║    │
 │   ╚═══════════════════════════════════════════════════╝    │
 │                                                             │
 │   ┌─────────────────────────────────────────────────┐      │
 │   │                                                 │      │
-│   │   [PHOTO]     【お名前】様                       │      │
+│   │   [PHOTO]     [Name / お名前]                   │      │
 │   │               Tokyo, Japan                      │      │
 │   │                                                 │      │
-│   │   "復興は一人ではできない。                      │      │
-│   │    だからこそ、本気で動く人を支えたい。"         │      │
+│   │   "Recovery can't be done alone.               │      │
+│   │    That's why I support those who act."        │      │
+│   │   「復興は一人ではできない。                     │      │
+│   │    だからこそ、本気で動く人を支えたい。」        │      │
 │   │                                                 │      │
 │   │   ─────────────────────────────                 │      │
 │   │                                                 │      │
@@ -47,6 +50,7 @@
 │   │   [PHOTO]     Anonymous                         │      │
 │   │               Visionary Patron                  │      │
 │   │                                                 │      │
+│   │   This patron prefers to remain anonymous.     │      │
 │   │   匿名でのご支援を希望されています。              │      │
 │   │   Their generosity speaks louder than words.    │      │
 │   │                                                 │      │
@@ -54,16 +58,17 @@
 │                                                             │
 ├─────────────────────────────────────────────────────────────┤
 │                                                             │
-│   BECOME A VISIONARY                                        │
-│   ビジョナリーになる                                         │
+│   BECOME A VISIONARY | ビジョナリーになる                    │
 │                                                             │
+│   With $100,000+ support, enable community-scale            │
+│   resilience infrastructure.                                │
 │   $100,000+ の支援で、コミュニティ規模の                     │
 │   レジリエンスインフラ構築を可能にします。                    │
 │                                                             │
-│   ✦ 永久ウェブサイト掲載                                    │
-│   ✦ 石英ガラスへの特別刻印                                   │
-│   ✦ 年次レポートでの特別セクション                           │
-│   ✦ プロジェクト命名権（希望者）                             │
+│   ✦ Permanent website recognition / 永久ウェブサイト掲載    │
+│   ✦ Special quartz glass engraving / 石英ガラスへの特別刻印 │
+│   ✦ Special section in annual report / 年次レポート特別枠   │
+│   ✦ Project naming rights / プロジェクト命名権（希望者）    │
 │                                                             │
 │   [ CONTACT US → ]                                          │
 │                                                             │
@@ -72,29 +77,32 @@
 
 ---
 
-## 掲載内容（カスタマイズ可能）
+## Listing Content (Customizable) | 掲載内容（カスタマイズ可能）
 
-| 項目 | 内容 |
-|------|------|
-| お名前 | 本名 or ニックネーム or 匿名 |
-| 写真 | ご提供いただければ掲載（任意） |
-| 所在地 | 都市名のみ or 非公開 |
-| メッセージ | 50〜100字程度のコメント（任意） |
-| 支援開始年 | 自動表示 |
-| インパクト | どのプロジェクトに貢献したか |
+| Item / 項目 | Content / 内容 |
+|-------------|----------------|
+| Name / お名前 | Real name, nickname, or anonymous / 本名・ニックネーム・匿名 |
+| Photo / 写真 | Optional, if provided / ご提供いただければ掲載（任意） |
+| Location / 所在地 | City only or private / 都市名のみ or 非公開 |
+| Message / メッセージ | 50-100 characters (optional) / 50〜100字程度（任意） |
+| Year started / 支援開始年 | Auto-displayed / 自動表示 |
+| Impact / インパクト | Which project you contributed to / どのプロジェクトに貢献したか |
 
 ---
 
-## 特典：プロジェクト命名権
+## Benefit: Project Naming Rights | 特典：プロジェクト命名権
+
+Visionary patrons may name the projects they support.
 
 ビジョナリーの皆様には、支援したプロジェクトへの命名権をご提供します。
 
-例：
-- 「[お名前] Community Resilience Hub」
-- 「[企業名] Off-Grid Initiative」
-- 「In memory of [故人名]」
+Examples / 例：
+- "[Name] Community Resilience Hub"
+- "[Company Name] Off-Grid Initiative"
+- "In memory of [Loved One's Name]"
 
 ---
 
-*ビジョナリー掲載は永久です。ウェブサイトが存在する限り、*
-*そして石英ガラスアーカイブにより、10,000年以上残り続けます。*
+*Visionary recognition is permanent. As long as the website exists — and through quartz glass archiving, for 10,000+ years.*
+
+*ビジョナリー掲載は永久です。ウェブサイトが存在する限り、そして石英ガラスアーカイブにより、10,000年以上残り続けます。*
