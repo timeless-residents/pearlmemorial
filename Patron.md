@@ -72,15 +72,6 @@ We're not an organization. We're a family living our philosophy.
 **[Why This Resonates]**
 Our Soul Carrier service helps Japanese-Americans return ashes to ancestral graves — but it's more than logistics. It's about answering the question: "Do I still belong?"
 
-**[How You Can Support]**
-
-| Level | Contribution | What It Enables |
-|-------|--------------|-----------------|
-| **Seed** | $25-100 | Documentation of one family's reconnection story |
-| **Bridge** | $100-500 | Translation and research for ancestral grave location |
-| **Journey** | $500-2,000 | Partial support for one Soul Carrier mission |
-| **Legacy** | $2,000+ | Full sponsorship of a family's ancestral return |
-
 **[What You Receive]**
 - Updates on Soul Carrier missions
 - Invitation to virtual storytelling sessions
@@ -98,15 +89,6 @@ Our Soul Carrier service helps Japanese-Americans return ashes to ancestral grav
 
 **[Why This Resonates]**
 We don't just talk about sustainability. We live off-grid with a 5-year-old. Every system we build, we test on ourselves first — then share what works with communities who need it.
-
-**[How You Can Support]**
-
-| Level | Contribution | What It Enables |
-|-------|--------------|-----------------|
-| **Starter** | $500-4,000 | Gift economy workshop supplies: soap base, essential oils, food coloring, OPP bags, drawstring bags, propane gas, propane burner |
-| **Builder** | $4,000-6,000 | Full household backup: generator, portable power station, solar panel, lighting, satellite communication, fan, refrigerator/freezer, mobile batteries |
-| **Operate** | $6,000+ | Builder kit + fuel & connectivity: gasoline, engine oil, propane gas, satellite communication fees |
-| **Visionary** | $100,000+ | Community-scale resilience infrastructure |
 
 **[What You Receive]**
 - Quarterly impact reports with real numbers
@@ -126,15 +108,6 @@ We don't just talk about sustainability. We live off-grid with a 5-year-old. Eve
 **[Why This Resonates]**
 We weren't there. But we've invested 3 years and all our personal funds — including all credit lines — into R&D, and continue hands-on support on-site. Not distant donations, but real work and knowledge sharing.
 
-**[How You Can Support]**
-
-| Level | Contribution | What It Enables |
-|-------|--------------|-----------------|
-| **Neighbor** | $25-100 | Supplies for one family's emergency kit |
-| **Rebuilder** | $100-500 | Materials for community charging station |
-| **Restorer** | $500-2,000 | Equipment for neighborhood resilience hub |
-| **Champion** | $2,000+ | Major infrastructure for community recovery |
-
 **[What You Receive]**
 - Direct updates from Maui (not filtered through organizations)
 - Photos and stories from the families you've helped
@@ -152,15 +125,6 @@ We weren't there. But we've invested 3 years and all our personal funds — incl
 
 **[Why This Resonates]**
 We live off-grid in Maui. We've learned what works, what fails, and how to build systems that actually function when you need them.
-
-**[How You Can Support]**
-
-| Level | Contribution | What It Enables |
-|-------|--------------|-----------------|
-| **Learner** | $25-100 | Access to our documentation and guides |
-| **Experimenter** | $100-500 | Support for testing new equipment/techniques |
-| **Pioneer** | $500-2,000 | Development of shareable off-grid curriculum |
-| **Innovator** | $2,000+ | R&D for next-generation resilience systems |
 
 **[What You Receive]**
 - Detailed technical guides (what we actually use, not affiliate links)
@@ -181,15 +145,6 @@ We live off-grid in Maui. We've learned what works, what fails, and how to build
 **[Why This Resonates]**
 We're raising a 5-year-old off-grid in Hawaii. She helps make soap, understands where power comes from, and has lived through a disaster. It's not easy. It's meaningful.
 
-**[How You Can Support]**
-
-| Level | Contribution | What It Enables |
-|-------|--------------|-----------------|
-| **Friend** | $25-100 | Books, educational materials for Ito |
-| **Supporter** | $100-500 | Family activities and experiences |
-| **Ally** | $500-2,000 | Equipment for child-friendly workshops |
-| **Family** | $2,000+ | Major support for family sustainability |
-
 **[What You Receive]**
 - Updates on Ito's journey (the heart of our family)
 - Content about raising kids off-grid
@@ -209,15 +164,6 @@ We're raising a 5-year-old off-grid in Hawaii. She helps make soap, understands 
 **[Why This Resonates]**
 We've built a sustainable life without traditional employment, using Guest Hospitality Agreements and gift economy principles. Forbes JAPAN featured our journey. We're proof that alternative models work.
 
-**[How You Can Support]**
-
-| Level | Contribution | What It Enables |
-|-------|--------------|-----------------|
-| **Observer** | $100-500 | Documentation of our business model experiments |
-| **Collaborator** | $500-2,000 | Development of replicable frameworks |
-| **Investor** | $2,000-10,000 | Scaling our model to other communities |
-| **Catalyst** | $10,000+ | Major initiative sponsorship |
-
 **[What You Receive]**
 - Deep-dive case studies on our economic model
 - Speaking/interview availability
@@ -234,14 +180,14 @@ We've built a sustainable life without traditional employment, using Guest Hospi
 
 ---
 
-## Financial Support
+## Financial Support — Unified Tiers
 
-| Method | Details |
-|--------|---------|
-| **One-time gift** | Any amount, when you can |
-| **Monthly patron** | Recurring support for sustainable planning |
-| **Project sponsor** | Fund a specific initiative |
-| **Emergency fund** | Reserves for disaster response |
+| Level | Contribution | What It Enables |
+|-------|--------------|-----------------|
+| **Starter** | $500-4,000 | Gift economy workshop supplies (soap base, essential oils, food coloring, OPP bags, drawstring bags, propane gas, propane burner) |
+| **Builder** | $4,000-6,000 | Full household backup (generator, portable power station, solar panel, lighting, satellite communication, fan, refrigerator/freezer, mobile batteries) |
+| **Operate** | $6,000+ | Builder kit + fuel & connectivity (gasoline, engine oil, propane gas, satellite communication fees) |
+| **Visionary** | $100,000+ | Community-scale resilience infrastructure |
 
 *Payment methods: Bank transfer, crypto, or alternatives — contact us to arrange.*
 
