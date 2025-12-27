@@ -200,7 +200,15 @@ We've built a sustainable life without traditional employment, using Guest Hospi
 | **Equipment** | Solar panels, batteries, inverters, tools |
 | **Technology** | Laptops, cameras, communication gear |
 | **Supplies** | Building materials, emergency supplies |
-| **Services** | Legal, accounting, design, translation |
+
+---
+
+## Professional Services
+
+| Area | Examples |
+|------|----------|
+| **Professional** | Legal, accounting, tax |
+| **Creative** | Design, translation, video editing |
 
 ---
 
