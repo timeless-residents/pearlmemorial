@@ -8,7 +8,7 @@
 
 To exist. To act. To eternity.
 
-*A Japanese family living off-grid in Maui — survivors of the 2023 fires — building disaster resilience while reconnecting Japanese-Americans with their ancestral roots. This isn't charity. It's participation in a movement.*
+*A Japanese family living off-grid in Maui — moved to action by the 2023 fires — building disaster resilience while reconnecting Japanese-Americans with their ancestral roots. This isn't charity. It's participation in a movement.*
 
 ---
 
@@ -43,7 +43,7 @@ We're not an organization. We're a family living our philosophy.
 
 | Year | Achievement |
 |------|-------------|
-| **2023** | Survived Maui fires, built first off-grid system |
+| **2023** | Witnessed Maui fires, committed to support, built first off-grid system |
 | **2024** | Installed solar infrastructure for religious organization |
 | **2024** | Large-scale property improvements at permaculture farm |
 | **2025** | Formal lodging support agreement with historic Hana church |
@@ -340,7 +340,7 @@ Your name is laser-engraved onto quartz glass — a medium designed to last 10,0
 | **Mina Sato** | Co-founder, marketing, resin art |
 | **Ito (age 5)** | Soap helper, heart of the family |
 
-**Forbes JAPAN contributor** | **2023 Maui fire survivors** | **Off-grid since 2023**
+**Forbes JAPAN contributor** | **Supporting Maui since 2023 fires** | **Off-grid since 2023**
 
 ---
 
