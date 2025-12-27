@@ -62,6 +62,22 @@ body {
     color: var(--text-main);
 }
 
+.nav-divider {
+    color: var(--text-dim);
+    margin: 0 0.2rem;
+    font-size: 0.75rem;
+}
+
+.nav-book {
+    color: var(--gold) !important;
+    font-weight: 400;
+}
+
+.nav-book:hover {
+    color: var(--gold-light) !important;
+    text-shadow: 0 0 8px var(--gold-glow);
+}
+
 /* Hero Section */
 .hero {
     min-height: 100vh;
