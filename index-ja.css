@@ -817,6 +817,187 @@ p {
     color: var(--text-dim);
 }
 
+/* Process Flow */
+.process-flow {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: var(--bg-card);
+    border-radius: 8px;
+}
+
+.process-flow h3 {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.process-steps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.process-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    background: var(--bg-subtle);
+    border-radius: 6px;
+    min-width: 80px;
+}
+
+.step-num {
+    font-size: 0.7rem;
+    color: var(--gold);
+    margin-bottom: 0.3rem;
+}
+
+.step-label {
+    font-size: 0.75rem;
+    color: var(--text-main);
+}
+
+.process-arrow {
+    color: var(--gold);
+    font-size: 1.2rem;
+}
+
+.process-note {
+    text-align: center;
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    margin-top: 1rem;
+}
+
+/* Service Stats */
+.service-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: var(--bg-card);
+    border-radius: 8px;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--gold);
+}
+
+.stat-label {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    letter-spacing: 0.1em;
+}
+
+/* Fact Summary Section */
+.fact-summary-section {
+    padding: 4rem 2rem;
+    background: var(--bg-subtle);
+    border-top: 1px solid rgba(201, 169, 98, 0.2);
+}
+
+.fact-summary-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.fact-summary-content h2 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-main);
+}
+
+.fact-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.fact-item {
+    font-size: 0.9rem;
+    color: var(--hope-blue);
+    padding: 0.5rem;
+    background: rgba(126, 184, 201, 0.1);
+    border-radius: 4px;
+}
+
+.fact-link {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.fact-link a {
+    color: var(--gold);
+    text-decoration: underline;
+}
+
+/* Consultation Flow */
+.consultation-flow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1.5rem 0;
+}
+
+.flow-step {
+    padding: 0.6rem 1rem;
+    background: var(--bg-card);
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: var(--text-main);
+}
+
+.flow-arrow {
+    color: var(--gold);
+    font-size: 1rem;
+}
+
+/* Maui Gratitude Section */
+.maui-gratitude-section {
+    padding: 4rem 2rem;
+    background: linear-gradient(180deg, var(--bg-subtle) 0%, var(--bg-deep) 100%);
+    border-top: 1px solid rgba(201, 169, 98, 0.1);
+}
+
+.maui-gratitude-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.maui-gratitude-content h2 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--gold-light);
+}
+
+.maui-gratitude-content p {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: var(--text-muted);
+}
+
 /* Family Section */
 .family-section { padding: 6rem 2rem; }
 
@@ -909,6 +1090,12 @@ p {
     font-family: var(--font-display);
     font-size: 1rem;
     color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.cta-note {
+    font-size: 0.85rem;
+    color: var(--hope-blue);
     margin-bottom: 2rem;
 }
 
@@ -1022,6 +1209,71 @@ footer {
     .packages-grid,
     .donation-tiers { grid-template-columns: 1fr 1fr; }
     .pillars-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Sample Report Link */
+.sample-report-link {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.sample-report-link a {
+    color: var(--hope-blue);
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-bottom: 1px dashed var(--hope-blue);
+    transition: all 0.3s ease;
+}
+
+.sample-report-link a:hover {
+    color: var(--gold);
+    border-color: var(--gold);
+}
+
+/* Japanese Bond */
+.japanese-bond {
+    font-size: 0.95rem;
+    color: var(--gold);
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: rgba(201, 169, 98, 0.08);
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+/* Same Path Emphasis */
+.same-path-intro {
+    font-size: 0.95rem;
+    color: var(--hope-blue);
+    margin-bottom: 1.5rem;
+}
+
+.same-path-outro {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    color: var(--gold);
+}
+
+/* Pricing Note */
+.pricing-note {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: rgba(126, 184, 201, 0.05);
+    border: 1px solid rgba(126, 184, 201, 0.2);
+    border-radius: 0.5rem;
+}
+
+.pricing-note p {
+    font-size: 0.9rem;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+}
+
+.pricing-note .pricing-sub {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 0;
 }
 
 @media (max-width: 768px) {

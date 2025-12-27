@@ -8,6 +8,8 @@ To exist. To act. To eternity.
 
 **Your story matters.**
 
+*A Japanese family in Maui helps Japanese-Americans return ashes to ancestral graves, reconnect with their roots, and preserve memories across the Pacific — born from their own journey of loss and healing after their beloved dog Pearl.*
+
 Laser-engraved keepsakes to preserve your memories.
 
 ---
@@ -57,15 +59,17 @@ Pearl Memorial is part of **Timeless Eternal Hope**, built on four pillars:
 
 ## Soul Carrier — Reuniting Roots
 
+**For Japanese-American families seeking to reconnect with their heritage.**
+
 **We carry souls home.**
 
-People crossed the ocean. For different reasons, in different eras. Over the years, connections to their homeland faded.
+We understand what it means to have roots across the ocean. People crossed the Pacific for different reasons, in different eras. Over the years, connections to their homeland faded — but the longing never did.
 
 ### We help deliver:
 
 - **Ashes to ancestral homes** — Return remains to family graves in Japan
 - **Families to their roots** — Reconnect with relatives, registries, and history
-- **Family crests to memory** — Research your kamon with English report on its history and significance
+- **Family crests to memory** — Research your kamon with EN/JP report on its history and significance
 - **Stories to completion** — Close the circle that distance left open
 
 > "Loss doesn't have to be the end."
@@ -101,14 +105,16 @@ Pearl was family for 18 years. After creating a portable grave for him, we visit
 
 ### Pricing
 
-| Service | Price | Description |
-|---|---|---|
-| Consultation | Free | 30-minute call to understand your situation |
-| Research | $500 | Locate family records, graves, contacts, and kamon |
-| Coordination | $1,000 | Arrange ceremonies, temple visits, and logistics |
-| Accompaniment / Proxy | $2,000+ | We travel with you — or on your behalf (+ travel expenses) |
+| Service | Price | Timeline | Description |
+|---|---|---|---|
+| Consultation | Free | — | 30-minute call to understand your situation |
+| Research | $500 | 2–4 weeks | Locate family records, graves, contacts, and kamon |
+| Coordination | $1,000 | 4–8 weeks | Arrange ceremonies, temple visits, and logistics |
+| Accompaniment / Proxy | $2,000+ | Varies | We travel with you — or on your behalf (+ travel expenses, typically $1,500–$3,000) |
 
 *Custom packages available. Contact us to discuss your needs.*
+
+**See what you'll receive:** [Sample Research Report (EN/JP)](sample-report-en.pdf)
 
 ---
 
@@ -154,7 +160,7 @@ Materials: Quartz glass internal engraving (1,000+ years)
 
 **Your memories, protected. Your presence, welcomed.**
 
-A place to store. A place to return.
+A place to store. A place to return. Even from overseas, your memories stay connected to Japan — and you're always welcome to visit.
 
 ### Urayasu — Near Tokyo
 - 30 min to Tokyo
@@ -197,6 +203,10 @@ A place to store. A place to return.
 ## Sustain — Your Own Micro Datacenter
 
 **Own your data. Data protection on your terms.**
+
+*Tested and running on Maui since 2023.*
+
+After the 2023 Maui fires, we learned firsthand: when the grid goes down, so does everything you depend on. Power, internet, communication — gone. We built this system so our family could stay connected, stay informed, and stay together. Now we help others do the same.
 
 ### The Stack
 - **Solar Panel** — Off-grid power
@@ -407,6 +417,8 @@ A: Yes. Everything in this catalog is public. Reach out if you have questions.
 - **Email:** business@satotakuya.jp
 - **Instagram:** @pearl.memorial
 - **Our story:** bit.ly/boundarist
+- **Media:** press-kit.html
+- **Partners:** Partner.pdf / Partner-ja.pdf
 
 ---
 
