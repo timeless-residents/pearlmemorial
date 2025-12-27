@@ -46,8 +46,8 @@ We're not an organization. We're a family living our philosophy.
 | **2023** | Witnessed Maui fires, committed to support, built first off-grid system |
 | **2024** | Installed solar infrastructure for religious organization |
 | **2024** | Large-scale property improvements at permaculture farm |
-| **2025** | Formal lodging support agreement with historic Hana church |
-| **2025** | 5+ community workshops, 10+ households directly supported |
+| **2025 H1** | Began independent R&D on disaster recovery technology |
+| **2025 H2** | Gift economy practice at Wailuku Halloween event, off-grid system support for religious organization, off-grid system support for permaculture farm, formal lodging agreement with church |
 
 *Every contribution has multiplied into community impact.*
 
