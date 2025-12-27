@@ -423,15 +423,17 @@ Our Guest Hospitality Agreement is designed to:
 - Clarify that this is friendship-based hospitality, not employment
 - Allow genuine contribution without work-for-accommodation concerns
 
-### Alternative Arrangements
+### ESTA Constraint & Alternative Arrangements
 
-For organizations that require traditional fee structures:
+**Important:** We visit the US on ESTA (Visa Waiver Program). Under ESTA, we cannot receive payment for work performed in the United States. This is why the **Guest Hospitality Model is our primary arrangement** — it's legally compliant hospitality, not employment.
 
-| Model | Description |
-|-------|-------------|
-| **Project Fee** | Defined scope with fixed pricing |
-| **Revenue Share** | Success-based compensation |
-| **Hybrid** | Hospitality + supplemental fees |
+For organizations that require traditional fee structures, the following options are available **for work performed in Japan or through our Japanese entity:**
+
+| Model | Description | Jurisdiction |
+|-------|-------------|--------------|
+| **Project Fee** | Defined scope with fixed pricing | Japan-based work |
+| **Revenue Share** | Success-based compensation | Japanese entity |
+| **Hybrid** | Hospitality (US) + fees (Japan work) | Split |
 
 Let's discuss what makes sense for both sides.
 
