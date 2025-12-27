@@ -201,6 +201,7 @@ We've built a sustainable life without traditional employment, using Guest Hospi
 | **Appliances** | Refrigerator/freezer, fans, lighting, mobile batteries |
 | **Communication** | Satellite terminals, laptops, cameras |
 | **Supplies** | Building materials, emergency supplies, tools |
+| **For our daughter** | Toys, educational toys, picture books, learning opportunities (classes, workshops) |
 
 ---
 
