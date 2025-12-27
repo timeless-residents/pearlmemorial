@@ -227,7 +227,7 @@ Both at once.
 
 On the morning of December 21, T left his wife and daughter at the trailer house and drove off seeking help.
 
-His destination was S Church on the west side of the island. A small church next to the a local store.
+His destination was S Church on the west side of the island. A small church next to a local store.
 
 T himself didn't know why he went there. He just felt he should.
 
@@ -247,7 +247,7 @@ After hugging R, T drove back to the trailer house to bring his wife and daughte
 
 The family returned to the church together. His wife tended to their daughter in the car while T stood in the back row of the service, waiting for it to end so he could seek R's help.
 
-Through R's kindness, he called a bilingual acquaintance named an interpreter. Through R's trust, they arranged lodging where the family could rest.
+Through R's kindness, a bilingual acquaintance was called to help interpret. Through R's trust, lodging was arranged where the family could rest.
 
 T left his wife and daughter at the lodging and returned alone to the trailer house so the prospective buyer could thoroughly inspect inside and out. He completed the preparation.
 
@@ -269,9 +269,9 @@ He listened to T's story. And said:
 
 ### The Japanese Bond
 
-R's mother was Japanese. Her name was his mother.
+R's mother was Japanese.
 
-A woman who married an American soldier after the war and moved to Hawaii. She passed away in 2022.
+A woman who married an American soldier after the war and moved to Hawaii. She passed away a few years earlier.
 
 R cherished his roots as someone of Japanese descent. So when he saw the Japanese family before him, something moved within him.
 
@@ -514,7 +514,7 @@ The agreement bears signatures. There are expense records. Dates. Names of signa
 
 These exist as physical evidence. They cannot be erased. They cannot be falsified.
 
-**Layer Five: Digital Records**
+**Digital Records**
 
 Posted to social networks worldwide. Simultaneously across multiple platforms.
 
@@ -522,9 +522,15 @@ Documented as project records. As official Boundarist Movement documentation.
 
 In the digital world, information once published cannot be completely erased. It remains in internet archives. Screenshots remain.
 
-**Layer Six: The Power of Story**
+**The Power of Story**
 
 This event has a "structure that will be retold."
+
+- A church that was the only one to survive the fire
+- A Japanese family's disaster recovery support
+- Connections born from chance encounters
+
+Simple, yet containing elements that stay in people's hearts.
 
 ---
 
