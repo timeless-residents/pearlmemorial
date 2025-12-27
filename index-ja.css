@@ -1211,6 +1211,25 @@ footer {
     .pillars-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* Sample Report Link */
+.sample-report-link {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.sample-report-link a {
+    color: var(--hope-blue);
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-bottom: 1px dashed var(--hope-blue);
+    transition: all 0.3s ease;
+}
+
+.sample-report-link a:hover {
+    color: var(--gold);
+    border-color: var(--gold);
+}
+
 /* Japanese Bond */
 .japanese-bond {
     font-size: 0.95rem;

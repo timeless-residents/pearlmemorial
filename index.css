@@ -221,6 +221,10 @@ footer { padding: 3rem 2rem; text-align: center; border-top: 1px solid rgba(201,
 .footer-location { font-size: 0.65rem; letter-spacing: 0.2em; color: var(--text-dim); }
 @keyframes fadeUp { from { opacity: 0; transform: translateY(25px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes float { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(-8px); } }
+/* Sample Report Link */
+.sample-report-link { text-align: center; margin: 1rem 0; }
+.sample-report-link a { color: var(--hope-blue); text-decoration: none; font-size: 0.9rem; border-bottom: 1px dashed var(--hope-blue); transition: all 0.3s ease; }
+.sample-report-link a:hover { color: var(--gold); border-color: var(--gold); }
 /* Japanese Bond */
 .japanese-bond { font-size: 0.95rem; color: var(--gold); font-style: italic; margin-bottom: 1.5rem; padding: 1rem; background: rgba(201, 169, 98, 0.08); border-radius: 0.5rem; text-align: center; }
 /* Same Path Emphasis */
