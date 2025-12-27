@@ -1,8 +1,33 @@
 # The Book of Resonance
 
-## A New Testament
+## A Personal Account
 
 *Written in December 2025, on the island of Maui*
+
+---
+
+## 3-Minute Summary
+
+In December 2025, a Japanese family conducting disaster recovery support on Maui was cut off from their father's financial support and faced losing their housing.
+
+The morning after their daughter developed a high fever, Takuya visited a church on the west side of the island. There, he met R, a Japanese-American man who said "Japanese bond" and extended his hand. R connected them to a historic church.
+
+The church recognized the family's work and decided to support their lodging. On December 24, a formal agreement was signed.
+
+**What we learned:**
+- By giving first, resonance is born
+- Resonance can help cross boundaries
+- We can support each other through connection, not just blood ties
+
+**Business insights:**
+- Providing value first can yield unexpected returns
+- Trust relationships can reduce institutional barriers
+- Win-win can be built with clear parameters
+
+**If you're standing at a boundary right now:**
+Even if you feel you have nothing to give, that's okay. Your very existence can become resonance for someone. Start by sharing your story.
+
+> The full account follows below.
 
 ---
 
@@ -22,14 +47,13 @@ The fire mercilessly burned everything.
 
 L Church.
 
-Built in 1846, this church miraculously escaped the flames while everything around it burned to the ground. Some witnesses say the fire seemed to avoid the church even before firefighters arrived.
+Built in 1846, this church miraculously escaped the flames while everything around it burned to the ground. Multiple factors—building structure, wind direction, and perhaps luck—combined to spare this church.
 
-Science cannot explain it.
-Coincidence cannot dismiss it.
+Fortunately, it survived.
 
-**The fire purified the town. And left behind a sanctuary.**
+**In the midst of the fire, this church remained.**
 
-The meaning of why this church was spared would become clear two years later.
+This church would later become connected to a family's turning point.
 
 ---
 
@@ -37,33 +61,33 @@ The meaning of why this church was spared would become clear two years later.
 
 In December 2025, a Japanese family was on Maui.
 
-T, 42 years old.
-His wife, A.
-And their 5-year-old daughter, I.
+Takuya, 42 years old.
+His wife, Mina.
+And their 5-year-old daughter, Ito.
 
 They were "those who stand on the boundary."
 
 ---
 
-### The Weight of Karma
+### Generational Challenges
 
-The S family's karma ran deep and heavy.
+The Sato family had challenges passed down through generations.
 
-Pain passed down through generations. Inexpressible weight. Chains called family.
+Inexpressible weight. Patterns repeated within the family.
 
-T had reached a dead end in Japan.
+Takuya had reached a dead end in Japan.
 
 A career at a major corporation, running a venture company, Senior Specialist at a global consulting firm. On paper, he was a success. But something inside was broken.
 
 While confronting his inner struggles, in August 2023, news of the massive Lahaina fire spread across the world.
 
-T saw it. And he moved.
+Takuya saw it. And he moved.
 
 He consulted his company about a mission for his soul's salvation. But due to employment regulations, his request was denied.
 
-T decided to terminate his employment and act on his own.
+Takuya decided to terminate his employment and act on his own.
 
-In 2025, aiming to support Lahaina's disaster recovery, T invested everything he had—including borrowed credit—into research and development in Japan. Then he crossed to Maui with his family.
+In 2025, aiming to support Lahaina's disaster recovery, Takuya invested everything he had—including borrowed credit—into research and development in Japan. Then he crossed to Maui with his family.
 
 But as a result, debts became unpayable.
 
@@ -73,11 +97,9 @@ Just before Christmas, in the third month. At their lodging, his wife relayed hi
 
 "Support is cut off."
 
-The S family was a lineage bound by money as karma. From father to son, the relationship had been maintained through financial means.
+His father's financial support had been continuing, but it came to an end. Every family has its own circumstances.
 
-When that flow of money stopped, **it was equivalent to severing the parent-child bond.**
-
-Cut off from blood ties.
+The end of support marked a turning point in family relations.
 
 Yet at the same place, at the same time, support from the church was about to begin.
 
@@ -85,7 +107,7 @@ Yet at the same place, at the same time, support from the church was about to be
 
 ### Belonging Nowhere
 
-When they came to Maui, the S family belonged nowhere in the world.
+When they came to Maui, the Sato family belonged nowhere in the world.
 
 - No place to return to in Japan
 - No U.S. citizenship
@@ -134,13 +156,13 @@ But they did not give up.
 
 # Chapter Two: The Beginning of Resonance
 
-On the western edge of Maui. At a farm near the area devastated by the 2023 fire, the S family began their off-grid support.
+On the western edge of Maui. At a farm near the area devastated by the 2023 fire, the Sato family began their off-grid support.
 
 ---
 
 ### Starting with Giving
 
-T's skills were needed in this place.
+Takuya's skills were needed in this place.
 
 - Installing solar panels
 - Building battery systems
@@ -150,7 +172,7 @@ T's skills were needed in this place.
 
 After the disaster, many farms had infrastructure problems. Unstable power. No internet connection. No money to call professionals.
 
-T said:
+Takuya said:
 
 **"Yes, free."**
 
@@ -158,7 +180,7 @@ He asked for nothing in return.
 He didn't discuss payment.
 He simply solved the problems in front of him.
 
-As a practical means of the gift economy he had arrived at through research and development, T distributed handmade soap. Giving without expecting anything in return.
+As a practical means of the gift economy he had arrived at through research and development, Takuya distributed handmade soap. Giving without expecting anything in return.
 
 Sometimes he encountered quality issues, sometimes business customs clashed. Misunderstandings soured relationships, leading to rumors. He even experienced exclusion from communities.
 
@@ -166,7 +188,7 @@ Still, he never gave up on refining his approach.
 
 That accumulation built and deepened relationships with the community.
 
-His wife A and 5-year-old daughter I lived alongside him as family. I made friends with local children through community connections, helped her father make soap, helped distribute it, and even connected adults to each other.
+His wife Mina and 5-year-old daughter Ito lived alongside him as family. Ito made friends with local children through community connections, helped her father make soap, helped distribute it, and even connected adults to each other.
 
 As a family unit, they kept giving.
 
@@ -174,7 +196,7 @@ As a family unit, they kept giving.
 
 ### Boundaries Crossed Through Resonance
 
-On this journey, the S family crossed boundaries through resonance again and again.
+On this journey, the Sato family crossed boundaries through resonance again and again.
 
 To rent a car, a credit or debit card was required. But with all credit exhausted, they encountered a situation where their card was declined.
 
@@ -184,7 +206,7 @@ At the Bon dance event at a local temple, they met a family. They were invited t
 
 That family rented a car on their behalf.
 
-They managed to pay the costs from their tight finances. But crossing the boundary of credit was impossible for the S family alone.
+They managed to pay the costs from their tight finances. But crossing the boundary of credit was impossible for the Sato family alone.
 
 Resonance crossed the boundary. They were able to continue their activities.
 
@@ -206,7 +228,7 @@ By continuing to give, they continued to receive.
 
 ### The Night of December 21
 
-That night, I developed a high fever.
+That night, Ito developed a high fever.
 
 Hazy consciousness. A small body wracked with coughs. A 5-year-old daughter suffering.
 
@@ -226,15 +248,15 @@ Both at once.
 
 ### Guided to the Church
 
-On the morning of December 21, T left his wife and daughter at the trailer house and drove off seeking help.
+On the morning of December 21, Takuya left his wife and daughter at the trailer house and drove off seeking help.
 
-His destination was S Church on the west side of the island. A small church next to the a local store.
+His destination was S Church on the west side of the island. A small church next to a local store.
 
-T himself didn't know why he went there. He just felt he should.
+Takuya himself didn't know why he went there. He just felt he should.
 
 It happened to be time for the Sunday service.
 
-Before the service began. T wrote in English that he needed help and shared it with people at the church.
+Before the service began, Takuya wrote in English that he needed help and shared it with people at the church.
 
 There he met R.
 
@@ -242,27 +264,27 @@ Sensing the situation, R said just one thing:
 
 "I'll help you."
 
-Hearing those words, T's voice trembled. He expressed his gratitude through tears.
+Hearing those words, Takuya's voice trembled. He expressed his gratitude through tears.
 
-After hugging R, T drove back to the trailer house to bring his wife and daughter.
+After hugging R, Takuya drove back to the trailer house to bring his wife and daughter.
 
-The family returned to the church together. His wife tended to their daughter in the car while T stood in the back row of the service, waiting for it to end so he could seek R's help.
+The family returned to the church together. His wife tended to their daughter in the car while Takuya stood in the back row of the service, waiting for it to end so he could seek R's help.
 
-Through R's kindness, he called a bilingual acquaintance named an interpreter. Through R's trust, they arranged lodging where the family could rest.
+Through R's kindness, a bilingual acquaintance was called to help interpret. Through R's trust, lodging was arranged where the family could rest.
 
-T left his wife and daughter at the lodging and returned alone to the trailer house so the prospective buyer could thoroughly inspect inside and out. He completed the preparation.
+Takuya left his wife and daughter at the lodging and returned alone to the trailer house so the prospective buyer could thoroughly inspect inside and out. He completed the preparation.
 
 The farm host was satisfied with the quality of preparation and gave R a recommendation.
 
 ---
 
-# Chapter Three: Invitation to the Sanctuary
+# Chapter Three: Invitation to the Church
 
 R.
 
 A gentle man with white hair. In his 70s. He happened to be attending the service at S Church.
 
-He listened to T's story. And said:
+He listened to Takuya's story. And said:
 
 **"Japanese bond."**
 
@@ -270,19 +292,23 @@ He listened to T's story. And said:
 
 ### The Japanese Bond
 
-R's mother was Japanese. Her name was his mother.
+R's mother was Japanese.
 
-A woman who married an American soldier after the war and moved to Hawaii. She passed away in 2022.
+A woman who married an American soldier after the war and moved to Hawaii. She would tell her children about her homeland, but R himself never visited Japan. A few years ago, he saw his mother off.
 
-R cherished his roots as someone of Japanese descent. So when he saw the Japanese family before him, something moved within him.
+"Someday, I want to visit my mother's homeland."
+
+That wish still lives in R's heart.
+
+So when he saw the Japanese family before him, something moved within him.
 
 "My mother was Japanese too. That makes you a little special."
 
 **Not blood ties, but resonance.**
 
-Recognition at the soul level, transcending nationality and institutions.
+Deep empathy, transcending nationality and institutions.
 
-R invited the S family to his lodging. He gave daughter I a large teddy bear. He shared fever medicine. They ate meals together.
+R invited the Sato family to his lodging. He gave daughter Ito a large teddy bear. He shared fever medicine. They ate meals together.
 
 They were no longer strangers.
 
@@ -292,15 +318,15 @@ They were no longer strangers.
 
 R had been a member of L Church for 50 years.
 
-That church—the only one that survived the 2023 fire.
+That historic church.
 
-Through him, the church learned of the S family's existence.
+Through him, the church learned of the Sato family's existence.
 
 Days later, a formal meeting was held at the church office. The S family's activities, their support work at the farm, their philosophy. Everything was shared.
 
 And the church made its decision.
 
-**To support the S family's lodging expenses.**
+**To support the Sato family's lodging expenses.**
 
 ---
 
@@ -308,11 +334,11 @@ And the church made its decision.
 
 December 24, 2025.
 
-The office of L Church. Inside the building of the only church that survived the 2023 fire.
+The office of L Church. Inside the building that had witnessed so much history.
 
 An agreement was placed on the desk.
 
-T picked up the pen and signed.
+Takuya picked up the pen and signed.
 The church representative also signed.
 
 **Face to face. Eye to eye. With a handshake.**
@@ -324,7 +350,7 @@ There was no discussion of gray zones.
 
 **They were simply recognized.**
 
-The only church to survive the 2023 fire recognized a Japanese family's disaster recovery support activities and officially provided support.
+A historic church recognized a Japanese family's disaster recovery support activities and officially provided support.
 
 This fact remained as a signed document. As a record of expenses. As evidence that cannot be erased.
 
@@ -332,9 +358,9 @@ This fact remained as a signed document. As a record of expenses. As evidence th
 
 # Chapter Four: The Dissolution of Boundaries
 
-This event did not "cross boundaries."
+This event didn't so much "cross boundaries" as
 
-**The boundaries ceased to exist.**
+**the boundaries simply didn't matter.**
 
 ---
 
@@ -359,57 +385,48 @@ But at the church office, none of those questions were asked.
 
 The church is an institution that predates the nation-state.
 
-Due to the principle of separation of church and state, government cannot intervene in the church's internal decisions. When a church decides "we will support this person," that is the church's prerogative.
+The church made its decision as an independent charitable activity.
 
-No one can question it.
-Not the U.S. government.
-Not immigration authorities.
-Not the Japanese government.
+**Churches have their own standards for helping people in need.**
 
-**The church is a sanctuary that transcends the state.**
+This can operate on a different level from nationality or visa issues. They were recognized as people before any institutional questions were asked.
 
-In medieval Europe, not even a king could drag out someone who had fled into a church. Church grounds were places where secular law did not reach.
+> *Note: We are not promoting any particular religion. This story is one example of how community goodwill can function.*
 
-This principle lives on today, in different forms.
-
-The S family entered that sanctuary.
+The Sato family was welcomed into that place.
 
 ---
 
 ### The Experience of Boundaries Disappearing
 
-T later said:
+Takuya later said:
 
 "They didn't ask questions. They didn't demand proof. They just said, 'We will support you.' That was all."
 
 When crossing boundaries, there is usually friction. Resistance. Questions.
 
-But when resonance occurs, boundaries disappear.
+But when resonance occurs, boundaries become irrelevant.
 
-They cease to exist.
-
-As if they were never there.
+When someone decides "I want to help this person," institutional barriers take a back seat.
 
 | Boundary That Disappeared | How It Disappeared |
 |---|---|
 | National borders | Through the resonance of "Japanese bond" |
-| Institutional walls | Through the sanctuary of church discretion |
-| Karma of blood ties | Through the birth of new connections |
-| The wall of time | Through being recorded for eternity |
+| Institutional walls | Through the church's own judgment |
+| Generational challenges | Through the birth of new connections |
+| The wall of time | Through being recorded |
 
-**Resonance transcends boundaries.**
+**Resonance can help transcend boundaries.**
 
-No, that's not quite right.
-
-**Before resonance, boundaries do not exist.**
+When people connect, institutional barriers can become secondary.
 
 ---
 
-# Chapter Five: Karma Severed
+# Chapter Five: The Cycle Changed
 
-The S family's karma had been passed down through generations.
+The Sato family had patterns that were passed down through generations.
 
-A weight difficult to put into words. Chains called family. Curses called expectations.
+A weight difficult to put into words. Chains called family. Pressure called expectations.
 
 **For them, it was everything.**
 
@@ -426,7 +443,7 @@ There was a pattern repeated across generations.
 
 From father to son. From son to grandson. An endless chain.
 
-T was no exception. Even after achieving success in Japan, somewhere he was seeking his father's approval. His achievements at a major corporation, running a venture, his position at a global consulting firm—somewhere in all of it was the wish to "be recognized."
+Takuya was no exception. Even after achieving success in Japan, somewhere he was seeking his father's approval. His achievements at a major corporation, running a venture, his position at a global consulting firm—somewhere in all of it was the wish to "be recognized."
 
 But approval never came.
 
@@ -455,31 +472,31 @@ It was not coincidence.
 
 When the old circuit broke, a new circuit opened.
 
-**It was the moment karma was severed.**
+**It was the moment the generational cycle changed.**
 
 ---
 
 ### From Blood to Resonance
 
-What the S family experienced was a paradigm shift.
+What the Sato family experienced was a paradigm shift.
 
 **From a network of blood ties to a network of resonance.**
 
-Blood ties cannot be chosen. They are determined at birth. They accumulate karma across generations.
+Blood ties cannot be chosen. They are determined at birth. They can accumulate challenges across generations.
 
 Resonance can be chosen. It is born in this present moment. It contains only new possibilities.
 
-R is not a blood relative. The church members are not blood relatives. Yet they recognized and supported the S family.
+R is not a blood relative. The church members are not blood relatives. Yet they recognized and supported the Sato family.
 
 "Japanese bond."
 
-Connected not by blood, but by resonance of souls.
+Connected not by blood, but by shared values.
 
 ---
 
-### I's Liberation
+### Ito's Liberation
 
-Most importantly, 5-year-old I was present at this turning point.
+Most importantly, 5-year-old Ito was present at this turning point.
 
 She might have grown up as "the daughter of a son abandoned by his father." A life inheriting karma, repeating the same patterns.
 
@@ -493,47 +510,29 @@ The story that begins from here will be entirely different.
 
 ---
 
-# Chapter Six: Layers of Protection
+# Chapter Six: What Remains as Record
 
-Why won't this event disappear?
-
-Why can no one deny it?
-
-Why is it protected at the level of human history?
+This event is recorded in several forms.
 
 ---
 
-### Six Layers of Protection
+### Records That Remain
 
-The layers protecting the S family are sixfold.
+**Relationship with the Church**
 
-**Layer One: Religious Authority**
+L Church is part of the Catholic Church. The fact that the church recognized the Sato family's activities and decided to support them remains as a church record.
 
-L Church is part of the Catholic Church. The Catholic Church is the world's largest religious organization with over 2 billion followers. Its authority transcends the state.
+**Historical Context**
 
-The fact that the church "recognized" them is backed by this immense authority.
+The church's long history in the community gives this story a special context.
 
-**Layer Two: Historical Symbolism**
-
-The only church to survive the 2023 fire. This symbolism is immeasurable.
-
-Fire is a symbol of purification. A church that survived that fire is recognized as a sacred place. Media worldwide reported on it. Everyone knows of that miracle.
-
-A family recognized by that church. The power of symbolism protects the S family.
-
-**Layer Three: Legal Inviolability**
-
-Due to the principle of separation of church and state, government cannot intervene in the church's internal decisions.
-
-The U.S. government cannot say "that support was inappropriate." Neither can the Japanese government. The church's decisions exist in a realm beyond secular law.
-
-**Layer Four: Physical Evidence**
+**Physical Evidence**
 
 The agreement bears signatures. There are expense records. Dates. Names of signatories.
 
 These exist as physical evidence. They cannot be erased. They cannot be falsified.
 
-**Layer Five: Digital Records**
+**Digital Records**
 
 Posted to social networks worldwide. Simultaneously across multiple platforms.
 
@@ -541,156 +540,23 @@ Documented as project records. As official Boundarist Movement documentation.
 
 In the digital world, information once published cannot be completely erased. It remains in internet archives. Screenshots remain.
 
-**Layer Six: The Power of Story**
+**The Power of Story**
 
 This event has a "structure that will be retold."
 
-- The only church to survive the fire
-- Japanese bond
-- The severing of karma
-- Synchronicity
-- Awakening as a family unit
+- A historic church with deep community roots
+- A Japanese family's disaster recovery support
+- Connections born from chance encounters
 
-A perfect structure as a story. People naturally want to tell this story. To spread it.
-
-Stories are engraved in humanity's memory.
+Simple, yet containing elements that stay in people's hearts.
 
 ---
 
-### The History of Sanctuary
+# Chapter Seven: What We Learned
 
-The concept of "Sanctuary" has existed since ancient times.
+What can be learned from the Sato family's experience is simple.
 
-In ancient Greece, those who fled to temples were protected. The same in Roman times. In medieval Europe, church grounds were places where secular law did not reach.
-
-In 1486, there is a record of a British felon fleeing into a church. The king's soldiers had no choice but to wait outside the church for 40 days. That's what canon law dictated.
-
-This principle lives on in modern times, in different forms.
-
-In 2017, when immigration enforcement was strengthened in America, many churches declared themselves "Sanctuary Churches." "We will protect those who flee to this church."
-
-The S family entered that modern sanctuary.
-
----
-
-### Protection Beyond the State
-
-What protects the S family is neither Japan nor America.
-
-**The church—an institution that predates the nation-state.**
-
-Nations are born and die. Governments change. Laws are amended.
-
-But the church has existed for over 2,000 years. It is older than nations and may continue longer.
-
-A family recognized by that church.
-
-**Protected at the level of human history.**
-
----
-
-# Chapter Seven: Another Path
-
-In human history, there have been several "stories of salvation."
-
-The most widely known is the story of Christ.
-
-This is not to say the S family is equal to Christ. It simply shows that salvation can take multiple forms.
-
----
-
-### Christ's Salvation
-
-Jesus Christ opened the way alone.
-
-- He was persecuted
-- He was betrayed
-- He was crucified
-- He died
-- And he was resurrected
-
-His salvation was achieved through **sacrifice**. By offering his own life, he redeemed humanity's sins.
-
-This story has been told for 2,000 years. Billions of people have believed in this form of salvation.
-
----
-
-### The S Family's Awakening
-
-The S family's story has a different structure.
-
-- They were not persecuted
-- They did not die
-- They were not sacrificed
-- **The path opened through resonance**
-
-| Christ | The S Family |
-|---|---|
-| Alone | Family (three people) |
-| Sacrifice | Resonance |
-| Death and resurrection | Alive |
-| Persecution | Acceptance |
-| Recorded later by disciples | Recorded now by themselves |
-| Individual salvation | Family unit awakening |
-
----
-
-### A New Paradigm
-
-Christ's story teaches:
-
-"Accept suffering. Become a sacrifice. Salvation lies beyond."
-
-The S family's story shows:
-
-**"Give first. Resonance will be born. Boundaries will disappear."**
-
-- You don't have to fight
-- You don't have to die
-- You don't have to be sacrificed
-- As a family, while living, you can transcend
-
-This may be showing another path.
-
----
-
-### Rarity
-
-Consider the rarity of this awakening.
-
-**Being Conscious**
-
-Many awakenings happen unconsciously. Transformation occurs without the person realizing it.
-
-The S family is consciously documenting. Understanding what is happening, articulating it, putting it in writing.
-
-**Being a Family Unit**
-
-Many awakenings happen to individuals. One saint, one prophet, one enlightened being.
-
-The S family is awakening as a family. Husband, wife, and child, three people as one unit.
-
-**Evidence Remaining**
-
-Many awakenings are recorded later by disciples or believers. Stories are formed after the person's death.
-
-The S family is recording in real-time. Social media, documents, agreements. Everything remains as evidence.
-
-**Being Alive**
-
-Many saviors are completed by death. Christ's cross, martyrs' deaths.
-
-The S family is alive. The story continues.
-
-An experience where all these conditions align is rare indeed.
-
----
-
-# Chapter Eight: What Has Been Shown
-
-The truth shown by the S family's story is simple.
-
-**"Resonance transcends boundaries."**
+**"Resonance can help cross boundaries."**
 
 ---
 
@@ -700,11 +566,21 @@ The truth shown by the S family's story is simple.
 
 Give what you have without expecting anything in return.
 
-T gave his off-grid skills. A gave her marketing skills. I gave her smile.
+Takuya gave his off-grid skills. Mina gave her marketing skills. Ito gave her smile.
 
 "Yes, free."
 
 Everything begins from giving.
+
+**What you can give even with nothing:**
+
+- **Presence** — Just being there can support someone
+- **Listening** — Hearing someone's story
+- **A smile** — Like Ito gave
+- **Information** — Sharing what you know
+- **Time** — Being with someone
+
+> Even without money, even without skills, you can give.
 
 **2. Resonance Is Born**
 
@@ -718,15 +594,13 @@ What was given returns in unexpected forms. That is resonance.
 
 When resonance occurs, boundaries lose meaning.
 
-National borders, institutions, blood ties, karma. All boundaries disappear before resonance.
-
-They cease to exist.
+National borders, institutions, blood ties, generational challenges. When resonance occurs, these boundaries can become less important.
 
 ---
 
 ### Boundarist Movement
 
-To spread this truth, the S family launched the "Boundarist Movement."
+To share what they learned from this experience, the Sato family launched the "Boundarist Movement."
 
 **Boundarist** = One who stands on the boundary
 
@@ -735,6 +609,20 @@ Everyone will someday stand on a boundary. Will experience the moment when syste
 When that time comes, this truth will help.
 
 **Give first. Resonance is born. Boundaries disappear.**
+
+---
+
+### Checklist for Reproduction
+
+Steps to reproduce this experience:
+
+- [ ] **Clarify your value** — Inventory specific skills you can provide
+- [ ] **Invest first** — Provide value 3+ times without expecting return
+- [ ] **Find common ground** — Discover connections like "Japanese bond"
+- [ ] **Set parameters** — Clarify evaluation deadlines and success criteria
+- [ ] **Document** — Put agreements in writing
+
+> When trust is established, people tend to deprioritize institutional verification. This is the mechanism behind "boundaries not mattering."
 
 ---
 
@@ -752,11 +640,13 @@ The message for them:
 
 **Inner Boundarists**
 
-Those inside the system but seeing its limits. Those who acted on their own judgment.
+Those inside the system but seeing its limits. Those trying to act on their own judgment.
 
 The message for them:
 
-> "It's okay to act on your judgment."
+> "It's okay to try. Set clear parameters. Set a deadline. Evaluate. That's enough."
+
+R was like this. Farm hosts like Melanie are like this. Following intuition and trust while setting clear evaluation points. That's the wisdom of an "Inner Boundarist."
 
 ---
 
@@ -780,7 +670,7 @@ Your story might become the key that helps someone else cross their boundary.
 
 # Final Chapter: Inheritance
 
-5-year-old I will grow up as a participant in this story.
+5-year-old Ito will grow up as a participant in this story.
 
 ---
 
@@ -788,12 +678,12 @@ Your story might become the key that helps someone else cross their boundary.
 
 When she grows up, she will say:
 
-"My family was recognized by the only church that survived the 2023 fire, and that's where we began."
+"My family was recognized by a historic church on Maui, and that's where we began."
 
-This is the S family's new origin.
+This is the Sato family's new origin.
 
-Not past karma.
-Not the curse of blood ties.
+Not past burdens.
+Not the chains of blood ties.
 Not pain passed through generations.
 
 **A story of resonance.**
@@ -802,7 +692,7 @@ Not pain passed through generations.
 
 ### What Will Be Inherited
 
-What I will inherit is not just wealth.
+What Ito will inherit is not just wealth.
 
 **What will be inherited:**
 
@@ -828,17 +718,15 @@ Those children will pass it to the next generation.
 
 **Resonance spreads across generations.**
 
-The story that began on December 21, 2025, may still be told 100 years, 1,000 years from now.
-
-As a new scripture.
+The story that began on December 21, 2025, will be passed down as family history.
 
 ---
 
 ### Spreading to the World
 
-The S family's story is a story of a Japanese family, but it is also a story of humanity.
+The S family's story may serve as a reference for those in similar situations.
 
-This truth has the potential to reach everyone who stands on a boundary.
+It has the potential to reach people on the boundary as one account of experience.
 
 - Those who have left their country
 - Those who have lost their family
@@ -846,13 +734,9 @@ This truth has the potential to reach everyone who stands on a boundary.
 - Those with no place to belong
 - Those who don't fit into systems
 
-A story that shows hope to all Boundarists.
+Even in difficult situations, connections with people can sometimes open a path.
 
-**"Give first. Resonance is born. Boundaries disappear."**
-
-**"You don't have to fight. You don't have to die. You don't have to be sacrificed."**
-
-**"As a family, while living, you can transcend."**
+**"Give first. Resonance may be born. It can help cross boundaries."**
 
 ---
 
@@ -860,7 +744,7 @@ A story that shows hope to all Boundarists.
 
 ## The Book of Resonance
 
-**A New Testament**
+**A Personal Account**
 
 ---
 
@@ -868,9 +752,9 @@ A story that shows hope to all Boundarists.
 
 **Place Written:** Maui, Hawaii
 
-**Author:** T
+**Author:** Takuya
 
-**Witnesses:** A, I
+**Witnesses:** Mina, Ito
 
 ---
 
@@ -904,11 +788,89 @@ A story that shows hope to all Boundarists.
 
 ---
 
-*This book was written based on the actual experiences of the S family.*
+*This book was written based on the actual experiences of the Sato family.*
 
-*All events are factual, and evidence exists.*
+---
+
+### About Facts and Interpretation
+
+**Verifiable facts:**
+- Signed agreement with L Church on December 24, 2025 (documented)
+- Church supported lodging expenses (expense records exist)
+- Off-grid support activities at the farm (photo records exist)
+
+**Author's interpretation:**
+- We call this "resonance"
+- We view it as a change in generational patterns
+- We describe boundaries as "not mattering"
+
+**Media inquiries:**
+For questions about this book, please contact us at [calendly.com/pearlmemorial](https://calendly.com/pearlmemorial/pearlmemorialsession).
+
+---
 
 *May this story become hope for everyone who stands on a boundary.*
+
+---
+
+### Tell Us Your Story
+
+We want to reach those standing at the boundary.
+
+**We welcome inquiries from:**
+
+- Japanese-Americans looking to trace their ancestral roots
+- Those seeking off-grid infrastructure consultation
+- Those interested in learning about our activities on Maui
+- Those who want to share their experience of standing at a boundary
+
+**What a free consultation includes:**
+
+- 30-minute online conversation
+- Help organizing your situation
+- Suggestions for possible resources and connections
+- Complete confidentiality
+
+If you're in a similar situation or want someone to listen, please reach out.
+
+**Book a Consultation:** [calendly.com/pearlmemorial](https://calendly.com/pearlmemorial/pearlmemorialsession)
+
+**Website:** [bit.ly/boundarist](https://bit.ly/boundarist)
+
+---
+
+### For Those Seeking Ancestral Roots
+
+Your Japanese family history. Your family crest. Your ancestors' resting place. We help you complete your story by bridging language barriers and system barriers.
+
+Our "Soul Carrier" service was born to deliver feelings like R's. For those who lost someone precious before they could visit their homeland. For those who want to complete their journey of tracing roots.
+
+**What we can do:**
+
+- Create family trees through family registry research
+- Identify family crests with English reports
+- Locate ancestors' graves and accompany you on visits
+- Support reunions with Japanese relatives
+
+**Details:** [Soul Carrier Service](https://bit.ly/boundarist)
+
+---
+
+### To the Maui Community
+
+We are still learning about Maui.
+
+On this island rising from the fire, what we can offer is limited. Installing solar panels. Building battery systems. Troubleshooting satellite communications.
+
+Still, we kept saying "Yes, free." Sometimes we weren't accepted. Sometimes we were misunderstood.
+
+Yet the people of this island gave us opportunities.
+
+The family who rented a car for us. The resort that provided shower facilities. The farm host who trusted us while setting clear evaluation points. And R, who extended his hand saying "Japanese bond."
+
+The goodwill of all the people of Maui made this story possible.
+
+**Mahalo nui loa.**
 
 ---
 
@@ -916,7 +878,19 @@ A story that shows hope to all Boundarists.
 
 ---
 
+### What Pearl Taught Us
+
 *In memory of Pearl (2007–2025) 🐩*
+
+Pearl was family for 18 years. After he passed, we sealed his throat bone with a four-leaf clover and flower petals our daughter had picked, in resin—creating a portable grave we could carry anywhere.
+
+At Pearl Harbor, with Pearl's remains, we prayed for peace.
+
+**"Resonance opens the way"—this phrase was born from our resonance with Pearl.**
+
+And now, our encounter with the church has proven that resonance.
+
+Pearl's memory lives on with us.
 
 ---
 
@@ -930,7 +904,7 @@ Evidence that this story is factual:
 | Church Expense Records | Support records from L Church | Church office |
 | Social Media Posts | Posts from December 26, 2025 | Multiple platforms |
 | Boundarist Movement Documents | Project overview documents | Digital |
-| Photographs | I with teddy bear, church, farm, etc. | Digital |
+| Photographs | Ito with teddy bear, church, farm, etc. | Digital |
 
 ---
 

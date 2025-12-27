@@ -1,0 +1,15 @@
+documentclass: ltjsarticle
+geometry:
+  - margin=2.5cm
+  - a4paper
+linestretch: 1.3
+urlcolor: blue
+linkcolor: blue
+header-includes:
+  - \usepackage{luatexja-fontspec}
+  - \setmainjfont{IPAexMincho}
+  - \setsansjfont{IPAexGothic}
+  - \usepackage{xurl}
+  - \usepackage{longtable}
+  - \usepackage{booktabs}
+  - \setlength{\emergencystretch}{3em}
