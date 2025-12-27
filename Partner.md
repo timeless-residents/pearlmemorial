@@ -82,7 +82,7 @@ Gold soap labels are the seeds of the movement. Distributed directly to Inside B
 | **Preserve** | Disaster-resistant memory storage across 3 locations |
 | **Sustain** | Off-grid independence support |
 
-**See our full catalog:** [Catalog.md](Catalog.md) | **Media:** [Press Kit](press-kit.html)
+**See our full catalog:** [Catalog.pdf](Catalog.pdf) | **Media:** [Press Kit](press-kit.html)
 
 ---
 
@@ -443,7 +443,7 @@ Let's discuss what makes sense for both sides.
 
 - **Book a conversation:** [calendly.com/pearlmemorial/pearlmemorialsession](https://calendly.com/pearlmemorial/pearlmemorialsession)
 - **Email:** business@satotakuya.jp
-- **Full Catalog:** [Catalog.md](Catalog.md)
+- **Full Catalog:** [Catalog.pdf](Catalog.pdf)
 - **Press Kit:** [press-kit.html](press-kit.html)
 - **Boundarist Movement:** bit.ly/boundarist
 

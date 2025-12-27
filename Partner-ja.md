@@ -83,7 +83,7 @@
 | **守る** | 3拠点での災害耐性メモリー保管 |
 | **支える** | オフグリッド自立支援 |
 
-**カタログ:** [Catalog-ja.md](Catalog-ja.md) | **メディア向け:** [プレスキット](press-kit-ja.html)
+**カタログ:** [Catalog-ja.pdf](Catalog-ja.pdf) | **メディア向け:** [プレスキット](press-kit-ja.html)
 
 ---
 
@@ -444,7 +444,7 @@
 
 - **会話を予約:** [calendly.com/pearlmemorial/pearlmemorialsession](https://calendly.com/pearlmemorial/pearlmemorialsession)
 - **メール:** business@satotakuya.jp
-- **カタログ:** [Catalog-ja.md](Catalog-ja.md)
+- **カタログ:** [Catalog-ja.pdf](Catalog-ja.pdf)
 - **プレスキット:** [press-kit-ja.html](press-kit-ja.html)
 - **Boundarist Movement:** bit.ly/boundarist
 
