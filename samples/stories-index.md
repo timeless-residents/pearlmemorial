@@ -15,6 +15,8 @@
 | [Yuki T.](story-01-yuki.pdf) | Builder | "I learned that my roots were burning" / 「自分のルーツが燃えていると知った」 |
 | [Kenji M.](story-02-kenji.pdf) | Builder | "I never knew where my last name came from" / 「自分の名字がどこから来たのか知らなかった」 |
 | [Sakura H.](story-03-sakura.pdf) | Starter | "I can't donate thousands, but I can start somewhere" / 「何千ドルも出せないけど、どこかから始められる」 |
+| [Aloha Sunrise Resort](story-04-hotel.pdf) | Visionary | "Tourism and community must support each other" / 「観光とコミュニティは支え合わなければならない」 |
+| [Leilani K.](story-05-leilani.pdf) | Builder | "I survived. Now I want to help others survive too." / 「私は生き残った。今度は他の人も」 |
 
 ---
 
@@ -44,6 +46,24 @@
 > 「『十分なお金』ができるまで待たないで。そんなものはない。今あるものから始めて」
 
 [Read full story → / 続きを読む →](story-03-sakura.pdf)
+
+---
+
+### Aloha Sunrise Resort — Hospitality Brand, Maui
+> "We all depend on the same communities. Investing in their resilience isn't charity — it's protecting the foundation of our industry."
+>
+> 「私たちは皆、同じコミュニティに依存しています。レジリエンスへの投資は慈善ではありません — 産業の基盤を守ることです」
+
+[Read full story → / 続きを読む →](story-04-hotel.pdf)
+
+---
+
+### Leilani K. — Maui Resident, 50s, Nurse
+> "If you survived, if your home is still standing, consider helping those who weren't as lucky."
+>
+> 「もし生き残ったなら、もし家がまだ建っているなら、そうではなかった人々を助けることを考えてください」
+
+[Read full story → / 続きを読む →](story-05-leilani.pdf)
 
 ---
 
