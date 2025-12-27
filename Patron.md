@@ -189,7 +189,7 @@ We've built a sustainable life without traditional employment, using Guest Hospi
 | **Operate** | $6,000+ | Builder kit + fuel & connectivity (gasoline, engine oil, propane gas, satellite communication fees) |
 | **Visionary** | $100,000+ | Community-scale resilience infrastructure |
 
-*Payment methods: Bank transfer, crypto, or alternatives — contact us to arrange.*
+*Payment methods: Bank transfer (Japan & US), crypto, or alternatives — contact us to arrange.*
 
 ---
 
@@ -269,9 +269,9 @@ We honor our patrons (with permission):
 |-------|-------------|
 | **All patrons** | Listed in our annual gratitude report |
 | **All patrons** | **Permanent engraving on quartz glass** — same archival treatment as our church supporters |
-| **$500+** | Named in specific project documentation |
-| **$2,000+** | Featured in our storytelling content |
-| **$10,000+** | Permanent recognition on our website |
+| **Starter ($500+)** | Named in specific project documentation |
+| **Builder ($4,000+)** | Featured in our storytelling content |
+| **Visionary ($100,000+)** | Permanent recognition on our website |
 
 **About Quartz Glass Engraving:**
 Your name is laser-engraved onto quartz glass — a medium designed to last 10,000+ years. The same technology we use for Pearl Memorial and our most valued supporters. Your support becomes part of our permanent archive, stored across 3 locations (Maui, Japan mainland x2).
