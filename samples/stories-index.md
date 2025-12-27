@@ -12,9 +12,9 @@
 
 | Patron | Level | Theme |
 |--------|-------|-------|
-| [Yuki T.](story-01-yuki.md) | Builder | "I learned that my roots were burning" / 「自分のルーツが燃えていると知った」 |
-| [Kenji M.](story-02-kenji.md) | Builder | "I never knew where my last name came from" / 「自分の名字がどこから来たのか知らなかった」 |
-| [Sakura H.](story-03-sakura.md) | Starter | "I can't donate thousands, but I can start somewhere" / 「何千ドルも出せないけど、どこかから始められる」 |
+| [Yuki T.](story-01-yuki.pdf) | Builder | "I learned that my roots were burning" / 「自分のルーツが燃えていると知った」 |
+| [Kenji M.](story-02-kenji.pdf) | Builder | "I never knew where my last name came from" / 「自分の名字がどこから来たのか知らなかった」 |
+| [Sakura H.](story-03-sakura.pdf) | Starter | "I can't donate thousands, but I can start somewhere" / 「何千ドルも出せないけど、どこかから始められる」 |
 
 ---
 
@@ -25,7 +25,7 @@
 >
 > 「150年前、私たちの先祖は何も持たずに海を渡り、生活を築き、家族を育てた。その子孫が今もそこにいる」
 
-[Read full story → / 続きを読む →](story-01-yuki.md)
+[Read full story → / 続きを読む →](story-01-yuki.pdf)
 
 ---
 
@@ -34,7 +34,7 @@
 >
 > 「僕の名字は松本。日本の名前だって知ってた。でも日本語は話せない。日本に行ったこともない。ただの...名前だった」
 
-[Read full story → / 続きを読む →](story-02-kenji.md)
+[Read full story → / 続きを読む →](story-02-kenji.pdf)
 
 ---
 
@@ -43,7 +43,7 @@
 >
 > 「『十分なお金』ができるまで待たないで。そんなものはない。今あるものから始めて」
 
-[Read full story → / 続きを読む →](story-03-sakura.md)
+[Read full story → / 続きを読む →](story-03-sakura.pdf)
 
 ---
 
