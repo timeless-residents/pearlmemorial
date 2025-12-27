@@ -197,9 +197,10 @@ We've built a sustainable life without traditional employment, using Guest Hospi
 
 | Category | Examples |
 |----------|----------|
-| **Equipment** | Solar panels, batteries, inverters, tools |
-| **Technology** | Laptops, cameras, communication gear |
-| **Supplies** | Building materials, emergency supplies |
+| **Power equipment** | Solar panels, portable power stations, batteries, inverters, generators |
+| **Appliances** | Refrigerator/freezer, fans, lighting, mobile batteries |
+| **Communication** | Satellite terminals, laptops, cameras |
+| **Supplies** | Building materials, emergency supplies, tools |
 
 ---
 
@@ -216,9 +217,10 @@ We've built a sustainable life without traditional employment, using Guest Hospi
 
 | Need | Why It Matters |
 |------|----------------|
+| **Used car / EV** | No car ownership — a vehicle for on-site work would be a huge help |
 | **Flights (Japan ⇄ Hawaii)** | We split our year between two countries — airfare for 3 is significant |
 | **Inter-island flights** | Reaching communities across Hawaii (Maui, Big Island, Oahu) |
-| **Rental vehicles** | No car ownership — we rely on rentals for on-site work |
+| **Rental vehicles** | On-site work relies on rentals when we don't have a car |
 | **Airline miles/points** | Any carrier, any alliance — we can use them |
 
 *A single round-trip flight can cost $3,000-5,000 for our family of 3. Miles donations directly enable our work.*
