@@ -58,7 +58,7 @@ Gold soap labels are the seeds of the movement. Distributed directly to Inside B
 
 ## Why Us?
 
-**We don't fly in from the mainland. We spend half the year here.**
+**We don't fly in from the mainland. We spend half the year here on ESTA.**
 
 | Credential | Why It Matters |
 |------------|----------------|
@@ -361,7 +361,7 @@ Every industry has "Inside Boundarists." People who don't want to just follow th
 
 ## About Us
 
-- **Not consultants flying in from the mainland.** We spend half the year here.
+- **Not consultants flying in from the mainland.** We spend half the year here on ESTA.
 - Built systems that work in disaster conditions
 - Forbes JAPAN contributor
 - Native Japanese speaker — bridge to Japanese market and culture
