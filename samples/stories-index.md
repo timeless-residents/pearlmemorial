@@ -2,6 +2,10 @@
 
 *Real supporters, real impact. / 本当の支援者、本当のインパクト。*
 
+> **Note / 注記:** These are samples for illustrative purposes. Actual content may differ. Names and details are fictional.
+>
+> **注記:** これらはイメージを伝えるためのサンプルです。実際の内容は異なる場合があります。名前や詳細は架空のものです。
+
 ---
 
 ## Featured Stories | ストーリー一覧

@@ -3,6 +3,10 @@
 
 *Storytelling Content Sample / ストーリーテリングコンテンツ サンプル*
 
+> **Note:** This is a sample for illustrative purposes. Actual content may differ. Names and details are fictional.
+>
+> **注記:** これはイメージを伝えるためのサンプルです。実際の内容は異なる場合があります。名前や詳細は架空のものです。
+
 ---
 
 ## "I can't donate thousands, but I can start somewhere"
