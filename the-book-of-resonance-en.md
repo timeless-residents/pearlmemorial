@@ -61,11 +61,11 @@ They were "those who stand on the boundary."
 
 ---
 
-### The Weight of Karma
+### Generational Challenges
 
-The Sato family had burdens passed down through generations.
+The Sato family had challenges passed down through generations.
 
-Inexpressible weight. Chains called family.
+Inexpressible weight. Patterns repeated within the family.
 
 Takuya had reached a dead end in Japan.
 
@@ -89,7 +89,7 @@ Just before Christmas, in the third month. At their lodging, his wife relayed hi
 
 "Support is cut off."
 
-The S family was a lineage bound by money as karma. From father to son, the relationship had been maintained through financial means.
+The S family was a lineage where relationships were maintained through money. From father to son, the connection had been sustained through financial means.
 
 When that flow of money stopped, **it was equivalent to severing the parent-child bond.**
 
@@ -222,7 +222,7 @@ By continuing to give, they continued to receive.
 
 ### The Night of December 21
 
-That night, I developed a high fever.
+That night, Ito developed a high fever.
 
 Hazy consciousness. A small body wracked with coughs. A 5-year-old daughter suffering.
 
@@ -348,9 +348,9 @@ This fact remained as a signed document. As a record of expenses. As evidence th
 
 # Chapter Four: The Dissolution of Boundaries
 
-This event did not "cross boundaries."
+This event didn't so much "cross boundaries" as
 
-**The boundaries ceased to exist.**
+**the boundaries simply didn't matter.**
 
 ---
 
@@ -382,9 +382,9 @@ Not the U.S. government.
 Not immigration authorities.
 Not the Japanese government.
 
-**The church is a safe place outside the system.**
+**Churches have their own standards for helping people in need.**
 
-Churches have their own standards for helping people in need. This operates on a different level from nationality or visa issues.
+This can operate on a different level from nationality or visa issues.
 
 The Sato family was welcomed into that place.
 
@@ -398,24 +398,20 @@ Takuya later said:
 
 When crossing boundaries, there is usually friction. Resistance. Questions.
 
-But when resonance occurs, boundaries disappear.
+But when resonance occurs, boundaries become irrelevant.
 
-They cease to exist.
-
-As if they were never there.
+When someone decides "I want to help this person," institutional barriers take a back seat.
 
 | Boundary That Disappeared | How It Disappeared |
 |---|---|
 | National borders | Through the resonance of "Japanese bond" |
-| Institutional walls | Through the sanctuary of church discretion |
-| Karma of blood ties | Through the birth of new connections |
-| The wall of time | Through being recorded for eternity |
+| Institutional walls | Through the church's own judgment |
+| Generational challenges | Through the birth of new connections |
+| The wall of time | Through being recorded |
 
-**Resonance transcends boundaries.**
+**Resonance can help transcend boundaries.**
 
-No, that's not quite right.
-
-**Before resonance, boundaries do not exist.**
+When people connect, institutional barriers can become secondary.
 
 ---
 
@@ -479,7 +475,7 @@ What the Sato family experienced was a paradigm shift.
 
 **From a network of blood ties to a network of resonance.**
 
-Blood ties cannot be chosen. They are determined at birth. They accumulate karma across generations.
+Blood ties cannot be chosen. They are determined at birth. They can accumulate challenges across generations.
 
 Resonance can be chosen. It is born in this present moment. It contains only new possibilities.
 
@@ -581,9 +577,7 @@ What was given returns in unexpected forms. That is resonance.
 
 When resonance occurs, boundaries lose meaning.
 
-National borders, institutions, blood ties, karma. All boundaries disappear before resonance.
-
-They cease to exist.
+National borders, institutions, blood ties, generational challenges. When resonance occurs, these boundaries can become less important.
 
 ---
 
@@ -615,11 +609,13 @@ The message for them:
 
 **Inner Boundarists**
 
-Those inside the system but seeing its limits. Those who acted on their own judgment.
+Those inside the system but seeing its limits. Those trying to act on their own judgment.
 
 The message for them:
 
-> "It's okay to act on your judgment."
+> "It's okay to try. Set clear parameters. Set a deadline. Evaluate. That's enough."
+
+R was like this. Farm hosts like Melanie are like this. Following intuition and trust while setting clear evaluation points. That's the wisdom of an "Inner Boundarist."
 
 ---
 
@@ -655,8 +651,8 @@ When she grows up, she will say:
 
 This is the Sato family's new origin.
 
-Not past karma.
-Not the curse of blood ties.
+Not past burdens.
+Not the chains of blood ties.
 Not pain passed through generations.
 
 **A story of resonance.**
@@ -772,6 +768,13 @@ Even in difficult situations, connections with people can sometimes open a path.
 ### Tell Us Your Story
 
 We want to reach those standing at the boundary.
+
+**We welcome inquiries from:**
+
+- Japanese-Americans looking to trace their ancestral roots
+- Those seeking off-grid infrastructure consultation
+- Those interested in learning about our activities on Maui
+- Those who want to share their experience of standing at a boundary
 
 If you're in a similar situation or want someone to listen, please reach out.
 
