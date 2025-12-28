@@ -2,7 +2,7 @@
 title: "Sample Family Registry Report / 戸籍調査サンプルレポート"
 subtitle: "Soul Carrier Service — What You Receive"
 author: "Pearl Memorial"
-date: "Sample Report"
+date: 2024-01-01
 ---
 
 # Sample Family Registry Report
