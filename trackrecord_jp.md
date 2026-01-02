@@ -10,7 +10,7 @@
 
 でも気づいたのは、技術より大切なのは「目の前の人を見る」ことでした。
 
-今はマウイ島を拠点に、[Pearl Memorial / Soul Carrier](https://bit.ly/boundarist)の活動を通じて、家族の記憶を届ける取り組みを続けています。
+今はマウイ島を拠点に、[Pearl Memorial / Soul Carrier](https://timeless-residents.github.io/pearlmemorial/index-ja.html)の活動を通じて、家族の記憶を届ける取り組みを続けています。
 
 もし暮らしや事業で困っていることがあれば、まずは話を聞かせてください。
 
@@ -298,7 +298,7 @@
 
 - Email: business@satotakuya.jp
 - 予約: [calendly.com/pearlmemorial](https://calendly.com/pearlmemorial/pearlmemorialsession)
-- Pearl Memorial / Soul Carrier: [bit.ly/boundarist](https://bit.ly/boundarist)
+- Pearl Memorial / Soul Carrier: [ランディングページ](https://timeless-residents.github.io/pearlmemorial/index-ja.html)
 - Web: [satotakuya.jp](https://satotakuya.jp)
 - 書籍: [zenn.dev/takuya_sato](https://zenn.dev/takuya_sato)
 - Wise: [wise.com/pay/me/satot67](https://wise.com/pay/me/satot67)
