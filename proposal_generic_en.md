@@ -373,6 +373,8 @@ That alone will get us back to Maui. To those who are waiting.
 
 Melanie's farm, Randall's car, church support—ground infrastructure is ready. All we're missing is **wings to cross the Pacific**.
 
+If you have any business or life challenges, we're happy to help with those too. See our [track record](https://satotakuya.jp) for details.
+
 ---
 
 ## Contact
