@@ -167,25 +167,81 @@ Hands-on repositories that demonstrate the concepts from my technical books, plu
 
 ---
 
-## Consulting Experience
+## Career Summary
 
-Senior specialist at a global consulting firm, supporting:
+**27 years in technology** (since age 15), creating value by crossing boundaries.
 
-### Focus Areas
+| Item | Details |
+|------|---------|
+| Birth Year | 1983 |
+| Education | Tokyo National College of Technology, Mechanical Engineering (2004) |
+| Management | 200+ people |
+| Tech Training | 4,000+ people |
+| English | Business level (TOEIC 720) |
 
-- **Digital Transformation (DX)**
-- **Smart City Proof of Concept**
-- **Social Issue Solutions**
-- **Legacy System Modernization**
-- **Cloud Migration & Optimization**
+---
 
-### Industries
+## Work History
 
-- Financial Services (Banking, Securities, Insurance)
-- Manufacturing
-- Retail & Distribution
-- Public Sector & Government
-- Energy & Infrastructure
+### Deloitte Tohmatsu Consulting (2019–2025)
+
+**FSI G&I Senior Specialist Lead**
+
+DX strategy for global mega-banks and financial ecosystems.
+
+**Key Projects:**
+
+| Area | Achievements |
+|------|-------------|
+| **Financial Innovation** | Customer experience with data analytics & AI, digital banking platforms, open banking infrastructure |
+| **Public Sector DX** | National digital government strategy, smart city OS design, citizen participation platforms, municipal data analytics |
+| **Digital Twin** | Bridge maintenance, LiDAR urban modeling, flood prediction & disaster prevention |
+| **Energy** | AI power demand optimization, multi-store energy cost reduction |
+| **Healthcare** | IoT × cloud medical device management, disaster response |
+| **Human Capital** | Global corporate digital training, organizational survey platforms |
+
+### Willgate Inc. (2007–2019)
+
+**Board Director & CTO**
+
+Led company from near-bankruptcy to **50x growth**. Built dev organization from scratch to 200 engineers.
+
+| Role | Details |
+|------|---------|
+| Business Restructuring | Dev investment strategy, domestic & international partnerships |
+| Org Building | In-house development, hiring & training |
+| Methodology | Waterfall → Agile Scrum, company-wide agile adoption |
+| Tech Stack | LAMP, Rails, Scala, AWS, On-premise |
+
+### Fujitsu Limited (2004–2007)
+
+**Social Science Laboratory SE/PM**
+
+| Project | Details |
+|---------|---------|
+| Global Logistics | Enhancement & quality improvement |
+| Ministry of Justice E-Application | New development |
+| Internal Dev Platform | Company-wide standardization |
+
+### Other Activities
+
+- Management & technical advisor for multiple companies (hands-on)
+- Vietnam CEO experience
+- **World Blockchain Forum Asia Singapore 2019** Top 10 Project Leader (Trophy winner)
+
+---
+
+## Expertise
+
+| Category | Experience |
+|----------|------------|
+| System Development (Web/Open) | 10+ years |
+| Project Manager | 10+ years |
+| CIO/CTO | 10+ years |
+| Data Analyst/Scientist | 10+ years |
+| IT Consultant | 3+ years |
+| Business/Strategy Consultant | 5+ years |
+| CEO/COO | 3+ years |
 
 ---
 
