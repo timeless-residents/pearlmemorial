@@ -16,6 +16,28 @@ If you're facing challenges in life or business, let's talk first.
 
 ---
 
+## As a Boundarist
+
+Why can I work across so many different areas?
+
+I see boundaries not as limitations, but as starting points for creation. Technology and culture, strategy and creativity, Japan and America—I believe new possibilities emerge where different domains intersect.
+
+**Three Capitals:**
+
+| Capital | Meaning |
+|---------|---------|
+| **Knowledge Capital** | Experience spanning from COBOL to AI |
+| **Relationship Capital** | Networks connecting Japan, US, and Asia-Pacific |
+| **Creative Capital** | Ability to design solutions beyond existing categories |
+
+By combining these three, "belonging nowhere" became my strength.
+
+Bridging legacy systems with cutting-edge technology. Moving between Eastern and Western perspectives. Discussing technology while seeing the life of the person in front of me.
+
+**Boundaries are not walls—they are doors.**
+
+---
+
 ## Does This Sound Familiar?
 
 **Business & Work**
