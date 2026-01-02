@@ -187,20 +187,16 @@ A place for youth to discover their path. A place to pass Japanese-American hist
 
 **The Sato Family** — Takuya, Mina, and Ito (age 5), a family of three
 
-**We always act as a family unit.** This is a family project about reconnecting generations. Activity expenses include our daughter Ito's education costs.
+**We always act as a family unit.** This is a family project about reconnecting generations.
 
 | Item | Details |
 |------|---------|
 | Bases | Chiba, Miyagi (Japan) + Hana, Maui |
-| Entity | Digital Wheel, LLC (Japan) |
-| Experience | **20+ years** in digital technology |
 | Turning Point | After 2023 Lahaina fire, **left stable job** for recovery support |
-| Community Work | Current neighborhood association president (2nd year) |
-| Expertise | Off-grid, community organizing, administrative procedures |
 
 **Why Us:**
 - Native Japanese speakers, bases in both countries
-- Practical experience with administrative/temple procedures (family registry, temple records)
+- We know the systems: family registries, temples, cemeteries
 - Grave keepers ourselves—committed to inheriting the main family grave in Maui
 - Network already established
 
