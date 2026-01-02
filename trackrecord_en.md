@@ -298,8 +298,8 @@ Let's talk as equals.
 
 ## Fees
 
-- **Business Support**: Results-based. See the [proposal](proposal_generic_en.pdf) for details.
-- **Soul Carrier Support**: Always welcome.
+- **Business Support**: Results-based. First 30 minutes free.
+- **Soul Carrier Support**: Always welcome. See the [proposal](proposal_generic_en.pdf) for details.
 
 ---
 
