@@ -1,4 +1,4 @@
-# これまでの取り組み
+# これまでの取り組みとご支援
 
 **佐藤卓也 — Pearl Memorial / Soul Carrier**
 
