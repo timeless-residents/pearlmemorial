@@ -194,7 +194,6 @@ async function generatePDF(mdFile, pdfFile, isJapanese = false) {
 
         .two-column-section hr {
             margin: 14px 0;
-            column-span: all;
         }
 
         .two-column-section blockquote {
