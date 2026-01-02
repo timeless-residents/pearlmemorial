@@ -298,7 +298,7 @@
 
 - Email: business@satotakuya.jp
 - 予約: [calendly.com/pearlmemorial](https://calendly.com/pearlmemorial/pearlmemorialsession)
-- Pearl Memorial / Soul Carrier: [ランディングページ](https://timeless-residents.github.io/pearlmemorial/index-ja.html)
+- Pearl Memorial / Soul Carrier: [活動紹介](https://timeless-residents.github.io/pearlmemorial/index-ja.html)
 - Web: [satotakuya.jp](https://satotakuya.jp)
 - 書籍: [zenn.dev/takuya_sato](https://zenn.dev/takuya_sato)
 - Wise: [wise.com/pay/me/satot67](https://wise.com/pay/me/satot67)

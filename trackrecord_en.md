@@ -298,7 +298,7 @@ Let's talk as equals.
 
 - Email: business@satotakuya.jp
 - Book: [calendly.com/pearlmemorial](https://calendly.com/pearlmemorial/pearlmemorialsession)
-- Pearl Memorial / Soul Carrier: [Landing Page](https://timeless-residents.github.io/pearlmemorial/)
+- Pearl Memorial / Soul Carrier: [About Our Work](https://timeless-residents.github.io/pearlmemorial/)
 - Web: [satotakuya.jp](https://satotakuya.jp)
 - Books: [zenn.dev/takuya_sato](https://zenn.dev/takuya_sato)
 - Wise: [wise.com/pay/me/satot67](https://wise.com/pay/me/satot67)
