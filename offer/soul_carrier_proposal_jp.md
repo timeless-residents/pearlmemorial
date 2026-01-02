@@ -359,6 +359,7 @@ Soul Carrierの活動基盤として、以下の支援活動にも資金を活�
 - Email: business@satotakuya.jp
 - Web: bit.ly/pearlmemorial
 - 予約: calendly.com/pearlmemorial
+- Wise: [wise.com/pay/me/satot67](https://wise.com/pay/me/satot67)
 
 ---
 

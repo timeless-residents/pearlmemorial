@@ -359,6 +359,7 @@ Supporting organizations will be recognized:
 - Email: business@satotakuya.jp
 - Web: bit.ly/pearlmemorial
 - Schedule: calendly.com/pearlmemorial
+- Wise: [wise.com/pay/me/satot67](https://wise.com/pay/me/satot67)
 
 ---
 
