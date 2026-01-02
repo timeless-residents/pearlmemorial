@@ -142,6 +142,31 @@ Between January and May 2025, I wrote and published 81 technical books on the Ze
 
 ---
 
+## Open Source & GitHub (170+ Repositories)
+
+Hands-on repositories that demonstrate the concepts from my technical books, plus 170+ projects publicly available.
+
+**GitHub:** [github.com/timeless-residents](https://github.com/timeless-residents)
+
+### Repositories by Category
+
+| Category | Key Repositories |
+|----------|-----------------|
+| **AI & ML** | handson-openai-responses-api, handson-claude-3.7-sonnet, handson-langchain, handson-diffusers, handson-apple-mlx, handson-deepseek-r1, handson-ollama-mistral, handson-gemini-aistudio, handson-elevenlabs-affirmation |
+| **Blockchain** | handson-solidity-hardhat, handson-hyperledger-fabric, handson-immutable-x, handson-sto-foundry |
+| **Frontend** | handson-threejs, handson-vite, handson-nuxtjs, handson-chakraui-react, handson-svelte, handson-tailwind-css, handson-webgl, handson-storybook |
+| **Backend** | handson-rails8, handson-django-render, handson-laravel, handson-nestjs-swaggerui, handson-spring-framework-render |
+| **Cloud & DevOps** | handson-terraform, handson-opencost-kubernets, handson-datadoq, handson-firebase, handson-docker-render, handson-gitlab |
+| **Database & Search** | handson-elastic-enterprise-search, handson-weaviate-v4, handson-pinecone, handson-python-postgresql, handson-python-sqlite3 |
+| **API Integration** | handson-drawio-api, handson-figma-api, handson-stripe, handson-mailchimp-api, handson-line-works, handson-box-api, handson-canva-app |
+| **Languages** | handson-go, handson-rust-json, handson-kotlin, handson-haskell, handson-scala, handson-julia, handson-nim, handson-cobol |
+| **Game Dev** | handson-game-othello, handson-game-ideation-250305, handson-unity-2d, handson-c-raylib |
+| **Audio & Media** | handson-web-audio, handson-pyaudio, handson-dictation-realtime, handson-stable-audio-one |
+| **Pearl Memorial** | pearlmemorial, pearl-memorial, voice-memorial-qr, honbinos-memorial |
+| **Community** | HonoluaFarm, OHANA-Association |
+
+---
+
 ## Consulting Experience
 
 Senior specialist at a global consulting firm, supporting:

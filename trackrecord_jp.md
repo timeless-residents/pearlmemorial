@@ -142,6 +142,31 @@ Soul Carrierの活動は、私のキャリアの延長線上にあります。
 
 ---
 
+## オープンソース・GitHub（170+リポジトリ）
+
+技術書の内容を実践するハンズオンリポジトリを中心に、170以上のプロジェクトを公開しています。
+
+**GitHub:** [github.com/timeless-residents](https://github.com/timeless-residents)
+
+### カテゴリ別リポジトリ
+
+| カテゴリ | 主なリポジトリ |
+|---------|---------------|
+| **AI・機械学習** | handson-openai-responses-api, handson-claude-3.7-sonnet, handson-langchain, handson-diffusers, handson-apple-mlx, handson-deepseek-r1, handson-ollama-mistral, handson-gemini-aistudio, handson-elevenlabs-affirmation |
+| **ブロックチェーン** | handson-solidity-hardhat, handson-hyperledger-fabric, handson-immutable-x, handson-sto-foundry |
+| **フロントエンド** | handson-threejs, handson-vite, handson-nuxtjs, handson-chakraui-react, handson-svelte, handson-tailwind-css, handson-webgl, handson-storybook |
+| **バックエンド** | handson-rails8, handson-django-render, handson-laravel, handson-nestjs-swaggerui, handson-spring-framework-render |
+| **クラウド・DevOps** | handson-terraform, handson-opencost-kubernets, handson-datadoq, handson-firebase, handson-docker-render, handson-gitlab |
+| **データベース・検索** | handson-elastic-enterprise-search, handson-weaviate-v4, handson-pinecone, handson-python-postgresql, handson-python-sqlite3 |
+| **API連携** | handson-drawio-api, handson-figma-api, handson-stripe, handson-mailchimp-api, handson-line-works, handson-box-api, handson-canva-app |
+| **言語学習** | handson-go, handson-rust-json, handson-kotlin, handson-haskell, handson-scala, handson-julia, handson-nim, handson-cobol |
+| **ゲーム開発** | handson-game-othello, handson-game-ideation-250305, handson-unity-2d, handson-c-raylib |
+| **音声・メディア** | handson-web-audio, handson-pyaudio, handson-dictation-realtime, handson-stable-audio-one |
+| **Pearl Memorial関連** | pearlmemorial, pearl-memorial, voice-memorial-qr, honbinos-memorial |
+| **コミュニティ** | HonoluaFarm, OHANA-Association |
+
+---
+
 ## コンサルティング実績
 
 外資系総合コンサルティングファームにて、以下の領域で支援を実施。
