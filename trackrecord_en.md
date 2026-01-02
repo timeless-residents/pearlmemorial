@@ -99,9 +99,9 @@ If you're facing challenges in life or business, let's talk first.
 
 #### Deloitte Tohmatsu Consulting (2019–2025)
 
-**Products & Solutions Unit — Studio Senior Manager / Chief Engineer**
+**FSI Growth & Innovation Unit — Senior Specialist Lead** (Second half)
 
-Asset development, incubation, go-to-market, and investment strategy for social impact solutions.
+DX strategy for global mega-banks and financial ecosystems.
 
 | Area | Achievements |
 |------|-------------|
@@ -110,6 +110,10 @@ Asset development, incubation, go-to-market, and investment strategy for social 
 | **Digital Twin** | Bridge maintenance, LiDAR urban modeling, flood prediction |
 | **Energy** | AI power demand optimization, multi-store energy cost reduction |
 | **Healthcare** | IoT × cloud medical device management, disaster response |
+
+**Products & Solutions Unit — Studio Senior Manager / Chief Engineer** (First half)
+
+Asset development, incubation, go-to-market, and investment strategy for social impact solutions.
 
 #### Willgate Inc. (2007–2019)
 
