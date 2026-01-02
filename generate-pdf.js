@@ -139,6 +139,45 @@ async function generatePDF(mdFile, pdfFile, isJapanese = false) {
     ` : '';
 
     const trackRecordTwoColumnStyles = hasTwoColumnStart ? `
+        .single-column-section {
+            line-height: 1.4;
+        }
+
+        .single-column-section h1 {
+            font-size: 20pt;
+            margin-bottom: 8px;
+        }
+
+        .single-column-section h2 {
+            font-size: 13pt;
+            margin-top: 16px;
+            margin-bottom: 6px;
+        }
+
+        .single-column-section p {
+            font-size: 10pt;
+            margin: 6px 0;
+        }
+
+        .single-column-section table {
+            font-size: 9pt;
+            margin: 6px 0;
+        }
+
+        .single-column-section th, .single-column-section td {
+            padding: 4px 6px;
+        }
+
+        .single-column-section pre {
+            font-size: 9pt;
+            margin: 8px 0;
+            padding: 8px;
+        }
+
+        .single-column-section hr {
+            margin: 12px 0;
+        }
+
         .two-column-section {
             column-count: 2;
             column-gap: 25px;
