@@ -37,7 +37,7 @@
 **佐藤卓也 — Pearl Memorial / Soul Carrier**<br>
 Email: business@satotakuya.jp | Web: bit.ly/pearlmemorial<br>
 振込先: PayPay銀行 うぐいす支店(008) 普通 8620704<br>
-Wise: wise.com/pay/me/satot67
+Wise: [wise.com/pay/me/satot67](https://wise.com/pay/me/satot67)
 
 **詳細は次ページ以降 →**
 
@@ -1402,7 +1402,7 @@ A: 不動産に約5,000万円の含み益があり、父による一時的な支
 
 - Email: business@satotakuya.jp
 - Web: bit.ly/pearlmemorial
-- Wise: wise.com/pay/me/satot67
+- Wise: [wise.com/pay/me/satot67](https://wise.com/pay/me/satot67)
 
 ---
 

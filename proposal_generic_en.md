@@ -385,7 +385,7 @@ Melanie's farm, Randall's car, church support—ground infrastructure is ready. 
 
 - Email: business@satotakuya.jp
 - Web: bit.ly/pearlmemorial
-- Wise: wise.com/pay/me/satot67
+- Wise: [wise.com/pay/me/satot67](https://wise.com/pay/me/satot67)
 
 ---
 
