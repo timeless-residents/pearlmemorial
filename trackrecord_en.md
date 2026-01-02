@@ -53,42 +53,6 @@ If you're facing challenges in life or business, let's talk first.
 
 ---
 
-## Before We Start
-
-**"Worried about costs"** → First 30 min free. Results-based fee.
-
-**"Not tech-savvy"** → No jargon. Ask anything, anytime.
-
-**"Too busy to respond?"** → I reply within 24 hours.
-
-Once you reach out, it becomes "I'm glad I asked."
-
----
-
-**"Too small to ask?"** → I welcome small problems.
-
-**"Am I worth your time?"** → We start from where you are.
-
-If you're struggling, that's reason enough.
-
----
-
-**"Will I get a hard sell?"** → Just say no if it's not a fit.
-
-**"All sales talk?"** → I listen first.
-
-Here, we go at your pace.
-
----
-
-**"Will you talk down to me?"** → Titles don't matter.
-
-**"Feel stupid?"** → No "you don't know that?" here.
-
-Let's talk as equals.
-
----
-
 ## Why Me?
 
 ### Career Summary
@@ -276,6 +240,42 @@ Hands-on repositories that demonstrate the concepts from my technical books, plu
 - Battery system optimization
 - Satellite communication (Starlink)
 - Off-grid living infrastructure
+
+---
+
+## Before We Start
+
+**"Worried about costs"** → First 30 min free. Results-based fee.
+
+**"Not tech-savvy"** → No jargon. Ask anything, anytime.
+
+**"Too busy to respond?"** → I reply within 24 hours.
+
+Once you reach out, it becomes "I'm glad I asked."
+
+---
+
+**"Too small to ask?"** → I welcome small problems.
+
+**"Am I worth your time?"** → We start from where you are.
+
+If you're struggling, that's reason enough.
+
+---
+
+**"Will I get a hard sell?"** → Just say no if it's not a fit.
+
+**"All sales talk?"** → I listen first.
+
+Here, we go at your pace.
+
+---
+
+**"Will you talk down to me?"** → Titles don't matter.
+
+**"Feel stupid?"** → No "you don't know that?" here.
+
+Let's talk as equals.
 
 ---
 
