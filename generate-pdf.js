@@ -140,7 +140,7 @@ async function generatePDF(mdFile, pdfFile, isJapanese = false) {
 
     const trackRecordTwoColumnStyles = hasTwoColumnStart ? `
         .single-column-section {
-            line-height: 1.4;
+            line-height: 1.3;
         }
 
         .single-column-section h1 {
