@@ -53,6 +53,8 @@ If you're facing challenges in life or business, let's talk first.
 
 **Feel free to reach out.** Even if you're thinking "is this too small to ask?"—that's fine.
 
+<!-- TWO_COLUMN_START -->
+
 ---
 
 ## Why Me?

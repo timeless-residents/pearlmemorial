@@ -12,6 +12,8 @@ async function generatePDF(mdFile, pdfFile, isJapanese = false) {
 
     // Check if this is a proposal with SUMMARY_END marker
     const hasSummaryEnd = markdown.includes('<!-- SUMMARY_END -->');
+    // Check if this has TWO_COLUMN_START marker (for trackrecord)
+    const hasTwoColumnStart = markdown.includes('<!-- TWO_COLUMN_START -->');
 
     let htmlContent;
     if (hasSummaryEnd) {
@@ -25,6 +27,19 @@ async function generatePDF(mdFile, pdfFile, isJapanese = false) {
             </div>
             <div class="details-section">
                 ${detailsHtml}
+            </div>
+        `;
+    } else if (hasTwoColumnStart) {
+        const [singleColumnMd, twoColumnMd] = markdown.split('<!-- TWO_COLUMN_START -->');
+        const singleColumnHtml = marked.parse(singleColumnMd);
+        const twoColumnHtml = marked.parse(twoColumnMd);
+
+        htmlContent = `
+            <div class="single-column-section">
+                ${singleColumnHtml}
+            </div>
+            <div class="two-column-section">
+                ${twoColumnHtml}
             </div>
         `;
     } else {
@@ -120,6 +135,72 @@ async function generatePDF(mdFile, pdfFile, isJapanese = false) {
 
         .details-section hr {
             margin: 12px 0;
+        }
+    ` : '';
+
+    const trackRecordTwoColumnStyles = hasTwoColumnStart ? `
+        .two-column-section {
+            column-count: 2;
+            column-gap: 25px;
+            column-rule: 1px solid #ddd;
+            line-height: 1.5;
+        }
+
+        .two-column-section h2 {
+            font-size: 12pt;
+            margin-top: 16px;
+            margin-bottom: 8px;
+            break-after: avoid;
+            column-span: none;
+        }
+
+        .two-column-section h3 {
+            font-size: 10pt;
+            margin-top: 12px;
+            margin-bottom: 6px;
+            break-after: avoid;
+        }
+
+        .two-column-section h4 {
+            font-size: 9pt;
+            margin-top: 10px;
+            margin-bottom: 4px;
+        }
+
+        .two-column-section p {
+            font-size: 9pt;
+            margin: 6px 0;
+        }
+
+        .two-column-section ul, .two-column-section ol {
+            font-size: 9pt;
+            padding-left: 18px;
+            margin: 6px 0;
+        }
+
+        .two-column-section li {
+            margin: 3px 0;
+        }
+
+        .two-column-section table {
+            font-size: 8pt;
+            break-inside: avoid;
+            margin: 8px 0;
+        }
+
+        .two-column-section th, .two-column-section td {
+            padding: 4px 6px;
+        }
+
+        .two-column-section hr {
+            margin: 14px 0;
+            column-span: all;
+        }
+
+        .two-column-section blockquote {
+            font-size: 8pt;
+            margin: 8px 0;
+            padding: 6px 10px;
         }
     ` : '';
 
@@ -234,6 +315,7 @@ async function generatePDF(mdFile, pdfFile, isJapanese = false) {
         }
 
         ${twoColumnStyles}
+        ${trackRecordTwoColumnStyles}
     </style>
 </head>
 <body>
