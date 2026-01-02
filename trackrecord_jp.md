@@ -10,7 +10,7 @@
 
 でも気づいたのは、技術より大切なのは「目の前の人を見る」ことでした。
 
-今はマウイ島を拠点に、[Pearl Memorial / Soul Carrier](https://timeless-residents.github.io/pearlmemorial/index-ja.html)の活動を通じて、家族の記憶を届ける取り組みを続けています。
+今はハワイ・マウイ島を主要拠点に、[Pearl Memorial / Soul Carrier](https://timeless-residents.github.io/pearlmemorial/index-ja.html)の活動を通じて、家族の記憶を届ける取り組みを続けています。
 
 もし暮らしや事業で困っていることがあれば、まずは話を聞かせてください。
 

@@ -10,7 +10,7 @@ For over 20 years, I've worked at the intersection of technology and business. L
 
 But I learned that what matters most isn't technology—it's seeing the person in front of you.
 
-Now based in Maui, I continue working on [Pearl Memorial / Soul Carrier](https://timeless-residents.github.io/pearlmemorial/)—delivering family memories across borders.
+Now based primarily in Maui, Hawaii, I continue working on [Pearl Memorial / Soul Carrier](https://timeless-residents.github.io/pearlmemorial/)—delivering family memories across borders.
 
 If you're facing challenges in life or business, let's talk first.
 
