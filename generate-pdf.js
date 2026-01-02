@@ -189,7 +189,7 @@ async function generatePDF(mdFile, pdfFile, isJapanese = false) {
         }
 
         .two-column-section th, .two-column-section td {
-            padding: 4px 6px;
+            padding: 3px 4px;
         }
 
         .two-column-section hr {
