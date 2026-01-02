@@ -65,57 +65,61 @@ async function generatePDF(mdFile, pdfFile, isJapanese = false) {
             column-count: 2;
             column-gap: 25px;
             column-rule: 1px solid #ddd;
+            line-height: 1.4;
         }
 
         .details-section h2 {
-            font-size: 12pt;
-            margin-top: 20px;
-            margin-bottom: 10px;
+            font-size: 11pt;
+            margin-top: 16px;
+            margin-bottom: 8px;
             break-after: avoid;
         }
 
         .details-section h3 {
-            font-size: 10pt;
-            margin-top: 12px;
+            font-size: 9pt;
+            margin-top: 10px;
+            margin-bottom: 4px;
         }
 
         .details-section h4 {
-            font-size: 9pt;
-            margin-top: 10px;
+            font-size: 8pt;
+            margin-top: 8px;
         }
 
         .details-section p {
-            font-size: 9pt;
-            margin: 6px 0;
+            font-size: 8pt;
+            margin: 4px 0;
             text-align: justify;
         }
 
         .details-section ul, .details-section ol {
-            font-size: 9pt;
-            padding-left: 18px;
+            font-size: 8pt;
+            padding-left: 16px;
+            margin: 4px 0;
         }
 
         .details-section li {
-            margin: 3px 0;
+            margin: 2px 0;
         }
 
         .details-section table {
-            font-size: 8pt;
+            font-size: 7.5pt;
             break-inside: avoid;
+            margin: 6px 0;
         }
 
         .details-section th, .details-section td {
-            padding: 4px 6px;
+            padding: 3px 5px;
         }
 
         .details-section blockquote {
-            font-size: 9pt;
-            margin: 10px 0;
-            padding: 8px 12px;
+            font-size: 8pt;
+            margin: 8px 0;
+            padding: 6px 10px;
         }
 
         .details-section hr {
-            margin: 15px 0;
+            margin: 12px 0;
         }
     ` : '';
 
@@ -240,12 +244,25 @@ ${htmlContent}
     const browser = await chromium.launch();
     const page = await browser.newPage();
     await page.setContent(html, { waitUntil: 'networkidle' });
-    await page.pdf({
+    const pdfOptions = {
         path: pdfFile,
         format: 'A4',
         printBackground: true,
-        margin: { top: '15mm', bottom: '15mm', left: '12mm', right: '12mm' }
-    });
+        margin: { top: '15mm', bottom: '18mm', left: '12mm', right: '12mm' }
+    };
+
+    // Add page numbers for proposal files (those with SUMMARY_END)
+    if (hasSummaryEnd) {
+        pdfOptions.displayHeaderFooter = true;
+        pdfOptions.headerTemplate = '<div></div>';
+        pdfOptions.footerTemplate = `
+            <div style="width: 100%; font-size: 9px; color: #999; text-align: center; font-family: sans-serif;">
+                <span class="pageNumber"></span> / <span class="totalPages"></span>
+            </div>
+        `;
+    }
+
+    await page.pdf(pdfOptions);
     await browser.close();
     console.log(`Generated: ${pdfFile}`);
 }
