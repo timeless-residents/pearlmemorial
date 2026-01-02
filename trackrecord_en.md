@@ -101,7 +101,11 @@ If you're facing challenges in life or business, let's talk first.
 
 **FSI Growth & Innovation Unit — Senior Specialist Lead** (Second half)
 
-DX strategy for global mega-banks and financial ecosystems.
+DX strategy for global mega-banks, regional banks, and financial ecosystems.
+
+**Products & Solutions Unit — Studio Senior Manager / Chief Engineer** (First half)
+
+Asset development, incubation, go-to-market, and investment strategy for social impact solutions.
 
 | Area | Achievements |
 |------|-------------|
@@ -110,10 +114,6 @@ DX strategy for global mega-banks and financial ecosystems.
 | **Digital Twin** | Bridge maintenance, LiDAR urban modeling, flood prediction |
 | **Energy** | AI power demand optimization, multi-store energy cost reduction |
 | **Healthcare** | IoT × cloud medical device management, disaster response |
-
-**Products & Solutions Unit — Studio Senior Manager / Chief Engineer** (First half)
-
-Asset development, incubation, go-to-market, and investment strategy for social impact solutions.
 
 #### Willgate Inc. (2007–2019)
 
