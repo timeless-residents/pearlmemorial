@@ -373,7 +373,7 @@ That alone will get us back to Maui. To those who are waiting.
 
 Melanie's farm, Randall's car, church support—ground infrastructure is ready. All we're missing is **wings to cross the Pacific**.
 
-If you have any business or life challenges, we're happy to help with those too. See our [track record](trackrecord_en.pdf) for details.
+If you have any business or life challenges, we're happy to help with those too. See our [track record](https://satotakuya.jp) for details.
 
 ---
 
@@ -382,8 +382,7 @@ If you have any business or life challenges, we're happy to help with those too.
 **Takuya Sato — Pearl Memorial / Soul Carrier**
 
 - Email: business@satotakuya.jp
-- Book: [calendly.com/pearlmemorial](https://calendly.com/pearlmemorial/pearlmemorialsession)
-- Pearl Memorial / Soul Carrier: [About Our Work](https://timeless-residents.github.io/pearlmemorial/)
+- Web: bit.ly/pearlmemorial
 - Wise: [wise.com/pay/me/satot67](https://wise.com/pay/me/satot67)
 
 ---
