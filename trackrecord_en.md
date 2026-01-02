@@ -295,6 +295,7 @@ Let's talk as equals.
 **Takuya Sato**
 
 - Email: business@satotakuya.jp
+- Book: [calendly.com/pearlmemorial](https://calendly.com/pearlmemorial/pearlmemorialsession)
 - Web: [satotakuya.jp](https://satotakuya.jp)
 - Books: [zenn.dev/takuya_sato](https://zenn.dev/takuya_sato)
 - Wise: [wise.com/pay/me/satot67](https://wise.com/pay/me/satot67)

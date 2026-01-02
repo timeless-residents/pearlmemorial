@@ -295,6 +295,7 @@
 **佐藤卓也**
 
 - Email: business@satotakuya.jp
+- 予約: [calendly.com/pearlmemorial](https://calendly.com/pearlmemorial/pearlmemorialsession)
 - Web: [satotakuya.jp](https://satotakuya.jp)
 - 書籍: [zenn.dev/takuya_sato](https://zenn.dev/takuya_sato)
 - Wise: [wise.com/pay/me/satot67](https://wise.com/pay/me/satot67)
