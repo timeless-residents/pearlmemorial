@@ -186,7 +186,7 @@ async function generatePDF(mdFile, pdfFile, isJapanese = false) {
         }
 
         .two-column-section h2 {
-            font-size: 12pt;
+            font-size: 13pt;
             margin-top: 16px;
             margin-bottom: 8px;
             break-after: avoid;
@@ -194,25 +194,25 @@ async function generatePDF(mdFile, pdfFile, isJapanese = false) {
         }
 
         .two-column-section h3 {
-            font-size: 10pt;
+            font-size: 11pt;
             margin-top: 12px;
             margin-bottom: 6px;
             break-after: avoid;
         }
 
         .two-column-section h4 {
-            font-size: 9pt;
+            font-size: 10pt;
             margin-top: 10px;
             margin-bottom: 4px;
         }
 
         .two-column-section p {
-            font-size: 9pt;
+            font-size: 10pt;
             margin: 6px 0;
         }
 
         .two-column-section ul, .two-column-section ol {
-            font-size: 9pt;
+            font-size: 10pt;
             padding-left: 18px;
             margin: 6px 0;
         }
@@ -222,7 +222,7 @@ async function generatePDF(mdFile, pdfFile, isJapanese = false) {
         }
 
         .two-column-section table {
-            font-size: 8pt;
+            font-size: 9pt;
             break-inside: avoid;
             margin: 8px 0;
         }
