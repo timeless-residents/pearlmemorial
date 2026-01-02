@@ -102,6 +102,8 @@ async function generatePDF(mdFile, pdfFile, isJapanese = false) {
         .details-section table {
             font-size: 8pt;
             break-inside: avoid;
+            column-span: all;
+            width: 100%;
         }
 
         .details-section th, .details-section td {
