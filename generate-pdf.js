@@ -275,4 +275,7 @@ ${htmlContent}
     // Soul Carrier proposals (source in offer/, output to root)
     await generatePDF('offer/soul_carrier_proposal_en.md', 'soul_carrier_proposal_en.pdf', false);
     await generatePDF('offer/soul_carrier_proposal_jp.md', 'soul_carrier_proposal_jp.pdf', true);
+    // Track record
+    await generatePDF('trackrecord_en.md', 'trackrecord_en.pdf', false);
+    await generatePDF('trackrecord_jp.md', 'trackrecord_jp.pdf', true);
 })();
