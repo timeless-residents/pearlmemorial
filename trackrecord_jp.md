@@ -55,6 +55,8 @@
 
 メールや電話でも大丈夫です。**気軽にどうぞ。** 「こんなこと聞いていいのかな」というレベルで大丈夫です。
 
+**→ 予約: [calendly.com/pearlmemorial](https://calendly.com/pearlmemorial/pearlmemorialsession)** | Email: business@satotakuya.jp | Tel: 080-4448-7444
+
 <!-- TWO_COLUMN_START -->
 
 ---

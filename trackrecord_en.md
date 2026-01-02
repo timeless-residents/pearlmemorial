@@ -55,6 +55,8 @@ If you're facing challenges in life or business, let's talk first.
 
 Email or phone works too. **Feel free to reach out.** Even if you're thinking "is this too small to ask?"—that's fine.
 
+**→ Book: [calendly.com/pearlmemorial](https://calendly.com/pearlmemorial/pearlmemorialsession)** | Email: business@satotakuya.jp | Tel: +81-80-4448-7444
+
 <!-- TWO_COLUMN_START -->
 
 ---
