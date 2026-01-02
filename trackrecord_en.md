@@ -53,7 +53,7 @@ If you're facing challenges in life or business, let's talk first.
 
 ---
 
-## Common Concerns
+## Before We Start
 
 **"I'm worried about costs"**
 First 30 minutes are free. After that, pay only when we achieve results.
