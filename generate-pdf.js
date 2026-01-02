@@ -143,4 +143,6 @@ ${htmlContent}
 (async () => {
     await generatePDF('Catalog.md', 'Catalog.pdf', false);
     await generatePDF('Catalog-ja.md', 'Catalog-ja.pdf', true);
+    await generatePDF('proposal_generic_en.md', 'proposal_generic_en.pdf', false);
+    await generatePDF('proposal_generic_jp.md', 'proposal_generic_jp.pdf', true);
 })();
