@@ -10,7 +10,7 @@ For over 20 years, I've worked at the intersection of technology and business. L
 
 But I learned that what matters most isn't technology—it's seeing the person in front of you.
 
-Now based in Maui, I continue working on [Pearl Memorial](https://pearlmemorial.satotakuya.jp) and [Soul Carrier](https://pearlmemorial.satotakuya.jp/offer/soul_carrier_proposal_en.pdf)—delivering family memories across borders.
+Now based in Maui, I continue working on [Pearl Memorial / Soul Carrier](https://bit.ly/boundarist)—delivering family memories across borders.
 
 If you're facing challenges in life or business, let's talk first.
 
@@ -298,8 +298,7 @@ Let's talk as equals.
 
 - Email: business@satotakuya.jp
 - Book: [calendly.com/pearlmemorial](https://calendly.com/pearlmemorial/pearlmemorialsession)
-- Pearl Memorial: [pearlmemorial.satotakuya.jp](https://pearlmemorial.satotakuya.jp)
-- Soul Carrier: [Proposal PDF](https://pearlmemorial.satotakuya.jp/offer/soul_carrier_proposal_en.pdf)
+- Pearl Memorial / Soul Carrier: [bit.ly/boundarist](https://bit.ly/boundarist)
 - Web: [satotakuya.jp](https://satotakuya.jp)
 - Books: [zenn.dev/takuya_sato](https://zenn.dev/takuya_sato)
 - Wise: [wise.com/pay/me/satot67](https://wise.com/pay/me/satot67)
