@@ -45,7 +45,7 @@ If you're facing challenges in life or business, let's talk first.
 ## How Consultations Work
 
 ```
-1. Send me an email: "I'm struggling with this..."
+1. Book via Calendly with a comment: "I'm struggling with this..."
 2. We'll chat online for about 30 minutes (free)
 3. If I can help, I'll propose next steps and costs
 4. Pay when we achieve results (results-based fee)
