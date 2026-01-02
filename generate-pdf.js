@@ -5,11 +5,120 @@ const path = require('path');
 
 async function generatePDF(mdFile, pdfFile, isJapanese = false) {
     const markdown = fs.readFileSync(mdFile, 'utf-8');
-    const htmlContent = marked.parse(markdown);
 
     const fontFamily = isJapanese
         ? "'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'Yu Gothic', sans-serif"
         : "'Georgia', 'Times New Roman', serif";
+
+    // Check if this is a proposal with SUMMARY_END marker
+    const hasSummaryEnd = markdown.includes('<!-- SUMMARY_END -->');
+
+    let htmlContent;
+    if (hasSummaryEnd) {
+        const [summaryMd, detailsMd] = markdown.split('<!-- SUMMARY_END -->');
+        const summaryHtml = marked.parse(summaryMd);
+        const detailsHtml = marked.parse(detailsMd);
+
+        htmlContent = `
+            <div class="summary-page">
+                ${summaryHtml}
+            </div>
+            <div class="details-section">
+                ${detailsHtml}
+            </div>
+        `;
+    } else {
+        htmlContent = marked.parse(markdown);
+    }
+
+    const twoColumnStyles = hasSummaryEnd ? `
+        .summary-page {
+            page-break-after: always;
+        }
+
+        .summary-page h1 {
+            font-size: 20pt;
+            margin-bottom: 15px;
+        }
+
+        .summary-page h2 {
+            font-size: 13pt;
+            margin-top: 18px;
+            margin-bottom: 8px;
+        }
+
+        .summary-page table {
+            font-size: 9pt;
+            margin: 8px 0;
+        }
+
+        .summary-page th, .summary-page td {
+            padding: 5px 8px;
+        }
+
+        .summary-page p {
+            font-size: 10pt;
+            margin: 6px 0;
+        }
+
+        .details-section {
+            column-count: 2;
+            column-gap: 25px;
+            column-rule: 1px solid #ddd;
+        }
+
+        .details-section h2 {
+            font-size: 12pt;
+            column-span: all;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .details-section h3 {
+            font-size: 10pt;
+            margin-top: 12px;
+        }
+
+        .details-section h4 {
+            font-size: 9pt;
+            margin-top: 10px;
+        }
+
+        .details-section p {
+            font-size: 9pt;
+            margin: 6px 0;
+            text-align: justify;
+        }
+
+        .details-section ul, .details-section ol {
+            font-size: 9pt;
+            padding-left: 18px;
+        }
+
+        .details-section li {
+            margin: 3px 0;
+        }
+
+        .details-section table {
+            font-size: 8pt;
+            break-inside: avoid;
+        }
+
+        .details-section th, .details-section td {
+            padding: 4px 6px;
+        }
+
+        .details-section blockquote {
+            font-size: 9pt;
+            margin: 10px 0;
+            padding: 8px 12px;
+        }
+
+        .details-section hr {
+            column-span: all;
+            margin: 15px 0;
+        }
+    ` : '';
 
     const html = `<!DOCTYPE html>
 <html lang="${isJapanese ? 'ja' : 'en'}">
@@ -23,9 +132,9 @@ async function generatePDF(mdFile, pdfFile, isJapanese = false) {
             font-size: 11pt;
             line-height: 1.6;
             color: #1a1a1a;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px;
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
         }
 
         h1 {
@@ -118,8 +227,10 @@ async function generatePDF(mdFile, pdfFile, isJapanese = false) {
         }
 
         @page {
-            margin: 20mm 15mm;
+            margin: 15mm 12mm;
         }
+
+        ${twoColumnStyles}
     </style>
 </head>
 <body>
@@ -134,7 +245,7 @@ ${htmlContent}
         path: pdfFile,
         format: 'A4',
         printBackground: true,
-        margin: { top: '20mm', bottom: '20mm', left: '15mm', right: '15mm' }
+        margin: { top: '15mm', bottom: '15mm', left: '12mm', right: '12mm' }
     });
     await browser.close();
     console.log(`Generated: ${pdfFile}`);

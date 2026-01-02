@@ -17,7 +17,9 @@
 
 **In one sentence:** Reconnecting 80 years of separation, one family at a time.
 
----
+**Details on following pages →**
+
+<!-- SUMMARY_END -->
 
 ## Vision: Regenerating the Entire Island of Maui
 
