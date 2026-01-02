@@ -315,7 +315,7 @@
 ## 費用について
 
 - **業務支援**: 成果報酬型です。初回相談30分無料。
-- **Soul Carrierへの支援**: いつでも歓迎しています。詳しくは[提案書](proposal_generic_jp.pdf)をご覧ください。
+- **Soul Carrierへの支援**: いつでも歓迎しています。詳しくは[提案書](https://timeless-residents.github.io/pearlmemorial/proposal_generic_jp.pdf)をご覧ください。
 
 ---
 

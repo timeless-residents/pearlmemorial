@@ -315,7 +315,7 @@ Let's talk as equals.
 ## Fees
 
 - **Business Support**: Results-based. First 30 minutes free.
-- **Soul Carrier Support**: Always welcome. See the [proposal](proposal_generic_en.pdf) for details.
+- **Soul Carrier Support**: Always welcome. See the [proposal](https://timeless-residents.github.io/pearlmemorial/proposal_generic_en.pdf) for details.
 
 ---
 
