@@ -247,35 +247,44 @@ Hands-on repositories that demonstrate the concepts from my technical books, plu
 
 Thank you for reading this far. If you're still hesitating, here are some things I often hear.
 
-**"Worried about costs"** → First 30 min free. Results-based fee.
+**"I'm worried about how much it might cost..."**
+The first 30 minutes are free. After that, you only pay when we achieve results—so feel free to reach out.
 
-**"Not tech-savvy"** → No jargon. Ask anything, anytime.
+**"I'm not very tech-savvy..."**
+I don't use jargon. If something's unclear, ask me as many times as you need.
 
-**"Too busy to respond?"** → I reply within 24 hours.
+**"You seem busy..."**
+I try to reply within 24 hours. Time zones aren't a problem.
 
-Once you reach out, it becomes "I'm glad I asked."
+Often, once you take that first step, it becomes "I'm glad I asked."
 
 ---
 
-**"Too small to ask?"** → I welcome small problems.
+**"Is my problem too small to ask about..."**
+Smaller problems are often easier to solve. I genuinely welcome them.
 
-**"Am I worth your time?"** → We start from where you are.
+**"I'm not sure I'm at a level worth your time..."**
+Whatever level you're at, we can start from where you are.
 
 If you're struggling, that's reason enough.
 
 ---
 
-**"Will I get a hard sell?"** → Just say no if it's not a fit.
+**"I'm afraid of getting a hard sell..."**
+If it's not a fit, just say no. That won't end our relationship.
 
-**"All sales talk?"** → I listen first.
+**"Will it just be sales talk..."**
+I start by listening, not selling.
 
 Here, we go at your pace.
 
 ---
 
-**"Will you talk down to me?"** → Titles don't matter.
+**"With your big consulting background, won't you talk down to me..."**
+I care more about the person in front of me than titles. My approach is to think alongside you.
 
-**"Feel stupid?"** → No "you don't know that?" here.
+**"I'm worried an expert will make me feel stupid..."**
+I don't say things like "you don't know that?"
 
 Let's talk as equals.
 
