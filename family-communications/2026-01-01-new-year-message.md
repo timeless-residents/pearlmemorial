@@ -45,7 +45,8 @@
 - **Document:** Soul Carrier Proposal (English)
 - **URL:** https://timeless-residents.github.io/pearlmemorial/soul_carrier_proposal_en.pdf
 - **Purpose:** Sharing with churches
-- **Martin's Location:** Hana, Maui
+- **Martin's Location:** Lahaina, Maui
+- **Sato Family Location:** Staying in Hana, Maui
 
 ---
 
