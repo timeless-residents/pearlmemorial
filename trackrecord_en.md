@@ -101,7 +101,7 @@ If you're facing challenges in life or business, let's talk first.
 
 **Products & Solutions Unit — Studio Senior Manager / Chief Engineer**
 
-Asset development, incubation, and go-to-market for social impact solutions.
+Asset development, incubation, go-to-market, and investment strategy for social impact solutions.
 
 | Area | Achievements |
 |------|-------------|
