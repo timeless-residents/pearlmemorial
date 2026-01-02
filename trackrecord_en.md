@@ -167,9 +167,64 @@ Led company from near-bankruptcy to **50x growth**. Built dev organization from 
 
 #### Other Activities
 
-- Management & technical advisor for multiple companies (hands-on)
 - Vietnam CEO experience
 - **World Blockchain Forum Asia Singapore 2019** Top 10 Project Leader
+
+---
+
+### Technical Advisory Experience
+
+From strategy to execution, hands-on support throughout. Bridging gaps that AI alone can't reach.
+
+---
+
+**Vietnam Offshore Development Company**
+
+Business launch, initial deal formation, Japan-Vietnam collaboration workflow
+
+**"Just started the company with no major contracts. Unsure if we can sustain the business. How do we get on track?"**
+
+Walked alongside them to achieve ¥50M in the first year.
+
+---
+
+**Physical Therapy Education Provider**
+
+Custom video education platform, outsourced development cost reduction, creative tool training
+
+**"The tools I found don't give me the flexibility I need. Not sure if my cloud setup is even right."**
+
+Confirmed requirements one by one, prioritized together. Mapped out timelines visually. Ongoing support aligned with business stage and budget.
+
+---
+
+**Cross-Border E-Commerce Operator**
+
+Overseas inventory automation, domestic EC automation, custom EC site launch, logistics optimization, vendor development
+
+**"I want to automatically track overseas products, list them, source on demand, and add value—but the system isn't working."**
+
+Reviewed current systems together, identified bottlenecks. Built a minimal working system the same day. Continued to refine as the business evolved.
+
+---
+
+**Video Education Platform Operator**
+
+Video production automation, AI video generation
+
+**"No reliable tech lead. Outsourced vendors disappear, deliverables miss the mark, and costs keep piling up."**
+
+Reviewed past communications, joined meetings. Coached on requirements and vendor management—sometimes taking over directly. Proposed candidates, headhunted a tech lead at no cost. Built a structure where core work stays in-house and extensions go to trusted partners.
+
+---
+
+**Licensed Practitioner Matching Platform Operator**
+
+Matching app MVP, infrastructure setup, scalability
+
+**"Stakeholders are aligned. We need an app to acquire initial users, but we lack the know-how. We want a trusted advisor who can also get hands-on—someone with startup to enterprise experience."**
+
+Defined user experience goals, built and demoed on real devices. Handled app store procedures, documented everything for handoff. Coached staff to build, modify, and manage apps independently.
 
 ---
 
