@@ -51,7 +51,7 @@
 4. 成果が出たらお支払い（成果報酬）
 ```
 
-**気軽にどうぞ。** 「こんなこと聞いていいのかな」というレベルで大丈夫です。
+メールや電話でも大丈夫です。**気軽にどうぞ。** 「こんなこと聞いていいのかな」というレベルで大丈夫です。
 
 <!-- TWO_COLUMN_START -->
 
@@ -314,6 +314,7 @@
 **佐藤卓也**
 
 - Email: business@satotakuya.jp
+- Tel: 080-4448-7444
 - 予約: [calendly.com/pearlmemorial](https://calendly.com/pearlmemorial/pearlmemorialsession)
 - Pearl Memorial / Soul Carrier: [活動紹介](https://timeless-residents.github.io/pearlmemorial/index-ja.html)
 - Web: [satotakuya.jp](https://satotakuya.jp)

@@ -51,7 +51,7 @@ If you're facing challenges in life or business, let's talk first.
 4. Pay when we achieve results (results-based fee)
 ```
 
-**Feel free to reach out.** Even if you're thinking "is this too small to ask?"—that's fine.
+Email or phone works too. **Feel free to reach out.** Even if you're thinking "is this too small to ask?"—that's fine.
 
 <!-- TWO_COLUMN_START -->
 
@@ -314,6 +314,7 @@ Let's talk as equals.
 **Takuya Sato**
 
 - Email: business@satotakuya.jp
+- Tel: +81-80-4448-7444
 - Book: [calendly.com/pearlmemorial](https://calendly.com/pearlmemorial/pearlmemorialsession)
 - Pearl Memorial / Soul Carrier: [About Our Work](https://timeless-residents.github.io/pearlmemorial/)
 - Web: [satotakuya.jp](https://satotakuya.jp)
