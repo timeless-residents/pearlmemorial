@@ -69,9 +69,9 @@ async function generatePDF(mdFile, pdfFile, isJapanese = false) {
 
         .details-section h2 {
             font-size: 12pt;
-            column-span: all;
             margin-top: 20px;
             margin-bottom: 10px;
+            break-after: avoid;
         }
 
         .details-section h3 {
@@ -115,7 +115,6 @@ async function generatePDF(mdFile, pdfFile, isJapanese = false) {
         }
 
         .details-section hr {
-            column-span: all;
             margin: 15px 0;
         }
     ` : '';
