@@ -296,6 +296,13 @@ Let's talk as equals.
 
 ---
 
+## Fees
+
+- **Business Support**: Results-based. See the [proposal](proposal_generic_en.pdf) for details.
+- **Soul Carrier Support**: Always welcome.
+
+---
+
 ## Contact
 
 **Takuya Sato**
