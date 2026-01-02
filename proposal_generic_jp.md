@@ -574,16 +574,13 @@ AIは言語の壁を壊し、距離を消し、時間を圧縮しました。
 
 ### このネットワークが意味すること
 
-```
-【西洋と東洋】
-Maria Lanakila Catholic Church ←→ 浄土ミッション・仏教寺院
-     カトリック                        仏教
+**【西洋と東洋】**
+- Maria Lanakila Church（カトリック）
+- 浄土ミッション（仏教）
 
-【島の端から端まで】
-ホノルアベイ（北西）←→ ハナ（東端）
-  John Carty             Melanie
-  Save Honolua          Hale Pueo
-```
+**【島の端から端まで】**
+- ホノルアベイ（北西）— John Carty
+- ハナ（東端）— Melanie
 
 **宗教も、地域も、越えている。**
 
