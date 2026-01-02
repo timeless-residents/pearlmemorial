@@ -55,40 +55,37 @@ If you're facing challenges in life or business, let's talk first.
 
 ## Before We Start
 
-**"I'm worried about costs"**
-First 30 minutes are free. After that, pay only when we achieve results.
+**"Worried about costs"** → First 30 min free. Results-based fee.
 
-**"I'm not tech-savvy..."**
-I speak without jargon. Ask me anything, as many times as you need.
+**"Not tech-savvy"** → No jargon. Ask anything, anytime.
 
-**"Are you too busy to respond?"**
-I reply within 24 hours, even across time zones.
+**"Too busy to respond?"** → I reply within 24 hours.
 
-Not knowing can feel unsettling. But once you reach out, it becomes "I'm glad I asked."
+Once you reach out, it becomes "I'm glad I asked."
 
-**"Is my problem too small to ask about?"**
-Smaller problems are easier to solve. I welcome them.
+---
 
-**"Am I at a level worth your time?"**
-Whatever level you're at, we start from where you are.
+**"Too small to ask?"** → I welcome small problems.
 
-You might be thinking "someone like me..." But if you're struggling, that's reason enough.
+**"Am I worth your time?"** → We start from where you are.
 
-**"Will I get a hard sell?"**
-If it's not a fit, just say no. That won't end our relationship.
+If you're struggling, that's reason enough.
 
-**"Will it be all sales talk?"**
-I listen first, before anything else.
+---
 
-You may have had bad experiences before. Here, we go at your pace.
+**"Will I get a hard sell?"** → Just say no if it's not a fit.
 
-**"Big consulting background—will you talk down to me?"**
-Titles don't matter. I'm here to think alongside you.
+**"All sales talk?"** → I listen first.
 
-**"Will an expert make me feel stupid?"**
-There's no "you don't know that?" here.
+Here, we go at your pace.
 
-If you've been looked down on before, all the more reason. Let's talk as equals.
+---
+
+**"Will you talk down to me?"** → Titles don't matter.
+
+**"Feel stupid?"** → No "you don't know that?" here.
+
+Let's talk as equals.
 
 ---
 
