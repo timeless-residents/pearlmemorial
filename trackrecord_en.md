@@ -55,14 +55,42 @@ If you're facing challenges in life or business, let's talk first.
 
 ## Common Concerns
 
+### Fear → Peace of Mind
+
+| Worry | Reality |
+|-------|---------|
+| "I'm worried about costs" | First 30 minutes are free. After that, pay only when we achieve results |
+| "I'm not tech-savvy..." | I speak without jargon. Ask me anything, as many times as you need |
+| "Are you too busy to respond?" | I reply within 24 hours, even across time zones |
+
+*The unknown is scary. But once you reach out, it becomes "I'm glad I asked."*
+
+### Sadness & Self-Doubt → Acceptance
+
 | Worry | Reality |
 |-------|---------|
 | "Is my problem too small to ask about?" | Smaller problems are easier to solve. I welcome them |
-| "I'm worried about costs" | First 30-minute chat is free. After that, pay only when we achieve results |
-| "I'm not tech-savvy..." | I speak without jargon. Ask me anything, as many times as you need |
+| "Am I at a level worth your time?" | Whatever level you're at, we start from where you are |
+
+*"I'm not good enough" is an illusion. If you're struggling, that's reason enough to reach out.*
+
+### Disgust → Respect
+
+| Worry | Reality |
+|-------|---------|
 | "Will I get a hard sell?" | If it's not a fit, just say no. That won't end our relationship |
-| "Are you too busy to respond?" | I reply within 24 hours, even across time zones |
+| "Will it be all sales talk?" | I listen first, before anything else |
+
+*You may have had bad experiences before. Here, I respect your pace.*
+
+### Anger → Equality
+
+| Worry | Reality |
+|-------|---------|
 | "Big consulting background—will you talk down to me?" | Titles don't matter. I'm here to think alongside you |
+| "Will an expert make me feel stupid?" | There's no "you don't know that?" here |
+
+*If you've been looked down on before, all the more reason. Let's talk as equals.*
 
 ---
 
