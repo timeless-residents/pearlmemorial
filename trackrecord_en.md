@@ -87,18 +87,6 @@ By combining these three, "belonging nowhere" became my strength.
 | Tech Training | 4,000+ people |
 | English | Business level (TOEIC 720) |
 
-### Expertise
-
-| Category | Experience |
-|----------|------------|
-| System Development (Web/Open) | 10+ years |
-| Project Manager | 10+ years |
-| CIO/CTO | 10+ years |
-| Data Analyst/Scientist | 10+ years |
-| IT Consultant | 3+ years |
-| Business/Strategy Consultant | 5+ years |
-| CEO/COO | 3+ years |
-
 ### Technology Stack
 
 | Category | Technologies |
