@@ -46,7 +46,27 @@
 - **URL:** https://timeless-residents.github.io/pearlmemorial/soul_carrier_proposal_en.pdf
 - **Purpose:** Sharing with churches
 - **Martin's Location:** Lahaina, Maui
-- **Sato Family Location:** Staying in Hana, Maui
+
+---
+
+## Soul Carrier Mission: Martin's Mother
+
+**Status:** In Progress
+
+| Date | Update |
+|------|--------|
+| 2025年12月 | ハナ滞在中、教会でマーティンと出会う |
+| 2026年1月1日 | マーティンから引用使用許可を取得 |
+| 2026年1月 | 佐藤家、日本に一時帰国。マーティンのお母様の届け先（ご先祖のお墓）調査開始 |
+
+**Mission:**
+マーティンのお母様の遺灰を、日本のご先祖のお墓へ届ける。
+3年間抱えてきた想いを、故郷への帰郷で完結させる。
+
+**Next Steps:**
+- 戸籍調査（出身地・本籍地の特定）
+- 墓地調査（ご先祖のお墓の所在確認）
+- マウイへ戻り、マーティンと次のステップを相談
 
 ---
 
