@@ -129,6 +129,14 @@ p { color: var(--text-muted); max-width: 60ch; margin: 0 auto 1.5rem; }
 .why-us-list li::before { content: "•"; color: var(--hope-blue); position: absolute; left: 0; }
 .why-us-story { font-size: 0.9rem; color: var(--text-muted); line-height: 1.8; margin: 1.5rem 0; padding: 1rem; background: rgba(201, 169, 98, 0.05); border-left: 2px solid var(--gold); text-align: left; }
 .why-us-closing { font-family: var(--font-display); font-size: 1rem; color: var(--text-main); font-style: italic; margin-bottom: 0; }
+/* Testimonial Section */
+.testimonials-container { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 3rem; max-width: 900px; margin-left: auto; margin-right: auto; }
+.testimonial-section { padding: 2rem; background: linear-gradient(135deg, rgba(201, 169, 98, 0.08) 0%, rgba(126, 184, 201, 0.04) 100%); border: 1px solid rgba(201, 169, 98, 0.2); border-radius: 0.5rem; }
+.testimonial-section h3 { font-family: var(--font-display); font-size: 1rem; color: var(--gold); margin-bottom: 1.2rem; text-align: center; letter-spacing: 0.1em; }
+.testimonial-quote { font-family: var(--font-display); font-size: 1rem; color: var(--text-main); line-height: 1.8; font-style: italic; text-align: center; margin: 0 0 1.2rem 0; padding: 0; border: none; background: none; quotes: none; }
+.testimonial-author { font-size: 0.8rem; color: var(--hope-blue); text-align: center; letter-spacing: 0.12em; margin-bottom: 0; }
+.testimonials-summary { font-family: var(--font-display); font-size: 1rem; color: var(--gold); text-align: center; font-style: italic; margin: 2rem 0 0; letter-spacing: 0.05em; }
+@media (max-width: 768px) { .testimonials-container { grid-template-columns: 1fr; } }
 /* Preserve Section */
 .preserve-section { margin-top: 3rem; padding: 2rem 0; border-top: 1px solid rgba(201, 169, 98, 0.12); }
 .preserve-section h2 { font-family: var(--font-display); font-size: clamp(1.2rem, 2.5vw, 1.5rem); color: var(--gold); margin-bottom: 1rem; }
@@ -202,6 +210,15 @@ p { color: var(--text-muted); max-width: 60ch; margin: 0 auto 1.5rem; }
 .consultation-flow { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin: 1.5rem 0; }
 .flow-step { padding: 0.6rem 1rem; background: var(--bg-card); border-radius: 4px; font-size: 0.8rem; color: var(--text-main); }
 .flow-arrow { color: var(--gold); font-size: 1rem; }
+.before-start-section { padding: 4rem 2rem; background: rgba(10, 10, 12, 0.5); }
+.before-start-content { max-width: 800px; margin: 0 auto; text-align: center; }
+.before-start-content h2 { font-family: var(--font-display); font-size: 1.8rem; margin-bottom: 2rem; }
+.concerns-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
+.concern-item { padding: 1.5rem; background: rgba(201, 169, 98, 0.05); border: 1px solid rgba(201, 169, 98, 0.15); border-radius: 0.5rem; text-align: left; }
+.concern-q { font-family: var(--font-display); color: var(--text-muted); margin-bottom: 0.5rem; font-size: 0.95rem; }
+.concern-a { color: var(--text-main); font-size: 0.9rem; line-height: 1.6; }
+.before-start-note { font-size: 0.85rem; color: var(--text-dim); margin-top: 1.5rem; }
+.before-start-note a { color: var(--gold); text-decoration: underline; }
 .cta-section { padding: 6rem 2rem; text-align: center; }
 .cta-subtitle { font-family: var(--font-display); font-size: 1rem; color: var(--text-muted); margin-bottom: 0.5rem; font-style: italic; }
 .cta-note { font-size: 0.85rem; color: var(--hope-blue); margin-bottom: 2rem; }

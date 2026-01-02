@@ -17,7 +17,9 @@
 
 **In one sentence:** Reconnecting 80 years of separation, one family at a time.
 
----
+**Details on following pages →**
+
+<!-- SUMMARY_END -->
 
 ## Vision: Regenerating the Entire Island of Maui
 
@@ -185,20 +187,16 @@ A place for youth to discover their path. A place to pass Japanese-American hist
 
 **The Sato Family** — Takuya, Mina, and Ito (age 5), a family of three
 
-**We always act as a family unit.** This is a family project about reconnecting generations. Activity expenses include our daughter Ito's education costs.
+**We always act as a family unit.** This is a family project about reconnecting generations.
 
 | Item | Details |
 |------|---------|
 | Bases | Chiba, Miyagi (Japan) + Hana, Maui |
-| Entity | Digital Wheel, LLC (Japan) |
-| Experience | **20+ years** in digital technology |
 | Turning Point | After 2023 Lahaina fire, **left stable job** for recovery support |
-| Community Work | Current neighborhood association president (2nd year) |
-| Expertise | Off-grid, community organizing, administrative procedures |
 
 **Why Us:**
 - Native Japanese speakers, bases in both countries
-- Practical experience with administrative/temple procedures (family registry, temple records)
+- We know the systems: family registries, temples, cemeteries
 - Grave keepers ourselves—committed to inheriting the main family grave in Maui
 - Network already established
 
@@ -375,6 +373,8 @@ That alone will get us back to Maui. To those who are waiting.
 
 Melanie's farm, Randall's car, church support—ground infrastructure is ready. All we're missing is **wings to cross the Pacific**.
 
+If you have any business or life challenges, we're happy to help with those too. See our [track record](https://satotakuya.jp) for details.
+
 ---
 
 ## Contact
@@ -383,6 +383,7 @@ Melanie's farm, Randall's car, church support—ground infrastructure is ready. 
 
 - Email: business@satotakuya.jp
 - Web: bit.ly/pearlmemorial
+- Wise: [wise.com/pay/me/satot67](https://wise.com/pay/me/satot67)
 
 ---
 
