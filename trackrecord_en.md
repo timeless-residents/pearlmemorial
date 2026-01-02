@@ -53,6 +53,19 @@ If you're facing challenges in life or business, let's talk first.
 
 ---
 
+## Common Concerns
+
+| Worry | Reality |
+|-------|---------|
+| "Is my problem too small to ask about?" | Smaller problems are easier to solve. I welcome them |
+| "I'm worried about costs" | First 30-minute chat is free. After that, pay only when we achieve results |
+| "I'm not tech-savvy..." | I speak without jargon. Ask me anything, as many times as you need |
+| "Will I get a hard sell?" | If it's not a fit, just say no. That won't end our relationship |
+| "Are you too busy to respond?" | I reply within 24 hours, even across time zones |
+| "Big consulting background—will you talk down to me?" | Titles don't matter. I'm here to think alongside you |
+
+---
+
 ## Why Me?
 
 ### Career Summary
