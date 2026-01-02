@@ -245,6 +245,8 @@ Hands-on repositories that demonstrate the concepts from my technical books, plu
 
 ## Before We Start
 
+Thank you for reading this far. If you're still hesitating, here are some things I often hear.
+
 **"Worried about costs"** → First 30 min free. Results-based fee.
 
 **"Not tech-savvy"** → No jargon. Ask anything, anytime.
