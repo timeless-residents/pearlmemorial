@@ -32,6 +32,8 @@ If you're facing challenges in life or business, let's talk first.
 | "I want to digitize and preserve my parents' photos and letters" | Let's figure out the best way to organize and store them |
 | "I want backup power and connectivity for emergencies" | Solar, batteries, Starlink—I'll share what I've learned hands-on |
 | "I want to communicate with family overseas but the language barrier..." | From translation tools to actual bridging help |
+| "I want to do karaoke on my Switch—what do I need?" | Let's research the equipment and set it up together |
+| "My printer stopped working" | Remote or in-person troubleshooting to find a solution |
 
 **Learning & New Ventures**
 | Challenge | How I Can Help |
@@ -313,13 +315,13 @@ Let's talk as equals.
 
 **Takuya Sato**
 
+- Book: [calendly.com/pearlmemorial](https://calendly.com/pearlmemorial/pearlmemorialsession)
 - Email: business@satotakuya.jp
 - Tel: +81-80-4448-7444
-- Book: [calendly.com/pearlmemorial](https://calendly.com/pearlmemorial/pearlmemorialsession)
-- Pearl Memorial / Soul Carrier: [About Our Work](https://timeless-residents.github.io/pearlmemorial/)
 - Web: [satotakuya.jp](https://satotakuya.jp)
+- About Our Work: [Pearl Memorial / Soul Carrier](https://timeless-residents.github.io/pearlmemorial/)
 - Books: [zenn.dev/takuya_sato](https://zenn.dev/takuya_sato)
-- Wise: [wise.com/pay/me/satot67](https://wise.com/pay/me/satot67)
+- Send Payment: [Wise](https://wise.com/pay/me/satot67)
 
 ---
 

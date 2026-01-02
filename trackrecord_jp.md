@@ -32,6 +32,8 @@
 | 「親の写真や手紙、デジタル化して残したい」 | 整理方法から保存先まで、一緒に考えます |
 | 「災害に備えて、電気や通信を自前で確保したい」 | ソーラー、バッテリー、Starlinkなど、実体験ベースでご提案 |
 | 「海外の家族とやり取りしたいけど言葉が…」 | 翻訳ツールの使い方から、実際の橋渡しまで |
+| 「Switchでカラオケしたいけど何が必要？」 | 必要な機材と設定方法、一緒に調べてセットアップ |
+| 「プリンタが動かなくなった」 | リモートか対面で状況確認、解決策を探ります |
 
 **学び・挑戦**
 | お悩み | できること |
@@ -313,13 +315,13 @@
 
 **佐藤卓也**
 
+- 予約: [calendly.com/pearlmemorial](https://calendly.com/pearlmemorial/pearlmemorialsession)
 - Email: business@satotakuya.jp
 - Tel: 080-4448-7444
-- 予約: [calendly.com/pearlmemorial](https://calendly.com/pearlmemorial/pearlmemorialsession)
-- Pearl Memorial / Soul Carrier: [活動紹介](https://timeless-residents.github.io/pearlmemorial/index-ja.html)
 - Web: [satotakuya.jp](https://satotakuya.jp)
+- 活動紹介: [Pearl Memorial / Soul Carrier](https://timeless-residents.github.io/pearlmemorial/index-ja.html)
 - 書籍: [zenn.dev/takuya_sato](https://zenn.dev/takuya_sato)
-- Wise: [wise.com/pay/me/satot67](https://wise.com/pay/me/satot67)
+- 送金: [Wise](https://wise.com/pay/me/satot67)
 
 ---
 
