@@ -350,6 +350,7 @@ No results, no fee. Let's talk first.
 - Email: business@satotakuya.jp
 - Web: [satotakuya.jp](https://satotakuya.jp)
 - Books: [zenn.dev/takuya_sato](https://zenn.dev/takuya_sato)
+- Wise: [wise.com/pay/me/satot67](https://wise.com/pay/me/satot67)
 
 ---
 

@@ -350,6 +350,7 @@ Soul Carrierの活動は、私のキャリアの延長線上にあります。
 - Email: business@satotakuya.jp
 - Web: [satotakuya.jp](https://satotakuya.jp)
 - 書籍: [zenn.dev/takuya_sato](https://zenn.dev/takuya_sato)
+- Wise: [wise.com/pay/me/satot67](https://wise.com/pay/me/satot67)
 
 ---
 
