@@ -99,9 +99,9 @@ If you're facing challenges in life or business, let's talk first.
 
 #### Deloitte Tohmatsu Consulting (2019–2025)
 
-**FSI G&I Senior Specialist Lead**
+**Products & Solutions Unit — Studio Senior Manager / Chief Engineer**
 
-DX strategy for global mega-banks and financial ecosystems.
+Asset development, incubation, and go-to-market for social impact solutions.
 
 | Area | Achievements |
 |------|-------------|
