@@ -183,6 +183,7 @@ async function generatePDF(mdFile, pdfFile, isJapanese = false) {
             column-gap: 25px;
             column-rule: 1px solid #ddd;
             line-height: 1.35;
+            letter-spacing: 0.03em;
         }
 
         .two-column-section h2 {
