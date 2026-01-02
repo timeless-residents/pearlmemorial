@@ -28,10 +28,17 @@
 
 **現地の宿泊・移動は既にネットワークで解決済み。必要なのは太平洋を渡る翼だけ。**
 
+## 費用について
+
+| 支援内容 | 費用 |
+|----------|------|
+| **Soul Carrierへの支援** | 寄付として歓迎（家族負担ゼロで遺骨帰還を実現） |
+| **業務支援（コンサルティング）** | 成果報酬型（初回相談30分無料） |
+
 ## 連絡先
 
 **佐藤卓也 — Pearl Memorial / Soul Carrier**<br>
-Email: business@satotakuya.jp | Web: bit.ly/pearlmemorial<br>
+Email: business@satotakuya.jp<br>
 振込先: PayPay銀行 うぐいす支店(008) 普通 8620704<br>
 Wise: [wise.com/pay/me/satot67](https://wise.com/pay/me/satot67)
 
@@ -1351,7 +1358,8 @@ A: 不動産に約5,000万円の含み益があり、父による一時的な支
 **佐藤卓也 — Pearl Memorial / Soul Carrier**
 
 - Email: business@satotakuya.jp
-- Web: bit.ly/pearlmemorial
+- 予約: [calendly.com/pearlmemorial](https://calendly.com/pearlmemorial/pearlmemorialsession)
+- Pearl Memorial / Soul Carrier: [活動紹介](https://timeless-residents.github.io/pearlmemorial/index-ja.html)
 - Wise: [wise.com/pay/me/satot67](https://wise.com/pay/me/satot67)
 
 ---
