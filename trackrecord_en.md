@@ -300,15 +300,46 @@ Led company from near-bankruptcy to **50x growth**. Built dev organization from 
 
 ### Results-Based Fee
 
-No results, no fee.
+No results, no fee. Let's talk first.
 
-### Available Support
+---
 
-- Business digitalization & optimization
-- System development & tech selection
-- AI implementation & automation
-- Off-grid & disaster-resilient infrastructure
-- International expansion (Japanese-English bilingual)
+### Does This Sound Familiar?
+
+**Business & Work**
+| Challenge | How I Can Help |
+|-----------|----------------|
+| "I want to move beyond paper and Excel, but where do I start?" | Let's map your workflow together and find the simplest path to digitize |
+| "Everyone's talking about AI—can it actually help my business?" | Let's explore concrete use cases and try something small |
+| "I need a website but agencies are expensive" | I'll help you build something you can update yourself |
+| "I don't have anyone tech-savvy to bounce ideas off" | I can be that sounding board—tech choices, quote reviews, whatever you need |
+
+**Life & Family**
+| Challenge | How I Can Help |
+|-----------|----------------|
+| "I want to digitize and preserve my parents' photos and letters" | Let's figure out the best way to organize and store them |
+| "I want backup power and connectivity for emergencies" | Solar, batteries, Starlink—I'll share what I've learned hands-on |
+| "I want to communicate with family overseas but the language barrier..." | From translation tools to actual bridging help |
+
+**Learning & New Ventures**
+| Challenge | How I Can Help |
+|-----------|----------------|
+| "I want to learn programming but don't know where to start" | Let's pick the right language and materials for your goals |
+| "I want to build an app or service as a side project" | From idea refinement to building something minimal that works |
+| "I struggle with technical documentation in English" | Reading strategies and AI-powered learning methods |
+
+---
+
+### How Consultations Work
+
+```
+1. Send me an email: "I'm struggling with this..."
+2. We'll chat online for about 30 minutes (free)
+3. If I can help, I'll propose next steps and costs
+4. Pay when we achieve results (results-based fee)
+```
+
+**Feel free to reach out.** Even if you're thinking "is this too small to ask?"—that's fine.
 
 ---
 
