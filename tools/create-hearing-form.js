@@ -83,13 +83,17 @@ const SECTIONS = [
     description: '活動へのご協力について / About supporting our activities'
   },
   {
-    title: 'Section 11: 免責事項・同意 / Disclaimers and Consent',
+    title: 'Section 11: アンケート / Survey',
+    description: 'サービス改善のため教えてください / Help us improve our service'
+  },
+  {
+    title: 'Section 12: 免責事項・同意 / Disclaimers and Consent',
     description: '重要事項のご確認 / Important confirmations'
   }
 ];
 
 // ============================================
-// QUESTIONS DEFINITION (79 questions total)
+// QUESTIONS DEFINITION (83 questions total)
 // ============================================
 
 const QUESTIONS = [
@@ -784,10 +788,48 @@ const QUESTIONS = [
   },
 
   // ============================================
-  // Section 11: 免責事項・同意 (4 questions)
+  // Section 11: アンケート (4 questions)
   // ============================================
   {
     section: 10,
+    type: 'CHECKBOX',
+    title: 'Soul Carrierをどこで知りましたか？ / How did you hear about Soul Carrier?',
+    helpText: '該当するものすべてにチェック / Check all that apply',
+    choices: [
+      '友人・知人からの紹介 / Friend/acquaintance referral',
+      '家族からの紹介 / Family referral',
+      '教会・寺院・コミュニティ / Church/temple/community',
+      'Facebook / Instagram / SNS',
+      'Google検索 / Google search',
+      '新聞・雑誌記事 / Newspaper/magazine article',
+      'テレビ・ラジオ / TV/radio',
+      'イベント・講演会 / Event/seminar',
+      'その他 / Other'
+    ]
+  },
+  {
+    section: 10,
+    type: 'TEXT',
+    title: '「その他」の場合、具体的に / If "Other", please specify'
+  },
+  {
+    section: 10,
+    type: 'PARAGRAPH',
+    title: '相談しようと思ったきっかけ / What prompted you to reach out?',
+    helpText: '何がきっかけで今回相談しようと思われましたか？ / What made you decide to contact us now?'
+  },
+  {
+    section: 10,
+    type: 'PARAGRAPH',
+    title: 'ご意見・ご要望 / Comments or Suggestions',
+    helpText: 'サービス改善のためのご意見があればお聞かせください / Any feedback to help us improve'
+  },
+
+  // ============================================
+  // Section 12: 免責事項・同意 (2 questions)
+  // ============================================
+  {
+    section: 11,
     type: 'CHECKBOX',
     title: 'サービスの限界についての理解 / Understanding of Service Limitations',
     required: true,
@@ -799,7 +841,7 @@ const QUESTIONS = [
     ]
   },
   {
-    section: 10,
+    section: 11,
     type: 'CHECKBOX',
     title: '費用負担についての理解 / Understanding of Cost Responsibility',
     required: true,
