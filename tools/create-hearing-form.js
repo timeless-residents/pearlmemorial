@@ -38,7 +38,7 @@ We will contact you within 3 business days.`
 };
 
 // ============================================
-// QUESTIONS DEFINITION
+// SECTIONS DEFINITION
 // ============================================
 
 const SECTIONS = [
@@ -51,30 +51,50 @@ const SECTIONS = [
     description: '故人について分かる範囲で / What you know about the deceased'
   },
   {
-    title: 'Section 3: ご遺灰について / About the Ashes',
+    title: 'Section 3: 故人の渡米歴 / Immigration History',
+    description: '渡米の経緯について / About immigration to the US'
+  },
+  {
+    title: 'Section 4: ご遺灰について / About the Ashes',
     description: '現在のご遺灰の状況 / Current situation of the ashes'
   },
   {
-    title: 'Section 4: 日本側の情報 / Information about Japan',
+    title: 'Section 5: 法的・行政手続き / Legal & Administrative',
+    description: '必要書類と権限について / Required documents and authority'
+  },
+  {
+    title: 'Section 6: 日本側の情報 / Information about Japan',
     description: '日本のお墓や親戚について / About grave and relatives in Japan'
   },
   {
-    title: 'Section 5: 資料・写真 / Documents and Photos',
+    title: 'Section 7: 資料・写真 / Documents and Photos',
     description: 'お持ちの資料について / About documents you have'
   },
   {
-    title: 'Section 6: ご希望・ご要望 / Your Preferences',
+    title: 'Section 8: ご希望・ご要望 / Your Preferences',
     description: 'ご希望をお聞かせください / Tell us your preferences'
   },
   {
-    title: 'Section 7: 協力・サポート / Cooperation and Support',
+    title: 'Section 9: 財務・予算 / Budget and Payment',
+    description: '費用について / About costs and budget'
+  },
+  {
+    title: 'Section 10: 協力・サポート / Cooperation and Support',
     description: '活動へのご協力について / About supporting our activities'
+  },
+  {
+    title: 'Section 11: 免責事項・同意 / Disclaimers and Consent',
+    description: '重要事項のご確認 / Important confirmations'
   }
 ];
 
+// ============================================
+// QUESTIONS DEFINITION (79 questions total)
+// ============================================
+
 const QUESTIONS = [
   // ============================================
-  // Section 1: 依頼者情報
+  // Section 1: 依頼者情報 (13 questions)
   // ============================================
   {
     section: 0,
@@ -148,9 +168,51 @@ const QUESTIONS = [
       '夕方以降 17:00+ / Evening'
     ]
   },
+  {
+    section: 0,
+    type: 'TEXT',
+    title: '緊急連絡先（別の方）/ Emergency Contact (Another Person)',
+    helpText: '連絡が取れない場合の代替連絡先 / Alternative contact if we cannot reach you'
+  },
+  {
+    section: 0,
+    type: 'PARAGRAPH',
+    title: '代理人情報 / Representative Information',
+    helpText: '高齢の場合など、主に連絡を取る方が別にいれば記入 / If someone else will be the main contact'
+  },
+  {
+    section: 0,
+    type: 'MULTIPLE_CHOICE',
+    title: 'パスポートの有無・有効期限 / Passport Status',
+    helpText: '日本渡航を検討する場合に必要です / Needed if considering travel to Japan',
+    choices: [
+      '有効なパスポートあり / Have valid passport',
+      'パスポートあるが期限切れ / Have expired passport',
+      'パスポートなし / No passport',
+      '渡航予定なし / Not planning to travel'
+    ]
+  },
+  {
+    section: 0,
+    type: 'PARAGRAPH',
+    title: '健康上の制限 / Health Limitations',
+    helpText: '長距離移動や渡航に影響する健康上の制限があれば / Any health conditions affecting travel'
+  },
+  {
+    section: 0,
+    type: 'MULTIPLE_CHOICE',
+    title: '渡航時の同行者予定 / Travel Companions',
+    choices: [
+      '一人で渡航予定 / Planning to travel alone',
+      '家族と渡航予定 / With family',
+      '友人と渡航予定 / With friends',
+      '未定 / Undecided',
+      '渡航予定なし / Not planning to travel'
+    ]
+  },
 
   // ============================================
-  // Section 2: 故人の基本情報
+  // Section 2: 故人の基本情報 (11 questions)
   // ============================================
   {
     section: 1,
@@ -209,28 +271,80 @@ const QUESTIONS = [
   {
     section: 1,
     type: 'TEXT',
+    title: '戦前の日本での職業 / Occupation in Japan (Pre-war)',
+    helpText: '家族特定の手がかりになります / Helps identify family'
+  },
+  {
+    section: 1,
+    type: 'TEXT',
+    title: 'ハワイでの職業・勤務先 / Occupation/Employer in Hawaii',
+    helpText: '例: Dole Plantation, 農場労働者'
+  },
+
+  // ============================================
+  // Section 3: 故人の渡米歴 (6 questions)
+  // ============================================
+  {
+    section: 2,
+    type: 'TEXT',
     title: '渡米時期 / When did they immigrate to the US?',
     helpText: '例: 1920年頃、戦前'
   },
   {
-    section: 1,
+    section: 2,
+    type: 'MULTIPLE_CHOICE',
+    title: '渡米時の出港地 / Departure Port',
+    helpText: '日本から出発した港 / Port of departure from Japan',
+    choices: [
+      '横浜 / Yokohama',
+      '神戸 / Kobe',
+      '長崎 / Nagasaki',
+      'その他 / Other',
+      '不明 / Unknown'
+    ]
+  },
+  {
+    section: 2,
+    type: 'TEXT',
+    title: '船名（わかれば）/ Ship Name (if known)',
+    helpText: '移民船記録との照合に役立ちます / Helps cross-reference immigration records'
+  },
+  {
+    section: 2,
     type: 'PARAGRAPH',
     title: '渡米の経緯 / Immigration circumstances',
-    helpText: '労働移民、写真花嫁、留学など分かる範囲で'
+    helpText: '労働移民、写真花嫁、呼び寄せ、留学など分かる範囲で'
+  },
+  {
+    section: 2,
+    type: 'MULTIPLE_CHOICE',
+    title: '強制収容歴（WWII）/ WWII Internment History',
+    helpText: '第二次世界大戦中の強制収容について / About wartime internment',
+    choices: [
+      '収容された / Was interned',
+      '収容されなかった / Was not interned',
+      '不明 / Unknown'
+    ]
+  },
+  {
+    section: 2,
+    type: 'TEXT',
+    title: '収容所名（該当する場合）/ Internment Camp Name (if applicable)',
+    helpText: '例: Honouliuli, Manzanar'
   },
 
   // ============================================
-  // Section 3: ご遺灰について
+  // Section 4: ご遺灰について (6 questions)
   // ============================================
   {
-    section: 2,
+    section: 3,
     type: 'PARAGRAPH',
     title: '現在のご遺灰の保管場所 / Current Location of Ashes',
     required: true,
     helpText: '住所、または「自宅」「〇〇霊園」など'
   },
   {
-    section: 2,
+    section: 3,
     type: 'MULTIPLE_CHOICE',
     title: '骨壷の種類・状態 / Urn Type and Condition',
     choices: [
@@ -242,7 +356,19 @@ const QUESTIONS = [
     ]
   },
   {
-    section: 2,
+    section: 3,
+    type: 'TEXT',
+    title: '骨壷のサイズ（概算）/ Urn Size (approximate)',
+    helpText: '例: 高さ20cm程度、小さめ / e.g., about 20cm tall, small'
+  },
+  {
+    section: 3,
+    type: 'TEXT',
+    title: '遺灰の量（概算）/ Amount of Ashes (approximate)',
+    helpText: '輸送方法の計画に必要です / Needed for shipping planning'
+  },
+  {
+    section: 3,
     type: 'MULTIPLE_CHOICE',
     title: '分骨の希望 / Do you want to keep some ashes?',
     choices: [
@@ -252,74 +378,187 @@ const QUESTIONS = [
     ]
   },
   {
-    section: 2,
+    section: 3,
     type: 'TEXT',
     title: '分骨する場合の割合 / If keeping some, what portion?',
     helpText: '例: 半分、少量のみ'
   },
 
   // ============================================
-  // Section 4: 日本側の情報
+  // Section 5: 法的・行政手続き (6 questions)
   // ============================================
   {
-    section: 3,
+    section: 4,
+    type: 'MULTIPLE_CHOICE',
+    title: '遺灰の法的権限 / Legal Authority over Ashes',
+    required: true,
+    helpText: '遺灰を移動・処分する法的権限について / Your legal authority to handle the ashes',
+    choices: [
+      '私が遺言執行者 / I am the executor',
+      '私が唯一の相続人 / I am the sole heir',
+      '相続人の一人 / I am one of multiple heirs',
+      '法的権限は不明 / Legal authority unclear',
+      'その他 / Other'
+    ]
+  },
+  {
+    section: 4,
+    type: 'MULTIPLE_CHOICE',
+    title: '他の相続人・家族の同意 / Consent from Other Heirs/Family',
+    helpText: '他の家族がいる場合、この計画への同意について / About consent from other family members',
+    choices: [
+      '全員同意済み / All have agreed',
+      '大半は同意 / Most have agreed',
+      'まだ話し合っていない / Haven\'t discussed yet',
+      '反対する人がいる / Some oppose',
+      '他に相続人・家族はいない / No other heirs/family'
+    ]
+  },
+  {
+    section: 4,
+    type: 'MULTIPLE_CHOICE',
+    title: '死亡証明書の有無 / Death Certificate',
+    choices: [
+      '持っている / Have it',
+      '取得可能 / Can obtain',
+      '持っていない・取得困難 / Don\'t have / Difficult to obtain',
+      '不明 / Unknown'
+    ]
+  },
+  {
+    section: 4,
+    type: 'MULTIPLE_CHOICE',
+    title: '火葬証明書の有無 / Cremation Certificate',
+    choices: [
+      '持っている / Have it',
+      '取得可能 / Can obtain',
+      '持っていない・取得困難 / Don\'t have / Difficult to obtain',
+      '不明 / Unknown'
+    ]
+  },
+  {
+    section: 4,
+    type: 'MULTIPLE_CHOICE',
+    title: '故人の遺言書の有無 / Deceased\'s Will',
+    helpText: '日本への帰葬について言及があるか / Does it mention return to Japan?',
+    choices: [
+      '遺言書あり・帰葬の希望記載 / Will exists, mentions return to Japan',
+      '遺言書あり・帰葬の記載なし / Will exists, no mention of return',
+      '遺言書なし / No will',
+      '不明 / Unknown'
+    ]
+  },
+  {
+    section: 4,
+    type: 'PARAGRAPH',
+    title: '故人の遺志（口頭など）/ Deceased\'s Wishes (verbal, etc.)',
+    helpText: '遺言書以外で、故人が日本への帰葬を望んでいたことを示すもの / Any indication the deceased wanted to return to Japan'
+  },
+
+  // ============================================
+  // Section 6: 日本側の情報 (15 questions)
+  // ============================================
+  {
+    section: 5,
     type: 'TEXT',
     title: '宗教・宗派 / Religion/Denomination',
     helpText: '例: 曹洞宗、真言宗、キリスト教、神道など'
   },
   {
-    section: 3,
+    section: 5,
     type: 'TEXT',
     title: '戒名・法名（仏教の場合）/ Buddhist Posthumous Name',
     helpText: '墓石に刻まれていることが多いです'
   },
   {
-    section: 3,
+    section: 5,
     type: 'PARAGRAPH',
     title: '日本のお墓の場所 / Grave Location in Japan',
     helpText: '寺の名前、住所、または「〇〇県〇〇市の寺」など'
   },
   {
-    section: 3,
+    section: 5,
+    type: 'TEXT',
+    title: '寺院・神社・霊園の連絡先 / Temple/Shrine/Cemetery Contact',
+    helpText: '電話番号やメールアドレス（分かれば）/ Phone or email if known'
+  },
+  {
+    section: 5,
+    type: 'MULTIPLE_CHOICE',
+    title: '墓地の種類 / Cemetery Type',
+    choices: [
+      '寺院墓地 / Temple cemetery',
+      '公営墓地 / Public cemetery',
+      '民間霊園 / Private cemetery',
+      '共同墓地 / Community cemetery',
+      '不明 / Unknown'
+    ]
+  },
+  {
+    section: 5,
+    type: 'MULTIPLE_CHOICE',
+    title: 'お墓の管理状況 / Grave Maintenance Status',
+    helpText: '長年放置されているお墓は清掃・修復が必要な場合があります',
+    choices: [
+      '親戚が管理している / Relatives maintain it',
+      '寺院・霊園が管理している / Temple/cemetery maintains it',
+      '長年放置されている可能性 / Possibly abandoned for years',
+      '不明 / Unknown'
+    ]
+  },
+  {
+    section: 5,
+    type: 'MULTIPLE_CHOICE',
+    title: '檀家関係の有無 / Temple Membership (Danka)',
+    helpText: '寺院墓地の場合、檀家としての関係があるかどうか',
+    choices: [
+      '檀家として継続中 / Still a member',
+      '過去は檀家だった / Was a member in the past',
+      '檀家ではない / Not a member',
+      '不明 / Unknown'
+    ]
+  },
+  {
+    section: 5,
     type: 'PARAGRAPH',
     title: 'お墓の場所の記憶 / Memories of the Grave Location',
     helpText: '寺の周辺環境、駐車場、入口からの距離など覚えていること'
   },
   {
-    section: 3,
+    section: 5,
     type: 'PARAGRAPH',
     title: '墓石の形や特徴 / Gravestone Shape/Features',
     helpText: '和型、洋型、大きさ、刻まれている文字など'
   },
   {
-    section: 3,
+    section: 5,
     type: 'TEXT',
     title: '家紋 / Family Crest (Kamon)',
     helpText: '例: 抱き茗荷、丸に橘'
   },
   {
-    section: 3,
+    section: 5,
     type: 'TEXT',
     title: '父親の名前 / Father\'s Name'
   },
   {
-    section: 3,
+    section: 5,
     type: 'TEXT',
     title: '母親の名前（旧姓も）/ Mother\'s Name (including maiden name)'
   },
   {
-    section: 3,
+    section: 5,
     type: 'PARAGRAPH',
     title: '兄弟姉妹の名前 / Siblings\' Names'
   },
   {
-    section: 3,
+    section: 5,
     type: 'PARAGRAPH',
     title: '日本にいる親戚の情報 / Relatives in Japan',
     helpText: '名前、関係、連絡先（分かれば）'
   },
   {
-    section: 3,
+    section: 5,
     type: 'MULTIPLE_CHOICE',
     title: '日本の親戚との関係性 / Relationship with Japan relatives',
     choices: [
@@ -332,10 +571,10 @@ const QUESTIONS = [
   },
 
   // ============================================
-  // Section 5: 資料・写真
+  // Section 7: 資料・写真 (3 questions)
   // ============================================
   {
-    section: 4,
+    section: 6,
     type: 'CHECKBOX',
     title: '古い写真はありますか？ / Do you have old photos?',
     choices: [
@@ -347,7 +586,7 @@ const QUESTIONS = [
     ]
   },
   {
-    section: 4,
+    section: 6,
     type: 'CHECKBOX',
     title: '古い書類はありますか？ / Do you have old documents?',
     choices: [
@@ -355,27 +594,34 @@ const QUESTIONS = [
       '戸籍謄本 / Family register copy',
       'パスポート / Passport',
       '移民関連書類 / Immigration documents',
+      '強制収容関連書類 / Internment documents',
       'なし / None'
     ]
   },
   {
-    section: 4,
+    section: 6,
     type: 'FILE',
     title: '写真・書類のアップロード / Upload Photos/Documents',
     helpText: '複数ファイル可。後から追加も可能です'
   },
 
   // ============================================
-  // Section 6: ご希望・ご要望
+  // Section 8: ご希望・ご要望 (11 questions)
   // ============================================
   {
-    section: 5,
+    section: 7,
+    type: 'PARAGRAPH',
+    title: 'このプロジェクトへの思い / Your Motivation for This Project',
+    helpText: 'なぜ故人を日本に帰したいと思われたのですか？ / Why do you want to return the deceased to Japan?'
+  },
+  {
+    section: 7,
     type: 'PARAGRAPH',
     title: '希望する実施時期 / Preferred Timing',
     helpText: '例: 2025年春、故人の命日（〇月）に合わせて'
   },
   {
-    section: 5,
+    section: 7,
     type: 'MULTIPLE_CHOICE',
     title: '日本への渡航予定 / Travel Plans to Japan',
     choices: [
@@ -385,7 +631,7 @@ const QUESTIONS = [
     ]
   },
   {
-    section: 5,
+    section: 7,
     type: 'MULTIPLE_CHOICE',
     title: '日本での同行サポート希望 / Want Accompaniment in Japan?',
     choices: [
@@ -395,7 +641,7 @@ const QUESTIONS = [
     ]
   },
   {
-    section: 5,
+    section: 7,
     type: 'MULTIPLE_CHOICE',
     title: '希望する最終安置方法 / Preferred Final Arrangement',
     choices: [
@@ -407,13 +653,37 @@ const QUESTIONS = [
     ]
   },
   {
-    section: 5,
+    section: 7,
+    type: 'MULTIPLE_CHOICE',
+    title: '納骨式の規模希望 / Ceremony Size Preference',
+    choices: [
+      '家族のみで静かに / Family only, quiet ceremony',
+      '日本の親戚も招待したい / Want to invite Japan relatives',
+      '盛大に行いたい / Want a larger ceremony',
+      '式は不要 / No ceremony needed',
+      '未定 / Undecided'
+    ]
+  },
+  {
+    section: 7,
     type: 'PARAGRAPH',
     title: '日本で購入してほしいもの / Items to Purchase in Japan',
     helpText: '故郷の品、お供え物など'
   },
   {
-    section: 5,
+    section: 7,
+    type: 'MULTIPLE_CHOICE',
+    title: '継続的なお墓参り代行への関心 / Interest in Ongoing Grave Visit Service',
+    helpText: '納骨後、定期的にお墓参りを代行するサービス（有料）',
+    choices: [
+      'とても興味がある / Very interested',
+      '少し興味がある / Somewhat interested',
+      '興味がない / Not interested',
+      '詳細を聞きたい / Want more information'
+    ]
+  },
+  {
+    section: 7,
     type: 'MULTIPLE_CHOICE',
     title: '家紋入り記念品への関心 / Interest in Family Crest Memorials',
     choices: [
@@ -423,17 +693,67 @@ const QUESTIONS = [
     ]
   },
   {
-    section: 5,
+    section: 7,
     type: 'PARAGRAPH',
     title: 'その他のご要望 / Other Requests',
     helpText: '特別な儀式、故人の遺志、その他何でも'
   },
 
   // ============================================
-  // Section 7: 協力・サポート
+  // Section 9: 財務・予算 (4 questions)
   // ============================================
   {
-    section: 6,
+    section: 8,
+    type: 'MULTIPLE_CHOICE',
+    title: '予算感 / Budget Range',
+    helpText: '渡航費・滞在費・有料オプション等を含む概算 / Approximate including travel, lodging, paid options',
+    choices: [
+      '$1,000未満 / Under $1,000',
+      '$1,000-$3,000',
+      '$3,000-$5,000',
+      '$5,000-$10,000',
+      '$10,000以上 / Over $10,000',
+      '予算は柔軟 / Budget is flexible',
+      'まだ分からない / Not sure yet'
+    ]
+  },
+  {
+    section: 8,
+    type: 'MULTIPLE_CHOICE',
+    title: '分割払いへの関心 / Interest in Payment Plans',
+    choices: [
+      '一括払いで問題ない / Can pay in full',
+      '分割払いを希望 / Would prefer payment plan',
+      '内容による / Depends on amount',
+      '不要（費用がかからない見込み）/ Not needed'
+    ]
+  },
+  {
+    section: 8,
+    type: 'MULTIPLE_CHOICE',
+    title: '寄付可能な金額帯 / Potential Donation Range',
+    helpText: 'Soul Carrier活動への任意の寄付について / Optional donation to Soul Carrier activities',
+    choices: [
+      '寄付を検討したい / Want to consider donating',
+      '$100未満 / Under $100',
+      '$100-$500',
+      '$500-$1,000',
+      '$1,000以上 / Over $1,000',
+      '今は難しい / Not possible now'
+    ]
+  },
+  {
+    section: 8,
+    type: 'PARAGRAPH',
+    title: '費用に関するご質問・ご懸念 / Questions/Concerns about Costs',
+    helpText: '費用について不安な点があればお聞かせください / Let us know if you have any concerns about costs'
+  },
+
+  // ============================================
+  // Section 10: 協力・サポート (3 questions)
+  // ============================================
+  {
+    section: 9,
     type: 'MULTIPLE_CHOICE',
     title: '体験談の共有・広報への協力 / Share Story / Help Outreach',
     choices: [
@@ -443,7 +763,7 @@ const QUESTIONS = [
     ]
   },
   {
-    section: 6,
+    section: 9,
     type: 'MULTIPLE_CHOICE',
     title: '活動への資金・物資援助 / Financial/Material Support',
     choices: [
@@ -453,13 +773,41 @@ const QUESTIONS = [
     ]
   },
   {
-    section: 6,
+    section: 9,
     type: 'MULTIPLE_CHOICE',
     title: '有料オプションへの関心 / Interest in Paid Options',
     choices: [
       '関心あり / Interested',
       '内容による / Depends on what\'s offered',
       '関心なし / Not interested'
+    ]
+  },
+
+  // ============================================
+  // Section 11: 免責事項・同意 (4 questions)
+  // ============================================
+  {
+    section: 10,
+    type: 'CHECKBOX',
+    title: 'サービスの限界についての理解 / Understanding of Service Limitations',
+    required: true,
+    helpText: '以下すべてにチェックしてください / Please check all items',
+    choices: [
+      '調査の結果、お墓が見つからない・特定できない場合があります / Research may not locate or identify the grave',
+      '寺院や親戚の事情により、納骨が実現しない可能性があります / Interment may not be possible due to temple or family circumstances',
+      '法的・行政的な問題により、遺灰の輸送ができない場合があります / Legal/administrative issues may prevent transportation of ashes'
+    ]
+  },
+  {
+    section: 10,
+    type: 'CHECKBOX',
+    title: '費用負担についての理解 / Understanding of Cost Responsibility',
+    required: true,
+    helpText: '以下すべてにチェックしてください / Please check all items',
+    choices: [
+      '調査・手続きに関わる実費（交通費、書類取得費等）は依頼者負担です / Actual costs (travel, document fees, etc.) are the requester\'s responsibility',
+      '有料オプションは別途料金が発生します / Paid options incur additional charges',
+      'プロジェクトが中断・中止となった場合、既に発生した費用は返金されません / Costs already incurred are non-refundable if the project is discontinued'
     ]
   }
 ];
@@ -497,15 +845,27 @@ function createHearingForm() {
   });
 
   // 確認チェックボックス
+  form.addPageBreakItem()
+    .setTitle('確認 / Confirmation')
+    .setHelpText('送信前にご確認ください / Please confirm before submitting');
+
   form.addCheckboxItem()
     .setTitle('送信前の確認 / Pre-submission Confirmation')
     .setChoices([
-      form.createChoice('上記の情報は正確です / The above information is accurate')
+      form.createChoice('上記の情報は正確です。後から修正・追加が可能であることを理解しています。 / The above information is accurate. I understand I can update it later.')
+    ])
+    .setRequired(true);
+
+  form.addCheckboxItem()
+    .setTitle('プライバシーポリシーへの同意 / Privacy Policy Agreement')
+    .setChoices([
+      form.createChoice('プライバシーポリシーに同意します / I agree to the Privacy Policy')
     ])
     .setRequired(true);
 
   Logger.log('フォーム作成完了: ' + form.getEditUrl());
   Logger.log('回答用URL: ' + form.getPublishedUrl());
+  Logger.log('質問数: ' + QUESTIONS.length);
 
   return form;
 }
@@ -597,22 +957,56 @@ function updateForm(formId) {
   });
 
   // 確認チェックボックス
+  form.addPageBreakItem()
+    .setTitle('確認 / Confirmation')
+    .setHelpText('送信前にご確認ください / Please confirm before submitting');
+
   form.addCheckboxItem()
     .setTitle('送信前の確認 / Pre-submission Confirmation')
     .setChoices([
-      form.createChoice('上記の情報は正確です / The above information is accurate')
+      form.createChoice('上記の情報は正確です。後から修正・追加が可能であることを理解しています。 / The above information is accurate. I understand I can update it later.')
+    ])
+    .setRequired(true);
+
+  form.addCheckboxItem()
+    .setTitle('プライバシーポリシーへの同意 / Privacy Policy Agreement')
+    .setChoices([
+      form.createChoice('プライバシーポリシーに同意します / I agree to the Privacy Policy')
     ])
     .setRequired(true);
 
   Logger.log('フォーム更新完了: ' + form.getEditUrl());
+  Logger.log('質問数: ' + QUESTIONS.length);
 }
 
 /**
  * 質問一覧をログ出力（デバッグ用）
  */
 function listQuestions() {
+  let currentSection = -1;
   QUESTIONS.forEach((q, i) => {
-    Logger.log(`${i + 1}. [Section ${q.section + 1}] ${q.type}: ${q.title}`);
+    if (q.section !== currentSection) {
+      currentSection = q.section;
+      Logger.log(`\n=== ${SECTIONS[currentSection].title} ===`);
+    }
+    Logger.log(`${i + 1}. [${q.type}] ${q.title}${q.required ? ' *' : ''}`);
   });
-  Logger.log(`Total: ${QUESTIONS.length} questions`);
+  Logger.log(`\nTotal: ${QUESTIONS.length} questions + 2 confirmation = ${QUESTIONS.length + 2} items`);
+}
+
+/**
+ * セクションごとの質問数を表示
+ */
+function countBySection() {
+  const counts = {};
+  QUESTIONS.forEach(q => {
+    const sectionName = SECTIONS[q.section].title;
+    counts[sectionName] = (counts[sectionName] || 0) + 1;
+  });
+
+  Logger.log('=== Questions by Section ===');
+  Object.entries(counts).forEach(([section, count]) => {
+    Logger.log(`${section}: ${count} questions`);
+  });
+  Logger.log(`\nTotal: ${QUESTIONS.length} questions`);
 }
