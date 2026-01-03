@@ -848,17 +848,16 @@ bit.ly/resonanceus</pre>
         document.getElementById('phase3').style.display = 'none';
         skipOption.style.display = 'none';
       } else if (checked > 0) {
+        // 1-2 items checked: encourage to continue, don't judge yet
         resultDiv.innerHTML = `
-          <div class="result-box referrer">
-            <h3 class="ja">あなた自身は対象外かもしれませんが...</h3>
-            <h3 class="en">You might not be a candidate, but...</h3>
-            <p class="ja">共鳴の輪を広げる力になれます。次のステップへ進みましょう。</p>
-            <p class="en">You can help spread the circle of resonance. Let's continue.</p>
-          </div>
+          <p style="color: #666; font-style: italic;">
+            <span class="ja">残りの項目も確認してください</span>
+            <span class="en">Please check the remaining items</span>
+          </p>
         `;
-        skipOption.style.display = 'none';
+        skipOption.style.display = 'block';
         document.getElementById('phase2').style.display = 'none';
-        document.getElementById('phase3').style.display = 'block';
+        document.getElementById('phase3').style.display = 'none';
       } else {
         resultDiv.innerHTML = '';
         skipOption.style.display = 'block';
