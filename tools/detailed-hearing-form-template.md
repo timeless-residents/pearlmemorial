@@ -1,6 +1,6 @@
 # Soul Carrier 詳細ヒアリングフォーム / Detailed Hearing Form
 
-Google Form 作成用テンプレート（89項目）
+Google Form 作成用テンプレート（92項目）
 
 ---
 
@@ -475,7 +475,26 @@ Google Form 作成用テンプレート（89項目）
   - 詳細を聞きたい / Want more information
   - 興味がない / Not interested
 
-### Q72. その他のご要望 / Other Requests
+### Q72. DNA鑑定サービスとの併用への関心 / Interest in DNA Testing Services
+- Type: Multiple choice
+- Hint: 家系調査やルーツ探しにDNA鑑定を併用するオプション / Option to combine DNA testing for genealogy research
+- Options:
+  - とても興味がある / Very interested
+  - 少し興味がある / Somewhat interested
+  - 既にDNA検査済み / Already done DNA testing
+  - 詳細を聞きたい / Want more information
+  - 興味がない / Not interested
+
+### Q73. 家系図作成支援への関心 / Interest in Family Tree Creation
+- Type: Multiple choice
+- Hint: 戸籍調査をもとに家系図を作成するサービス / Service to create a family tree based on family register research
+- Options:
+  - とても興味がある / Very interested
+  - 少し興味がある / Somewhat interested
+  - 詳細を聞きたい / Want more information
+  - 興味がない / Not interested
+
+### Q74. その他のご要望 / Other Requests
 - Type: Long answer
 - Hint: 特別な儀式、故人の遺志、その他何でも
 
@@ -483,7 +502,7 @@ Google Form 作成用テンプレート（89項目）
 
 ## Section 9: 財務・予算 / Budget and Payment (4問)
 
-### Q73. 予算感 / Budget Range
+### Q75. 予算感 / Budget Range
 - Type: Multiple choice
 - Hint: 渡航費・滞在費・有料オプション等を含む概算 / Approximate including travel, lodging, paid options
 - Options:
@@ -495,7 +514,7 @@ Google Form 作成用テンプレート（89項目）
   - 予算は柔軟 / Budget is flexible
   - まだ分からない / Not sure yet
 
-### Q74. 分割払いへの関心 / Interest in Payment Plans
+### Q76. 分割払いへの関心 / Interest in Payment Plans
 - Type: Multiple choice
 - Options:
   - 一括払いで問題ない / Can pay in full
@@ -503,7 +522,7 @@ Google Form 作成用テンプレート（89項目）
   - 内容による / Depends on amount
   - 不要（費用がかからない見込み）/ Not needed
 
-### Q75. 寄付可能な金額帯 / Potential Donation Range
+### Q77. 寄付可能な金額帯 / Potential Donation Range
 - Type: Multiple choice
 - Hint: Soul Carrier活動への任意の寄付について / Optional donation to Soul Carrier activities
 - Options:
@@ -514,7 +533,7 @@ Google Form 作成用テンプレート（89項目）
   - $1,000以上 / Over $1,000
   - 今は難しい / Not possible now
 
-### Q76. 費用に関するご質問・ご懸念 / Questions/Concerns about Costs
+### Q78. 費用に関するご質問・ご懸念 / Questions/Concerns about Costs
 - Type: Long answer
 - Hint: 費用について不安な点があればお聞かせください / Let us know if you have any concerns about costs
 
@@ -522,21 +541,21 @@ Google Form 作成用テンプレート（89項目）
 
 ## Section 10: 協力・サポート / Cooperation and Support (3問)
 
-### Q77. 体験談の共有・広報への協力 / Share Story / Help Outreach
+### Q79. 体験談の共有・広報への協力 / Share Story / Help Outreach
 - Type: Multiple choice
 - Options:
   - 協力可能 / Can cooperate
   - 匿名なら協力可能 / Anonymous only
   - 協力は難しい / Cannot cooperate
 
-### Q78. 活動への資金・物資援助 / Financial/Material Support
+### Q80. 活動への資金・物資援助 / Financial/Material Support
 - Type: Multiple choice
 - Options:
   - 支援を検討したい / Want to consider supporting
   - 今は難しい / Not possible now
   - 詳しく聞きたい / Want more information
 
-### Q79. 有料オプションへの関心 / Interest in Paid Options
+### Q81. 有料オプションへの関心 / Interest in Paid Options
 - Type: Multiple choice
 - Options:
   - 関心あり / Interested
@@ -547,7 +566,7 @@ Google Form 作成用テンプレート（89項目）
 
 ## Section 11: アンケート / Survey (6問)
 
-### Q80. Soul Carrierをどこで知りましたか？ / How did you hear about Soul Carrier?
+### Q82. Soul Carrierをどこで知りましたか？ / How did you hear about Soul Carrier?
 - Type: Checkboxes
 - Hint: 該当するものすべてにチェック / Check all that apply
 - Options:
@@ -568,7 +587,24 @@ Google Form 作成用テンプレート（89項目）
 - Type: Long answer
 - Hint: 何がきっかけで今回相談しようと思われましたか？ / What made you decide to contact us now?
 
-### Q83. 友人・知人にSoul Carrierを勧める可能性 / How likely would you recommend Soul Carrier?
+### Q83. これまで試した方法 / Methods you have tried before
+- Type: Checkboxes
+- Hint: 該当するものすべてにチェック / Check all that apply
+- Options:
+  - 自分で日本の親戚に連絡を試みた / Tried contacting relatives in Japan myself
+  - 自分でお墓を探そうとした / Tried to find the grave myself
+  - 日本に行ってみた / Visited Japan
+  - 他のサービス・業者に相談した / Consulted other services/providers
+  - 教会・寺院に相談した / Consulted church/temple
+  - インターネットで調べた / Searched online
+  - 特に何も試していない / Haven't tried anything
+  - その他 / Other
+
+### Q84. これまで困ったこと・うまくいかなかったこと / Difficulties you have faced
+- Type: Long answer
+- Hint: 今までどんなことで困りましたか？何がうまくいきませんでしたか？ / What challenges have you encountered? What didn't work?
+
+### Q85. 友人・知人にSoul Carrierを勧める可能性 / How likely would you recommend Soul Carrier?
 - Type: Multiple choice
 - Hint: 0=全く勧めない、10=強く勧める / 0=Not at all, 10=Very likely
 - Options:
@@ -660,12 +696,12 @@ If you have additional information or photos, please send them to info@pearlmemo
 | 5. 法的・行政手続き | 6 |
 | 6. 日本側の情報 | 15 |
 | 7. 資料・写真 | 3 |
-| 8. ご希望・ご要望 | 12 |
+| 8. ご希望・ご要望 | 14 |
 | 9. 財務・予算 | 4 |
 | 10. 協力・サポート | 3 |
-| 11. アンケート | 6 |
+| 11. アンケート | 8 |
 | 12. 免責事項・同意 | 4 |
-| **合計** | **89** |
+| **合計** | **92** |
 
 ---
 

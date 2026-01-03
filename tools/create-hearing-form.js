@@ -93,7 +93,7 @@ const SECTIONS = [
 ];
 
 // ============================================
-// QUESTIONS DEFINITION (87 questions total)
+// QUESTIONS DEFINITION (92 questions total)
 // ============================================
 
 const QUESTIONS = [
@@ -722,6 +722,31 @@ const QUESTIONS = [
   },
   {
     section: 7,
+    type: 'MULTIPLE_CHOICE',
+    title: 'DNA鑑定サービスとの併用への関心 / Interest in DNA Testing Services',
+    helpText: '家系調査やルーツ探しにDNA鑑定を併用するオプション / Option to combine DNA testing for genealogy research',
+    choices: [
+      'とても興味がある / Very interested',
+      '少し興味がある / Somewhat interested',
+      '既にDNA検査済み / Already done DNA testing',
+      '詳細を聞きたい / Want more information',
+      '興味がない / Not interested'
+    ]
+  },
+  {
+    section: 7,
+    type: 'MULTIPLE_CHOICE',
+    title: '家系図作成支援への関心 / Interest in Family Tree Creation',
+    helpText: '戸籍調査をもとに家系図を作成するサービス / Service to create a family tree based on family register research',
+    choices: [
+      'とても興味がある / Very interested',
+      '少し興味がある / Somewhat interested',
+      '詳細を聞きたい / Want more information',
+      '興味がない / Not interested'
+    ]
+  },
+  {
+    section: 7,
     type: 'PARAGRAPH',
     title: 'その他のご要望 / Other Requests',
     helpText: '特別な儀式、故人の遺志、その他何でも'
@@ -841,6 +866,28 @@ const QUESTIONS = [
     type: 'PARAGRAPH',
     title: '相談しようと思ったきっかけ / What prompted you to reach out?',
     helpText: '何がきっかけで今回相談しようと思われましたか？ / What made you decide to contact us now?'
+  },
+  {
+    section: 10,
+    type: 'CHECKBOX',
+    title: 'これまで試した方法 / Methods you have tried before',
+    helpText: '該当するものすべてにチェック / Check all that apply',
+    choices: [
+      '自分で日本の親戚に連絡を試みた / Tried contacting relatives in Japan myself',
+      '自分でお墓を探そうとした / Tried to find the grave myself',
+      '日本に行ってみた / Visited Japan',
+      '他のサービス・業者に相談した / Consulted other services/providers',
+      '教会・寺院に相談した / Consulted church/temple',
+      'インターネットで調べた / Searched online',
+      '特に何も試していない / Haven\'t tried anything',
+      'その他 / Other'
+    ]
+  },
+  {
+    section: 10,
+    type: 'PARAGRAPH',
+    title: 'これまで困ったこと・うまくいかなかったこと / Difficulties you have faced',
+    helpText: '今までどんなことで困りましたか？何がうまくいきませんでしたか？ / What challenges have you encountered? What didn\'t work?'
   },
   {
     section: 10,
