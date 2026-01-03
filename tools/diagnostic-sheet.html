@@ -922,7 +922,7 @@ bit.ly/resonanceus</pre>
       if (yes) {
         document.getElementById('q2-box').style.display = 'block';
       } else {
-        showNotCandidate();
+        showNotCandidate(1);
       }
     }
 
@@ -931,7 +931,7 @@ bit.ly/resonanceus</pre>
       if (yes) {
         document.getElementById('q3-box').style.display = 'block';
       } else {
-        showNotCandidate();
+        showNotCandidate(2);
       }
     }
 
@@ -940,7 +940,7 @@ bit.ly/resonanceus</pre>
       if (yes) {
         showCandidate();
       } else {
-        showNotCandidate();
+        showNotCandidate(3);
       }
     }
 
@@ -951,19 +951,27 @@ bit.ly/resonanceus</pre>
           <h3 class="en">You are a Soul Carrier candidate</h3>
           <p class="ja">次のステップで、情報の準備状況を確認しましょう</p>
           <p class="en">Let's check your information readiness in the next step</p>
+          <button class="btn-back" onclick="goBack(3)">
+            <span class="ja">← 戻る</span>
+            <span class="en">← Back</span>
+          </button>
         </div>
       `;
       document.getElementById('phase2').style.display = 'block';
       document.getElementById('phase3').style.display = 'none';
     }
 
-    function showNotCandidate() {
+    function showNotCandidate(fromQuestion) {
       document.getElementById('self-result').innerHTML = `
         <div class="result-box referrer">
           <h3 class="ja">対象ではありませんが...</h3>
           <h3 class="en">You're not a candidate, but...</h3>
           <p class="ja">あなたの周りに、日本へ還りたいご遺灰を抱えている方はいませんか？</p>
           <p class="en">Do you know anyone who has ashes they wish to return to Japan?</p>
+          <button class="btn-back" onclick="goBack(${fromQuestion})">
+            <span class="ja">← 戻る</span>
+            <span class="en">← Back</span>
+          </button>
         </div>
       `;
       document.getElementById('skip-option').style.display = 'block';
