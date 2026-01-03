@@ -917,6 +917,24 @@ const QUESTIONS = [
   {
     section: 10,
     type: 'PARAGRAPH',
+    title: 'この取り組みを通じて子孫に残したいこと / Legacy you want to leave for future generations',
+    helpText: 'この経験を通じて、お子様やお孫様に伝えたいことはありますか？ / What would you like your children or grandchildren to learn from this experience?'
+  },
+  {
+    section: 10,
+    type: 'PARAGRAPH',
+    title: 'コミュニティや社会への影響 / Impact on community and society',
+    helpText: 'この取り組みがコミュニティや社会にどのような影響を与えると思いますか？ / What impact do you think this initiative could have on your community or society?'
+  },
+  {
+    section: 10,
+    type: 'PARAGRAPH',
+    title: 'アイデンティティへの影響 / Impact on your identity',
+    helpText: 'この取り組みがあなたのアイデンティティや自己認識にどのような変化をもたらすと思いますか？ / What changes do you think this experience might bring to your identity or self-understanding?'
+  },
+  {
+    section: 10,
+    type: 'PARAGRAPH',
     title: 'ご意見・ご要望 / Comments or Suggestions',
     helpText: 'サービス改善のためのご意見があればお聞かせください / Any feedback to help us improve'
   },

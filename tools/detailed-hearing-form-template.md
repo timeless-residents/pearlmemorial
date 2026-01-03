@@ -1,6 +1,6 @@
 # Soul Carrier 詳細ヒアリングフォーム / Detailed Hearing Form
 
-Google Form 作成用テンプレート（92項目）
+Google Form 作成用テンプレート（96項目）
 
 ---
 
@@ -564,7 +564,7 @@ Google Form 作成用テンプレート（92項目）
 
 ---
 
-## Section 11: アンケート / Survey (6問)
+## Section 11: アンケート / Survey (10問)
 
 ### Q82. Soul Carrierをどこで知りましたか？ / How did you hear about Soul Carrier?
 - Type: Checkboxes
@@ -580,14 +580,14 @@ Google Form 作成用テンプレート（92項目）
   - イベント・講演会 / Event/seminar
   - その他 / Other
 
-### Q81. 「その他」の場合、具体的に / If "Other", please specify
+### Q83. 「その他」の場合、具体的に / If "Other", please specify
 - Type: Short answer
 
-### Q82. 相談しようと思ったきっかけ / What prompted you to reach out?
+### Q84. 相談しようと思ったきっかけ / What prompted you to reach out?
 - Type: Long answer
 - Hint: 何がきっかけで今回相談しようと思われましたか？ / What made you decide to contact us now?
 
-### Q83. これまで試した方法 / Methods you have tried before
+### Q85. これまで試した方法 / Methods you have tried before
 - Type: Checkboxes
 - Hint: 該当するものすべてにチェック / Check all that apply
 - Options:
@@ -600,11 +600,11 @@ Google Form 作成用テンプレート（92項目）
   - 特に何も試していない / Haven't tried anything
   - その他 / Other
 
-### Q84. これまで困ったこと・うまくいかなかったこと / Difficulties you have faced
+### Q86. これまで困ったこと・うまくいかなかったこと / Difficulties you have faced
 - Type: Long answer
 - Hint: 今までどんなことで困りましたか？何がうまくいきませんでしたか？ / What challenges have you encountered? What didn't work?
 
-### Q85. 友人・知人にSoul Carrierを勧める可能性 / How likely would you recommend Soul Carrier?
+### Q87. 友人・知人にSoul Carrierを勧める可能性 / How likely would you recommend Soul Carrier?
 - Type: Multiple choice
 - Hint: 0=全く勧めない、10=強く勧める / 0=Not at all, 10=Very likely
 - Options:
@@ -620,11 +620,23 @@ Google Form 作成用テンプレート（92項目）
   - 1
   - 0 - 全く勧めない / Not at all
 
-### Q84. さらに充実すると嬉しいサービス / Services you would like to see
+### Q88. さらに充実すると嬉しいサービス / Services you would like to see
 - Type: Long answer
 - Hint: あったら嬉しいサービスや機能があれば教えてください / What additional services or features would you find helpful?
 
-### Q85. ご意見・ご要望 / Comments or Suggestions
+### Q89. この取り組みを通じて子孫に残したいこと / Legacy you want to leave for future generations
+- Type: Long answer
+- Hint: この経験を通じて、お子様やお孫様に伝えたいことはありますか？ / What would you like your children or grandchildren to learn from this experience?
+
+### Q90. コミュニティや社会への影響 / Impact on community and society
+- Type: Long answer
+- Hint: この取り組みがコミュニティや社会にどのような影響を与えると思いますか？ / What impact do you think this initiative could have on your community or society?
+
+### Q91. アイデンティティへの影響 / Impact on your identity
+- Type: Long answer
+- Hint: この取り組みがあなたのアイデンティティや自己認識にどのような変化をもたらすと思いますか？ / What changes do you think this experience might bring to your identity or self-understanding?
+
+### Q92. ご意見・ご要望 / Comments or Suggestions
 - Type: Long answer
 - Hint: サービス改善のためのご意見があればお聞かせください / Any feedback to help us improve
 
@@ -632,7 +644,7 @@ Google Form 作成用テンプレート（92項目）
 
 ## Section 12: 免責事項・同意 / Disclaimers and Consent (4問)
 
-### Q86. サービスの限界についての理解 / Understanding of Service Limitations *
+### Q93. サービスの限界についての理解 / Understanding of Service Limitations *
 - Type: Checkbox
 - Required: Yes
 - Options:
@@ -643,7 +655,7 @@ Google Form 作成用テンプレート（92項目）
   - 以下を理解しています：法的・行政的な問題により、遺灰の輸送ができない場合があります。
     / I understand: Legal/administrative issues may prevent transportation of ashes.
 
-### Q87. 費用負担についての理解 / Understanding of Cost Responsibility *
+### Q94. 費用負担についての理解 / Understanding of Cost Responsibility *
 - Type: Checkbox
 - Required: Yes
 - Options:
@@ -654,14 +666,14 @@ Google Form 作成用テンプレート（92項目）
   - 以下を理解しています：プロジェクトが中断・中止となった場合、既に発生した費用は返金されません。
     / I understand: Costs already incurred are non-refundable if the project is discontinued.
 
-### Q88. 送信前の確認 / Pre-submission Confirmation *
+### Q95. 送信前の確認 / Pre-submission Confirmation *
 - Type: Checkbox
 - Required: Yes
 - Options:
   - 上記の情報は正確です。後から修正・追加が可能であることを理解しています。
     / The above information is accurate. I understand I can update it later.
 
-### Q89. プライバシーポリシーへの同意 / Privacy Policy Agreement *
+### Q96. プライバシーポリシーへの同意 / Privacy Policy Agreement *
 - Type: Checkbox
 - Required: Yes
 - Options:
@@ -699,9 +711,9 @@ If you have additional information or photos, please send them to info@pearlmemo
 | 8. ご希望・ご要望 | 14 |
 | 9. 財務・予算 | 4 |
 | 10. 協力・サポート | 3 |
-| 11. アンケート | 8 |
+| 11. アンケート | 11 |
 | 12. 免責事項・同意 | 4 |
-| **合計** | **92** |
+| **合計** | **96** |
 
 ---
 
