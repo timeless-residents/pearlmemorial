@@ -1,6 +1,6 @@
 # Soul Carrier 詳細ヒアリングフォーム / Detailed Hearing Form
 
-Google Form 作成用テンプレート（85項目）
+Google Form 作成用テンプレート（87項目）
 
 ---
 
@@ -527,7 +527,7 @@ Google Form 作成用テンプレート（85項目）
 
 ---
 
-## Section 11: アンケート / Survey (4問)
+## Section 11: アンケート / Survey (6問)
 
 ### Q78. Soul Carrierをどこで知りましたか？ / How did you hear about Soul Carrier?
 - Type: Checkboxes
@@ -550,7 +550,27 @@ Google Form 作成用テンプレート（85項目）
 - Type: Long answer
 - Hint: 何がきっかけで今回相談しようと思われましたか？ / What made you decide to contact us now?
 
-### Q81. ご意見・ご要望 / Comments or Suggestions
+### Q81. 友人・知人にSoul Carrierを勧める可能性 / How likely would you recommend Soul Carrier?
+- Type: Multiple choice
+- Hint: 0=全く勧めない、10=強く勧める / 0=Not at all, 10=Very likely
+- Options:
+  - 10 - 強く勧める / Highly recommend
+  - 9
+  - 8
+  - 7
+  - 6
+  - 5 - どちらとも言えない / Neutral
+  - 4
+  - 3
+  - 2
+  - 1
+  - 0 - 全く勧めない / Not at all
+
+### Q82. さらに充実すると嬉しいサービス / Services you would like to see
+- Type: Long answer
+- Hint: あったら嬉しいサービスや機能があれば教えてください / What additional services or features would you find helpful?
+
+### Q83. ご意見・ご要望 / Comments or Suggestions
 - Type: Long answer
 - Hint: サービス改善のためのご意見があればお聞かせください / Any feedback to help us improve
 
@@ -558,7 +578,7 @@ Google Form 作成用テンプレート（85項目）
 
 ## Section 12: 免責事項・同意 / Disclaimers and Consent (4問)
 
-### Q82. サービスの限界についての理解 / Understanding of Service Limitations *
+### Q84. サービスの限界についての理解 / Understanding of Service Limitations *
 - Type: Checkbox
 - Required: Yes
 - Options:
@@ -569,7 +589,7 @@ Google Form 作成用テンプレート（85項目）
   - 以下を理解しています：法的・行政的な問題により、遺灰の輸送ができない場合があります。
     / I understand: Legal/administrative issues may prevent transportation of ashes.
 
-### Q83. 費用負担についての理解 / Understanding of Cost Responsibility *
+### Q85. 費用負担についての理解 / Understanding of Cost Responsibility *
 - Type: Checkbox
 - Required: Yes
 - Options:
@@ -580,14 +600,14 @@ Google Form 作成用テンプレート（85項目）
   - 以下を理解しています：プロジェクトが中断・中止となった場合、既に発生した費用は返金されません。
     / I understand: Costs already incurred are non-refundable if the project is discontinued.
 
-### Q84. 送信前の確認 / Pre-submission Confirmation *
+### Q86. 送信前の確認 / Pre-submission Confirmation *
 - Type: Checkbox
 - Required: Yes
 - Options:
   - 上記の情報は正確です。後から修正・追加が可能であることを理解しています。
     / The above information is accurate. I understand I can update it later.
 
-### Q85. プライバシーポリシーへの同意 / Privacy Policy Agreement *
+### Q87. プライバシーポリシーへの同意 / Privacy Policy Agreement *
 - Type: Checkbox
 - Required: Yes
 - Options:
@@ -625,9 +645,9 @@ If you have additional information or photos, please send them to info@pearlmemo
 | 8. ご希望・ご要望 | 10 |
 | 9. 財務・予算 | 4 |
 | 10. 協力・サポート | 3 |
-| 11. アンケート | 4 |
+| 11. アンケート | 6 |
 | 12. 免責事項・同意 | 4 |
-| **合計** | **85** |
+| **合計** | **87** |
 
 ---
 

@@ -93,7 +93,7 @@ const SECTIONS = [
 ];
 
 // ============================================
-// QUESTIONS DEFINITION (83 questions total)
+// QUESTIONS DEFINITION (85 questions total)
 // ============================================
 
 const QUESTIONS = [
@@ -817,6 +817,31 @@ const QUESTIONS = [
     type: 'PARAGRAPH',
     title: '相談しようと思ったきっかけ / What prompted you to reach out?',
     helpText: '何がきっかけで今回相談しようと思われましたか？ / What made you decide to contact us now?'
+  },
+  {
+    section: 10,
+    type: 'MULTIPLE_CHOICE',
+    title: '友人・知人にSoul Carrierを勧める可能性 / How likely would you recommend Soul Carrier?',
+    helpText: '0=全く勧めない、10=強く勧める / 0=Not at all, 10=Very likely',
+    choices: [
+      '10 - 強く勧める / Highly recommend',
+      '9',
+      '8',
+      '7',
+      '6',
+      '5 - どちらとも言えない / Neutral',
+      '4',
+      '3',
+      '2',
+      '1',
+      '0 - 全く勧めない / Not at all'
+    ]
+  },
+  {
+    section: 10,
+    type: 'PARAGRAPH',
+    title: 'さらに充実すると嬉しいサービス / Services you would like to see',
+    helpText: 'あったら嬉しいサービスや機能があれば教えてください / What additional services or features would you find helpful?'
   },
   {
     section: 10,
