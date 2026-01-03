@@ -1,6 +1,6 @@
 # Soul Carrier 詳細ヒアリングフォーム / Detailed Hearing Form
 
-Google Form 作成用テンプレート（97項目）
+Google Form 作成用テンプレート（100項目）
 
 ---
 
@@ -22,7 +22,7 @@ Google Form 作成用テンプレート（97項目）
 
 ---
 
-## Section 1: 依頼者情報 / Your Information (13問)
+## Section 1: 依頼者情報 / Your Information (15問)
 
 ### Q1. お名前 / Your Name *
 - Type: Short answer
@@ -108,51 +108,73 @@ Google Form 作成用テンプレート（97項目）
   - 未定 / Undecided
   - 渡航予定なし / Not planning to travel
 
+### Q16. あなたは何世代目ですか？ / What generation are you?
+- Type: Multiple choice
+- Hint: 日系アメリカ人としての世代 / Your generation as Japanese American
+- Options:
+  - 一世 / Issei (1st generation)
+  - 二世 / Nisei (2nd generation)
+  - 三世 / Sansei (3rd generation)
+  - 四世 / Yonsei (4th generation)
+  - 五世以降 / Gosei or later
+  - 混血・複合 / Mixed heritage
+  - 分からない / Not sure
+
+### Q17. 他の家族の関与 / Family Involvement
+- Type: Multiple choice
+- Hint: この取り組みについて、他のご家族は関与・認識していますか？ / Are other family members involved or aware of this initiative?
+- Options:
+  - 家族全員で取り組んでいる / Entire family is involved
+  - 一部の家族が認識 / Some family members know
+  - 自分だけで進めている / Doing this alone
+  - 家族に反対されている / Family opposes this
+  - 今後共有予定 / Plan to share later
+
 ---
 
 ## Section 2: 故人の基本情報 / Deceased's Basic Information (11問)
 
-### Q14. 故人のお名前（漢字）/ Deceased's Name (Kanji) *
+### Q16. 故人のお名前（漢字）/ Deceased's Name (Kanji) *
 - Type: Short answer
 - Required: Yes
 - Hint: 例: 岩下 輝子
 
-### Q15. 故人のお名前（ローマ字）/ Deceased's Name (Romaji)
+### Q17. 故人のお名前（ローマ字）/ Deceased's Name (Romaji)
 - Type: Short answer
 - Hint: 例: Iwashita Teruko
 
-### Q16. 旧姓（該当する場合）/ Maiden Name (if applicable)
+### Q18. 旧姓（該当する場合）/ Maiden Name (if applicable)
 - Type: Short answer
 - Hint: 女性の場合、調査に重要です
 
-### Q17. 生年月日 / Date of Birth
+### Q19. 生年月日 / Date of Birth
 - Type: Date
 - Hint: 不明な場合は次の質問で大まかな年代を
 
-### Q18. 生年（大まかに）/ Approximate Birth Year
+### Q20. 生年（大まかに）/ Approximate Birth Year
 - Type: Short answer
 - Hint: 例: 1920年代、昭和初期
 
-### Q19. 死亡日 / Date of Death
+### Q21. 死亡日 / Date of Death
 - Type: Date
 
-### Q20. 死亡年（大まかに）/ Approximate Death Year
+### Q22. 死亡年（大まかに）/ Approximate Death Year
 - Type: Short answer
 
-### Q21. 出身地（都道府県・市町村）/ Birthplace *
+### Q23. 出身地（都道府県・市町村）/ Birthplace *
 - Type: Short answer
 - Required: Yes
 - Hint: 例: 群馬県前橋市
 
-### Q22. 本籍地（番地まで分かれば）/ Permanent Domicile
+### Q24. 本籍地（番地まで分かれば）/ Permanent Domicile
 - Type: Long answer
 - Hint: 戸籍取得に必要。出身地と異なる場合があります
 
-### Q23. 戦前の日本での職業 / Occupation in Japan (Pre-war)
+### Q25. 戦前の日本での職業 / Occupation in Japan (Pre-war)
 - Type: Short answer
 - Hint: 家族特定の手がかりになります / Helps identify family
 
-### Q24. ハワイでの職業・勤務先 / Occupation/Employer in Hawaii
+### Q26. ハワイでの職業・勤務先 / Occupation/Employer in Hawaii
 - Type: Short answer
 - Hint: 例: Dole Plantation, 農場労働者
 
@@ -160,11 +182,11 @@ Google Form 作成用テンプレート（97項目）
 
 ## Section 3: 故人の渡米歴 / Immigration History (6問)
 
-### Q25. 渡米時期 / When did they immigrate to the US?
+### Q27. 渡米時期 / When did they immigrate to the US?
 - Type: Short answer
 - Hint: 例: 1920年頃、戦前
 
-### Q26. 渡米時の出港地 / Departure Port
+### Q28. 渡米時の出港地 / Departure Port
 - Type: Multiple choice
 - Hint: 日本から出発した港 / Port of departure from Japan
 - Options:
@@ -174,15 +196,15 @@ Google Form 作成用テンプレート（97項目）
   - その他 / Other
   - 不明 / Unknown
 
-### Q27. 船名（わかれば）/ Ship Name (if known)
+### Q29. 船名（わかれば）/ Ship Name (if known)
 - Type: Short answer
 - Hint: 移民船記録との照合に役立ちます / Helps cross-reference immigration records
 
-### Q28. 渡米の経緯 / Immigration circumstances
+### Q30. 渡米の経緯 / Immigration circumstances
 - Type: Long answer
 - Hint: 労働移民、写真花嫁、呼び寄せ、留学など分かる範囲で
 
-### Q29. 強制収容歴（WWII）/ WWII Internment History
+### Q31. 強制収容歴（WWII）/ WWII Internment History
 - Type: Multiple choice
 - Hint: 第二次世界大戦中の強制収容について / About wartime internment
 - Options:
@@ -190,7 +212,7 @@ Google Form 作成用テンプレート（97項目）
   - 収容されなかった / Was not interned
   - 不明 / Unknown
 
-### Q30. 収容所名（該当する場合）/ Internment Camp Name (if applicable)
+### Q32. 収容所名（該当する場合）/ Internment Camp Name (if applicable)
 - Type: Short answer
 - Hint: 例: Honouliuli, Manzanar
 
@@ -198,12 +220,12 @@ Google Form 作成用テンプレート（97項目）
 
 ## Section 4: ご遺灰について / About the Ashes (6問)
 
-### Q31. 現在のご遺灰の保管場所 / Current Location of Ashes *
+### Q33. 現在のご遺灰の保管場所 / Current Location of Ashes *
 - Type: Long answer
 - Required: Yes
 - Hint: 住所、または「自宅」「〇〇霊園」など
 
-### Q32. 骨壷の種類・状態 / Urn Type and Condition
+### Q34. 骨壷の種類・状態 / Urn Type and Condition
 - Type: Multiple choice
 - Options:
   - 日本式骨壷 / Japanese-style urn
@@ -212,22 +234,22 @@ Google Form 作成用テンプレート（97項目）
   - その他 / Other
   - 不明 / Unknown
 
-### Q33. 骨壷のサイズ（概算）/ Urn Size (approximate)
+### Q35. 骨壷のサイズ（概算）/ Urn Size (approximate)
 - Type: Short answer
 - Hint: 例: 高さ20cm程度、小さめ / e.g., about 20cm tall, small
 
-### Q34. 遺灰の量（概算）/ Amount of Ashes (approximate)
+### Q36. 遺灰の量（概算）/ Amount of Ashes (approximate)
 - Type: Short answer
 - Hint: 輸送方法の計画に必要です / Needed for shipping planning
 
-### Q35. 分骨の希望 / Do you want to keep some ashes?
+### Q37. 分骨の希望 / Do you want to keep some ashes?
 - Type: Multiple choice
 - Options:
   - 全て日本へ送りたい / Send all to Japan
   - 一部を手元に残したい / Keep some ashes
   - 未定 / Undecided
 
-### Q36. 分骨する場合の割合 / If keeping some, what portion?
+### Q38. 分骨する場合の割合 / If keeping some, what portion?
 - Type: Short answer
 - Hint: 例: 半分、少量のみ
 
@@ -235,7 +257,7 @@ Google Form 作成用テンプレート（97項目）
 
 ## Section 5: 法的・行政手続き / Legal & Administrative (6問)
 
-### Q37. 遺灰の法的権限 / Legal Authority over Ashes *
+### Q39. 遺灰の法的権限 / Legal Authority over Ashes *
 - Type: Multiple choice
 - Required: Yes
 - Hint: 遺灰を移動・処分する法的権限について / Your legal authority to handle the ashes
@@ -246,7 +268,7 @@ Google Form 作成用テンプレート（97項目）
   - 法的権限は不明 / Legal authority unclear
   - その他 / Other
 
-### Q38. 他の相続人・家族の同意 / Consent from Other Heirs/Family
+### Q40. 他の相続人・家族の同意 / Consent from Other Heirs/Family
 - Type: Multiple choice
 - Hint: 他の家族がいる場合、この計画への同意について / About consent from other family members
 - Options:
@@ -256,7 +278,7 @@ Google Form 作成用テンプレート（97項目）
   - 反対する人がいる / Some oppose
   - 他に相続人・家族はいない / No other heirs/family
 
-### Q39. 死亡証明書の有無 / Death Certificate
+### Q41. 死亡証明書の有無 / Death Certificate
 - Type: Multiple choice
 - Options:
   - 持っている / Have it
@@ -264,7 +286,7 @@ Google Form 作成用テンプレート（97項目）
   - 持っていない・取得困難 / Don't have / Difficult to obtain
   - 不明 / Unknown
 
-### Q40. 火葬証明書の有無 / Cremation Certificate
+### Q42. 火葬証明書の有無 / Cremation Certificate
 - Type: Multiple choice
 - Options:
   - 持っている / Have it
@@ -272,7 +294,7 @@ Google Form 作成用テンプレート（97項目）
   - 持っていない・取得困難 / Don't have / Difficult to obtain
   - 不明 / Unknown
 
-### Q41. 故人の遺言書の有無 / Deceased's Will
+### Q43. 故人の遺言書の有無 / Deceased's Will
 - Type: Multiple choice
 - Hint: 日本への帰葬について言及があるか / Does it mention return to Japan?
 - Options:
@@ -281,7 +303,7 @@ Google Form 作成用テンプレート（97項目）
   - 遺言書なし / No will
   - 不明 / Unknown
 
-### Q42. 故人の遺志（口頭など）/ Deceased's Wishes (verbal, etc.)
+### Q44. 故人の遺志（口頭など）/ Deceased's Wishes (verbal, etc.)
 - Type: Long answer
 - Hint: 遺言書以外で、故人が日本への帰葬を望んでいたことを示すもの / Any indication the deceased wanted to return to Japan
 
@@ -289,23 +311,23 @@ Google Form 作成用テンプレート（97項目）
 
 ## Section 6: 日本側の情報 / Information about Japan (15問)
 
-### Q43. 宗教・宗派 / Religion/Denomination
+### Q45. 宗教・宗派 / Religion/Denomination
 - Type: Short answer
 - Hint: 例: 曹洞宗、真言宗、キリスト教、神道など
 
-### Q44. 戒名・法名（仏教の場合）/ Buddhist Posthumous Name
+### Q46. 戒名・法名（仏教の場合）/ Buddhist Posthumous Name
 - Type: Short answer
 - Hint: 墓石に刻まれていることが多いです
 
-### Q45. 日本のお墓の場所 / Grave Location in Japan
+### Q47. 日本のお墓の場所 / Grave Location in Japan
 - Type: Long answer
 - Hint: 寺の名前、住所、または「〇〇県〇〇市の寺」など
 
-### Q46. 寺院・神社・霊園の連絡先 / Temple/Shrine/Cemetery Contact
+### Q48. 寺院・神社・霊園の連絡先 / Temple/Shrine/Cemetery Contact
 - Type: Short answer
 - Hint: 電話番号やメールアドレス（分かれば）/ Phone or email if known
 
-### Q47. 墓地の種類 / Cemetery Type
+### Q49. 墓地の種類 / Cemetery Type
 - Type: Multiple choice
 - Options:
   - 寺院墓地 / Temple cemetery
@@ -314,7 +336,7 @@ Google Form 作成用テンプレート（97項目）
   - 共同墓地 / Community cemetery
   - 不明 / Unknown
 
-### Q48. お墓の管理状況 / Grave Maintenance Status
+### Q50. お墓の管理状況 / Grave Maintenance Status
 - Type: Multiple choice
 - Hint: 長年放置されているお墓は清掃・修復が必要な場合があります
 - Options:
@@ -323,7 +345,7 @@ Google Form 作成用テンプレート（97項目）
   - 長年放置されている可能性 / Possibly abandoned for years
   - 不明 / Unknown
 
-### Q49. 檀家関係の有無 / Temple Membership (Danka)
+### Q51. 檀家関係の有無 / Temple Membership (Danka)
 - Type: Multiple choice
 - Hint: 寺院墓地の場合、檀家としての関係があるかどうか
 - Options:
@@ -332,32 +354,32 @@ Google Form 作成用テンプレート（97項目）
   - 檀家ではない / Not a member
   - 不明 / Unknown
 
-### Q50. お墓の場所の記憶 / Memories of the Grave Location
+### Q52. お墓の場所の記憶 / Memories of the Grave Location
 - Type: Long answer
 - Hint: 寺の周辺環境、駐車場、入口からの距離など覚えていること
 
-### Q51. 墓石の形や特徴 / Gravestone Shape/Features
+### Q53. 墓石の形や特徴 / Gravestone Shape/Features
 - Type: Long answer
 - Hint: 和型、洋型、大きさ、刻まれている文字など
 
-### Q52. 家紋 / Family Crest (Kamon)
+### Q54. 家紋 / Family Crest (Kamon)
 - Type: Short answer
 - Hint: 例: 抱き茗荷、丸に橘
 
-### Q53. 父親の名前 / Father's Name
+### Q55. 父親の名前 / Father's Name
 - Type: Short answer
 
-### Q54. 母親の名前（旧姓も）/ Mother's Name (including maiden name)
+### Q56. 母親の名前（旧姓も）/ Mother's Name (including maiden name)
 - Type: Short answer
 
-### Q55. 兄弟姉妹の名前 / Siblings' Names
+### Q57. 兄弟姉妹の名前 / Siblings' Names
 - Type: Long answer
 
-### Q56. 日本にいる親戚の情報 / Relatives in Japan
+### Q58. 日本にいる親戚の情報 / Relatives in Japan
 - Type: Long answer
 - Hint: 名前、関係、連絡先（分かれば）
 
-### Q57. 日本の親戚との関係性 / Relationship with Japan relatives
+### Q59. 日本の親戚との関係性 / Relationship with Japan relatives
 - Type: Multiple choice
 - Options:
   - 連絡を取り合っている / In regular contact
@@ -370,7 +392,7 @@ Google Form 作成用テンプレート（97項目）
 
 ## Section 7: 資料・写真 / Documents and Photos (3問)
 
-### Q58. 古い写真はありますか？ / Do you have old photos?
+### Q60. 古い写真はありますか？ / Do you have old photos?
 - Type: Checkboxes
 - Options:
   - 故人の写真 / Photos of the deceased
@@ -379,7 +401,7 @@ Google Form 作成用テンプレート（97項目）
   - 家族写真 / Family photos
   - なし / None
 
-### Q59. 古い書類はありますか？ / Do you have old documents?
+### Q61. 古い書類はありますか？ / Do you have old documents?
 - Type: Checkboxes
 - Options:
   - 戦前の手紙 / Pre-war letters
@@ -389,7 +411,7 @@ Google Form 作成用テンプレート（97項目）
   - 強制収容関連書類 / Internment documents
   - なし / None
 
-### Q60. 写真・書類のアップロード / Upload Photos/Documents
+### Q62. 写真・書類のアップロード / Upload Photos/Documents
 - Type: File upload
 - Hint: 複数ファイル可。後から追加も可能です
 
@@ -397,29 +419,29 @@ Google Form 作成用テンプレート（97項目）
 
 ## Section 8: ご希望・ご要望 / Your Preferences (10問)
 
-### Q61. このプロジェクトへの思い / Your Motivation for This Project
+### Q63. このプロジェクトへの思い / Your Motivation for This Project
 - Type: Long answer
 - Hint: なぜ故人を日本に帰したいと思われたのですか？ / Why do you want to return the deceased to Japan?
 
-### Q62. 希望する実施時期 / Preferred Timing
+### Q64. 希望する実施時期 / Preferred Timing
 - Type: Long answer
 - Hint: 例: 2025年春、故人の命日（〇月）に合わせて
 
-### Q63. 日本への渡航予定 / Travel Plans to Japan
+### Q65. 日本への渡航予定 / Travel Plans to Japan
 - Type: Multiple choice
 - Options:
   - 納骨式に参列したい / Want to attend the ceremony
   - 渡航は難しい（代行を希望）/ Cannot travel (want delivery service)
   - 未定 / Undecided
 
-### Q64. 日本での同行サポート希望 / Want Accompaniment in Japan?
+### Q66. 日本での同行サポート希望 / Want Accompaniment in Japan?
 - Type: Multiple choice
 - Options:
   - はい、通訳・案内が必要 / Yes, need interpreter/guide
   - いいえ、自分で対応できる / No, can manage on my own
   - 未定 / Undecided
 
-### Q65. 希望する最終安置方法 / Preferred Final Arrangement
+### Q67. 希望する最終安置方法 / Preferred Final Arrangement
 - Type: Multiple choice
 - Options:
   - 本家のお墓に納骨 / Inter in family grave
@@ -428,7 +450,7 @@ Google Form 作成用テンプレート（97項目）
   - 樹木葬・永代供養 / Tree burial / Perpetual memorial
   - 未定・相談したい / Undecided / Want to discuss
 
-### Q66. 納骨式の規模希望 / Ceremony Size Preference
+### Q68. 納骨式の規模希望 / Ceremony Size Preference
 - Type: Multiple choice
 - Options:
   - 家族のみで静かに / Family only, quiet ceremony
@@ -437,11 +459,11 @@ Google Form 作成用テンプレート（97項目）
   - 式は不要 / No ceremony needed
   - 未定 / Undecided
 
-### Q67. 日本で購入してほしいもの / Items to Purchase in Japan
+### Q69. 日本で購入してほしいもの / Items to Purchase in Japan
 - Type: Long answer
 - Hint: 故郷の品、お供え物など
 
-### Q68. 継続的なお墓参り代行への関心 / Interest in Ongoing Grave Visit Service
+### Q70. 継続的なお墓参り代行への関心 / Interest in Ongoing Grave Visit Service
 - Type: Multiple choice
 - Hint: 納骨後、定期的にお墓参りを代行するサービス（有料）
 - Options:
@@ -450,14 +472,14 @@ Google Form 作成用テンプレート（97項目）
   - 興味がない / Not interested
   - 詳細を聞きたい / Want more information
 
-### Q69. 家紋入り記念品への関心 / Interest in Family Crest Memorials
+### Q71. 家紋入り記念品への関心 / Interest in Family Crest Memorials
 - Type: Multiple choice
 - Options:
   - とても興味がある / Very interested
   - 少し興味がある / Somewhat interested
   - 興味がない / Not interested
 
-### Q70. 日本のオハナハウス滞在への関心 / Interest in Ohana House Stay in Japan
+### Q72. 日本のオハナハウス滞在への関心 / Interest in Ohana House Stay in Japan
 - Type: Multiple choice
 - Hint: 日本滞在中にご利用いただける宿泊施設です。詳しくはカタログをご覧ください / Accommodation available during your stay in Japan. See catalog for details.
 - Options:
@@ -466,7 +488,7 @@ Google Form 作成用テンプレート（97項目）
   - 詳細を聞きたい / Want more information
   - 興味がない / Not interested
 
-### Q71. 技術業務支援への関心 / Interest in Technical Support Services
+### Q73. 技術業務支援への関心 / Interest in Technical Support Services
 - Type: Multiple choice
 - Hint: オフグリッドインフラの診断・構築・改善支援サービス / Off-grid infrastructure diagnosis, setup, and improvement services
 - Options:
@@ -475,7 +497,7 @@ Google Form 作成用テンプレート（97項目）
   - 詳細を聞きたい / Want more information
   - 興味がない / Not interested
 
-### Q72. DNA鑑定サービスとの併用への関心 / Interest in DNA Testing Services
+### Q74. DNA鑑定サービスとの併用への関心 / Interest in DNA Testing Services
 - Type: Multiple choice
 - Hint: 家系調査やルーツ探しにDNA鑑定を併用するオプション / Option to combine DNA testing for genealogy research
 - Options:
@@ -485,7 +507,7 @@ Google Form 作成用テンプレート（97項目）
   - 詳細を聞きたい / Want more information
   - 興味がない / Not interested
 
-### Q73. 家系図作成支援への関心 / Interest in Family Tree Creation
+### Q75. 家系図作成支援への関心 / Interest in Family Tree Creation
 - Type: Multiple choice
 - Hint: 戸籍調査をもとに家系図を作成するサービス / Service to create a family tree based on family register research
 - Options:
@@ -494,7 +516,7 @@ Google Form 作成用テンプレート（97項目）
   - 詳細を聞きたい / Want more information
   - 興味がない / Not interested
 
-### Q74. その他のご要望 / Other Requests
+### Q76. その他のご要望 / Other Requests
 - Type: Long answer
 - Hint: 特別な儀式、故人の遺志、その他何でも
 
@@ -502,7 +524,7 @@ Google Form 作成用テンプレート（97項目）
 
 ## Section 9: 財務・予算 / Budget and Payment (4問)
 
-### Q75. 予算感 / Budget Range
+### Q77. 予算感 / Budget Range
 - Type: Multiple choice
 - Hint: 渡航費・滞在費・有料オプション等を含む概算 / Approximate including travel, lodging, paid options
 - Options:
@@ -514,7 +536,7 @@ Google Form 作成用テンプレート（97項目）
   - 予算は柔軟 / Budget is flexible
   - まだ分からない / Not sure yet
 
-### Q76. 分割払いへの関心 / Interest in Payment Plans
+### Q78. 分割払いへの関心 / Interest in Payment Plans
 - Type: Multiple choice
 - Options:
   - 一括払いで問題ない / Can pay in full
@@ -522,7 +544,7 @@ Google Form 作成用テンプレート（97項目）
   - 内容による / Depends on amount
   - 不要（費用がかからない見込み）/ Not needed
 
-### Q77. 寄付可能な金額帯 / Potential Donation Range
+### Q79. 寄付可能な金額帯 / Potential Donation Range
 - Type: Multiple choice
 - Hint: Soul Carrier活動への任意の寄付について / Optional donation to Soul Carrier activities
 - Options:
@@ -533,7 +555,7 @@ Google Form 作成用テンプレート（97項目）
   - $1,000以上 / Over $1,000
   - 今は難しい / Not possible now
 
-### Q78. 費用に関するご質問・ご懸念 / Questions/Concerns about Costs
+### Q80. 費用に関するご質問・ご懸念 / Questions/Concerns about Costs
 - Type: Long answer
 - Hint: 費用について不安な点があればお聞かせください / Let us know if you have any concerns about costs
 
@@ -541,21 +563,21 @@ Google Form 作成用テンプレート（97項目）
 
 ## Section 10: 協力・サポート / Cooperation and Support (3問)
 
-### Q79. 体験談の共有・広報への協力 / Share Story / Help Outreach
+### Q81. 体験談の共有・広報への協力 / Share Story / Help Outreach
 - Type: Multiple choice
 - Options:
   - 協力可能 / Can cooperate
   - 匿名なら協力可能 / Anonymous only
   - 協力は難しい / Cannot cooperate
 
-### Q80. 活動への資金・物資援助 / Financial/Material Support
+### Q82. 活動への資金・物資援助 / Financial/Material Support
 - Type: Multiple choice
 - Options:
   - 支援を検討したい / Want to consider supporting
   - 今は難しい / Not possible now
   - 詳しく聞きたい / Want more information
 
-### Q81. 有料オプションへの関心 / Interest in Paid Options
+### Q83. 有料オプションへの関心 / Interest in Paid Options
 - Type: Multiple choice
 - Options:
   - 関心あり / Interested
@@ -564,9 +586,9 @@ Google Form 作成用テンプレート（97項目）
 
 ---
 
-## Section 11: アンケート / Survey (12問)
+## Section 11: アンケート / Survey (13問)
 
-### Q82. Soul Carrierをどこで知りましたか？ / How did you hear about Soul Carrier?
+### Q84. Soul Carrierをどこで知りましたか？ / How did you hear about Soul Carrier?
 - Type: Checkboxes
 - Hint: 該当するものすべてにチェック / Check all that apply
 - Options:
@@ -580,14 +602,14 @@ Google Form 作成用テンプレート（97項目）
   - イベント・講演会 / Event/seminar
   - その他 / Other
 
-### Q83. 「その他」の場合、具体的に / If "Other", please specify
+### Q85. 「その他」の場合、具体的に / If "Other", please specify
 - Type: Short answer
 
-### Q84. 相談しようと思ったきっかけ / What prompted you to reach out?
+### Q86. 相談しようと思ったきっかけ / What prompted you to reach out?
 - Type: Long answer
 - Hint: 何がきっかけで今回相談しようと思われましたか？ / What made you decide to contact us now?
 
-### Q85. これまで試した方法 / Methods you have tried before
+### Q87. これまで試した方法 / Methods you have tried before
 - Type: Checkboxes
 - Hint: 該当するものすべてにチェック / Check all that apply
 - Options:
@@ -600,11 +622,11 @@ Google Form 作成用テンプレート（97項目）
   - 特に何も試していない / Haven't tried anything
   - その他 / Other
 
-### Q86. これまで困ったこと・うまくいかなかったこと / Difficulties you have faced
+### Q88. これまで困ったこと・うまくいかなかったこと / Difficulties you have faced
 - Type: Long answer
 - Hint: 今までどんなことで困りましたか？何がうまくいきませんでしたか？ / What challenges have you encountered? What didn't work?
 
-### Q87. 友人・知人にSoul Carrierを勧める可能性 / How likely would you recommend Soul Carrier?
+### Q89. 友人・知人にSoul Carrierを勧める可能性 / How likely would you recommend Soul Carrier?
 - Type: Multiple choice
 - Hint: 0=全く勧めない、10=強く勧める / 0=Not at all, 10=Very likely
 - Options:
@@ -620,23 +642,23 @@ Google Form 作成用テンプレート（97項目）
   - 1
   - 0 - 全く勧めない / Not at all
 
-### Q88. さらに充実すると嬉しいサービス / Services you would like to see
+### Q90. さらに充実すると嬉しいサービス / Services you would like to see
 - Type: Long answer
 - Hint: あったら嬉しいサービスや機能があれば教えてください / What additional services or features would you find helpful?
 
-### Q89. この取り組みを通じて子孫に残したいこと / Legacy you want to leave for future generations
+### Q91. この取り組みを通じて子孫に残したいこと / Legacy you want to leave for future generations
 - Type: Long answer
 - Hint: この経験を通じて、お子様やお孫様に伝えたいことはありますか？ / What would you like your children or grandchildren to learn from this experience?
 
-### Q90. コミュニティや社会への影響 / Impact on community and society
+### Q92. コミュニティや社会への影響 / Impact on community and society
 - Type: Long answer
 - Hint: この取り組みがコミュニティや社会にどのような影響を与えると思いますか？ / What impact do you think this initiative could have on your community or society?
 
-### Q91. アイデンティティへの影響 / Impact on your identity
+### Q93. アイデンティティへの影響 / Impact on your identity
 - Type: Long answer
 - Hint: この取り組みがあなたのアイデンティティや自己認識にどのような変化をもたらすと思いますか？ / What changes do you think this experience might bring to your identity or self-understanding?
 
-### Q92. お知らせ・プロモーション情報の受信 / Newsletter and promotional updates
+### Q94. お知らせ・プロモーション情報の受信 / Newsletter and promotional updates
 - Type: Multiple choice
 - Hint: 今後のお知らせやプロモーション情報の受信を希望しますか？ / Would you like to receive future announcements and promotional information?
 - Options:
@@ -644,7 +666,19 @@ Google Form 作成用テンプレート（97項目）
   - 重要な情報のみ希望 / Only important updates
   - いいえ、受信を希望しません / No, I do not want to receive updates
 
-### Q93. ご意見・ご要望 / Comments or Suggestions
+### Q95. この経験の記録方法 / How would you like to document this journey?
+- Type: Checkboxes
+- Hint: 該当するものすべてにチェック / Check all that apply
+- Options:
+  - 写真撮影 / Photography
+  - 動画撮影 / Video recording
+  - 文章・日記 / Written journal
+  - プロの記録サービス希望 / Professional documentation service
+  - SNS共有予定 / Plan to share on social media
+  - プライベートに留めたい / Keep private
+  - まだ決めていない / Haven't decided yet
+
+### Q96. ご意見・ご要望 / Comments or Suggestions
 - Type: Long answer
 - Hint: サービス改善のためのご意見があればお聞かせください / Any feedback to help us improve
 
@@ -652,7 +686,7 @@ Google Form 作成用テンプレート（97項目）
 
 ## Section 12: 免責事項・同意 / Disclaimers and Consent (4問)
 
-### Q94. サービスの限界についての理解 / Understanding of Service Limitations *
+### Q97. サービスの限界についての理解 / Understanding of Service Limitations *
 - Type: Checkbox
 - Required: Yes
 - Options:
@@ -663,7 +697,7 @@ Google Form 作成用テンプレート（97項目）
   - 以下を理解しています：法的・行政的な問題により、遺灰の輸送ができない場合があります。
     / I understand: Legal/administrative issues may prevent transportation of ashes.
 
-### Q95. 費用負担についての理解 / Understanding of Cost Responsibility *
+### Q98. 費用負担についての理解 / Understanding of Cost Responsibility *
 - Type: Checkbox
 - Required: Yes
 - Options:
@@ -674,14 +708,14 @@ Google Form 作成用テンプレート（97項目）
   - 以下を理解しています：プロジェクトが中断・中止となった場合、既に発生した費用は返金されません。
     / I understand: Costs already incurred are non-refundable if the project is discontinued.
 
-### Q96. 送信前の確認 / Pre-submission Confirmation *
+### Q99. 送信前の確認 / Pre-submission Confirmation *
 - Type: Checkbox
 - Required: Yes
 - Options:
   - 上記の情報は正確です。後から修正・追加が可能であることを理解しています。
     / The above information is accurate. I understand I can update it later.
 
-### Q97. プライバシーポリシーへの同意 / Privacy Policy Agreement *
+### Q100. プライバシーポリシーへの同意 / Privacy Policy Agreement *
 - Type: Checkbox
 - Required: Yes
 - Options:
@@ -709,7 +743,7 @@ If you have additional information or photos, please send them to info@pearlmemo
 
 | セクション | 質問数 |
 |-----------|--------|
-| 1. 依頼者情報 | 13 |
+| 1. 依頼者情報 | 15 |
 | 2. 故人の基本情報 | 11 |
 | 3. 故人の渡米歴 | 6 |
 | 4. ご遺灰について | 6 |
@@ -719,9 +753,9 @@ If you have additional information or photos, please send them to info@pearlmemo
 | 8. ご希望・ご要望 | 14 |
 | 9. 財務・予算 | 4 |
 | 10. 協力・サポート | 3 |
-| 11. アンケート | 12 |
+| 11. アンケート | 13 |
 | 12. 免責事項・同意 | 4 |
-| **合計** | **97** |
+| **合計** | **100** |
 
 ---
 

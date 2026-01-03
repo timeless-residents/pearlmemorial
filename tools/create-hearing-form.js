@@ -93,12 +93,12 @@ const SECTIONS = [
 ];
 
 // ============================================
-// QUESTIONS DEFINITION (92 questions total)
+// QUESTIONS DEFINITION (100 questions total)
 // ============================================
 
 const QUESTIONS = [
   // ============================================
-  // Section 1: 依頼者情報 (13 questions)
+  // Section 1: 依頼者情報 (15 questions)
   // ============================================
   {
     section: 0,
@@ -212,6 +212,34 @@ const QUESTIONS = [
       '友人と渡航予定 / With friends',
       '未定 / Undecided',
       '渡航予定なし / Not planning to travel'
+    ]
+  },
+  {
+    section: 0,
+    type: 'MULTIPLE_CHOICE',
+    title: 'あなたは何世代目ですか？ / What generation are you?',
+    helpText: '日系アメリカ人としての世代 / Your generation as Japanese American',
+    choices: [
+      '一世 / Issei (1st generation)',
+      '二世 / Nisei (2nd generation)',
+      '三世 / Sansei (3rd generation)',
+      '四世 / Yonsei (4th generation)',
+      '五世以降 / Gosei or later',
+      '混血・複合 / Mixed heritage',
+      '分からない / Not sure'
+    ]
+  },
+  {
+    section: 0,
+    type: 'MULTIPLE_CHOICE',
+    title: '他の家族の関与 / Family Involvement',
+    helpText: 'この取り組みについて、他のご家族は関与・認識していますか？ / Are other family members involved or aware of this initiative?',
+    choices: [
+      '家族全員で取り組んでいる / Entire family is involved',
+      '一部の家族が認識 / Some family members know',
+      '自分だけで進めている / Doing this alone',
+      '家族に反対されている / Family opposes this',
+      '今後共有予定 / Plan to share later'
     ]
   },
 
@@ -837,7 +865,7 @@ const QUESTIONS = [
   },
 
   // ============================================
-  // Section 11: アンケート (4 questions)
+  // Section 11: アンケート (13 questions)
   // ============================================
   {
     section: 10,
@@ -941,6 +969,21 @@ const QUESTIONS = [
       'はい、受信を希望します / Yes, I would like to receive updates',
       '重要な情報のみ希望 / Only important updates',
       'いいえ、受信を希望しません / No, I do not want to receive updates'
+    ]
+  },
+  {
+    section: 10,
+    type: 'CHECKBOX',
+    title: 'この経験の記録方法 / How would you like to document this journey?',
+    helpText: '該当するものすべてにチェック / Check all that apply',
+    choices: [
+      '写真撮影 / Photography',
+      '動画撮影 / Video recording',
+      '文章・日記 / Written journal',
+      'プロの記録サービス希望 / Professional documentation service',
+      'SNS共有予定 / Plan to share on social media',
+      'プライベートに留めたい / Keep private',
+      'まだ決めていない / Haven\'t decided yet'
     ]
   },
   {
