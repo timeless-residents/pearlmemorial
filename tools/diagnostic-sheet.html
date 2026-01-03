@@ -204,6 +204,11 @@
       border: 2px solid var(--warning);
     }
 
+    .result-box.supporter {
+      background: linear-gradient(135deg, #dfe6e9, #b2bec3);
+      border: 2px solid #636e72;
+    }
+
     .result-box h3 {
       font-size: 1.3rem;
       margin-bottom: 0.5rem;
@@ -435,6 +440,17 @@
     </ul>
 
     <div id="self-result" style="margin-top: 1rem;"></div>
+
+    <div id="skip-option" style="text-align: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px dashed #ccc;">
+      <p style="color: #888; font-size: 0.9rem; margin-bottom: 0.5rem;">
+        <span class="ja">どれも当てはまらなくても...</span>
+        <span class="en">Even if none apply to you...</span>
+      </p>
+      <button class="btn btn-secondary" onclick="showSupporterPath()">
+        <span class="ja">共鳴の輪を広げる側として参加する</span>
+        <span class="en">Join as a supporter to spread resonance</span>
+      </button>
+    </div>
   </div>
 
   <!-- Phase 2: Information Readiness (for candidates) -->
@@ -817,6 +833,8 @@ https://pearlmemorial.org</pre>
         c.closest('li').classList.toggle('checked', c.checked);
       });
 
+      const skipOption = document.getElementById('skip-option');
+
       if (checked === 3) {
         resultDiv.innerHTML = `
           <div class="result-box candidate">
@@ -828,6 +846,7 @@ https://pearlmemorial.org</pre>
         `;
         document.getElementById('phase2').style.display = 'block';
         document.getElementById('phase3').style.display = 'none';
+        skipOption.style.display = 'none';
       } else if (checked > 0) {
         resultDiv.innerHTML = `
           <div class="result-box referrer">
@@ -837,13 +856,30 @@ https://pearlmemorial.org</pre>
             <p class="en">You can help spread the circle of resonance. Let's continue.</p>
           </div>
         `;
+        skipOption.style.display = 'none';
         document.getElementById('phase2').style.display = 'none';
         document.getElementById('phase3').style.display = 'block';
       } else {
         resultDiv.innerHTML = '';
+        skipOption.style.display = 'block';
         document.getElementById('phase2').style.display = 'none';
         document.getElementById('phase3').style.display = 'none';
       }
+    }
+
+    // Show supporter path directly (skip self-assessment)
+    function showSupporterPath() {
+      document.getElementById('skip-option').style.display = 'none';
+      document.getElementById('self-result').innerHTML = `
+        <div class="result-box supporter">
+          <h3 class="ja">ありがとうございます！</h3>
+          <h3 class="en">Thank you!</h3>
+          <p class="ja">あなたの一言が、必要な人に届くきっかけになります。</p>
+          <p class="en">Your word could be the key to reaching someone who needs this.</p>
+        </div>
+      `;
+      document.getElementById('phase2').style.display = 'none';
+      document.getElementById('phase3').style.display = 'block';
     }
 
     // Progress tracking
