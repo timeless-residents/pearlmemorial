@@ -378,17 +378,17 @@
       color: white;
     }
 
-    .ja { display: block; }
-    .en { display: none; }
+    .ja { display: none; }
+    .en { display: block; }
 
-    body.lang-en .ja { display: none; }
-    body.lang-en .en { display: block; }
+    body.lang-ja .ja { display: block; }
+    body.lang-ja .en { display: none; }
   </style>
 </head>
 <body>
   <div class="lang-toggle no-print">
-    <button onclick="setLang('ja')" class="active" id="btn-ja">日本語</button>
-    <button onclick="setLang('en')" id="btn-en">English</button>
+    <button onclick="setLang('ja')" id="btn-ja">日本語</button>
+    <button onclick="setLang('en')" class="active" id="btn-en">English</button>
   </div>
 
   <header>
@@ -812,13 +812,13 @@ bit.ly/resonanceus</pre>
     // Language toggle
     function setLang(lang) {
       document.body.classList.remove('lang-en', 'lang-ja');
-      if (lang === 'en') {
-        document.body.classList.add('lang-en');
-        document.getElementById('btn-en').classList.add('active');
-        document.getElementById('btn-ja').classList.remove('active');
-      } else {
+      if (lang === 'ja') {
+        document.body.classList.add('lang-ja');
         document.getElementById('btn-ja').classList.add('active');
         document.getElementById('btn-en').classList.remove('active');
+      } else {
+        document.getElementById('btn-en').classList.add('active');
+        document.getElementById('btn-ja').classList.remove('active');
       }
     }
 
@@ -962,7 +962,7 @@ bit.ly/resonanceus</pre>
     // Copy template
     function copyTemplate(btn) {
       const templateBox = btn.closest('.template-box');
-      const lang = document.body.classList.contains('lang-en') ? 'en' : 'ja';
+      const lang = document.body.classList.contains('lang-ja') ? 'ja' : 'en';
       const pre = templateBox.querySelector(`pre.${lang}`);
 
       navigator.clipboard.writeText(pre.textContent).then(() => {
