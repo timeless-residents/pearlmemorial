@@ -93,7 +93,7 @@ const SECTIONS = [
 ];
 
 // ============================================
-// QUESTIONS DEFINITION (85 questions total)
+// QUESTIONS DEFINITION (87 questions total)
 // ============================================
 
 const QUESTIONS = [
@@ -693,6 +693,30 @@ const QUESTIONS = [
     choices: [
       'とても興味がある / Very interested',
       '少し興味がある / Somewhat interested',
+      '興味がない / Not interested'
+    ]
+  },
+  {
+    section: 7,
+    type: 'MULTIPLE_CHOICE',
+    title: '日本のオハナハウス滞在への関心 / Interest in Ohana House Stay in Japan',
+    helpText: '日本滞在中にご利用いただける宿泊施設です。詳しくはカタログをご覧ください / Accommodation available during your stay in Japan. See catalog for details.',
+    choices: [
+      'とても興味がある / Very interested',
+      '少し興味がある / Somewhat interested',
+      '詳細を聞きたい / Want more information',
+      '興味がない / Not interested'
+    ]
+  },
+  {
+    section: 7,
+    type: 'MULTIPLE_CHOICE',
+    title: '技術業務支援への関心 / Interest in Technical Support Services',
+    helpText: 'オフグリッドインフラの診断・構築・改善支援サービス / Off-grid infrastructure diagnosis, setup, and improvement services',
+    choices: [
+      'とても興味がある / Very interested',
+      '少し興味がある / Somewhat interested',
+      '詳細を聞きたい / Want more information',
       '興味がない / Not interested'
     ]
   },

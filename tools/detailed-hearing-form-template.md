@@ -1,6 +1,6 @@
 # Soul Carrier 詳細ヒアリングフォーム / Detailed Hearing Form
 
-Google Form 作成用テンプレート（87項目）
+Google Form 作成用テンプレート（89項目）
 
 ---
 
@@ -457,7 +457,25 @@ Google Form 作成用テンプレート（87項目）
   - 少し興味がある / Somewhat interested
   - 興味がない / Not interested
 
-### Q70. その他のご要望 / Other Requests
+### Q70. 日本のオハナハウス滞在への関心 / Interest in Ohana House Stay in Japan
+- Type: Multiple choice
+- Hint: 日本滞在中にご利用いただける宿泊施設です。詳しくはカタログをご覧ください / Accommodation available during your stay in Japan. See catalog for details.
+- Options:
+  - とても興味がある / Very interested
+  - 少し興味がある / Somewhat interested
+  - 詳細を聞きたい / Want more information
+  - 興味がない / Not interested
+
+### Q71. 技術業務支援への関心 / Interest in Technical Support Services
+- Type: Multiple choice
+- Hint: オフグリッドインフラの診断・構築・改善支援サービス / Off-grid infrastructure diagnosis, setup, and improvement services
+- Options:
+  - とても興味がある / Very interested
+  - 少し興味がある / Somewhat interested
+  - 詳細を聞きたい / Want more information
+  - 興味がない / Not interested
+
+### Q72. その他のご要望 / Other Requests
 - Type: Long answer
 - Hint: 特別な儀式、故人の遺志、その他何でも
 
@@ -465,7 +483,7 @@ Google Form 作成用テンプレート（87項目）
 
 ## Section 9: 財務・予算 / Budget and Payment (4問)
 
-### Q71. 予算感 / Budget Range
+### Q73. 予算感 / Budget Range
 - Type: Multiple choice
 - Hint: 渡航費・滞在費・有料オプション等を含む概算 / Approximate including travel, lodging, paid options
 - Options:
@@ -477,7 +495,7 @@ Google Form 作成用テンプレート（87項目）
   - 予算は柔軟 / Budget is flexible
   - まだ分からない / Not sure yet
 
-### Q72. 分割払いへの関心 / Interest in Payment Plans
+### Q74. 分割払いへの関心 / Interest in Payment Plans
 - Type: Multiple choice
 - Options:
   - 一括払いで問題ない / Can pay in full
@@ -485,7 +503,7 @@ Google Form 作成用テンプレート（87項目）
   - 内容による / Depends on amount
   - 不要（費用がかからない見込み）/ Not needed
 
-### Q73. 寄付可能な金額帯 / Potential Donation Range
+### Q75. 寄付可能な金額帯 / Potential Donation Range
 - Type: Multiple choice
 - Hint: Soul Carrier活動への任意の寄付について / Optional donation to Soul Carrier activities
 - Options:
@@ -496,7 +514,7 @@ Google Form 作成用テンプレート（87項目）
   - $1,000以上 / Over $1,000
   - 今は難しい / Not possible now
 
-### Q74. 費用に関するご質問・ご懸念 / Questions/Concerns about Costs
+### Q76. 費用に関するご質問・ご懸念 / Questions/Concerns about Costs
 - Type: Long answer
 - Hint: 費用について不安な点があればお聞かせください / Let us know if you have any concerns about costs
 
@@ -504,21 +522,21 @@ Google Form 作成用テンプレート（87項目）
 
 ## Section 10: 協力・サポート / Cooperation and Support (3問)
 
-### Q75. 体験談の共有・広報への協力 / Share Story / Help Outreach
+### Q77. 体験談の共有・広報への協力 / Share Story / Help Outreach
 - Type: Multiple choice
 - Options:
   - 協力可能 / Can cooperate
   - 匿名なら協力可能 / Anonymous only
   - 協力は難しい / Cannot cooperate
 
-### Q76. 活動への資金・物資援助 / Financial/Material Support
+### Q78. 活動への資金・物資援助 / Financial/Material Support
 - Type: Multiple choice
 - Options:
   - 支援を検討したい / Want to consider supporting
   - 今は難しい / Not possible now
   - 詳しく聞きたい / Want more information
 
-### Q77. 有料オプションへの関心 / Interest in Paid Options
+### Q79. 有料オプションへの関心 / Interest in Paid Options
 - Type: Multiple choice
 - Options:
   - 関心あり / Interested
@@ -529,7 +547,7 @@ Google Form 作成用テンプレート（87項目）
 
 ## Section 11: アンケート / Survey (6問)
 
-### Q78. Soul Carrierをどこで知りましたか？ / How did you hear about Soul Carrier?
+### Q80. Soul Carrierをどこで知りましたか？ / How did you hear about Soul Carrier?
 - Type: Checkboxes
 - Hint: 該当するものすべてにチェック / Check all that apply
 - Options:
@@ -543,14 +561,14 @@ Google Form 作成用テンプレート（87項目）
   - イベント・講演会 / Event/seminar
   - その他 / Other
 
-### Q79. 「その他」の場合、具体的に / If "Other", please specify
+### Q81. 「その他」の場合、具体的に / If "Other", please specify
 - Type: Short answer
 
-### Q80. 相談しようと思ったきっかけ / What prompted you to reach out?
+### Q82. 相談しようと思ったきっかけ / What prompted you to reach out?
 - Type: Long answer
 - Hint: 何がきっかけで今回相談しようと思われましたか？ / What made you decide to contact us now?
 
-### Q81. 友人・知人にSoul Carrierを勧める可能性 / How likely would you recommend Soul Carrier?
+### Q83. 友人・知人にSoul Carrierを勧める可能性 / How likely would you recommend Soul Carrier?
 - Type: Multiple choice
 - Hint: 0=全く勧めない、10=強く勧める / 0=Not at all, 10=Very likely
 - Options:
@@ -566,11 +584,11 @@ Google Form 作成用テンプレート（87項目）
   - 1
   - 0 - 全く勧めない / Not at all
 
-### Q82. さらに充実すると嬉しいサービス / Services you would like to see
+### Q84. さらに充実すると嬉しいサービス / Services you would like to see
 - Type: Long answer
 - Hint: あったら嬉しいサービスや機能があれば教えてください / What additional services or features would you find helpful?
 
-### Q83. ご意見・ご要望 / Comments or Suggestions
+### Q85. ご意見・ご要望 / Comments or Suggestions
 - Type: Long answer
 - Hint: サービス改善のためのご意見があればお聞かせください / Any feedback to help us improve
 
@@ -578,7 +596,7 @@ Google Form 作成用テンプレート（87項目）
 
 ## Section 12: 免責事項・同意 / Disclaimers and Consent (4問)
 
-### Q84. サービスの限界についての理解 / Understanding of Service Limitations *
+### Q86. サービスの限界についての理解 / Understanding of Service Limitations *
 - Type: Checkbox
 - Required: Yes
 - Options:
@@ -589,7 +607,7 @@ Google Form 作成用テンプレート（87項目）
   - 以下を理解しています：法的・行政的な問題により、遺灰の輸送ができない場合があります。
     / I understand: Legal/administrative issues may prevent transportation of ashes.
 
-### Q85. 費用負担についての理解 / Understanding of Cost Responsibility *
+### Q87. 費用負担についての理解 / Understanding of Cost Responsibility *
 - Type: Checkbox
 - Required: Yes
 - Options:
@@ -600,14 +618,14 @@ Google Form 作成用テンプレート（87項目）
   - 以下を理解しています：プロジェクトが中断・中止となった場合、既に発生した費用は返金されません。
     / I understand: Costs already incurred are non-refundable if the project is discontinued.
 
-### Q86. 送信前の確認 / Pre-submission Confirmation *
+### Q88. 送信前の確認 / Pre-submission Confirmation *
 - Type: Checkbox
 - Required: Yes
 - Options:
   - 上記の情報は正確です。後から修正・追加が可能であることを理解しています。
     / The above information is accurate. I understand I can update it later.
 
-### Q87. プライバシーポリシーへの同意 / Privacy Policy Agreement *
+### Q89. プライバシーポリシーへの同意 / Privacy Policy Agreement *
 - Type: Checkbox
 - Required: Yes
 - Options:
@@ -642,12 +660,12 @@ If you have additional information or photos, please send them to info@pearlmemo
 | 5. 法的・行政手続き | 6 |
 | 6. 日本側の情報 | 15 |
 | 7. 資料・写真 | 3 |
-| 8. ご希望・ご要望 | 10 |
+| 8. ご希望・ご要望 | 12 |
 | 9. 財務・予算 | 4 |
 | 10. 協力・サポート | 3 |
 | 11. アンケート | 6 |
 | 12. 免責事項・同意 | 4 |
-| **合計** | **87** |
+| **合計** | **89** |
 
 ---
 
