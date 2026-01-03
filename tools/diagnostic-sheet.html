@@ -624,10 +624,10 @@
         <li>
           <input type="checkbox" id="h1" onchange="updateProgress()">
           <label for="h1">
-            <span class="ja">仏教の宗派</span>
-            <span class="en">Buddhist sect</span>
-            <span class="hint ja">例: 曹洞宗、真言宗、天台宗など</span>
-            <span class="hint en">e.g., Soto Zen, Shingon, Tendai, etc.</span>
+            <span class="ja">宗教・宗派</span>
+            <span class="en">Religion / Denomination</span>
+            <span class="hint ja">例: 曹洞宗、真言宗、キリスト教、神道など</span>
+            <span class="hint en">e.g., Soto Zen, Shingon, Christian, Shinto, etc.</span>
           </label>
         </li>
         <li>
@@ -1147,7 +1147,7 @@ bit.ly/resonanceus</pre>
         // List checked helpful items
         if (helpfulChecked > 0) {
           summary += `【揃っている補助情報】\n`;
-          const helpfulLabels = ['仏教の宗派', 'お墓の場所の記憶', '墓石の形や大きさ', '日本の親戚情報', '家紋'];
+          const helpfulLabels = ['宗教・宗派', 'お墓の場所の記憶', '墓石の形や大きさ', '日本の親戚情報', '家紋'];
           helpful.forEach((c, i) => {
             if (c.checked) summary += `✓ ${helpfulLabels[i]}\n`;
           });
@@ -1180,7 +1180,7 @@ bit.ly/resonanceus</pre>
 
         if (helpfulChecked > 0) {
           summary += `[Helpful info available]\n`;
-          const helpfulLabels = ['Buddhist sect', 'Grave location memory', 'Gravestone shape/size', 'Japan relatives', 'Family crest'];
+          const helpfulLabels = ['Religion/Denomination', 'Grave location memory', 'Gravestone shape/size', 'Japan relatives', 'Family crest'];
           helpful.forEach((c, i) => {
             if (c.checked) summary += `✓ ${helpfulLabels[i]}\n`;
           });
