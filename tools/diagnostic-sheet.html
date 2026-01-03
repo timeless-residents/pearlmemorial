@@ -710,10 +710,10 @@
     <div id="readiness-result" style="margin-top: 1rem; text-align: center;"></div>
 
     <div style="text-align: center; margin-top: 1.5rem;">
-      <a href="https://calendly.com/pearlmemorial/pearlmemorialsession" class="btn btn-primary no-print" target="_blank">
+      <button type="button" onclick="startConsultation()" class="btn btn-primary no-print">
         <span class="ja">相談を始める</span>
         <span class="en">Start Consultation</span>
-      </a>
+      </button>
       <button type="button" onclick="printSheet()" class="btn btn-secondary no-print" style="margin-left: 0.5rem;">
         <span class="ja">印刷する</span>
         <span class="en">Print</span>
@@ -1103,6 +1103,104 @@ bit.ly/resonanceus</pre>
     // Print sheet
     function printSheet() {
       window.print();
+    }
+
+    // Start consultation with diagnostic data
+    function startConsultation() {
+      const lang = document.body.classList.contains('lang-ja') ? 'ja' : 'en';
+
+      // Collect checked items
+      const essential = document.querySelectorAll('#essential-check input[type="checkbox"]');
+      const helpful = document.querySelectorAll('#helpful-check input[type="checkbox"]');
+      const bonus = document.querySelectorAll('#bonus-check input[type="checkbox"]');
+
+      const essentialChecked = Array.from(essential).filter(c => c.checked).length;
+      const helpfulChecked = Array.from(helpful).filter(c => c.checked).length;
+      const bonusChecked = Array.from(bonus).filter(c => c.checked).length;
+
+      // Calculate progress
+      const essentialWeight = (essentialChecked / essential.length) * 60;
+      const helpfulWeight = (helpfulChecked / helpful.length) * 30;
+      const bonusWeight = (bonusChecked / bonus.length) * 10;
+      const progress = Math.round(essentialWeight + helpfulWeight + bonusWeight);
+
+      // Build summary
+      let summary = '';
+
+      if (lang === 'ja') {
+        summary = `【診断シートからの事前情報】\n\n`;
+        summary += `準備度: ${progress}%\n`;
+        summary += `必須情報: ${essentialChecked}/4項目\n`;
+        summary += `補助情報: ${helpfulChecked}/5項目\n`;
+        summary += `ボーナス: ${bonusChecked}/4項目\n\n`;
+
+        // List checked essential items
+        if (essentialChecked > 0) {
+          summary += `【揃っている必須情報】\n`;
+          const essentialLabels = ['故人のお名前（漢字）', '出身地', '生年月日', 'ご遺灰の保管場所'];
+          essential.forEach((c, i) => {
+            if (c.checked) summary += `✓ ${essentialLabels[i]}\n`;
+          });
+          summary += `\n`;
+        }
+
+        // List checked helpful items
+        if (helpfulChecked > 0) {
+          summary += `【揃っている補助情報】\n`;
+          const helpfulLabels = ['仏教の宗派', 'お墓の場所の記憶', '墓石の形や大きさ', '日本の親戚情報', '家紋'];
+          helpful.forEach((c, i) => {
+            if (c.checked) summary += `✓ ${helpfulLabels[i]}\n`;
+          });
+          summary += `\n`;
+        }
+
+        // List checked bonus items
+        if (bonusChecked > 0) {
+          summary += `【揃っているボーナス情報】\n`;
+          const bonusLabels = ['古い写真', '戦前の手紙や書類', '移民の記録', '故人のストーリー'];
+          bonus.forEach((c, i) => {
+            if (c.checked) summary += `✓ ${bonusLabels[i]}\n`;
+          });
+        }
+      } else {
+        summary = `[Pre-consultation from Diagnostic Sheet]\n\n`;
+        summary += `Readiness: ${progress}%\n`;
+        summary += `Essential: ${essentialChecked}/4 items\n`;
+        summary += `Helpful: ${helpfulChecked}/5 items\n`;
+        summary += `Bonus: ${bonusChecked}/4 items\n\n`;
+
+        if (essentialChecked > 0) {
+          summary += `[Essential info available]\n`;
+          const essentialLabels = ['Name (Kanji)', 'Birthplace', 'Date of birth', 'Ashes location'];
+          essential.forEach((c, i) => {
+            if (c.checked) summary += `✓ ${essentialLabels[i]}\n`;
+          });
+          summary += `\n`;
+        }
+
+        if (helpfulChecked > 0) {
+          summary += `[Helpful info available]\n`;
+          const helpfulLabels = ['Buddhist sect', 'Grave location memory', 'Gravestone shape/size', 'Japan relatives', 'Family crest'];
+          helpful.forEach((c, i) => {
+            if (c.checked) summary += `✓ ${helpfulLabels[i]}\n`;
+          });
+          summary += `\n`;
+        }
+
+        if (bonusChecked > 0) {
+          summary += `[Bonus info available]\n`;
+          const bonusLabels = ['Old photos', 'Pre-war letters/documents', 'Immigration records', 'Stories/memories'];
+          bonus.forEach((c, i) => {
+            if (c.checked) summary += `✓ ${bonusLabels[i]}\n`;
+          });
+        }
+      }
+
+      // Build Calendly URL with parameter
+      const baseUrl = 'https://calendly.com/pearlmemorial/pearlmemorialsession';
+      const url = `${baseUrl}?a1=${encodeURIComponent(summary)}`;
+
+      window.open(url, '_blank');
     }
   </script>
 </body>
