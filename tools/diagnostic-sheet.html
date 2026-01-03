@@ -840,6 +840,24 @@
             <span class="hint en">Support activities helping other families</span>
           </label>
         </li>
+        <li>
+          <input type="checkbox" id="p8" onchange="updateProgress()">
+          <label for="p8">
+            <span class="ja">体験談の共有・広報に協力可能</span>
+            <span class="en">Can share story / help with outreach</span>
+            <span class="hint ja">メディア取材、SNS発信など</span>
+            <span class="hint en">Media interviews, social media, etc.</span>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" id="p9" onchange="updateProgress()">
+          <label for="p9">
+            <span class="ja">有料オプションにも関心がある</span>
+            <span class="en">Interested in paid options</span>
+            <span class="hint ja">特別な記念品、追加サービスなど</span>
+            <span class="hint en">Special memorials, additional services, etc.</span>
+          </label>
+        </li>
       </ul>
     </div>
 
@@ -1305,7 +1323,7 @@ bit.ly/resonanceus</pre>
         // List checked preferences
         if (preferencesChecked > 0) {
           summary += `【ご希望・ご要望】\n`;
-          const prefLabels = ['できるだけ早く進めたい', '日本に渡航できる', '代わりにご遺灰を届けてほしい', '日本での手続きに同行してほしい', '日本で買ってきてほしいものがある', '家紋入り記念品に興味あり', '活動への援助が可能'];
+          const prefLabels = ['できるだけ早く進めたい', '日本に渡航できる', '代わりにご遺灰を届けてほしい', '日本での手続きに同行してほしい', '日本で買ってきてほしいものがある', '家紋入り記念品に興味あり', '活動への援助が可能', '体験談共有・広報に協力可能', '有料オプションに関心あり'];
           preferences.forEach((c, i) => {
             if (c.checked) summary += `✓ ${prefLabels[i]}\n`;
           });
@@ -1347,7 +1365,7 @@ bit.ly/resonanceus</pre>
         // List checked preferences
         if (preferencesChecked > 0) {
           summary += `[Your Preferences]\n`;
-          const prefLabels = ['Want to proceed ASAP', 'Can travel to Japan', 'Want ashes delivered on my behalf', 'Want accompaniment in Japan', 'Want something purchased in Japan', 'Interested in family crest memorials', 'Can provide support'];
+          const prefLabels = ['Want to proceed ASAP', 'Can travel to Japan', 'Want ashes delivered on my behalf', 'Want accompaniment in Japan', 'Want something purchased in Japan', 'Interested in family crest memorials', 'Can provide support', 'Can share story / help outreach', 'Interested in paid options'];
           preferences.forEach((c, i) => {
             if (c.checked) summary += `✓ ${prefLabels[i]}\n`;
           });
