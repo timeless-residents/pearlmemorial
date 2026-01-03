@@ -309,6 +309,31 @@
       font-size: 0.9rem;
     }
 
+    /* Question flow */
+    .question-box {
+      text-align: center;
+      padding: 1.5rem;
+      background: var(--light);
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+
+    .question-text {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .button-group .btn {
+      min-width: 100px;
+    }
+
     /* Info categories */
     .category-essential { border-left: 4px solid var(--danger); }
     .category-helpful { border-left: 4px solid var(--warning); }
@@ -402,49 +427,85 @@
     </p>
   </header>
 
-  <!-- Phase 1: Self Assessment -->
+  <!-- Phase 1: Self Assessment (Step-by-step flow) -->
   <div class="section" id="phase1">
     <h2>
       <span class="ja">Step 1: あなたは対象者ですか？</span>
       <span class="en">Step 1: Are you a candidate?</span>
     </h2>
 
-    <ul class="checklist" id="self-check">
-      <li>
-        <input type="checkbox" id="q1" onchange="updateSelfAssessment()">
-        <label for="q1">
-          <span class="ja">日本にルーツを持つご先祖がいる</span>
-          <span class="en">I have ancestors with roots in Japan</span>
-          <span class="hint ja">（日系アメリカ人、日系ブラジル人など）</span>
-          <span class="hint en">(Japanese American, Japanese Brazilian, etc.)</span>
-        </label>
-      </li>
-      <li>
-        <input type="checkbox" id="q2" onchange="updateSelfAssessment()">
-        <label for="q2">
-          <span class="ja">ハワイ（または海外）に眠っているご遺灰がある</span>
-          <span class="en">There are ashes resting in Hawaii (or overseas)</span>
-          <span class="hint ja">（自宅、霊園、散骨予定など）</span>
-          <span class="hint en">(At home, cemetery, or awaiting scattering)</span>
-        </label>
-      </li>
-      <li>
-        <input type="checkbox" id="q3" onchange="updateSelfAssessment()">
-        <label for="q3">
-          <span class="ja">日本の故郷へ還したいという願いがある</span>
-          <span class="en">There is a wish to return them to their homeland in Japan</span>
-          <span class="hint ja">（故人の遺志、ご家族の希望など）</span>
-          <span class="hint en">(The deceased's wish, family's hope, etc.)</span>
-        </label>
-      </li>
-    </ul>
+    <!-- Question 1 -->
+    <div id="q1-box" class="question-box">
+      <p class="question-text">
+        <span class="ja">日本にルーツを持つご先祖がいますか？</span>
+        <span class="en">Do you have ancestors with roots in Japan?</span>
+      </p>
+      <p class="hint" style="color: #888; font-size: 0.9rem; margin-bottom: 1rem;">
+        <span class="ja">（日系アメリカ人、日系ブラジル人など）</span>
+        <span class="en">(Japanese American, Japanese Brazilian, etc.)</span>
+      </p>
+      <div class="button-group">
+        <button class="btn btn-primary" onclick="answerQ1(true)">
+          <span class="ja">はい</span>
+          <span class="en">Yes</span>
+        </button>
+        <button class="btn btn-secondary" onclick="answerQ1(false)">
+          <span class="ja">いいえ</span>
+          <span class="en">No</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div id="q2-box" class="question-box" style="display: none;">
+      <p class="question-text">
+        <span class="ja">ハワイ（または海外）に眠っているご遺灰がありますか？</span>
+        <span class="en">Are there ashes resting in Hawaii (or overseas)?</span>
+      </p>
+      <p class="hint" style="color: #888; font-size: 0.9rem; margin-bottom: 1rem;">
+        <span class="ja">（自宅、霊園、散骨予定など）</span>
+        <span class="en">(At home, cemetery, or awaiting scattering)</span>
+      </p>
+      <div class="button-group">
+        <button class="btn btn-primary" onclick="answerQ2(true)">
+          <span class="ja">はい</span>
+          <span class="en">Yes</span>
+        </button>
+        <button class="btn btn-secondary" onclick="answerQ2(false)">
+          <span class="ja">いいえ</span>
+          <span class="en">No</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div id="q3-box" class="question-box" style="display: none;">
+      <p class="question-text">
+        <span class="ja">日本の故郷へ還したいという願いがありますか？</span>
+        <span class="en">Is there a wish to return them to their homeland in Japan?</span>
+      </p>
+      <p class="hint" style="color: #888; font-size: 0.9rem; margin-bottom: 1rem;">
+        <span class="ja">（故人の遺志、ご家族の希望など）</span>
+        <span class="en">(The deceased's wish, family's hope, etc.)</span>
+      </p>
+      <div class="button-group">
+        <button class="btn btn-primary" onclick="answerQ3(true)">
+          <span class="ja">はい</span>
+          <span class="en">Yes</span>
+        </button>
+        <button class="btn btn-secondary" onclick="answerQ3(false)">
+          <span class="ja">いいえ</span>
+          <span class="en">No</span>
+        </button>
+      </div>
+    </div>
 
     <div id="self-result" style="margin-top: 1rem;"></div>
 
-    <div id="skip-option" style="text-align: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px dashed #ccc;">
+    <div id="skip-option" style="display: none; text-align: center; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px dashed #ccc;">
       <p style="color: #888; font-size: 0.9rem; margin-bottom: 0.5rem;">
-        <span class="ja">どれも当てはまらなくても...</span>
-        <span class="en">Even if none apply to you...</span>
+        <span class="ja">対象ではなくても...</span>
+        <span class="en">Even if you're not a candidate...</span>
       </p>
       <button class="btn btn-secondary" onclick="showSupporterPath()">
         <span class="ja">共鳴の輪を広げる側として参加する</span>
@@ -822,48 +883,57 @@ bit.ly/resonanceus</pre>
       }
     }
 
-    // Self assessment
-    function updateSelfAssessment() {
-      const checks = document.querySelectorAll('#self-check input[type="checkbox"]');
-      const checked = Array.from(checks).filter(c => c.checked).length;
-      const resultDiv = document.getElementById('self-result');
-
-      // Update checked styling
-      checks.forEach(c => {
-        c.closest('li').classList.toggle('checked', c.checked);
-      });
-
-      const skipOption = document.getElementById('skip-option');
-
-      if (checked === 3) {
-        resultDiv.innerHTML = `
-          <div class="result-box candidate">
-            <h3 class="ja">あなたは Soul Carrier の対象者です</h3>
-            <h3 class="en">You are a Soul Carrier candidate</h3>
-            <p class="ja">次のステップで、情報の準備状況を確認しましょう</p>
-            <p class="en">Let's check your information readiness in the next step</p>
-          </div>
-        `;
-        document.getElementById('phase2').style.display = 'block';
-        document.getElementById('phase3').style.display = 'none';
-        skipOption.style.display = 'none';
-      } else if (checked > 0) {
-        // 1-2 items checked: encourage to continue, don't judge yet
-        resultDiv.innerHTML = `
-          <p style="color: #666; font-style: italic;">
-            <span class="ja">残りの項目も確認してください</span>
-            <span class="en">Please check the remaining items</span>
-          </p>
-        `;
-        skipOption.style.display = 'block';
-        document.getElementById('phase2').style.display = 'none';
-        document.getElementById('phase3').style.display = 'none';
+    // Step-by-step self assessment
+    function answerQ1(yes) {
+      document.getElementById('q1-box').style.display = 'none';
+      if (yes) {
+        document.getElementById('q2-box').style.display = 'block';
       } else {
-        resultDiv.innerHTML = '';
-        skipOption.style.display = 'block';
-        document.getElementById('phase2').style.display = 'none';
-        document.getElementById('phase3').style.display = 'none';
+        showNotCandidate();
       }
+    }
+
+    function answerQ2(yes) {
+      document.getElementById('q2-box').style.display = 'none';
+      if (yes) {
+        document.getElementById('q3-box').style.display = 'block';
+      } else {
+        showNotCandidate();
+      }
+    }
+
+    function answerQ3(yes) {
+      document.getElementById('q3-box').style.display = 'none';
+      if (yes) {
+        showCandidate();
+      } else {
+        showNotCandidate();
+      }
+    }
+
+    function showCandidate() {
+      document.getElementById('self-result').innerHTML = `
+        <div class="result-box candidate">
+          <h3 class="ja">あなたは Soul Carrier の対象者です</h3>
+          <h3 class="en">You are a Soul Carrier candidate</h3>
+          <p class="ja">次のステップで、情報の準備状況を確認しましょう</p>
+          <p class="en">Let's check your information readiness in the next step</p>
+        </div>
+      `;
+      document.getElementById('phase2').style.display = 'block';
+      document.getElementById('phase3').style.display = 'none';
+    }
+
+    function showNotCandidate() {
+      document.getElementById('self-result').innerHTML = `
+        <div class="result-box referrer">
+          <h3 class="ja">対象ではありませんが...</h3>
+          <h3 class="en">You're not a candidate, but...</h3>
+          <p class="ja">あなたの周りに、日本へ還りたいご遺灰を抱えている方はいませんか？</p>
+          <p class="en">Do you know anyone who has ashes they wish to return to Japan?</p>
+        </div>
+      `;
+      document.getElementById('skip-option').style.display = 'block';
     }
 
     // Show supporter path directly (skip self-assessment)
