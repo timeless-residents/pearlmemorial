@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soul Carrier 初期診断シート | Initial Diagnostic Sheet</title>
+  <style>
+    :root {
+      --primary: #2c3e50;
+      --accent: #8b4513;
+      --success: #27ae60;
+      --warning: #f39c12;
+      --danger: #e74c3c;
+      --light: #ecf0f1;
+      --bg: #fdfbf7;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Zen Kaku Gothic New', 'Hiragino Sans', sans-serif;
+      background: var(--bg);
+      color: var(--primary);
+      line-height: 1.6;
+      padding: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 2px solid var(--accent);
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      color: #666;
+      font-size: 0.95rem;
+    }
+
+    .section {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .section h2 {
+      color: var(--accent);
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--light);
+    }
+
+    .section h3 {
+      font-size: 1rem;
+      margin: 1rem 0 0.5rem;
+      color: var(--primary);
+    }
+
+    /* Phase indicator */
+    .phase-indicator {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .phase {
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      background: var(--light);
+      color: #666;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .phase.active {
+      background: var(--accent);
+      color: white;
+    }
+
+    .phase.completed {
+      background: var(--success);
+      color: white;
+    }
+
+    /* Checklist */
+    .checklist {
+      list-style: none;
+    }
+
+    .checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.75rem;
+      margin-bottom: 0.5rem;
+      background: var(--light);
+      border-radius: 8px;
+      transition: all 0.2s;
+    }
+
+    .checklist li:hover {
+      background: #e8e8e8;
+    }
+
+    .checklist input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      margin-top: 2px;
+      accent-color: var(--success);
+    }
+
+    .checklist label {
+      flex: 1;
+      cursor: pointer;
+    }
+
+    .checklist .hint {
+      display: block;
+      font-size: 0.85rem;
+      color: #888;
+      margin-top: 0.25rem;
+    }
+
+    .checklist li.checked {
+      background: #d5f5e3;
+    }
+
+    /* Progress bar */
+    .progress-container {
+      margin: 1rem 0;
+    }
+
+    .progress-bar {
+      height: 24px;
+      background: var(--light);
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--warning), var(--success));
+      transition: width 0.5s ease;
+      border-radius: 12px;
+    }
+
+    .progress-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-weight: bold;
+      font-size: 0.85rem;
+      color: var(--primary);
+    }
+
+    /* Status badges */
+    .status-badge {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+
+    .status-ready { background: var(--success); color: white; }
+    .status-partial { background: var(--warning); color: white; }
+    .status-needs-info { background: var(--danger); color: white; }
+
+    /* Result section */
+    .result-box {
+      text-align: center;
+      padding: 2rem;
+      border-radius: 12px;
+      margin-top: 1rem;
+    }
+
+    .result-box.candidate {
+      background: linear-gradient(135deg, #d5f5e3, #a8e6cf);
+      border: 2px solid var(--success);
+    }
+
+    .result-box.referrer {
+      background: linear-gradient(135deg, #ffeaa7, #fdcb6e);
+      border: 2px solid var(--warning);
+    }
+
+    .result-box h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Referral section */
+    .referral-card {
+      background: var(--light);
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .referral-card input,
+    .referral-card textarea {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-family: inherit;
+      margin-bottom: 0.5rem;
+    }
+
+    .referral-card textarea {
+      min-height: 80px;
+      resize: vertical;
+    }
+
+    /* Message templates */
+    .template-box {
+      background: #f8f9fa;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      position: relative;
+    }
+
+    .template-box pre {
+      white-space: pre-wrap;
+      font-family: inherit;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .copy-btn {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.8rem;
+    }
+
+    .copy-btn:hover {
+      background: #6d3610;
+    }
+
+    .copy-btn.copied {
+      background: var(--success);
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-decoration: none;
+      font-family: inherit;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #6d3610;
+    }
+
+    .btn-secondary {
+      background: var(--light);
+      color: var(--primary);
+    }
+
+    .btn-add {
+      background: var(--success);
+      color: white;
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    /* Info categories */
+    .category-essential { border-left: 4px solid var(--danger); }
+    .category-helpful { border-left: 4px solid var(--warning); }
+    .category-bonus { border-left: 4px solid var(--success); }
+
+    .category-label {
+      font-size: 0.75rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+    }
+
+    .category-essential .category-label { color: var(--danger); }
+    .category-helpful .category-label { color: var(--warning); }
+    .category-bonus .category-label { color: var(--success); }
+
+    /* Print styles */
+    @media print {
+      body {
+        padding: 1rem;
+      }
+
+      .no-print {
+        display: none !important;
+      }
+
+      .section {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ddd;
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      body {
+        padding: 1rem;
+      }
+
+      h1 {
+        font-size: 1.4rem;
+      }
+
+      .phase {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.75rem;
+      }
+    }
+
+    .lang-toggle {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .lang-toggle button {
+      margin: 0 0.25rem;
+      padding: 0.5rem 1rem;
+      border: 1px solid var(--accent);
+      background: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .lang-toggle button.active {
+      background: var(--accent);
+      color: white;
+    }
+
+    .ja { display: block; }
+    .en { display: none; }
+
+    body.lang-en .ja { display: none; }
+    body.lang-en .en { display: block; }
+  </style>
+</head>
+<body>
+  <div class="lang-toggle no-print">
+    <button onclick="setLang('ja')" class="active" id="btn-ja">日本語</button>
+    <button onclick="setLang('en')" id="btn-en">English</button>
+  </div>
+
+  <header>
+    <h1>
+      <span class="ja">Soul Carrier 初期診断シート</span>
+      <span class="en">Soul Carrier Initial Diagnostic Sheet</span>
+    </h1>
+    <p class="subtitle">
+      <span class="ja">あなたの準備状況を可視化し、次のステップを明確にします</span>
+      <span class="en">Visualize your readiness and clarify your next steps</span>
+    </p>
+  </header>
+
+  <!-- Phase 1: Self Assessment -->
+  <div class="section" id="phase1">
+    <h2>
+      <span class="ja">Step 1: あなたは対象者ですか？</span>
+      <span class="en">Step 1: Are you a candidate?</span>
+    </h2>
+
+    <ul class="checklist" id="self-check">
+      <li>
+        <input type="checkbox" id="q1" onchange="updateSelfAssessment()">
+        <label for="q1">
+          <span class="ja">日本にルーツを持つご先祖がいる</span>
+          <span class="en">I have ancestors with roots in Japan</span>
+          <span class="hint ja">（日系アメリカ人、日系ブラジル人など）</span>
+          <span class="hint en">(Japanese American, Japanese Brazilian, etc.)</span>
+        </label>
+      </li>
+      <li>
+        <input type="checkbox" id="q2" onchange="updateSelfAssessment()">
+        <label for="q2">
+          <span class="ja">ハワイ（または海外）に眠っているご遺灰がある</span>
+          <span class="en">There are ashes resting in Hawaii (or overseas)</span>
+          <span class="hint ja">（自宅、霊園、散骨予定など）</span>
+          <span class="hint en">(At home, cemetery, or awaiting scattering)</span>
+        </label>
+      </li>
+      <li>
+        <input type="checkbox" id="q3" onchange="updateSelfAssessment()">
+        <label for="q3">
+          <span class="ja">日本の故郷へ還したいという願いがある</span>
+          <span class="en">There is a wish to return them to their homeland in Japan</span>
+          <span class="hint ja">（故人の遺志、ご家族の希望など）</span>
+          <span class="hint en">(The deceased's wish, family's hope, etc.)</span>
+        </label>
+      </li>
+    </ul>
+
+    <div id="self-result" style="margin-top: 1rem;"></div>
+  </div>
+
+  <!-- Phase 2: Information Readiness (for candidates) -->
+  <div class="section" id="phase2" style="display: none;">
+    <h2>
+      <span class="ja">Step 2: 情報の準備状況</span>
+      <span class="en">Step 2: Information Readiness</span>
+    </h2>
+
+    <p class="ja" style="margin-bottom: 1rem; color: #666;">
+      以下の情報が揃っているほど、調査がスムーズに進みます。分かる範囲でチェックしてください。
+    </p>
+    <p class="en" style="margin-bottom: 1rem; color: #666;">
+      The more information you have, the smoother the research will be. Check what you know.
+    </p>
+
+    <div class="progress-container">
+      <div class="progress-bar">
+        <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+        <span class="progress-text" id="progress-text">0%</span>
+      </div>
+    </div>
+
+    <!-- Essential Information -->
+    <div class="section category-essential" style="margin-top: 1rem;">
+      <div class="category-label">
+        <span class="ja">必須情報 / Essential</span>
+        <span class="en">Essential Information</span>
+      </div>
+      <ul class="checklist" id="essential-check">
+        <li>
+          <input type="checkbox" id="e1" onchange="updateProgress()">
+          <label for="e1">
+            <span class="ja">故人のお名前（漢字表記）</span>
+            <span class="en">Deceased's name (in Kanji)</span>
+            <span class="hint ja">例: 岩下 テルコ（輝子）</span>
+            <span class="hint en">e.g., Iwashita Teruko (輝子)</span>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" id="e2" onchange="updateProgress()">
+          <label for="e2">
+            <span class="ja">出身地（都道府県・市町村）</span>
+            <span class="en">Birthplace (Prefecture & City/Town)</span>
+            <span class="hint ja">例: 群馬県前橋市</span>
+            <span class="hint en">e.g., Maebashi, Gunma Prefecture</span>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" id="e3" onchange="updateProgress()">
+          <label for="e3">
+            <span class="ja">生年月日（または大まかな年代）</span>
+            <span class="en">Date of birth (or approximate era)</span>
+            <span class="hint ja">例: 昭和5年（1930年）頃</span>
+            <span class="hint en">e.g., Around 1930 (Showa 5)</span>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" id="e4" onchange="updateProgress()">
+          <label for="e4">
+            <span class="ja">現在のご遺灰の保管場所</span>
+            <span class="en">Current location of the ashes</span>
+            <span class="hint ja">例: ラハイナの自宅</span>
+            <span class="hint en">e.g., At home in Lahaina</span>
+          </label>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Helpful Information -->
+    <div class="section category-helpful">
+      <div class="category-label">
+        <span class="ja">あると助かる情報 / Helpful</span>
+        <span class="en">Helpful Information</span>
+      </div>
+      <ul class="checklist" id="helpful-check">
+        <li>
+          <input type="checkbox" id="h1" onchange="updateProgress()">
+          <label for="h1">
+            <span class="ja">仏教の宗派</span>
+            <span class="en">Buddhist sect</span>
+            <span class="hint ja">例: 曹洞宗、真言宗、天台宗など</span>
+            <span class="hint en">e.g., Soto Zen, Shingon, Tendai, etc.</span>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" id="h2" onchange="updateProgress()">
+          <label for="h2">
+            <span class="ja">お墓の場所の記憶</span>
+            <span class="en">Memory of the grave location</span>
+            <span class="hint ja">寺の周辺環境、駐車場の大きさ、入口からの距離など</span>
+            <span class="hint en">Temple surroundings, parking lot size, distance from entrance, etc.</span>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" id="h3" onchange="updateProgress()">
+          <label for="h3">
+            <span class="ja">墓石の形や大きさ</span>
+            <span class="en">Gravestone shape and size</span>
+            <span class="hint ja">和型、洋型、大きさの印象など</span>
+            <span class="hint en">Japanese style, Western style, size impression, etc.</span>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" id="h4" onchange="updateProgress()">
+          <label for="h4">
+            <span class="ja">日本にいる親戚の情報</span>
+            <span class="en">Information about relatives in Japan</span>
+            <span class="hint ja">連絡先があればベスト、名前だけでも可</span>
+            <span class="hint en">Contact info is best, but just names help too</span>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" id="h5" onchange="updateProgress()">
+          <label for="h5">
+            <span class="ja">家紋（Kamon）</span>
+            <span class="en">Family crest (Kamon)</span>
+            <span class="hint ja">例: 抱き茗荷（だきみょうが）</span>
+            <span class="hint en">e.g., Daki-myoga (holding myoga)</span>
+          </label>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Bonus Information -->
+    <div class="section category-bonus">
+      <div class="category-label">
+        <span class="ja">あればさらに良い / Bonus</span>
+        <span class="en">Bonus Information</span>
+      </div>
+      <ul class="checklist" id="bonus-check">
+        <li>
+          <input type="checkbox" id="b1" onchange="updateProgress()">
+          <label for="b1">
+            <span class="ja">古い写真（故郷、家族、お墓など）</span>
+            <span class="en">Old photos (hometown, family, grave, etc.)</span>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" id="b2" onchange="updateProgress()">
+          <label for="b2">
+            <span class="ja">戦前の手紙や書類</span>
+            <span class="en">Pre-war letters or documents</span>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" id="b3" onchange="updateProgress()">
+          <label for="b3">
+            <span class="ja">移民の記録（船名、年など）</span>
+            <span class="en">Immigration records (ship name, year, etc.)</span>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" id="b4" onchange="updateProgress()">
+          <label for="b4">
+            <span class="ja">故人のストーリーや思い出</span>
+            <span class="en">Stories and memories of the deceased</span>
+          </label>
+        </li>
+      </ul>
+    </div>
+
+    <div id="readiness-result" style="margin-top: 1rem; text-align: center;"></div>
+
+    <div style="text-align: center; margin-top: 1.5rem;">
+      <a href="mailto:info@pearlmemorial.org?subject=Soul%20Carrier%20Inquiry" class="btn btn-primary no-print">
+        <span class="ja">相談を始める</span>
+        <span class="en">Start Consultation</span>
+      </a>
+      <button onclick="window.print()" class="btn btn-secondary no-print" style="margin-left: 0.5rem;">
+        <span class="ja">印刷する</span>
+        <span class="en">Print</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Phase 3: Referral (for non-candidates) -->
+  <div class="section" id="phase3" style="display: none;">
+    <h2>
+      <span class="ja">Step 2: 共鳴の輪を広げる</span>
+      <span class="en">Step 2: Spread the Circle of Resonance</span>
+    </h2>
+
+    <p class="ja" style="margin-bottom: 1rem;">
+      あなた自身は対象でなくても、周りに「日本へ還りたいご遺灰」を抱えている方はいませんか？<br>
+      あなたの一言が、80年の断絶を繋ぐきっかけになるかもしれません。
+    </p>
+    <p class="en" style="margin-bottom: 1rem;">
+      Even if you're not a candidate yourself, do you know anyone who has ashes waiting to return to Japan?<br>
+      Your word could be the key to reconnecting 80 years of separation.
+    </p>
+
+    <h3>
+      <span class="ja">紹介したい方をリストアップ</span>
+      <span class="en">List people you'd like to introduce</span>
+    </h3>
+
+    <div id="referral-list">
+      <div class="referral-card">
+        <input type="text" placeholder="お名前 / Name" class="referral-name">
+        <input type="text" placeholder="関係性 / Relationship (例: 教会の友人)" class="referral-relation">
+        <textarea placeholder="メモ / Notes (例: お母さんが広島出身、ご遺灰が自宅に)" class="referral-notes"></textarea>
+      </div>
+    </div>
+
+    <button class="btn btn-add no-print" onclick="addReferral()" style="margin-top: 0.5rem;">
+      <span class="ja">+ もう1人追加</span>
+      <span class="en">+ Add another person</span>
+    </button>
+
+    <h3 style="margin-top: 2rem;">
+      <span class="ja">メッセージテンプレート</span>
+      <span class="en">Message Templates</span>
+    </h3>
+
+    <p class="ja" style="margin-bottom: 1rem; color: #666; font-size: 0.9rem;">
+      コピーして、LINE、メール、メッセンジャーなどで送れます。
+    </p>
+    <p class="en" style="margin-bottom: 1rem; color: #666; font-size: 0.9rem;">
+      Copy and send via LINE, email, messenger, etc.
+    </p>
+
+    <!-- Template 1: Casual -->
+    <div class="template-box">
+      <button class="copy-btn no-print" onclick="copyTemplate(this)">
+        <span class="ja">コピー</span>
+        <span class="en">Copy</span>
+      </button>
+      <div class="category-label" style="color: var(--accent);">
+        <span class="ja">カジュアル / Casual</span>
+        <span class="en">Casual</span>
+      </div>
+      <pre class="ja">ねえ、ちょっと聞きたいんだけど。
+
+ハワイに「日本に還りたかった」ご先祖のご遺灰を預かってる人を支援するプロジェクトがあるんだって。費用は全額寄付でまかなうから、家族の負担はゼロらしい。
+
+もし心当たりがあったら、教えてあげて。
+https://pearlmemorial.org</pre>
+      <pre class="en">Hey, I wanted to share something with you.
+
+There's a project helping families in Hawaii return their ancestors' ashes to Japan. It's fully funded by donations, so there's no cost to the family.
+
+If you know anyone who might need this, please pass it along.
+https://pearlmemorial.org</pre>
+    </div>
+
+    <!-- Template 2: Formal -->
+    <div class="template-box">
+      <button class="copy-btn no-print" onclick="copyTemplate(this)">
+        <span class="ja">コピー</span>
+        <span class="en">Copy</span>
+      </button>
+      <div class="category-label" style="color: var(--accent);">
+        <span class="ja">フォーマル / Formal</span>
+        <span class="en">Formal</span>
+      </div>
+      <pre class="ja">お世話になっております。
+
+本日は、日系アメリカ人のご家族を支援する活動についてお知らせしたく、ご連絡いたしました。
+
+「Soul Carrier」は、ハワイに眠るご先祖のご遺灰を、日本の故郷へお届けするプロジェクトです。戸籍調査、ご親戚との連絡、式典の手配まで、すべて無償で行われています。
+
+もしお心当たりのある方がいらっしゃいましたら、ぜひご紹介いただけますと幸いです。
+
+詳細: https://pearlmemorial.org
+
+よろしくお願いいたします。</pre>
+      <pre class="en">Dear Friend,
+
+I wanted to share information about a meaningful project supporting Japanese American families.
+
+"Soul Carrier" is a project that helps return ancestors' ashes from Hawaii to their homeland in Japan. The service includes genealogy research, coordination with relatives, and ceremony arrangements—all provided at no cost to families.
+
+If you know anyone who might benefit from this, please consider sharing.
+
+Details: https://pearlmemorial.org
+
+Best regards</pre>
+    </div>
+
+    <!-- Template 3: Church/Community -->
+    <div class="template-box">
+      <button class="copy-btn no-print" onclick="copyTemplate(this)">
+        <span class="ja">コピー</span>
+        <span class="en">Copy</span>
+      </button>
+      <div class="category-label" style="color: var(--accent);">
+        <span class="ja">教会・コミュニティ向け / For Church & Community</span>
+        <span class="en">For Church & Community</span>
+      </div>
+      <pre class="ja">皆さまへ
+
+80年前、戦争によって日本との絆を断たれた日系アメリカ人のご家族が、今もハワイにたくさんいらっしゃいます。
+
+「いつか日本に還りたい」というご先祖の願いを叶えるため、ご遺灰を故郷へお届けするプロジェクトが始まりました。
+
+費用の心配は不要です。すべて寄付でまかなわれます。
+
+教会や地域コミュニティで、心当たりのある方がいらっしゃいましたら、ぜひお声がけください。
+
+Pearl Memorial Foundation
+https://pearlmemorial.org</pre>
+      <pre class="en">Dear Community Members,
+
+80 years ago, the war severed the bonds between Japanese American families and Japan. Many families in Hawaii still carry this separation.
+
+A project has begun to fulfill the wishes of ancestors who wanted to "return to Japan someday" by delivering their ashes to their homeland.
+
+There is no cost to families—everything is covered by donations.
+
+If you know anyone in your church or community who might need this, please reach out.
+
+Pearl Memorial Foundation
+https://pearlmemorial.org</pre>
+    </div>
+
+    <!-- Template 4: Social Media -->
+    <div class="template-box">
+      <button class="copy-btn no-print" onclick="copyTemplate(this)">
+        <span class="ja">コピー</span>
+        <span class="en">Copy</span>
+      </button>
+      <div class="category-label" style="color: var(--accent);">
+        <span class="ja">SNS用（短め）/ Social Media</span>
+        <span class="en">Social Media (Short)</span>
+      </div>
+      <pre class="ja">ハワイに眠る日系人のご遺灰を、日本の故郷へ届けるプロジェクト🌺
+
+80年の断絶を、一家族ずつ繋ぎ直す。
+費用は全額寄付、家族負担ゼロ。
+
+心当たりがあれば、シェアお願いします。
+#SoulCarrier #JapaneseAmerican
+https://pearlmemorial.org</pre>
+      <pre class="en">Returning Japanese American ancestors' ashes from Hawaii to Japan 🌺
+
+Reconnecting 80 years of separation, one family at a time.
+Fully funded—no cost to families.
+
+Please share if you know someone who needs this.
+#SoulCarrier #JapaneseAmerican
+https://pearlmemorial.org</pre>
+    </div>
+
+    <div style="text-align: center; margin-top: 2rem;">
+      <button onclick="window.print()" class="btn btn-secondary no-print">
+        <span class="ja">このシートを印刷する</span>
+        <span class="en">Print this sheet</span>
+      </button>
+    </div>
+  </div>
+
+  <footer style="text-align: center; margin-top: 2rem; color: #888; font-size: 0.85rem;">
+    <p>Pearl Memorial Foundation | Cross Boundaries Through Resonance</p>
+    <p>https://pearlmemorial.org</p>
+  </footer>
+
+  <script>
+    // Language toggle
+    function setLang(lang) {
+      document.body.classList.remove('lang-en', 'lang-ja');
+      if (lang === 'en') {
+        document.body.classList.add('lang-en');
+        document.getElementById('btn-en').classList.add('active');
+        document.getElementById('btn-ja').classList.remove('active');
+      } else {
+        document.getElementById('btn-ja').classList.add('active');
+        document.getElementById('btn-en').classList.remove('active');
+      }
+    }
+
+    // Self assessment
+    function updateSelfAssessment() {
+      const checks = document.querySelectorAll('#self-check input[type="checkbox"]');
+      const checked = Array.from(checks).filter(c => c.checked).length;
+      const resultDiv = document.getElementById('self-result');
+
+      // Update checked styling
+      checks.forEach(c => {
+        c.closest('li').classList.toggle('checked', c.checked);
+      });
+
+      if (checked === 3) {
+        resultDiv.innerHTML = `
+          <div class="result-box candidate">
+            <h3 class="ja">あなたは Soul Carrier の対象者です</h3>
+            <h3 class="en">You are a Soul Carrier candidate</h3>
+            <p class="ja">次のステップで、情報の準備状況を確認しましょう</p>
+            <p class="en">Let's check your information readiness in the next step</p>
+          </div>
+        `;
+        document.getElementById('phase2').style.display = 'block';
+        document.getElementById('phase3').style.display = 'none';
+      } else if (checked > 0) {
+        resultDiv.innerHTML = `
+          <div class="result-box referrer">
+            <h3 class="ja">あなた自身は対象外かもしれませんが...</h3>
+            <h3 class="en">You might not be a candidate, but...</h3>
+            <p class="ja">共鳴の輪を広げる力になれます。次のステップへ進みましょう。</p>
+            <p class="en">You can help spread the circle of resonance. Let's continue.</p>
+          </div>
+        `;
+        document.getElementById('phase2').style.display = 'none';
+        document.getElementById('phase3').style.display = 'block';
+      } else {
+        resultDiv.innerHTML = '';
+        document.getElementById('phase2').style.display = 'none';
+        document.getElementById('phase3').style.display = 'none';
+      }
+    }
+
+    // Progress tracking
+    function updateProgress() {
+      const essential = document.querySelectorAll('#essential-check input[type="checkbox"]');
+      const helpful = document.querySelectorAll('#helpful-check input[type="checkbox"]');
+      const bonus = document.querySelectorAll('#bonus-check input[type="checkbox"]');
+
+      const essentialChecked = Array.from(essential).filter(c => c.checked).length;
+      const helpfulChecked = Array.from(helpful).filter(c => c.checked).length;
+      const bonusChecked = Array.from(bonus).filter(c => c.checked).length;
+
+      // Update checked styling
+      [...essential, ...helpful, ...bonus].forEach(c => {
+        c.closest('li').classList.toggle('checked', c.checked);
+      });
+
+      // Weighted progress: Essential (60%), Helpful (30%), Bonus (10%)
+      const essentialWeight = (essentialChecked / essential.length) * 60;
+      const helpfulWeight = (helpfulChecked / helpful.length) * 30;
+      const bonusWeight = (bonusChecked / bonus.length) * 10;
+
+      const progress = Math.round(essentialWeight + helpfulWeight + bonusWeight);
+
+      document.getElementById('progress-fill').style.width = progress + '%';
+      document.getElementById('progress-text').textContent = progress + '%';
+
+      // Update result
+      const resultDiv = document.getElementById('readiness-result');
+
+      if (essentialChecked === essential.length) {
+        resultDiv.innerHTML = `
+          <span class="status-badge status-ready">
+            <span class="ja">調査開始可能！</span>
+            <span class="en">Ready to start!</span>
+          </span>
+          <p style="margin-top: 0.5rem;">
+            <span class="ja">必須情報が揃っています。すぐに相談を始められます。</span>
+            <span class="en">Essential information is complete. You can start the consultation now.</span>
+          </p>
+        `;
+      } else if (essentialChecked >= 2) {
+        resultDiv.innerHTML = `
+          <span class="status-badge status-partial">
+            <span class="ja">あと少し！</span>
+            <span class="en">Almost there!</span>
+          </span>
+          <p style="margin-top: 0.5rem;">
+            <span class="ja">まずはご相談ください。一緒に足りない情報を探しましょう。</span>
+            <span class="en">Let's consult first. We can search for the missing information together.</span>
+          </p>
+        `;
+      } else {
+        resultDiv.innerHTML = `
+          <span class="status-badge status-needs-info">
+            <span class="ja">情報収集が必要</span>
+            <span class="en">More info needed</span>
+          </span>
+          <p style="margin-top: 0.5rem;">
+            <span class="ja">まずは分かる範囲の情報を集めてみましょう。ご家族やご親戚にも聞いてみてください。</span>
+            <span class="en">Let's gather what information you can. Try asking family members and relatives.</span>
+          </p>
+        `;
+      }
+    }
+
+    // Add referral card
+    function addReferral() {
+      const list = document.getElementById('referral-list');
+      const card = document.createElement('div');
+      card.className = 'referral-card';
+      card.innerHTML = `
+        <input type="text" placeholder="お名前 / Name" class="referral-name">
+        <input type="text" placeholder="関係性 / Relationship (例: 教会の友人)" class="referral-relation">
+        <textarea placeholder="メモ / Notes (例: お母さんが広島出身、ご遺灰が自宅に)" class="referral-notes"></textarea>
+      `;
+      list.appendChild(card);
+    }
+
+    // Copy template
+    function copyTemplate(btn) {
+      const templateBox = btn.closest('.template-box');
+      const lang = document.body.classList.contains('lang-en') ? 'en' : 'ja';
+      const pre = templateBox.querySelector(`pre.${lang}`);
+
+      navigator.clipboard.writeText(pre.textContent).then(() => {
+        btn.classList.add('copied');
+        const originalText = btn.innerHTML;
+        btn.innerHTML = '<span class="ja">コピー完了！</span><span class="en">Copied!</span>';
+        setTimeout(() => {
+          btn.classList.remove('copied');
+          btn.innerHTML = originalText;
+        }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>
