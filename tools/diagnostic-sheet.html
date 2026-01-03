@@ -318,6 +318,13 @@
       margin-bottom: 1rem;
     }
 
+    .question-number {
+      font-size: 0.85rem;
+      color: var(--accent);
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
     .question-text {
       font-size: 1.1rem;
       font-weight: 500;
@@ -332,6 +339,21 @@
 
     .button-group .btn {
       min-width: 100px;
+    }
+
+    .btn-back {
+      display: block;
+      margin: 1rem auto 0;
+      background: none;
+      border: none;
+      color: #888;
+      font-size: 0.9rem;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .btn-back:hover {
+      color: var(--primary);
     }
 
     /* Info categories */
@@ -436,6 +458,7 @@
 
     <!-- Question 1 -->
     <div id="q1-box" class="question-box">
+      <p class="question-number">1 / 3</p>
       <p class="question-text">
         <span class="ja">日本にルーツを持つご先祖がいますか？</span>
         <span class="en">Do you have ancestors with roots in Japan?</span>
@@ -458,6 +481,7 @@
 
     <!-- Question 2 -->
     <div id="q2-box" class="question-box" style="display: none;">
+      <p class="question-number">2 / 3</p>
       <p class="question-text">
         <span class="ja">ハワイ（または海外）に眠っているご遺灰がありますか？</span>
         <span class="en">Are there ashes resting in Hawaii (or overseas)?</span>
@@ -476,10 +500,15 @@
           <span class="en">No</span>
         </button>
       </div>
+      <button class="btn-back" onclick="goBack(1)">
+        <span class="ja">← 戻る</span>
+        <span class="en">← Back</span>
+      </button>
     </div>
 
     <!-- Question 3 -->
     <div id="q3-box" class="question-box" style="display: none;">
+      <p class="question-number">3 / 3</p>
       <p class="question-text">
         <span class="ja">日本の故郷へ還したいという願いがありますか？</span>
         <span class="en">Is there a wish to return them to their homeland in Japan?</span>
@@ -498,6 +527,10 @@
           <span class="en">No</span>
         </button>
       </div>
+      <button class="btn-back" onclick="goBack(2)">
+        <span class="ja">← 戻る</span>
+        <span class="en">← Back</span>
+      </button>
     </div>
 
     <div id="self-result" style="margin-top: 1rem;"></div>
@@ -934,6 +967,20 @@ bit.ly/resonanceus</pre>
         </div>
       `;
       document.getElementById('skip-option').style.display = 'block';
+    }
+
+    function goBack(toQuestion) {
+      // Hide all question boxes and results
+      document.getElementById('q1-box').style.display = 'none';
+      document.getElementById('q2-box').style.display = 'none';
+      document.getElementById('q3-box').style.display = 'none';
+      document.getElementById('self-result').innerHTML = '';
+      document.getElementById('skip-option').style.display = 'none';
+      document.getElementById('phase2').style.display = 'none';
+      document.getElementById('phase3').style.display = 'none';
+
+      // Show the requested question
+      document.getElementById('q' + toQuestion + '-box').style.display = 'block';
     }
 
     // Show supporter path directly (skip self-assessment)
