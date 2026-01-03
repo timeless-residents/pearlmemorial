@@ -934,6 +934,17 @@ const QUESTIONS = [
   },
   {
     section: 10,
+    type: 'MULTIPLE_CHOICE',
+    title: 'お知らせ・プロモーション情報の受信 / Newsletter and promotional updates',
+    helpText: '今後のお知らせやプロモーション情報の受信を希望しますか？ / Would you like to receive future announcements and promotional information?',
+    choices: [
+      'はい、受信を希望します / Yes, I would like to receive updates',
+      '重要な情報のみ希望 / Only important updates',
+      'いいえ、受信を希望しません / No, I do not want to receive updates'
+    ]
+  },
+  {
+    section: 10,
     type: 'PARAGRAPH',
     title: 'ご意見・ご要望 / Comments or Suggestions',
     helpText: 'サービス改善のためのご意見があればお聞かせください / Any feedback to help us improve'
