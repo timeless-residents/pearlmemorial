@@ -620,7 +620,7 @@
         <span class="ja">相談を始める</span>
         <span class="en">Start Consultation</span>
       </a>
-      <button onclick="window.print()" class="btn btn-secondary no-print" style="margin-left: 0.5rem;">
+      <button type="button" onclick="printSheet()" class="btn btn-secondary no-print" style="margin-left: 0.5rem;">
         <span class="ja">印刷する</span>
         <span class="en">Print</span>
       </button>
@@ -796,7 +796,7 @@ bit.ly/resonanceus</pre>
     </div>
 
     <div style="text-align: center; margin-top: 2rem;">
-      <button onclick="window.print()" class="btn btn-secondary no-print">
+      <button type="button" onclick="printSheet()" class="btn btn-secondary no-print">
         <span class="ja">このシートを印刷する</span>
         <span class="en">Print this sheet</span>
       </button>
@@ -974,6 +974,11 @@ bit.ly/resonanceus</pre>
           btn.innerHTML = originalText;
         }, 2000);
       });
+    }
+
+    // Print sheet
+    function printSheet() {
+      window.print();
     }
   </script>
 </body>
