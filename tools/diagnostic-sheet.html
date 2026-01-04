@@ -1441,6 +1441,32 @@ bit.ly/resonanceus</pre>
         }
       }
 
+      // Collect referral information
+      const referralCards = document.querySelectorAll('#referral-list-candidate .referral-card');
+      let hasReferrals = false;
+      let referralSummary = '';
+
+      referralCards.forEach((card, index) => {
+        const name = card.querySelector('.referral-name').value.trim();
+        const relation = card.querySelector('.referral-relation').value.trim();
+        const notes = card.querySelector('.referral-notes').value.trim();
+
+        if (name || relation || notes) {
+          if (!hasReferrals) {
+            referralSummary = lang === 'ja' ? `\n【紹介者情報】\n` : `\n[Referrals]\n`;
+            hasReferrals = true;
+          }
+          referralSummary += `${index + 1}. ${name || '(未記入)'}`;
+          if (relation) referralSummary += ` - ${relation}`;
+          if (notes) referralSummary += `\n   ${notes}`;
+          referralSummary += `\n`;
+        }
+      });
+
+      if (hasReferrals) {
+        summary += referralSummary;
+      }
+
       // Build Calendly URL with parameter
       const baseUrl = 'https://calendly.com/pearlmemorial/pearlmemorialsession';
       const url = `${baseUrl}?a1=${encodeURIComponent(summary)}`;
