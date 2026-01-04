@@ -612,7 +612,7 @@ const QUESTIONS = [
     section: 5,
     type: 'TEXT',
     title: '家紋 / Family Crest (Kamon)',
-    helpText: '例: 抱き茗荷、丸に橘'
+    helpText: '分かれば記入（墓石に刻まれていることも）'
   },
   {
     section: 5,
