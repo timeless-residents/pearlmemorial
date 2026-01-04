@@ -19,22 +19,38 @@
 const FORM_CONFIG = {
   title: 'Soul Carrier 詳細ヒアリングフォーム / Detailed Hearing Form',
   description: `【日本語】
-初回相談ありがとうございました。
-調査を開始するにあたり、詳細な情報をお聞かせください。
-分かる範囲で構いません。後から追加・修正も可能です。
+故人を故郷に還したい——その想いに寄り添い、私たちがお手伝いします。
+
+このフォームでは、調査に必要な情報をお聞きします。
+すべてを覚えていなくても大丈夫です。分かる範囲で、ゆっくりご記入ください。
+後から追加・修正することもできます。
+
+ご不明点があれば、いつでもお問い合わせください。
+一緒に、故人の帰郷への道を探しましょう。
 
 【English】
-Thank you for your initial consultation.
-Please provide detailed information to help us begin the research.
-Fill in what you know - you can add or update information later.`,
+You wish to bring your loved one home — we are here to help make that happen.
+
+This form gathers information needed for our research.
+You don't need to remember everything. Fill in what you know, at your own pace.
+You can always add or update information later.
+
+If you have any questions, please don't hesitate to reach out.
+Together, let's find the path to bring your loved one home.`,
 
   confirmationMessage: `【日本語】
 ご回答ありがとうございました。
+お気持ちとお時間をかけてくださったことに、心から感謝いたします。
+
 内容を確認し、3営業日以内にご連絡いたします。
+ご質問があれば、いつでも movement@pearl.memorial までお問い合わせください。
 
 【English】
 Thank you for your response.
-We will contact you within 3 business days.`
+We deeply appreciate the time and care you put into sharing this information.
+
+We will review your answers and contact you within 3 business days.
+If you have any questions, please reach out to movement@pearl.memorial anytime.`
 };
 
 // ============================================
@@ -44,51 +60,75 @@ We will contact you within 3 business days.`
 const SECTIONS = [
   {
     title: 'Section 1: 依頼者情報 / Your Information',
-    description: 'あなたについて教えてください / Tell us about yourself'
+    description: `故人を故郷に還したいというお気持ちに、心から敬意を表します。まずはあなたについて教えてください。
+
+We deeply respect your wish to bring your loved one home. First, please tell us about yourself.`
   },
   {
     title: 'Section 2: 故人の基本情報 / Deceased\'s Basic Information',
-    description: '故人について分かる範囲で / What you know about the deceased'
+    description: `故人について、分かる範囲で構いません。曖昧な記憶でも、調査の手がかりになります。思い出しながら、ゆっくりご記入ください。
+
+Please share what you know about the deceased. Even vague memories can be valuable clues. Take your time.`
   },
   {
     title: 'Section 3: 故人の渡米歴 / Immigration History',
-    description: '渡米の経緯について / About immigration to the US'
+    description: `海を渡り、新天地で生きることを選んだ故人の旅路。その足跡を辿ることが、故郷への帰還の第一歩になります。
+
+The journey of someone who crossed the ocean to build a new life. Tracing these footsteps is the first step toward bringing them home.`
   },
   {
     title: 'Section 4: ご遺灰について / About the Ashes',
-    description: '現在のご遺灰の状況 / Current situation of the ashes'
+    description: `大切なご遺灰について、現在の状況をお聞かせください。輸送方法の計画に必要な情報です。
+
+Please tell us about the current situation of the ashes. This information helps us plan the transportation carefully.`
   },
   {
     title: 'Section 5: 法的・行政手続き / Legal & Administrative',
-    description: '必要書類と権限について / Required documents and authority'
+    description: `書類関係は複雑に感じるかもしれません。分からない項目は「不明」で構いません。私たちがサポートします。
+
+Paperwork can feel overwhelming. It's okay to answer "Unknown" - we're here to help you through the process.`
   },
   {
     title: 'Section 6: 日本側の情報 / Information about Japan',
-    description: '日本のお墓や親戚について / About grave and relatives in Japan'
+    description: `日本のお墓や親戚の情報は、調査成功の鍵となります。断片的な記憶でも、古い写真の背景でも、どんな情報でも役立ちます。
+
+Information about the grave and relatives in Japan is crucial for our research. Any fragment of memory or detail from old photos can help.`
   },
   {
     title: 'Section 7: 資料・写真 / Documents and Photos',
-    description: 'お持ちの資料について / About documents you have'
+    description: `古い写真や書類は、時を超えて故人と家族をつなぐ宝物です。お持ちのものがあれば、ぜひ共有してください。
+
+Old photos and documents are treasures that connect the deceased to their family across time. Please share what you have.`
   },
   {
     title: 'Section 8: ご希望・ご要望 / Your Preferences',
-    description: 'ご希望をお聞かせください / Tell us your preferences'
+    description: `故人をどのような形で故郷に還したいか、あなたのお気持ちをお聞かせください。一緒に最善の方法を考えましょう。
+
+Please share how you envision bringing your loved one home. We'll work together to find the best approach.`
   },
   {
     title: 'Section 9: 財務・予算 / Budget and Payment',
-    description: '費用について / About costs and budget'
+    description: `費用について率直にお聞きします。無理のない範囲で、一緒に方法を考えます。費用が障壁にならないよう、柔軟に対応します。
+
+We'll ask honestly about budget. We'll work within your means and find solutions together. Cost should never be a barrier.`
   },
   {
     title: 'Section 10: 協力・サポート / Cooperation and Support',
-    description: '活動へのご協力について / About supporting our activities'
+    description: `同じ思いを持つ方々に、あなたの経験が希望を届けることがあります。ご協力は完全に任意です。
+
+Your experience may bring hope to others with similar wishes. Cooperation is entirely optional.`
   },
   {
     title: 'Section 11: アンケート / Survey',
-    description: 'サービス改善のため教えてください / Help us improve our service'
+    description: `以下は任意回答です。より良いサービスのため、お気持ちやご意見をお聞かせください。
+
+The following questions are optional. Your feedback helps us serve families like yours better.`
   },
   {
     title: 'Section 12: 免責事項・同意 / Disclaimers and Consent',
-    description: '重要事項のご確認 / Important confirmations'
+    description: `最後に、いくつかの重要事項をご確認ください。ご不明点があれば、いつでもお問い合わせください。
+
+Finally, please review these important items. Feel free to contact us with any questions.`
   }
 ];
 
@@ -349,6 +389,12 @@ const QUESTIONS = [
   },
   {
     section: 2,
+    type: 'SECTION_HEADER',
+    title: '戦時中の経験 / Wartime Experience',
+    helpText: '辛い記憶かもしれません。お答えいただける範囲で構いません。この情報は記録の照合に役立つことがあります。\n\nThis may be a difficult memory. Answer only what you\'re comfortable sharing. This information can help cross-reference historical records.'
+  },
+  {
+    section: 2,
     type: 'MULTIPLE_CHOICE',
     title: '強制収容歴（WWII）/ WWII Internment History',
     helpText: '第二次世界大戦中の強制収容について / About wartime internment',
@@ -570,6 +616,12 @@ const QUESTIONS = [
   },
   {
     section: 5,
+    type: 'SECTION_HEADER',
+    title: '家族の記憶 / Family Memories',
+    helpText: '故人のご家族について、覚えていることを教えてください。この情報が日本の親戚を見つける手がかりになります。\n\nPlease share what you remember about the deceased\'s family. This information helps us locate relatives in Japan.'
+  },
+  {
+    section: 5,
     type: 'TEXT',
     title: '父親の名前 / Father\'s Name'
   },
@@ -701,6 +753,12 @@ const QUESTIONS = [
     type: 'PARAGRAPH',
     title: '日本で購入してほしいもの / Items to Purchase in Japan',
     helpText: '故郷の品、お供え物など'
+  },
+  {
+    section: 7,
+    type: 'SECTION_HEADER',
+    title: '追加サービスのご案内 / Additional Services',
+    helpText: '以下は任意のオプションサービスです。ご興味があればお知らせください。後からでもお申し込みいただけます。\n\nThe following are optional services. Let us know if you\'re interested - you can also request these later.'
   },
   {
     section: 7,
@@ -944,6 +1002,12 @@ const QUESTIONS = [
   },
   {
     section: 10,
+    type: 'SECTION_HEADER',
+    title: 'あなたの想い / Your Reflections',
+    helpText: '以下の質問は任意です。お気持ちを言葉にすることで、この旅の意味がより深まることがあります。\n\nThe following questions are optional. Putting your feelings into words can deepen the meaning of this journey.'
+  },
+  {
+    section: 10,
     type: 'PARAGRAPH',
     title: 'この取り組みを通じて子孫に残したいこと / Legacy you want to leave for future generations',
     helpText: 'この経験を通じて、お子様やお孫様に伝えたいことはありますか？ / What would you like your children or grandchildren to learn from this experience?'
@@ -1113,6 +1177,14 @@ function addQuestion(form, q) {
     case 'DATE':
       item = form.addDateItem();
       break;
+
+    case 'SECTION_HEADER':
+      item = form.addSectionHeaderItem();
+      item.setTitle(q.title);
+      if (q.helpText) {
+        item.setHelpText(q.helpText);
+      }
+      return; // SECTION_HEADER doesn't need required setting
 
     // NOTE: FILE type removed - addFileUploadItem() requires respondents to be logged in
     // Using PARAGRAPH with instructions to share via Google Drive/email instead
