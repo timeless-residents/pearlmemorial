@@ -447,6 +447,12 @@
       <span class="ja">あなたの準備状況を可視化し、次のステップを明確にします</span>
       <span class="en">Visualize your readiness and clarify your next steps</span>
     </p>
+    <p style="margin-top: 0.5rem;">
+      <a href="https://timeless-residents.github.io/pearlmemorial/" target="_blank" style="color: var(--accent); font-size: 0.9rem;">
+        <span class="ja">Soul Carrier について詳しく見る →</span>
+        <span class="en">Learn more about Soul Carrier →</span>
+      </a>
+    </p>
   </header>
 
   <!-- Phase 1: Self Assessment (Step-by-step flow) -->
@@ -596,6 +602,15 @@
         <li>
           <input type="checkbox" id="e3" onchange="updateProgress()">
           <label for="e3">
+            <span class="ja">本籍地（番地まで分かれば）</span>
+            <span class="en">Permanent domicile (street address if known)</span>
+            <span class="hint ja">戸籍取得に必要。出身地と異なる場合あり</span>
+            <span class="hint en">Required for family register. May differ from birthplace</span>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" id="e4" onchange="updateProgress()">
+          <label for="e4">
             <span class="ja">生年月日（または大まかな年代）</span>
             <span class="en">Date of birth (or approximate era)</span>
             <span class="hint ja">例: 昭和5年（1930年）頃</span>
@@ -603,8 +618,8 @@
           </label>
         </li>
         <li>
-          <input type="checkbox" id="e4" onchange="updateProgress()">
-          <label for="e4">
+          <input type="checkbox" id="e5" onchange="updateProgress()">
+          <label for="e5">
             <span class="ja">現在のご遺灰の保管場所</span>
             <span class="en">Current location of the ashes</span>
             <span class="hint ja">例: ラハイナの自宅</span>
@@ -624,10 +639,10 @@
         <li>
           <input type="checkbox" id="h1" onchange="updateProgress()">
           <label for="h1">
-            <span class="ja">仏教の宗派</span>
-            <span class="en">Buddhist sect</span>
-            <span class="hint ja">例: 曹洞宗、真言宗、天台宗など</span>
-            <span class="hint en">e.g., Soto Zen, Shingon, Tendai, etc.</span>
+            <span class="ja">宗教・宗派</span>
+            <span class="en">Religion / Denomination</span>
+            <span class="hint ja">例: 曹洞宗、真言宗、キリスト教、神道など</span>
+            <span class="hint en">e.g., Soto Zen, Shingon, Christian, Shinto, etc.</span>
           </label>
         </li>
         <li>
@@ -666,6 +681,42 @@
             <span class="hint en">e.g., Daki-myoga (holding myoga)</span>
           </label>
         </li>
+        <li>
+          <input type="checkbox" id="h6" onchange="updateProgress()">
+          <label for="h6">
+            <span class="ja">親の名前</span>
+            <span class="en">Parents' names</span>
+            <span class="hint ja">戸籍を辿る際に必要</span>
+            <span class="hint en">Needed to trace family register</span>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" id="h7" onchange="updateProgress()">
+          <label for="h7">
+            <span class="ja">旧姓（該当する場合）</span>
+            <span class="en">Maiden name (if applicable)</span>
+            <span class="hint ja">女性の場合、調査に重要</span>
+            <span class="hint en">Important for tracing female ancestors</span>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" id="h8" onchange="updateProgress()">
+          <label for="h8">
+            <span class="ja">戒名・法名（仏教の場合）</span>
+            <span class="en">Buddhist posthumous name</span>
+            <span class="hint ja">墓石に刻まれていることが多い</span>
+            <span class="hint en">Often engraved on gravestones</span>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" id="h9" onchange="updateProgress()">
+          <label for="h9">
+            <span class="ja">故人の死亡日</span>
+            <span class="en">Date of death</span>
+            <span class="hint ja">年忌法要のタイミング計算に使用</span>
+            <span class="hint en">Used to calculate memorial service timing</span>
+          </label>
+        </li>
       </ul>
     </div>
 
@@ -702,6 +753,124 @@
           <label for="b4">
             <span class="ja">故人のストーリーや思い出</span>
             <span class="en">Stories and memories of the deceased</span>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" id="b5" onchange="updateProgress()">
+          <label for="b5">
+            <span class="ja">お墓の写真</span>
+            <span class="en">Photo of the grave</span>
+            <span class="hint ja">過去に訪問した際の写真があれば</span>
+            <span class="hint en">If you have photos from a past visit</span>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" id="b6" onchange="updateProgress()">
+          <label for="b6">
+            <span class="ja">希望する最終安置方法</span>
+            <span class="en">Preferred final resting arrangement</span>
+            <span class="hint ja">本家墓に納骨、散骨、新規建立など</span>
+            <span class="hint en">Family grave, scattering, new grave, etc.</span>
+          </label>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Preferences Section -->
+    <div class="section" style="border-left: 4px solid var(--accent);">
+      <div class="category-label" style="color: var(--accent);">
+        <span class="ja">ご希望・ご要望 / Preferences</span>
+        <span class="en">Your Preferences</span>
+      </div>
+      <ul class="checklist" id="preferences-check">
+        <li>
+          <input type="checkbox" id="p1" onchange="updateProgress()">
+          <label for="p1">
+            <span class="ja">できるだけ早く進めたい</span>
+            <span class="en">Want to proceed as soon as possible</span>
+            <span class="hint ja">緊急度が高い場合はチェック</span>
+            <span class="hint en">Check if urgency is high</span>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" id="p2" onchange="updateProgress()">
+          <label for="p2">
+            <span class="ja">日本に渡航できる</span>
+            <span class="en">Can travel to Japan</span>
+            <span class="hint ja">納骨式への参列を希望</span>
+            <span class="hint en">Want to attend the ceremony</span>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" id="p3" onchange="updateProgress()">
+          <label for="p3">
+            <span class="ja">代わりにご遺灰を届けてほしい</span>
+            <span class="en">Want ashes delivered on my behalf</span>
+            <span class="hint ja">渡航が難しい場合</span>
+            <span class="hint en">If travel is difficult</span>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" id="p4" onchange="updateProgress()">
+          <label for="p4">
+            <span class="ja">日本での手続きに同行してほしい</span>
+            <span class="en">Want accompaniment in Japan</span>
+            <span class="hint ja">通訳・案内サポートが必要</span>
+            <span class="hint en">Need interpreter/guide support</span>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" id="p5" onchange="updateProgress()">
+          <label for="p5">
+            <span class="ja">日本で買ってきてほしいものがある</span>
+            <span class="en">Want something purchased in Japan</span>
+            <span class="hint ja">故郷の品、お供え物など</span>
+            <span class="hint en">Items from hometown, offerings, etc.</span>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" id="p6" onchange="updateProgress()">
+          <label for="p6">
+            <span class="ja">代わりにお墓参りをしてほしい</span>
+            <span class="en">Want someone to visit the grave on my behalf</span>
+            <span class="hint ja">写真撮影、お花・お線香のお供えなど</span>
+            <span class="hint en">Photos, flowers, incense offerings, etc.</span>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" id="p7" onchange="updateProgress()">
+          <label for="p7">
+            <span class="ja">家紋入り記念品に興味がある</span>
+            <span class="en">Interested in family crest memorials</span>
+            <span class="hint ja">家紋刻印のお守りや記念品</span>
+            <span class="hint en">Charms or keepsakes with family crest</span>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" id="p8" onchange="updateProgress()">
+          <label for="p8">
+            <span class="ja">活動への資金・物資援助が可能</span>
+            <span class="en">Can provide financial/material support</span>
+            <span class="hint ja">他の家族を支援する活動に協力</span>
+            <span class="hint en">Support activities helping other families</span>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" id="p9" onchange="updateProgress()">
+          <label for="p9">
+            <span class="ja">体験談の共有・広報に協力可能</span>
+            <span class="en">Can share story / help with outreach</span>
+            <span class="hint ja">メディア取材、SNS発信など</span>
+            <span class="hint en">Media interviews, social media, etc.</span>
+          </label>
+        </li>
+        <li>
+          <input type="checkbox" id="p10" onchange="updateProgress()">
+          <label for="p10">
+            <span class="ja">有料オプションにも関心がある</span>
+            <span class="en">Interested in paid options</span>
+            <span class="hint ja">特別な記念品、追加サービスなど</span>
+            <span class="hint en">Special memorials, additional services, etc.</span>
           </label>
         </li>
       </ul>
@@ -1113,10 +1282,12 @@ bit.ly/resonanceus</pre>
       const essential = document.querySelectorAll('#essential-check input[type="checkbox"]');
       const helpful = document.querySelectorAll('#helpful-check input[type="checkbox"]');
       const bonus = document.querySelectorAll('#bonus-check input[type="checkbox"]');
+      const preferences = document.querySelectorAll('#preferences-check input[type="checkbox"]');
 
       const essentialChecked = Array.from(essential).filter(c => c.checked).length;
       const helpfulChecked = Array.from(helpful).filter(c => c.checked).length;
       const bonusChecked = Array.from(bonus).filter(c => c.checked).length;
+      const preferencesChecked = Array.from(preferences).filter(c => c.checked).length;
 
       // Calculate progress
       const essentialWeight = (essentialChecked / essential.length) * 60;
@@ -1130,14 +1301,14 @@ bit.ly/resonanceus</pre>
       if (lang === 'ja') {
         summary = `【診断シートからの事前情報】\n\n`;
         summary += `準備度: ${progress}%\n`;
-        summary += `必須情報: ${essentialChecked}/4項目\n`;
-        summary += `補助情報: ${helpfulChecked}/5項目\n`;
-        summary += `ボーナス: ${bonusChecked}/4項目\n\n`;
+        summary += `必須情報: ${essentialChecked}/5項目\n`;
+        summary += `補助情報: ${helpfulChecked}/9項目\n`;
+        summary += `ボーナス: ${bonusChecked}/6項目\n\n`;
 
         // List checked essential items
         if (essentialChecked > 0) {
           summary += `【揃っている必須情報】\n`;
-          const essentialLabels = ['故人のお名前（漢字）', '出身地', '生年月日', 'ご遺灰の保管場所'];
+          const essentialLabels = ['故人のお名前（漢字）', '出身地', '本籍地', '生年月日', 'ご遺灰の保管場所'];
           essential.forEach((c, i) => {
             if (c.checked) summary += `✓ ${essentialLabels[i]}\n`;
           });
@@ -1147,7 +1318,7 @@ bit.ly/resonanceus</pre>
         // List checked helpful items
         if (helpfulChecked > 0) {
           summary += `【揃っている補助情報】\n`;
-          const helpfulLabels = ['仏教の宗派', 'お墓の場所の記憶', '墓石の形や大きさ', '日本の親戚情報', '家紋'];
+          const helpfulLabels = ['宗教・宗派', 'お墓の場所の記憶', '墓石の形や大きさ', '日本の親戚情報', '家紋', '親の名前', '旧姓', '戒名・法名', '故人の死亡日'];
           helpful.forEach((c, i) => {
             if (c.checked) summary += `✓ ${helpfulLabels[i]}\n`;
           });
@@ -1157,21 +1328,31 @@ bit.ly/resonanceus</pre>
         // List checked bonus items
         if (bonusChecked > 0) {
           summary += `【揃っているボーナス情報】\n`;
-          const bonusLabels = ['古い写真', '戦前の手紙や書類', '移民の記録', '故人のストーリー'];
+          const bonusLabels = ['古い写真', '戦前の手紙や書類', '移民の記録', '故人のストーリー', 'お墓の写真', '希望する最終安置方法'];
           bonus.forEach((c, i) => {
             if (c.checked) summary += `✓ ${bonusLabels[i]}\n`;
+          });
+          summary += `\n`;
+        }
+
+        // List checked preferences
+        if (preferencesChecked > 0) {
+          summary += `【ご希望・ご要望】\n`;
+          const prefLabels = ['できるだけ早く進めたい', '日本に渡航できる', '代わりにご遺灰を届けてほしい', '日本での手続きに同行してほしい', '日本で買ってきてほしいものがある', '代わりにお墓参りをしてほしい', '家紋入り記念品に興味あり', '活動への援助が可能', '体験談共有・広報に協力可能', '有料オプションに関心あり'];
+          preferences.forEach((c, i) => {
+            if (c.checked) summary += `✓ ${prefLabels[i]}\n`;
           });
         }
       } else {
         summary = `[Pre-consultation from Diagnostic Sheet]\n\n`;
         summary += `Readiness: ${progress}%\n`;
-        summary += `Essential: ${essentialChecked}/4 items\n`;
-        summary += `Helpful: ${helpfulChecked}/5 items\n`;
-        summary += `Bonus: ${bonusChecked}/4 items\n\n`;
+        summary += `Essential: ${essentialChecked}/5 items\n`;
+        summary += `Helpful: ${helpfulChecked}/9 items\n`;
+        summary += `Bonus: ${bonusChecked}/6 items\n\n`;
 
         if (essentialChecked > 0) {
           summary += `[Essential info available]\n`;
-          const essentialLabels = ['Name (Kanji)', 'Birthplace', 'Date of birth', 'Ashes location'];
+          const essentialLabels = ['Name (Kanji)', 'Birthplace', 'Permanent domicile', 'Date of birth', 'Ashes location'];
           essential.forEach((c, i) => {
             if (c.checked) summary += `✓ ${essentialLabels[i]}\n`;
           });
@@ -1180,7 +1361,7 @@ bit.ly/resonanceus</pre>
 
         if (helpfulChecked > 0) {
           summary += `[Helpful info available]\n`;
-          const helpfulLabels = ['Buddhist sect', 'Grave location memory', 'Gravestone shape/size', 'Japan relatives', 'Family crest'];
+          const helpfulLabels = ['Religion/Denomination', 'Grave location memory', 'Gravestone shape/size', 'Japan relatives', 'Family crest', 'Parents\' names', 'Maiden name', 'Buddhist posthumous name', 'Date of death'];
           helpful.forEach((c, i) => {
             if (c.checked) summary += `✓ ${helpfulLabels[i]}\n`;
           });
@@ -1189,9 +1370,19 @@ bit.ly/resonanceus</pre>
 
         if (bonusChecked > 0) {
           summary += `[Bonus info available]\n`;
-          const bonusLabels = ['Old photos', 'Pre-war letters/documents', 'Immigration records', 'Stories/memories'];
+          const bonusLabels = ['Old photos', 'Pre-war letters/documents', 'Immigration records', 'Stories/memories', 'Photo of grave', 'Preferred final arrangement'];
           bonus.forEach((c, i) => {
             if (c.checked) summary += `✓ ${bonusLabels[i]}\n`;
+          });
+          summary += `\n`;
+        }
+
+        // List checked preferences
+        if (preferencesChecked > 0) {
+          summary += `[Your Preferences]\n`;
+          const prefLabels = ['Want to proceed ASAP', 'Can travel to Japan', 'Want ashes delivered on my behalf', 'Want accompaniment in Japan', 'Want something purchased in Japan', 'Want grave visit on my behalf', 'Interested in family crest memorials', 'Can provide support', 'Can share story / help outreach', 'Interested in paid options'];
+          preferences.forEach((c, i) => {
+            if (c.checked) summary += `✓ ${prefLabels[i]}\n`;
           });
         }
       }
