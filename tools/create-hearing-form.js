@@ -632,9 +632,9 @@ const QUESTIONS = [
   },
   {
     section: 6,
-    type: 'FILE',
-    title: '写真・書類のアップロード / Upload Photos/Documents',
-    helpText: '複数ファイル可。後から追加も可能です'
+    type: 'PARAGRAPH',
+    title: '写真・書類の共有方法 / How to Share Photos/Documents',
+    helpText: 'Google Drive、Dropboxなどの共有リンクを貼り付けるか、後日メールで送信してください。大きなファイルはsoulcarrier@example.comへ直接お送りください / Paste a sharing link (Google Drive, Dropbox, etc.) or send files via email to soulcarrier@example.com'
   },
 
   // ============================================
@@ -1114,10 +1114,8 @@ function addQuestion(form, q) {
       item = form.addDateItem();
       break;
 
-    case 'FILE':
-      item = form.addFileUploadItem();
-      item.setMaxFiles(10);
-      break;
+    // NOTE: FILE type removed - addFileUploadItem() requires respondents to be logged in
+    // Using PARAGRAPH with instructions to share via Google Drive/email instead
 
     default:
       return;
