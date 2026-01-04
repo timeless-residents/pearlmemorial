@@ -137,11 +137,11 @@ Google Form 作成用テンプレート（100項目）
 ### Q16. 故人のお名前（漢字）/ Deceased's Name (Kanji) *
 - Type: Short answer
 - Required: Yes
-- Hint: 例: 岩下 輝子
+- Hint: 例: 山田 花子
 
 ### Q17. 故人のお名前（ローマ字）/ Deceased's Name (Romaji)
 - Type: Short answer
-- Hint: 例: Iwashita Teruko
+- Hint: 例: Yamada Hanako
 
 ### Q18. 旧姓（該当する場合）/ Maiden Name (if applicable)
 - Type: Short answer

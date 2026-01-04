@@ -291,13 +291,13 @@ const QUESTIONS = [
     type: 'TEXT',
     title: '故人のお名前（漢字）/ Deceased\'s Name (Kanji)',
     required: true,
-    helpText: '例: 岩下 輝子'
+    helpText: '例: 山田 花子'
   },
   {
     section: 1,
     type: 'TEXT',
     title: '故人のお名前（ローマ字）/ Deceased\'s Name (Romaji)',
-    helpText: '例: Iwashita Teruko'
+    helpText: '例: Yamada Hanako'
   },
   {
     section: 1,
