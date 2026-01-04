@@ -364,7 +364,7 @@ Google Form 作成用テンプレート（100項目）
 
 ### Q54. 家紋 / Family Crest (Kamon)
 - Type: Short answer
-- Hint: 分かれば記入（墓石に刻まれていることも）
+- Hint: 名前または画像で共有（墓石に刻まれていることも）/ Name or image (often on gravestones)
 
 ### Q55. 父親の名前 / Father's Name
 - Type: Short answer
