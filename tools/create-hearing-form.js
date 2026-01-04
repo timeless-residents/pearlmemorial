@@ -1059,19 +1059,19 @@ function createHearingForm() {
     .setTitle('確認 / Confirmation')
     .setHelpText('送信前にご確認ください / Please confirm before submitting');
 
-  form.addCheckboxItem()
-    .setTitle('送信前の確認 / Pre-submission Confirmation')
-    .setChoices([
-      form.createChoice('上記の情報は正確です。後から修正・追加が可能であることを理解しています。 / The above information is accurate. I understand I can update it later.')
-    ])
-    .setRequired(true);
+  const confirmItem = form.addCheckboxItem();
+  confirmItem.setTitle('送信前の確認 / Pre-submission Confirmation');
+  confirmItem.setChoices([
+    confirmItem.createChoice('上記の情報は正確です。後から修正・追加が可能であることを理解しています。 / The above information is accurate. I understand I can update it later.')
+  ]);
+  confirmItem.setRequired(true);
 
-  form.addCheckboxItem()
-    .setTitle('プライバシーポリシーへの同意 / Privacy Policy Agreement')
-    .setChoices([
-      form.createChoice('プライバシーポリシーに同意します / I agree to the Privacy Policy')
-    ])
-    .setRequired(true);
+  const privacyItem = form.addCheckboxItem();
+  privacyItem.setTitle('プライバシーポリシーへの同意 / Privacy Policy Agreement');
+  privacyItem.setChoices([
+    privacyItem.createChoice('プライバシーポリシーに同意します / I agree to the Privacy Policy')
+  ]);
+  privacyItem.setRequired(true);
 
   Logger.log('フォーム作成完了: ' + form.getEditUrl());
   Logger.log('回答用URL: ' + form.getPublishedUrl());
@@ -1169,19 +1169,19 @@ function updateForm(formId) {
     .setTitle('確認 / Confirmation')
     .setHelpText('送信前にご確認ください / Please confirm before submitting');
 
-  form.addCheckboxItem()
-    .setTitle('送信前の確認 / Pre-submission Confirmation')
-    .setChoices([
-      form.createChoice('上記の情報は正確です。後から修正・追加が可能であることを理解しています。 / The above information is accurate. I understand I can update it later.')
-    ])
-    .setRequired(true);
+  const confirmItem2 = form.addCheckboxItem();
+  confirmItem2.setTitle('送信前の確認 / Pre-submission Confirmation');
+  confirmItem2.setChoices([
+    confirmItem2.createChoice('上記の情報は正確です。後から修正・追加が可能であることを理解しています。 / The above information is accurate. I understand I can update it later.')
+  ]);
+  confirmItem2.setRequired(true);
 
-  form.addCheckboxItem()
-    .setTitle('プライバシーポリシーへの同意 / Privacy Policy Agreement')
-    .setChoices([
-      form.createChoice('プライバシーポリシーに同意します / I agree to the Privacy Policy')
-    ])
-    .setRequired(true);
+  const privacyItem2 = form.addCheckboxItem();
+  privacyItem2.setTitle('プライバシーポリシーへの同意 / Privacy Policy Agreement');
+  privacyItem2.setChoices([
+    privacyItem2.createChoice('プライバシーポリシーに同意します / I agree to the Privacy Policy')
+  ]);
+  privacyItem2.setRequired(true);
 
   Logger.log('フォーム更新完了: ' + form.getEditUrl());
   Logger.log('質問数: ' + QUESTIONS.length);
