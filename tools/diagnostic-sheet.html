@@ -1091,7 +1091,11 @@ bit.ly/resonanceus</pre>
     </div>
 
     <div style="text-align: center; margin-top: 2rem;">
-      <button type="button" onclick="printSheet()" class="btn btn-secondary no-print">
+      <button type="button" onclick="submitReferrals()" class="btn btn-primary no-print">
+        <span class="ja">紹介者を登録する</span>
+        <span class="en">Submit Referrals</span>
+      </button>
+      <button type="button" onclick="printSheet()" class="btn btn-secondary no-print" style="margin-left: 0.5rem;">
         <span class="ja">このシートを印刷する</span>
         <span class="en">Print this sheet</span>
       </button>
@@ -1470,6 +1474,48 @@ bit.ly/resonanceus</pre>
       // Build Calendly URL with parameter
       const baseUrl = 'https://calendly.com/pearlmemorial/pearlmemorialsession';
       const url = `${baseUrl}?a1=${encodeURIComponent(summary)}`;
+
+      window.open(url, '_blank');
+    }
+
+    // Submit referrals (for non-candidates in Phase 3)
+    function submitReferrals() {
+      const lang = document.body.classList.contains('lang-ja') ? 'ja' : 'en';
+
+      // Collect referral information from Phase 3 list
+      const referralCards = document.querySelectorAll('#referral-list .referral-card');
+      let hasReferrals = false;
+      let referralSummary = '';
+
+      referralCards.forEach((card, index) => {
+        const name = card.querySelector('.referral-name').value.trim();
+        const relation = card.querySelector('.referral-relation').value.trim();
+        const notes = card.querySelector('.referral-notes').value.trim();
+
+        if (name || relation || notes) {
+          if (!hasReferrals) {
+            referralSummary = lang === 'ja'
+              ? `【紹介者からの情報】\n（この方はSoul Carrierの対象ではありませんが、紹介者として登録されています）\n\n`
+              : `[Referrer Information]\n(This person is not a Soul Carrier candidate, but has registered as a referrer)\n\n`;
+            hasReferrals = true;
+          }
+          referralSummary += `${index + 1}. ${name || (lang === 'ja' ? '(未記入)' : '(not provided)')}`;
+          if (relation) referralSummary += ` - ${relation}`;
+          if (notes) referralSummary += `\n   ${notes}`;
+          referralSummary += `\n`;
+        }
+      });
+
+      if (!hasReferrals) {
+        alert(lang === 'ja'
+          ? '紹介者情報を入力してください。'
+          : 'Please enter at least one referral.');
+        return;
+      }
+
+      // Build Calendly URL with parameter
+      const baseUrl = 'https://calendly.com/pearlmemorial/pearlmemorialsession';
+      const url = `${baseUrl}?a1=${encodeURIComponent(referralSummary)}`;
 
       window.open(url, '_blank');
     }
