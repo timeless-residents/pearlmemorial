@@ -633,8 +633,8 @@ const QUESTIONS = [
   {
     section: 6,
     type: 'PARAGRAPH',
-    title: '写真・書類の共有方法 / How to Share Photos/Documents',
-    helpText: 'Google Drive、Dropboxなどの共有リンクを貼り付けるか、後日メールで送信してください。大きなファイルはmovement@pearl.memorialへ直接お送りください / Paste a sharing link (Google Drive, Dropbox, etc.) or send files via email to movement@pearl.memorial'
+    title: '写真・書類の共有リンク / Photo/Document Sharing Link',
+    helpText: 'Google DriveやDropboxの共有リンクを貼り付けてください。リンクがない場合は「後日メール送信」と入力し、movement@pearl.memorial へお送りください / Paste Google Drive or Dropbox link. If no link, type "Will send via email" and send to movement@pearl.memorial'
   },
 
   // ============================================
