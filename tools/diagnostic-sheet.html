@@ -891,6 +891,35 @@
         <span class="en">Print</span>
       </button>
     </div>
+
+    <!-- Referral section for candidates -->
+    <div style="margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px dashed #ccc;">
+      <h3 style="text-align: center; color: var(--gold); margin-bottom: 1rem;">
+        <span class="ja">心当たりのある方を紹介する</span>
+        <span class="en">Know someone who might need this?</span>
+      </h3>
+      <p class="ja" style="text-align: center; color: #666; font-size: 0.9rem; margin-bottom: 1rem;">
+        周りに「日本へ還りたいご遺灰」を抱えている方がいれば、ぜひ教えてください。
+      </p>
+      <p class="en" style="text-align: center; color: #666; font-size: 0.9rem; margin-bottom: 1rem;">
+        If you know anyone with ashes waiting to return to Japan, please let us know.
+      </p>
+
+      <div id="referral-list-candidate">
+        <div class="referral-card">
+          <input type="text" placeholder="お名前 / Name" class="referral-name">
+          <input type="text" placeholder="関係性 / Relationship" class="referral-relation">
+          <textarea placeholder="メモ / Notes" class="referral-notes"></textarea>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 0.5rem;">
+        <button class="btn btn-add no-print" onclick="addReferralCandidate()">
+          <span class="ja">+ もう1人追加</span>
+          <span class="en">+ Add another</span>
+        </button>
+      </div>
+    </div>
   </div>
 
   <!-- Phase 3: Referral (for non-candidates) -->
@@ -1260,6 +1289,19 @@ bit.ly/resonanceus</pre>
         <input type="text" placeholder="お名前 / Name" class="referral-name">
         <input type="text" placeholder="関係性 / Relationship (例: 教会の友人)" class="referral-relation">
         <textarea placeholder="メモ / Notes (例: お母さんが広島出身、ご遺灰が自宅に)" class="referral-notes"></textarea>
+      `;
+      list.appendChild(card);
+    }
+
+    // Add referral card (for candidates)
+    function addReferralCandidate() {
+      const list = document.getElementById('referral-list-candidate');
+      const card = document.createElement('div');
+      card.className = 'referral-card';
+      card.innerHTML = `
+        <input type="text" placeholder="お名前 / Name" class="referral-name">
+        <input type="text" placeholder="関係性 / Relationship" class="referral-relation">
+        <textarea placeholder="メモ / Notes" class="referral-notes"></textarea>
       `;
       list.appendChild(card);
     }
