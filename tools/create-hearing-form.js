@@ -634,7 +634,7 @@ const QUESTIONS = [
     section: 6,
     type: 'PARAGRAPH',
     title: '写真・書類の共有方法 / How to Share Photos/Documents',
-    helpText: 'Google Drive、Dropboxなどの共有リンクを貼り付けるか、後日メールで送信してください。大きなファイルはsoulcarrier@example.comへ直接お送りください / Paste a sharing link (Google Drive, Dropbox, etc.) or send files via email to soulcarrier@example.com'
+    helpText: 'Google Drive、Dropboxなどの共有リンクを貼り付けるか、後日メールで送信してください。大きなファイルはmovement@pearl.memorialへ直接お送りください / Paste a sharing link (Google Drive, Dropbox, etc.) or send files via email to movement@pearl.memorial'
   },
 
   // ============================================
