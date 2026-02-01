@@ -105,16 +105,25 @@ document.addEventListener('DOMContentLoaded', function() {
     var soapBanner = document.getElementById('soapBanner');
     var soapClose = document.getElementById('soapBannerClose');
 
+    function closeSoapBanner() {
+        soapBanner.style.opacity = '0';
+        setTimeout(function() {
+            soapBanner.style.display = 'none';
+            document.body.classList.remove('has-soap-banner');
+        }, 300);
+    }
+
     if (ref === 'soap' && soapBanner) {
         soapBanner.style.display = 'block';
+        soapBanner.style.transition = 'opacity 0.3s ease';
         document.body.classList.add('has-soap-banner');
+
+        // Auto-hide after 8 seconds
+        setTimeout(closeSoapBanner, 8000);
     }
 
     if (soapClose) {
-        soapClose.addEventListener('click', function() {
-            soapBanner.style.display = 'none';
-            document.body.classList.remove('has-soap-banner');
-        });
+        soapClose.addEventListener('click', closeSoapBanner);
     }
 
     // ---- Console Message ----
