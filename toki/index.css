@@ -1524,6 +1524,7 @@ th.highlight-col {
     font-size: 0.75rem;
 }
 
+.pricing-personal-note,
 .pricing-family-note {
     font-size: 0.78rem;
     color: var(--text-secondary);
@@ -2282,6 +2283,7 @@ th.highlight-col {
     .pricing-card { padding: 1.4rem 1.2rem; }
     .pricing-features li { padding: 0.3rem 0 0.3rem 1.4rem; font-size: 0.78rem; }
     .pricing-features { margin-bottom: 1rem; }
+    .pricing-personal-note,
     .pricing-family-note { font-size: 0.74rem; margin-top: 0.5rem; padding-top: 0.5rem; }
     .sado-option { margin-left: 1rem; margin-right: 1rem; padding: 1.2rem 1rem; }
     .sado-option-includes { flex-direction: column; gap: 0.4rem; }
