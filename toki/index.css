@@ -2252,7 +2252,7 @@ th.highlight-col {
     .features-grid,
     .stats-grid { grid-template-columns: repeat(2, 1fr); }
     .pricing-grid { grid-template-columns: 1fr; max-width: 420px; margin-left: auto; margin-right: auto; }
-    .pricing-grid.two-plans { max-width: 420px; }
+    .pricing-grid.two-plans { grid-template-columns: 1fr; max-width: 420px; }
     .sado-option { margin-left: 1rem; margin-right: 1rem; padding: 1.4rem 1.2rem; }
     .sado-option-includes { flex-direction: column; gap: 0.4rem; }
     .footer-inner { grid-template-columns: 1fr 1fr; }
