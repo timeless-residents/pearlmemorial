@@ -1755,6 +1755,13 @@ th.highlight-col {
     margin-bottom: 0;
 }
 
+.driver-note {
+    display: block;
+    font-size: 0.68rem;
+    color: var(--text-muted);
+    margin-top: 0.3rem;
+}
+
 /* =============================================
    Sengu Box (式年遷宮)
    ============================================= */
