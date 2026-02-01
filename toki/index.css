@@ -897,6 +897,35 @@ th.highlight-col {
     margin-top: 1.2rem;
 }
 
+.transformation-box {
+    margin: 2.5rem auto 0;
+    padding: 2rem 2.2rem;
+    background: var(--bg-white);
+    border-left: 3px solid var(--toki-blue);
+    border-radius: 0 1rem 1rem 0;
+    max-width: 600px;
+    text-align: left;
+}
+
+.transformation-box h3 {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.transformation-box p {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.9;
+    margin-bottom: 0.6rem;
+}
+
+.transformation-box strong {
+    color: var(--toki-blue-dark);
+}
+
 .soulcarrier-badge {
     text-align: center;
     font-size: 0.85rem;
