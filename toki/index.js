@@ -99,6 +99,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // ---- Pearl Soap QR Referral Banner ----
+    var params = new URLSearchParams(window.location.search);
+    var ref = params.get('ref');
+    var soapBanner = document.getElementById('soapBanner');
+    var soapClose = document.getElementById('soapBannerClose');
+
+    if (ref === 'soap' && soapBanner) {
+        soapBanner.style.display = 'block';
+        document.body.classList.add('has-soap-banner');
+    }
+
+    if (soapClose) {
+        soapClose.addEventListener('click', function() {
+            soapBanner.style.display = 'none';
+            document.body.classList.remove('has-soap-banner');
+        });
+    }
+
     // ---- Console Message ----
     console.log('%cトキストレージ - 千年先へ届ける存在証明', 'color: #3B82F6; font-size: 16px; font-weight: bold;');
 });

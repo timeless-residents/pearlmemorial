@@ -56,6 +56,66 @@ body {
 }
 
 /* =============================================
+   Soap Banner (QR referral)
+   ============================================= */
+.soap-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1100;
+    background: linear-gradient(135deg, #FEF9EF 0%, #FFF7E0 100%);
+    border-bottom: 1px solid rgba(201, 169, 98, 0.3);
+}
+
+.soap-banner-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0.8rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.soap-banner p {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    text-align: center;
+    margin: 0;
+}
+
+.soap-banner-close {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 0.2rem 0.5rem;
+    flex-shrink: 0;
+    transition: color 0.3s ease;
+}
+
+.soap-banner-close:hover {
+    color: var(--text-primary);
+}
+
+body.has-soap-banner .toki-nav {
+    top: 3.2rem;
+}
+
+body.has-soap-banner .hero {
+    padding-top: 10rem;
+}
+
+@media (max-width: 768px) {
+    .soap-banner-inner { padding: 0.6rem 1.2rem; }
+    body.has-soap-banner .toki-nav { top: 3.8rem; }
+    body.has-soap-banner .hero { padding-top: 8.5rem; }
+}
+
+/* =============================================
    Navigation
    ============================================= */
 .toki-nav {
