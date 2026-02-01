@@ -99,6 +99,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // ---- Persona More Toggle ----
+    var personaToggle = document.getElementById('personaToggle');
+    var personaMore = document.getElementById('personaMore');
+    if (personaToggle && personaMore) {
+        personaToggle.addEventListener('click', function() {
+            var isOpen = personaMore.style.display !== 'none';
+            personaMore.style.display = isOpen ? 'none' : 'block';
+            personaToggle.classList.toggle('open', !isOpen);
+        });
+    }
+
     // ---- Pearl Soap QR Referral Banner ----
     var params = new URLSearchParams(window.location.search);
     var ref = params.get('ref');
