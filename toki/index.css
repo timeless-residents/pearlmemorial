@@ -1035,6 +1035,14 @@ th.highlight-col {
     margin: 0.8rem 0;
 }
 
+.voice-note {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-top: 0.3rem;
+    margin-bottom: 0;
+}
+
 /* =============================================
    Pricing Section
    ============================================= */
