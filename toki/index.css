@@ -919,6 +919,12 @@ th.highlight-col {
     margin-top: 0.8rem;
 }
 
+.pricing-note {
+    font-size: 0.7rem !important;
+    color: var(--text-muted) !important;
+    margin-top: 0.4rem;
+}
+
 /* =============================================
    Philosophy Section
    ============================================= */
