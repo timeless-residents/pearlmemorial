@@ -1513,6 +1513,11 @@ th.highlight-col {
     margin: 0 auto;
 }
 
+.storage-locations.two-locations {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 520px;
+}
+
 .storage-location {
     text-align: center;
     padding: 1.5rem 1rem;
