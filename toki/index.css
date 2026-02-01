@@ -1238,6 +1238,14 @@ th.highlight-col {
     margin-bottom: 0;
 }
 
+.voices-note {
+    text-align: center;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+}
+
 .voices-summary {
     text-align: center;
     font-size: 0.88rem;
