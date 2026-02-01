@@ -1444,6 +1444,95 @@ th.highlight-col {
     margin-bottom: 2rem;
 }
 
+.pricing-grid.two-plans {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pricing-grid.one-plan {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Sado Experience Option */
+.sado-option {
+    max-width: 680px;
+    margin: 0 auto 2rem;
+    padding: 1.8rem 2rem;
+    background: linear-gradient(135deg, #F5F9FC 0%, var(--bg-card) 100%);
+    border: 2px dashed var(--toki-blue);
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.sado-option-label {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--toki-blue);
+    margin-bottom: 0.2rem;
+}
+
+.sado-option-status {
+    display: inline-block;
+    font-size: 0.7rem;
+    padding: 0.15rem 0.8rem;
+    border-radius: 1rem;
+    margin-bottom: 0.6rem;
+}
+
+.sado-option-status.coming-soon {
+    background: #FFF3E0;
+    color: #E65100;
+}
+
+.sado-option-desc {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.8rem;
+}
+
+.sado-option-includes {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.8rem;
+}
+
+.sado-option-includes span {
+    font-size: 0.78rem;
+    color: var(--text-primary);
+    padding: 0.3rem 0.8rem;
+    background: rgba(74, 111, 140, 0.08);
+    border-radius: 2rem;
+}
+
+.sado-option-price {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--toki-blue);
+    margin-bottom: 0.4rem;
+}
+
+.sado-option-price .pricing-unit {
+    font-size: 0.75rem;
+}
+
+.pricing-family-note {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-top: 0.8rem;
+    padding-top: 0.8rem;
+    border-top: 1px solid var(--border);
+}
+
 .pricing-card {
     padding: 2.2rem 1.8rem;
     background: var(--bg-card);
@@ -2163,6 +2252,9 @@ th.highlight-col {
     .features-grid,
     .stats-grid { grid-template-columns: repeat(2, 1fr); }
     .pricing-grid { grid-template-columns: 1fr; max-width: 420px; margin-left: auto; margin-right: auto; }
+    .pricing-grid.two-plans { max-width: 420px; }
+    .sado-option { margin-left: 1rem; margin-right: 1rem; padding: 1.4rem 1.2rem; }
+    .sado-option-includes { flex-direction: column; gap: 0.4rem; }
     .footer-inner { grid-template-columns: 1fr 1fr; }
     .driver-summary { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
 }
@@ -2402,6 +2494,13 @@ th.highlight-col {
     .pricing-card.premium {
         grid-column: 1 / -1 !important;
         max-width: 100% !important;
+    }
+
+    .sado-option {
+        border: 1px solid #000 !important;
+        border-style: dashed !important;
+        padding: 0.3cm !important;
+        margin-bottom: 0.3cm !important;
     }
 
     /* ---------- 比較表 ---------- */
