@@ -192,10 +192,13 @@ body {
 
 .hero-hooks {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.6rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 0.8rem;
     margin-bottom: 2.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
     opacity: 0;
     animation: fadeUp 0.8s ease forwards 0.65s;
 }
@@ -354,12 +357,32 @@ h2 {
     background: var(--bg-page);
 }
 
+.persona-category {
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--toki-blue);
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--toki-blue-pale);
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.persona-category:first-of-type {
+    margin-top: 0;
+}
+
 .persona-cards {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.2rem;
-    max-width: 640px;
-    margin: 0 auto;
+    max-width: 960px;
+    margin: 0 auto 1rem;
 }
 
 .persona-card {
@@ -870,6 +893,8 @@ th.highlight-col {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.2rem;
+    max-width: 960px;
+    margin: 0 auto;
 }
 
 .testimonial-card {
@@ -1378,8 +1403,9 @@ th.highlight-col {
 @media (max-width: 1024px) {
     .features-grid,
     .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .persona-cards { grid-template-columns: repeat(2, 1fr); }
     .pricing-grid { grid-template-columns: 1fr; max-width: 420px; margin-left: auto; margin-right: auto; }
-    .testimonials-grid { grid-template-columns: 1fr; max-width: 520px; margin-left: auto; margin-right: auto; }
+    .testimonials-grid { grid-template-columns: repeat(2, 1fr); max-width: 700px; }
     .footer-inner { grid-template-columns: 1fr 1fr; }
     .driver-summary { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
 }
@@ -1410,6 +1436,9 @@ th.highlight-col {
 
     .features-grid,
     .stats-grid { grid-template-columns: 1fr 1fr; }
+
+    .persona-cards { grid-template-columns: 1fr; max-width: 520px; }
+    .testimonials-grid { grid-template-columns: 1fr; max-width: 520px; }
 
     .experience-cards { grid-template-columns: 1fr; }
 
