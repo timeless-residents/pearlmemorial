@@ -1301,6 +1301,188 @@ th.highlight-col {
 }
 
 /* =============================================
+   Pain/Gain Driver Section
+   ============================================= */
+.paingain-section {
+    background: var(--bg-white);
+}
+
+.paingain-container {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 1.5rem;
+    align-items: stretch;
+    margin-bottom: 3rem;
+}
+
+.paingain-column {
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+}
+
+.paingain-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 1rem 1.5rem;
+    font-family: var(--font-display);
+}
+
+.paingain-header h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.pain-header {
+    background: #FEF2F2;
+    border-bottom: 1px solid #FECACA;
+    color: #991B1B;
+}
+
+.pain-header h3 { color: #991B1B; }
+
+.gain-header {
+    background: var(--toki-blue-pale);
+    border-bottom: 1px solid rgba(37, 99, 235, 0.15);
+    color: var(--toki-blue-dark);
+}
+
+.gain-header h3 { color: var(--toki-blue-dark); }
+
+.paingain-icon {
+    font-size: 1.2rem;
+}
+
+.paingain-items {
+    padding: 0.8rem;
+}
+
+.paingain-item {
+    display: flex;
+    gap: 0.8rem;
+    padding: 0.7rem 0.6rem;
+    border-radius: 0.6rem;
+    transition: background 0.2s ease;
+}
+
+.paingain-item:hover {
+    background: var(--bg-page);
+}
+
+.item-marker {
+    flex-shrink: 0;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 700;
+    margin-top: 0.1rem;
+}
+
+.pain-marker {
+    background: #FEE2E2;
+    color: #DC2626;
+}
+
+.gain-marker {
+    background: #DBEAFE;
+    color: var(--toki-blue);
+}
+
+.item-content h4 {
+    font-family: var(--font-display);
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.15rem;
+}
+
+.item-content p {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Arrow between columns */
+.paingain-arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 2rem 0;
+}
+
+.arrow-line {
+    width: 2px;
+    flex: 1;
+    background: linear-gradient(180deg, #FECACA 0%, var(--toki-blue-light) 100%);
+    border-radius: 1px;
+}
+
+.arrow-label {
+    writing-mode: vertical-rl;
+    font-size: 0.68rem;
+    font-weight: 500;
+    color: var(--toki-blue);
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+}
+
+.arrow-head {
+    font-size: 1.2rem;
+    color: var(--toki-blue);
+}
+
+/* Driver Summary Cards */
+.driver-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+}
+
+.driver-card {
+    text-align: center;
+    padding: 1.5rem 1.2rem;
+    background: var(--bg-page);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+}
+
+.driver-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.driver-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.6rem;
+}
+
+.driver-card h4 {
+    font-family: var(--font-display);
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--toki-blue);
+    margin-bottom: 0.4rem;
+}
+
+.driver-card p {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* =============================================
    Animations
    ============================================= */
 @keyframes fadeUp {
@@ -1334,6 +1516,7 @@ th.highlight-col {
     .pricing-grid { grid-template-columns: 1fr; max-width: 420px; margin-left: auto; margin-right: auto; }
     .testimonials-grid { grid-template-columns: 1fr; max-width: 520px; margin-left: auto; margin-right: auto; }
     .footer-inner { grid-template-columns: 1fr 1fr; }
+    .driver-summary { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
 }
 
 @media (max-width: 768px) {
@@ -1364,6 +1547,30 @@ th.highlight-col {
     .stats-grid { grid-template-columns: 1fr 1fr; }
 
     .experience-cards { grid-template-columns: 1fr; }
+
+    .paingain-container {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .paingain-arrow {
+        flex-direction: row;
+        padding: 0.8rem 0;
+    }
+
+    .arrow-line {
+        width: auto;
+        height: 2px;
+        flex: 1;
+        background: linear-gradient(90deg, #FECACA 0%, var(--toki-blue-light) 100%);
+    }
+
+    .arrow-label {
+        writing-mode: horizontal-tb;
+        font-size: 0.72rem;
+    }
+
+    .driver-summary { grid-template-columns: 1fr; max-width: 360px; margin-left: auto; margin-right: auto; }
 
     .process-steps { flex-direction: column; align-items: center; }
     .process-arrow { transform: rotate(90deg); padding: 0; }
