@@ -823,6 +823,34 @@ th.highlight-col {
     margin-bottom: 0;
 }
 
+.course-status {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    padding: 0.25rem 0.8rem;
+    border-radius: 2rem;
+    margin-bottom: 0.8rem;
+}
+
+.course-status.now-available {
+    background: var(--toki-blue);
+    color: #fff;
+}
+
+.course-status.coming-soon {
+    background: var(--bg-page);
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+}
+
+.course-priority {
+    font-size: 0.78rem !important;
+    color: var(--toki-blue) !important;
+    font-weight: 500;
+    margin-top: 0.8rem;
+}
+
 /* =============================================
    Philosophy Section
    ============================================= */
