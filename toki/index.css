@@ -1219,6 +1219,48 @@ th.highlight-col {
     font-size: 1rem;
 }
 
+/* Premium Pricing Card */
+.pricing-card.premium {
+    grid-column: 1 / -1;
+    max-width: 520px;
+    margin: 0 auto;
+    border-color: var(--gold);
+    background: linear-gradient(135deg, #FFFDF5 0%, var(--bg-card) 100%);
+    box-shadow: 0 8px 30px rgba(201, 169, 98, 0.15);
+}
+
+.pricing-card.premium:hover {
+    box-shadow: 0 12px 40px rgba(201, 169, 98, 0.25);
+}
+
+.premium-badge {
+    position: absolute;
+    top: -0.65rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.25rem 1.3rem;
+    background: var(--gold);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    border-radius: 1rem;
+}
+
+.pricing-consultation {
+    font-size: 2rem !important;
+    font-family: var(--font-display);
+    letter-spacing: 0.08em;
+}
+
+.premium-note {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
 /* =============================================
    FAQ Section
    ============================================= */
