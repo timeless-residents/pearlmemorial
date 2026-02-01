@@ -1672,6 +1672,12 @@ th.highlight-col {
     letter-spacing: 0.03em;
 }
 
+.footer-disclaimer {
+    font-size: 0.62rem !important;
+    line-height: 1.6;
+    margin-bottom: 0.6rem;
+}
+
 /* =============================================
    Driver Section
    ============================================= */
