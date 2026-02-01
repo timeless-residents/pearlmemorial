@@ -367,6 +367,59 @@ body.has-soap-banner .hero {
 }
 
 /* =============================================
+   Trust Bar (Hero直下)
+   ============================================= */
+.trust-bar {
+    background: var(--toki-blue-pale);
+    border-bottom: 1px solid var(--border);
+    padding: 0.7rem 1.5rem;
+    text-align: center;
+}
+
+.trust-bar-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.3rem 0.8rem;
+}
+
+.trust-bar-context {
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+}
+
+.trust-bar-item {
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    color: var(--text-body);
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+}
+
+.trust-bar-divider {
+    color: var(--border);
+    font-size: 0.7rem;
+}
+
+@media (max-width: 768px) {
+    .trust-bar-inner {
+        gap: 0.2rem 0.5rem;
+    }
+    .trust-bar-item {
+        font-size: 0.65rem;
+    }
+    .trust-bar-divider {
+        display: none;
+    }
+}
+
+/* =============================================
    Common Section Styles
    ============================================= */
 section {
@@ -436,6 +489,46 @@ h2 {
 
 .persona-category:first-of-type {
     margin-top: 0;
+}
+
+.persona-more-wrap {
+    max-width: 620px;
+    margin: 1.5rem auto 0;
+    text-align: center;
+}
+
+.persona-more-toggle {
+    display: inline-block;
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 2rem;
+    padding: 0.6rem 1.8rem;
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    color: var(--toki-blue);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.05em;
+}
+
+.persona-more-toggle:hover {
+    background: var(--toki-blue-pale);
+    border-color: var(--toki-blue);
+}
+
+.toggle-arrow {
+    display: inline-block;
+    font-size: 0.6rem;
+    margin-left: 0.3rem;
+    transition: transform 0.3s ease;
+}
+
+.persona-more-toggle.open .toggle-arrow {
+    transform: rotate(180deg);
+}
+
+.persona-more-content {
+    margin-top: 1.5rem;
 }
 
 .persona-cards {
@@ -925,6 +1018,14 @@ th.highlight-col {
     margin-top: 0.4rem;
 }
 
+.pricing-per-year {
+    font-size: 0.8rem;
+    color: var(--toki-blue);
+    margin-top: 0.3rem;
+    font-family: var(--font-display);
+    letter-spacing: 0.02em;
+}
+
 /* =============================================
    Philosophy Section
    ============================================= */
@@ -1134,6 +1235,14 @@ th.highlight-col {
     color: var(--text-muted);
     line-height: 1.6;
     margin-top: 0.3rem;
+    margin-bottom: 0;
+}
+
+.voices-note {
+    text-align: center;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    margin-top: 1.5rem;
     margin-bottom: 0;
 }
 
@@ -1569,6 +1678,12 @@ th.highlight-col {
     font-size: 0.68rem;
     color: var(--text-muted);
     letter-spacing: 0.03em;
+}
+
+.footer-disclaimer {
+    font-size: 0.62rem !important;
+    line-height: 1.6;
+    margin-bottom: 0.6rem;
 }
 
 /* =============================================
