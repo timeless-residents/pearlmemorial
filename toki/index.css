@@ -2048,17 +2048,281 @@ th.highlight-col {
 }
 
 /* =============================================
-   Print
+   Print — 白黒印刷最適化
    ============================================= */
 @media print {
-    .hero-tagline, .hero h1, .hero-subtitle, .hero-hooks, .hero-desc, .hero-buttons,
-    [style*="animation"], [class*="fade"] {
+    /* ---------- Reset: 全要素の色・背景・影を白黒化 ---------- */
+    * {
+        color: #000 !important;
+        background: #fff !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    body {
+        font-size: 10.5pt;
+        line-height: 1.6;
+        font-family: serif;
+    }
+
+    /* ---------- 非表示にする要素 ---------- */
+    .toki-nav,
+    .scroll-indicator,
+    .hero-buttons,
+    .cta-buttons,
+    .btn-pricing,
+    .nav-toggle,
+    .soap-banner,
+    .cta-section,
+    .persona-more-toggle,
+    .soulcarrier-badge,
+    .trust-badges {
+        display: none !important;
+    }
+
+    /* ---------- アニメーション無効化・可視化 ---------- */
+    .hero-tagline, .hero h1, .hero-subtitle, .hero-hooks,
+    .hero-desc, .reveal, [class*="fade"] {
         opacity: 1 !important;
         animation: none !important;
+        transform: none !important;
+        transition: none !important;
     }
-    .hero { min-height: auto !important; padding: 2rem 1rem !important; }
-    .toki-nav, .scroll-indicator, .hero-buttons, .cta-buttons, .btn-pricing, .nav-toggle { display: none !important; }
-    a[href]:after { content: " (" attr(href) ")"; font-size: 0.9em; }
-    section { page-break-inside: avoid; }
-    body { font-size: 12pt; line-height: 1.4; }
+
+    /* 折りたたみ内のペルソナカードを展開 */
+    .persona-more-content {
+        display: block !important;
+    }
+
+    /* FAQ回答を展開 */
+    .faq-answer {
+        max-height: none !important;
+        overflow: visible !important;
+        padding-bottom: 0.8em !important;
+    }
+    .faq-toggle {
+        display: none !important;
+    }
+
+    /* ---------- Hero ---------- */
+    .hero {
+        min-height: auto !important;
+        padding: 1.5cm 1cm 1cm !important;
+        background: #fff !important;
+    }
+    .hero h1 {
+        font-size: 22pt;
+    }
+    .hero-tagline {
+        font-size: 11pt;
+    }
+    .hero-subtitle {
+        font-size: 12pt;
+    }
+    .hero-desc {
+        font-size: 10pt;
+        margin-bottom: 0.5cm;
+    }
+    .hero-hooks {
+        display: flex !important;
+    }
+    .hero-hook {
+        border: 1px solid #999 !important;
+        text-decoration: none !important;
+        padding: 0.3em 0.8em;
+        font-size: 9pt;
+    }
+
+    /* ---------- Trust Bar ---------- */
+    .trust-bar {
+        border-top: 1px solid #ccc !important;
+        border-bottom: 1px solid #ccc !important;
+        padding: 0.3cm 0 !important;
+        text-align: center;
+    }
+    .trust-bar-context,
+    .trust-bar-item {
+        font-size: 9pt;
+    }
+
+    /* ---------- Section ---------- */
+    section {
+        padding: 0.8cm 1cm !important;
+        page-break-inside: avoid;
+    }
+    h2 {
+        font-size: 15pt;
+        border-bottom: 1pt solid #000;
+        padding-bottom: 0.2cm;
+        margin-bottom: 0.4cm;
+    }
+    .section-lead {
+        font-size: 9.5pt;
+    }
+    h3 {
+        font-size: 12pt;
+    }
+    h4 {
+        font-size: 10.5pt;
+    }
+
+    /* ---------- カード共通 ---------- */
+    .persona-card,
+    .feature-card,
+    .driver-card,
+    .stat-card,
+    .experience-card,
+    .pricing-card,
+    .testimonial-card,
+    .evidence-box,
+    .sengu-box,
+    .transformation-box,
+    .problem-card,
+    .storage-location {
+        border: 1px solid #999 !important;
+        border-radius: 0 !important;
+        padding: 0.4cm !important;
+        margin-bottom: 0.3cm;
+        page-break-inside: avoid;
+    }
+
+    /* ---------- グリッド・レイアウト ---------- */
+    .persona-cards,
+    .features-grid,
+    .stats-grid,
+    .driver-summary,
+    .pricing-grid,
+    .testimonials-grid,
+    .experience-cards,
+    .storage-locations {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 0.3cm !important;
+    }
+    .process-steps {
+        flex-wrap: wrap;
+        gap: 0.3cm;
+    }
+
+    /* 料金カード premium は1カラムに */
+    .pricing-card.premium {
+        grid-column: 1 / -1 !important;
+        max-width: 100% !important;
+    }
+
+    /* ---------- 比較表 ---------- */
+    .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 8.5pt;
+    }
+    .comparison-table th,
+    .comparison-table td {
+        border: 1px solid #666 !important;
+        padding: 0.2cm 0.3cm !important;
+    }
+    .comparison-table th {
+        font-weight: 700;
+    }
+    .highlight-col {
+        background: #f0f0f0 !important;
+    }
+
+    /* チェック・クロス・トライアングル記号 */
+    .check, .cross, .triangle {
+        color: #000 !important;
+    }
+
+    /* ---------- 料金 ---------- */
+    .pricing-amount {
+        font-size: 16pt;
+    }
+    .recommend-badge,
+    .premium-badge {
+        border: 1px solid #000 !important;
+        padding: 0.1cm 0.4cm;
+        font-size: 8pt;
+        position: static !important;
+        transform: none !important;
+        display: inline-block;
+        margin-bottom: 0.2cm;
+    }
+    .course-status {
+        border: 1px solid #666 !important;
+        font-size: 8pt;
+    }
+
+    /* ---------- テスティモニアル ---------- */
+    .voice-main {
+        font-size: 10.5pt;
+        font-style: italic;
+    }
+    .voice-divider {
+        border-top: 1px solid #ccc !important;
+        margin: 0.2cm 0;
+    }
+
+    /* ---------- Philosophy ---------- */
+    .philosophy-quote {
+        border-left: 3pt solid #000 !important;
+        padding-left: 0.5cm;
+        font-size: 11pt;
+    }
+
+    /* ---------- FAQ ---------- */
+    .faq-item {
+        border-bottom: 1px solid #ccc !important;
+        page-break-inside: avoid;
+    }
+    .faq-question {
+        font-weight: 700;
+        font-size: 10pt;
+        padding: 0.3cm 0 0.1cm;
+    }
+    .faq-answer p {
+        font-size: 9.5pt;
+    }
+
+    /* ---------- フッター ---------- */
+    .toki-footer {
+        border-top: 2pt solid #000 !important;
+        padding: 0.5cm 1cm !important;
+    }
+    .footer-inner {
+        grid-template-columns: 1fr 1fr 1fr !important;
+        gap: 0.4cm !important;
+    }
+    .footer-disclaimer {
+        font-size: 7.5pt;
+        border-top: 1px solid #ccc !important;
+        padding-top: 0.3cm;
+        margin-top: 0.3cm;
+    }
+
+    /* ---------- リンクURL非表示（印刷時は内部リンクのURLを出さない） ---------- */
+    a[href^="#"]::after {
+        content: "" !important;
+    }
+    a[href^="http"]::after {
+        content: "" !important;
+    }
+
+    /* ---------- ページ送り制御 ---------- */
+    .hero,
+    .philosophy-section,
+    .testimonials-section {
+        page-break-after: always;
+    }
+    .pricing-section {
+        page-break-before: always;
+    }
+    h2, h3 {
+        page-break-after: avoid;
+    }
+    .persona-card,
+    .testimonial-card,
+    .pricing-card {
+        page-break-inside: avoid;
+    }
 }
