@@ -1773,7 +1773,7 @@ th.highlight-col {
 /* ---------- Annual Resonance Membership ---------- */
 .resonance-membership {
     max-width: 520px;
-    margin: 2.5rem auto 0;
+    margin: 2.5rem auto 3rem;
     background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #1a1a2e 100%);
     border: 1.5px solid var(--gold);
     border-radius: 1rem;
