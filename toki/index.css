@@ -1530,6 +1530,7 @@ th.highlight-col {
     color: var(--text-secondary);
     line-height: 1.6;
     margin-top: 0.8rem;
+    margin-bottom: 1.2rem;
     padding-top: 0.8rem;
     border-top: 1px solid var(--border);
 }
