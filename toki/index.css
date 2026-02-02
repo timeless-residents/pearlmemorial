@@ -2610,38 +2610,81 @@ th.highlight-col {
     }
 
     /* ---------- 写真 ---------- */
-    .philosophy-photo,
+
+    /* 印刷で非表示: スマホ操作系の写真は紙面で機能しない */
     .sado-photo,
-    .premium-photo,
-    .problem-photo {
-        max-width: 5cm !important;
-        margin: 0.3cm auto !important;
-        float: none !important;
+    .premium-photo {
+        display: none !important;
     }
+
+    /* 全画像共通: 白黒コントラスト強化 */
+    img {
+        filter: grayscale(100%) contrast(1.15) !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    /* 問題提起セクションの墓石写真 */
+    .problem-photo {
+        float: none !important;
+        max-width: 6cm !important;
+        margin: 0.3cm auto !important;
+        text-align: center;
+    }
+
+    /* 哲学セクション: 横並びを維持、適切なサイズに */
+    .philosophy-photos {
+        display: grid !important;
+        grid-template-columns: 1fr 1.4fr !important;
+        gap: 0.3cm !important;
+        max-width: 12cm !important;
+        margin: 0.4cm auto !important;
+    }
+    .philosophy-photo {
+        max-width: none !important;
+        margin: 0 !important;
+    }
+
+    /* 製品ギャラリー: ソリューションの証拠 */
+    .product-gallery {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 0.3cm !important;
+        max-width: 9cm !important;
+        margin: 0.4cm auto !important;
+    }
+
+    /* 連携実績写真: 4枚横並び維持 */
+    .evidence-photos {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 0.2cm !important;
+        max-width: 16cm !important;
+    }
+    .evidence-photo img {
+        height: 2.8cm !important;
+        object-fit: cover !important;
+    }
+
+    /* 全figcaption: 印刷用フォント */
+    figure figcaption {
+        font-size: 7pt !important;
+        text-align: center !important;
+        margin-top: 0.1cm !important;
+        color: #333 !important;
+    }
+
+    /* 画像のborder-radius除去 */
     .philosophy-photo img,
-    .sado-photo img,
-    .premium-photo img,
     .problem-photo img,
     .product-gallery-item img,
     .evidence-photo img {
         border-radius: 0 !important;
-    }
-    .philosophy-photos {
-        grid-template-columns: 1fr 1fr !important;
-        gap: 0.3cm !important;
-        max-width: 10cm !important;
-    }
-    .product-gallery {
-        grid-template-columns: 1fr 1fr !important;
-        gap: 0.3cm !important;
-        max-width: 8cm !important;
-    }
-    .evidence-photos {
-        grid-template-columns: repeat(4, 1fr) !important;
-        gap: 0.2cm !important;
+        width: 100% !important;
+        height: auto !important;
     }
     .evidence-photo img {
-        height: 2.5cm !important;
+        height: 2.8cm !important;
     }
 
     /* ---------- フッター ---------- */
