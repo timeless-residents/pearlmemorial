@@ -2712,20 +2712,92 @@ th.highlight-col {
     }
 
     /* ---------- ページ送り制御 ---------- */
-    .hero,
-    .philosophy-section,
+
+    /* P1: Hero + Trust Bar = 表紙 */
+    .hero {
+        page-break-after: avoid;
+    }
+    .trust-bar {
+        page-break-after: always;
+    }
+
+    /* P2: ペルソナ（展開済みで長い → 独立ページ） */
+    .personas-section {
+        page-break-before: always;
+        page-break-after: always;
+    }
+
+    /* P3: Problem + Driver は一連の課題提起 */
+    .problem-section {
+        page-break-after: avoid;
+    }
+    .driver-section {
+        page-break-after: always;
+    }
+
+    /* P4: Solution + Science は一連の解決策 */
+    .solution-section {
+        page-break-after: avoid;
+    }
+    .science-section {
+        page-break-after: always;
+    }
+
+    /* P5: Comparison 比較表は単独ページ */
+    .comparison-section {
+        page-break-before: always;
+        page-break-after: always;
+    }
+
+    /* P6: Experience（体験 + 佐渡 + 分散保管） */
+    .experience-section {
+        page-break-after: always;
+    }
+
+    /* P7: Philosophy（長い → 独立ページ） */
+    .philosophy-section {
+        page-break-before: always;
+        page-break-after: always;
+    }
+
+    /* P8: Voices */
     .testimonials-section {
         page-break-after: always;
     }
+
+    /* P9: Pricing */
     .pricing-section {
         page-break-before: always;
+        page-break-after: always;
     }
+
+    /* P10: FAQ + Process + Footer はまとめて末尾 */
+    .faq-section {
+        page-break-after: avoid;
+    }
+
+    /* 見出しの直後で切れないようにする */
     h2, h3 {
         page-break-after: avoid;
     }
+
+    /* カード・写真・表の途中で切れないようにする */
     .persona-card,
     .testimonial-card,
-    .pricing-card {
+    .pricing-card,
+    .feature-card,
+    .driver-card,
+    .experience-card,
+    .problem-card,
+    .evidence-box,
+    .transformation-box,
+    .philosophy-photos,
+    .product-gallery,
+    .evidence-photos,
+    .sado-option,
+    .custom-inquiry,
+    .comparison-table,
+    figure {
         page-break-inside: avoid;
     }
 }
