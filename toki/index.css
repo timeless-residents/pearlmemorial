@@ -372,18 +372,13 @@ body.has-soap-banner .hero {
 .trust-bar {
     background: var(--toki-blue-pale);
     border-bottom: 1px solid var(--border);
-    padding: 0.7rem 1.5rem;
+    padding: 1rem 1.5rem;
     text-align: center;
 }
 
 .trust-bar-inner {
-    max-width: 960px;
+    max-width: 760px;
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 0.3rem 0.8rem;
 }
 
 .trust-bar-context {
@@ -391,31 +386,58 @@ body.has-soap-banner .hero {
     font-size: 0.72rem;
     color: var(--text-muted);
     letter-spacing: 0.08em;
-    white-space: nowrap;
+    margin-bottom: 0.6rem;
+}
+
+.trust-bar-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 2rem;
+    text-align: left;
 }
 
 .trust-bar-item {
-    font-family: var(--font-display);
-    font-size: 0.72rem;
-    color: var(--text-body);
-    letter-spacing: 0.05em;
-    white-space: nowrap;
+    padding: 0.5rem 0;
 }
 
-.trust-bar-divider {
-    color: var(--border);
-    font-size: 0.7rem;
+.trust-bar-items > .trust-bar-item:first-child {
+    border-right: 1px solid var(--border);
+    padding-right: 2rem;
+}
+
+.trust-bar-main {
+    font-family: var(--font-display);
+    font-size: 0.78rem;
+    color: var(--text-primary);
+    letter-spacing: 0.04em;
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+}
+
+.trust-bar-detail {
+    font-size: 0.68rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
 }
 
 @media (max-width: 768px) {
-    .trust-bar-inner {
-        gap: 0.2rem 0.5rem;
+    .trust-bar-items {
+        grid-template-columns: 1fr;
+        gap: 0;
+        text-align: center;
     }
-    .trust-bar-item {
-        font-size: 0.65rem;
+    .trust-bar-items > .trust-bar-item:first-child {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        padding-right: 0;
+        padding-bottom: 0.5rem;
+        margin-bottom: 0.3rem;
     }
-    .trust-bar-divider {
-        display: none;
+    .trust-bar-main {
+        font-size: 0.72rem;
+    }
+    .trust-bar-detail {
+        font-size: 0.62rem;
     }
 }
 
@@ -1072,6 +1094,157 @@ th.highlight-col {
     margin-top: 1.2rem;
 }
 
+/* Philosophy / Sado / Premium Photo */
+.philosophy-photo,
+.sado-photo,
+.premium-photo {
+    margin: 1.5rem auto;
+    max-width: 480px;
+    text-align: center;
+}
+
+.philosophy-photo img,
+.sado-photo img,
+.premium-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.8rem;
+    box-shadow: var(--shadow-md);
+}
+
+.philosophy-photo figcaption,
+.sado-photo figcaption,
+.premium-photo figcaption {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+    line-height: 1.5;
+}
+
+.premium-photo {
+    max-width: 320px;
+    margin: 1rem auto 1.2rem;
+}
+
+.sado-photo {
+    float: right;
+    max-width: 280px;
+    margin: 0 0 1rem 1.5rem;
+}
+
+/* Philosophy photos side-by-side */
+.philosophy-photos {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 1rem;
+    margin: 1.5rem auto;
+    max-width: 600px;
+}
+
+.philosophy-photos .philosophy-photo {
+    margin: 0;
+    max-width: none;
+}
+
+/* Product Gallery (Solution section) */
+.product-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    max-width: 540px;
+    margin: 2rem auto;
+}
+
+.product-gallery-item {
+    text-align: center;
+}
+
+.product-gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.8rem;
+    box-shadow: var(--shadow-md);
+}
+
+.product-gallery-item figcaption {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+}
+
+/* Problem section photo */
+.problem-photo {
+    float: right;
+    max-width: 200px;
+    margin: 0 0 0.8rem 1.2rem;
+    text-align: center;
+}
+
+.problem-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.6rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.problem-photo figcaption {
+    font-size: 0.62rem;
+    color: var(--text-muted);
+    margin-top: 0.3rem;
+}
+
+/* Evidence Photos strip */
+.evidence-photos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.8rem;
+    margin-top: 1.2rem;
+}
+
+.evidence-photo {
+    text-align: center;
+}
+
+.evidence-photo img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.evidence-photo figcaption {
+    font-size: 0.62rem;
+    color: var(--text-muted);
+    margin-top: 0.3rem;
+}
+
+@media (max-width: 768px) {
+    .philosophy-photos {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+    }
+    .product-gallery {
+        max-width: 360px;
+    }
+    .problem-photo {
+        float: none;
+        max-width: 260px;
+        margin: 0 auto 1rem;
+    }
+    .evidence-photos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .sado-photo {
+        float: none;
+        max-width: 360px;
+        margin: 1rem auto 1.2rem;
+    }
+}
+
 .transformation-box {
     margin: 2.5rem auto 0;
     padding: 2rem 2.2rem;
@@ -1271,6 +1444,97 @@ th.highlight-col {
     margin-bottom: 2rem;
 }
 
+.pricing-grid.two-plans {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pricing-grid.one-plan {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Sado Experience Option */
+.sado-option {
+    max-width: 680px;
+    margin: 0 auto 2rem;
+    padding: 1.8rem 2rem;
+    background: linear-gradient(135deg, #F5F9FC 0%, var(--bg-card) 100%);
+    border: 2px dashed var(--toki-blue);
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.sado-option-label {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--toki-blue);
+    margin-bottom: 0.2rem;
+}
+
+.sado-option-status {
+    display: inline-block;
+    font-size: 0.7rem;
+    padding: 0.15rem 0.8rem;
+    border-radius: 1rem;
+    margin-bottom: 0.6rem;
+}
+
+.sado-option-status.coming-soon {
+    background: #FFF3E0;
+    color: #E65100;
+}
+
+.sado-option-desc {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.8rem;
+}
+
+.sado-option-includes {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.8rem;
+}
+
+.sado-option-includes span {
+    font-size: 0.78rem;
+    color: var(--text-primary);
+    padding: 0.3rem 0.8rem;
+    background: rgba(74, 111, 140, 0.08);
+    border-radius: 2rem;
+}
+
+.sado-option-price {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--toki-blue);
+    margin-bottom: 0.4rem;
+}
+
+.sado-option-price .pricing-unit {
+    font-size: 0.75rem;
+}
+
+.pricing-personal-note,
+.pricing-family-note {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-top: 0.8rem;
+    margin-bottom: 1.2rem;
+    padding-top: 0.8rem;
+    border-top: 1px solid var(--border);
+}
+
 .pricing-card {
     padding: 2.2rem 1.8rem;
     background: var(--bg-card);
@@ -1385,6 +1649,32 @@ th.highlight-col {
 .btn-pricing.primary:hover {
     background: var(--toki-blue-dark);
     box-shadow: var(--shadow-blue);
+}
+
+/* Custom Inquiry */
+.custom-inquiry {
+    text-align: center;
+    max-width: 540px;
+    margin: 0 auto 1.5rem;
+    padding: 1.5rem 2rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+}
+
+.custom-inquiry-title {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.custom-inquiry-body {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 1rem;
 }
 
 .member-benefit {
@@ -1733,6 +2023,13 @@ th.highlight-col {
     margin-bottom: 0;
 }
 
+.driver-note {
+    display: block;
+    font-size: 0.68rem;
+    color: var(--text-muted);
+    margin-top: 0.3rem;
+}
+
 /* =============================================
    Sengu Box (式年遷宮)
    ============================================= */
@@ -1983,6 +2280,14 @@ th.highlight-col {
     .features-grid,
     .stats-grid { grid-template-columns: repeat(2, 1fr); }
     .pricing-grid { grid-template-columns: 1fr; max-width: 420px; margin-left: auto; margin-right: auto; }
+    .pricing-grid.two-plans { grid-template-columns: 1fr; max-width: 420px; }
+    .pricing-card { padding: 1.4rem 1.2rem; }
+    .pricing-features li { padding: 0.3rem 0 0.3rem 1.4rem; font-size: 0.78rem; }
+    .pricing-features { margin-bottom: 1rem; }
+    .pricing-personal-note,
+    .pricing-family-note { font-size: 0.74rem; margin-top: 0.5rem; padding-top: 0.5rem; }
+    .sado-option { margin-left: 1rem; margin-right: 1rem; padding: 1.2rem 1rem; }
+    .sado-option-includes { flex-direction: column; gap: 0.4rem; }
     .footer-inner { grid-template-columns: 1fr 1fr; }
     .driver-summary { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
 }
@@ -2139,12 +2444,25 @@ th.highlight-col {
     .trust-bar {
         border-top: 1px solid #ccc !important;
         border-bottom: 1px solid #ccc !important;
-        padding: 0.3cm 0 !important;
+        padding: 0.3cm 0.5cm !important;
         text-align: center;
     }
-    .trust-bar-context,
-    .trust-bar-item {
+    .trust-bar-context {
+        font-size: 8.5pt;
+    }
+    .trust-bar-items {
+        gap: 0 0.5cm !important;
+    }
+    .trust-bar-items > .trust-bar-item:first-child {
+        border-right: 1px solid #ccc !important;
+        padding-right: 0.5cm !important;
+    }
+    .trust-bar-main {
         font-size: 9pt;
+        font-weight: 700;
+    }
+    .trust-bar-detail {
+        font-size: 7.5pt;
     }
 
     /* ---------- Section ---------- */
@@ -2209,6 +2527,13 @@ th.highlight-col {
     .pricing-card.premium {
         grid-column: 1 / -1 !important;
         max-width: 100% !important;
+    }
+
+    .sado-option {
+        border: 1px solid #000 !important;
+        border-style: dashed !important;
+        padding: 0.3cm !important;
+        margin-bottom: 0.3cm !important;
     }
 
     /* ---------- 比較表 ---------- */
@@ -2282,6 +2607,41 @@ th.highlight-col {
     }
     .faq-answer p {
         font-size: 9.5pt;
+    }
+
+    /* ---------- 写真 ---------- */
+    .philosophy-photo,
+    .sado-photo,
+    .premium-photo,
+    .problem-photo {
+        max-width: 5cm !important;
+        margin: 0.3cm auto !important;
+        float: none !important;
+    }
+    .philosophy-photo img,
+    .sado-photo img,
+    .premium-photo img,
+    .problem-photo img,
+    .product-gallery-item img,
+    .evidence-photo img {
+        border-radius: 0 !important;
+    }
+    .philosophy-photos {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 0.3cm !important;
+        max-width: 10cm !important;
+    }
+    .product-gallery {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 0.3cm !important;
+        max-width: 8cm !important;
+    }
+    .evidence-photos {
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 0.2cm !important;
+    }
+    .evidence-photo img {
+        height: 2.5cm !important;
     }
 
     /* ---------- フッター ---------- */
