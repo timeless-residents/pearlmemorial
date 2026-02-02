@@ -1290,6 +1290,14 @@ th.highlight-col {
 .transformation-box strong {
     color: var(--toki-blue-dark);
 }
+.transformation-self {
+    margin-top: 1.2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    letter-spacing: 0.04em;
+}
 
 .soulcarrier-badge {
     text-align: center;
