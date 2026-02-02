@@ -1743,6 +1743,7 @@ th.highlight-col {
     font-weight: 500;
     letter-spacing: 0.08em;
     border-radius: 1rem;
+    white-space: nowrap;
 }
 
 .pricing-consultation {
