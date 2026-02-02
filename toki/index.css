@@ -1623,6 +1623,14 @@ th.highlight-col {
     font-weight: 700;
 }
 
+.plan-sub {
+    display: block;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    margin-top: 0.15rem;
+    line-height: 1.4;
+}
+
 .btn-pricing {
     display: inline-block;
     padding: 0.7rem 1.8rem;
