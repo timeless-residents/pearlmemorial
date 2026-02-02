@@ -180,6 +180,23 @@ body.has-soap-banner .hero {
     box-shadow: var(--shadow-blue);
 }
 
+.lang-switch {
+    padding: 0.35rem 0.7rem !important;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    border: 1.5px solid var(--border);
+    border-radius: 0.3rem;
+    color: var(--text-muted) !important;
+    transition: all 0.3s ease;
+    margin-left: 0.3rem;
+}
+
+.lang-switch:hover {
+    color: var(--toki-blue) !important;
+    border-color: var(--toki-blue);
+}
+
 .nav-toggle {
     display: none;
     flex-direction: column;
@@ -1726,6 +1743,7 @@ th.highlight-col {
     font-weight: 500;
     letter-spacing: 0.08em;
     border-radius: 1rem;
+    white-space: nowrap;
 }
 
 .pricing-consultation {
