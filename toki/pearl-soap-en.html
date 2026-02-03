@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pearl Soap | TokiStorage</title>
+    <meta name="description" content="Pearl Soap — Handmade paw-shaped soap. Coconut-scented, foamy, with an organza drawstring pouch. A gift economy offering.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .soap-page { padding: 6rem 2rem 4rem; }
+        .soap-inner { max-width: 700px; margin: 0 auto; }
+        .soap-inner h1 {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.3rem;
+            text-align: center;
+        }
+        .soap-tagline {
+            text-align: center;
+            font-family: var(--font-display);
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+        }
+        .soap-section {
+            margin-bottom: 2.5rem;
+        }
+        .soap-section h2 {
+            font-family: var(--font-display);
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.8rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .soap-section p,
+        .soap-section li {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.9;
+        }
+        .soap-section ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .soap-section li { margin-bottom: 0.3rem; }
+        .soap-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.2rem;
+            margin-top: 1rem;
+        }
+        .soap-feature-card {
+            background: var(--bg-page);
+            border: 1px solid var(--border);
+            border-radius: 0.8rem;
+            padding: 1.2rem;
+            text-align: center;
+        }
+        .soap-feature-card .feature-icon {
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+        }
+        .soap-feature-card h3 {
+            font-family: var(--font-display);
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.3rem;
+        }
+        .soap-feature-card p {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+        .soap-story {
+            background: var(--bg-page);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 1.8rem;
+            margin: 2rem 0;
+        }
+        .soap-story p {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.9;
+            margin-bottom: 0.8rem;
+        }
+        .soap-story p:last-child { margin-bottom: 0; }
+        .soap-ingredients {
+            font-size: 0.78rem !important;
+            color: var(--text-muted) !important;
+            line-height: 1.8 !important;
+            margin-top: 0.5rem;
+        }
+        .soap-note-list {
+            padding-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+        .soap-note-list li {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 0.2rem;
+        }
+        .soap-hero {
+            text-align: center;
+            margin-bottom: 2rem;
+            background: var(--bg-page);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 1.5rem 1.5rem 1rem;
+        }
+        .soap-hero img {
+            width: 260px;
+            max-width: 60%;
+            height: auto;
+            border-radius: 0.8rem;
+            box-shadow: var(--shadow-sm);
+        }
+        .soap-hero figcaption {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            margin-top: 0.8rem;
+        }
+        .soap-cta {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            background: var(--toki-blue-pale);
+            border-radius: 1rem;
+        }
+        .soap-cta p {
+            font-family: var(--font-display);
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+        .soap-cta a {
+            display: inline-block;
+            background: var(--toki-blue);
+            color: #fff;
+            padding: 0.7rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+        .soap-cta a:hover { background: var(--toki-blue-dark); }
+        .soap-back {
+            text-align: center;
+            margin-top: 2.5rem;
+        }
+        .soap-back a {
+            color: var(--toki-blue);
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+        .soap-back a:hover { text-decoration: underline; }
+        .soap-note {
+            font-size: 0.75rem !important;
+            color: var(--text-muted) !important;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="toki-nav">
+    <a href="index-en.html" class="nav-logo">TokiStorage</a>
+</nav>
+
+<main class="soap-page">
+    <div class="soap-inner">
+        <h1>Pearl Soap</h1>
+        <p class="soap-tagline">
+            Handmade paw-shaped soap<br>
+            Coconut-scented with an organza drawstring pouch.<br>
+            A gift economy offering.
+        </p>
+
+        <figure class="soap-hero">
+            <img src="asset/pearl-soap-v2.jpg" alt="Pearl Soap — Handmade paw-shaped soap" loading="lazy" width="960" height="960">
+            <figcaption>Handmade paw soaps. Each one carefully crafted.</figcaption>
+        </figure>
+
+        <div class="soap-features">
+            <div class="soap-feature-card">
+                <div class="feature-icon">&#x1F43E;</div>
+                <h3>Paw Design</h3>
+                <p>Handmade soap shaped like a dog or cat paw. A form that reminds you of a cherished companion each time you hold it.</p>
+            </div>
+            <div class="soap-feature-card">
+                <div class="feature-icon">&#x1F334;</div>
+                <h3>Coconut Scent</h3>
+                <p>A gentle coconut essential oil fragrance. Food-safe hand soap.</p>
+            </div>
+            <div class="soap-feature-card">
+                <div class="feature-icon">&#x1F381;</div>
+                <h3>Gift Economy</h3>
+                <p>Comes with an organza drawstring pouch. A gift that carries gratitude and heartfelt intention.</p>
+            </div>
+        </div>
+
+        <div class="soap-story">
+            <p>Pearl Soap is named after Pearl, a beloved dog who was part of the family since 2007.</p>
+            <p>After Pearl passed in 2025, the feeling of "thank you for being here" was shaped into something tangible. Each time you hold this paw-shaped soap, you remember that someone precious was here -- a small, everyday moment we want to deliver.</p>
+            <p>Pearl Soap is not for sale. It is given as a gift by Takuya Sato, founder of TokiStorage, to those with whom he shares a connection. Gift economy -- a cycle of giving without expecting return.</p>
+        </div>
+
+        <div class="soap-section">
+            <h2>Product Details</h2>
+            <ul>
+                <li>Shape: Dog/cat paw</li>
+                <li>Scent: Coconut</li>
+                <li>Includes: Organza drawstring pouch</li>
+                <li>Use: Hand soap (food-safe grade)</li>
+            </ul>
+        </div>
+
+        <div class="soap-section">
+            <h2>Ingredients</h2>
+            <p class="soap-ingredients">Sodium Stearate, PG, Glycerin, Sucrose, Sorbitol, Sodium Laureth Sulfate, Sodium Laurate, Water, Myristic Acid, Sodium Lauryl Sulfate, Shea Butter, Sodium Chloride, Phenoxyethanol, Denatonium Benzoate, Coconut Essential Oil, Propylene Glycol, Sorbitol Solution, Erythrosine, Brilliant Blue, Sodium Carboxymethyl Cellulose</p>
+        </div>
+
+        <div class="soap-section">
+            <h2>Precautions</h2>
+            <p class="soap-note">If irritation occurs or the product does not suit your skin, discontinue use immediately. Continued use may worsen symptoms. We recommend consulting a dermatologist.</p>
+            <p class="soap-note">(1) If redness, swelling, itching, or irritation appears during use<br>(2) If the above symptoms appear after skin is exposed to direct sunlight</p>
+            <ul class="soap-note-list">
+                <li>If the product gets in your eyes, rinse immediately with water.</li>
+                <li>Avoid use around the eye area.</li>
+            </ul>
+        </div>
+
+        <div class="soap-section">
+            <h2>Pearl Soap and TokiStorage</h2>
+            <p>The sentiment behind Pearl Soap -- "thank you for being here" -- grows from the same root as TokiStorage's mission of "proof of existence."</p>
+            <p>A soap made so we never forget that Pearl existed. The technology born to carry that memory a thousand years into the future is TokiStorage.</p>
+            <p>Soap dissolves with use, but a memory engraved in quartz glass endures for a millennium. From an everyday "thank you" to an eternal "proof of existence."</p>
+        </div>
+
+        <div class="soap-cta">
+            <p>Want to learn more about proof-of-existence technology?</p>
+            <a href="index-en.html">Explore TokiStorage</a>
+        </div>
+
+        <div class="soap-back">
+            <a href="index-en.html">&larr; Back to TokiStorage</a>
+        </div>
+    </div>
+</main>
+
+<footer class="toki-footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <h3>TokiStorage</h3>
+            <p>Eternal memorial engraved in quartz glass.<br>No server, no maintenance.<br>Proof of existence, delivered a thousand years forward.</p>
+        </div>
+        <div class="footer-links-group">
+            <h4>Links</h4>
+            <a href="index-en.html">About TokiStorage</a>
+            <a href="index-en.html#pricing">Pricing</a>
+            <a href="index-en.html#faq">FAQ</a>
+            <a href="index-en.html#cta">Contact</a>
+        </div>
+        <div class="footer-links-group">
+            <h4>Related</h4>
+            <a href="../index.html">SoulCarrier Resonance Circle</a>
+            <a href="pearl-soap-en.html">Pearl Soap</a>
+        </div>
+        <div class="footer-links-group">
+            <h4>Legal</h4>
+            <a href="tokushoho-en.html">Specified Commercial Transactions Act</a>
+            <a href="privacy-en.html">Privacy Policy</a>
+        </div>
+        <div class="footer-links-group">
+            <h4>Company</h4>
+            <p class="footer-company">Universal Need Inc.<br>CEO: Takuya Sato<br>2-11-13 Akemi, Urayasu, Chiba 279-0014, Japan<br>(Relocating to Sado City, spring 2026)</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p class="footer-disclaimer">*TokiStorage is a record preservation product. It is not a substitute for a cemetery or gravestone under the Graveyard and Burial Act. "1,000 years" is a theoretical value based on quartz glass material properties, not a product warranty period.</p>
+        <p>&copy; 2026 TokiStorage / Universal Need Inc. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

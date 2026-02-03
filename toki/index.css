@@ -78,13 +78,19 @@ body {
     gap: 0.8rem;
 }
 
-.soap-banner p {
+.soap-banner p,
+.soap-banner-link {
     font-family: var(--font-display);
     font-size: 0.75rem;
     color: var(--text-secondary);
     letter-spacing: 0.05em;
     text-align: center;
     margin: 0;
+    text-decoration: none;
+}
+
+.soap-banner-link:hover {
+    color: var(--toki-blue);
 }
 
 .soap-banner-close {
