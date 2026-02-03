@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pearl Soap | トキストレージ</title>
+    <meta name="description" content="Pearl Soap — 犬猫肉球形状の手作り石鹸。ココナッツの香りと泡立つオーガンジー巾着袋付き。ギフトエコノミーとして。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .soap-page { padding: 6rem 2rem 4rem; }
+        .soap-inner { max-width: 700px; margin: 0 auto; }
+        .soap-inner h1 {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.3rem;
+            text-align: center;
+        }
+        .soap-tagline {
+            text-align: center;
+            font-family: var(--font-display);
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+        }
+        .soap-section {
+            margin-bottom: 2.5rem;
+        }
+        .soap-section h2 {
+            font-family: var(--font-display);
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.8rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .soap-section p,
+        .soap-section li {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.9;
+        }
+        .soap-section ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .soap-section li { margin-bottom: 0.3rem; }
+        .soap-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.2rem;
+            margin-top: 1rem;
+        }
+        .soap-feature-card {
+            background: var(--bg-page);
+            border: 1px solid var(--border);
+            border-radius: 0.8rem;
+            padding: 1.2rem;
+            text-align: center;
+        }
+        .soap-feature-card .feature-icon {
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+        }
+        .soap-feature-card h3 {
+            font-family: var(--font-display);
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.3rem;
+        }
+        .soap-feature-card p {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+        .soap-story {
+            background: var(--bg-page);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 1.8rem;
+            margin: 2rem 0;
+        }
+        .soap-story p {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.9;
+            margin-bottom: 0.8rem;
+        }
+        .soap-story p:last-child { margin-bottom: 0; }
+        .soap-ingredients {
+            font-size: 0.78rem !important;
+            color: var(--text-muted) !important;
+            line-height: 1.8 !important;
+            margin-top: 0.5rem;
+        }
+        .soap-cta {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            background: var(--toki-blue-pale);
+            border-radius: 1rem;
+        }
+        .soap-cta p {
+            font-family: var(--font-display);
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+        .soap-cta a {
+            display: inline-block;
+            background: var(--toki-blue);
+            color: #fff;
+            padding: 0.7rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+        .soap-cta a:hover { background: var(--toki-blue-dark); }
+        .soap-back {
+            text-align: center;
+            margin-top: 2.5rem;
+        }
+        .soap-back a {
+            color: var(--toki-blue);
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+        .soap-back a:hover { text-decoration: underline; }
+        .soap-note {
+            font-size: 0.75rem !important;
+            color: var(--text-muted) !important;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="toki-nav">
+    <a href="index.html" class="nav-logo">トキストレージ</a>
+</nav>
+
+<main class="soap-page">
+    <div class="soap-inner">
+        <h1>Pearl Soap</h1>
+        <p class="soap-tagline">
+            犬猫肉球形状の手作り石鹸<br>
+            ココナッツの香りと泡立つオーガンジー巾着袋付き。<br>
+            ギフトエコノミーとして。
+        </p>
+
+        <div class="soap-features">
+            <div class="soap-feature-card">
+                <div class="feature-icon">&#x1F43E;</div>
+                <h3>肉球デザイン</h3>
+                <p>犬猫の肉球を模した手作り石鹸。手のひらに乗せるたびに、大切な存在を思い出す形です。</p>
+            </div>
+            <div class="soap-feature-card">
+                <div class="feature-icon">&#x1F334;</div>
+                <h3>ココナッツの香り</h3>
+                <p>ココナッツエッセンシャルオイルの優しい香り。食品安全基準のハンドソープです。</p>
+            </div>
+            <div class="soap-feature-card">
+                <div class="feature-icon">&#x1F381;</div>
+                <h3>ギフトエコノミー</h3>
+                <p>オーガンジー巾着袋付き。感謝と想いを形にして届ける贈りものです。</p>
+            </div>
+        </div>
+
+        <div class="soap-story">
+            <p>Pearl Soapは、2007年から家族と暮らした愛犬「Pearl」の名を冠しています。</p>
+            <p>2025年に旅立ったPearlへの想いから、「いてくれてありがとう」の気持ちを形にしました。肉球の形をした石鹸を手に取るたびに、大切な存在が「いてくれた」ことを思い出す——そんな日常のささやかな瞬間を届けたい。</p>
+            <p>Pearl Soapは販売品ではありません。タイムレスタウン新浦安の自治会長・佐藤卓也から、ご縁のある方への贈りものとしてお渡ししています。ギフトエコノミー——見返りを求めない贈与の循環です。</p>
+        </div>
+
+        <div class="soap-section">
+            <h2>製品情報</h2>
+            <ul>
+                <li>形状：犬猫肉球形</li>
+                <li>香り：ココナッツ</li>
+                <li>付属品：オーガンジー巾着袋</li>
+                <li>用途：ハンドソープ（食品安全基準）</li>
+            </ul>
+        </div>
+
+        <div class="soap-section">
+            <h2>全成分</h2>
+            <p class="soap-ingredients">ステアリン酸Na、PG、グリセリン、スクロース、ソルビトール、ラウレス硫酸Na、ラウリン酸Na、水、ミリスチン酸、ラウリル硫酸Na、シア脂油、塩化Na、フェノキシエタノール、安息香酸デナトニウム、エッセンシャルオイル ココナッツ、プロピレングリコール、ソービトールソリューション、エリソシン、ブリリアントブルー、ソーデイウムカーボキシメシーセルロース</p>
+            <p class="soap-note">※化粧品がお肌に合わないとき即ち次のような場合には、使用を中止してください。そのまま化粧品の使用を続けますと、症状を悪化させることがありますので、皮膚科専門医にご相談されることをおすすめします。</p>
+        </div>
+
+        <div class="soap-section">
+            <h2>Pearl Soapとトキストレージ</h2>
+            <p>Pearl Soapの「いてくれてありがとう」という想いは、トキストレージの「存在証明」という使命と同じ根から生まれています。</p>
+            <p>愛犬Pearlの存在を忘れないために作った石鹸。その想いを千年先まで届けるために生まれた技術がトキストレージです。</p>
+            <p>石鹸は使えばなくなりますが、石英ガラスに刻まれた記憶は千年先まで残ります。日常の「ありがとう」から、永遠の「存在証明」へ。</p>
+        </div>
+
+        <div class="soap-cta">
+            <p>存在証明の技術について、もっと知りたい方へ</p>
+            <a href="index.html">トキストレージを見る</a>
+        </div>
+
+        <div class="soap-back">
+            <a href="index.html">&larr; トキストレージ トップへ戻る</a>
+        </div>
+    </div>
+</main>
+
+<footer class="toki-footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <h3>トキストレージ</h3>
+            <p>石英ガラスに刻む永続墓誌。<br>サーバー不要、維持費なし。<br>千年先へ届ける存在証明。</p>
+        </div>
+        <div class="footer-links-group">
+            <h4>リンク</h4>
+            <a href="index.html">トキストレージとは</a>
+            <a href="index.html#pricing">料金プラン</a>
+            <a href="index.html#faq">よくある質問</a>
+            <a href="index.html#cta">お問い合わせ</a>
+        </div>
+        <div class="footer-links-group">
+            <h4>関連サービス</h4>
+            <a href="../index-ja.html">SoulCarrier 共鳴の会</a>
+            <a href="pearl-soap.html">Pearl Soap</a>
+        </div>
+        <div class="footer-links-group">
+            <h4>法的情報</h4>
+            <a href="tokushoho.html">特定商取引法に基づく表示</a>
+            <a href="privacy.html">プライバシーポリシー</a>
+        </div>
+        <div class="footer-links-group">
+            <h4>運営</h4>
+            <p class="footer-company">Universal Need株式会社<br>代表：佐藤卓也<br>〒279-0014 千葉県浦安市明海2-11-13<br>（2026年春〜 佐渡市へ移転予定）</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p class="footer-disclaimer">※トキストレージは記録保存を目的とした製品です。墓地埋葬法上の墓地・墓石の代替となるものではありません。「1000年」は石英ガラスの素材特性に基づく理論値であり、製品保証期間ではありません。</p>
+        <p>&copy; 2026 トキストレージ / Universal Need株式会社. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
