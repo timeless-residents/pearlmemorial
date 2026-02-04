@@ -259,6 +259,32 @@
             color: var(--text-muted) !important;
             margin-top: 0.5rem;
         }
+        .og-story-photos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.8rem;
+            margin: 1.2rem 0;
+        }
+        .og-story-photos figure {
+            margin: 0;
+        }
+        .og-story-photos img {
+            width: 100%;
+            border-radius: 0.5rem;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+        }
+        .og-story-photos figcaption {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            margin-top: 0.3rem;
+            line-height: 1.4;
+        }
+        @media (max-width: 520px) {
+            .og-story-photos {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -295,9 +321,24 @@
         </div>
 
         <div class="og-story">
-            <p>代表・佐藤卓也は、千葉県浦安市のタイムレスタウン自宅で烏骨鶏飼育ハウスにミニオフグリッド環境を構築。ソーラーパネルとバッテリーによる電力自立の検証を、日常の中で繰り返しました。</p>
+            <p>代表・佐藤卓也は、千葉県浦安市のタイムレスタウン自宅で烏骨鶏飼育ハウスにミニオフグリッド環境を構築。ソーラーパネルとバッテリーによる電力自立の検証を、日常の中で繰り返しました。この飼育ハウスは、トキストレージの石英ガラス刻印造形物の屋外劣化検証も兼ねた実験拠点です。</p>
+            <div class="og-story-photos">
+                <figure>
+                    <img src="asset/IMG_0852.jpeg" alt="孵化器内の烏骨鶏のヒナ" loading="lazy">
+                    <figcaption>孵化器で誕生した烏骨鶏のヒナ</figcaption>
+                </figure>
+                <figure>
+                    <img src="asset/IMG_0858.jpeg" alt="段ボール飼育箱で育つ烏骨鶏のヒナたち" loading="lazy">
+                    <figcaption>飼育箱での初期育成</figcaption>
+                </figure>
+                <figure>
+                    <img src="asset/Snapshoot_1756198826573.png" alt="ソーラー電力で稼働する監視カメラの映像" loading="lazy">
+                    <figcaption>ソーラー電力で稼働する監視カメラ映像</figcaption>
+                </figure>
+            </div>
+            <p>また、SoulCarrier（共鳴の会）の墓石調査では各地で車中泊を行い、ポータブル電源とソーラーパネルで電力を自給しながらの長期フィールドワークを経験。移動しながらオフグリッド環境を維持する実践知も蓄えました。</p>
             <p>2025年、マウイ島を東端から西端まで滞在する中で、自前の機材を持ち込み、2箇所でそれぞれ3日以内にオフグリッド環境を構築。現地のWorkawayホストへの構築支援も行い、実用レベルで機能することを検証しました。</p>
-            <p>2026年春からは佐渡島に移転し、本格的なオフグリッド生活基盤の構築を予定。実験→遠征検証→本番と段階を踏んできた経験が、このコンサルティングの土台です。</p>
+            <p>2026年春からは佐渡島に移転し、本格的なオフグリッド生活基盤の構築を予定。実験→車中泊→遠征検証→本番と段階を踏んできた経験が、このコンサルティングの土台です。</p>
         </div>
 
         <div class="og-section">
