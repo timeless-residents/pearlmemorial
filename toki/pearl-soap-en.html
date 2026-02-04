@@ -170,6 +170,32 @@
             color: var(--text-muted) !important;
             margin-top: 0.5rem;
         }
+        .soap-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.8rem;
+            margin: 1.5rem 0;
+        }
+        .soap-gallery figure {
+            margin: 0;
+        }
+        .soap-gallery img {
+            width: 100%;
+            border-radius: 0.5rem;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+        }
+        .soap-gallery figcaption {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            margin-top: 0.3rem;
+            line-height: 1.4;
+        }
+        @media (max-width: 520px) {
+            .soap-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -215,6 +241,34 @@
             <p>Pearl Soap is named after Pearl, a beloved dog who was part of the family since 2007.</p>
             <p>After Pearl passed in 2025, the feeling of "thank you for being here" was shaped into something tangible. Each time you hold this paw-shaped soap, you remember that someone precious was here —a small, everyday moment we want to deliver.</p>
             <p>Pearl Soap is not for sale. It is given as a gift by Takuya Sato, founder of TokiStorage, to those with whom he shares a connection. Gift economy —a cycle of giving without expecting return.</p>
+            <div class="soap-gallery">
+                <figure>
+                    <img src="asset/IMG_1864.jpeg" alt="Handmaking soap" loading="lazy">
+                    <figcaption>Each one handcrafted</figcaption>
+                </figure>
+                <figure>
+                    <img src="asset/IMG_2528.jpeg" alt="Outdoor soap-making setup in Maui" loading="lazy">
+                    <figcaption>Outdoor production in Maui</figcaption>
+                </figure>
+                <figure>
+                    <img src="asset/IMG_2403.jpeg" alt="A finished Pearl Soap" loading="lazy">
+                    <figcaption>The finished paw soap</figcaption>
+                </figure>
+            </div>
+            <div class="soap-gallery">
+                <figure>
+                    <img src="asset/IMG_1914.jpeg" alt="Seasonal soap packages" loading="lazy">
+                    <figcaption>Seasonal limited packaging</figcaption>
+                </figure>
+                <figure>
+                    <img src="asset/IMG_2235.jpeg" alt="Soaps in organza pouches" loading="lazy">
+                    <figcaption>Organza drawstring pouches</figcaption>
+                </figure>
+                <figure>
+                    <img src="asset/IMG_2529.jpeg" alt="Soaps ready for distribution" loading="lazy">
+                    <figcaption>Soaps shared in Maui</figcaption>
+                </figure>
+            </div>
         </div>
 
         <div class="soap-section">

@@ -251,6 +251,28 @@
             color: var(--text-muted) !important;
             margin-top: 0.5rem;
         }
+        .wa-story-photos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.8rem;
+            margin: 1.2rem 0;
+        }
+        .wa-story-photos figure { margin: 0; }
+        .wa-story-photos img {
+            width: 100%;
+            border-radius: 0.5rem;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+        }
+        .wa-story-photos figcaption {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            margin-top: 0.3rem;
+            line-height: 1.4;
+        }
+        @media (max-width: 520px) {
+            .wa-story-photos { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
@@ -288,6 +310,20 @@
 
         <div class="wa-story">
             <p>2025年、代表・佐藤卓也はWorkawayゲストとしてマウイ島の東端から西端まで滞在。各地のホストのもとで働きながら暮らす中で、ゲスト同士の会話や交流を通じてWorkawayの魅力と可能性を確信しました。滞在先ではオフグリッド環境の構築支援も行い、ホスト運営に必要なインフラ整備の知見も蓄積しています。</p>
+            <div class="wa-story-photos">
+                <figure>
+                    <img src="asset/IMG_2724-2.jpeg" alt="マウイ島でのWorkaway活動" loading="lazy">
+                    <figcaption>マウイでのホスト支援作業</figcaption>
+                </figure>
+                <figure>
+                    <img src="asset/IMG_2671.jpeg" alt="Pearl Soapの配布準備" loading="lazy">
+                    <figcaption>ゲスト・ホストへの石鹸配布</figcaption>
+                </figure>
+                <figure>
+                    <img src="asset/IMG_3353.jpeg" alt="マウイの滞在先の屋外スペース" loading="lazy">
+                    <figcaption>滞在先の屋外ワークスペース</figcaption>
+                </figure>
+            </div>
             <p>この経験を経て、日本でも自らホストとして活動しながら、Workawayホストを増やすことを決意。ゲスト・ホスト双方の視点を持つからこそできる、実体験に基づいた導入・運用支援サービスを提供しています。</p>
             <p>「英語が不安」「どう始めればいいかわからない」「トラブルが心配」——そうした声に応えるため、登録からプロフィール作成、ゲスト対応、トラブルシューティングまで、伴走してサポートします。</p>
             <p>現在は2026年春の佐渡島移転を準備しながら、三重県のNPO法人へのWorkaway導入支援を進行中。マウイでの経験だけでなく、日本の地域で実際にホスト立ち上げを進めている現場の知見が、このサービスの土台になっています。</p>

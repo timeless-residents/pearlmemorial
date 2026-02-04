@@ -251,6 +251,28 @@
             color: var(--text-muted) !important;
             margin-top: 0.5rem;
         }
+        .wa-story-photos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.8rem;
+            margin: 1.2rem 0;
+        }
+        .wa-story-photos figure { margin: 0; }
+        .wa-story-photos img {
+            width: 100%;
+            border-radius: 0.5rem;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+        }
+        .wa-story-photos figcaption {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            margin-top: 0.3rem;
+            line-height: 1.4;
+        }
+        @media (max-width: 520px) {
+            .wa-story-photos { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
@@ -288,6 +310,20 @@
 
         <div class="wa-story">
             <p>In 2025, founder Takuya Sato traveled across Maui — from east to west — as a Workaway guest. Living and working alongside hosts, exchanging stories with fellow travelers, he became convinced of Workaway's remarkable appeal and potential. He also helped hosts set up off-grid infrastructure, building practical knowledge of what it takes to run a hosting operation in remote areas.</p>
+            <div class="wa-story-photos">
+                <figure>
+                    <img src="asset/IMG_2724-2.jpeg" alt="Workaway activities in Maui" loading="lazy">
+                    <figcaption>Supporting hosts in Maui</figcaption>
+                </figure>
+                <figure>
+                    <img src="asset/IMG_2671.jpeg" alt="Pearl Soap gifts for hosts and guests" loading="lazy">
+                    <figcaption>Sharing Pearl Soap with hosts & guests</figcaption>
+                </figure>
+                <figure>
+                    <img src="asset/IMG_3353.jpeg" alt="Outdoor workspace at a Maui host site" loading="lazy">
+                    <figcaption>Outdoor workspace at a host site</figcaption>
+                </figure>
+            </div>
             <p>That experience inspired him to host in Japan while actively working to grow the Workaway host community. Having been on both sides — guest and host — he offers consulting grounded in firsthand experience.</p>
             <p>"My English isn't good enough." "I don't know where to start." "What if something goes wrong?" — We built this service to answer these real concerns, walking alongside you from registration to guest communication and troubleshooting.</p>
             <p>Currently preparing to relocate to Sado Island in spring 2026, while actively supporting an NPO in Mie Prefecture with their Workaway onboarding. This service is grounded not only in the Maui experience, but in real, ongoing host launch work in rural Japan.</p>
