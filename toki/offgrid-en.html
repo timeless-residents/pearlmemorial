@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Workaway Hosting Consulting | TokiStorage</title>
-    <meta name="description" content="Workaway Hosting Consulting — Full support for rural accommodations, farms, and businesses to start and run Workaway hosting. Revitalize your community through international exchange.">
+    <title>Off-Grid Setup Consulting | TokiStorage</title>
+    <meta name="description" content="Off-Grid Setup Consulting — From solar panels and batteries to satellite internet and rainwater systems, we help you build self-sufficient infrastructure for rural locations. Practical consulting based on hands-on experience.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
     <style>
-        .wa-page { padding: 6rem 2rem 4rem; }
-        .wa-inner { max-width: 700px; margin: 0 auto; }
-        .wa-inner h1 {
+        .og-page { padding: 6rem 2rem 4rem; }
+        .og-inner { max-width: 700px; margin: 0 auto; }
+        .og-inner h1 {
             font-family: var(--font-display);
             font-size: 1.6rem;
             font-weight: 600;
@@ -20,7 +20,7 @@
             margin-bottom: 0.3rem;
             text-align: center;
         }
-        .wa-tagline {
+        .og-tagline {
             text-align: center;
             font-family: var(--font-display);
             font-size: 0.92rem;
@@ -28,10 +28,10 @@
             margin-bottom: 2.5rem;
             line-height: 1.8;
         }
-        .wa-section {
+        .og-section {
             margin-bottom: 2.5rem;
         }
-        .wa-section h2 {
+        .og-section h2 {
             font-family: var(--font-display);
             font-size: 1.05rem;
             font-weight: 600;
@@ -40,95 +40,103 @@
             padding-bottom: 0.4rem;
             border-bottom: 1px solid var(--border);
         }
-        .wa-section p,
-        .wa-section li {
+        .og-section h3 {
+            font-family: var(--font-display);
+            font-size: 0.92rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-top: 1.2rem;
+            margin-bottom: 0.4rem;
+        }
+        .og-section p,
+        .og-section li {
             font-size: 0.88rem;
             color: var(--text-secondary);
             line-height: 1.9;
         }
-        .wa-section ul {
+        .og-section ul {
             padding-left: 1.5rem;
             margin-bottom: 1rem;
         }
-        .wa-section li { margin-bottom: 0.3rem; }
-        .wa-features {
+        .og-section li { margin-bottom: 0.3rem; }
+        .og-features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1.2rem;
             margin-top: 1rem;
         }
-        .wa-feature-card {
+        .og-feature-card {
             background: var(--bg-page);
             border: 1px solid var(--border);
             border-radius: 0.8rem;
             padding: 1.2rem;
             text-align: center;
         }
-        .wa-feature-card .feature-icon {
+        .og-feature-card .feature-icon {
             font-size: 1.6rem;
             margin-bottom: 0.5rem;
         }
-        .wa-feature-card h3 {
+        .og-feature-card h3 {
             font-family: var(--font-display);
             font-size: 0.88rem;
             font-weight: 600;
             color: var(--text-primary);
             margin-bottom: 0.3rem;
         }
-        .wa-feature-card p {
+        .og-feature-card p {
             font-size: 0.78rem;
             color: var(--text-muted);
             line-height: 1.6;
         }
-        .wa-story {
+        .og-story {
             background: var(--bg-page);
             border: 1px solid var(--border);
             border-radius: 1rem;
             padding: 1.8rem;
             margin: 2rem 0;
         }
-        .wa-story p {
+        .og-story p {
             font-size: 0.88rem;
             color: var(--text-secondary);
             line-height: 1.9;
             margin-bottom: 0.8rem;
         }
-        .wa-story p:last-child { margin-bottom: 0; }
-        .wa-personas {
+        .og-story p:last-child { margin-bottom: 0; }
+        .og-personas {
             display: grid;
             grid-template-columns: 1fr;
             gap: 1rem;
             margin-top: 1rem;
         }
-        .wa-persona-card {
+        .og-persona-card {
             background: var(--bg-page);
             border: 1px solid var(--border);
             border-radius: 0.8rem;
             padding: 1.2rem 1.5rem;
         }
-        .wa-persona-card h3 {
+        .og-persona-card h3 {
             font-family: var(--font-display);
             font-size: 0.92rem;
             font-weight: 600;
             color: var(--text-primary);
             margin-bottom: 0.4rem;
         }
-        .wa-persona-card p {
+        .og-persona-card p {
             font-size: 0.82rem;
             color: var(--text-muted);
             line-height: 1.7;
         }
-        .wa-flow {
+        .og-flow {
             counter-reset: flow-step;
             margin-top: 1rem;
         }
-        .wa-flow-step {
+        .og-flow-step {
             display: flex;
             gap: 1rem;
             align-items: flex-start;
             margin-bottom: 1.2rem;
         }
-        .wa-flow-step::before {
+        .og-flow-step::before {
             counter-increment: flow-step;
             content: counter(flow-step);
             flex-shrink: 0;
@@ -143,64 +151,64 @@
             font-size: 0.82rem;
             font-weight: 600;
         }
-        .wa-flow-step div h3 {
+        .og-flow-step div h3 {
             font-family: var(--font-display);
             font-size: 0.88rem;
             font-weight: 600;
             color: var(--text-primary);
             margin-bottom: 0.2rem;
         }
-        .wa-flow-step div p {
+        .og-flow-step div p {
             font-size: 0.82rem;
             color: var(--text-muted);
             line-height: 1.7;
         }
-        .wa-pricing {
+        .og-pricing {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.2rem;
             margin-top: 1rem;
         }
-        .wa-pricing-card {
+        .og-pricing-card {
             background: var(--bg-page);
             border: 1px solid var(--border);
             border-radius: 0.8rem;
             padding: 1.5rem;
         }
-        .wa-pricing-card.recommended {
+        .og-pricing-card.recommended {
             border-color: var(--toki-blue);
             box-shadow: 0 0 0 1px var(--toki-blue);
         }
-        .wa-pricing-card h3 {
+        .og-pricing-card h3 {
             font-family: var(--font-display);
             font-size: 0.95rem;
             font-weight: 600;
             color: var(--text-primary);
             margin-bottom: 0.3rem;
         }
-        .wa-pricing-card .price {
+        .og-pricing-card .price {
             font-family: var(--font-display);
             font-size: 1.3rem;
             font-weight: 700;
             color: var(--toki-blue);
             margin-bottom: 0.8rem;
         }
-        .wa-pricing-card .price span {
+        .og-pricing-card .price span {
             font-size: 0.75rem;
             font-weight: 400;
             color: var(--text-muted);
         }
-        .wa-pricing-card ul {
+        .og-pricing-card ul {
             padding-left: 1.2rem;
             margin: 0;
         }
-        .wa-pricing-card li {
+        .og-pricing-card li {
             font-size: 0.78rem;
             color: var(--text-secondary);
             line-height: 1.8;
             margin-bottom: 0.2rem;
         }
-        .wa-badge {
+        .og-badge {
             display: inline-block;
             background: var(--toki-blue);
             color: #fff;
@@ -210,21 +218,21 @@
             margin-bottom: 0.5rem;
             font-weight: 500;
         }
-        .wa-cta {
+        .og-cta {
             text-align: center;
             margin-top: 3rem;
             padding: 2rem;
             background: var(--toki-blue-pale);
             border-radius: 1rem;
         }
-        .wa-cta p {
+        .og-cta p {
             font-family: var(--font-display);
             font-size: 0.92rem;
             color: var(--text-secondary);
             margin-bottom: 1rem;
             line-height: 1.8;
         }
-        .wa-cta a {
+        .og-cta a {
             display: inline-block;
             background: var(--toki-blue);
             color: #fff;
@@ -235,18 +243,18 @@
             font-weight: 500;
             transition: background 0.3s ease;
         }
-        .wa-cta a:hover { background: var(--toki-blue-dark); }
-        .wa-back {
+        .og-cta a:hover { background: var(--toki-blue-dark); }
+        .og-back {
             text-align: center;
             margin-top: 2.5rem;
         }
-        .wa-back a {
+        .og-back a {
             color: var(--toki-blue);
             text-decoration: none;
             font-size: 0.85rem;
         }
-        .wa-back a:hover { text-decoration: underline; }
-        .wa-note {
+        .og-back a:hover { text-decoration: underline; }
+        .og-note {
             font-size: 0.75rem !important;
             color: var(--text-muted) !important;
             margin-top: 0.5rem;
@@ -256,161 +264,150 @@
 <body>
 
 <nav class="toki-nav">
-    <span class="nav-logo"><a href="index-en.html">TokiStorage</a> / Workaway Consulting</span>
+    <span class="nav-logo"><a href="index-en.html">TokiStorage</a> / Off-Grid Consulting</span>
 </nav>
 
-<main class="wa-page">
-    <div class="wa-inner">
-        <h1>Workaway Hosting Consulting</h1>
-        <p class="wa-tagline">
-            "Would anyone really come to a place like ours?"<br>
-            — Yes. The world is curious about your everyday life.<br>
-            You just need someone to show you how to start.
+<main class="og-page">
+    <div class="og-inner">
+        <h1>Off-Grid Setup Consulting</h1>
+        <p class="og-tagline">
+            Power, water, internet — even where infrastructure doesn't reach,<br>
+            you can build a livable environment yourself.<br>
+            We'll help you, backed by setups built in under 3 days.
         </p>
 
-        <div class="wa-features">
-            <div class="wa-feature-card">
-                <div class="feature-icon">&#x1F30F;</div>
-                <h3>Global Reach</h3>
-                <p>Workaway connects you with travelers from 170+ countries seeking meaningful cultural exchange.</p>
+        <div class="og-features">
+            <div class="og-feature-card">
+                <div class="feature-icon">&#x2600;</div>
+                <h3>Energy Independence</h3>
+                <p>Solar panels, battery systems, and generators combined for reliable, self-sufficient power supply.</p>
             </div>
-            <div class="wa-feature-card">
-                <div class="feature-icon">&#x1F91D;</div>
-                <h3>Volunteer-Based</h3>
-                <p>Guests help about 5 hours a day in exchange for accommodation and meals. No wages required.</p>
+            <div class="og-feature-card">
+                <div class="feature-icon">&#x1F4A7;</div>
+                <h3>Water Security</h3>
+                <p>Rainwater harvesting and solar water heaters — build water infrastructure without relying on municipal supply.</p>
             </div>
-            <div class="wa-feature-card">
-                <div class="feature-icon">&#x1F3E1;</div>
-                <h3>Community Revival</h3>
-                <p>International visitors bring new energy to rural areas, creating multicultural connections.</p>
+            <div class="og-feature-card">
+                <div class="feature-icon">&#x1F4E1;</div>
+                <h3>Connectivity</h3>
+                <p>Satellite internet, local network setup, and guest WiFi — communication infrastructure that supports remote work.</p>
             </div>
         </div>
 
-        <div class="wa-story">
-            <p>In 2025, founder Takuya Sato traveled across Maui — from east to west — as a Workaway guest. Living and working alongside hosts, exchanging stories with fellow travelers, he became convinced of Workaway's remarkable appeal and potential. He also helped hosts set up off-grid infrastructure, building practical knowledge of what it takes to run a hosting operation in remote areas.</p>
-            <p>That experience inspired him to host in Japan while actively working to grow the Workaway host community. Having been on both sides — guest and host — he offers consulting grounded in firsthand experience.</p>
-            <p>"My English isn't good enough." "I don't know where to start." "What if something goes wrong?" — We built this service to answer these real concerns, walking alongside you from registration to guest communication and troubleshooting.</p>
-            <p>Currently preparing to relocate to Sado Island in spring 2026, while actively supporting an NPO in Mie Prefecture with their Workaway onboarding. This service is grounded not only in the Maui experience, but in real, ongoing host launch work in rural Japan.</p>
+        <div class="og-story">
+            <p>Founder Takuya Sato first built a mini off-grid environment at his home in Timeless Town, Urayasu — powering a silkie chicken coop with solar panels and batteries, testing energy independence through daily use.</p>
+            <p>In 2025, traveling across Maui from east to west, he brought his own equipment and built functional off-grid setups at two locations, each within 3 days. He also helped local Workaway hosts set up their own systems, verifying everything worked at a practical, livable level.</p>
+            <p>Starting spring 2026, he'll relocate to Sado Island to build a full-scale off-grid living foundation. From experiment to field testing to real deployment — every step of this journey feeds directly into this consulting service.</p>
         </div>
 
-        <div class="wa-section">
-            <h2>What is Workaway?</h2>
-            <p>Workaway is an international platform connecting hosts with travelers (Workawayers). Travelers volunteer about 5 hours per day — helping with farming, cleaning, language exchange, and more — while hosts provide accommodation and meals.</p>
+        <div class="og-section">
+            <h2>What We Cover</h2>
             <ul>
-                <li>Members from 170+ countries</li>
-                <li>No wages needed (volunteer basis)</li>
-                <li>Cultural exchange and language practice</li>
-                <li>Diverse host types: farms, guesthouses, private homes, and more</li>
+                <li><strong>Power</strong> — Solar panels, portable power stations, battery systems, generators</li>
+                <li><strong>Hot Water</strong> — Solar water heaters, efficient water heating design</li>
+                <li><strong>Water</strong> — Rainwater collection, filtration, and storage systems</li>
+                <li><strong>Communication</strong> — Starlink and satellite internet, local network setup, guest WiFi</li>
+                <li><strong>Integrated Design</strong> — Combining all of the above into a cohesive infrastructure plan for your site</li>
             </ul>
         </div>
 
-        <div class="wa-section">
+        <div class="og-section">
             <h2>Sound Familiar?</h2>
-            <div class="wa-personas">
-                <div class="wa-persona-card">
-                    <h3>"We're a rural area — we can't compete with tourist hotspots"</h3>
-                    <p>Workaway guests aren't looking for tourist attractions. They want to live inside local life. A depopulated village offers what no city can — a raw, authentic daily experience.</p>
+            <div class="og-personas">
+                <div class="og-persona-card">
+                    <h3>"Don't I need an electrician's license?"</h3>
+                    <p>The scope requiring certification is limited. Portable power stations, solar panels, and satellite internet can all be set up without a license — and that alone creates a fully functional environment. When licensed work is needed, we help connect you with the right professionals.</p>
                 </div>
-                <div class="wa-persona-card">
-                    <h3>"I can't think of anything attractive to offer"</h3>
-                    <p>Fieldwork, chopping firewood, making miso, walking the dog — your "ordinary routine" is a once-in-a-lifetime experience for someone across the ocean. Your appeal is easier to see from the outside.</p>
+                <div class="og-persona-card">
+                    <h3>"The upfront cost must be huge"</h3>
+                    <p>You can start small. Begin with one solar panel and a portable power station, then expand as needed. Incremental investment lets you grow your setup while minimizing risk.</p>
                 </div>
-                <div class="wa-persona-card">
-                    <h3>"Wouldn't hiring an influencer be faster?"</h3>
-                    <p>Viral moments fade; Workaway keeps going. One guest leaves a good review, and the next one comes. A word-of-mouth cycle starts spinning — at zero advertising cost.</p>
+                <div class="og-persona-card">
+                    <h3>"If something breaks, I can't fix it"</h3>
+                    <p>That's exactly why we insist on simple designs. Fewer parts, commodity components, maintainable by you. The reason we could build setups in under 3 days in Maui is because we keep things uncomplicated.</p>
                 </div>
-                <div class="wa-persona-card">
-                    <h3>"My English isn't good enough, and I'm afraid of trouble"</h3>
-                    <p>From firsthand experience as a guest in Maui: broken English works. Translation tools help. And when you're stuck, having someone to turn to — that's what this service is for.</p>
+                <div class="og-persona-card">
+                    <h3>"Isn't this just a hobby project? Not really practical?"</h3>
+                    <p>In Maui, we lived and worked remotely on these setups. The silkie chicken coop runs on automated solar power management. Our benchmark is "can you live comfortably on this?" — and the answer is yes.</p>
                 </div>
             </div>
         </div>
 
-        <div class="wa-section">
+        <div class="og-section">
             <h2>Four Phases</h2>
-            <p>An NPO in Mie Prefecture is currently going through this program to launch their Workaway hosting.</p>
-            <div class="wa-flow">
-                <div class="wa-flow-step">
+            <div class="og-flow">
+                <div class="og-flow-step">
                     <div>
-                        <h3>Assessment — Understanding Your Situation</h3>
-                        <p>Two free sessions. We listen carefully to your environment, goals, and concerns, and help you decide if Workaway is right for you. If it's not a fit, that's perfectly fine.</p>
+                        <h3>Assessment — Site Survey & Needs Analysis</h3>
+                        <p>Two free sessions. We assess your location, climate, existing infrastructure, and goals. Together we figure out what you need — and what you don't.</p>
                     </div>
                 </div>
-                <div class="wa-flow-step">
+                <div class="og-flow-step">
                     <div>
-                        <h3>Discovery — Finding Your Appeal (2 months)</h3>
-                        <p>We uncover what makes your "ordinary life" extraordinary to international guests. Profile strategy, photo selection, and differentiation from other hosts.</p>
+                        <h3>Design — System Architecture (2 months)</h3>
+                        <p>We design the optimal combination of power, water, and communication systems. Equipment selection, layout planning, and budgeting — all focused on simple, expandable design that avoids over-investment.</p>
                     </div>
                 </div>
-                <div class="wa-flow-step">
+                <div class="og-flow-step">
                     <div>
-                        <h3>Implement — Getting Started (2 months)</h3>
-                        <p>Workaway registration, profile creation (EN/JP), house rules, living space preparation. From going live to receiving your first applications.</p>
+                        <h3>Build — Setup Support (2 months)</h3>
+                        <p>Equipment procurement support, installation guidance, initial setup. The goal is for you to understand and be able to assemble it yourself.</p>
                     </div>
                 </div>
-                <div class="wa-flow-step">
+                <div class="og-flow-step">
                     <div>
-                        <h3>Operate — Running Smoothly (2 months)</h3>
-                        <p>First guest onboarding support, message coaching, troubleshooting. We walk alongside you until you can run it on your own.</p>
+                        <h3>Optimize — Fine-Tuning & Independence (2 months)</h3>
+                        <p>Adjustments based on real operational data. Balancing generation and consumption, adapting to seasonal changes, troubleshooting. We walk alongside you until you can maintain everything on your own.</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="wa-section">
+        <div class="og-section">
             <h2>Pricing</h2>
-            <div class="wa-pricing">
-                <div class="wa-pricing-card">
+            <div class="og-pricing">
+                <div class="og-pricing-card">
                     <h3>Assessment</h3>
                     <div class="price">&yen;0</div>
                     <ul>
                         <li>2 free sessions</li>
-                        <li>Situation assessment</li>
-                        <li>Workaway fit evaluation</li>
-                        <li>Strategy proposal</li>
+                        <li>Site & needs assessment</li>
+                        <li>Off-grid feasibility evaluation</li>
+                        <li>Rough estimate & strategy proposal</li>
                     </ul>
                 </div>
-                <div class="wa-pricing-card recommended">
-                    <span class="wa-badge">Discovery + Implement + Operate</span>
+                <div class="og-pricing-card recommended">
+                    <span class="og-badge">Design + Build + Optimize</span>
                     <h3>All Phases</h3>
                     <div class="price">&yen;88,000 <span>(tax incl.) / 6 months</span></div>
                     <ul>
-                        <li>Appeal discovery & profile strategy</li>
-                        <li>Workaway registration & profile (EN/JP)</li>
-                        <li>House rules & preparation</li>
-                        <li>First guest onboarding support</li>
+                        <li>Infrastructure design & equipment selection</li>
+                        <li>Procurement support & installation guide</li>
+                        <li>Initial setup assistance</li>
+                        <li>Performance-based optimization</li>
                         <li>Email & chat support (6 months)</li>
                         <li>Troubleshooting assistance</li>
                     </ul>
                 </div>
             </div>
-            <p class="wa-note">*Assessment is free. If it's not a fit after our sessions, you can stop there with no obligation.<br>*Prices are subject to change without notice. Custom plans for organizations available upon request.</p>
-
-            <div class="wa-story">
-                <p><strong>What does &yen;88,000 actually get you?</strong></p>
-                <p>Outsourcing an English profile alone costs tens of thousands of yen. A marketing consultant runs several tens of thousands per month. Job listing sites cost hundreds of thousands per year. Workaway replaces all of these.</p>
-                <p>That's about &yen;14,700 per month. After 6 months, the goal is for you to run it independently — no recurring fees. And once you have reviews, the next guest comes at zero advertising cost.</p>
-                <p>If you hired one part-timer at &yen;1,000/hour &times; 5 hours &times; 20 days, that's &yen;100,000/month. A Workaway guest only needs a place to stay and meals. In terms of labor cost savings alone, the &yen;88,000 pays for itself in the first month.</p>
-            </div>
+            <p class="og-note">*Assessment is free. If it's not a fit after our sessions, you can stop there with no obligation.<br>*Prices are subject to change without notice. Custom plans for organizations available upon request.<br>*Equipment costs are separate and billed at actual cost.</p>
         </div>
 
-        <div class="wa-section">
+        <div class="og-section">
             <h2>Why We Do This</h2>
-            <p>TokiStorage's mission is "proof of existence" — carrying memories of people and places a thousand years into the future. But preserving records isn't enough. We need a way to create new encounters and stories worth recording. Workaway consulting is exactly that mechanism.</p>
-            <h3>Synergy with SoulCarrier</h3>
-            <p>SoulCarrier is a community we run, built around the theme of "resonance" — connecting people to people. Workaway is the same kind of space: hosts and guests sharing time together, resonating across languages and cultures. The connection design know-how we've built through SoulCarrier directly applies to helping hosts create welcoming environments for Workaway guests.</p>
-            <h3>What We Learned from Pearl Soap</h3>
-            <p>Pearl Soap is our project built on the gift economy philosophy. Instead of heavy advertising spend, we build relationships through hand-to-hand sharing and word of mouth. This grassroots approach mirrors the essence of Workaway. Reviews bring the next guest, and guests share your region's story with the world — ad-free, organic growth is exactly what we've proven works through Pearl Soap.</p>
-            <h3>Partnership</h3>
-            <p>We don't want to end at a consultant-client relationship. After 6 months of guided support, hosts who can run independently become our partners. Hosts across regions connect with each other, refer guests, and share know-how. Building this host network together is the future beyond this consulting engagement.</p>
+            <p>TokiStorage's mission is "proof of existence" — carrying records a thousand years into the future. But if the places that hold those records aren't self-sustaining, the mission falls apart. Building infrastructure-independent sites is the foundation for connecting existence to the future.</p>
+            <h3>Tied to Workaway Hosting</h3>
+            <p>When starting a Workaway host operation in a rural area, one of the biggest hurdles is infrastructure. Without reliable internet, you can't communicate with guests. Without stable power, you can't offer comfortable accommodations. Off-grid consulting addresses the prerequisites that make Workaway hosting possible.</p>
+            <h3>Proving It on Sado Island</h3>
+            <p>In spring 2026, we're relocating to Sado Island to build our own full-scale off-grid living foundation. From the Timeless Town experiment to Maui field testing to Sado as the real deployment — every phase of this journey becomes knowledge that feeds into this consulting service.</p>
         </div>
 
-        <div class="wa-cta">
-            <p>Ready to start hosting on Workaway?<br>Begin with a free consultation.</p>
+        <div class="og-cta">
+            <p>Ready to build your off-grid setup?<br>Start with a free consultation.</p>
             <a href="https://calendly.com/pearlmemorial/pearlmemorialsession" target="_blank" rel="noopener">Book a Free Consultation</a>
         </div>
 
-        <div class="wa-back">
+        <div class="og-back">
             <a href="index-en.html">&larr; Back to TokiStorage</a>
         </div>
     </div>

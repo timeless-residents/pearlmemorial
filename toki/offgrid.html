@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Workaway導入運用支援コンサル | トキストレージ</title>
-    <meta name="description" content="Workaway導入運用支援コンサル — 地方の宿泊施設・農家・事業者向けに、Workawayホスト登録から運用までをトータルサポート。国際交流を通じた地域活性化を支援します。">
+    <title>オフグリッド構築支援コンサル | トキストレージ</title>
+    <meta name="description" content="オフグリッド構築支援コンサル — ソーラーパネル・バッテリー・衛星通信・雨水活用まで、地方拠点のインフラ自立をトータルサポート。実際に構築・検証した経験に基づく実践的コンサルティング。">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
     <style>
-        .wa-page { padding: 6rem 2rem 4rem; }
-        .wa-inner { max-width: 700px; margin: 0 auto; }
-        .wa-inner h1 {
+        .og-page { padding: 6rem 2rem 4rem; }
+        .og-inner { max-width: 700px; margin: 0 auto; }
+        .og-inner h1 {
             font-family: var(--font-display);
             font-size: 1.6rem;
             font-weight: 600;
@@ -20,7 +20,7 @@
             margin-bottom: 0.3rem;
             text-align: center;
         }
-        .wa-tagline {
+        .og-tagline {
             text-align: center;
             font-family: var(--font-display);
             font-size: 0.92rem;
@@ -28,10 +28,10 @@
             margin-bottom: 2.5rem;
             line-height: 1.8;
         }
-        .wa-section {
+        .og-section {
             margin-bottom: 2.5rem;
         }
-        .wa-section h2 {
+        .og-section h2 {
             font-family: var(--font-display);
             font-size: 1.05rem;
             font-weight: 600;
@@ -40,95 +40,103 @@
             padding-bottom: 0.4rem;
             border-bottom: 1px solid var(--border);
         }
-        .wa-section p,
-        .wa-section li {
+        .og-section h3 {
+            font-family: var(--font-display);
+            font-size: 0.92rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-top: 1.2rem;
+            margin-bottom: 0.4rem;
+        }
+        .og-section p,
+        .og-section li {
             font-size: 0.88rem;
             color: var(--text-secondary);
             line-height: 1.9;
         }
-        .wa-section ul {
+        .og-section ul {
             padding-left: 1.5rem;
             margin-bottom: 1rem;
         }
-        .wa-section li { margin-bottom: 0.3rem; }
-        .wa-features {
+        .og-section li { margin-bottom: 0.3rem; }
+        .og-features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1.2rem;
             margin-top: 1rem;
         }
-        .wa-feature-card {
+        .og-feature-card {
             background: var(--bg-page);
             border: 1px solid var(--border);
             border-radius: 0.8rem;
             padding: 1.2rem;
             text-align: center;
         }
-        .wa-feature-card .feature-icon {
+        .og-feature-card .feature-icon {
             font-size: 1.6rem;
             margin-bottom: 0.5rem;
         }
-        .wa-feature-card h3 {
+        .og-feature-card h3 {
             font-family: var(--font-display);
             font-size: 0.88rem;
             font-weight: 600;
             color: var(--text-primary);
             margin-bottom: 0.3rem;
         }
-        .wa-feature-card p {
+        .og-feature-card p {
             font-size: 0.78rem;
             color: var(--text-muted);
             line-height: 1.6;
         }
-        .wa-story {
+        .og-story {
             background: var(--bg-page);
             border: 1px solid var(--border);
             border-radius: 1rem;
             padding: 1.8rem;
             margin: 2rem 0;
         }
-        .wa-story p {
+        .og-story p {
             font-size: 0.88rem;
             color: var(--text-secondary);
             line-height: 1.9;
             margin-bottom: 0.8rem;
         }
-        .wa-story p:last-child { margin-bottom: 0; }
-        .wa-personas {
+        .og-story p:last-child { margin-bottom: 0; }
+        .og-personas {
             display: grid;
             grid-template-columns: 1fr;
             gap: 1rem;
             margin-top: 1rem;
         }
-        .wa-persona-card {
+        .og-persona-card {
             background: var(--bg-page);
             border: 1px solid var(--border);
             border-radius: 0.8rem;
             padding: 1.2rem 1.5rem;
         }
-        .wa-persona-card h3 {
+        .og-persona-card h3 {
             font-family: var(--font-display);
             font-size: 0.92rem;
             font-weight: 600;
             color: var(--text-primary);
             margin-bottom: 0.4rem;
         }
-        .wa-persona-card p {
+        .og-persona-card p {
             font-size: 0.82rem;
             color: var(--text-muted);
             line-height: 1.7;
         }
-        .wa-flow {
+        .og-flow {
             counter-reset: flow-step;
             margin-top: 1rem;
         }
-        .wa-flow-step {
+        .og-flow-step {
             display: flex;
             gap: 1rem;
             align-items: flex-start;
             margin-bottom: 1.2rem;
         }
-        .wa-flow-step::before {
+        .og-flow-step::before {
             counter-increment: flow-step;
             content: counter(flow-step);
             flex-shrink: 0;
@@ -143,64 +151,64 @@
             font-size: 0.82rem;
             font-weight: 600;
         }
-        .wa-flow-step div h3 {
+        .og-flow-step div h3 {
             font-family: var(--font-display);
             font-size: 0.88rem;
             font-weight: 600;
             color: var(--text-primary);
             margin-bottom: 0.2rem;
         }
-        .wa-flow-step div p {
+        .og-flow-step div p {
             font-size: 0.82rem;
             color: var(--text-muted);
             line-height: 1.7;
         }
-        .wa-pricing {
+        .og-pricing {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.2rem;
             margin-top: 1rem;
         }
-        .wa-pricing-card {
+        .og-pricing-card {
             background: var(--bg-page);
             border: 1px solid var(--border);
             border-radius: 0.8rem;
             padding: 1.5rem;
         }
-        .wa-pricing-card.recommended {
+        .og-pricing-card.recommended {
             border-color: var(--toki-blue);
             box-shadow: 0 0 0 1px var(--toki-blue);
         }
-        .wa-pricing-card h3 {
+        .og-pricing-card h3 {
             font-family: var(--font-display);
             font-size: 0.95rem;
             font-weight: 600;
             color: var(--text-primary);
             margin-bottom: 0.3rem;
         }
-        .wa-pricing-card .price {
+        .og-pricing-card .price {
             font-family: var(--font-display);
             font-size: 1.3rem;
             font-weight: 700;
             color: var(--toki-blue);
             margin-bottom: 0.8rem;
         }
-        .wa-pricing-card .price span {
+        .og-pricing-card .price span {
             font-size: 0.75rem;
             font-weight: 400;
             color: var(--text-muted);
         }
-        .wa-pricing-card ul {
+        .og-pricing-card ul {
             padding-left: 1.2rem;
             margin: 0;
         }
-        .wa-pricing-card li {
+        .og-pricing-card li {
             font-size: 0.78rem;
             color: var(--text-secondary);
             line-height: 1.8;
             margin-bottom: 0.2rem;
         }
-        .wa-badge {
+        .og-badge {
             display: inline-block;
             background: var(--toki-blue);
             color: #fff;
@@ -210,21 +218,21 @@
             margin-bottom: 0.5rem;
             font-weight: 500;
         }
-        .wa-cta {
+        .og-cta {
             text-align: center;
             margin-top: 3rem;
             padding: 2rem;
             background: var(--toki-blue-pale);
             border-radius: 1rem;
         }
-        .wa-cta p {
+        .og-cta p {
             font-family: var(--font-display);
             font-size: 0.92rem;
             color: var(--text-secondary);
             margin-bottom: 1rem;
             line-height: 1.8;
         }
-        .wa-cta a {
+        .og-cta a {
             display: inline-block;
             background: var(--toki-blue);
             color: #fff;
@@ -235,18 +243,18 @@
             font-weight: 500;
             transition: background 0.3s ease;
         }
-        .wa-cta a:hover { background: var(--toki-blue-dark); }
-        .wa-back {
+        .og-cta a:hover { background: var(--toki-blue-dark); }
+        .og-back {
             text-align: center;
             margin-top: 2.5rem;
         }
-        .wa-back a {
+        .og-back a {
             color: var(--toki-blue);
             text-decoration: none;
             font-size: 0.85rem;
         }
-        .wa-back a:hover { text-decoration: underline; }
-        .wa-note {
+        .og-back a:hover { text-decoration: underline; }
+        .og-note {
             font-size: 0.75rem !important;
             color: var(--text-muted) !important;
             margin-top: 0.5rem;
@@ -256,161 +264,150 @@
 <body>
 
 <nav class="toki-nav">
-    <span class="nav-logo"><a href="index.html">トキストレージ</a> / Workaway導入支援</span>
+    <span class="nav-logo"><a href="index.html">トキストレージ</a> / オフグリッド構築支援</span>
 </nav>
 
-<main class="wa-page">
-    <div class="wa-inner">
-        <h1>Workaway導入運用支援コンサル</h1>
-        <p class="wa-tagline">
-            「うちなんかに来る人いるの？」<br>
-            ——います。世界は、あなたの日常に興味があります。<br>
-            始め方がわからないだけ。一緒にやりましょう。
+<main class="og-page">
+    <div class="og-inner">
+        <h1>オフグリッド構築支援コンサル</h1>
+        <p class="og-tagline">
+            電気・水・通信——インフラが届かない場所でも、<br>
+            暮らせる環境は自分で作れます。<br>
+            3日で構築した実績をもとに、あなたの拠点づくりを支援します。
         </p>
 
-        <div class="wa-features">
-            <div class="wa-feature-card">
-                <div class="feature-icon">&#x1F30F;</div>
-                <h3>世界中から人が来る</h3>
-                <p>Workawayは170カ国以上のトラベラーが登録する国際交流プラットフォームです。</p>
+        <div class="og-features">
+            <div class="og-feature-card">
+                <div class="feature-icon">&#x2600;</div>
+                <h3>電力の自立</h3>
+                <p>ソーラーパネル・バッテリー・ジェネレーターの組み合わせで、安定した電力供給を実現します。</p>
             </div>
-            <div class="wa-feature-card">
-                <div class="feature-icon">&#x1F91D;</div>
-                <h3>ボランティアベース</h3>
-                <p>1日5時間程度のお手伝いと引き換えに、宿泊と食事を提供。給与支払い不要です。</p>
+            <div class="og-feature-card">
+                <div class="feature-icon">&#x1F4A7;</div>
+                <h3>水の確保</h3>
+                <p>雨水活用・太陽光温水器で、上水道に頼らない水回りのインフラを構築します。</p>
             </div>
-            <div class="wa-feature-card">
-                <div class="feature-icon">&#x1F3E1;</div>
-                <h3>地域活性化</h3>
-                <p>過疎地域にも海外からの訪問者が増え、多文化交流が地域の新たな活力になります。</p>
+            <div class="og-feature-card">
+                <div class="feature-icon">&#x1F4E1;</div>
+                <h3>通信の確立</h3>
+                <p>衛星通信・ネットワーク構築・ゲストWiFiまで、リモートワークにも耐える通信環境を整備します。</p>
             </div>
         </div>
 
-        <div class="wa-story">
-            <p>2025年、代表・佐藤卓也はWorkawayゲストとしてマウイ島の東端から西端まで滞在。各地のホストのもとで働きながら暮らす中で、ゲスト同士の会話や交流を通じてWorkawayの魅力と可能性を確信しました。滞在先ではオフグリッド環境の構築支援も行い、ホスト運営に必要なインフラ整備の知見も蓄積しています。</p>
-            <p>この経験を経て、日本でも自らホストとして活動しながら、Workawayホストを増やすことを決意。ゲスト・ホスト双方の視点を持つからこそできる、実体験に基づいた導入・運用支援サービスを提供しています。</p>
-            <p>「英語が不安」「どう始めればいいかわからない」「トラブルが心配」——そうした声に応えるため、登録からプロフィール作成、ゲスト対応、トラブルシューティングまで、伴走してサポートします。</p>
-            <p>現在は2026年春の佐渡島移転を準備しながら、三重県のNPO法人へのWorkaway導入支援を進行中。マウイでの経験だけでなく、日本の地域で実際にホスト立ち上げを進めている現場の知見が、このサービスの土台になっています。</p>
+        <div class="og-story">
+            <p>代表・佐藤卓也は、千葉県浦安市のタイムレスタウン自宅で烏骨鶏飼育ハウスにミニオフグリッド環境を構築。ソーラーパネルとバッテリーによる電力自立の検証を、日常の中で繰り返しました。</p>
+            <p>2025年、マウイ島を東端から西端まで滞在する中で、自前の機材を持ち込み、2箇所でそれぞれ3日以内にオフグリッド環境を構築。現地のWorkawayホストへの構築支援も行い、実用レベルで機能することを検証しました。</p>
+            <p>2026年春からは佐渡島に移転し、本格的なオフグリッド生活基盤の構築を予定。実験→遠征検証→本番と段階を踏んできた経験が、このコンサルティングの土台です。</p>
         </div>
 
-        <div class="wa-section">
-            <h2>Workawayとは</h2>
-            <p>Workawayは、ホスト（受入側）とワーカウェイヤー（旅行者）をつなぐ国際的なプラットフォームです。旅行者は1日約5時間のお手伝い（農作業、清掃、語学交流など）を行い、ホストは宿泊場所と食事を提供します。</p>
+        <div class="og-section">
+            <h2>対象領域</h2>
             <ul>
-                <li>170カ国以上から登録者あり</li>
-                <li>給与の支払いは不要（ボランティアベース）</li>
-                <li>文化交流・語学練習の機会</li>
-                <li>農家、ゲストハウス、個人宅など多様なホスト形態</li>
+                <li><strong>発電</strong> — ソーラーパネル、ポータブル電源、バッテリーシステム、ジェネレーター</li>
+                <li><strong>給湯</strong> — 太陽光温水器、効率的な給湯設計</li>
+                <li><strong>水</strong> — 雨水収集・ろ過・貯水システム</li>
+                <li><strong>通信</strong> — Starlink等の衛星通信、ローカルネットワーク構築、ゲストWiFi</li>
+                <li><strong>統合設計</strong> — 上記を組み合わせた、拠点全体のインフラ設計</li>
             </ul>
         </div>
 
-        <div class="wa-section">
+        <div class="og-section">
             <h2>こんな不安、ありませんか？</h2>
-            <div class="wa-personas">
-                <div class="wa-persona-card">
-                    <h3>「過疎地域だし、他の観光地に勝てない」</h3>
-                    <p>Workawayゲストが求めているのは観光名所ではありません。地元の暮らしに入り込む体験です。過疎だからこそ、都市では味わえないリアルな生活に価値があります。</p>
+            <div class="og-personas">
+                <div class="og-persona-card">
+                    <h3>「電気工事の資格がないとできないのでは」</h3>
+                    <p>資格が必要な範囲は限られています。ポータブル電源・ソーラーパネル・衛星通信など、資格不要で構築できる領域は広く、それだけで十分実用的な環境になります。必要な場合の専門業者への橋渡しもサポートします。</p>
                 </div>
-                <div class="wa-persona-card">
-                    <h3>「うちに魅力的な要素なんてあるのかな」</h3>
-                    <p>畑仕事、薪割り、味噌づくり、犬の散歩——あなたの「普通の日常」が、海の向こうの誰かにとっては一生に一度の体験です。魅力は外から見たほうが見つかります。</p>
+                <div class="og-persona-card">
+                    <h3>「初期投資が高すぎるのでは」</h3>
+                    <p>最小構成からのスモールスタートが可能です。まずはソーラーパネル1枚とポータブル電源から始めて、必要に応じて拡張していく。段階的に投資することで、リスクを抑えながら環境を育てられます。</p>
                 </div>
-                <div class="wa-persona-card">
-                    <h3>「インフルエンサーに頼んだ方が早いのでは」</h3>
-                    <p>バズは一瞬、Workawayは継続です。一人のゲストが良いレビューを残せば、次のゲストが来る。口コミの循環が、広告費ゼロで回り始めます。</p>
+                <div class="og-persona-card">
+                    <h3>「壊れたら直せない」</h3>
+                    <p>だからこそ、シンプルな構成にこだわります。部品点数を減らし、汎用品を使い、自分でメンテナンスできる設計に。マウイで3日以内に組めたのは、複雑にしないからです。</p>
                 </div>
-                <div class="wa-persona-card">
-                    <h3>「英語できないし、トラブルが怖い」</h3>
-                    <p>マウイでゲストとして過ごした経験から言えば、片言でも伝わります。翻訳ツールもあります。そして、困ったときに相談できる相手がいれば——それがこのサービスです。</p>
+                <div class="og-persona-card">
+                    <h3>「趣味レベルで実用性がないのでは」</h3>
+                    <p>マウイでは実際にその環境で生活し、リモートワークもこなしました。烏骨鶏飼育ハウスでは電力を自動管理しています。「快適に暮らせるかどうか」が検証基準です。</p>
                 </div>
             </div>
         </div>
 
-        <div class="wa-section">
+        <div class="og-section">
             <h2>4つのフェーズ</h2>
-            <p>現在、三重県のNPO法人がこのプログラムを通じてWorkaway導入を進めています。</p>
-            <div class="wa-flow">
-                <div class="wa-flow-step">
+            <div class="og-flow">
+                <div class="og-flow-step">
                     <div>
-                        <h3>Assessment — 現状把握</h3>
-                        <p>無料セッション×2回。受入環境・目的・不安点をじっくりお聞きし、Workawayがあなたに合うかどうかを一緒に見極めます。ここで「やっぱり違うな」と思えば、それでOKです。</p>
+                        <h3>Assessment — 現地調査・ヒアリング</h3>
+                        <p>無料セッション×2回。拠点の立地・気候・既存インフラ・目的をヒアリング。何が必要で何が不要かを一緒に見極めます。</p>
                     </div>
                 </div>
-                <div class="wa-flow-step">
+                <div class="og-flow-step">
                     <div>
-                        <h3>Discovery — 魅力の発見（2ヶ月）</h3>
-                        <p>あなたの「普通の日常」の中から、海外ゲストに刺さるポイントを発掘。プロフィールの設計、写真の選び方、他ホストとの差別化を一緒に考えます。</p>
+                        <h3>Design — システム設計（2ヶ月）</h3>
+                        <p>電力・水・通信の最適な組み合わせを設計。機材選定、配置計画、予算策定まで。過剰投資を避け、拡張可能なシンプル設計を目指します。</p>
                     </div>
                 </div>
-                <div class="wa-flow-step">
+                <div class="og-flow-step">
                     <div>
-                        <h3>Implement — 立ち上げ（2ヶ月）</h3>
-                        <p>Workaway登録・プロフィール作成（日英）・ハウスルール整備・居住スペース準備。公開からゲスト募集開始までを実行します。</p>
+                        <h3>Build — 構築支援（2ヶ月）</h3>
+                        <p>機材の調達サポート、設置のガイド、初期セットアップ。あなた自身が理解して組める状態にすることが目標です。</p>
                     </div>
                 </div>
-                <div class="wa-flow-step">
+                <div class="og-flow-step">
                     <div>
-                        <h3>Operate — 運用定着（2ヶ月）</h3>
-                        <p>初回ゲストの受入サポート、メッセージ対応のレクチャー、トラブルシューティング。自走できるようになるまで伴走します。</p>
+                        <h3>Optimize — 最適化・自走（2ヶ月）</h3>
+                        <p>実際の稼働データをもとに調整。発電量と消費のバランス、季節変動への対応、トラブルシューティング。自分で維持管理できるようになるまで伴走します。</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="wa-section">
+        <div class="og-section">
             <h2>料金</h2>
-            <div class="wa-pricing">
-                <div class="wa-pricing-card">
+            <div class="og-pricing">
+                <div class="og-pricing-card">
                     <h3>Assessment</h3>
                     <div class="price">0<span>円</span></div>
                     <ul>
                         <li>無料セッション×2回</li>
-                        <li>現状ヒアリング</li>
-                        <li>Workaway適性の見極め</li>
-                        <li>方針提案</li>
+                        <li>現地状況ヒアリング</li>
+                        <li>オフグリッド適性の見極め</li>
+                        <li>概算見積もり・方針提案</li>
                     </ul>
                 </div>
-                <div class="wa-pricing-card recommended">
-                    <span class="wa-badge">Discovery + Implement + Operate</span>
+                <div class="og-pricing-card recommended">
+                    <span class="og-badge">Design + Build + Optimize</span>
                     <h3>全フェーズ一括</h3>
                     <div class="price">88,000<span>円（税込）/ 6ヶ月</span></div>
                     <ul>
-                        <li>魅力発掘・プロフィール設計</li>
-                        <li>Workaway登録・プロフィール作成（日英）</li>
-                        <li>ハウスルール・受入準備</li>
-                        <li>初回ゲスト受入サポート</li>
+                        <li>インフラ設計・機材選定</li>
+                        <li>調達サポート・設置ガイド</li>
+                        <li>初期セットアップ</li>
+                        <li>稼働データに基づく最適化</li>
                         <li>メール・チャット相談（6ヶ月）</li>
                         <li>トラブルシューティング</li>
                     </ul>
                 </div>
             </div>
-            <p class="wa-note">※Assessmentは無料です。まずお話しして、合わないと思えばそこで終了できます。<br>※価格は予告なく変更される場合があります。法人向けカスタムプランもご相談ください。</p>
-
-            <div class="wa-story">
-                <p><strong>88,000円で何が変わるか</strong></p>
-                <p>英語プロフィールの翻訳・作成を外注すれば数万円。コンサルに集客戦略を頼めば月額数万〜十数万円。求人サイトに掲載すれば年間数十万円。Workawayは、これらを置き換えます。</p>
-                <p>月あたり約14,700円。6ヶ月後には自走できる状態を目指すので、継続課金はありません。そして一度レビューが付けば、広告費ゼロで次のゲストが来る循環が始まります。</p>
-                <p>仮にアルバイトを1人雇えば、時給1,000円×5時間×20日＝月10万円。Workawayゲストは宿泊と食事の提供だけ。人件費の差額を考えれば、導入支援の88,000円は初月で回収できる計算です。</p>
-            </div>
+            <p class="og-note">※Assessmentは無料です。まずお話しして、合わないと思えばそこで終了できます。<br>※価格は予告なく変更される場合があります。法人向けカスタムプランもご相談ください。<br>※機材費は別途実費となります。</p>
         </div>
 
-        <div class="wa-section">
+        <div class="og-section">
             <h2>なぜ私たちがこれをやるのか</h2>
-            <p>トキストレージの使命は「存在証明」——人と場所の記憶を千年先へ届けること。しかし記録するだけでは足りません。記録されるべき新しい出会いと物語を生み出す仕組みが必要です。Workaway支援は、その仕組みそのものです。</p>
-            <h3>SoulCarrier（共鳴の会）とのシナジー</h3>
-            <p>私たちが運営するSoulCarrierは、「共鳴」をテーマに人と人をつなぐコミュニティです。Workawayもまた、ホストとゲストが同じ空間で時間を共有し、言語や文化を超えて共鳴し合う場。SoulCarrierで培った「つながりの設計」のノウハウが、Workawayホストの受け入れ体制づくりにそのまま活きています。</p>
-            <h3>Pearl Soapから学んだこと</h3>
-            <p>Pearl Soapは、ギフトエコノミーの考え方を実践するプロジェクトです。大量の広告費ではなく、手渡しと口コミで関係性を築く。この草の根的なアプローチは、Workawayの本質と重なります。レビューが次のゲストを呼び、ゲストが地域の魅力を世界に伝える——広告に頼らない循環型の集客は、Pearl Soapで私たちが実証してきたことです。</p>
-            <h3>パートナーシップ</h3>
-            <p>私たちはコンサルタントとクライアントの関係で終わりたくありません。6ヶ月の伴走を経て自走できるようになったホストは、私たちのパートナーになります。地域のホスト同士がつながり、ゲストを紹介し合い、ノウハウを共有する。そんなホストネットワークを一緒に育てていくことが、このコンサルの先にある未来です。</p>
+            <p>トキストレージの使命は「存在証明」——記録を千年先に届けること。しかし記録を残す場所そのものが持続可能でなければ意味がありません。インフラに依存しない拠点づくりは、存在を未来につなぐための基盤です。</p>
+            <h3>Workaway支援との連携</h3>
+            <p>地方でWorkawayホストを始めるとき、最大のハードルの一つがインフラ整備です。通信環境がなければゲストとのやり取りができない。電力が不安定なら快適な受入ができない。オフグリッド構築支援は、Workaway導入の前提条件を整えるサービスでもあります。</p>
+            <h3>佐渡島での実践</h3>
+            <p>2026年春、私たち自身が佐渡島に移転し、オフグリッド生活基盤を本格的に構築します。タイムレスタウンでの実験、マウイでの遠征検証を経て、佐渡で「本番」を迎える。そのプロセスのすべてが、このコンサルティングの知見になります。</p>
         </div>
 
-        <div class="wa-cta">
-            <p>Workaway、始めてみませんか？<br>まずは無料相談からお気軽にどうぞ。</p>
+        <div class="og-cta">
+            <p>オフグリッド環境、一緒に作りませんか？<br>まずは無料相談からお気軽にどうぞ。</p>
             <a href="https://calendly.com/pearlmemorial/pearlmemorialsession" target="_blank" rel="noopener">無料相談を予約する</a>
         </div>
 
-        <div class="wa-back">
+        <div class="og-back">
             <a href="index.html">&larr; トキストレージ トップへ戻る</a>
         </div>
     </div>
