@@ -259,6 +259,32 @@
             color: var(--text-muted) !important;
             margin-top: 0.5rem;
         }
+        .og-story-photos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.8rem;
+            margin: 1.2rem 0;
+        }
+        .og-story-photos figure {
+            margin: 0;
+        }
+        .og-story-photos img {
+            width: 100%;
+            border-radius: 0.5rem;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+        }
+        .og-story-photos figcaption {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            margin-top: 0.3rem;
+            line-height: 1.4;
+        }
+        @media (max-width: 520px) {
+            .og-story-photos {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -296,6 +322,20 @@
 
         <div class="og-story">
             <p>Founder Takuya Sato first built a mini off-grid environment at his home in Timeless Town, Urayasu — powering a silkie chicken coop with solar panels and batteries, testing energy independence through daily use.</p>
+            <div class="og-story-photos">
+                <figure>
+                    <img src="asset/IMG_0852.jpeg" alt="Silkie chicks hatching in an incubator" loading="lazy">
+                    <figcaption>Silkie chicks hatching in the incubator</figcaption>
+                </figure>
+                <figure>
+                    <img src="asset/IMG_0858.jpeg" alt="Silkie chicks in a cardboard brooder box" loading="lazy">
+                    <figcaption>Early-stage brooding</figcaption>
+                </figure>
+                <figure>
+                    <img src="asset/Snapshoot_1756198826573.png" alt="Solar-powered surveillance camera feed" loading="lazy">
+                    <figcaption>Solar-powered monitoring camera feed</figcaption>
+                </figure>
+            </div>
             <p>In 2025, traveling across Maui from east to west, he brought his own equipment and built functional off-grid setups at two locations, each within 3 days. He also helped local Workaway hosts set up their own systems, verifying everything worked at a practical, livable level.</p>
             <p>Starting spring 2026, he'll relocate to Sado Island to build a full-scale off-grid living foundation. From experiment to field testing to real deployment — every step of this journey feeds directly into this consulting service.</p>
         </div>
