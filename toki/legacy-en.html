@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>トキストレージ | 1000年の設計思想</title>
+    <title>Toki Storage | Design Philosophy for 1000 Years</title>
     <meta name="robots" content="noindex, nofollow">
-    <meta name="description" content="SLA 100% × 1000年。依存ゼロの構造設計。創業者不在でも動く永続性。1000年を真剣に考える人のための技術資料。">
+    <meta name="description" content="SLA 100% × 1000 years. Zero-dependency architecture. Designed to function without the founder. Technical documentation for those who think in millennia.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
             --toki-blue: #2563EB;
@@ -23,8 +23,8 @@
             --text-secondary: #475569;
             --text-muted: #94A3B8;
             --border: #E2E8F0;
-            --font-display: 'Shippori Mincho', serif;
-            --font-body: 'Zen Kaku Gothic New', sans-serif;
+            --font-display: 'Cormorant Garamond', serif;
+            --font-body: 'Inter', sans-serif;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -35,7 +35,7 @@
             font-weight: 400;
             background: var(--bg-white);
             color: var(--text-primary);
-            line-height: 1.9;
+            line-height: 1.8;
             font-size: 16px;
         }
 
@@ -57,7 +57,7 @@
         }
         .legacy-nav .nav-brand {
             font-family: var(--font-display);
-            font-size: 0.9rem;
+            font-size: 1rem;
             font-weight: 600;
             color: var(--toki-blue);
             text-decoration: none;
@@ -111,9 +111,9 @@
         }
         .legacy-hero h1 {
             font-family: var(--font-display);
-            font-size: 2.2rem;
-            font-weight: 700;
-            line-height: 1.5;
+            font-size: 2.4rem;
+            font-weight: 600;
+            line-height: 1.4;
             margin-bottom: 1rem;
         }
         .legacy-hero .hero-sub {
@@ -129,7 +129,7 @@
         }
         .legacy-section h2 {
             font-family: var(--font-display);
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             font-weight: 600;
             margin-bottom: 1.5rem;
             padding-bottom: 0.5rem;
@@ -138,7 +138,7 @@
         }
         .legacy-section h3 {
             font-family: var(--font-display);
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             font-weight: 600;
             margin: 2rem 0 1rem;
             color: var(--text-primary);
@@ -399,27 +399,26 @@
         /* Responsive */
         @media (max-width: 768px) {
             .legacy-content { padding: 6rem 1.2rem 3rem; }
-            .legacy-hero h1 { font-size: 1.6rem; }
+            .legacy-hero h1 { font-size: 1.8rem; }
             .diagram-flow { flex-direction: column; }
             .diagram-arrow { transform: rotate(90deg); }
             .spec-table th { width: 40%; }
+            .legacy-nav .nav-label { display: none; }
         }
 
         @media print {
             .legacy-nav { display: none; }
             .legacy-content { padding-top: 2rem; }
-            .philosophy-box { background: #333 !important; }
-            .code-block { background: #eee !important; color: #333; }
         }
     </style>
 </head>
 <body>
 
 <nav class="legacy-nav">
-    <a href="index.html" class="nav-brand">トキストレージ</a>
+    <a href="index-en.html" class="nav-brand">Toki Storage</a>
     <div class="nav-right">
         <span class="nav-label">TECHNICAL DOCUMENT FOR LEGACY OWNERS</span>
-        <a href="legacy-en.html" class="lang-switch">EN</a>
+        <a href="legacy.html" class="lang-switch">JP</a>
     </div>
 </nav>
 
@@ -427,404 +426,404 @@
 
     <header class="legacy-hero">
         <p class="hero-label">FOR THOSE WHO THINK IN MILLENNIA</p>
-        <h1>1000年の設計思想</h1>
-        <p class="hero-sub">SLA 100% × 1000年。依存ゼロの構造。創業者不在でも動く設計。<br>このページは、時間軸の長さが「ただの宣伝文句」ではないことを技術的に示すためにあります。</p>
+        <h1>Design Philosophy for 1000 Years</h1>
+        <p class="hero-sub">SLA 100% x 1000 years. Zero-dependency architecture. Designed to function without the founder.<br>This page exists to demonstrate that our millennium-scale timeframe is not just marketing.</p>
     </header>
 
     <!-- Background -->
     <section class="legacy-section">
-        <h2>この設計思想が生まれた背景</h2>
-        <p>私は「タイムレスタウン新浦安」というマンション自治会で、2年間会長を務めました。約250世帯、日々の暮らしを支える仕組みを運営する中で、「タイムレス」という言葉と真剣に向き合うことになりました。</p>
-        <p>タイムレスとは何か。時間に左右されないとは、どういう構造なのか。</p>
-        <p>並行して、SoulCarrierという活動で遺骨帰還や無縁墓の調査に携わる中、「記憶は驚くほど簡単に消える」という現実を目の当たりにしました。墓石は100年で風化し、クラウドサービスは10年で終了し、誰かが覚えていなければ存在は消える。</p>
-        <p>そして、私財を投じて国内外でオフグリッド生活を実践しました。マウイ島でのトレーラーハウス生活、山中湖での車中泊キャンプ。電力も水も通信も、意図的に社会インフラから切り離し、「依存ゼロ」とは何かを家族とともに身体で検証する日々。机上の設計ではなく、実際に暮らしの中で持続可能性を試し続けて得た構造です。</p>
+        <h2>Origins of This Design Philosophy</h2>
+        <p>I served as the president of a homeowners association called "Timeless Town Shin-Urayasu" for two years. Managing the daily systems that supported approximately 250 households, I found myself seriously confronting the word "timeless."</p>
+        <p>What does timeless truly mean? What kind of structure is immune to time?</p>
+        <p>Concurrently, through SoulCarrier, an organization dedicated to repatriating remains and investigating abandoned graves, I witnessed a stark reality: "Memories disappear with alarming ease." Gravestones weather in 100 years. Cloud services shut down in 10 years. If no one remembers, existence vanishes.</p>
+        <p>I then invested my personal assets to practice off-grid living across different countries. Trailer life in Maui, car camping at Lake Yamanaka in Japan. Power, water, communications - I deliberately disconnected from social infrastructure, physically testing what "zero dependency" truly means with my family. This is not theoretical design; it's a structure derived from continuous real-life sustainability testing.</p>
 
         <div class="offgrid-gallery">
             <figure>
-                <img src="asset/offgrid-maui-power.jpg" alt="マウイ島でのオフグリッド電源システム" loading="lazy">
-                <figcaption>マウイ島：ソーラー＋ジェネレーター＋ポータブル電源</figcaption>
+                <img src="asset/offgrid-maui-power.jpg" alt="Off-grid power system in Maui" loading="lazy">
+                <figcaption>Maui: Solar + Generator + Portable Power</figcaption>
             </figure>
             <figure>
-                <img src="asset/offgrid-yamanakako-setup.jpg" alt="山中湖での車中泊オフグリッドセットアップ" loading="lazy">
-                <figcaption>山中湖：車中泊での依存ゼロ検証</figcaption>
+                <img src="asset/offgrid-yamanakako-setup.jpg" alt="Car camping off-grid setup at Lake Yamanaka" loading="lazy">
+                <figcaption>Yamanaka: Zero-dependency testing</figcaption>
             </figure>
         </div>
-        <p><strong>「消える理由」を構造的に排除すれば、残る。</strong></p>
-        <p>この単純な原理を、エンジニアとして20年培った設計思想と、自らの生活で検証した持続可能性の知見で形にしたのがトキストレージです。</p>
+        <p><strong>"Structurally eliminate the reasons for disappearing, and it remains."</strong></p>
+        <p>This simple principle, shaped by 20 years of engineering thinking and sustainability knowledge verified through my own life, became Toki Storage.</p>
     </section>
 
     <!-- Toro Ruins -->
     <section class="legacy-section">
-        <p>登呂遺跡を訪れたとき、ふと思いました。もし縄文人がトキストレージを持っていたら——土器と一緒に、彼らの暮らしや価値観、想いも伝わっていたはずです。</p>
-        <p>私たちは1000年後の人々にとっての「縄文人」になる。何を残すかは、今を生きる私たちが決められます。</p>
+        <p>When I visited the Toro Archaeological Site, a thought struck me: If the Jomon people had Toki Storage, their way of life, values, and thoughts would have been passed down alongside their pottery.</p>
+        <p>We will become the "Jomon people" to those living 1000 years from now. What we leave behind is our choice to make today.</p>
     </section>
 
     <!-- Section 1: The Question -->
     <section class="legacy-section">
-        <h2>問いの設定</h2>
-        <p>「1000年残る」と言うのは簡単です。しかし、1000年後に本当に残っているかどうかを、誰が検証できるでしょうか。</p>
-        <p>この問いに対する私たちの答えは、<strong>「検証可能性」ではなく「構造的必然性」で設計する</strong>というものです。</p>
-        <p>1000年後に「残っている確率」を高めるのではなく、<strong>「消える理由」を一つずつ潰していく</strong>。逆説的ですが、これが最も誠実なアプローチだと考えています。</p>
+        <h2>Framing the Question</h2>
+        <p>Saying "it will last 1000 years" is easy. But who can verify whether something actually remains 1000 years from now?</p>
+        <p>Our answer to this question is to <strong>design for "structural inevitability" rather than "verifiability."</strong></p>
+        <p>Rather than increasing the "probability of remaining" in 1000 years, we <strong>eliminate the "reasons for disappearing" one by one</strong>. Paradoxically, this is the most honest approach.</p>
     </section>
 
     <!-- Section 2: Dependency Analysis -->
     <section class="legacy-section">
-        <h2>依存関係の分析</h2>
-        <p>デジタルサービスが消える理由を分解すると、以下の依存関係が見えてきます。</p>
+        <h2>Dependency Analysis</h2>
+        <p>When we break down why digital services disappear, the following dependencies emerge:</p>
 
         <table class="spec-table">
             <tr>
-                <th>依存対象</th>
-                <td>一般的なクラウドサービス</td>
+                <th>Dependency</th>
+                <td>Typical Cloud Service</td>
             </tr>
             <tr>
-                <th>サーバー</th>
-                <td>AWS, GCP, Azure等のインフラ</td>
+                <th>Servers</th>
+                <td>AWS, GCP, Azure infrastructure</td>
             </tr>
             <tr>
-                <th>ドメイン</th>
-                <td>年間更新、レジストラの存続</td>
+                <th>Domain</th>
+                <td>Annual renewal, registrar survival</td>
             </tr>
             <tr>
-                <th>決済</th>
-                <td>サブスクリプション継続</td>
+                <th>Payment</th>
+                <td>Ongoing subscription</td>
             </tr>
             <tr>
-                <th>運営会社</th>
-                <td>倒産・買収・方針変更リスク</td>
+                <th>Company</th>
+                <td>Bankruptcy, acquisition, policy changes</td>
             </tr>
             <tr>
-                <th>技術スタック</th>
-                <td>フレームワーク・言語の陳腐化</td>
+                <th>Tech Stack</th>
+                <td>Framework and language obsolescence</td>
             </tr>
             <tr>
-                <th>読取機器</th>
-                <td>専用アプリ・専用デバイス</td>
+                <th>Reading Device</th>
+                <td>Dedicated apps or devices</td>
             </tr>
         </table>
 
-        <p>S&amp;P 500企業の平均寿命は、1958年の61年から現在は20年未満に縮小しています（McKinsey調査）。世界最大級の企業でさえこの水準。100年後に存在するサービスを予測することは、構造的に不可能です。</p>
+        <p>The average lifespan of S&P 500 companies has shrunk from 61 years in 1958 to under 20 years today (McKinsey). Even the world's largest companies face this reality. Predicting which services will exist in 100 years is structurally impossible.</p>
 
         <div class="highlight-box">
-            <p><strong>トキストレージの設計原則：</strong>上記の依存関係を<strong>すべてゼロ</strong>にする。サーバー不要、ドメイン不要、サブスクリプション不要、専用アプリ不要。製品単体で完結する構造。</p>
+            <p><strong>Toki Storage Design Principle:</strong> Reduce <strong>all</strong> of the above dependencies to <strong>zero</strong>. No servers, no domains, no subscriptions, no dedicated apps. A structure that is complete within the product itself.</p>
         </div>
     </section>
 
     <!-- Section 3: Physical Layer -->
     <section class="legacy-section">
-        <h2>物理層：石英ガラス</h2>
+        <h2>Physical Layer: Quartz Glass</h2>
 
-        <h3>素材特性</h3>
+        <h3>Material Properties</h3>
 
         <div class="offgrid-gallery">
             <figure>
-                <img src="asset/quartz-glass-round.jpg" alt="石英ガラスに刻印されたメッセージ" loading="lazy">
-                <figcaption>丸型石英ガラス：メッセージ刻印</figcaption>
+                <img src="asset/quartz-glass-round.jpg" alt="Message engraved on quartz glass" loading="lazy">
+                <figcaption>Round quartz glass with engraved message</figcaption>
             </figure>
             <figure>
-                <img src="asset/quartz-glass-sample.jpg" alt="石英ガラスの金属蒸着・QRコード刻印サンプル" loading="lazy">
-                <figcaption>金属蒸着テスト＋QRコード＋家紋</figcaption>
+                <img src="asset/quartz-glass-sample.jpg" alt="Quartz glass with metal deposition and QR code" loading="lazy">
+                <figcaption>Metal deposition test + QR code + family crest</figcaption>
             </figure>
         </div>
 
         <table class="spec-table">
             <tr>
-                <th>素材</th>
-                <td>合成石英ガラス（SiO₂ 99.9%以上）</td>
+                <th>Material</th>
+                <td>Synthetic fused quartz (SiO2 99.9%+)</td>
             </tr>
             <tr>
-                <th>理論寿命</th>
-                <td>数億年（日立×京大 2012年実証）</td>
+                <th>Theoretical Lifespan</th>
+                <td>Hundreds of millions of years (Hitachi x Kyoto U., 2012)</td>
             </tr>
             <tr>
-                <th>耐熱温度</th>
-                <td>1000℃以上</td>
+                <th>Heat Resistance</th>
+                <td>Over 1000C</td>
             </tr>
             <tr>
-                <th>耐水性</th>
-                <td>完全防水（化学的に安定）</td>
+                <th>Water Resistance</th>
+                <td>Completely waterproof (chemically stable)</td>
             </tr>
             <tr>
-                <th>耐薬品性</th>
-                <td>酸・アルカリに強い</td>
+                <th>Chemical Resistance</th>
+                <td>Resistant to acids and alkalis</td>
             </tr>
             <tr>
-                <th>紫外線</th>
-                <td>劣化なし</td>
+                <th>UV Exposure</th>
+                <td>No degradation</td>
             </tr>
         </table>
 
-        <h3>比較：御影石（一般的な墓石）</h3>
+        <h3>Comparison: Granite (Standard Gravestone)</h3>
         <table class="spec-table">
             <tr>
-                <th>素材</th>
-                <td>花崗岩（御影石）</td>
+                <th>Material</th>
+                <td>Granite</td>
             </tr>
             <tr>
-                <th>実用寿命</th>
-                <td>100〜200年</td>
+                <th>Practical Lifespan</th>
+                <td>100-200 years</td>
             </tr>
             <tr>
-                <th>劣化要因</th>
-                <td>風化、酸性雨、苔、凍結融解</td>
+                <th>Degradation Factors</th>
+                <td>Weathering, acid rain, moss, freeze-thaw cycles</td>
             </tr>
             <tr>
-                <th>刻字の可読性</th>
-                <td>50〜100年で劣化</td>
+                <th>Inscription Legibility</th>
+                <td>Degrades in 50-100 years</td>
             </tr>
         </table>
 
-        <p>石英ガラスは半導体製造のフォトマスク基板にも使われる高純度素材です。「石だから永遠」という誤解に対し、物性レベルでの優位性を持ちます。</p>
+        <p>Quartz glass is a high-purity material also used in photomask substrates for semiconductor manufacturing. It holds material-level advantages over the misconception that "stone lasts forever."</p>
     </section>
 
     <!-- Section 4: Data Layer -->
     <section class="legacy-section">
-        <h2>データ層：QRコード</h2>
+        <h2>Data Layer: QR Code</h2>
 
-        <h3>規格の永続性</h3>
+        <h3>Standard Permanence</h3>
         <table class="spec-table">
             <tr>
-                <th>開発</th>
-                <td>1994年 デンソーウェーブ（日本）</td>
+                <th>Development</th>
+                <td>1994, Denso Wave (Japan)</td>
             </tr>
             <tr>
-                <th>国際規格</th>
+                <th>International Standard</th>
                 <td>ISO/IEC 18004</td>
             </tr>
             <tr>
-                <th>実績</th>
-                <td>30年以上の普及・後方互換性維持</td>
+                <th>Track Record</th>
+                <td>30+ years of adoption with backward compatibility</td>
             </tr>
             <tr>
-                <th>読取機器</th>
-                <td>スマートフォンのカメラ（専用アプリ不要）</td>
+                <th>Reading Device</th>
+                <td>Smartphone camera (no dedicated app required)</td>
             </tr>
             <tr>
-                <th>特許</th>
-                <td>オープン化済み（無償利用可）</td>
+                <th>Patent</th>
+                <td>Open license (free to use)</td>
             </tr>
         </table>
 
         <div class="highlight-box">
-            <p><strong>読取機器の進化予測：</strong>カメラとディスプレイは、人間の「目」のインターフェースとして100年後も存在すると予測します。形状は変わっても、「光学的にパターンを認識する」という原理は不変。QRコードの仕様はISO規格として固定されており、将来の機器でも読み取り可能な構造です。</p>
+            <p><strong>Predicting Device Evolution:</strong> We predict cameras and displays will exist 100 years from now as humanity's interface with visual information. Forms may change, but the principle of "optically recognizing patterns" is universal. QR code specifications are fixed as an ISO standard, ensuring readability on future devices.</p>
         </div>
 
-        <h3>5Dメモリクリスタルとの比較</h3>
-        <p>サウサンプトン大学が開発した5Dメモリクリスタルは、理論上138億年のデータ保存が可能です。しかし：</p>
+        <h3>Comparison: 5D Memory Crystal</h3>
+        <p>The 5D memory crystal developed by the University of Southampton can theoretically store data for 13.8 billion years. However:</p>
         <ul class="legacy-list">
             <li>
                 <span class="list-num">1</span>
                 <div class="list-content">
-                    <h4>読取に専用光学機器が必要</h4>
-                    <p>フェムト秒レーザーによる書き込み、偏光顕微鏡による読み取り。一般消費者が所有する機器では読めない。</p>
+                    <h4>Requires Specialized Optical Equipment</h4>
+                    <p>Writing with femtosecond lasers, reading with polarization microscopes. Cannot be read with consumer devices.</p>
                 </div>
             </li>
             <li>
                 <span class="list-num">2</span>
                 <div class="list-content">
-                    <h4>個人向け販売なし</h4>
-                    <p>データセンター向けアーカイブ用途。1枚数十万円〜数百万円規模。</p>
+                    <h4>No Consumer Sales</h4>
+                    <p>Designed for data center archival. Costs range from tens to hundreds of thousands of dollars per unit.</p>
                 </div>
             </li>
             <li>
                 <span class="list-num">3</span>
                 <div class="list-content">
-                    <h4>読取インフラの依存</h4>
-                    <p>専用機器の製造・維持が止まれば、データは物理的に存在しても「読めない」状態に。</p>
+                    <h4>Infrastructure Dependency</h4>
+                    <p>If specialized equipment manufacturing stops, data physically exists but becomes "unreadable."</p>
                 </div>
             </li>
         </ul>
-        <p>トキストレージは「1000年」という控えめな数字を採用していますが、これは物理的寿命ではなく、<strong>読取可能性を含めた実用寿命</strong>の数字です。</p>
+        <p>Toki Storage adopts a conservative "1000 years" figure, not based on physical lifespan, but on <strong>practical lifespan including readability</strong>.</p>
     </section>
 
     <!-- Section 5: Hosting Layer -->
     <section class="legacy-section">
-        <h2>ホスティング層：GitHub Pages</h2>
-        <p>QRコードから誘導されるメモリアルページは、GitHub Pages上でホスティングされています。</p>
+        <h2>Hosting Layer: GitHub Pages</h2>
+        <p>Memorial pages linked from QR codes are hosted on GitHub Pages.</p>
 
-        <h3>なぜGitHub Pagesか</h3>
+        <h3>Why GitHub Pages?</h3>
         <table class="spec-table">
             <tr>
-                <th>運営</th>
-                <td>Microsoft（2018年買収、75億ドル）</td>
+                <th>Operator</th>
+                <td>Microsoft (acquired 2018, $7.5B)</td>
             </tr>
             <tr>
-                <th>時価総額</th>
-                <td>約3兆ドル（2024年時点）</td>
+                <th>Market Cap</th>
+                <td>~$3 trillion (as of 2024)</td>
             </tr>
             <tr>
-                <th>開発者数</th>
-                <td>1億人以上（世界最大の開発者プラットフォーム）</td>
+                <th>Developers</th>
+                <td>100+ million (world's largest developer platform)</td>
             </tr>
             <tr>
                 <th>Arctic Code Vault</th>
-                <td>北極圏の永久凍土にソースコードを物理保存（1000年保存プロジェクト）</td>
+                <td>Physical source code storage in Arctic permafrost (1000-year preservation project)</td>
             </tr>
             <tr>
-                <th>コスト</th>
-                <td>静的サイトは無料ホスティング</td>
+                <th>Cost</th>
+                <td>Free hosting for static sites</td>
             </tr>
         </table>
 
         <div class="philosophy-box">
             <h3>ARCTIC CODE VAULT</h3>
-            <p>GitHubは2020年、アクティブな公開リポジトリを北極圏の永久凍土に物理保存しました。フィルムに書き込まれたソースコードは、1000年以上の保存を想定しています。</p>
-            <p>この「1000年保存」という姿勢を持つプラットフォームを、私たちはホスティング先として選んでいます。</p>
+            <p>In 2020, GitHub physically archived active public repositories in Arctic permafrost. Source code written to film is designed for 1000+ year preservation.</p>
+            <p>We chose this platform precisely because it shares our "1000-year preservation" philosophy.</p>
         </div>
 
-        <h3>静的サイトの優位性</h3>
+        <h3>Static Site Advantages</h3>
         <div class="code-block">
-<span class="comment">// メモリアルページの構造</span>
+<span class="comment">// Memorial page architecture</span>
 {
-  <span class="key">"server"</span>: <span class="value">"不要"</span>,
-  <span class="key">"database"</span>: <span class="value">"不要"</span>,
-  <span class="key">"backend"</span>: <span class="value">"不要"</span>,
+  <span class="key">"server"</span>: <span class="value">"none"</span>,
+  <span class="key">"database"</span>: <span class="value">"none"</span>,
+  <span class="key">"backend"</span>: <span class="value">"none"</span>,
   <span class="key">"dependencies"</span>: <span class="number">0</span>,
   <span class="key">"monthly_cost"</span>: <span class="number">0</span>,
   <span class="key">"format"</span>: <span class="value">"HTML/CSS/JS"</span>
 }
         </div>
-        <p>メモリアルページは純粋な静的HTMLです。サーバーサイドの処理がなく、データベースへの接続もありません。GitHub Pagesが仮に消えても、HTMLファイル一式があれば、どのWebサーバーでも再現可能です。</p>
+        <p>Memorial pages are pure static HTML. No server-side processing, no database connections. Even if GitHub Pages disappears, the HTML files can be reproduced on any web server.</p>
     </section>
 
     <!-- Section 6: Founder Independence -->
     <section class="legacy-section">
-        <h2>創業者不在でも動く設計</h2>
-        <p>1000年という時間軸では、創業者の存在を前提にできません。トキストレージは、<strong>創業者が明日いなくなっても機能し続ける</strong>構造を持っています。</p>
+        <h2>Designed to Function Without the Founder</h2>
+        <p>On a 1000-year timeline, we cannot assume the founder's existence. Toki Storage is designed to <strong>continue functioning even if the founder disappears tomorrow</strong>.</p>
 
         <div class="diagram">
-            <p class="diagram-title">製品の動作に必要な要素</p>
+            <p class="diagram-title">Elements Required for Product Operation</p>
             <div class="diagram-flow">
                 <div class="diagram-node highlight">
-                    <h4>石英ガラス</h4>
-                    <p>物理的に存在</p>
+                    <h4>Quartz Glass</h4>
+                    <p>Physical existence</p>
                 </div>
                 <span class="diagram-arrow">+</span>
                 <div class="diagram-node highlight">
-                    <h4>QRコード</h4>
-                    <p>ISO規格で読取</p>
+                    <h4>QR Code</h4>
+                    <p>ISO standard reading</p>
                 </div>
                 <span class="diagram-arrow">+</span>
                 <div class="diagram-node highlight">
-                    <h4>スマートフォン</h4>
-                    <p>汎用デバイス</p>
+                    <h4>Smartphone</h4>
+                    <p>Universal device</p>
                 </div>
                 <span class="diagram-arrow">=</span>
                 <div class="diagram-node">
-                    <h4>記録の閲覧</h4>
-                    <p>創業者不要</p>
+                    <h4>Record Access</h4>
+                    <p>No founder needed</p>
                 </div>
             </div>
         </div>
 
-        <h3>依存しないもの</h3>
+        <h3>No Dependencies On</h3>
         <ul class="legacy-list">
             <li>
                 <span class="list-num">1</span>
                 <div class="list-content">
-                    <h4>サブスクリプション</h4>
-                    <p>月額課金なし。買い切りで完結。支払いが止まっても製品は機能し続ける。</p>
+                    <h4>Subscriptions</h4>
+                    <p>No monthly fees. One-time purchase. Product continues to function even if payments stop.</p>
                 </div>
             </li>
             <li>
                 <span class="list-num">2</span>
                 <div class="list-content">
-                    <h4>専用アプリ</h4>
-                    <p>標準カメラアプリで読取可能。App Storeの審査やOS互換性に依存しない。</p>
+                    <h4>Dedicated Apps</h4>
+                    <p>Readable with standard camera apps. No dependency on App Store approvals or OS compatibility.</p>
                 </div>
             </li>
             <li>
                 <span class="list-num">3</span>
                 <div class="list-content">
-                    <h4>アカウント・パスワード</h4>
-                    <p>認証なしで閲覧可能。パスワードの紛失・相続問題が発生しない。</p>
+                    <h4>Accounts & Passwords</h4>
+                    <p>Viewable without authentication. No password loss or inheritance issues.</p>
                 </div>
             </li>
             <li>
                 <span class="list-num">4</span>
                 <div class="list-content">
-                    <h4>運営会社の存続</h4>
-                    <p>Universal Needが消えても、石英ガラス×QRコード×GitHub Pagesの組み合わせは機能する。</p>
+                    <h4>Company Survival</h4>
+                    <p>Even if Universal Need disappears, the combination of quartz glass x QR code x GitHub Pages continues to function.</p>
                 </div>
             </li>
         </ul>
 
         <div class="highlight-box">
-            <p><strong>最悪のシナリオ：</strong>GitHub Pagesが消え、ドメインが失効した場合でも、QRコードに刻まれたデータは「エラーなく読める形式」で存在し続けます。テキストデータは直接埋め込み、画像データはBase64エンコードでQRコード内に保持。外部依存ゼロの設計です。</p>
+            <p><strong>Worst-Case Scenario:</strong> Even if GitHub Pages shuts down and the domain expires, data engraved in the QR code remains in an "error-free readable format." Text data is directly embedded, image data is Base64 encoded within the QR code. Zero external dependency by design.</p>
         </div>
     </section>
 
     <!-- Section 7: SLA -->
     <section class="legacy-section">
-        <h2>SLA 100% × 1000年</h2>
-        <p>通常のSLA（Service Level Agreement）は「99.9%の稼働率」のような形で表現されます。0.1%のダウンタイムは、年間約9時間。</p>
-        <p>トキストレージのSLAは異なります。</p>
+        <h2>SLA 100% x 1000 Years</h2>
+        <p>Typical SLAs (Service Level Agreements) are expressed as "99.9% uptime." That 0.1% downtime equals about 9 hours per year.</p>
+        <p>Toki Storage's SLA is different.</p>
 
         <div class="philosophy-box">
-            <h3>トキストレージのSLA</h3>
-            <p><strong>可用性：100%</strong>（サーバーがないため、ダウンタイムという概念がない）</p>
-            <p><strong>データ永続性：物理的破壊がない限り100%</strong>（石英ガラスの物性に依存）</p>
-            <p><strong>期間：製品の物理的寿命</strong>（理論値：数億年）</p>
+            <h3>Toki Storage SLA</h3>
+            <p><strong>Availability: 100%</strong> (No servers means no concept of downtime)</p>
+            <p><strong>Data Persistence: 100% unless physically destroyed</strong> (Dependent on quartz glass properties)</p>
+            <p><strong>Duration: Product's physical lifespan</strong> (Theoretical: hundreds of millions of years)</p>
         </div>
 
-        <p>これは「保証」ではありません。構造的にそうなっている、という記述です。サーバーがなければダウンしない。物理的に刻まれていれば消えない。依存がなければ終了しない。</p>
+        <p>This is not a "guarantee." It's a description of structural reality. No server means no downtime. Physically engraved means it won't disappear. No dependencies means no termination.</p>
     </section>
 
     <!-- Section 8: National Diet Library -->
     <section class="legacy-section">
-        <h2>国立国会図書館への納本</h2>
-        <p>トキストレージで制作されたメモリアルページは、PDFとして国立国会図書館に納本されます。</p>
+        <h2>National Diet Library Deposit</h2>
+        <p>Memorial pages created with Toki Storage are deposited as PDFs to Japan's National Diet Library.</p>
 
         <table class="spec-table">
             <tr>
-                <th>機関</th>
-                <td>国立国会図書館（National Diet Library）</td>
+                <th>Institution</th>
+                <td>National Diet Library (Japan)</td>
             </tr>
             <tr>
-                <th>根拠法</th>
-                <td>国立国会図書館法（1948年制定）</td>
+                <th>Legal Basis</th>
+                <td>National Diet Library Act (established 1948)</td>
             </tr>
             <tr>
-                <th>保存方針</th>
-                <td>永久保存（廃棄なし）</td>
+                <th>Preservation Policy</th>
+                <td>Permanent preservation (no disposal)</td>
             </tr>
             <tr>
-                <th>蔵書数</th>
-                <td>約4,700万点（2023年時点）</td>
+                <th>Collection Size</th>
+                <td>~47 million items (as of 2023)</td>
             </tr>
         </table>
 
-        <p>石英ガラス（物理層）、GitHub Pages（デジタル層）、国立国会図書館（制度層）。三重の冗長性により、どれか一つが失われても記録は残り続けます。</p>
+        <p>Quartz glass (physical layer), GitHub Pages (digital layer), National Diet Library (institutional layer). Triple redundancy ensures that even if one fails, the record survives.</p>
 
         <div class="highlight-box">
-            <p><strong>文字通りの「タイムレス」：</strong>国立国会図書館は、日本国が存続する限り記録を保存し続ける制度的インフラです。個人の存在証明が、国家レベルのアーカイブに組み込まれます。</p>
+            <p><strong>Literally "Timeless":</strong> The National Diet Library is institutional infrastructure that preserves records as long as Japan exists. Individual proof of existence becomes part of a national-level archive.</p>
         </div>
     </section>
 
     <!-- Section 9: For Legacy Owners -->
     <section class="legacy-section">
-        <h2>レガシーオーナーへ</h2>
-        <p>このページをここまで読んでいるあなたは、「1000年」という時間軸を本気で考えている人だと思います。</p>
-        <p>トキストレージは、すべての人に向けたサービスではありません。「石英ガラスに何か刻んでもらえる」以上の価値を感じない人には、ただの高価な記念品に見えるでしょう。</p>
-        <p>しかし、このページの技術的構造を理解し、「依存ゼロ」という設計思想に共鳴する人には、トキストレージが何をしようとしているかが伝わるはずです。</p>
+        <h2>To Legacy Owners</h2>
+        <p>If you've read this far, you're someone who seriously thinks on a 1000-year timeline.</p>
+        <p>Toki Storage is not for everyone. To those who see no value beyond "getting something engraved on quartz glass," it's just an expensive souvenir.</p>
+        <p>But to those who understand the technical architecture of this page and resonate with the "zero dependency" design philosophy, what Toki Storage is trying to accomplish should be clear.</p>
 
         <div class="philosophy-box">
-            <h3>存在証明の民主化</h3>
-            <p>歴史に名を残せるのは、王侯貴族、偉人、有名人だけ。普通の人の存在は、3世代で忘れ去られる。</p>
-            <p>この「記憶の不平等」を、技術で解決する。それがトキストレージの思想です。</p>
-            <p>1000年後の誰かが、あなたの存在を知ることができる。そのための構造を、私たちは本気で設計しています。</p>
+            <h3>Democratizing Proof of Existence</h3>
+            <p>Only royalty, great figures, and celebrities leave their names in history. Ordinary people's existence is forgotten within three generations.</p>
+            <p>Solving this "inequality of memory" through technology - that's the philosophy of Toki Storage.</p>
+            <p>Someone 1000 years from now will be able to know you existed. We're seriously designing the structure to make that possible.</p>
         </div>
     </section>
 
     <!-- CTA -->
     <section class="legacy-cta">
-        <h2>お問い合わせ</h2>
-        <p>技術的な質問、設計思想についての議論、事業提携のご相談など。</p>
+        <h2>Contact</h2>
+        <p>Technical questions, discussions about design philosophy, business partnerships.</p>
         <div class="cta-contact">
-            <strong>Universal Need株式会社</strong><br>
-            代表取締役 佐藤 卓也<br><br>
+            <strong>Universal Need Inc.</strong><br>
+            CEO: Takuya Sato<br><br>
             Email: <a href="mailto:business@satotakuya.jp">business@satotakuya.jp</a><br>
-            面談予約: <a href="https://calendly.com/pearlmemorial/pearlmemorialsession" target="_blank" rel="noopener">Calendly</a>
+            Schedule a meeting: <a href="https://calendly.com/pearlmemorial/pearlmemorialsession" target="_blank" rel="noopener">Calendly</a>
         </div>
     </section>
 
