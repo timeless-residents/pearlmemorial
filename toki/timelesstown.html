@@ -251,6 +251,29 @@
             font-style: italic;
         }
 
+        /* ---- Highlight Box ---- */
+        .tt-highlight {
+            background: linear-gradient(135deg, #FEF9E7 0%, #FFF8E1 100%);
+            border: 2px solid var(--gold);
+            border-radius: 0.8rem;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        .tt-highlight-title {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+        .tt-highlight p {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            margin-bottom: 0;
+            line-height: 1.8;
+        }
+
         /* ---- CTA ---- */
         .tt-cta {
             text-align: center;
@@ -418,10 +441,12 @@
 
             <dt>お願いしたいこと</dt>
             <dd>完成後に、率直なご感想をお聞かせください</dd>
-
-            <dt>ご希望の方へ</dt>
-            <dd>ニュースレター創刊号にお名前・ご感想を掲載し、国立国会図書館をはじめ各象徴的施設へ寄贈いたします</dd>
         </dl>
+
+        <div class="tt-highlight">
+            <p class="tt-highlight-title">あなたの名前が、国会図書館に残ります</p>
+            <p>モニターにご参加いただいた方のお名前とご感想は、ニュースレター創刊号に掲載。国立国会図書館をはじめ、象徴的な施設へ永久保存として寄贈いたします。</p>
+        </div>
 
         <p>「自分の名前を千年残すって、どういう気持ちになるんだろう」「親の名前を刻んでみたい」「正直よくわからないけど気になる」── どんな動機でも構いません。</p>
 
