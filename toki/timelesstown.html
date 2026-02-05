@@ -128,6 +128,26 @@
             margin-top: 0.5rem;
         }
 
+        /* ---- Toki Photos ---- */
+        .tt-toki-photos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.8rem;
+            margin: 1.5rem 0;
+        }
+        .tt-toki-photos .tt-soap-photo {
+            margin: 0;
+        }
+        .tt-toki-photos .tt-soap-photo img {
+            width: 100%;
+            max-width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+        }
+        @media (max-width: 520px) {
+            .tt-toki-photos { grid-template-columns: 1fr; }
+        }
+
         /* ---- Bridge (soap → toki) ---- */
         .tt-bridge {
             background: var(--bg-page);
@@ -344,6 +364,18 @@
         <h2>石英ガラスに刻む、千年の存在証明</h2>
 
         <p>マウイの墓守を通じて、ひとつの問いが生まれました。墓石は風化し、クラウドはサービスが終われば消える。大切な人が存在した証を、本当に残せる方法はないのか。その問いから生まれたのが「トキストレージ」です。石英ガラスに名前や写真、メッセージを刻む存在証明サービスです。</p>
+
+        <div class="tt-toki-photos">
+            <figure class="tt-soap-photo">
+                <img src="asset/product-hero.jpg" alt="トキストレージ製品" loading="lazy" width="960" height="720">
+            </figure>
+            <figure class="tt-soap-photo">
+                <img src="asset/qr-scan.jpg" alt="スマホでQRコードを読み取る様子" loading="lazy" width="720" height="720">
+            </figure>
+            <figure class="tt-soap-photo">
+                <img src="asset/kamon-engraving.jpg" alt="家紋を刻印したガラスプレート" loading="lazy" width="720" height="720">
+            </figure>
+        </div>
 
         <div class="tt-toki-features">
             <div class="tt-feature">
