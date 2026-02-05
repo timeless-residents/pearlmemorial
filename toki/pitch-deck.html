@@ -66,7 +66,7 @@
         }
         .pitch-nav .nav-label {
             font-size: 0.75rem;
-            color: var(--text-muted);
+            color: var(--text-secondary);
             letter-spacing: 0.1em;
         }
 
@@ -78,7 +78,7 @@
             justify-content: center;
             padding: 6rem 2rem 4rem;
         }
-        .slide:nth-child(even) {
+        .slide:nth-child(even):not(.cover-slide):not(.cta-slide) {
             background: var(--bg-page);
         }
         .slide-inner {
@@ -88,7 +88,7 @@
         .slide-number {
             font-family: var(--font-body);
             font-size: 0.7rem;
-            color: var(--text-muted);
+            color: var(--text-secondary);
             letter-spacing: 0.15em;
             text-transform: uppercase;
             margin-bottom: 1rem;
@@ -149,20 +149,20 @@
         }
         .cover-meta {
             font-size: 0.85rem;
-            color: rgba(255,255,255,0.4);
+            color: rgba(255,255,255,0.7);
             line-height: 2;
         }
         .cover-meta strong {
-            color: rgba(255,255,255,0.6);
+            color: rgba(255,255,255,0.9);
         }
         .cover-confidential {
             display: inline-block;
             margin-top: 2rem;
             padding: 0.4rem 1.2rem;
-            border: 1px solid rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.3);
             border-radius: 4px;
             font-size: 0.7rem;
-            color: rgba(255,255,255,0.35);
+            color: rgba(255,255,255,0.6);
             letter-spacing: 0.15em;
         }
 
@@ -192,7 +192,7 @@
         }
         .stat-card .stat-label {
             font-size: 0.8rem;
-            color: var(--text-muted);
+            color: var(--text-secondary);
             margin-top: 0.3rem;
         }
 
@@ -289,7 +289,8 @@
         }
         .market-layer .m-label {
             font-size: 0.75rem;
-            color: var(--text-muted);
+            color: var(--text-secondary);
+            font-weight: 600;
             letter-spacing: 0.1em;
             margin-bottom: 0.5rem;
         }
@@ -319,7 +320,7 @@
             background: var(--bg-section);
             font-weight: 600;
             font-size: 0.75rem;
-            color: var(--text-muted);
+            color: var(--text-secondary);
             letter-spacing: 0.05em;
         }
         .comp-table .highlight {
@@ -524,7 +525,7 @@
             background: var(--bg-section);
             font-weight: 600;
             font-size: 0.75rem;
-            color: var(--text-muted);
+            color: var(--text-secondary);
         }
         .fin-table .total-row {
             font-weight: 700;
@@ -567,12 +568,15 @@
             color: #fff;
             text-align: center;
         }
+        .cta-slide .slide-number {
+            color: rgba(255,255,255,0.6);
+        }
         .cta-slide h2 {
             color: #fff;
             font-size: 2.5rem;
         }
         .cta-slide .slide-lead {
-            color: rgba(255,255,255,0.75);
+            color: rgba(255,255,255,0.85);
             margin: 1rem auto 2rem;
         }
         .cta-contact {
@@ -580,17 +584,21 @@
             margin-top: 1rem;
             padding: 1rem 3rem;
             background: rgba(255,255,255,0.15);
-            border: 1px solid rgba(255,255,255,0.3);
+            border: 1px solid rgba(255,255,255,0.35);
             border-radius: 8px;
             color: #fff;
             font-family: var(--font-display);
             font-size: 1rem;
+            line-height: 2;
         }
         .cta-details {
             margin-top: 2rem;
             font-size: 0.85rem;
-            color: rgba(255,255,255,0.5);
+            color: rgba(255,255,255,0.75);
             line-height: 2;
+        }
+        .cta-details strong {
+            color: rgba(255,255,255,0.9);
         }
 
         /* ---- Key Point Box ---- */
@@ -644,7 +652,7 @@
             text-align: center;
             padding: 2rem;
             font-size: 0.75rem;
-            color: var(--text-muted);
+            color: var(--text-secondary);
             border-top: 1px solid var(--border);
         }
 
@@ -662,9 +670,139 @@
         }
 
         @media print {
-            .slide { min-height: auto; page-break-after: always; padding: 2rem; }
+            * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+            body {
+                font-size: 10pt;
+                line-height: 1.6;
+                color: #000;
+                background: #fff;
+            }
+
             .pitch-nav { display: none; }
-            body { font-size: 11pt; }
+
+            .slide {
+                min-height: auto;
+                page-break-after: always;
+                page-break-inside: avoid;
+                padding: 1.5cm 2cm;
+                display: block;
+            }
+            .slide:nth-child(even):not(.cover-slide):not(.cta-slide) {
+                background: #F5F5F5;
+            }
+
+            /* Cover slide: dark bg for print */
+            .cover-slide {
+                background: #1E293B !important;
+                color: #fff;
+                padding: 3cm 2cm;
+                text-align: center;
+            }
+            .cover-slide h1 {
+                font-size: 28pt;
+                -webkit-text-fill-color: #fff;
+                color: #fff;
+                background: none;
+            }
+            .cover-tagline { color: var(--toki-accent); }
+            .cover-subtitle { color: #ccc; }
+            .cover-meta { color: #aaa; }
+            .cover-meta strong { color: #ccc; }
+            .cover-confidential { color: #999; border-color: #666; }
+
+            /* CTA slide: keep blue bg for print */
+            .cta-slide {
+                background: var(--toki-blue) !important;
+                color: #fff;
+            }
+            .cta-slide h2 { color: #fff; font-size: 20pt; }
+            .cta-slide .slide-number { color: rgba(255,255,255,0.6); }
+            .cta-slide .slide-lead { color: #ddd; }
+            .cta-contact { color: #fff; border-color: rgba(255,255,255,0.4); background: rgba(255,255,255,0.1); }
+            .cta-details { color: #ccc; }
+            .cta-details strong { color: #eee; }
+
+            /* Typography */
+            .slide h2 { font-size: 18pt; margin-bottom: 6pt; }
+            .slide h3 { font-size: 13pt; margin-bottom: 6pt; }
+            .slide-number { font-size: 7pt; color: #666; }
+            .slide-lead { font-size: 9pt; color: #333; margin-bottom: 12pt; }
+
+            /* Cards & grids: keep structure, ensure borders print */
+            .stat-grid, .problem-grid, .market-layers,
+            .bm-grid, .traction-grid, .segment-grid, .funds-grid {
+                gap: 8pt;
+            }
+            .stat-card, .problem-card, .solution-box, .market-layer,
+            .bm-card, .traction-item, .segment-card, .fund-item {
+                border: 1px solid #ccc;
+                padding: 10pt;
+                page-break-inside: avoid;
+            }
+            .stat-card .stat-number { font-size: 18pt; color: #1D4ED8; }
+            .stat-card .stat-label { color: #333; }
+
+            /* Solution result box */
+            .solution-result { background: var(--toki-blue) !important; color: #fff; }
+            .solution-result h4, .solution-result p { color: #fff; }
+
+            /* Key point */
+            .key-point {
+                background: #EFF6FF;
+                border-left: 3pt solid #2563EB;
+                padding: 8pt 10pt;
+                page-break-inside: avoid;
+            }
+            .key-point p { font-size: 8pt; color: #000; }
+            .key-point strong { color: #1D4ED8; }
+
+            /* Tables */
+            .comp-table, .fin-table { font-size: 8pt; }
+            .comp-table th, .fin-table th {
+                background: #E8E8E8 !important;
+                color: #333;
+            }
+            .comp-table .highlight { background: #E0EDFF !important; }
+            .comp-table td, .fin-table td { border-bottom: 0.5pt solid #ccc; }
+            .check { color: #16A34A; }
+            .cross { color: #DC2626; }
+
+            /* Moat list */
+            .moat-list li { border-bottom: 0.5pt solid #ccc; }
+            .moat-list .moat-num { color: #1D4ED8; }
+
+            /* Roadmap */
+            .roadmap { border-left: 1.5pt solid #ccc; }
+            .roadmap-item::before { background: #2563EB; }
+            .roadmap-item.future::before { background: #ccc; }
+            .roadmap-item .r-date { color: #1D4ED8; }
+            .roadmap-item.future .r-date { color: #666; }
+
+            /* Traction */
+            .traction-item .t-year { color: #1D4ED8; }
+
+            /* BM price */
+            .bm-card .bm-price { color: #1D4ED8; }
+
+            /* Fund pct */
+            .fund-item .fund-pct { color: #1D4ED8; }
+
+            /* Team */
+            .team-info .team-title { color: #1D4ED8; }
+
+            /* Segment tag */
+            .segment-card .seg-tag { color: #1D4ED8; }
+
+            /* Footer */
+            .pitch-footer {
+                page-break-after: avoid;
+                font-size: 7pt;
+                color: #666;
+            }
+
+            /* Links: show as text */
+            a { color: inherit; text-decoration: none; }
         }
     </style>
 </head>
@@ -1057,24 +1195,24 @@
 
         <div class="traction-grid">
             <div class="traction-item">
-                <p class="t-year">2012-2024</p>
-                <h4>技術開発・実証</h4>
-                <p>20年超の半導体エンジニアリングキャリアから石英ガラス刻印技術を確立。3,000回超の刻印テスト完了。音声バイナリQRコード・独自圧縮技術を開発</p>
+                <p class="t-year">2025 H1</p>
+                <h4>SoulCarrier活動・社会実績</h4>
+                <p>群馬県で5,000基の墓石を徒歩調査。日系アメリカ人マーティンさんの遺骨帰還を3年以上支援。Forbes JAPAN寄稿開始。X累計31万+インプレッション達成</p>
             </div>
             <div class="traction-item">
-                <p class="t-year">2023-2024</p>
-                <h4>オフグリッド実証</h4>
-                <p>2023年マウイ山火事後、オフグリッド生活を開始。太陽光・衛星通信・雨水での自律生活を実証。「サーバー不要」コンセプトの体現</p>
+                <p class="t-year">2025 H2</p>
+                <h4>技術・プロダクト完成</h4>
+                <p>3,000回超の刻印テスト完了。音声バイナリQRコード＋独自圧縮技術（最大10倍）を確立。金属蒸着による写真刻印の商用品質を達成</p>
             </div>
             <div class="traction-item">
-                <p class="t-year">2025-2026</p>
+                <p class="t-year">2026 Q1</p>
                 <h4>文化機関との連携</h4>
-                <p>伊勢神宮式年遷宮への奉納。比叡山延暦寺根本中堂への永代記名。日本ハワイ移民資料館とMOU締結。JICA横浜と協議進行中</p>
+                <p>伊勢神宮式年遷宮への奉納（1月）。比叡山延暦寺根本中堂への永代記名（1月）。日本ハワイ移民資料館とMOU締結。JICA横浜と協議進行中</p>
             </div>
             <div class="traction-item">
-                <p class="t-year">2025-2026</p>
-                <h4>SoulCarrier活動実績</h4>
-                <p>群馬県で5,000基の墓石を徒歩調査。日系アメリカ人マーティンさんの遺骨帰還を支援中。Forbes JAPAN寄稿。X累計31万+インプレッション</p>
+                <p class="t-year">2026 Q1</p>
+                <h4>事業基盤構築</h4>
+                <p>LP公開・先行受付開始。佐渡古民家の引渡し進行中（3月予定）。SoulCarrier共鳴の会 協力合意署名を取得。Workawayホスト登録支援を開始</p>
             </div>
         </div>
 
@@ -1341,7 +1479,7 @@
      ======================================== -->
 <section class="slide cta-slide">
     <div class="slide-inner">
-        <p class="slide-number" style="color:rgba(255,255,255,0.4);">14 - Vision</p>
+        <p class="slide-number">14 - Vision</p>
         <h2>存在証明は特権ではなく、<br>すべての人の権利です</h2>
         <p class="slide-lead">歴史に名を残せるのは一部の人だけ——その不平等に挑み、<br>すべての人が自らの存在を千年先に届けられる世界を実現します。</p>
 
