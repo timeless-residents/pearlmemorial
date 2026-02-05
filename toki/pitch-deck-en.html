@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>トキストレージ | 投資家向けピッチ資料</title>
+    <title>TokiStorage | Investor Pitch Deck</title>
     <meta name="robots" content="noindex, nofollow">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -748,7 +748,6 @@
                 background: #F5F5F5;
             }
 
-            /* Cover slide: dark bg for print */
             .cover-slide {
                 background: #1E293B !important;
                 color: #fff;
@@ -767,7 +766,6 @@
             .cover-meta strong { color: #ccc; }
             .cover-confidential { color: #999; border-color: #666; }
 
-            /* CTA slide: keep blue bg for print */
             .cta-slide {
                 background: var(--toki-blue) !important;
                 color: #fff;
@@ -779,13 +777,11 @@
             .cta-details { color: #ccc; }
             .cta-details strong { color: #eee; }
 
-            /* Typography */
             .slide h2 { font-size: 18pt; margin-bottom: 6pt; }
             .slide h3 { font-size: 13pt; margin-bottom: 6pt; }
             .slide-number { font-size: 7pt; color: #666; }
             .slide-lead { font-size: 9pt; color: #333; margin-bottom: 12pt; }
 
-            /* Cards & grids: keep structure, ensure borders print */
             .stat-grid, .problem-grid, .market-layers,
             .bm-grid, .traction-grid, .segment-grid, .funds-grid {
                 gap: 8pt;
@@ -799,11 +795,9 @@
             .stat-card .stat-number { font-size: 18pt; color: #1D4ED8; }
             .stat-card .stat-label { color: #333; }
 
-            /* Solution result box */
             .solution-result { background: var(--toki-blue) !important; color: #fff; }
             .solution-result h4, .solution-result p { color: #fff; }
 
-            /* Key point */
             .key-point {
                 background: #EFF6FF;
                 border-left: 3pt solid #2563EB;
@@ -813,7 +807,6 @@
             .key-point p { font-size: 8pt; color: #000; }
             .key-point strong { color: #1D4ED8; }
 
-            /* Tables */
             .comp-table, .fin-table { font-size: 8pt; }
             .comp-table th, .fin-table th {
                 background: #E8E8E8 !important;
@@ -824,33 +817,21 @@
             .check { color: #16A34A; }
             .cross { color: #DC2626; }
 
-            /* Moat list */
             .moat-list li { border-bottom: 0.5pt solid #ccc; }
             .moat-list .moat-num { color: #1D4ED8; }
 
-            /* Roadmap */
             .roadmap { border-left: 1.5pt solid #ccc; }
             .roadmap-item::before { background: #2563EB; }
             .roadmap-item.future::before { background: #ccc; }
             .roadmap-item .r-date { color: #1D4ED8; }
             .roadmap-item.future .r-date { color: #666; }
 
-            /* Traction */
             .traction-item .t-year { color: #1D4ED8; }
-
-            /* BM price */
             .bm-card .bm-price { color: #1D4ED8; }
-
-            /* Fund pct */
             .fund-item .fund-pct { color: #1D4ED8; }
-
-            /* Team */
             .team-info .team-title { color: #1D4ED8; }
-
-            /* Segment tag */
             .segment-card .seg-tag { color: #1D4ED8; }
 
-            /* Question comparison */
             .question-compare-label { color: rgba(255,255,255,0.6); font-size: 7pt; }
             .question-row .q-company { color: rgba(255,255,255,0.5); font-size: 7pt; }
             .question-row .q-text { color: rgba(255,255,255,0.8); font-size: 8pt; }
@@ -858,14 +839,12 @@
             .question-row.q-highlight .q-company { color: #fff; }
             .question-row.q-highlight .q-text { color: #fff; }
 
-            /* Footer */
             .pitch-footer {
                 page-break-after: avoid;
                 font-size: 7pt;
                 color: #666;
             }
 
-            /* Links: show as text */
             a { color: inherit; text-decoration: none; }
         }
     </style>
@@ -874,7 +853,7 @@
 
 <!-- Navigation -->
 <nav class="pitch-nav">
-    <a href="index.html" class="nav-brand">トキストレージ</a>
+    <a href="index-en.html" class="nav-brand">TokiStorage</a>
     <span class="nav-label">INVESTOR PITCH DECK - CONFIDENTIAL</span>
 </nav>
 
@@ -883,15 +862,15 @@
      ======================================== -->
 <section class="slide cover-slide">
     <div class="slide-inner">
-        <p class="cover-tagline">存在証明の民主化</p>
-        <h1>トキストレージ</h1>
-        <p class="cover-subtitle">石英ガラスに刻む、千年の存在証明</p>
+        <p class="cover-tagline">Democratizing Proof of Existence</p>
+        <h1>TokiStorage</h1>
+        <p class="cover-subtitle">A Millennium of Memory, Etched in Quartz Glass</p>
         <div class="cover-meta">
-            <strong>Universal Need株式会社</strong><br>
-            代表取締役 佐藤 卓也<br>
-            2026年2月
+            <strong>Universal Need Corp.</strong><br>
+            CEO: Takuya Sato<br>
+            February 2026
         </div>
-        <div class="cover-confidential">CONFIDENTIAL - 配布厳禁</div>
+        <div class="cover-confidential">CONFIDENTIAL - DO NOT DISTRIBUTE</div>
     </div>
 </section>
 
@@ -901,30 +880,30 @@
 <section class="slide">
     <div class="slide-inner">
         <p class="slide-number">01 - Executive Summary</p>
-        <h2>千年先の存在証明市場を創る</h2>
-        <p class="slide-lead">石英ガラス x QRコード技術で、サーバー不要・維持費ゼロの永続メモリアルを個人に届ける。データセンター向け技術を初めて「個人の存在証明」へ民主化するプロダクト。</p>
+        <h2>Creating the Millennium Memorial Market</h2>
+        <p class="slide-lead">Quartz glass &#215; QR code technology delivers a server-free, zero-maintenance perpetual memorial to individuals. The first product to democratize data-center-grade storage technology for personal proof of existence.</p>
 
         <div class="stat-grid">
             <div class="stat-card">
-                <div class="stat-number">1,000<span class="stat-unit">年</span></div>
-                <div class="stat-label">物理的保存期間</div>
+                <div class="stat-number">1,000<span class="stat-unit"> yr</span></div>
+                <div class="stat-label">Physical preservation</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number">0<span class="stat-unit">円</span></div>
-                <div class="stat-label">年間維持費（顧客側）</div>
+                <div class="stat-number">$0</div>
+                <div class="stat-label">Annual maintenance (customer)</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number">3,000<span class="stat-unit">回超</span></div>
-                <div class="stat-label">刻印テスト実績</div>
+                <div class="stat-number">3,000<span class="stat-unit">+</span></div>
+                <div class="stat-label">Engraving tests completed</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number">5<span class="stat-unit">万円〜</span></div>
-                <div class="stat-label">エントリー価格</div>
+                <div class="stat-number">$330<span class="stat-unit">~</span></div>
+                <div class="stat-label">Entry price</div>
             </div>
         </div>
 
         <div class="key-point">
-            <p><strong>投資ハイライト：</strong>サーバーコストゼロのため、販売数増加に比例して限界費用が逓減するスケーラブルなビジネスモデル。「存在証明の民主化」を掲げる以上、最終到達点は人類一人ひとりが永続墓誌を持つ世界。製造の自動化と限界費用の極小化がその世界線を現実にする。佐渡の1件から、80億人へ。</p>
+            <p><strong>Investment Highlight:</strong> Zero server costs mean marginal costs decrease proportionally as sales volume grows&#8212;a structurally scalable business model. As we champion "democratizing proof of existence," the ultimate destination is a world where every human being has a perpetual memorial. Manufacturing automation and near-zero marginal cost will make that future a reality. From one home in Sado, to 8 billion people.</p>
         </div>
     </div>
 </section>
@@ -935,29 +914,29 @@
 <section class="slide">
     <div class="slide-inner">
         <p class="slide-number">02 - Problem</p>
-        <h2>記憶はなぜ消えてしまうのか</h2>
-        <p class="slide-lead">現代のメモリアル手段はすべて「時間の壁」に直面しています。</p>
+        <h2>Why Do Memories Disappear?</h2>
+        <p class="slide-lead">Every modern method of memorialization faces the wall of time.</p>
 
         <div class="problem-grid">
             <div class="problem-card">
                 <div class="p-icon">&#x1F4BE;</div>
-                <h4>デジタルの寿命問題</h4>
-                <p>クラウドサービスの平均寿命は10-15年。S&amp;P 500企業の平均寿命すら20年未満に縮小（McKinsey調査）。100年後にデータが残る保証はゼロ。</p>
+                <h4>The Digital Lifespan Problem</h4>
+                <p>Average lifespan of a cloud service: 10&#8211;15 years. Even S&amp;P 500 companies last fewer than 20 years on average (McKinsey). Zero guarantee your data survives 100 years.</p>
             </div>
             <div class="problem-card">
                 <div class="p-icon">&#x1FAA6;</div>
-                <h4>墓の維持が困難な時代</h4>
-                <p>年間推定10万基以上が墓じまい。墓石自体の寿命は100-200年。風化・酸性雨で刻字は消失。少子化・核家族化・都市集中で維持は困難に。</p>
+                <h4>Graves Are Becoming Unsustainable</h4>
+                <p>Over 100,000 graves are decommissioned annually in Japan alone. Headstone lifespan: 100&#8211;200 years. Inscriptions erode from weathering and acid rain. Declining birthrates and urbanization make maintenance impossible.</p>
             </div>
             <div class="problem-card">
                 <div class="p-icon">&#x1F464;</div>
-                <h4>記憶の不平等</h4>
-                <p>歴史に名を残せるのは一部の特権階級のみ。一般人の存在記録は3世代で消失。「あなたの曾祖父母の名前を言えますか？」</p>
+                <h4>The Inequality of Memory</h4>
+                <p>Only the privileged few leave records in history. An ordinary person's existence vanishes within 3 generations. "Can you name your great-grandparents?"</p>
             </div>
         </div>
 
         <div class="key-point">
-            <p><strong>市場の構造的課題：</strong>既存のメモリアルサービスはすべて「サーバー依存」か「素材劣化」のどちらか（または両方）の問題を抱えている。この課題を物理的に解決する手段は、個人向けにはまだ存在しない。</p>
+            <p><strong>Structural Market Gap:</strong> Every existing memorial service depends on either "servers" or "materials that degrade"&#8212;or both. No solution has physically solved this problem for individuals&#8212;until now.</p>
         </div>
     </div>
 </section>
@@ -968,39 +947,39 @@
 <section class="slide">
     <div class="slide-inner">
         <p class="slide-number">03 - Solution</p>
-        <h2>石英ガラス x QRコード = 永続墓誌</h2>
-        <p class="slide-lead">サーバー不要・電源不要。1000年後、スマホをかざすだけで記憶が蘇る。</p>
+        <h2>Quartz Glass &#215; QR Code = Perpetual Memorial</h2>
+        <p class="slide-lead">No server. No power. 1,000 years from now, just hold up a smartphone and the memory comes alive.</p>
 
         <div class="solution-equation">
             <div class="solution-box">
                 <div class="s-icon">&#x1F48E;</div>
-                <h4>石英ガラス</h4>
-                <p>1000年の耐久性<br>1000&#x2103;耐熱</p>
+                <h4>Quartz Glass</h4>
+                <p>1,000-year durability<br>1,000&#x2103; heat resistance</p>
             </div>
             <div class="solution-operator">+</div>
             <div class="solution-box">
                 <div class="s-icon">&#x1F4F1;</div>
-                <h4>QRコード</h4>
-                <p>ISO国際規格<br>30年以上の実績</p>
+                <h4>QR Code</h4>
+                <p>ISO international standard<br>30+ years of proven use</p>
             </div>
             <div class="solution-operator">=</div>
             <div class="solution-box solution-result">
                 <div class="s-icon">&#x2728;</div>
-                <h4>トキストレージ</h4>
-                <p>永続墓誌<br>維持費ゼロ</p>
+                <h4>TokiStorage</h4>
+                <p>Perpetual memorial<br>Zero maintenance</p>
             </div>
         </div>
 
-        <h3>技術的裏付け</h3>
+        <h3>Scientific Foundation</h3>
         <ul style="margin:1rem 0 1.5rem 1.2rem; color:var(--text-secondary); font-size:0.9rem;">
-            <li>日立製作所・京都大学：石英ガラスへのレーザー記録で3億年以上のデータ保存を実証（2012年）</li>
-            <li>Microsoft Project Silica：石英ガラスベースのデータセンター保存技術を研究開発中</li>
-            <li>代表の半導体製造装置開発 20年超のキャリアから独自の金属蒸着刻印技術を確立</li>
-            <li>音声バイナリデータのQRコード化＋独自圧縮技術（最大10倍）を開発済</li>
+            <li>Hitachi &amp; Kyoto University: demonstrated 300M+ years of data preservation on quartz glass via laser recording (2012)</li>
+            <li>Microsoft Project Silica: actively developing quartz-glass-based data center storage technology</li>
+            <li>Founder's 20+ year career in semiconductor manufacturing equipment led to proprietary metal deposition engraving technology</li>
+            <li>Developed proprietary voice-to-QR binary encoding with up to 10&#215; compression</li>
         </ul>
 
         <div class="key-point">
-            <p><strong>先端技術の民主化：</strong>データセンター向けの石英ガラスストレージ技術（5Dメモリクリスタル等）は存在するが、専用機器が必要で個人向けではない。トキストレージは「スマホで読み取れる」唯一の個人向け石英ガラスメモリアルとして、このギャップを埋める。</p>
+            <p><strong>Democratizing Deep Tech:</strong> Quartz glass storage for data centers (5D Memory Crystal, etc.) exists, but requires specialized equipment and is not consumer-facing. TokiStorage is the only personal quartz glass memorial that can be read with a smartphone&#8212;bridging this gap.</p>
         </div>
     </div>
 </section>
@@ -1011,66 +990,66 @@
 <section class="slide">
     <div class="slide-inner">
         <p class="slide-number">04 - Market Opportunity</p>
-        <h2>人類規模の市場──死と記憶の交差点</h2>
-        <p class="slide-lead">年間6,000万人が亡くなる世界で、メモリアル産業はすべての文化圏に存在する。<br>「永続保存」はその未開拓レイヤーであり、地理・宗教・文化を問わない。</p>
+        <h2>A Human-Scale Market&#8212;Where Death Meets Memory</h2>
+        <p class="slide-lead">In a world where 60 million people die each year, the memorial industry exists in every culture.<br>"Perpetual preservation" is its untapped layer&#8212;transcending geography, religion, and culture.</p>
 
         <div class="market-layers">
             <div class="market-layer">
                 <p class="m-label">TAM</p>
-                <div class="m-size">20兆円</div>
-                <h4>世界のデスケア・メモリアル市場</h4>
-                <p>葬儀・埋葬・火葬・メモリアルサービスを含むグローバル市場（約$130B）。年間死亡者6,000万人は今後も増加</p>
+                <div class="m-size">$130B</div>
+                <h4>Global Deathcare &amp; Memorial Market</h4>
+                <p>Funeral, burial, cremation, and memorial services worldwide (&#165;20T). 60M annual deaths and growing</p>
             </div>
             <div class="market-layer">
                 <p class="m-label">SAM</p>
-                <div class="m-size">6兆円</div>
-                <h4>永続保存と親和性の高い文化圏</h4>
-                <p>日本（1.8兆円）＋先祖供養文化のあるアジア太平洋圏＋北米・欧州の墓地メモリアル市場。物理的永続保存への潜在需要が顕在化しつつある領域</p>
+                <div class="m-size">$40B</div>
+                <h4>Cultures with High Affinity for Perpetual Preservation</h4>
+                <p>Japan (&#165;1.8T) + Asia-Pacific ancestor veneration cultures + North American &amp; European cemetery memorial market. Latent demand for physical perpetual preservation is surfacing</p>
             </div>
             <div class="market-layer">
                 <p class="m-label">SOM</p>
-                <div class="m-size">500億円</div>
-                <h4>5年以内の到達可能市場</h4>
-                <p>日本の終活・墓じまい層＋B2B（寺院・葬儀社・自治体）＋マウイ起点の北米初期展開＋在外日系人コミュニティ</p>
+                <div class="m-size">$3.3B</div>
+                <h4>Addressable Market Within 5 Years</h4>
+                <p>Japan's end-of-life planning &amp; grave decommissioning + B2B (temples, funeral homes, municipalities) + North America via Maui + overseas Japanese communities</p>
             </div>
         </div>
 
-        <h3>ターゲットセグメント</h3>
+        <h3>Target Segments</h3>
         <div class="segment-grid">
             <div class="segment-card">
-                <p class="seg-tag">PRIMARY - LTV最高</p>
-                <h4>終活シニア（60-80代）</h4>
-                <p>終活市場は拡大中。「子供に迷惑をかけたくない」「サブスク不要で買い切り」のニーズに合致。仏壇店・葬儀社経由での獲得が有効</p>
+                <p class="seg-tag">PRIMARY - HIGHEST LTV</p>
+                <h4>End-of-Life Planners (60&#8211;80s)</h4>
+                <p>End-of-life planning is a growing market. "I don't want to burden my children" and "one-time purchase, no subscription" resonate. Effective acquisition via Buddhist altar shops and funeral homes</p>
             </div>
             <div class="segment-card">
-                <p class="seg-tag">PRIMARY - LTV高</p>
-                <h4>墓じまい検討層</h4>
-                <p>年間10万基以上が墓じまい。「墓を閉じた後の記録の受け皿」として提案。家族分の追加購入によりLTV増大</p>
-            </div>
-            <div class="segment-card">
-                <p class="seg-tag">SECONDARY</p>
-                <h4>寺院・仏壇店・葬儀社</h4>
-                <p>B2Bチャネルとして卸販売。既存の顧客基盤を活用。墓じまい相談が増加する中、新たな提案商材として需要あり</p>
+                <p class="seg-tag">PRIMARY - HIGH LTV</p>
+                <h4>Grave Decommissioning Families</h4>
+                <p>100K+ graves decommissioned annually in Japan. Positioned as "the archive after you close the grave." Multi-unit family purchases increase LTV</p>
             </div>
             <div class="segment-card">
                 <p class="seg-tag">SECONDARY</p>
-                <h4>行政・自治体・企業</h4>
-                <p>戦没者名簿、災害記録、企業記念品。公的予算に馴染むサーバー不要・維持費ゼロの構造。JICA横浜・日本ハワイ移民資料館との連携実績あり</p>
+                <h4>Temples, Altar Shops &amp; Funeral Homes</h4>
+                <p>B2B wholesale channel leveraging existing customer bases. As grave decommissioning consultations surge, TokiStorage becomes a compelling new offering</p>
+            </div>
+            <div class="segment-card">
+                <p class="seg-tag">SECONDARY</p>
+                <h4>Government &amp; Institutions</h4>
+                <p>War memorials, disaster records, corporate commemorations. The server-free, zero-maintenance structure fits public budgets. Existing partnerships with JICA Yokohama &amp; Japan-Hawaii Immigration Museum</p>
             </div>
             <div class="segment-card">
                 <p class="seg-tag">GLOBAL EXPANSION</p>
-                <h4>海外墓地・西洋メモリアル市場</h4>
-                <p>欧米の墓地は風化・管理放棄・都市開発による消失が深刻化。サーバー不要・言語非依存のQRコードは文化圏を問わず機能。マウイ拠点を起点に北米市場へのアクセスが可能</p>
+                <h4>Western Cemetery &amp; Memorial Market</h4>
+                <p>Graves in Europe and North America face serious erosion, abandonment, and urban redevelopment. Server-free, language-agnostic QR codes work across all cultures. Maui base provides North American market access</p>
             </div>
             <div class="segment-card">
                 <p class="seg-tag">GLOBAL EXPANSION</p>
-                <h4>アジア諸国・在外日系人コミュニティ</h4>
-                <p>先祖供養の文化が根強い東アジア・東南アジア圏は親和性が高い。ハワイ・ブラジル等の日系人コミュニティはルーツ保全の需要が顕在化。英語版LP公開済み</p>
+                <h4>Asia &amp; Overseas Japanese Communities</h4>
+                <p>East and Southeast Asia's deep ancestor veneration traditions are highly compatible. Japanese communities in Hawaii, Brazil, etc. have tangible demand for heritage preservation. English LP already live</p>
             </div>
         </div>
 
         <div class="key-point">
-            <p><strong>グローバル展開の構造的優位性：</strong>石英ガラス x QRコードは言語・宗教・文化に依存しない普遍的技術。維持費ゼロ・サーバー不要の構造は、インフラが不安定な地域でもそのまま機能する。「存在証明の民主化」というミッションは国境を越える。</p>
+            <p><strong>Structural Advantage for Global Expansion:</strong> Quartz glass &#215; QR code is a universal technology&#8212;independent of language, religion, or culture. The zero-maintenance, server-free architecture works even in regions with unstable infrastructure. The mission of "democratizing proof of existence" crosses all borders.</p>
         </div>
     </div>
 </section>
@@ -1081,48 +1060,48 @@
 <section class="slide cta-slide">
     <div class="slide-inner">
         <p class="slide-number">05 - Vision</p>
-        <h2>80億人が永続墓誌を持つ世界から逆算する</h2>
-        <p class="slide-lead">「存在証明の民主化」とは、すべての人が自らの存在を千年先に届けられる世界を実現すること。<br>その世界線から今日を逆算したとき、トキストレージの現在地が見えてきます。</p>
+        <h2>Backcasting from a World Where 8 Billion People Have a Perpetual Memorial</h2>
+        <p class="slide-lead">"Democratizing proof of existence" means building a world where every person can send their existence a thousand years into the future.<br>Backcasting from that world reveals where TokiStorage stands today.</p>
 
         <div class="question-compare">
-            <p class="question-compare-label">THE DEFINING QUESTION ── 世界を変えた企業は、一つの「問い」から始まった</p>
+            <p class="question-compare-label">THE DEFINING QUESTION &#8212; Every world-changing company started with one question</p>
             <div class="question-row">
                 <span class="q-company">Google</span>
-                <span class="q-text">「世界中の情報を整理し、誰もがアクセスできるようにする」</span>
+                <span class="q-text">"Can we organize all the world's information and make it universally accessible?"</span>
             </div>
             <div class="question-row">
                 <span class="q-company">Tesla</span>
-                <span class="q-text">「持続可能エネルギーへの移行を加速できるか」</span>
+                <span class="q-text">"Can we accelerate the transition to sustainable energy?"</span>
             </div>
             <div class="question-row">
                 <span class="q-company">Wikipedia</span>
-                <span class="q-text">「人類の全知識を、すべての人に無料で届けられるか」</span>
+                <span class="q-text">"Can we give all human knowledge to every person for free?"</span>
             </div>
             <div class="question-row">
                 <span class="q-company">SpaceX</span>
-                <span class="q-text">「人類を多惑星種にできるか」</span>
+                <span class="q-text">"Can we make humanity a multi-planetary species?"</span>
             </div>
             <div class="question-row q-highlight">
-                <span class="q-company">トキストレージ</span>
-                <span class="q-text">「すべての人の存在を、千年先に届けられるか」</span>
+                <span class="q-company">TokiStorage</span>
+                <span class="q-text">"Can we deliver every person's existence a thousand years into the future?"</span>
             </div>
         </div>
 
         <p class="slide-lead" style="font-size:0.85rem; margin-bottom:1.5rem; opacity:0.8;">
-            問いのスケールが市場のスケールを決める。<br>
-            80億人×「存在を残したい」という普遍的欲求──<br>
-            この問いの射程は、情報・エネルギー・知識と同じ人類規模にある。
+            The scale of the question defines the scale of the market.<br>
+            8 billion people &#215; the universal desire to leave a mark&#8212;<br>
+            this question operates at the same human scale as information, energy, and knowledge.
         </p>
 
         <div class="cta-contact" style="text-align:left; max-width:580px; margin:0 auto; padding:1.5rem 2rem;">
             <strong style="color:#fff; font-size:0.8rem; letter-spacing:0.05em;">BACKCASTING</strong><br>
             <span style="font-size:0.85rem; opacity:0.85;">
-            2050&#x2500; 永続墓誌がパスポートのように個人の基本インフラとなる<br>
-            2040&#x2500; アジア・中東・アフリカの供養文化圏へ展開完了<br>
-            2035&#x2500; 欧米墓地管理団体との標準提携。自治体が住民に配布<br>
-            2030&#x2500; 製造の自動化・現地パートナー展開で限界費用が極小化<br>
-            2028&#x2500; 国内B2Bチャネル確立。海外展開開始<br>
-            <strong style="color:#fff;">2026&#x2500; 今ここ。佐渡から始まる。</strong>
+            2050&#x2500; Perpetual memorials become personal infrastructure, like a passport<br>
+            2040&#x2500; Expansion complete across Asia, Middle East, and African veneration cultures<br>
+            2035&#x2500; Standard partnerships with Western cemetery associations. Municipalities distribute to residents<br>
+            2030&#x2500; Manufacturing automation &amp; local partners drive marginal cost to near zero<br>
+            2028&#x2500; Domestic B2B channels established. International expansion begins<br>
+            <strong style="color:#fff;">2026&#x2500; We are here. Starting from Sado.</strong>
             </span>
         </div>
     </div>
@@ -1134,74 +1113,74 @@
 <section class="slide">
     <div class="slide-inner">
         <p class="slide-number">06 - Competitive Landscape</p>
-        <h2>「1000年 x スマホ読取」は唯一のポジション</h2>
-        <p class="slide-lead">短期保存 x 専門機器の象限はレッドオーシャン。トキストレージはブルーオーシャン。</p>
+        <h2>"1,000 Years &#215; Smartphone-Readable" Is a Unique Position</h2>
+        <p class="slide-lead">The "short-term preservation &#215; specialized equipment" quadrant is a red ocean. TokiStorage occupies the blue ocean.</p>
 
         <table class="comp-table">
             <thead>
                 <tr>
-                    <th>比較項目</th>
-                    <th class="highlight">トキストレージ</th>
-                    <th>QRコード墓石</th>
-                    <th>オンライン墓</th>
-                    <th>タイムカプセル</th>
-                    <th>5Dメモリクリスタル</th>
+                    <th>Criteria</th>
+                    <th class="highlight">TokiStorage</th>
+                    <th>QR Gravestones</th>
+                    <th>Online Memorials</th>
+                    <th>Time Capsules</th>
+                    <th>5D Memory Crystal</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>保存期間</td>
-                    <td class="highlight"><strong>1,000年</strong></td>
-                    <td>サービス依存</td>
-                    <td>サービス依存</td>
-                    <td>10-50年</td>
-                    <td>理論上138億年</td>
+                    <td>Preservation</td>
+                    <td class="highlight"><strong>1,000 years</strong></td>
+                    <td>Service-dependent</td>
+                    <td>Service-dependent</td>
+                    <td>10&#8211;50 years</td>
+                    <td>13.8B years (theory)</td>
                 </tr>
                 <tr>
-                    <td>サーバー依存</td>
-                    <td class="highlight"><span class="check">不要</span></td>
-                    <td><span class="cross">必要</span></td>
-                    <td><span class="cross">必要</span></td>
-                    <td><span class="check">不要</span></td>
-                    <td><span class="check">不要</span></td>
+                    <td>Server Required</td>
+                    <td class="highlight"><span class="check">No</span></td>
+                    <td><span class="cross">Yes</span></td>
+                    <td><span class="cross">Yes</span></td>
+                    <td><span class="check">No</span></td>
+                    <td><span class="check">No</span></td>
                 </tr>
                 <tr>
-                    <td>読取方法</td>
-                    <td class="highlight"><strong>スマホ</strong></td>
-                    <td>スマホ</td>
-                    <td>ブラウザ</td>
-                    <td>開封のみ</td>
-                    <td><span class="cross">専用光学機器</span></td>
+                    <td>How to Read</td>
+                    <td class="highlight"><strong>Smartphone</strong></td>
+                    <td>Smartphone</td>
+                    <td>Browser</td>
+                    <td>Open only</td>
+                    <td><span class="cross">Specialized optics</span></td>
                 </tr>
                 <tr>
-                    <td>個人向け販売</td>
-                    <td class="highlight"><span class="check">あり</span></td>
-                    <td><span class="check">あり</span></td>
-                    <td><span class="check">あり</span></td>
-                    <td><span class="check">あり</span></td>
-                    <td><span class="cross">なし（B2Bのみ）</span></td>
+                    <td>Consumer Sales</td>
+                    <td class="highlight"><span class="check">Yes</span></td>
+                    <td><span class="check">Yes</span></td>
+                    <td><span class="check">Yes</span></td>
+                    <td><span class="check">Yes</span></td>
+                    <td><span class="cross">No (B2B only)</span></td>
                 </tr>
                 <tr>
-                    <td>維持費</td>
-                    <td class="highlight"><strong>0円</strong></td>
-                    <td>月額課金</td>
-                    <td>月額500-3,000円</td>
-                    <td>保管料</td>
-                    <td>保守契約</td>
+                    <td>Ongoing Cost</td>
+                    <td class="highlight"><strong>$0</strong></td>
+                    <td>Monthly fee</td>
+                    <td>$3&#8211;20/mo</td>
+                    <td>Storage fee</td>
+                    <td>Service contract</td>
                 </tr>
                 <tr>
-                    <td>サービス終了リスク</td>
-                    <td class="highlight"><span class="check">製品単体で機能</span></td>
-                    <td><span class="cross">あり</span></td>
-                    <td><span class="cross">あり</span></td>
-                    <td>低</td>
-                    <td>低</td>
+                    <td>Service Shutdown Risk</td>
+                    <td class="highlight"><span class="check">Works standalone</span></td>
+                    <td><span class="cross">Yes</span></td>
+                    <td><span class="cross">Yes</span></td>
+                    <td>Low</td>
+                    <td>Low</td>
                 </tr>
             </tbody>
         </table>
 
         <div class="key-point">
-            <p><strong>ポジショニング：</strong>「超長期保存（1000年） x スマホで読取可能」の象限に位置するのはトキストレージのみ。5Dメモリクリスタルは138億年保存可能だが専用機器が必要で個人向けではない。QRコード墓石はスマホ対応だがサーバー依存。この構造的ギャップが参入障壁となる。</p>
+            <p><strong>Positioning:</strong> TokiStorage is the only product in the "ultra-long preservation (1,000 years) &#215; smartphone-readable" quadrant. 5D Memory Crystal can theoretically last 13.8 billion years, but requires specialized equipment and isn't consumer-facing. QR gravestones are smartphone-compatible but server-dependent. This structural gap is our moat.</p>
         </div>
     </div>
 </section>
@@ -1212,55 +1191,55 @@
 <section class="slide">
     <div class="slide-inner">
         <p class="slide-number">07 - Business Model</p>
-        <h2>製品販売 + 体験サービスの複合モデル</h2>
-        <p class="slide-lead">買い切り型の製品収益を軸に、高単価リトリート体験と法人チャネルで多角化。</p>
+        <h2>Product Sales + Experience Service Hybrid</h2>
+        <p class="slide-lead">One-time product revenue at the core, diversified through high-ticket retreat experiences and B2B channels.</p>
 
         <div class="bm-grid">
             <div class="bm-card">
-                <h4>個人プラン</h4>
-                <div class="bm-price">5万円（税込）</div>
-                <p>石英ガラスプレート（50x50mm）にQRコード・テキスト・画像を刻印。オンライン完結で全国配送。</p>
+                <h4>Individual Plan</h4>
+                <div class="bm-price">&#165;50,000 (~$330)</div>
+                <p>Quartz glass plate (50&#215;50mm) with QR code, text, and image engraving. Fully online process, nationwide delivery.</p>
                 <ul>
-                    <li>エントリー商品として認知獲得</li>
-                    <li>ギフト購入需要も見込む</li>
-                    <li>年あたり50円の訴求力</li>
+                    <li>Entry product for brand awareness</li>
+                    <li>Gift purchase demand expected</li>
+                    <li>~$0.33/year value proposition</li>
                 </ul>
             </div>
             <div class="bm-card">
-                <h4>三世代プラン（推奨）</h4>
-                <div class="bm-price">55万円（税込）</div>
-                <p>祖父母から孫へ。家系図デザイン、家族写真刻印、佐渡/ハナでの現地製作体験（2泊3日）込み。</p>
+                <h4>Three-Generation Plan (Recommended)</h4>
+                <div class="bm-price">&#165;550,000 (~$3,700)</div>
+                <p>From grandparents to grandchildren. Family tree design, family photo engraving, on-site crafting experience in Sado or Hana (2 nights, 3 days).</p>
                 <ul>
-                    <li>体験型サービスで高単価を実現</li>
-                    <li>家族単位での購入でLTV最大化</li>
-                    <li>「作る体験」が口コミの起点に</li>
+                    <li>High ARPU through experiential service</li>
+                    <li>Family-unit purchases maximize LTV</li>
+                    <li>"Making it yourself" drives word-of-mouth</li>
                 </ul>
             </div>
             <div class="bm-card">
-                <h4>ボイスメモリアルコース</h4>
-                <div class="bm-price">555万円（税込）</div>
-                <p>年5家族限定。肉声録音＋金属蒸着刻印＋12回の伴走セッション。代表が直接伴走する完全オーダーメイド。</p>
+                <h4>Voice Memorial Course</h4>
+                <div class="bm-price">&#165;5,550,000 (~$37,000)</div>
+                <p>Limited to 5 families/year. Voice recording + metal deposition engraving + 12 guided sessions. Fully bespoke, personally guided by the founder.</p>
                 <ul>
-                    <li>最高収益商材（555万円/件）</li>
-                    <li>独自の金属蒸着技術による差別化</li>
-                    <li>売上はSoulCarrier活動に還元</li>
+                    <li>Highest revenue per unit (~$37K)</li>
+                    <li>Proprietary metal deposition technology</li>
+                    <li>Revenue funds SoulCarrier social mission</li>
                 </ul>
             </div>
             <div class="bm-card">
-                <h4>年間共鳴メンバーシップ</h4>
-                <div class="bm-price">999万円/年</div>
-                <p>ボイスメモリアルコース購入者限定。パトロン銘板刻印、年次活動報告、法人パトロネージ対応。</p>
+                <h4>Annual Resonance Membership</h4>
+                <div class="bm-price">&#165;9,990,000/yr (~$67K)</div>
+                <p>Exclusive to Voice Memorial purchasers. Patron plaque engraving, annual activity report, corporate patronage available.</p>
                 <ul>
-                    <li>リカーリング収益の柱</li>
-                    <li>法人の広告宣伝費として経費処理可</li>
-                    <li>ブランドのソーシャル信頼性向上</li>
+                    <li>Recurring revenue pillar</li>
+                    <li>Deductible as advertising expense for corporates</li>
+                    <li>Enhances brand social credibility</li>
                 </ul>
             </div>
         </div>
 
-        <h3>収益構造の特徴</h3>
+        <h3>Revenue Structure Characteristics</h3>
         <div class="key-point">
-            <p><strong>限界費用逓減が「民主化」を可能にする：</strong>製品はオフラインで完結するため、顧客数が増えてもサーバー費・保守費が発生しない。変動費は製造原価（石英ガラス加工）のみ。製造の自動化・外注化が進むほど限界費用は下がり、価格を下げてもマージンが残る構造になる。この逓減曲線の先に、すべての人が永続墓誌を持てる世界がある。</p>
+            <p><strong>Decreasing Marginal Cost Enables Democratization:</strong> Products are fully offline, so server and maintenance costs don't increase with customers. Variable cost is manufacturing only (quartz glass processing). As manufacturing is automated and outsourced, marginal cost drops&#8212;allowing price reductions while preserving margin. At the end of this curve lies a world where everyone can have a perpetual memorial.</p>
         </div>
     </div>
 </section>
@@ -1271,62 +1250,62 @@
 <section class="slide">
     <div class="slide-inner">
         <p class="slide-number">08 - Go-to-Market</p>
-        <h2>国内流通＋海外展開の多層チャネル</h2>
-        <p class="slide-lead">仏壇店・葬儀社の既存インフラを活用しつつ、マウイ拠点から海外市場を開拓。</p>
+        <h2>Multi-Layer Channels: Domestic Distribution + Global Expansion</h2>
+        <p class="slide-lead">Leveraging existing infrastructure of Buddhist altar shops and funeral homes while opening international markets from our Maui base.</p>
 
         <div class="bm-grid">
             <div class="bm-card">
-                <h4>B2B提携チャネル（国内）</h4>
+                <h4>B2B Partnership Channel (Domestic)</h4>
                 <ul>
-                    <li>仏壇店（現代仏壇等）：既存顧客基盤への卸販売</li>
-                    <li>葬儀社ネットワーク：エンドオブライフ接点</li>
-                    <li>石材店：墓じまい相談時の提案商材</li>
-                    <li>終活セミナー・イベント出展</li>
+                    <li>Buddhist altar shops: wholesale to existing customer base</li>
+                    <li>Funeral home networks: end-of-life touchpoint</li>
+                    <li>Stone dealers: proposal during grave decommissioning</li>
+                    <li>End-of-life planning seminars &amp; events</li>
                 </ul>
             </div>
             <div class="bm-card">
-                <h4>D2C・メディアチャネル</h4>
+                <h4>D2C &amp; Media Channel</h4>
                 <ul>
-                    <li>公式Webサイト（日英LP公開済）</li>
-                    <li>Calendlyによるオンライン無料相談</li>
-                    <li>X（Twitter）31万+インプレッション</li>
-                    <li>Forbes JAPAN寄稿による認知拡大</li>
+                    <li>Official website (EN/JP landing pages live)</li>
+                    <li>Calendly online consultation (free)</li>
+                    <li>X (Twitter) 310K+ impressions</li>
+                    <li>Forbes JAPAN contributor for brand awareness</li>
                 </ul>
             </div>
             <div class="bm-card">
-                <h4>体験チャネル（2拠点）</h4>
+                <h4>Experience Channel (2 Locations)</h4>
                 <ul>
-                    <li>佐渡リトリート（2026年7月〜）</li>
-                    <li>ハナ（マウイ）工房体験</li>
-                    <li>Workaway国際コミュニティ経由の認知</li>
-                    <li>体験者口コミによるオーガニック成長</li>
+                    <li>Sado retreat (on-site crafting, Jul 2026~)</li>
+                    <li>Hana, Maui workshop experience</li>
+                    <li>Workaway international community for awareness</li>
+                    <li>Organic growth via participant word-of-mouth</li>
                 </ul>
             </div>
             <div class="bm-card">
-                <h4>SoulCarrier連携</h4>
+                <h4>SoulCarrier Integration</h4>
                 <ul>
-                    <li>「共鳴の会」会員への優待販売</li>
-                    <li>遺骨帰還活動のメディア露出→認知誘導</li>
-                    <li>「社会運動への参加」という購買動機の創出</li>
-                    <li>価格競争から脱却した共感ベースの販売</li>
+                    <li>Preferential sales to "Resonance Circle" members</li>
+                    <li>Media coverage of bone repatriation &#8594; brand awareness</li>
+                    <li>Creates "participation in social mission" as a purchase driver</li>
+                    <li>Escapes price competition via empathy-based selling</li>
                 </ul>
             </div>
             <div class="bm-card">
-                <h4>海外市場チャネル</h4>
+                <h4>International Market Channel</h4>
                 <ul>
-                    <li>マウイ拠点から北米市場への直接アクセス</li>
-                    <li>海外墓地管理団体・石材業者への提案</li>
-                    <li>在外日系人コミュニティ（ハワイ・ブラジル等）</li>
-                    <li>英語版LP・Calendlyによるオンライン完結</li>
+                    <li>Direct North American access via Maui base</li>
+                    <li>Proposals to Western cemetery management &amp; stone dealers</li>
+                    <li>Overseas Japanese communities (Hawaii, Brazil, etc.)</li>
+                    <li>English LP + Calendly for fully online process</li>
                 </ul>
             </div>
             <div class="bm-card">
-                <h4>アジア展開</h4>
+                <h4>Asia Expansion</h4>
                 <ul>
-                    <li>先祖供養文化圏（東アジア・東南アジア）</li>
-                    <li>戦没者記録・植民地時代の記憶保全需要</li>
-                    <li>各国の石材・メモリアル業者との提携</li>
-                    <li>多言語対応（QRコード自体は言語非依存）</li>
+                    <li>Ancestor veneration cultures (East &amp; Southeast Asia)</li>
+                    <li>War memorial &amp; colonial-era heritage preservation demand</li>
+                    <li>Partnerships with local stone &amp; memorial businesses</li>
+                    <li>Multilingual support (QR codes are language-agnostic)</li>
                 </ul>
             </div>
         </div>
@@ -1339,45 +1318,45 @@
 <section class="slide">
     <div class="slide-inner">
         <p class="slide-number">09 - Traction</p>
-        <h2>既に確立された技術と信頼基盤</h2>
-        <p class="slide-lead">プロダクト開発段階を超え、パートナーシップと実証実績のフェーズに到達。</p>
+        <h2>Proven Technology &amp; Established Trust</h2>
+        <p class="slide-lead">Beyond the product development stage&#8212;now in the partnership and validation phase.</p>
 
         <div class="traction-grid">
             <div class="traction-item">
                 <p class="t-year">2025 H1</p>
-                <h4>SoulCarrier活動・社会実績</h4>
-                <p>群馬県で5,000基の墓石を徒歩調査。日系アメリカ人マーティンさんの遺骨帰還を3年以上支援。Forbes JAPAN寄稿開始。X累計31万+インプレッション達成</p>
+                <h4>SoulCarrier Social Impact</h4>
+                <p>Surveyed 5,000 gravestones on foot in Gunma Prefecture. 3+ years supporting bone repatriation for Japanese-American Martin. Began contributing to Forbes JAPAN. 310K+ impressions on X</p>
             </div>
             <div class="traction-item">
                 <p class="t-year">2025 H2</p>
-                <h4>技術・プロダクト完成</h4>
-                <p>3,000回超の刻印テスト完了。音声バイナリQRコード＋独自圧縮技術（最大10倍）を確立。金属蒸着による写真刻印の商用品質を達成</p>
+                <h4>Technology &amp; Product Completion</h4>
+                <p>3,000+ engraving tests completed. Established voice binary QR code + proprietary compression (up to 10&#215;). Achieved commercial-quality photo engraving via metal deposition</p>
             </div>
             <div class="traction-item">
                 <p class="t-year">2026 Q1</p>
-                <h4>文化機関との連携</h4>
-                <p>伊勢神宮式年遷宮への奉納（1月）。比叡山延暦寺根本中堂への永代記名（1月）。日本ハワイ移民資料館とMOU締結。JICA横浜と協議進行中</p>
+                <h4>Cultural Institution Partnerships</h4>
+                <p>Offering to Ise Grand Shrine Shikinen Sengu (Jan). Permanent inscription at Mt. Hiei Enryaku-ji Konpon Chudo (Jan). MOU with Japan-Hawaii Immigration Museum. Discussions with JICA Yokohama ongoing</p>
             </div>
             <div class="traction-item">
                 <p class="t-year">2026 Q1</p>
-                <h4>事業基盤構築</h4>
-                <p>LP公開・先行受付開始。佐渡古民家の引渡し進行中（3月予定）。SoulCarrier共鳴の会 協力合意署名を取得。Workawayホスト登録支援を開始</p>
+                <h4>Business Foundation</h4>
+                <p>Landing page live, pre-orders open. Sado heritage house handover in progress (Mar). SoulCarrier Resonance Circle cooperation signatures obtained. Workaway host registration support launched</p>
             </div>
         </div>
 
-        <h3>信頼性の三重構造</h3>
+        <h3>Triple Trust Architecture</h3>
         <div class="stat-grid">
             <div class="stat-card">
                 <div class="stat-number" style="font-size:1.5rem;">&#x26E9;</div>
-                <div class="stat-label">宗教的権威<br>伊勢神宮・比叡山延暦寺</div>
+                <div class="stat-label">Religious Authority<br>Ise Grand Shrine &amp; Mt. Hiei Enryaku-ji</div>
             </div>
             <div class="stat-card">
                 <div class="stat-number" style="font-size:1.5rem;">&#x1F3DB;</div>
-                <div class="stat-label">公的機関<br>JICA・移民資料館・国立国会図書館</div>
+                <div class="stat-label">Public Institutions<br>JICA, Immigration Museums, National Diet Library</div>
             </div>
             <div class="stat-card">
                 <div class="stat-number" style="font-size:1.5rem;">&#x1F4CA;</div>
-                <div class="stat-label">科学的根拠<br>日立×京大の実証研究</div>
+                <div class="stat-label">Scientific Evidence<br>Hitachi &#215; Kyoto University research</div>
             </div>
         </div>
     </div>
@@ -1389,29 +1368,29 @@
 <section class="slide">
     <div class="slide-inner">
         <p class="slide-number">10 - Competitive Moat</p>
-        <h2>三重の参入障壁</h2>
-        <p class="slide-lead">技術・場所・思想の三位一体が模倣困難な競争優位を構築。</p>
+        <h2>Triple Barrier to Entry</h2>
+        <p class="slide-lead">The trinity of technology, place, and philosophy creates an imitation-resistant competitive advantage.</p>
 
         <ul class="moat-list">
             <li>
                 <span class="moat-num">1</span>
                 <div>
-                    <h4>技術的障壁：石英ガラス加工 + 音声QR圧縮技術</h4>
-                    <p>半導体製造装置開発20年超のキャリアから確立した金属蒸着刻印技術。音声バイナリデータの独自圧縮技術（最大10倍）。3,000回以上のテストで蓄積されたノウハウは短期間での複製が困難。</p>
+                    <h4>Technology Barrier: Quartz Glass Processing + Voice QR Compression</h4>
+                    <p>Proprietary metal deposition engraving technology built on 20+ years in semiconductor manufacturing. Proprietary voice binary compression (up to 10&#215;). Know-how accumulated over 3,000+ tests is not replicable in the short term.</p>
                 </div>
             </li>
             <li>
                 <span class="moat-num">2</span>
                 <div>
-                    <h4>場所的障壁：佐渡 + マウイの二拠点体験</h4>
-                    <p>「忘れられた人々の記憶が残り続けた場所」としての佐渡、「オフグリッドの実証地」としてのマウイ島ハナ。2026年春の佐渡移住により、この場所性は代表自身のライフストーリーと不可分に。</p>
+                    <h4>Place Barrier: Sado Island + Maui Dual-Base Experience</h4>
+                    <p>Sado as "the island where memories of forgotten people endured." Hana, Maui as "the proving ground for off-grid living." The founder's relocation to Sado in spring 2026 makes this place-identity inseparable from his life story.</p>
                 </div>
             </li>
             <li>
                 <span class="moat-num">3</span>
                 <div>
-                    <h4>思想的障壁：「存在証明の民主化」+ SoulCarrierエコシステム</h4>
-                    <p>SoulCarrierの遺骨帰還・無縁墓調査という実際の社会活動が、「存在証明の民主化」ブランドの信頼性を裏付け。営利（トキストレージ）と非営利（SoulCarrier）の両輪で、単なるメモリアル製品を超えた社会運動としてのポジションを確立。競合が「機能と価格」で戦う中、トキストレージは「思想と体験」で戦う。</p>
+                    <h4>Philosophical Barrier: "Democratizing Proof of Existence" + SoulCarrier Ecosystem</h4>
+                    <p>SoulCarrier's real-world activities&#8212;bone repatriation, abandoned grave surveys&#8212;give the "democratizing proof of existence" brand authentic credibility. The dual flywheel of commercial (TokiStorage) and social (SoulCarrier) establishes a position beyond mere memorial products&#8212;a social movement. While competitors fight on features and price, TokiStorage competes on philosophy and experience.</p>
                 </div>
             </li>
         </ul>
@@ -1424,34 +1403,34 @@
 <section class="slide">
     <div class="slide-inner">
         <p class="slide-number">11 - Roadmap</p>
-        <h2>事業展開ロードマップ</h2>
-        <p class="slide-lead">佐渡移住を起点に、段階的にプロダクト・チャネル・地域を拡大。</p>
+        <h2>Business Expansion Roadmap</h2>
+        <p class="slide-lead">Starting from relocation to Sado, progressively scaling product, channels, and geography.</p>
 
         <div class="roadmap">
             <div class="roadmap-item">
-                <p class="r-date">2026 Q1（現在）</p>
-                <h4>Phase 1：基盤構築</h4>
-                <p>先行受付開始（個人プラン・三世代プラン）。LP最適化・オンライン相談フロー確立。佐渡古民家の引渡し・改修着手。伊勢神宮・延暦寺への奉納完了。</p>
+                <p class="r-date">2026 Q1 (NOW)</p>
+                <h4>Phase 1: Foundation</h4>
+                <p>Pre-orders open (Individual &amp; Three-Generation Plans). LP optimization &amp; online consultation flow. Sado heritage house handover &amp; renovation. Ise Shrine &amp; Enryaku-ji offerings complete.</p>
             </div>
             <div class="roadmap-item">
                 <p class="r-date">2026 Q2</p>
-                <h4>Phase 2：佐渡移住・製造開始</h4>
-                <p>佐渡市河原田本町へ移住。古民家を製作拠点として整備。仏壇店・葬儀社との提携交渉開始。オンライン完結コースの本格販売。</p>
+                <h4>Phase 2: Sado Relocation &amp; Production Launch</h4>
+                <p>Relocation to Kawarada-Honmachi, Sado. Heritage house converted to production studio. B2B partnership talks with altar shops &amp; funeral homes. Full-scale online course sales.</p>
             </div>
             <div class="roadmap-item">
                 <p class="r-date">2026 Q3</p>
-                <h4>Phase 3：リトリート体験開始</h4>
-                <p>佐渡リトリート（現地製作体験）提供開始（7月〜）。三世代プランの体験込み販売を本格化。Workaway受入れ開始による国際認知拡大。</p>
+                <h4>Phase 3: Retreat Experiences Begin</h4>
+                <p>Sado retreat (on-site crafting) launches Jul 2026. Three-Generation Plan with experience fully available. Workaway hosting starts for international awareness.</p>
             </div>
             <div class="roadmap-item future">
                 <p class="r-date">2026 Q4 - 2027</p>
-                <h4>Phase 4：チャネル拡大</h4>
-                <p>仏壇店・葬儀社への卸販売開始。行政・自治体向け提案強化。ボイスメモリアルコース初年度5家族完遂。年間共鳴メンバーシップ導入。</p>
+                <h4>Phase 4: Channel Expansion</h4>
+                <p>B2B wholesale to altar shops &amp; funeral homes begins. Government &amp; municipal proposals intensify. Voice Memorial Course: first 5 families completed. Annual Resonance Membership launched.</p>
             </div>
             <div class="roadmap-item future">
-                <p class="r-date">2027-2028</p>
-                <h4>Phase 5：スケール＋海外展開</h4>
-                <p>製造外注化によるキャパシティ拡大。マウイ拠点を起点に北米・西洋墓地市場へ展開。アジア圏（先祖供養文化圏）への提携開拓。在外日系人コミュニティ向けサービス本格化。ハナ工房体験の拡充。</p>
+                <p class="r-date">2027 - 2028</p>
+                <h4>Phase 5: Scale + Global Expansion</h4>
+                <p>Manufacturing outsourcing for capacity growth. North American &amp; Western cemetery expansion from Maui base. Asia-Pacific partnerships (ancestor veneration cultures). Overseas Japanese community services at full scale. Hana workshop expansion.</p>
             </div>
         </div>
     </div>
@@ -1463,35 +1442,35 @@
 <section class="slide">
     <div class="slide-inner">
         <p class="slide-number">12 - Team</p>
-        <h2>創業者</h2>
-        <p class="slide-lead">20年の技術キャリア、3年のオフグリッド生活、遺骨帰還の社会活動。すべてが一本の線でつながった。</p>
+        <h2>Founder</h2>
+        <p class="slide-lead">20 years in technology, 3 years of off-grid living, bone repatriation as social mission. Everything connects in one line.</p>
 
         <div class="team-profile">
             <div class="team-info">
-                <h4>佐藤 卓也（Takuya Sato）</h4>
-                <p class="team-title">Universal Need株式会社 代表取締役 / SoulCarrier「共鳴の会」創設者</p>
-                <p>半導体製造装置開発のエンジニアとして20年超のキャリアを経て、メモリアル技術に転身。マウイ島での2023年山火事後にオフグリッド生活を実践し、「サーバー不要の永続保存」のコンセプトを体現。遺骨帰還活動を通じて「存在証明の民主化」の思想を確立。</p>
+                <h4>Takuya Sato</h4>
+                <p class="team-title">CEO, Universal Need Corp. / Founder, SoulCarrier "Resonance Circle"</p>
+                <p>After 20+ years as a semiconductor manufacturing equipment engineer, pivoted to memorial technology. Practiced off-grid living on Maui after the 2023 wildfire, embodying the concept of "server-free perpetual preservation." Established the philosophy of "democratizing proof of existence" through bone repatriation work.</p>
                 <ul>
-                    <li>半導体製造装置エンジニア 20年超</li>
-                    <li>Forbes JAPAN寄稿者</li>
-                    <li>タイムレスタウン新浦安 自治会長（2年・約300世帯）</li>
-                    <li>2023年マウイ山火事以降、オフグリッド生活を実践中</li>
-                    <li>群馬県で5,000基の墓石を徒歩調査</li>
-                    <li>日系アメリカ人の遺骨帰還を3年以上支援</li>
-                    <li>2026年春 佐渡市へ移住予定</li>
+                    <li>20+ years in semiconductor manufacturing engineering</li>
+                    <li>Forbes JAPAN contributor</li>
+                    <li>Former HOA president, Timeless Town Shin-Urayasu (2 years, ~300 households)</li>
+                    <li>Off-grid living since Maui 2023 wildfire</li>
+                    <li>Surveyed 5,000 gravestones on foot in Gunma Prefecture</li>
+                    <li>3+ years supporting Japanese-American bone repatriation</li>
+                    <li>Relocating to Sado Island, Spring 2026</li>
                 </ul>
             </div>
         </div>
 
-        <h3>アドバイザー・パートナー</h3>
+        <h3>Advisors &amp; Partners</h3>
         <div class="segment-grid">
             <div class="segment-card">
-                <h4>上田ご夫妻</h4>
-                <p>NPO「伊賀の友」代表・三重県SDGsパートナー。SoulCarrier共鳴の会の最初の協力合意署名者。Workawayホスト登録支援中</p>
+                <h4>Mr. &amp; Mrs. Ueda</h4>
+                <p>Directors of NPO "Iga no Tomo," Mie Prefecture SDGs Partner. First cooperation signatories for SoulCarrier Resonance Circle. Supporting Workaway host registration</p>
             </div>
             <div class="segment-card">
-                <h4>メラニーさん</h4>
-                <p>元高校校長・農園「ハレ・プエオ」運営（マウイ島ハナ）。ハナ拠点の協力者。教育者としての視点で事業を支援</p>
+                <h4>Melanie</h4>
+                <p>Former high school principal, operates "Hale Pueo" farm (Hana, Maui). Collaborator at the Hana base. Supports the venture with an educator's perspective</p>
             </div>
         </div>
     </div>
@@ -1503,13 +1482,13 @@
 <section class="slide">
     <div class="slide-inner">
         <p class="slide-number">13 - Financial Projections</p>
-        <h2>成長トラジェクトリー</h2>
-        <p class="slide-lead">国内B2Bチャネルの立ち上げからグローバル展開へ。<br>サーバーコストゼロ×製造外注化により、売上拡大に伴い粗利率が改善するモデル。</p>
+        <h2>Growth Trajectory</h2>
+        <p class="slide-lead">From domestic B2B channel launch to global expansion.<br>Zero server cost &#215; manufacturing outsourcing means gross margin improves as revenue scales.</p>
 
         <table class="fin-table">
             <thead>
                 <tr>
-                    <th>セグメント</th>
+                    <th>Segment</th>
                     <th>Year 1<br>(2026)</th>
                     <th>Year 3<br>(2028)</th>
                     <th>Year 5<br>(2030)</th>
@@ -1517,43 +1496,43 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>D2C（国内個人）</td>
-                    <td>500万</td>
-                    <td>5,000万</td>
-                    <td>5億</td>
+                    <td>D2C (Domestic Individual)</td>
+                    <td>&#165;5M</td>
+                    <td>&#165;50M</td>
+                    <td>&#165;500M</td>
                 </tr>
                 <tr>
-                    <td>B2B（寺院・葬儀社・自治体）</td>
-                    <td>500万</td>
-                    <td>2億</td>
-                    <td>10億</td>
+                    <td>B2B (Temples, Funeral Homes, Gov.)</td>
+                    <td>&#165;5M</td>
+                    <td>&#165;200M</td>
+                    <td>&#165;1B</td>
                 </tr>
                 <tr>
-                    <td>プレミアム・メンバーシップ</td>
-                    <td>2,000万</td>
-                    <td>7,000万</td>
-                    <td>1.5億</td>
+                    <td>Premium &amp; Membership</td>
+                    <td>&#165;20M</td>
+                    <td>&#165;70M</td>
+                    <td>&#165;150M</td>
                 </tr>
                 <tr>
-                    <td>海外（北米・アジア太平洋）</td>
-                    <td>&#x2013;</td>
-                    <td>5,000万</td>
-                    <td>15億</td>
+                    <td>International (NA &amp; Asia-Pacific)</td>
+                    <td>&#8211;</td>
+                    <td>&#165;50M</td>
+                    <td>&#165;1.5B</td>
                 </tr>
                 <tr class="total-row">
-                    <td>売上合計</td>
-                    <td>3,000万</td>
-                    <td>3.7億</td>
-                    <td>31.5億</td>
+                    <td>Total Revenue</td>
+                    <td>&#165;30M<br><small style="font-weight:400;color:var(--text-secondary)">~$200K</small></td>
+                    <td>&#165;370M<br><small style="font-weight:400;color:var(--text-secondary)">~$2.5M</small></td>
+                    <td>&#165;3.15B<br><small style="font-weight:400;color:var(--text-secondary)">~$21M</small></td>
                 </tr>
                 <tr>
-                    <td>粗利率</td>
+                    <td>Gross Margin</td>
                     <td>55%</td>
                     <td>65%</td>
                     <td>72%</td>
                 </tr>
                 <tr>
-                    <td>営業利益率</td>
+                    <td>Operating Margin</td>
                     <td>&#x25B3;30%</td>
                     <td>22%</td>
                     <td>38%</td>
@@ -1562,7 +1541,7 @@
         </table>
 
         <div class="key-point">
-            <p><strong>構造的レバレッジ：</strong>サーバー費ゼロ・在庫リスク極小（受注生産）のため、売上増に対して変動費は製造原価のみ。製造の外注化・自動化が進むほど粗利率が改善し、価格を下げてもマージンが残る。Year 5以降、海外B2B（墓地管理団体・自治体配布モデル）が本格稼働すれば、SOM 500億円圏への到達が視野に入る。</p>
+            <p><strong>Structural Leverage:</strong> Zero server costs and minimal inventory risk (made-to-order) mean variable costs are limited to manufacturing. As production is outsourced and automated, gross margins improve&#8212;enabling price reductions while preserving profitability. Beyond Year 5, as international B2B (cemetery associations, municipal distribution models) reaches scale, the $3.3B SOM comes within reach.</p>
         </div>
     </div>
 </section>
@@ -1573,34 +1552,34 @@
 <section class="slide">
     <div class="slide-inner">
         <p class="slide-number">14 - Use of Funds</p>
-        <h2>資金使途</h2>
-        <p class="slide-lead">佐渡拠点の確立とチャネル開拓に集中投下。</p>
+        <h2>Use of Funds</h2>
+        <p class="slide-lead">Concentrated investment in Sado base establishment and channel development.</p>
 
         <div class="funds-grid">
             <div class="fund-item">
                 <div class="fund-pct">35%</div>
-                <h4>製造・拠点整備</h4>
-                <p>佐渡古民家の改修<br>製作設備・工具<br>原材料の初期調達</p>
+                <h4>Manufacturing &amp; Facilities</h4>
+                <p>Sado heritage house renovation<br>Production equipment &amp; tools<br>Initial raw materials</p>
             </div>
             <div class="fund-item">
                 <div class="fund-pct">25%</div>
-                <h4>マーケティング</h4>
-                <p>仏壇店・葬儀社営業<br>終活イベント出展<br>Web広告・SEO</p>
+                <h4>Marketing</h4>
+                <p>Altar shop &amp; funeral home outreach<br>End-of-life event exhibitions<br>Digital ads &amp; SEO</p>
             </div>
             <div class="fund-item">
                 <div class="fund-pct">20%</div>
-                <h4>チャネル開発</h4>
-                <p>B2B提携構築<br>サンプル制作・貸出<br>スタッフ向け研修</p>
+                <h4>Channel Development</h4>
+                <p>B2B partnership building<br>Sample production &amp; loans<br>Staff training programs</p>
             </div>
             <div class="fund-item">
                 <div class="fund-pct">20%</div>
-                <h4>運転資金</h4>
-                <p>人件費（パート雇用）<br>移住後の生活基盤<br>リトリート体験設計</p>
+                <h4>Working Capital</h4>
+                <p>Personnel (part-time hires)<br>Post-relocation living costs<br>Retreat experience design</p>
             </div>
         </div>
 
         <div class="key-point">
-            <p><strong>資本効率：</strong>サーバーインフラへの投資が不要なため、調達資金の大部分を顧客獲得とチャネル構築に充当可能。物理製品のため在庫リスクは限定的（受注生産モデル）。佐渡市の移住支援補助金も活用予定。</p>
+            <p><strong>Capital Efficiency:</strong> No server infrastructure investment required, so the majority of funds go directly to customer acquisition and channel building. Physical products with limited inventory risk (made-to-order model). Sado City relocation subsidies also planned for utilization.</p>
         </div>
     </div>
 </section>
@@ -1610,27 +1589,27 @@
      ======================================== -->
 <section class="slide cta-slide">
     <div class="slide-inner">
-        <p class="slide-number">15 ─ Contact</p>
-        <h2>佐渡の1件から、80億人へ。</h2>
-        <p class="slide-lead">すべての人の存在を千年先に届ける──<br>この問いに共鳴していただける方との対話を歓迎します。</p>
+        <p class="slide-number">15 &#8212; Contact</p>
+        <h2>From One Home in Sado, to 8 Billion People.</h2>
+        <p class="slide-lead">Delivering every person's existence a thousand years into the future&#8212;<br>we welcome dialogue with those who resonate with this question.</p>
 
         <div class="cta-contact" style="margin-top:2rem;">
-            Universal Need株式会社<br>
-            代表取締役 佐藤 卓也
+            Universal Need Corp.<br>
+            CEO: Takuya Sato
         </div>
 
         <div class="cta-details">
-            <strong>所在地：</strong>千葉県浦安市明海2-11-13（2026年春 新潟県佐渡市へ移転）<br>
-            <strong>Email：</strong>business@satotakuya.jp<br>
-            <strong>面談予約：</strong><a href="https://calendly.com/pearlmemorial/pearlmemorialsession" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.75); text-decoration:underline;">calendly.com/pearlmemorial/pearlmemorialsession</a><br>
-            <strong>Web：</strong>pearl.memorial
+            <strong>Location:</strong> Urayasu, Chiba, Japan (relocating to Sado Island, Spring 2026)<br>
+            <strong>Email:</strong> business@satotakuya.jp<br>
+            <strong>Book a Meeting:</strong> <a href="https://calendly.com/pearlmemorial/pearlmemorialsession" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.75); text-decoration:underline;">calendly.com/pearlmemorial/pearlmemorialsession</a><br>
+            <strong>Web:</strong> pearl.memorial
         </div>
     </div>
 </section>
 
 <!-- Footer -->
 <footer class="pitch-footer">
-    <p>CONFIDENTIAL - この資料はUniversal Need株式会社の機密情報を含みます。許可なく第三者への開示・配布を禁じます。</p>
+    <p>CONFIDENTIAL &#8212; This document contains proprietary information of Universal Need Corp. Unauthorized disclosure or distribution is prohibited.</p>
     <p>&copy; 2026 Universal Need Corp. All rights reserved.</p>
 </footer>
 
