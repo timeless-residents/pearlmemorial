@@ -1305,6 +1305,27 @@ th.highlight-col {
     letter-spacing: 0.04em;
 }
 
+.profile-link-wrap {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.profile-link {
+    display: inline-block;
+    font-size: 0.9rem;
+    color: var(--toki-blue);
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    border: 1px solid var(--toki-blue);
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.profile-link:hover {
+    background: var(--toki-blue);
+    color: #fff;
+}
+
 .soulcarrier-badge {
     text-align: center;
     font-size: 0.85rem;
