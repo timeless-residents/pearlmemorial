@@ -208,6 +208,8 @@
 
             .profile-header {
                 display: flex;
+                flex-direction: row;
+                align-items: flex-start;
                 gap: 0.8rem;
                 margin-bottom: 0.3rem;
                 padding: 0.3rem;
@@ -216,9 +218,13 @@
             }
 
             .profile-photo {
-                width: 70px;
-                height: 88px;
+                width: 80px;
+                height: 100px;
                 flex-shrink: 0;
+            }
+
+            .profile-intro {
+                flex: 1;
             }
 
             .profile-name {
@@ -250,8 +256,8 @@
             }
 
             .dedication-box {
-                padding: 0.15rem 0.4rem;
-                margin: 0.15rem 0.4rem 0.2rem;
+                padding: 0.15rem 0;
+                margin: 0.15rem 0 0.2rem;
                 background: none !important;
             }
 
@@ -284,7 +290,7 @@
             }
 
             .profile-section {
-                margin: 0.25rem 0.4rem 0.1rem;
+                margin: 0.2rem 0 0.1rem;
                 padding: 0;
             }
 
@@ -332,13 +338,13 @@
             }
 
             .profile-grid .profile-section {
-                margin: 0 0.4rem !important;
+                margin: 0.2rem 0 0.1rem !important;
                 padding: 0 !important;
             }
 
             .contact-box {
-                padding: 0.15rem 0.4rem;
-                margin: 0.2rem 0.4rem 0;
+                padding: 0.15rem 0;
+                margin: 0.2rem 0 0;
                 border-top: 1px solid #333;
                 background: none;
             }
