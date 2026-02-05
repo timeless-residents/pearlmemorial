@@ -49,23 +49,27 @@
             background: rgba(255,255,255,0.95);
             backdrop-filter: blur(12px);
             border-bottom: 1px solid var(--border);
-            padding: 0.8rem 2rem;
+            padding: 0.6rem 1.2rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 1rem;
         }
         .legacy-nav .nav-brand {
             font-family: var(--font-display);
-            font-size: 1rem;
+            font-size: 0.9rem;
             font-weight: 600;
             color: var(--toki-blue);
             text-decoration: none;
             white-space: nowrap;
+            flex-shrink: 0;
         }
         .legacy-nav .nav-label {
-            font-size: 0.7rem;
-            color: var(--text-secondary);
-            letter-spacing: 0.15em;
+            font-size: 0.6rem;
+            color: var(--text-muted);
+            letter-spacing: 0.08em;
+            text-align: right;
+            line-height: 1.4;
         }
 
         /* Main Content */
