@@ -134,6 +134,34 @@
             color: var(--text-primary);
         }
 
+        /* Off-grid Gallery */
+        .offgrid-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .offgrid-gallery figure {
+            margin: 0;
+        }
+        .offgrid-gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+        .offgrid-gallery figcaption {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-align: center;
+            margin-top: 0.5rem;
+        }
+        @media (max-width: 480px) {
+            .offgrid-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* Spec Table */
         .spec-table {
             width: 100%;
@@ -389,7 +417,18 @@
         <p>私は「タイムレスタウン新浦安」というマンション自治会で、2年間会長を務めました。約250世帯、日々の暮らしを支える仕組みを運営する中で、「タイムレス」という言葉と真剣に向き合うことになりました。</p>
         <p>タイムレスとは何か。時間に左右されないとは、どういう構造なのか。</p>
         <p>並行して、SoulCarrierという活動で遺骨帰還や無縁墓の調査に携わる中、「記憶は驚くほど簡単に消える」という現実を目の当たりにしました。墓石は100年で風化し、クラウドサービスは10年で終了し、誰かが覚えていなければ存在は消える。</p>
-        <p>そして、私財を投じてマウイ島で家族とともにオフグリッド生活を実践しました。電力も水も通信も、意図的に社会インフラから切り離し、「依存ゼロ」とは何かを身体で検証する日々。机上の設計ではなく、実際に暮らしの中で持続可能性を試し続けて得た構造です。</p>
+        <p>そして、私財を投じて国内外でオフグリッド生活を実践しました。マウイ島でのトレーラーハウス生活、山中湖での車中泊キャンプ。電力も水も通信も、意図的に社会インフラから切り離し、「依存ゼロ」とは何かを家族とともに身体で検証する日々。机上の設計ではなく、実際に暮らしの中で持続可能性を試し続けて得た構造です。</p>
+
+        <div class="offgrid-gallery">
+            <figure>
+                <img src="asset/offgrid-maui-power.jpg" alt="マウイ島でのオフグリッド電源システム" loading="lazy">
+                <figcaption>マウイ島：ソーラー＋ジェネレーター＋ポータブル電源</figcaption>
+            </figure>
+            <figure>
+                <img src="asset/offgrid-yamanakako-setup.jpg" alt="山中湖での車中泊オフグリッドセットアップ" loading="lazy">
+                <figcaption>山中湖：車中泊での依存ゼロ検証</figcaption>
+            </figure>
+        </div>
         <p><strong>「消える理由」を構造的に排除すれば、残る。</strong></p>
         <p>この単純な原理を、エンジニアとして20年培った設計思想と、自らの生活で検証した持続可能性の知見で形にしたのがトキストレージです。</p>
     </section>
@@ -456,6 +495,18 @@
         <h2>物理層：石英ガラス</h2>
 
         <h3>素材特性</h3>
+
+        <div class="offgrid-gallery">
+            <figure>
+                <img src="asset/quartz-glass-round.jpg" alt="石英ガラスに刻印されたメッセージ" loading="lazy">
+                <figcaption>丸型石英ガラス：メッセージ刻印</figcaption>
+            </figure>
+            <figure>
+                <img src="asset/quartz-glass-sample.jpg" alt="石英ガラスの金属蒸着・QRコード刻印サンプル" loading="lazy">
+                <figcaption>金属蒸着テスト＋QRコード＋家紋</figcaption>
+            </figure>
+        </div>
+
         <table class="spec-table">
             <tr>
                 <th>素材</th>
