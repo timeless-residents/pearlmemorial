@@ -26,6 +26,7 @@
     { id: 'esg', ja: 'ESG/GXと存在証明', en: 'ESG/GX' },
     { id: 'realestate', ja: '不動産と街づくり', en: 'Real Estate & Urban Development' },
     { id: 'strategy', ja: '国家戦略', en: 'National Strategy' },
+    { id: 'ownership', ja: '所有権と存在証明', en: 'Ownership' },
     { id: 'legacy', ja: '技術的設計思想', en: 'Technical Design' }
   ];
 
