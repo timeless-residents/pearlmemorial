@@ -40,8 +40,11 @@
     { id: 'education', ja: '教育', en: 'Education' },
     { id: 'media', ja: 'メディア', en: 'Media' },
     { id: 'entertainment', ja: 'エンタメ', en: 'Entertainment' },
+    { id: 'art', ja: '芸術', en: 'Art' },
+    { id: 'music', ja: '音楽', en: 'Music' },
     { id: 'tourism', ja: '観光', en: 'Tourism' },
     { id: 'sports', ja: 'スポーツ', en: 'Sports' },
+    { id: 'history', ja: '歴史学', en: 'History' },
 
     // ── 自然・宇宙 ──
     { id: 'ecology', ja: '生態系', en: 'Ecology' },
