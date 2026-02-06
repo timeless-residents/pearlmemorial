@@ -24,6 +24,8 @@
     { id: 'media', ja: 'メディアと存在証明', en: 'Media' },
     { id: 'finance', ja: '金融と存在証明', en: 'Finance' },
     { id: 'esg', ja: 'ESG/GXと存在証明', en: 'ESG/GX' },
+    { id: 'realestate', ja: '不動産と街づくり', en: 'Real Estate & Urban Development' },
+    { id: 'strategy', ja: '国家戦略', en: 'National Strategy' },
     { id: 'legacy', ja: '技術的設計思想', en: 'Technical Design' }
   ];
 
