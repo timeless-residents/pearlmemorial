@@ -19,6 +19,8 @@
     { id: 'entertainment', ja: 'エンタメと存在証明', en: 'Entertainment' },
     { id: 'tourism', ja: '観光と存在証明', en: 'Tourism' },
     { id: 'erasure', ja: '残さないという選択', en: 'The Choice Not to Leave Behind' },
+    { id: 'consumption', ja: '消費と存在証明', en: 'Consumption' },
+    { id: 'education', ja: '教育と存在証明', en: 'Education' },
     { id: 'legacy', ja: '技術的設計思想', en: 'Technical Design' }
   ];
 
