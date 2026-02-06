@@ -34,6 +34,7 @@
     { id: 'ownership', ja: '所有権', en: 'Ownership' },
     { id: 'realestate', ja: '不動産', en: 'Real Estate' },
     { id: 'esg', ja: 'ESG/GX', en: 'ESG/GX' },
+    { id: 'sdgs', ja: 'SDGs', en: 'SDGs' },
 
     // ── 文化・社会活動 ──
     { id: 'education', ja: '教育', en: 'Education' },
