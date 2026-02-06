@@ -27,6 +27,8 @@
     { id: 'realestate', ja: '不動産と街づくり', en: 'Real Estate & Urban Development' },
     { id: 'strategy', ja: '国家戦略', en: 'National Strategy' },
     { id: 'ownership', ja: '所有権と存在証明', en: 'Ownership' },
+    { id: 'global', ja: '国際社会と平和', en: 'Global Society & Peace' },
+    { id: 'sports', ja: 'スポーツと存在証明', en: 'Sports' },
     { id: 'legacy', ja: '技術的設計思想', en: 'Technical Design' }
   ];
 
