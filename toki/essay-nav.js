@@ -15,6 +15,7 @@
     { id: 'lifecycle', ja: '生老病死', en: 'Life Cycle' },
     { id: 'ceremony', ja: '冠婚葬祭', en: 'Rites of Passage' },
     { id: 'lifestyle', ja: '生き方', en: 'Lifestyle' },
+    { id: 'independence', ja: 'オフグリッド', en: 'Off-Grid' },
 
     // ── 信仰・思想 ──
     { id: 'religion', ja: '宗教・神話', en: 'Religion' },
@@ -33,6 +34,7 @@
     { id: 'ownership', ja: '所有権', en: 'Ownership' },
     { id: 'realestate', ja: '不動産', en: 'Real Estate' },
     { id: 'esg', ja: 'ESG/GX', en: 'ESG/GX' },
+    { id: 'sdgs', ja: 'SDGs', en: 'SDGs' },
 
     // ── 文化・社会活動 ──
     { id: 'education', ja: '教育', en: 'Education' },
