@@ -1,55 +1,70 @@
 /**
  * Essay Navigation - Dynamic Cross-Links
  * エッセイ間のクロスリンクを動的に生成
+ *
+ * 構成: 個人 → 人生 → 信仰 → 社会 → 経済 → 文化 → 自然 → 技術 → メタ
  */
 (function() {
-  // エッセイ一覧（順序保持）
   const essays = [
-    { id: 'psychology', ja: '心理学的考察', en: 'Psychology' },
-    { id: 'philosophy', ja: '社会哲学的考察', en: 'Social Philosophy' },
-    { id: 'pathology', ja: '継承の病理', en: 'Pathology of Legacy' },
-    { id: 'future', ja: 'AI時代と存在証明', en: 'AI Era' },
-    { id: 'religion', ja: '神話・宗教と存在証明', en: 'Religion & Mythology' },
-    { id: 'organization', ja: '組織と存在証明', en: 'Organizations' },
-    { id: 'government', ja: '行政と存在証明', en: 'Government' },
-    { id: 'nation', ja: '国家と存在証明', en: 'Nation-States' },
-    { id: 'ceremony', ja: '冠婚葬祭と存在証明', en: 'Rites of Passage' },
-    { id: 'lifecycle', ja: '生老病死と存在証明', en: 'Life Cycle' },
-    { id: 'industry', ja: '産業と存在証明', en: 'Industry' },
-    { id: 'entertainment', ja: 'エンタメと存在証明', en: 'Entertainment' },
-    { id: 'tourism', ja: '観光と存在証明', en: 'Tourism' },
-    { id: 'erasure', ja: '残さないという選択', en: 'The Choice Not to Leave Behind' },
-    { id: 'consumption', ja: '消費と存在証明', en: 'Consumption' },
-    { id: 'education', ja: '教育と存在証明', en: 'Education' },
-    { id: 'media', ja: 'メディアと存在証明', en: 'Media' },
-    { id: 'finance', ja: '金融と存在証明', en: 'Finance' },
-    { id: 'esg', ja: 'ESG/GXと存在証明', en: 'ESG/GX' },
-    { id: 'realestate', ja: '不動産と街づくり', en: 'Real Estate & Urban Development' },
+    // ── 基礎理論（個人の内面）──
+    { id: 'psychology', ja: '心理学', en: 'Psychology' },
+    { id: 'philosophy', ja: '社会哲学', en: 'Philosophy' },
+    { id: 'pathology', ja: '継承の病理', en: 'Pathology' },
+
+    // ── 人生の節目 ──
+    { id: 'lifecycle', ja: '生老病死', en: 'Life Cycle' },
+    { id: 'ceremony', ja: '冠婚葬祭', en: 'Rites of Passage' },
+
+    // ── 信仰・思想 ──
+    { id: 'religion', ja: '宗教・神話', en: 'Religion' },
+
+    // ── 社会制度（小→大）──
+    { id: 'organization', ja: '組織', en: 'Organizations' },
+    { id: 'government', ja: '行政', en: 'Government' },
+    { id: 'nation', ja: '国家', en: 'Nation' },
+    { id: 'global', ja: '国際社会', en: 'Global Society' },
     { id: 'strategy', ja: '国家戦略', en: 'National Strategy' },
-    { id: 'ownership', ja: '所有権と存在証明', en: 'Ownership' },
-    { id: 'legacy', ja: '技術的設計思想', en: 'Technical Design' }
+
+    // ── 経済・財産 ──
+    { id: 'industry', ja: '産業', en: 'Industry' },
+    { id: 'consumption', ja: '消費', en: 'Consumption' },
+    { id: 'finance', ja: '金融', en: 'Finance' },
+    { id: 'ownership', ja: '所有権', en: 'Ownership' },
+    { id: 'realestate', ja: '不動産', en: 'Real Estate' },
+    { id: 'esg', ja: 'ESG/GX', en: 'ESG/GX' },
+
+    // ── 文化・社会活動 ──
+    { id: 'education', ja: '教育', en: 'Education' },
+    { id: 'media', ja: 'メディア', en: 'Media' },
+    { id: 'entertainment', ja: 'エンタメ', en: 'Entertainment' },
+    { id: 'tourism', ja: '観光', en: 'Tourism' },
+    { id: 'sports', ja: 'スポーツ', en: 'Sports' },
+
+    // ── 自然・宇宙 ──
+    { id: 'ecology', ja: '生態系', en: 'Ecology' },
+    { id: 'space', ja: '宇宙', en: 'Space' },
+
+    // ── 技術・設計 ──
+    { id: 'future', ja: 'AI時代', en: 'AI Era' },
+    { id: 'legacy', ja: '技術設計', en: 'Technical Design' },
+
+    // ── メタ視点 ──
+    { id: 'erasure', ja: '残さない選択', en: 'Choosing Not to Leave Behind' }
   ];
 
-  // 現在のページから言語を判定
   const isEnglish = document.documentElement.lang === 'en';
-
-  // 現在のページのIDを取得
   const currentPath = window.location.pathname;
   const currentFile = currentPath.split('/').pop().replace('.html', '').replace('-en', '');
 
-  // リンクを生成
   const links = essays.map(essay => {
     const href = isEnglish ? `${essay.id}-en.html` : `${essay.id}.html`;
     const label = isEnglish ? essay.en : essay.ja;
-
-    // 現在のページはリンクにしない
     if (essay.id === currentFile) {
       return `<span style="color: var(--text-muted);">${label}</span>`;
     }
     return `<a href="${href}">${label}</a>`;
-  }).join(' / ');
+  }).join(' · ');
 
-  // DOMにリンクを挿入
   document.addEventListener('DOMContentLoaded', function() {
     const container = document.getElementById('essay-nav-links');
     if (container) {
