@@ -15,6 +15,7 @@
     { id: 'lifecycle', ja: '生老病死', en: 'Life Cycle' },
     { id: 'ceremony', ja: '冠婚葬祭', en: 'Rites of Passage' },
     { id: 'lifestyle', ja: '生き方', en: 'Lifestyle' },
+    { id: 'independence', ja: 'オフグリッド', en: 'Off-Grid' },
 
     // ── 信仰・思想 ──
     { id: 'religion', ja: '宗教・神話', en: 'Religion' },
