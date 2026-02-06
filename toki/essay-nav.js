@@ -21,6 +21,8 @@
     { id: 'erasure', ja: '残さないという選択', en: 'The Choice Not to Leave Behind' },
     { id: 'consumption', ja: '消費と存在証明', en: 'Consumption' },
     { id: 'education', ja: '教育と存在証明', en: 'Education' },
+    { id: 'media', ja: 'メディアと存在証明', en: 'Media' },
+    { id: 'finance', ja: '金融と存在証明', en: 'Finance' },
     { id: 'legacy', ja: '技術的設計思想', en: 'Technical Design' }
   ];
 
