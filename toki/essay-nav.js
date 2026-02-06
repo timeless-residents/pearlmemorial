@@ -29,6 +29,8 @@
     { id: 'ownership', ja: '所有権と存在証明', en: 'Ownership' },
     { id: 'global', ja: '国際社会と平和', en: 'Global Society & Peace' },
     { id: 'sports', ja: 'スポーツと存在証明', en: 'Sports' },
+    { id: 'space', ja: '宇宙と存在証明', en: 'Space' },
+    { id: 'ecology', ja: '生態系と存在証明', en: 'Ecology' },
     { id: 'legacy', ja: '技術的設計思想', en: 'Technical Design' }
   ];
 
