@@ -9,207 +9,112 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <style>
         .refill-page {
-            padding: 4rem 2rem;
+            padding: 4rem 2rem 2rem;
             min-height: 100vh;
         }
         .refill-inner {
-            max-width: 480px;
+            max-width: 600px;
             margin: 0 auto;
             text-align: center;
         }
         .refill-icon {
-            font-size: 4rem;
-            margin-bottom: 1.5rem;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
         }
         .refill-inner h1 {
             font-family: var(--font-display);
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             font-weight: 600;
             color: var(--text-primary);
             margin-bottom: 0.5rem;
         }
         .refill-thanks {
             font-family: var(--font-display);
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: var(--text-secondary);
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             line-height: 1.8;
         }
         .refill-card {
             background: var(--bg-page);
             border: 1px solid var(--border);
             border-radius: 1rem;
-            padding: 2rem;
+            padding: 1.5rem;
             margin-bottom: 2rem;
-            text-align: left;
         }
         .refill-card h2 {
             font-family: var(--font-display);
             font-size: 1rem;
             font-weight: 600;
             color: var(--text-primary);
-            margin-bottom: 1rem;
-            text-align: center;
+            margin-bottom: 0.8rem;
         }
         .refill-card p {
-            font-size: 0.88rem;
+            font-size: 0.85rem;
             color: var(--text-secondary);
-            line-height: 1.8;
+            line-height: 1.7;
             margin-bottom: 1rem;
-            text-align: center;
         }
-        .refill-btn {
-            display: block;
-            width: 100%;
-            background: var(--toki-blue);
-            color: #fff;
-            padding: 0.9rem 2rem;
+
+        /* Calendly埋め込み */
+        .calendly-inline-widget {
+            min-width: 280px;
+            height: 700px;
             border-radius: 0.5rem;
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 500;
-            transition: background 0.3s ease;
-            margin-top: 1rem;
-            border: none;
-            cursor: pointer;
-            text-align: center;
+            overflow: hidden;
         }
-        .refill-btn:hover {
-            background: var(--toki-blue-dark);
-        }
-        .refill-btn:disabled {
-            background: var(--text-muted);
-            cursor: not-allowed;
-        }
-        .refill-btn-secondary {
-            background: transparent;
-            color: var(--toki-blue);
-            border: 1px solid var(--toki-blue);
-        }
-        .refill-btn-secondary:hover {
-            background: var(--toki-blue-pale);
-        }
-
-        /* ステップ表示 */
-        .step { display: none; }
-        .step.active { display: block; }
-
-        /* 地図 */
-        #map {
-            height: 200px;
-            border-radius: 0.5rem;
-            margin: 1rem 0;
-        }
-
-        /* 住所表示 */
-        .address-display {
-            background: var(--bg-section);
-            border: 1px solid var(--border);
-            border-radius: 0.5rem;
-            padding: 1rem;
-            margin: 1rem 0;
-            font-size: 0.88rem;
-            color: var(--text-primary);
-            line-height: 1.6;
-        }
-
-        /* フォーム */
-        .form-group {
-            margin-bottom: 1rem;
-            text-align: left;
-        }
-        .form-group label {
-            display: block;
-            font-size: 0.82rem;
-            font-weight: 500;
-            color: var(--text-primary);
-            margin-bottom: 0.4rem;
-        }
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.7rem;
-            border: 1px solid var(--border);
-            border-radius: 0.4rem;
-            font-size: 0.88rem;
-            font-family: inherit;
-            box-sizing: border-box;
-        }
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--toki-blue);
-        }
-        .form-group textarea {
-            resize: vertical;
-            min-height: 80px;
-        }
-
-        /* ローディング */
-        .loading {
-            display: inline-block;
-            width: 16px;
-            height: 16px;
-            border: 2px solid #fff;
-            border-radius: 50%;
-            border-top-color: transparent;
-            animation: spin 0.8s linear infinite;
-            margin-right: 0.5rem;
-            vertical-align: middle;
-        }
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-
-        /* 完了画面 */
-        .complete-icon {
-            font-size: 4rem;
-            margin-bottom: 1rem;
+        @media (max-width: 480px) {
+            .calendly-inline-widget {
+                height: 600px;
+            }
+            .refill-page {
+                padding: 3rem 1rem 2rem;
+            }
         }
 
         .refill-features {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-            margin: 2rem 0;
+            gap: 0.8rem;
+            margin: 1.5rem 0;
         }
         .refill-feature {
             background: var(--bg-page);
             border: 1px solid var(--border);
             border-radius: 0.8rem;
-            padding: 1rem 0.8rem;
+            padding: 0.8rem 0.5rem;
             text-align: center;
         }
         .refill-feature .feature-icon {
-            font-size: 1.4rem;
-            margin-bottom: 0.4rem;
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
         }
         .refill-feature h3 {
             font-family: var(--font-display);
-            font-size: 0.78rem;
+            font-size: 0.72rem;
             font-weight: 600;
             color: var(--text-primary);
-            margin-bottom: 0.2rem;
+            margin-bottom: 0.1rem;
         }
         .refill-feature p {
-            font-size: 0.68rem;
+            font-size: 0.62rem;
             color: var(--text-muted);
-            line-height: 1.5;
+            line-height: 1.4;
             margin: 0;
         }
         .refill-note {
-            font-size: 0.78rem;
+            font-size: 0.75rem;
             color: var(--text-muted);
             line-height: 1.7;
-            margin-top: 1.5rem;
+            margin-top: 1rem;
             text-align: center;
         }
         .refill-links {
-            margin-top: 2rem;
-            padding-top: 1.5rem;
+            margin-top: 1.5rem;
+            padding-top: 1rem;
             border-top: 1px solid var(--border);
             text-align: center;
         }
@@ -217,33 +122,15 @@
             display: inline-block;
             color: var(--toki-blue);
             text-decoration: none;
-            font-size: 0.85rem;
-            margin: 0.3rem 0.8rem;
+            font-size: 0.8rem;
+            margin: 0.2rem 0.6rem;
         }
         .refill-links a:hover {
             text-decoration: underline;
         }
-        .skip-link {
-            display: block;
-            margin-top: 1rem;
-            font-size: 0.82rem;
-            color: var(--text-muted);
-            text-decoration: underline;
-            cursor: pointer;
-            background: none;
-            border: none;
-        }
-        .error-message {
-            color: #c53030;
-            font-size: 0.82rem;
-            margin-top: 0.5rem;
-        }
         @media (max-width: 480px) {
             .refill-features {
                 grid-template-columns: 1fr;
-            }
-            .refill-page {
-                padding: 3rem 1.5rem;
             }
         }
     </style>
@@ -259,81 +146,17 @@
         <div class="refill-icon">&#x1F43E;</div>
         <h1>ご利用いただき<br>ありがとうございます</h1>
         <p class="refill-thanks">
-            Pearl Soapをお使いいただき、<br>
-            心より感謝申し上げます。
+            Pearl Soapをお使いいただき、心より感謝申し上げます。
         </p>
 
-        <!-- Step 1: 位置情報取得 -->
-        <div class="refill-card step active" id="step1">
+        <div class="refill-card">
             <h2>Pearl Soapの補充</h2>
-            <p>石鹸がなくなりましたら、<br>補充をご依頼ください。<br>ギフトエコノミーとして、<br>無料でお届けいたします。</p>
+            <p>石鹸がなくなりましたら、下記より補充をご依頼ください。<br>ギフトエコノミーとして、無料でお届けいたします。</p>
 
-            <button class="refill-btn" id="getLocationBtn" onclick="getLocation()">
-                現在地からお届け先を設定
-            </button>
-            <button class="skip-link" onclick="showManualForm()">
-                住所を直接入力する
-            </button>
-        </div>
-
-        <!-- Step 2: 位置確認 -->
-        <div class="refill-card step" id="step2">
-            <h2>お届け先の確認</h2>
-            <p>この場所にお届けしてよろしいですか？</p>
-
-            <div id="map"></div>
-            <div class="address-display" id="addressDisplay"></div>
-
-            <button class="refill-btn" onclick="confirmLocation()">
-                この場所でOK
-            </button>
-            <button class="refill-btn refill-btn-secondary" onclick="showManualForm()">
-                住所を修正する
-            </button>
-        </div>
-
-        <!-- Step 3: 手動入力フォーム -->
-        <div class="refill-card step" id="step3">
-            <h2>お届け先の入力</h2>
-
-            <form id="refillForm" onsubmit="submitForm(event)">
-                <div class="form-group">
-                    <label for="name">お名前</label>
-                    <input type="text" id="name" name="name" required placeholder="山田 太郎">
-                </div>
-                <div class="form-group">
-                    <label for="contact">連絡先 <span style="font-weight:normal;color:var(--text-muted)">(電話番号 or メール)</span></label>
-                    <input type="text" id="contact" name="contact" required placeholder="090-1234-5678 または email@example.com">
-                </div>
-                <div class="form-group">
-                    <label for="postal">郵便番号</label>
-                    <div style="display:flex;gap:0.5rem;">
-                        <input type="text" id="postal" name="postal" required placeholder="279-0014" style="flex:1;" oninput="autoFillAddress()">
-                        <button type="button" onclick="autoFillAddress()" style="padding:0.5rem 1rem;border:1px solid var(--border);border-radius:0.4rem;background:var(--bg-page);font-size:0.8rem;cursor:pointer;white-space:nowrap;">住所検索</button>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="address">ご住所 <span style="font-weight:normal;color:var(--text-muted)">(番地・建物名まで)</span></label>
-                    <textarea id="address" name="address" required placeholder="千葉県浦安市明海2-11-13 ○○マンション101"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="message">メッセージ（任意）</label>
-                    <textarea id="message" name="message" placeholder="何かあればお気軽にどうぞ"></textarea>
-                </div>
-
-                <input type="hidden" id="lat" name="lat">
-                <input type="hidden" id="lng" name="lng">
-
-                <button type="submit" class="refill-btn">補充を依頼する</button>
-            </form>
-        </div>
-
-        <!-- Step 4: 完了 -->
-        <div class="refill-card step" id="step4">
-            <div class="complete-icon">&#x2728;</div>
-            <h2>ありがとうございます</h2>
-            <p>補充のご依頼を受け付けました。</p>
-            <p style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.7;">ひとつひとつ心を込めて手作りし、<br>準備ができ次第お届けいたします。</p>
+            <!-- Calendly inline widget -->
+            <!-- ↓↓↓ YOUR_CALENDLY_URL を実際のCalendly URLに置き換えてください ↓↓↓ -->
+            <div class="calendly-inline-widget" data-url="https://calendly.com/YOUR_CALENDLY_URL?hide_gdpr_banner=1&primary_color=4a90d9"></div>
+            <!-- ↑↑↑ 例: https://calendly.com/tokistorage/pearl-soap-refill ↑↑↑ -->
         </div>
 
         <div class="refill-features">
@@ -357,7 +180,9 @@
         <p class="refill-note">
             Pearl Soapは販売品ではありません。<br>
             「いてくれてありがとう」の想いを込めて、<br>
-            ご縁のある方への贈りものとしてお届けしています。
+            ご縁のある方への贈りものとしてお届けしています。<br><br>
+            ひとつひとつ心を込めて手作りし、<br>
+            準備ができ次第お届けいたします。
         </p>
 
         <div class="refill-links">
@@ -367,215 +192,13 @@
     </div>
 </main>
 
-<footer class="toki-footer" style="background: var(--bg-page); padding: 1.5rem;">
+<footer class="toki-footer" style="background: var(--bg-page); padding: 1rem;">
     <div style="text-align: center;">
-        <p style="font-size: 0.75rem; color: var(--text-muted);">&copy; 2026 トキストレージ / Universal Need株式会社</p>
+        <p style="font-size: 0.7rem; color: var(--text-muted);">&copy; 2026 トキストレージ / Universal Need株式会社</p>
     </div>
 </footer>
 
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-<script>
-    let map = null;
-    let marker = null;
-    let currentLat = null;
-    let currentLng = null;
-    let currentAddress = null;
-
-    // ステップ切り替え
-    function showStep(stepNum) {
-        document.querySelectorAll('.step').forEach(el => el.classList.remove('active'));
-        document.getElementById('step' + stepNum).classList.add('active');
-    }
-
-    // 位置情報取得
-    function getLocation() {
-        const btn = document.getElementById('getLocationBtn');
-        btn.disabled = true;
-        btn.innerHTML = '<span class="loading"></span>位置情報を取得中...';
-
-        if (!navigator.geolocation) {
-            alert('お使いのブラウザは位置情報に対応していません。');
-            btn.disabled = false;
-            btn.textContent = '現在地からお届け先を設定';
-            return;
-        }
-
-        navigator.geolocation.getCurrentPosition(
-            async (position) => {
-                currentLat = position.coords.latitude;
-                currentLng = position.coords.longitude;
-
-                // 逆ジオコーディング
-                try {
-                    const response = await fetch(
-                        `https://nominatim.openstreetmap.org/reverse?format=json&lat=${currentLat}&lon=${currentLng}&accept-language=ja`
-                    );
-                    const data = await response.json();
-                    currentAddress = formatAddress(data);
-                } catch (e) {
-                    currentAddress = `緯度: ${currentLat.toFixed(6)}, 経度: ${currentLng.toFixed(6)}`;
-                }
-
-                // 地図表示
-                showStep(2);
-                initMap(currentLat, currentLng);
-                document.getElementById('addressDisplay').textContent = currentAddress;
-            },
-            (error) => {
-                btn.disabled = false;
-                btn.textContent = '現在地からお届け先を設定';
-
-                let message = '位置情報を取得できませんでした。';
-                if (error.code === error.PERMISSION_DENIED) {
-                    message = '位置情報の許可が必要です。住所を直接入力してください。';
-                }
-                alert(message);
-            },
-            {
-                enableHighAccuracy: true,
-                timeout: 10000,
-                maximumAge: 0
-            }
-        );
-    }
-
-    // 住所フォーマット
-    function formatAddress(data) {
-        const addr = data.address || {};
-        const parts = [];
-
-        if (addr.postcode) parts.push('〒' + addr.postcode);
-        if (addr.province || addr.state) parts.push(addr.province || addr.state);
-        if (addr.city || addr.town || addr.village) parts.push(addr.city || addr.town || addr.village);
-        if (addr.suburb || addr.neighbourhood) parts.push(addr.suburb || addr.neighbourhood);
-        if (addr.road) parts.push(addr.road);
-        if (addr.house_number) parts.push(addr.house_number);
-
-        return parts.length > 0 ? parts.join(' ') : data.display_name || '住所を取得できませんでした';
-    }
-
-    // 地図初期化
-    function initMap(lat, lng) {
-        if (map) {
-            map.remove();
-        }
-
-        map = L.map('map').setView([lat, lng], 16);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; OpenStreetMap contributors'
-        }).addTo(map);
-
-        marker = L.marker([lat, lng]).addTo(map);
-
-        // 地図サイズ調整
-        setTimeout(() => map.invalidateSize(), 100);
-    }
-
-    // 位置確定
-    function confirmLocation() {
-        document.getElementById('lat').value = currentLat;
-        document.getElementById('lng').value = currentLng;
-
-        // 郵便番号を抽出してフォームに設定
-        const postalMatch = currentAddress.match(/〒?(\d{3}-?\d{4})/);
-        if (postalMatch) {
-            document.getElementById('postal').value = postalMatch[1];
-        }
-
-        // 住所から郵便番号部分を除去
-        const addressWithoutPostal = currentAddress
-            .replace(/〒?\d{3}-?\d{4}\s*/g, '')  // 郵便番号を除去
-            .trim();
-        document.getElementById('address').value = addressWithoutPostal;
-
-        showStep(3);
-    }
-
-    // 手動入力フォーム表示
-    function showManualForm() {
-        showStep(3);
-    }
-
-    // 郵便番号から住所自動入力（zipcloud API）
-    let autoFillTimeout = null;
-    async function autoFillAddress() {
-        const postalInput = document.getElementById('postal');
-        const postal = postalInput.value.replace(/[^0-9]/g, '');
-
-        // 7桁になったら検索
-        if (postal.length !== 7) return;
-
-        // デバウンス
-        clearTimeout(autoFillTimeout);
-        autoFillTimeout = setTimeout(async () => {
-            try {
-                const response = await fetch(`https://zipcloud.ibsnet.co.jp/api/search?zipcode=${postal}`);
-                const data = await response.json();
-
-                if (data.results && data.results[0]) {
-                    const result = data.results[0];
-                    const address = `${result.address1}${result.address2}${result.address3}`;
-                    document.getElementById('address').value = address;
-                    // 住所欄にフォーカスして続きを入力しやすく
-                    document.getElementById('address').focus();
-                }
-            } catch (e) {
-                console.log('郵便番号検索エラー:', e);
-            }
-        }, 300);
-    }
-
-    // フォーム送信
-    async function submitForm(event) {
-        event.preventDefault();
-
-        const form = document.getElementById('refillForm');
-        const submitBtn = form.querySelector('button[type="submit"]');
-        submitBtn.disabled = true;
-        submitBtn.innerHTML = '<span class="loading"></span>送信中...';
-
-        const formData = {
-            name: document.getElementById('name').value,
-            contact: document.getElementById('contact').value,
-            postal: document.getElementById('postal').value,
-            address: document.getElementById('address').value,
-            message: document.getElementById('message').value,
-            lat: document.getElementById('lat').value,
-            lng: document.getElementById('lng').value,
-            timestamp: new Date().toISOString(),
-            userAgent: navigator.userAgent
-        };
-
-        try {
-            // Google Apps Script Web App にPOST
-            // ↓↓↓ デプロイ後のURLに置き換えてください ↓↓↓
-            const endpoint = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec';
-            // ↑↑↑ デプロイ後のURLに置き換えてください ↑↑↑
-
-            console.log('送信データ:', formData);
-
-            // エンドポイントが設定されている場合のみ送信
-            if (!endpoint.includes('YOUR_SCRIPT_ID')) {
-                await fetch(endpoint, {
-                    method: 'POST',
-                    mode: 'no-cors',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(formData)
-                });
-            } else {
-                console.warn('GASエンドポイントが未設定です。gas/soap-refill-receiver.gs を参照してください。');
-            }
-
-            // 完了画面表示
-            showStep(4);
-        } catch (error) {
-            console.error('送信エラー:', error);
-            alert('送信に失敗しました。もう一度お試しください。');
-            submitBtn.disabled = false;
-            submitBtn.textContent = '補充を依頼する';
-        }
-    }
-</script>
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 
 </body>
 </html>
