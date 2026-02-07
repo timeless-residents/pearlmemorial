@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use Cases | TokiStorage</title>
+    <meta name="description" content="TokiStorage use cases. From personal end-of-life planning to business partnerships with airlines, hot springs, wedding venues, funeral homes, and more.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .usecases-page {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem;
+            padding-top: 6rem;
+        }
+
+        .usecases-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .usecases-header h1 {
+            font-family: 'Shippori Mincho', serif;
+            font-size: 2.2rem;
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+
+        .usecases-header .lead {
+            font-size: 1.1rem;
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .usecases-section {
+            margin-bottom: 4rem;
+        }
+
+        .usecases-section h2 {
+            font-family: 'Shippori Mincho', serif;
+            font-size: 1.5rem;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .usecases-section h2::before {
+            content: '';
+            width: 4px;
+            height: 1.5rem;
+            background: var(--toki-blue, #2563EB);
+            border-radius: 2px;
+        }
+
+        .section-desc {
+            color: #64748b;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .usecase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .usecase-card {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.2s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .usecase-card:hover {
+            border-color: var(--toki-blue, #2563EB);
+            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.1);
+        }
+
+        .usecase-icon {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .usecase-card h3 {
+            font-family: 'Shippori Mincho', serif;
+            font-size: 1.15rem;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+
+        .usecase-card p {
+            font-size: 0.9rem;
+            color: #64748b;
+            line-height: 1.7;
+            flex: 1;
+        }
+
+        .usecase-card.b2b {
+            background: linear-gradient(135deg, #f8fafc 0%, #fff 100%);
+        }
+
+        .usecase-card.b2b h3 {
+            color: var(--toki-blue, #2563EB);
+        }
+
+        .partner-benefits {
+            background: #f1f5f9;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .partner-benefits h3 {
+            font-family: 'Shippori Mincho', serif;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #1e293b;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        .benefit-item .check {
+            color: var(--toki-blue, #2563EB);
+            font-weight: bold;
+        }
+
+        .benefit-item span {
+            font-size: 0.9rem;
+            color: #475569;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 3rem;
+            background: linear-gradient(135deg, #eff6ff 0%, #f8fafc 100%);
+            border-radius: 16px;
+            margin-top: 3rem;
+        }
+
+        .cta-section h2 {
+            font-family: 'Shippori Mincho', serif;
+            font-size: 1.5rem;
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            color: #64748b;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-buttons .btn-primary,
+        .cta-buttons .btn-secondary {
+            padding: 0.9rem 2rem;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .cta-buttons .btn-primary {
+            background: var(--toki-blue, #2563EB);
+            color: #fff;
+        }
+
+        .cta-buttons .btn-primary:hover {
+            background: #1d4ed8;
+        }
+
+        .cta-buttons .btn-secondary {
+            background: #fff;
+            color: var(--toki-blue, #2563EB);
+            border: 1px solid var(--toki-blue, #2563EB);
+        }
+
+        .cta-buttons .btn-secondary:hover {
+            background: #eff6ff;
+        }
+
+        @media (max-width: 768px) {
+            .usecases-page {
+                padding: 1.5rem;
+                padding-top: 5rem;
+            }
+
+            .usecases-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .usecase-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="toki-nav">
+    <a href="index-en.html" class="nav-logo">TokiStorage</a>
+    <div class="nav-links">
+        <a href="index-en.html#personas">Use Cases</a>
+        <a href="index-en.html#solution">Features</a>
+        <a href="index-en.html#pricing">Pricing</a>
+        <a href="index-en.html#faq">FAQ</a>
+        <a href="index-en.html#cta" class="nav-cta">Free Consultation</a>
+        <a href="usecases.html" class="lang-switch" aria-label="Switch to Japanese">JA</a>
+    </div>
+    <button class="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+
+<main class="usecases-page">
+    <header class="usecases-header">
+        <h1>Use Cases</h1>
+        <p class="lead">From personal end-of-life planning to business partnerships.<br>TokiStorage delivers "proof of existence" across countless scenarios.</p>
+    </header>
+
+    <!-- For Individuals -->
+    <section class="usecases-section">
+        <h2>For Individuals</h2>
+        <p class="section-desc">Preserve your own records or your family's history for a thousand years</p>
+
+        <div class="usecase-grid">
+            <div class="usecase-card">
+                <div class="usecase-icon">&#x1F338;</div>
+                <h3>End-of-Life Planning</h3>
+                <p>Digital data disappears. Paper deteriorates. Engraved in quartz glass, your proof of existence lasts 1,000 years with zero maintenance.</p>
+            </div>
+
+            <div class="usecase-card">
+                <div class="usecase-icon">&#x1F4D6;</div>
+                <h3>Family History & Genealogy</h3>
+                <p>Old records, family trees, ancestral photos. Preserve your family's history in a form your descendants can always access.</p>
+            </div>
+
+            <div class="usecase-card">
+                <div class="usecase-icon">&#x1F381;</div>
+                <h3>Gift for Parents</h3>
+                <p>The ultimate gift: preserving your parents' life story. The time spent creating records together becomes a treasure too.</p>
+            </div>
+
+            <div class="usecase-card">
+                <div class="usecase-icon">&#x1F3E0;</div>
+                <h3>After Grave Closure</h3>
+                <p>Even after closing a family grave, keep ancestral records alive. A palm-sized "proof of existence" you can place anywhere.</p>
+            </div>
+
+            <div class="usecase-card">
+                <div class="usecase-icon">&#x1F9D1;</div>
+                <h3>Solo End-of-Life</h3>
+                <p>No one to inherit your grave? No problem. Self-contained, requiring no one to maintain. Send your own words a thousand years forward.</p>
+            </div>
+
+            <div class="usecase-card">
+                <div class="usecase-icon">&#x1F30A;</div>
+                <h3>Disaster Preparedness</h3>
+                <p>Quartz glass withstands 1000°C. Distributed storage of replicas protects your records from various disasters.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- For Business Partners -->
+    <section class="usecases-section">
+        <h2>For Business Partners</h2>
+        <p class="section-desc">Add "proof of existence" as a new value proposition. Industry-specific plans available.</p>
+
+        <div class="usecase-grid">
+            <div class="usecase-card b2b">
+                <div class="usecase-icon">&#x2708;&#xFE0F;</div>
+                <h3>Airlines & In-Flight Sales</h3>
+                <p>Air travel is a special time for reflection. As premium class memorabilia or cabin-exclusive gifts.</p>
+            </div>
+
+            <div class="usecase-card b2b">
+                <div class="usecase-icon">&#x2668;&#xFE0F;</div>
+                <h3>Hot Springs & Ryokan</h3>
+                <p>"Toji" (hot spring therapy) has been a turning point since ancient times. Eternalize memories of your stay.</p>
+            </div>
+
+            <div class="usecase-card b2b">
+                <div class="usecase-icon">&#x1F492;</div>
+                <h3>Wedding Venues & Bridal</h3>
+                <p>Preserve wedding vows for a thousand years. As favors, gifts for parents, or time capsules.</p>
+            </div>
+
+            <div class="usecase-card b2b">
+                <div class="usecase-icon">&#x1F56F;&#xFE0F;</div>
+                <h3>Funeral Services & Memorial</h3>
+                <p>A new option for return gifts: "proof of the deceased's existence." Revolutionizing memorial practices.</p>
+            </div>
+
+            <div class="usecase-card b2b">
+                <div class="usecase-icon">&#x1F5FC;</div>
+                <h3>Tourist Spots & Rest Stops</h3>
+                <p>"Proof I was here" that lasts forever. Regional designs and mascot collaborations available.</p>
+            </div>
+
+            <div class="usecase-card b2b">
+                <div class="usecase-icon">&#x26E9;&#xFE0F;</div>
+                <h3>Shrines & Temples</h3>
+                <p>Preserve pilgrimage memories and prayer fulfillment for a thousand years. A new form of offering.</p>
+            </div>
+        </div>
+
+        <div class="partner-benefits">
+            <h3>Benefits for Partners</h3>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <span class="check">&#x2713;</span>
+                    <span>No upfront costs or inventory risk</span>
+                </div>
+                <div class="benefit-item">
+                    <span class="check">&#x2713;</span>
+                    <span>Made-to-order, zero waste</span>
+                </div>
+                <div class="benefit-item">
+                    <span class="check">&#x2713;</span>
+                    <span>OEM & white-label available</span>
+                </div>
+                <div class="benefit-item">
+                    <span class="check">&#x2713;</span>
+                    <span>Revenue sharing model</span>
+                </div>
+                <div class="benefit-item">
+                    <span class="check">&#x2713;</span>
+                    <span>Custom design creation</span>
+                </div>
+                <div class="benefit-item">
+                    <span class="check">&#x2713;</span>
+                    <span>Marketing materials provided</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <h2>Ready to Learn More?</h2>
+        <p>Whether you're an individual or a business partner, start with a free consultation.</p>
+        <div class="cta-buttons">
+            <a href="https://calendly.com/pearlmemorial/pearlmemorialsession" class="btn-primary" target="_blank" rel="noopener">Book a Free Consultation</a>
+            <a href="index-en.html" class="btn-secondary">Back to Home</a>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="toki-footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <h3>TokiStorage</h3>
+            <p>Eternal memorial engraved in quartz glass.<br>No server, no maintenance.<br>Proof of existence, delivered a thousand years forward.</p>
+        </div>
+        <div class="footer-links-group">
+            <h4>Links</h4>
+            <a href="index-en.html">About TokiStorage</a>
+            <a href="index-en.html#pricing">Pricing</a>
+            <a href="index-en.html#faq">FAQ</a>
+            <a href="index-en.html#cta">Contact</a>
+            <a href="pitch-deck.html">Investor Deck</a>
+            <a href="kids-en.html">For Kids</a>
+        </div>
+        <div class="footer-links-group">
+            <h4>Related</h4>
+            <a href="../index.html">SoulCarrier Resonance Circle</a>
+            <a href="pearl-soap-en.html">Pearl Soap</a>
+            <a href="workaway-en.html">Workaway Consulting</a>
+            <a href="offgrid-en.html">Off-Grid Consulting</a>
+        </div>
+        <div class="footer-links-group">
+            <h4>Legal</h4>
+            <a href="tokushoho-en.html">Specified Commercial Transactions Act</a>
+            <a href="privacy-en.html">Privacy Policy</a>
+        </div>
+        <div class="footer-links-group">
+            <h4>Company</h4>
+            <p>Universal Need Inc.</p>
+            <p>&copy; 2026 All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="index.js"></script>
+</body>
+</html>
