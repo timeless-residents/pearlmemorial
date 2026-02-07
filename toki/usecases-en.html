@@ -113,6 +113,31 @@
             color: var(--toki-blue, #2563EB);
         }
 
+        a.usecase-card.linked {
+            text-decoration: none;
+            position: relative;
+        }
+
+        a.usecase-card.linked .arrow {
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0;
+            transition: opacity 0.2s, transform 0.2s;
+        }
+
+        a.usecase-card.linked .arrow::after {
+            content: '→';
+            color: var(--toki-blue, #2563EB);
+            font-size: 1.2rem;
+        }
+
+        a.usecase-card.linked:hover .arrow {
+            opacity: 1;
+            transform: translateY(-50%) translateX(4px);
+        }
+
         .partner-benefits {
             background: #f1f5f9;
             border-radius: 12px;
@@ -296,86 +321,179 @@
         </div>
     </section>
 
-    <!-- For Business Partners -->
+    <!-- For Business Partners - 100 Use Cases by Category -->
     <section class="usecases-section">
-        <h2>For Business Partners</h2>
-        <p class="section-desc">Add "proof of existence" as a new value proposition. Industry-specific plans available.</p>
-
+        <h2>Tourism & Leisure</h2>
         <div class="usecase-grid">
-            <div class="usecase-card b2b">
-                <div class="usecase-icon">&#x2708;&#xFE0F;</div>
-                <h3>Airlines & In-Flight Sales</h3>
-                <p>Air travel is a special time for reflection. As premium class memorabilia or cabin-exclusive gifts.</p>
-            </div>
-
-            <div class="usecase-card b2b">
-                <div class="usecase-icon">&#x2668;&#xFE0F;</div>
-                <h3>Hot Springs & Ryokan</h3>
-                <p>"Toji" (hot spring therapy) has been a turning point since ancient times. Eternalize memories of your stay.</p>
-            </div>
-
-            <div class="usecase-card b2b">
-                <div class="usecase-icon">&#x1F492;</div>
-                <h3>Wedding Venues & Bridal</h3>
-                <p>Preserve wedding vows for a thousand years. As favors, gifts for parents, or time capsules.</p>
-            </div>
-
-            <div class="usecase-card b2b">
-                <div class="usecase-icon">&#x1F56F;&#xFE0F;</div>
-                <h3>Funeral Services & Memorial</h3>
-                <p>A new option for return gifts: "proof of the deceased's existence." Revolutionizing memorial practices.</p>
-            </div>
-
-            <div class="usecase-card b2b">
-                <div class="usecase-icon">&#x1F5FC;</div>
-                <h3>Tourist Spots & Rest Stops</h3>
-                <p>"Proof I was here" that lasts forever. Regional designs and mascot collaborations available.</p>
-            </div>
-
-            <div class="usecase-card b2b">
-                <div class="usecase-icon">&#x26E9;&#xFE0F;</div>
-                <h3>Shrines & Temples</h3>
-                <p>Preserve pilgrimage memories and prayer fulfillment for a thousand years. A new form of offering.</p>
-            </div>
-        </div>
-
-        <div class="partner-benefits">
-            <h3>Benefits for Partners</h3>
-            <div class="benefits-grid">
-                <div class="benefit-item">
-                    <span class="check">&#x2713;</span>
-                    <span>No upfront costs or inventory risk</span>
-                </div>
-                <div class="benefit-item">
-                    <span class="check">&#x2713;</span>
-                    <span>Made-to-order, zero waste</span>
-                </div>
-                <div class="benefit-item">
-                    <span class="check">&#x2713;</span>
-                    <span>OEM & white-label available</span>
-                </div>
-                <div class="benefit-item">
-                    <span class="check">&#x2713;</span>
-                    <span>Revenue sharing model</span>
-                </div>
-                <div class="benefit-item">
-                    <span class="check">&#x2713;</span>
-                    <span>Custom design creation</span>
-                </div>
-                <div class="benefit-item">
-                    <span class="check">&#x2713;</span>
-                    <span>Marketing materials provided</span>
-                </div>
-            </div>
+            <a href="usecase-resort-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🏨</div><h3>Luxury Resort Hotels</h3><p>Turn paradise stays into eternal memories</p><span class="arrow"></span></a>
+            <a href="usecase-boutique-hotel-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🏡</div><h3>Boutique Hotels</h3><p>Intimate stays, eternal impressions</p><span class="arrow"></span></a>
+            <a href="usecase-vacation-rental-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🏠</div><h3>Vacation Rentals</h3><p>Make every rental unforgettable</p><span class="arrow"></span></a>
+            <a href="usecase-cruise-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🚢</div><h3>Cruise Lines</h3><p>Voyages that last forever</p><span class="arrow"></span></a>
+            <a href="usecase-helicopter-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🚁</div><h3>Helicopter Tours</h3><p>Sky-high memories, grounded forever</p><span class="arrow"></span></a>
+            <a href="usecase-scenic-flight-en.html" class="usecase-card b2b linked"><div class="usecase-icon">✈️</div><h3>Scenic Flight Tours</h3><p>Island views preserved forever</p><span class="arrow"></span></a>
+            <a href="usecase-yacht-en.html" class="usecase-card b2b linked"><div class="usecase-icon">⛵</div><h3>Yacht Charters</h3><p>Sail into eternity</p><span class="arrow"></span></a>
+            <a href="usecase-fishing-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🎣</div><h3>Fishing Charters</h3><p>Legendary catches, eternal stories</p><span class="arrow"></span></a>
+            <a href="usecase-whale-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🐋</div><h3>Whale Watching</h3><p>Encounters that echo through time</p><span class="arrow"></span></a>
+            <a href="usecase-diving-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🤿</div><h3>Diving Shops</h3><p>Dive deep, remember forever</p><span class="arrow"></span></a>
+            <a href="usecase-snorkel-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🐠</div><h3>Snorkeling Tours</h3><p>Surface memories, deep meaning</p><span class="arrow"></span></a>
+            <a href="usecase-surf-shop-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🏄</div><h3>Surf Shops</h3><p>Ride the moment, keep it forever</p><span class="arrow"></span></a>
+            <a href="usecase-surf-school-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🌊</div><h3>Surf Schools</h3><p>Every surfer starts somewhere</p><span class="arrow"></span></a>
+            <a href="usecase-sup-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🛶</div><h3>SUP & Kayak Rentals</h3><p>Paddle into memory</p><span class="arrow"></span></a>
+            <a href="usecase-golf-en.html" class="usecase-card b2b linked"><div class="usecase-icon">⛳</div><h3>Golf Courses</h3><p>Legendary rounds, eternal records</p><span class="arrow"></span></a>
+            <a href="usecase-luau-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🌺</div><h3>Luau Venues</h3><p>Aloha spirit, eternal memory</p><span class="arrow"></span></a>
+            <a href="usecase-zipline-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🌴</div><h3>Zipline Adventures</h3><p>Soar through paradise, remember forever</p><span class="arrow"></span></a>
+            <a href="usecase-hiking-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🥾</div><h3>Hiking Tours</h3><p>Every trail tells a story</p><span class="arrow"></span></a>
+            <a href="usecase-horseback-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🐴</div><h3>Horseback Riding</h3><p>Ride into the sunset, remember forever</p><span class="arrow"></span></a>
+            <a href="usecase-atv-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🏎️</div><h3>ATV Tours</h3><p>Off-road memories, on record forever</p><span class="arrow"></span></a>
         </div>
     </section>
+
+    <section class="usecases-section">
+        <h2>Wedding & Events</h2>
+        <div class="usecase-grid">
+            <a href="usecase-wedding-venue-en.html" class="usecase-card b2b linked"><div class="usecase-icon">💒</div><h3>Wedding Venues</h3><p>Where forever begins</p><span class="arrow"></span></a>
+            <a href="usecase-wedding-planner-en.html" class="usecase-card b2b linked"><div class="usecase-icon">💐</div><h3>Wedding Planners</h3><p>Planning forever, preserving always</p><span class="arrow"></span></a>
+            <a href="usecase-chapel-en.html" class="usecase-card b2b linked"><div class="usecase-icon">⛪</div><h3>Wedding Chapels</h3><p>Sacred vows, eternal preservation</p><span class="arrow"></span></a>
+            <a href="usecase-beach-wedding-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🏖️</div><h3>Beach Wedding Services</h3><p>Toes in sand, love in quartz</p><span class="arrow"></span></a>
+            <a href="usecase-wedding-photo-en.html" class="usecase-card b2b linked"><div class="usecase-icon">📸</div><h3>Wedding Photography</h3><p>Images fade, quartz endures</p><span class="arrow"></span></a>
+            <a href="usecase-bridal-beauty-en.html" class="usecase-card b2b linked"><div class="usecase-icon">💄</div><h3>Bridal Beauty Services</h3><p>Beauty captured, forever</p><span class="arrow"></span></a>
+            <a href="usecase-wedding-florist-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🌸</div><h3>Wedding Florists</h3><p>Flowers fade, memories bloom forever</p><span class="arrow"></span></a>
+            <a href="usecase-honeymoon-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🌙</div><h3>Honeymoon Resorts</h3><p>Where married life begins</p><span class="arrow"></span></a>
+        </div>
+    </section>
+
+    <section class="usecases-section">
+        <h2>Memorial & Spiritual</h2>
+        <div class="usecase-grid">
+            <a href="usecase-funeral-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🕯️</div><h3>Funeral Homes</h3><p>Honoring lives, preserving legacies</p><span class="arrow"></span></a>
+            <a href="usecase-ocean-scattering-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🌊</div><h3>Ocean Scattering Services</h3><p>Return to the sea, remembered forever</p><span class="arrow"></span></a>
+            <a href="usecase-memorial-reef-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🐚</div><h3>Memorial Reef Services</h3><p>Becoming part of the reef</p><span class="arrow"></span></a>
+            <a href="usecase-church-en.html" class="usecase-card b2b linked"><div class="usecase-icon">⛪</div><h3>Churches</h3><p>Faith journeys, eternal records</p><span class="arrow"></span></a>
+            <a href="usecase-temple-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🛕</div><h3>Buddhist Temples</h3><p>Dharma preserved through time</p><span class="arrow"></span></a>
+            <a href="usecase-heiau-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🗿</div><h3>Hawaiian Heiau</h3><p>Honoring ancestors, preserving traditions</p><span class="arrow"></span></a>
+            <a href="usecase-military-memorial-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🎖️</div><h3>Military Memorials</h3><p>Service remembered, sacrifice honored</p><span class="arrow"></span></a>
+            <a href="usecase-veterans-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🇺🇸</div><h3>Veterans Services</h3><p>Honoring those who served</p><span class="arrow"></span></a>
+            <a href="usecase-pet-memorial-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🐾</div><h3>Pet Memorial Services</h3><p>Faithful friends, forever remembered</p><span class="arrow"></span></a>
+            <a href="usecase-grief-en.html" class="usecase-card b2b linked"><div class="usecase-icon">💚</div><h3>Grief Counseling Services</h3><p>Healing through remembrance</p><span class="arrow"></span></a>
+        </div>
+    </section>
+
+    <section class="usecases-section">
+        <h2>Farms & Local Products</h2>
+        <div class="usecase-grid">
+            <a href="usecase-kona-coffee-en.html" class="usecase-card b2b linked"><div class="usecase-icon">☕</div><h3>Kona Coffee Farms</h3><p>Coffee heritage, eternally preserved</p><span class="arrow"></span></a>
+            <a href="usecase-macadamia-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🥜</div><h3>Macadamia Farms</h3><p>Nuts about heritage</p><span class="arrow"></span></a>
+            <a href="usecase-pineapple-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🍍</div><h3>Pineapple Plantations</h3><p>Tropical legacy preserved</p><span class="arrow"></span></a>
+            <a href="usecase-vanilla-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🌿</div><h3>Vanilla Farms</h3><p>Essence of paradise, forever</p><span class="arrow"></span></a>
+            <a href="usecase-chocolate-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🍫</div><h3>Chocolate Farms</h3><p>Sweet memories, eternal taste</p><span class="arrow"></span></a>
+            <a href="usecase-distillery-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🥃</div><h3>Distilleries</h3><p>Spirits with stories</p><span class="arrow"></span></a>
+            <a href="usecase-brewery-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🍺</div><h3>Craft Breweries</h3><p>Brewing memories that last</p><span class="arrow"></span></a>
+            <a href="usecase-winery-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🍷</div><h3>Wineries</h3><p>Vintage moments preserved</p><span class="arrow"></span></a>
+            <a href="usecase-honey-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🍯</div><h3>Honey Farms</h3><p>Sweet heritage, golden memories</p><span class="arrow"></span></a>
+            <a href="usecase-lavender-en.html" class="usecase-card b2b linked"><div class="usecase-icon">💜</div><h3>Lavender Farms</h3><p>Purple paradise preserved</p><span class="arrow"></span></a>
+            <a href="usecase-tropical-fruit-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🥭</div><h3>Tropical Fruit Farms</h3><p>Island flavors, lasting memories</p><span class="arrow"></span></a>
+            <a href="usecase-farmers-market-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🧺</div><h3>Farmers Markets</h3><p>Community roots, eternal connections</p><span class="arrow"></span></a>
+        </div>
+    </section>
+
+    <section class="usecases-section">
+        <h2>Shops & Crafts</h2>
+        <div class="usecase-grid">
+            <a href="usecase-hawaiian-jewelry-en.html" class="usecase-card b2b linked"><div class="usecase-icon">💎</div><h3>Hawaiian Jewelry</h3><p>Treasures as timeless as your memories</p><span class="arrow"></span></a>
+            <a href="usecase-lei-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🌺</div><h3>Lei Shops</h3><p>Aloha woven, memories preserved</p><span class="arrow"></span></a>
+            <a href="usecase-aloha-wear-en.html" class="usecase-card b2b linked"><div class="usecase-icon">👕</div><h3>Aloha Wear Shops</h3><p>Island style, eternal memories</p><span class="arrow"></span></a>
+            <a href="usecase-ukulele-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🎸</div><h3>Ukulele Shops</h3><p>Music of the islands, forever</p><span class="arrow"></span></a>
+            <a href="usecase-art-gallery-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🎨</div><h3>Art Galleries</h3><p>Island artistry, eternal expression</p><span class="arrow"></span></a>
+            <a href="usecase-tattoo-en.html" class="usecase-card b2b linked"><div class="usecase-icon">✒️</div><h3>Tattoo Studios</h3><p>Ink tells stories, quartz preserves them</p><span class="arrow"></span></a>
+            <a href="usecase-surfboard-shaper-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🏄</div><h3>Surfboard Shapers</h3><p>Craftsmanship preserved forever</p><span class="arrow"></span></a>
+            <a href="usecase-hawaiian-quilt-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🧵</div><h3>Hawaiian Quilt Shops</h3><p>Stitched traditions, eternal patterns</p><span class="arrow"></span></a>
+            <a href="usecase-koa-wood-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🪵</div><h3>Koa Wood Crafts</h3><p>Island wood, lasting legacy</p><span class="arrow"></span></a>
+            <a href="usecase-shell-art-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🐚</div><h3>Shell Art & Jewelry</h3><p>Ocean treasures, eternal beauty</p><span class="arrow"></span></a>
+            <a href="usecase-gift-shop-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🎁</div><h3>Gift Shops</h3><p>Memories worth keeping forever</p><span class="arrow"></span></a>
+            <a href="usecase-antique-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🏺</div><h3>Antique Shops</h3><p>History preserved, stories continued</p><span class="arrow"></span></a>
+            <a href="usecase-bookstore-en.html" class="usecase-card b2b linked"><div class="usecase-icon">📚</div><h3>Bookstores</h3><p>Stories within stories</p><span class="arrow"></span></a>
+        </div>
+    </section>
+
+    <section class="usecases-section">
+        <h2>Wellness & Healthcare</h2>
+        <div class="usecase-grid">
+            <a href="usecase-spa-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🧘</div><h3>Spa & Wellness Retreats</h3><p>Renewal remembered forever</p><span class="arrow"></span></a>
+            <a href="usecase-yoga-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🧘‍♀️</div><h3>Yoga Studios</h3><p>Practice preserved, journey continued</p><span class="arrow"></span></a>
+            <a href="usecase-pilates-en.html" class="usecase-card b2b linked"><div class="usecase-icon">💪</div><h3>Pilates Studios</h3><p>Strength journeys documented</p><span class="arrow"></span></a>
+            <a href="usecase-meditation-en.html" class="usecase-card b2b linked"><div class="usecase-icon">☯️</div><h3>Meditation Centers</h3><p>Inner peace, outer preservation</p><span class="arrow"></span></a>
+            <a href="usecase-lomilomi-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🤲</div><h3>Lomilomi Massage</h3><p>Healing touch, lasting memory</p><span class="arrow"></span></a>
+            <a href="usecase-hospital-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🏥</div><h3>Hospitals</h3><p>Life moments, carefully preserved</p><span class="arrow"></span></a>
+            <a href="usecase-clinic-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🩺</div><h3>Medical Clinics</h3><p>Health journeys documented</p><span class="arrow"></span></a>
+            <a href="usecase-dental-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🦷</div><h3>Dental Clinics</h3><p>Smiles preserved forever</p><span class="arrow"></span></a>
+            <a href="usecase-nursing-en.html" class="usecase-card b2b linked"><div class="usecase-icon">👵</div><h3>Nursing Homes</h3><p>Life stories, eternally treasured</p><span class="arrow"></span></a>
+            <a href="usecase-retirement-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🏡</div><h3>Retirement Communities</h3><p>Golden years, preserved forever</p><span class="arrow"></span></a>
+            <a href="usecase-rehab-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🏃</div><h3>Rehabilitation Centers</h3><p>Recovery journeys celebrated</p><span class="arrow"></span></a>
+            <a href="usecase-mental-health-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🧠</div><h3>Mental Health Services</h3><p>Wellness journeys, lasting support</p><span class="arrow"></span></a>
+        </div>
+    </section>
+
+    <section class="usecases-section">
+        <h2>Education & Culture</h2>
+        <div class="usecase-grid">
+            <a href="usecase-cultural-center-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🏛️</div><h3>Cultural Centers</h3><p>Hawaiian heritage preserved forever</p><span class="arrow"></span></a>
+            <a href="usecase-university-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🎓</div><h3>Universities</h3><p>Academic achievements, eternal records</p><span class="arrow"></span></a>
+            <a href="usecase-language-school-en.html" class="usecase-card b2b linked"><div class="usecase-icon">📖</div><h3>Language Schools</h3><p>Learning journeys preserved</p><span class="arrow"></span></a>
+            <a href="usecase-hula-en.html" class="usecase-card b2b linked"><div class="usecase-icon">💃</div><h3>Hula Schools</h3><p>Dance traditions, eternal movement</p><span class="arrow"></span></a>
+            <a href="usecase-ukulele-school-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🎵</div><h3>Ukulele Schools</h3><p>Musical journeys preserved</p><span class="arrow"></span></a>
+            <a href="usecase-cooking-class-en.html" class="usecase-card b2b linked"><div class="usecase-icon">👨‍🍳</div><h3>Cooking Classes</h3><p>Recipes and memories preserved</p><span class="arrow"></span></a>
+            <a href="usecase-museum-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🏛️</div><h3>Museums</h3><p>History preserved, twice</p><span class="arrow"></span></a>
+            <a href="usecase-aquarium-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🐟</div><h3>Aquariums</h3><p>Ocean wonders, lasting memories</p><span class="arrow"></span></a>
+            <a href="usecase-zoo-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🦁</div><h3>Zoos</h3><p>Wildlife encounters preserved</p><span class="arrow"></span></a>
+            <a href="usecase-botanical-garden-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🌺</div><h3>Botanical Gardens</h3><p>Nature's beauty, eternally captured</p><span class="arrow"></span></a>
+        </div>
+    </section>
+
+    <section class="usecases-section">
+        <h2>Business & Services</h2>
+        <div class="usecase-grid">
+            <a href="usecase-real-estate-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🏠</div><h3>Real Estate</h3><p>Property milestones preserved</p><span class="arrow"></span></a>
+            <a href="usecase-law-firm-en.html" class="usecase-card b2b linked"><div class="usecase-icon">⚖️</div><h3>Law Firms</h3><p>Legal milestones documented</p><span class="arrow"></span></a>
+            <a href="usecase-insurance-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🛡️</div><h3>Insurance Companies</h3><p>Protection stories preserved</p><span class="arrow"></span></a>
+            <a href="usecase-bank-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🏦</div><h3>Banks</h3><p>Financial milestones preserved</p><span class="arrow"></span></a>
+            <a href="usecase-car-rental-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🚗</div><h3>Car Rentals</h3><p>Road trip memories preserved</p><span class="arrow"></span></a>
+            <a href="usecase-limousine-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🚙</div><h3>Limousine Services</h3><p>Luxury journeys remembered</p><span class="arrow"></span></a>
+            <a href="usecase-concierge-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🎩</div><h3>Concierge Services</h3><p>Perfect experiences preserved</p><span class="arrow"></span></a>
+            <a href="usecase-photo-studio-en.html" class="usecase-card b2b linked"><div class="usecase-icon">📷</div><h3>Photography Studios</h3><p>Captured moments, preserved forever</p><span class="arrow"></span></a>
+            <a href="usecase-event-planner-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🎉</div><h3>Event Planners</h3><p>Celebrations preserved forever</p><span class="arrow"></span></a>
+            <a href="usecase-moving-en.html" class="usecase-card b2b linked"><div class="usecase-icon">📦</div><h3>Moving & Storage</h3><p>Life transitions documented</p><span class="arrow"></span></a>
+        </div>
+    </section>
+
+    <section class="usecases-section">
+        <h2>Food & Dining</h2>
+        <div class="usecase-grid">
+            <a href="usecase-fine-dining-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🍽️</div><h3>Fine Dining</h3><p>Culinary moments preserved</p><span class="arrow"></span></a>
+            <a href="usecase-poke-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🐟</div><h3>Poke Shops</h3><p>Island flavors, lasting memories</p><span class="arrow"></span></a>
+            <a href="usecase-shave-ice-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🍧</div><h3>Shave Ice Shops</h3><p>Cool memories, forever sweet</p><span class="arrow"></span></a>
+            <a href="usecase-farm-to-table-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🥗</div><h3>Farm-to-Table Restaurants</h3><p>Local flavors, lasting stories</p><span class="arrow"></span></a>
+            <a href="usecase-bakery-en.html" class="usecase-card b2b linked"><div class="usecase-icon">🥐</div><h3>Bakeries</h3><p>Sweet traditions preserved</p><span class="arrow"></span></a>
+        </div>
+    </section>
+
+    <div class="partner-benefits">
+        <h3>Benefits for Partners</h3>
+        <div class="benefits-grid">
+            <div class="benefit-item"><span class="check">&#x2713;</span><span>No upfront costs or inventory risk</span></div>
+            <div class="benefit-item"><span class="check">&#x2713;</span><span>Made-to-order, zero waste</span></div>
+            <div class="benefit-item"><span class="check">&#x2713;</span><span>OEM & white-label available</span></div>
+            <div class="benefit-item"><span class="check">&#x2713;</span><span>Revenue sharing model</span></div>
+            <div class="benefit-item"><span class="check">&#x2713;</span><span>Custom design creation</span></div>
+            <div class="benefit-item"><span class="check">&#x2713;</span><span>Marketing materials provided</span></div>
+        </div>
+    </div>
 
     <!-- CTA -->
     <section class="cta-section">
         <h2>Ready to Learn More?</h2>
         <p>Whether you're an individual or a business partner, start with a free consultation.</p>
         <div class="cta-buttons">
-            <a href="https://line.me/R/oaMessage/@897glsbz/?Contacting%20after%20viewing%20use%20cases" class="btn-primary" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>LINEで相談する</a>
+            <a href="https://calendly.com/pearlmemorial/pearlmemorialsession" class="btn-primary" target="_blank" rel="noopener">Book a Free Consultation</a>
             <a href="index-en.html" class="btn-secondary">Back to Home</a>
         </div>
     </section>
@@ -394,7 +512,8 @@
             <a href="index-en.html#pricing">Pricing</a>
             <a href="index-en.html#faq">FAQ</a>
             <a href="index-en.html#cta">Contact</a>
-            <a href="pitch-deck.html">Investor Deck</a>
+            <a href="pitch-deck-en.html">Investor Deck</a>
+            <a href="legacy-en.html">1000-Year Design Philosophy</a>
             <a href="kids-en.html">For Kids</a>
         </div>
         <div class="footer-links-group">
@@ -403,6 +522,7 @@
             <a href="pearl-soap-en.html">Pearl Soap</a>
             <a href="workaway-en.html">Workaway Consulting</a>
             <a href="offgrid-en.html">Off-Grid Consulting</a>
+            <a href="https://voice-memorial-qr.onrender.com/" target="_blank" rel="noopener">Voice QR Tech Demo</a>
         </div>
         <div class="footer-links-group">
             <h4>Legal</h4>
