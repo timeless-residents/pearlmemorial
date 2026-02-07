@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>結婚式場・ブライダル向け | ユースケース | トキストレージ</title>
+    <meta name="description" content="結婚式場・ブライダル向けトキストレージ導入プラン。誓いの言葉、両親への感謝を千年残す。引き出物、贈呈品、タイムカプセルとして。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <style>
+        :root {
+            --theme-color: #DB2777;
+            --theme-light: #FCE7F3;
+            --theme-dark: #BE185D;
+        }
+
+        .usecase-detail {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            padding-top: 6rem;
+        }
+
+        .usecase-hero {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, var(--theme-light) 0%, #fff 100%);
+            border-radius: 16px;
+            margin-bottom: 3rem;
+        }
+
+        .usecase-hero .icon {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .usecase-hero h1 {
+            font-family: 'Shippori Mincho', serif;
+            font-size: 2rem;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+
+        .usecase-hero .subtitle {
+            color: var(--theme-color);
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .usecase-section {
+            margin-bottom: 3rem;
+        }
+
+        .usecase-section h2 {
+            font-family: 'Shippori Mincho', serif;
+            font-size: 1.4rem;
+            color: #1e293b;
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            border-left: 4px solid var(--theme-color);
+        }
+
+        .usecase-section p {
+            color: #475569;
+            line-height: 1.9;
+            margin-bottom: 1rem;
+        }
+
+        .scene-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .scene-card {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+
+        .scene-card h3 {
+            font-size: 1rem;
+            color: var(--theme-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .scene-card p {
+            font-size: 0.9rem;
+            color: #64748b;
+            margin: 0;
+        }
+
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .benefits-list li {
+            padding: 0.8rem 0;
+            padding-left: 2rem;
+            position: relative;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .benefits-list li::before {
+            content: '\2713';
+            position: absolute;
+            left: 0;
+            color: var(--theme-color);
+            font-weight: bold;
+        }
+
+        .quote-box {
+            background: var(--theme-light);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .quote-box blockquote {
+            font-family: 'Shippori Mincho', serif;
+            font-size: 1.15rem;
+            color: #334155;
+            font-style: italic;
+            margin: 0;
+            line-height: 1.8;
+        }
+
+        .quote-box .source {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        .flow-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .flow-step {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .flow-step .num {
+            width: 32px;
+            height: 32px;
+            background: var(--theme-color);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .flow-step .content h4 {
+            font-size: 1rem;
+            color: #1e293b;
+            margin-bottom: 0.3rem;
+        }
+
+        .flow-step .content p {
+            font-size: 0.9rem;
+            color: #64748b;
+            margin: 0;
+        }
+
+        .cta-box {
+            text-align: center;
+            padding: 3rem;
+            background: linear-gradient(135deg, var(--theme-light) 0%, #f8fafc 100%);
+            border-radius: 16px;
+            margin-top: 3rem;
+        }
+
+        .cta-box h2 {
+            font-family: 'Shippori Mincho', serif;
+            font-size: 1.5rem;
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+
+        .cta-box p {
+            color: #64748b;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-box .btn-primary {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--theme-color);
+            color: #fff;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+
+        .cta-box .btn-primary:hover {
+            background: var(--theme-dark);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--theme-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .usecase-detail {
+                padding: 1.5rem;
+                padding-top: 5rem;
+            }
+
+            .usecase-hero h1 {
+                font-size: 1.6rem;
+            }
+
+            .scene-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="toki-nav">
+    <a href="index.html" class="nav-logo">トキストレージ</a>
+    <div class="nav-links">
+        <a href="usecases.html">ユースケース</a>
+        <a href="index.html#pricing">料金</a>
+        <a href="index.html#faq">よくある質問</a>
+        <a href="index.html#cta" class="nav-cta">無料相談</a>
+    </div>
+    <button class="nav-toggle" aria-label="メニュー">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+
+<main class="usecase-detail">
+    <a href="usecases.html" class="back-link">&#x2190; ユースケース一覧に戻る</a>
+
+    <div class="usecase-hero">
+        <div class="icon">&#x1F492;</div>
+        <h1>結婚式場・ブライダル向け</h1>
+        <p class="subtitle">誓いを、千年の形に</p>
+    </div>
+
+    <section class="usecase-section">
+        <h2>なぜ結婚式なのか</h2>
+        <p>結婚式は、二人の人生が交わる瞬間。誓いの言葉、感謝の手紙、親族一同の集合── すべてが「存在証明」そのものです。</p>
+        <p>しかし、その瞬間を記録したデジタルデータは消え、紙の招待状は色褪せます。石英ガラスなら、誓いの言葉を千年先まで届けられる。それは、二人だけでなく、子孫にとっても「家族のはじまり」を知る手がかりになります。</p>
+    </section>
+
+    <section class="usecase-section">
+        <h2>想定シーン</h2>
+        <div class="scene-cards">
+            <div class="scene-card">
+                <h3>両親への贈呈品</h3>
+                <p>「育ててくれてありがとう」の言葉を、永遠に。花束贈呈と共に渡す、千年残るメッセージ。</p>
+            </div>
+            <div class="scene-card">
+                <h3>引き出物オプション</h3>
+                <p>参列者への特別な引き出物として。「この結婚式に立ち会った証」を形に。</p>
+            </div>
+            <div class="scene-card">
+                <h3>誓いの言葉タイムカプセル</h3>
+                <p>挙式での誓いを刻み、10年後・25年後に開封。節目ごとに初心を振り返る。</p>
+            </div>
+            <div class="scene-card">
+                <h3>両家の家系図</h3>
+                <p>二つの家族が一つになる瞬間。両家の歴史を一枚に刻み、新しい家族の始まりを記録。</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="quote-box">
+        <blockquote>
+            「結婚式の時に刻んだ誓いの言葉を、50年経った今も読み返しています。あの日の気持ちが、ガラスの中に生きている。」
+        </blockquote>
+        <p class="source">── 想定される顧客の声</p>
+    </div>
+
+    <section class="usecase-section">
+        <h2>式場様のメリット</h2>
+        <ul class="benefits-list">
+            <li><strong>他式場との差別化</strong> ─ 「誓いを千年残せる式場」という唯一無二のポジション</li>
+            <li><strong>客単価向上</strong> ─ 高付加価値オプションとして収益に貢献</li>
+            <li><strong>感動の演出</strong> ─ 贈呈セレモニーに新たな感動を追加</li>
+            <li><strong>口コミ・SNS効果</strong> ─ 「こんな引き出物見たことない」という拡散</li>
+            <li><strong>在庫リスクなし</strong> ─ 受注生産で無駄なし</li>
+        </ul>
+    </section>
+
+    <section class="usecase-section">
+        <h2>導入の流れ</h2>
+        <div class="flow-steps">
+            <div class="flow-step">
+                <div class="num">1</div>
+                <div class="content">
+                    <h4>ヒアリング</h4>
+                    <p>式場のコンセプト、ターゲット層、既存の引き出物ラインナップをお伺いします。</p>
+                </div>
+            </div>
+            <div class="flow-step">
+                <div class="num">2</div>
+                <div class="content">
+                    <h4>プラン設計</h4>
+                    <p>両親贈呈用、引き出物用、タイムカプセル用など、ニーズに合わせたプランを設計。</p>
+                </div>
+            </div>
+            <div class="flow-step">
+                <div class="num">3</div>
+                <div class="content">
+                    <h4>デザインテンプレート制作</h4>
+                    <p>式場のブランドに合わせたオリジナルテンプレートを複数ご用意。</p>
+                </div>
+            </div>
+            <div class="flow-step">
+                <div class="num">4</div>
+                <div class="content">
+                    <h4>運用開始</h4>
+                    <p>プランナー向け説明資料、新郎新婦向けパンフレットを整備して運用開始。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="cta-box">
+        <h2>まずはお気軽にご相談ください</h2>
+        <p>貴式場のコンセプトに合わせた、<br>オリジナルプランをご提案いたします。</p>
+        <a href="https://calendly.com/pearlmemorial/pearlmemorialsession" class="btn-primary" target="_blank" rel="noopener">パートナー相談を予約する</a>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="toki-footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <h3>トキストレージ</h3>
+            <p>石英ガラスに刻む、永遠の墓誌。<br>サーバー不要、維持費ゼロ。<br>存在証明を、千年先へ届ける。</p>
+        </div>
+        <div class="footer-links-group">
+            <h4>リンク</h4>
+            <a href="index.html">トキストレージとは</a>
+            <a href="usecases.html">ユースケース</a>
+            <a href="index.html#pricing">料金プラン</a>
+            <a href="index.html#faq">よくある質問</a>
+            <a href="profile.html">代表プロフィール</a>
+        </div>
+        <div class="footer-links-group">
+            <h4>法的情報</h4>
+            <a href="tokushoho.html">特定商取引法に基づく表記</a>
+            <a href="privacy.html">プライバシーポリシー</a>
+        </div>
+        <div class="footer-links-group">
+            <h4>運営</h4>
+            <p>Universal Need株式会社</p>
+            <p>&copy; 2026 All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="index.js"></script>
+</body>
+</html>

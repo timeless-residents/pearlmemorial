@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ユースケース | トキストレージ</title>
+    <meta name="description" content="トキストレージの活用シーン。個人の終活から、航空機内販売、温泉旅館、結婚式場、葬儀社、観光地、神社仏閣まで、さまざまな場面で「存在証明」をお届けします。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .usecases-page {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem;
+            padding-top: 6rem;
+        }
+
+        .usecases-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .usecases-header h1 {
+            font-family: 'Shippori Mincho', serif;
+            font-size: 2.2rem;
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+
+        .usecases-header .lead {
+            font-size: 1.1rem;
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .usecases-section {
+            margin-bottom: 4rem;
+        }
+
+        .usecases-section h2 {
+            font-family: 'Shippori Mincho', serif;
+            font-size: 1.5rem;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .usecases-section h2::before {
+            content: '';
+            width: 4px;
+            height: 1.5rem;
+            background: var(--toki-blue, #2563EB);
+            border-radius: 2px;
+        }
+
+        .section-desc {
+            color: #64748b;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .usecase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .usecase-card {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.2s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .usecase-card:hover {
+            border-color: var(--toki-blue, #2563EB);
+            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.1);
+        }
+
+        .usecase-card.linked {
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .usecase-icon {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .usecase-card h3 {
+            font-family: 'Shippori Mincho', serif;
+            font-size: 1.15rem;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+
+        .usecase-card p {
+            font-size: 0.9rem;
+            color: #64748b;
+            line-height: 1.7;
+            flex: 1;
+        }
+
+        .usecase-card .arrow {
+            color: var(--toki-blue, #2563EB);
+            font-size: 0.85rem;
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .usecase-card .arrow::after {
+            content: '\2192';
+        }
+
+        /* B2B Cards - Slightly different styling */
+        .usecase-card.b2b {
+            background: linear-gradient(135deg, #f8fafc 0%, #fff 100%);
+        }
+
+        .usecase-card.b2b h3 {
+            color: var(--toki-blue, #2563EB);
+        }
+
+        .partner-benefits {
+            background: #f1f5f9;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .partner-benefits h3 {
+            font-family: 'Shippori Mincho', serif;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #1e293b;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        .benefit-item .check {
+            color: var(--toki-blue, #2563EB);
+            font-weight: bold;
+        }
+
+        .benefit-item span {
+            font-size: 0.9rem;
+            color: #475569;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 3rem;
+            background: linear-gradient(135deg, #eff6ff 0%, #f8fafc 100%);
+            border-radius: 16px;
+            margin-top: 3rem;
+        }
+
+        .cta-section h2 {
+            font-family: 'Shippori Mincho', serif;
+            font-size: 1.5rem;
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            color: #64748b;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-buttons .btn-primary,
+        .cta-buttons .btn-secondary {
+            padding: 0.9rem 2rem;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .cta-buttons .btn-primary {
+            background: var(--toki-blue, #2563EB);
+            color: #fff;
+        }
+
+        .cta-buttons .btn-primary:hover {
+            background: #1d4ed8;
+        }
+
+        .cta-buttons .btn-secondary {
+            background: #fff;
+            color: var(--toki-blue, #2563EB);
+            border: 1px solid var(--toki-blue, #2563EB);
+        }
+
+        .cta-buttons .btn-secondary:hover {
+            background: #eff6ff;
+        }
+
+        @media (max-width: 768px) {
+            .usecases-page {
+                padding: 1.5rem;
+                padding-top: 5rem;
+            }
+
+            .usecases-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .usecase-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="toki-nav">
+    <a href="index.html" class="nav-logo">トキストレージ</a>
+    <div class="nav-links">
+        <a href="index.html#personas">お悩み</a>
+        <a href="index.html#solution">特徴</a>
+        <a href="index.html#pricing">料金</a>
+        <a href="index.html#faq">よくある質問</a>
+        <a href="index.html#cta" class="nav-cta">無料相談</a>
+        <a href="usecases-en.html" class="lang-switch" aria-label="Switch to English">EN</a>
+    </div>
+    <button class="nav-toggle" aria-label="メニュー">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+
+<main class="usecases-page">
+    <header class="usecases-header">
+        <h1>ユースケース</h1>
+        <p class="lead">個人の終活から、法人パートナーシップまで。<br>トキストレージは、さまざまな場面で「存在証明」をお届けします。</p>
+    </header>
+
+    <!-- 個人向け -->
+    <section class="usecases-section">
+        <h2>個人のお客様向け</h2>
+        <p class="section-desc">ご自身やご家族の記録を、千年先まで残したい方へ</p>
+
+        <div class="usecase-grid">
+            <div class="usecase-card">
+                <div class="usecase-icon">&#x1F338;</div>
+                <h3>終活・エンディングノート</h3>
+                <p>デジタル遺品は消え、紙は劣化する。石英ガラスに刻めば、月額料金も維持費もゼロで、1000年残る存在証明に。</p>
+            </div>
+
+            <div class="usecase-card">
+                <div class="usecase-icon">&#x1F4D6;</div>
+                <h3>家族の歴史・家系図</h3>
+                <p>古い戸籍、家系図、先祖の写真。散逸しがちな家族の記録を、子孫がいつでも辿れる確かな形で残します。</p>
+            </div>
+
+            <div class="usecase-card">
+                <div class="usecase-icon">&#x1F381;</div>
+                <h3>親への贈り物</h3>
+                <p>親御さんの人生を形に残す、最高のプレゼント。元気なうちに一緒に記録を作る時間も宝物になります。</p>
+            </div>
+
+            <div class="usecase-card">
+                <div class="usecase-icon">&#x1F3E0;</div>
+                <h3>墓じまい後の記録</h3>
+                <p>墓石を閉じても、ご先祖の記録は残したい。手のひらサイズで、どこにでも置ける新しい「存在の証」。</p>
+            </div>
+
+            <div class="usecase-card">
+                <div class="usecase-icon">&#x1F9D1;</div>
+                <h3>おひとりさまの終活</h3>
+                <p>お墓を継ぐ人がいなくても大丈夫。誰かに託さなくても自己完結。あなた自身の言葉を千年先へ届けます。</p>
+            </div>
+
+            <div class="usecase-card">
+                <div class="usecase-icon">&#x1F30A;</div>
+                <h3>災害への備え</h3>
+                <p>1000℃の耐熱性を持つ石英ガラス。複製を分散保管することで、さまざまな災害から記録を守ります。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 法人・パートナー向け -->
+    <section class="usecases-section">
+        <h2>法人・パートナー様向け</h2>
+        <p class="section-desc">「存在証明」を新たな付加価値として。業種別の導入プランをご用意しています。</p>
+
+        <div class="usecase-grid">
+            <a href="usecase-airline.html" class="usecase-card b2b linked">
+                <div class="usecase-icon">&#x2708;&#xFE0F;</div>
+                <h3>航空会社・機内販売</h3>
+                <p>空の旅は人生を振り返る特別な時間。プレミアムクラスの記念品や機内限定ギフトとして。</p>
+                <span class="arrow">詳しく見る</span>
+            </a>
+
+            <a href="usecase-onsen.html" class="usecase-card b2b linked">
+                <div class="usecase-icon">&#x2668;&#xFE0F;</div>
+                <h3>温泉・旅館・お土産</h3>
+                <p>「湯治」は古来より心身の節目。温泉地ならではの記念品として、滞在の思い出を永遠に。</p>
+                <span class="arrow">詳しく見る</span>
+            </a>
+
+            <a href="usecase-wedding.html" class="usecase-card b2b linked">
+                <div class="usecase-icon">&#x1F492;</div>
+                <h3>結婚式場・ブライダル</h3>
+                <p>誓いの言葉を千年残す。引き出物、両親への贈呈品、タイムカプセルとして。</p>
+                <span class="arrow">詳しく見る</span>
+            </a>
+
+            <a href="usecase-funeral.html" class="usecase-card b2b linked">
+                <div class="usecase-icon">&#x1F56F;&#xFE0F;</div>
+                <h3>葬儀社・メモリアル</h3>
+                <p>返礼品に「故人の存在証明」という新たな選択肢を。追悼の形を革新します。</p>
+                <span class="arrow">詳しく見る</span>
+            </a>
+
+            <a href="usecase-tourism.html" class="usecase-card b2b linked">
+                <div class="usecase-icon">&#x1F5FC;</div>
+                <h3>観光地・道の駅</h3>
+                <p>「ここに来た証」を永遠に。地域限定デザイン、ご当地キャラとのコラボも可能です。</p>
+                <span class="arrow">詳しく見る</span>
+            </a>
+
+            <a href="usecase-shrine.html" class="usecase-card b2b linked">
+                <div class="usecase-icon">&#x26E9;&#xFE0F;</div>
+                <h3>神社仏閣</h3>
+                <p>参拝記念、祈願成就の証を千年残す。御朱印文化の延長線上にある、新しい奉納の形。</p>
+                <span class="arrow">詳しく見る</span>
+            </a>
+        </div>
+
+        <div class="partner-benefits">
+            <h3>パートナー導入のメリット</h3>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <span class="check">&#x2713;</span>
+                    <span>初期費用・在庫リスクなし</span>
+                </div>
+                <div class="benefit-item">
+                    <span class="check">&#x2713;</span>
+                    <span>受注生産で無駄なし</span>
+                </div>
+                <div class="benefit-item">
+                    <span class="check">&#x2713;</span>
+                    <span>OEM・ホワイトラベル対応</span>
+                </div>
+                <div class="benefit-item">
+                    <span class="check">&#x2713;</span>
+                    <span>売上連動のレベニューシェア</span>
+                </div>
+                <div class="benefit-item">
+                    <span class="check">&#x2713;</span>
+                    <span>オリジナルデザイン制作</span>
+                </div>
+                <div class="benefit-item">
+                    <span class="check">&#x2713;</span>
+                    <span>販促物・POP提供</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <h2>導入のご相談はお気軽に</h2>
+        <p>個人のお客様も、法人パートナー様も、まずは無料相談から。</p>
+        <div class="cta-buttons">
+            <a href="https://calendly.com/pearlmemorial/pearlmemorialsession" class="btn-primary" target="_blank" rel="noopener">無料相談を予約する</a>
+            <a href="index.html" class="btn-secondary">トップに戻る</a>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="toki-footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <h3>トキストレージ</h3>
+            <p>石英ガラスに刻む、永遠の墓誌。<br>サーバー不要、維持費ゼロ。<br>存在証明を、千年先へ届ける。</p>
+        </div>
+        <div class="footer-links-group">
+            <h4>リンク</h4>
+            <a href="index.html">トキストレージとは</a>
+            <a href="index.html#pricing">料金プラン</a>
+            <a href="index.html#faq">よくある質問</a>
+            <a href="index.html#cta">お問い合わせ</a>
+            <a href="profile.html">代表プロフィール</a>
+            <a href="pitch-deck.html">投資家向け資料</a>
+            <a href="legacy.html">1000年の設計思想</a>
+            <a href="kids.html">お子さま向けページ</a>
+        </div>
+        <div class="footer-links-group">
+            <h4>関連サービス</h4>
+            <a href="../index-ja.html">SoulCarrier 共鳴の会</a>
+            <a href="pearl-soap.html">Pearl Soap</a>
+            <a href="workaway.html">Workaway導入支援</a>
+            <a href="offgrid.html">オフグリッド構築支援</a>
+            <a href="https://voice-memorial-qr.onrender.com/" target="_blank" rel="noopener">Voice QR 技術デモ</a>
+        </div>
+        <div class="footer-links-group">
+            <h4>法的情報</h4>
+            <a href="tokushoho.html">特定商取引法に基づく表記</a>
+            <a href="privacy.html">プライバシーポリシー</a>
+        </div>
+        <div class="footer-links-group">
+            <h4>運営</h4>
+            <p>Universal Need株式会社</p>
+            <p>&copy; 2026 All rights reserved.</p>
+            <div class="footer-social">
+                <a href="https://x.com/pearlmemorial" target="_blank" rel="noopener" aria-label="X (Twitter)">&#x1D54F;</a>
+                <a href="https://www.facebook.com/sato.takuya.16" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="index.js"></script>
+</body>
+</html>
