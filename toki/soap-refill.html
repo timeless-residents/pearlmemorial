@@ -299,15 +299,22 @@
             <form id="refillForm" onsubmit="submitForm(event)">
                 <div class="form-group">
                     <label for="name">お名前</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" required placeholder="山田 太郎">
+                </div>
+                <div class="form-group">
+                    <label for="contact">連絡先 <span style="font-weight:normal;color:var(--text-muted)">(電話番号 or メール)</span></label>
+                    <input type="text" id="contact" name="contact" required placeholder="090-1234-5678 または email@example.com">
                 </div>
                 <div class="form-group">
                     <label for="postal">郵便番号</label>
-                    <input type="text" id="postal" name="postal" placeholder="000-0000">
+                    <div style="display:flex;gap:0.5rem;">
+                        <input type="text" id="postal" name="postal" required placeholder="279-0014" style="flex:1;" oninput="autoFillAddress()">
+                        <button type="button" onclick="autoFillAddress()" style="padding:0.5rem 1rem;border:1px solid var(--border);border-radius:0.4rem;background:var(--bg-page);font-size:0.8rem;cursor:pointer;white-space:nowrap;">住所検索</button>
+                    </div>
                 </div>
                 <div class="form-group">
-                    <label for="address">ご住所</label>
-                    <textarea id="address" name="address" required placeholder="都道府県から入力してください"></textarea>
+                    <label for="address">ご住所 <span style="font-weight:normal;color:var(--text-muted)">(番地・建物名まで)</span></label>
+                    <textarea id="address" name="address" required placeholder="千葉県浦安市明海2-11-13 ○○マンション101"></textarea>
                 </div>
                 <div class="form-group">
                     <label for="message">メッセージ（任意）</label>
@@ -484,6 +491,35 @@
         showStep(3);
     }
 
+    // 郵便番号から住所自動入力（zipcloud API）
+    let autoFillTimeout = null;
+    async function autoFillAddress() {
+        const postalInput = document.getElementById('postal');
+        const postal = postalInput.value.replace(/[^0-9]/g, '');
+
+        // 7桁になったら検索
+        if (postal.length !== 7) return;
+
+        // デバウンス
+        clearTimeout(autoFillTimeout);
+        autoFillTimeout = setTimeout(async () => {
+            try {
+                const response = await fetch(`https://zipcloud.ibsnet.co.jp/api/search?zipcode=${postal}`);
+                const data = await response.json();
+
+                if (data.results && data.results[0]) {
+                    const result = data.results[0];
+                    const address = `${result.address1}${result.address2}${result.address3}`;
+                    document.getElementById('address').value = address;
+                    // 住所欄にフォーカスして続きを入力しやすく
+                    document.getElementById('address').focus();
+                }
+            } catch (e) {
+                console.log('郵便番号検索エラー:', e);
+            }
+        }, 300);
+    }
+
     // フォーム送信
     async function submitForm(event) {
         event.preventDefault();
@@ -495,6 +531,7 @@
 
         const formData = {
             name: document.getElementById('name').value,
+            contact: document.getElementById('contact').value,
             postal: document.getElementById('postal').value,
             address: document.getElementById('address').value,
             message: document.getElementById('message').value,

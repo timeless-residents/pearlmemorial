@@ -28,6 +28,7 @@ function setupSheet() {
   const headers = [
     '受付日時',
     'お名前',
+    '連絡先',
     '郵便番号',
     '住所',
     'メッセージ',
@@ -46,11 +47,12 @@ function setupSheet() {
   // 列幅調整
   sheet.setColumnWidth(1, 150);  // 受付日時
   sheet.setColumnWidth(2, 100);  // お名前
-  sheet.setColumnWidth(3, 100);  // 郵便番号
-  sheet.setColumnWidth(4, 300);  // 住所
-  sheet.setColumnWidth(5, 200);  // メッセージ
-  sheet.setColumnWidth(8, 200);  // Googleマップ
-  sheet.setColumnWidth(9, 80);   // ステータス
+  sheet.setColumnWidth(3, 150);  // 連絡先
+  sheet.setColumnWidth(4, 100);  // 郵便番号
+  sheet.setColumnWidth(5, 300);  // 住所
+  sheet.setColumnWidth(6, 200);  // メッセージ
+  sheet.setColumnWidth(9, 200);  // Googleマップ
+  sheet.setColumnWidth(10, 80);  // ステータス
 
   Logger.log('シートのセットアップが完了しました');
 }
@@ -82,6 +84,7 @@ function doPost(e) {
     const row = [
       jstTime,
       data.name || '',
+      data.contact || '',
       data.postal || '',
       data.address || '',
       data.message || '',
@@ -132,6 +135,7 @@ function sendNotificationEmail(data, timestamp) {
   let body = `Pearl Soapの補充依頼がありました。\n\n`;
   body += `受付日時: ${timestamp}\n`;
   body += `お名前: ${data.name}\n`;
+  body += `連絡先: ${data.contact}\n`;
   body += `郵便番号: ${data.postal}\n`;
   body += `住所: ${data.address}\n`;
 
@@ -154,6 +158,7 @@ function testPost() {
     postData: {
       contents: JSON.stringify({
         name: 'テスト太郎',
+        contact: '090-1234-5678',
         postal: '279-0014',
         address: '千葉県浦安市明海2-11-13',
         message: 'テストメッセージです',
