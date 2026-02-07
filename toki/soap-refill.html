@@ -475,13 +475,18 @@
     function confirmLocation() {
         document.getElementById('lat').value = currentLat;
         document.getElementById('lng').value = currentLng;
-        document.getElementById('address').value = currentAddress.replace('〒', '').trim();
 
-        // 郵便番号を抽出
+        // 郵便番号を抽出してフォームに設定
         const postalMatch = currentAddress.match(/〒?(\d{3}-?\d{4})/);
         if (postalMatch) {
             document.getElementById('postal').value = postalMatch[1];
         }
+
+        // 住所から郵便番号部分を除去
+        const addressWithoutPostal = currentAddress
+            .replace(/〒?\d{3}-?\d{4}\s*/g, '')  // 郵便番号を除去
+            .trim();
+        document.getElementById('address').value = addressWithoutPostal;
 
         showStep(3);
     }
