@@ -224,6 +224,78 @@
             background: #eff6ff;
         }
 
+        /* Filter and Search */
+        .filter-controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            align-items: center;
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 200px;
+            max-width: 300px;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 0.7rem 1rem 0.7rem 2.5rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .search-box input:focus {
+            border-color: var(--toki-blue, #2563EB);
+        }
+
+        .search-box::before {
+            content: '\1F50D';
+            position: absolute;
+            left: 0.8rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.9rem;
+            opacity: 0.5;
+        }
+
+        .show-count {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        .usecase-card.hidden {
+            display: none;
+        }
+
+        .show-more-btn {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            margin-top: 1.5rem;
+            background: #f8fafc;
+            border: 1px dashed #cbd5e1;
+            border-radius: 8px;
+            color: var(--toki-blue, #2563EB);
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .show-more-btn:hover {
+            background: #eff6ff;
+            border-color: var(--toki-blue, #2563EB);
+        }
+
+        .show-more-btn.hidden {
+            display: none;
+        }
+
         @media (max-width: 768px) {
             .usecases-page {
                 padding: 1.5rem;
@@ -244,6 +316,15 @@
 
             .cta-buttons {
                 flex-direction: column;
+            }
+
+            .filter-controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .search-box {
+                max-width: none;
             }
         }
     </style>
@@ -317,11 +398,18 @@
     </section>
 
     <!-- 法人・パートナー向け -->
-    <section class="usecases-section">
+    <section class="usecases-section" id="b2b-section">
         <h2>法人・パートナー様向け</h2>
         <p class="section-desc">「存在証明」を新たな付加価値として。業種別の導入プランをご用意しています。</p>
 
-        <div class="usecase-grid">
+        <div class="filter-controls">
+            <div class="search-box">
+                <input type="text" id="usecase-search" placeholder="業種名で検索..." aria-label="ユースケースを検索">
+            </div>
+            <span class="show-count" id="show-count">100件中 12件を表示</span>
+        </div>
+
+        <div class="usecase-grid" id="b2b-grid">
             <a href="usecase-airline.html" class="usecase-card b2b linked">
                 <div class="usecase-icon">&#x2708;&#xFE0F;</div>
                 <h3>航空会社・機内販売</h3>
@@ -923,7 +1011,107 @@
                 <p>芸術の証、作品の来歴を千年先へ届ける。</p>
                 <span class="arrow">詳しく見る</span>
             </a>
+
+            <a href="usecase-gym.html" class="usecase-card b2b linked">
+                <div class="usecase-icon">&#x1F3CB;&#xFE0F;</div>
+                <h3>スポーツジム</h3>
+                <p>健康への挑戦、会員との絆を千年先へ届ける。</p>
+                <span class="arrow">詳しく見る</span>
+            </a>
+
+            <a href="usecase-yoga.html" class="usecase-card b2b linked">
+                <div class="usecase-icon">&#x1F9D8;</div>
+                <h3>ヨガスタジオ</h3>
+                <p>心と体の調和、師弟の絆を千年先へ届ける。</p>
+                <span class="arrow">詳しく見る</span>
+            </a>
+
+            <a href="usecase-sento.html" class="usecase-card b2b linked">
+                <div class="usecase-icon">&#x2668;&#xFE0F;</div>
+                <h3>銭湯・サウナ</h3>
+                <p>地域の憩い、裸の付き合いを千年先へ届ける。</p>
+                <span class="arrow">詳しく見る</span>
+            </a>
+
+            <a href="usecase-dagashi.html" class="usecase-card b2b linked">
+                <div class="usecase-icon">&#x1F36C;</div>
+                <h3>駄菓子屋</h3>
+                <p>子供時代の宝物、地域の思い出を千年先へ届ける。</p>
+                <span class="arrow">詳しく見る</span>
+            </a>
+
+            <a href="usecase-kissaten.html" class="usecase-card b2b linked">
+                <div class="usecase-icon">&#x2615;</div>
+                <h3>喫茶店</h3>
+                <p>珈琲の香り、マスターとの思い出を千年先へ届ける。</p>
+                <span class="arrow">詳しく見る</span>
+            </a>
+
+            <a href="usecase-bakery.html" class="usecase-card b2b linked">
+                <div class="usecase-icon">&#x1F35E;</div>
+                <h3>パン屋</h3>
+                <p>焼きたての香り、職人の技を千年先へ届ける。</p>
+                <span class="arrow">詳しく見る</span>
+            </a>
+
+            <a href="usecase-greengrocer.html" class="usecase-card b2b linked">
+                <div class="usecase-icon">&#x1F966;</div>
+                <h3>八百屋</h3>
+                <p>地域の台所、目利きの技を千年先へ届ける。</p>
+                <span class="arrow">詳しく見る</span>
+            </a>
+
+            <a href="usecase-fishmonger.html" class="usecase-card b2b linked">
+                <div class="usecase-icon">&#x1F41F;</div>
+                <h3>魚屋</h3>
+                <p>海の恵み、さばきの技を千年先へ届ける。</p>
+                <span class="arrow">詳しく見る</span>
+            </a>
+
+            <a href="usecase-butcher.html" class="usecase-card b2b linked">
+                <div class="usecase-icon">&#x1F969;</div>
+                <h3>肉屋</h3>
+                <p>肉への情熱、手作りの味を千年先へ届ける。</p>
+                <span class="arrow">詳しく見る</span>
+            </a>
+
+            <a href="usecase-tofu.html" class="usecase-card b2b linked">
+                <div class="usecase-icon">&#x1F9C8;</div>
+                <h3>豆腐屋</h3>
+                <p>日本の味、手作りの技を千年先へ届ける。</p>
+                <span class="arrow">詳しく見る</span>
+            </a>
+
+            <a href="usecase-rice.html" class="usecase-card b2b linked">
+                <div class="usecase-icon">&#x1F35A;</div>
+                <h3>米屋</h3>
+                <p>日本の主食、精米の技を千年先へ届ける。</p>
+                <span class="arrow">詳しく見る</span>
+            </a>
+
+            <a href="usecase-sake.html" class="usecase-card b2b linked">
+                <div class="usecase-icon">&#x1F376;</div>
+                <h3>酒屋</h3>
+                <p>日本酒文化、酒蔵との絆を千年先へ届ける。</p>
+                <span class="arrow">詳しく見る</span>
+            </a>
+
+            <a href="usecase-general.html" class="usecase-card b2b linked">
+                <div class="usecase-icon">&#x1F9F9;</div>
+                <h3>荒物屋</h3>
+                <p>暮らしの道具、職人との絆を千年先へ届ける。</p>
+                <span class="arrow">詳しく見る</span>
+            </a>
+
+            <a href="usecase-hardware.html" class="usecase-card b2b linked">
+                <div class="usecase-icon">&#x1F527;</div>
+                <h3>金物屋</h3>
+                <p>道具への愛、職人の知恵を千年先へ届ける。</p>
+                <span class="arrow">詳しく見る</span>
+            </a>
         </div>
+
+        <button class="show-more-btn" id="show-more-btn">さらに表示する（<span id="remaining-count">88</span>件）</button>
 
         <div class="partner-benefits">
             <h3>パートナー導入のメリット</h3>
@@ -1011,5 +1199,63 @@
 </footer>
 
 <script src="index.js"></script>
+<script>
+(function() {
+    const INITIAL_SHOW = 12;
+    const SHOW_MORE_COUNT = 12;
+
+    const grid = document.getElementById('b2b-grid');
+    const cards = grid.querySelectorAll('.usecase-card.b2b');
+    const searchInput = document.getElementById('usecase-search');
+    const showCountEl = document.getElementById('show-count');
+    const showMoreBtn = document.getElementById('show-more-btn');
+    const remainingCountEl = document.getElementById('remaining-count');
+
+    let visibleCount = INITIAL_SHOW;
+    let filteredCards = Array.from(cards);
+
+    function updateDisplay() {
+        const searchTerm = searchInput.value.toLowerCase();
+
+        // Filter cards by search term
+        filteredCards = Array.from(cards).filter(card => {
+            const title = card.querySelector('h3').textContent.toLowerCase();
+            const desc = card.querySelector('p').textContent.toLowerCase();
+            return title.includes(searchTerm) || desc.includes(searchTerm);
+        });
+
+        // Show/hide cards
+        cards.forEach(card => card.classList.add('hidden'));
+        filteredCards.slice(0, visibleCount).forEach(card => card.classList.remove('hidden'));
+
+        // Update count display
+        const totalFiltered = filteredCards.length;
+        const showing = Math.min(visibleCount, totalFiltered);
+        showCountEl.textContent = `${totalFiltered}件中 ${showing}件を表示`;
+
+        // Update show more button
+        const remaining = totalFiltered - visibleCount;
+        if (remaining > 0) {
+            showMoreBtn.classList.remove('hidden');
+            remainingCountEl.textContent = remaining;
+        } else {
+            showMoreBtn.classList.add('hidden');
+        }
+    }
+
+    searchInput.addEventListener('input', function() {
+        visibleCount = INITIAL_SHOW;
+        updateDisplay();
+    });
+
+    showMoreBtn.addEventListener('click', function() {
+        visibleCount += SHOW_MORE_COUNT;
+        updateDisplay();
+    });
+
+    // Initial display
+    updateDisplay();
+})();
+</script>
 </body>
 </html>
