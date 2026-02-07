@@ -506,19 +506,23 @@
 
         try {
             // Google Apps Script Web App にPOST
-            // TODO: 実際のエンドポイントURLに置き換えてください
+            // ↓↓↓ デプロイ後のURLに置き換えてください ↓↓↓
             const endpoint = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec';
+            // ↑↑↑ デプロイ後のURLに置き換えてください ↑↑↑
 
-            // 開発中はコンソールに出力
             console.log('送信データ:', formData);
 
-            // 実際の送信（エンドポイント設定後に有効化）
-            // await fetch(endpoint, {
-            //     method: 'POST',
-            //     mode: 'no-cors',
-            //     headers: { 'Content-Type': 'application/json' },
-            //     body: JSON.stringify(formData)
-            // });
+            // エンドポイントが設定されている場合のみ送信
+            if (!endpoint.includes('YOUR_SCRIPT_ID')) {
+                await fetch(endpoint, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+            } else {
+                console.warn('GASエンドポイントが未設定です。gas/soap-refill-receiver.gs を参照してください。');
+            }
 
             // 完了画面表示
             showStep(4);
