@@ -24,6 +24,7 @@
     // ── 社会制度（小→大）──
     { id: 'organization', ja: '組織', en: 'Organizations' },
     { id: 'government', ja: '行政', en: 'Government' },
+    { id: 'election', ja: '選挙と存在', en: 'Elections & Existence' },
     { id: 'nation', ja: '国家', en: 'Nation' },
     { id: 'global', ja: '国際社会', en: 'Global Society' },
     { id: 'strategy', ja: '国家戦略', en: 'National Strategy' },
