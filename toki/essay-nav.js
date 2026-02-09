@@ -14,6 +14,7 @@
     // ── 人生の節目 ──
     { id: 'lifecycle', ja: '生老病死', en: 'Life Cycle' },
     { id: 'ceremony', ja: '冠婚葬祭', en: 'Rites of Passage' },
+    { id: 'recital-record', ja: '発表会と親心', en: 'Recitals & Parenting' },
     { id: 'lifestyle', ja: '生き方', en: 'Lifestyle' },
     { id: 'independence', ja: 'オフグリッド', en: 'Off-Grid' },
 
