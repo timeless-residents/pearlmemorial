@@ -2120,6 +2120,17 @@ th.highlight-col {
 
 .footer-links-group a:hover { color: var(--toki-blue); }
 
+.footer-sub-links {
+    display: block;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-bottom: 0.4rem;
+}
+.footer-sub-links a {
+    display: inline;
+    margin-bottom: 0;
+}
+
 .footer-company {
     font-size: 0.78rem;
     color: var(--text-muted);
