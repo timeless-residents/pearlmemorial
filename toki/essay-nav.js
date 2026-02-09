@@ -14,6 +14,7 @@
     // ── 人生の節目 ──
     { id: 'lifecycle', ja: '生老病死', en: 'Life Cycle' },
     { id: 'ceremony', ja: '冠婚葬祭', en: 'Rites of Passage' },
+    { id: 'recital-record', ja: '発表会と親心', en: 'Recitals & Parenting' },
     { id: 'lifestyle', ja: '生き方', en: 'Lifestyle' },
     { id: 'independence', ja: 'オフグリッド', en: 'Off-Grid' },
 
@@ -23,6 +24,7 @@
     // ── 社会制度（小→大）──
     { id: 'organization', ja: '組織', en: 'Organizations' },
     { id: 'government', ja: '行政', en: 'Government' },
+    { id: 'election', ja: '選挙と存在', en: 'Elections & Existence' },
     { id: 'nation', ja: '国家', en: 'Nation' },
     { id: 'global', ja: '国際社会', en: 'Global Society' },
     { id: 'strategy', ja: '国家戦略', en: 'National Strategy' },
