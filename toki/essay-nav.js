@@ -37,6 +37,7 @@
     { id: 'industry', ja: '産業', en: 'Industry' },
     { id: 'consumption', ja: '消費', en: 'Consumption' },
     { id: 'gift-economy', ja: '贈与経済', en: 'Gift Economy' },
+    { id: 'novelty-soap', ja: 'ノベルティ石鹸', en: 'Novelty Soap' },
     { id: 'finance', ja: '金融', en: 'Finance' },
     { id: 'ownership', ja: '所有権', en: 'Ownership' },
     { id: 'realestate', ja: '不動産', en: 'Real Estate' },
@@ -45,6 +46,7 @@
 
     // ── 文化・社会活動 ──
     { id: 'education', ja: '教育', en: 'Education' },
+    { id: 'early-education', ja: '幼児教育・知育', en: 'Early Childhood' },
     { id: 'media', ja: 'メディア', en: 'Media' },
     { id: 'entertainment', ja: 'エンタメ', en: 'Entertainment' },
     { id: 'art', ja: '芸術', en: 'Art' },

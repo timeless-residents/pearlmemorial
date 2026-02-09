@@ -198,6 +198,43 @@
             margin-top: 0.3rem;
         }
 
+        /* ---- Origin Slide ---- */
+        .origin-episode {
+            background: linear-gradient(135deg, #FAFAFA 0%, #F5F5F5 100%);
+            border-left: 3px solid var(--text-muted);
+            border-radius: 0 12px 12px 0;
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+        }
+        .origin-episode p {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 2;
+            margin-bottom: 0.8rem;
+        }
+        .origin-episode p:last-child {
+            margin-bottom: 0;
+        }
+        .origin-insight {
+            text-align: center;
+            margin: 2.5rem 0;
+        }
+        .origin-insight p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 2;
+            margin-bottom: 0.5rem;
+        }
+        .origin-insight .insight-highlight {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--toki-blue);
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 2px solid var(--toki-blue-pale);
+        }
+
         /* ---- Problem Cards ---- */
         .problem-grid {
             display: grid;
@@ -930,11 +967,38 @@
 </section>
 
 <!-- ========================================
+     SLIDE 2: ORIGIN STORY
+     ======================================== -->
+<section class="slide origin-slide">
+    <div class="slide-inner">
+        <p class="slide-number">02 - Origin</p>
+        <h2>なぜ、この事業なのか</h2>
+        <p class="slide-lead">マウイでの墓守、愛犬との別れ。そして、日常の中での小さな気づき。</p>
+
+        <div class="origin-episode">
+            <p>先日、娘とキッズイベントに行きました。</p>
+            <p>帰り道、娘の手には紙の帽子とミニ風船。どちらも子どもは大喜び。でも帰宅する頃には風船はしぼみ、翌朝にはゴミ箱へ。</p>
+            <p>その日、娘は会場で出会った方に手作りのパールソープを渡していました。</p>
+        </div>
+
+        <div class="origin-insight">
+            <p>企業がくれるものは、その場では楽しい。でもすぐに消える。</p>
+            <p>手作りの石鹸は、使い切るまで手元に残る。そしてQRコードから、作った人のストーリーにつながる。</p>
+            <p class="insight-highlight">同じ「もらいもの」でも、記憶に残るものと消えるものがある。</p>
+        </div>
+
+        <div class="key-point">
+            <p>消費社会が生み出す「一時的な楽しさ」と、「誰かの存在を残す」という行為は違う。<br>この問いが、トキストレージの出発点です。</p>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================
      SLIDE 3: PROBLEM
      ======================================== -->
 <section class="slide">
     <div class="slide-inner">
-        <p class="slide-number">02 - Problem</p>
+        <p class="slide-number">03 - Problem</p>
         <h2>記憶はなぜ消えてしまうのか</h2>
         <p class="slide-lead">現代のメモリアル手段はすべて「時間の壁」に直面しています。</p>
 
@@ -967,7 +1031,7 @@
      ======================================== -->
 <section class="slide">
     <div class="slide-inner">
-        <p class="slide-number">03 - Solution</p>
+        <p class="slide-number">04 - Solution</p>
         <h2>石英ガラス x QRコード = 永続墓誌</h2>
         <p class="slide-lead">サーバー不要・電源不要。1000年後、スマホをかざすだけで記憶が蘇る。</p>
 
@@ -1010,7 +1074,7 @@
      ======================================== -->
 <section class="slide">
     <div class="slide-inner">
-        <p class="slide-number">04 - Market Opportunity</p>
+        <p class="slide-number">05 - Market Opportunity</p>
         <h2>人類規模の市場──死と記憶の交差点</h2>
         <p class="slide-lead">年間6,000万人が亡くなる世界で、メモリアル産業はすべての文化圏に存在する。<br>「永続保存」はその未開拓レイヤーであり、地理・宗教・文化を問わない。</p>
 
@@ -1080,7 +1144,7 @@
      ======================================== -->
 <section class="slide cta-slide">
     <div class="slide-inner">
-        <p class="slide-number">05 - Vision</p>
+        <p class="slide-number">06 - Vision</p>
         <h2>80億人が永続墓誌を持つ世界から逆算する</h2>
         <p class="slide-lead">「存在証明の民主化」とは、すべての人が自らの存在を千年先に届けられる世界を実現すること。<br>その世界線から今日を逆算したとき、トキストレージの現在地が見えてきます。</p>
 
@@ -1133,7 +1197,7 @@
      ======================================== -->
 <section class="slide">
     <div class="slide-inner">
-        <p class="slide-number">06 - Competitive Landscape</p>
+        <p class="slide-number">07 - Competitive Landscape</p>
         <h2>「1000年 x スマホ読取」は唯一のポジション</h2>
         <p class="slide-lead">短期保存 x 専門機器の象限はレッドオーシャン。トキストレージはブルーオーシャン。</p>
 
@@ -1211,7 +1275,7 @@
      ======================================== -->
 <section class="slide">
     <div class="slide-inner">
-        <p class="slide-number">07 - Business Model</p>
+        <p class="slide-number">08 - Business Model</p>
         <h2>製品販売 + 体験サービスの複合モデル</h2>
         <p class="slide-lead">買い切り型の製品収益を軸に、高単価リトリート体験と法人チャネルで多角化。</p>
 
@@ -1270,7 +1334,7 @@
      ======================================== -->
 <section class="slide">
     <div class="slide-inner">
-        <p class="slide-number">08 - Pearl Soap &#x2192; TokiStorage</p>
+        <p class="slide-number">09 - Pearl Soap &#x2192; TokiStorage</p>
         <h2>Pearl Soapワークショップ：トキストレージへの感謝導線</h2>
         <p class="slide-lead">従来のクラフトワークショップは「自分のために作る」で完結し、作品が溜まり、リピートしない。<br>Pearl Soapは「誰かに渡すために作る」への転換により、トキストレージへの自然な導線を生む。</p>
 
@@ -1369,7 +1433,7 @@
      ======================================== -->
 <section class="slide">
     <div class="slide-inner">
-        <p class="slide-number">09 - Pearl Soap Growth</p>
+        <p class="slide-number">10 - Pearl Soap Growth</p>
         <h2>Pearl Soapワークショップの成長シナリオ</h2>
         <p class="slide-lead">佐渡拠点を起点に、フランチャイズとグローバル展開で「感謝のネットワーク」を構築。</p>
 
@@ -1426,7 +1490,7 @@
      ======================================== -->
 <section class="slide">
     <div class="slide-inner">
-        <p class="slide-number">10 - Go-to-Market</p>
+        <p class="slide-number">11 - Go-to-Market</p>
         <h2>国内流通＋海外展開の多層チャネル</h2>
         <p class="slide-lead">仏壇店・葬儀社の既存インフラを活用しつつ、マウイ拠点から海外市場を開拓。</p>
 
@@ -1494,7 +1558,7 @@
      ======================================== -->
 <section class="slide">
     <div class="slide-inner">
-        <p class="slide-number">11 - Traction</p>
+        <p class="slide-number">12 - Traction</p>
         <h2>既に確立された技術と信頼基盤</h2>
         <p class="slide-lead">プロダクト開発段階を超え、パートナーシップと実証実績のフェーズに到達。</p>
 
@@ -1549,7 +1613,7 @@
      ======================================== -->
 <section class="slide">
     <div class="slide-inner">
-        <p class="slide-number">12 - Competitive Moat</p>
+        <p class="slide-number">13 - Competitive Moat</p>
         <h2>三重の参入障壁</h2>
         <p class="slide-lead">技術・場所・思想の三位一体が模倣困難な競争優位を構築。</p>
 
@@ -1589,7 +1653,7 @@
      ======================================== -->
 <section class="slide">
     <div class="slide-inner">
-        <p class="slide-number">13 - Roadmap</p>
+        <p class="slide-number">14 - Roadmap</p>
         <h2>事業展開ロードマップ</h2>
         <p class="slide-lead">佐渡拠点設立を起点に、段階的にプロダクト・チャネル・地域を拡大。</p>
 
@@ -1633,7 +1697,7 @@
      ======================================== -->
 <section class="slide">
     <div class="slide-inner">
-        <p class="slide-number">14 - Team</p>
+        <p class="slide-number">15 - Team</p>
         <h2>創業者</h2>
         <p class="slide-lead">20年の技術キャリア、国内外でのオフグリッド構築経験、遺骨帰還の社会活動。すべてが一本の線でつながった。</p>
 
@@ -1687,7 +1751,7 @@
      ======================================== -->
 <section class="slide">
     <div class="slide-inner">
-        <p class="slide-number">15 - Financial Projections</p>
+        <p class="slide-number">16 - Financial Projections</p>
         <h2>成長トラジェクトリー</h2>
         <p class="slide-lead">国内B2Bチャネルの立ち上げからグローバル展開へ。<br>サーバーコストゼロ×製造外注化により、売上拡大に伴い粗利率が改善するモデル。</p>
 
@@ -1786,7 +1850,7 @@
      ======================================== -->
 <section class="slide">
     <div class="slide-inner">
-        <p class="slide-number">16 - Use of Funds</p>
+        <p class="slide-number">17 - Use of Funds</p>
         <h2>資金使途</h2>
         <p class="slide-lead">佐渡拠点の確立とチャネル開拓に集中投下。</p>
 
@@ -1828,7 +1892,7 @@
      ======================================== -->
 <section class="slide cta-slide">
     <div class="slide-inner">
-        <p class="slide-number">17 ─ Contact</p>
+        <p class="slide-number">18 ─ Contact</p>
         <h2>佐渡の1件から、80億人へ。</h2>
         <p class="slide-lead">すべての人の存在を千年先に届ける──<br>この問いに共鳴していただける方との対話を歓迎します。</p>
 
