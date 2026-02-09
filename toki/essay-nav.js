@@ -9,6 +9,7 @@
     // ── 基礎理論（個人の内面）──
     { id: 'psychology', ja: '心理学', en: 'Psychology' },
     { id: 'philosophy', ja: '社会哲学', en: 'Philosophy' },
+    { id: 'integrity', ja: '誠実さと存在証明', en: 'Integrity' },
     { id: 'pathology', ja: '継承の病理', en: 'Pathology' },
 
     // ── 人生の節目 ──
