@@ -38,6 +38,7 @@
     { id: 'consumption', ja: '消費', en: 'Consumption' },
     { id: 'gift-economy', ja: '贈与経済', en: 'Gift Economy' },
     { id: 'novelty-soap', ja: 'ノベルティ石鹸', en: 'Novelty Soap' },
+    { id: 'advertising', ja: '広告とROI', en: 'Advertising & ROI' },
     { id: 'finance', ja: '金融', en: 'Finance' },
     { id: 'ownership', ja: '所有権', en: 'Ownership' },
     { id: 'realestate', ja: '不動産', en: 'Real Estate' },
