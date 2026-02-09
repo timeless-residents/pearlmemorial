@@ -10,6 +10,7 @@
     { id: 'psychology', ja: '心理学', en: 'Psychology' },
     { id: 'philosophy', ja: '社会哲学', en: 'Philosophy' },
     { id: 'integrity', ja: '誠実さ', en: 'Integrity' },
+    { id: 'solitude', ja: '孤独の変容', en: 'Solitude' },
     { id: 'pathology', ja: '継承の病理', en: 'Pathology' },
 
     // ── 人生の節目 ──
