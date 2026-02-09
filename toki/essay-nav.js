@@ -30,6 +30,7 @@
     // ── 経済・財産 ──
     { id: 'industry', ja: '産業', en: 'Industry' },
     { id: 'consumption', ja: '消費', en: 'Consumption' },
+    { id: 'gift-economy', ja: '贈与経済', en: 'Gift Economy' },
     { id: 'finance', ja: '金融', en: 'Finance' },
     { id: 'ownership', ja: '所有権', en: 'Ownership' },
     { id: 'realestate', ja: '不動産', en: 'Real Estate' },
@@ -48,11 +49,14 @@
 
     // ── 自然・宇宙 ──
     { id: 'ecology', ja: '生態系', en: 'Ecology' },
+    { id: 'geology', ja: '地質学', en: 'Geology' },
     { id: 'space', ja: '宇宙', en: 'Space' },
 
     // ── 技術・設計 ──
     { id: 'future', ja: 'AI時代', en: 'AI Era' },
     { id: 'legacy', ja: '技術設計', en: 'Technical Design' },
+    { id: 'deposition', ja: '金属蒸着', en: 'Deposition' },
+    { id: 'voice-future', ja: '音声復元', en: 'Voice Restoration' },
 
     // ── メタ視点 ──
     { id: 'erasure', ja: '残さない選択', en: 'Choosing Not to Leave Behind' }
