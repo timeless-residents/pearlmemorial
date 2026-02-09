@@ -77,10 +77,15 @@
     return `<a href="${href}">${label}</a>`;
   }).join(' · ');
 
+  // Pearl Soap & 100 Scenes への導線
+  const specialLinks = isEnglish
+    ? `<br><br><a href="pearl-soap.html" style="color: var(--toki-gold);">Pearl Soap</a> · <a href="100-scenes.html" style="color: var(--toki-gold);">100 Scenes</a> · <a href="index.html">Toki Storage</a>`
+    : `<br><br><a href="pearl-soap.html" style="color: var(--toki-gold);">Pearl Soap</a> · <a href="100-scenes.html" style="color: var(--toki-gold);">100のシーン</a> · <a href="index.html">トキストレージ</a>`;
+
   document.addEventListener('DOMContentLoaded', function() {
     const container = document.getElementById('essay-nav-links');
     if (container) {
-      container.innerHTML = links;
+      container.innerHTML = links + specialLinks;
     }
   });
 })();
