@@ -9,12 +9,12 @@
     // ── 基礎理論（個人の内面）──
     { id: 'psychology', ja: '心理学', en: 'Psychology' },
     { id: 'philosophy', ja: '社会哲学', en: 'Philosophy' },
-    { id: 'integrity', ja: '誠実さと存在証明', en: 'Integrity' },
+    { id: 'integrity', ja: '誠実さ', en: 'Integrity' },
     { id: 'pathology', ja: '継承の病理', en: 'Pathology' },
 
     // ── 人生の節目 ──
     { id: 'lifecycle', ja: '生老病死', en: 'Life Cycle' },
-    { id: 'adversity', ja: '逆境と存在証明', en: 'Adversity' },
+    { id: 'adversity', ja: '逆境', en: 'Adversity' },
     { id: 'ceremony', ja: '冠婚葬祭', en: 'Rites of Passage' },
     { id: 'recital-record', ja: '発表会と親心', en: 'Recitals & Parenting' },
     { id: 'lifestyle', ja: '生き方', en: 'Lifestyle' },
