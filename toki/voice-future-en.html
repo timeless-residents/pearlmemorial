@@ -279,13 +279,7 @@
     <article class="article-content">
 
         <div class="core-message">
-            <strong>Key Message:</strong> By embedding voice data in QR codes and combining quartz's piezoelectric effect with micro-power generation, it's theoretically possible to play audio without external power. This technology isn't realized yet, but it shows a path toward the dream of "preserving a voice for 1,000 years."
-        </div>
-
-        <p class="disclaimer">*This essay explores technical possibilities and is not currently commercialized technology.</p>
-
-        <div class="speculation">
-            <strong>Note:</strong> Much of the technology discussed here is currently in research stages or theoretical possibility. Some science fiction speculation is included, but each technological foundation is real.
+            <strong>Key Message:</strong> Embedding voice data directly into QR codes and engraving them on quartz glass to "preserve a voice for 1,000 years" — we are advancing technology development toward this dream and have already succeeded in playing back 3 seconds of audio from a QR code.
         </div>
 
         <h2>1. The Desire to Preserve Voice</h2>
@@ -317,44 +311,43 @@
 
         <p>Standard QR codes can store maximum about 3KB of data. Meanwhile, audio files require several KB to tens of KB per second even when compressed. Direct voice recording in current QR codes is difficult.</p>
 
-        <p>But it's not impossible.</p>
+        <p>— Or so it was thought. But we broke through this barrier.</p>
 
 
-        <h2>2. Audio Data Compression Technology</h2>
+        <h2>2. Achieving Audio QR Codes</h2>
 
-        <p>Technology to compress audio data to its limits is constantly evolving.</p>
+        <p>We tackled the challenge of "embedding voice directly into QR codes" and developed a working system.</p>
 
-        <h3>Traditional Compression</h3>
+        <h3>Using the Opus Codec</h3>
 
         <p>General audio compression like MP3 and AAC considers 128kbps (16KB per second) as "acceptable quality." This won't fit in a QR code.</p>
 
-        <h3>Ultra-Low Bitrate Audio Codecs</h3>
+        <p>We adopted the Opus codec. Opus is a highly efficient codec optimized for voice communication that maintains recognizable voice quality even at low bitrates.</p>
 
-        <p>Low bitrate codecs developed for voice communication exist.</p>
+        <h3>Developing Proprietary Compression Technology</h3>
+
+        <p>Furthermore, to store Opus-compressed binary data in QR codes, we developed proprietary data compression technology.</p>
+
+        <p>This technology was inspired by the principles of Morse code. Just as Morse code transmits complex information with limited symbols, our method condenses the essential information of audio data to its absolute minimum.</p>
+
+        <div class="key-point">
+            <p>An international patent application<br>has been filed for this proprietary compression technology.</p>
+        </div>
+
+        <h3>Successfully Playing 3 Seconds of Audio</h3>
+
+        <p>As a result, we succeeded in storing and playing back approximately 3 seconds of audio in a QR code Version 40 (maximum capacity).</p>
 
         <div class="stat-box">
-            <span class="number">1.2</span>
-            <span class="unit">kbps — Codec2's minimum bitrate (150 bytes per second)</span>
+            <span class="number">3</span>
+            <span class="unit">seconds — audio length playable directly from QR code (verified)</span>
         </div>
 
-        <p>Using technologies like Codec2, one second of audio can be compressed to about 150 bytes. Quality is below telephone grade, but recognizable as "voice."</p>
+        <p>3 seconds may seem short. But "I love you," "Thank you," "Take care" — it's enough to convey one important message.</p>
 
-        <p>QR code Version 40 (maximum capacity) holds about 3KB. That's approximately 20 seconds of audio by calculation.</p>
+        <h3>Future Expansion Possibilities</h3>
 
-        <h3>AI Voice Synthesis Possibilities</h3>
-
-        <p>A more innovative approach is recording only "voice characteristics."</p>
-
-        <p>Modern AI voice synthesis technology can learn "a person's voice" from a few minutes to tens of minutes of samples and read any text in that voice.</p>
-
-        <p>If "voice characteristic data" can be compressed to under a few KB, it could be recorded in a QR code, and AI 1,000 years from now could recreate that voice.</p>
-
-        <div class="future-box">
-            <h4>2050 Scenario</h4>
-            <p>Scanning TokiStorage's quartz glass reads "voice characteristic data" from the QR code.</p>
-            <p>The device's AI analyzes that data and speaks in the voice of an ancestor from 1,000 years ago: "I am [name]. I have something to tell you..."</p>
-            <p>It's not the actual person's voice, but it has their "voice quality."</p>
-        </div>
+        <p>Combining AI voice synthesis technology opens further possibilities. If "voice characteristic data" can be compressed to under a few KB, it could be recorded in a QR code, and AI 1,000 years from now could recreate any message in that person's voice.</p>
 
 
         <h2>3. Quartz's Piezoelectric Effect</h2>
@@ -458,29 +451,23 @@
         </div>
 
 
-        <h2>6. What Current TokiStorage Can Do</h2>
+        <h2>6. TokiStorage Voice Preservation Options</h2>
 
-        <p>Without waiting for future technology, there are ways to preserve something close to "voice" with current TokiStorage.</p>
+        <p>With our successful development of audio QR code technology, multiple methods are now available to preserve "voice."</p>
+
+        <h3>Audio QR Code (Verified)</h3>
+
+        <p>As described above, using the Opus codec and our proprietary compression technology, embedding 3 seconds of audio into a QR code is now possible. By engraving this QR code on quartz glass, audio can be played directly from the physical medium without depending on networks or servers.</p>
+
+        <p>This is "completely self-contained audio preservation."</p>
 
         <h3>Links to Audio Files</h3>
 
-        <p>Even if audio data itself won't fit in a QR code, a URL to an audio file can.</p>
+        <p>For longer audio, URLs to audio files can be recorded in QR codes. Using distributed storage like IPFS or Arweave enables storage without depending on central servers.</p>
 
-        <p>The problem is whether that URL will be valid in 1,000 years. Service termination, domain expiration, server shutdown — digital infrastructure permanence isn't guaranteed.</p>
+        <h3>Text + AI Voice Synthesis</h3>
 
-        <h3>Distributed Storage</h3>
-
-        <p>Distributed, permanent storage technologies like IPFS and Arweave are developing. Using these, audio data might be stored without depending on central servers.</p>
-
-        <p>QR codes record addresses on distributed storage, while audio data is distributed across the network.</p>
-
-        <h3>"Voice" as Text</h3>
-
-        <p>The simplest method is leaving "what you want to say" as text.</p>
-
-        <p>It's not the voice itself, but "what you wanted to convey" is certainly preserved. If descendants 1,000 years from now read it aloud, the content is transmitted.</p>
-
-        <p>Voice disappears, but words remain.</p>
+        <p>Messages can also be left as text and voiced by future AI technology. It's not the voice itself, but "what you wanted to convey" is certainly preserved.</p>
 
 
         <h2>7. Voice and Proof of Existence</h2>
@@ -512,17 +499,17 @@
         </div>
 
 
-        <h2>Conclusion — Between Dream and Reality</h2>
+        <h2>Conclusion — When Dreams Become Reality</h2>
 
-        <p>This essay explored the possibility of playing audio without power using quartz's piezoelectric effect and micro-power generation.</p>
+        <p>This essay introduced our technology development achievements in embedding audio into QR codes, and the potential for self-powered playback using quartz's piezoelectric effect.</p>
 
-        <p>With current technology, a completely self-contained "quartz that plays voice" is difficult to realize. But technology advances. On a 1,000-year timescale, what seems impossible now might become possible.</p>
+        <p>We have already succeeded in playing back 3 seconds of audio from a QR code. Our proprietary compression technology is under international patent application. The dream of "preserving a voice for 1,000 years" is no longer fantasy.</p>
 
-        <p>What matters is continuing to hold the desire to "preserve voice for 1,000 years." That desire drives technology development and eventually leads to realization.</p>
+        <p>The next step is engraving these audio QR codes on quartz glass and further realizing self-powered playback through the piezoelectric effect. Technical challenges remain, but the path is visible.</p>
 
-        <p>TokiStorage currently engraves proof of existence with text and QR codes. But in the future, there may come a day when voice — and further, video, 3D information, DNA information — is engraved on quartz glass.</p>
+        <p>TokiStorage is pioneering an era where not just text but "voice" can be engraved on quartz glass. In the future, video, 3D information, DNA information — all forms of proof of existence may be preservable for 1,000 years.</p>
 
-        <p>While dreaming of that day, we do our best with what's possible now. That is the attitude of a 1,000-year project.</p>
+        <p>Speaking of dreams while simultaneously walking toward realization. That is the attitude of a 1,000-year project.</p>
 
         <blockquote>
             <p>"Technology changes the form of dreams. But the dream itself — the wish to hear a loved one's voice forever — hasn't changed since humanity's birth."</p>
