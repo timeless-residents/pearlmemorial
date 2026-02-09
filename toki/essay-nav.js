@@ -20,6 +20,7 @@
 
     // ── 信仰・思想 ──
     { id: 'religion', ja: '宗教・神話', en: 'Religion' },
+    { id: 'dimension', ja: '5次元という視点', en: 'The Fifth Dimension' },
 
     // ── 社会制度（小→大）──
     { id: 'organization', ja: '組織', en: 'Organizations' },
