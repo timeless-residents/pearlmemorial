@@ -106,6 +106,82 @@
             line-height: 1.7;
         }
 
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .stat-card {
+            background: var(--toki-gold-pale);
+            border: 1px solid var(--toki-gold);
+            border-radius: 0.8rem;
+            padding: 1.2rem;
+            text-align: center;
+        }
+        .stat-card .stat-number {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            display: block;
+        }
+        .stat-card .stat-label {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            margin-top: 0.3rem;
+        }
+
+        .case-study {
+            background: var(--bg-page);
+            border: 1px solid var(--border);
+            border-radius: 0.8rem;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+        .case-study h4 {
+            font-family: var(--font-display);
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+        .case-study .case-location {
+            font-size: 0.75rem;
+            color: var(--toki-blue);
+            margin-bottom: 0.8rem;
+        }
+        .case-study p {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        .cost-comparison {
+            margin: 1.5rem 0;
+        }
+        .cost-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .cost-row:last-child { border-bottom: none; }
+        .cost-row .cost-item { font-size: 0.85rem; color: var(--text-secondary); }
+        .cost-row .cost-value {
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+        }
+        .cost-row.highlight {
+            background: var(--toki-gold-pale);
+            border-radius: 0.5rem;
+            border-bottom: none;
+            margin-top: 0.5rem;
+        }
+        .cost-row.highlight .cost-value { color: #059669; }
+
         .request-list {
             list-style: none;
             padding: 0;
@@ -241,6 +317,85 @@
                 <p>ハワイ・マウイ島で、Workawayホストとして活動する教育者と出会いました。彼女の農園は、世界中から訪れる若者が安心して過ごせる居場所になっています。人が訪れ、関係を築き、記憶を持ち帰る——その循環の力を目の当たりにしました。</p>
                 <p>私たちは2026年春より新潟県佐渡市に拠点を移し、この仕組みを日本各地に広げていきます。離島・中山間地域・過疎地域など、人手不足に悩む地域でこそWorkawayは大きな力を発揮します。</p>
             </div>
+        </section>
+
+        <!-- 導入の根拠と実績 -->
+        <section class="proposal-section">
+            <h2>Workawayの普及状況</h2>
+
+            <div class="stat-grid">
+                <div class="stat-card">
+                    <span class="stat-number">170+</span>
+                    <span class="stat-label">対応国数</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">50,000+</span>
+                    <span class="stat-label">世界のホスト数</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">21%</span>
+                    <span class="stat-label">5年間の成長率</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">100+</span>
+                    <span class="stat-label">月間応募数（日本の人気ホスト）</span>
+                </div>
+            </div>
+
+            <p>Workawayは2025年現在、世界170カ国以上で50,000件を超えるホストが登録。2020年の約41,000件から5年間で21%成長しており、コロナ禍を経ても需要は拡大し続けています。</p>
+            <p>日本国内でも人気ホストには月100件以上の応募が集まるなど、海外からの関心は高い状況です。一方で、地方のホストはまだ少なく、先行者優位を取れる段階にあります。</p>
+
+            <h3 style="font-size: 0.95rem; margin-top: 2rem; margin-bottom: 1rem;">国内の導入事例</h3>
+
+            <div class="case-study">
+                <h4>廃校を活用した国際交流拠点</h4>
+                <p class="case-location">香川県・讃岐地方</p>
+                <p>廃校となった小学校を改修し、Workawayホストとして運営。地域の中高生向け英語キャンプ、住民向け英会話教室、古民家のDIY修繕、イベント企画、SNSマーケティングなど、多彩な活動を展開。滞在したゲストからは「日本で最も意味のある体験だった」との声も。</p>
+            </div>
+
+            <div class="case-study">
+                <h4>インバウンド先進地域の取り組み</h4>
+                <p class="case-location">岐阜県・高山市</p>
+                <p>1986年からインバウンド誘致に取り組み、2019年には外国人宿泊者数61万人を達成。行政と事業者が連携し、多言語対応やSNS発信を強化。「量」より「質」を重視し、滞在日数の延長とリピーター創出に成功。Workawayはこうした地域戦略と親和性が高いモデルです。</p>
+            </div>
+        </section>
+
+        <!-- 費用対効果 -->
+        <section class="proposal-section">
+            <h2>費用対効果の試算</h2>
+            <p>Workaway導入のコストと、従来の採用・広告手法を比較します。</p>
+
+            <div class="cost-comparison">
+                <div class="cost-row">
+                    <span class="cost-item">求人サイト掲載（Indeed等・1ヶ月）</span>
+                    <span class="cost-value">3〜10万円</span>
+                </div>
+                <div class="cost-row">
+                    <span class="cost-item">人材紹介手数料（採用時）</span>
+                    <span class="cost-value">年収の20〜35%</span>
+                </div>
+                <div class="cost-row">
+                    <span class="cost-item">短期アルバイト人件費（1ヶ月・フルタイム相当）</span>
+                    <span class="cost-value">15〜20万円</span>
+                </div>
+                <div class="cost-row">
+                    <span class="cost-item">SNS広告（1万リーチあたり）</span>
+                    <span class="cost-value">5,000〜1万円</span>
+                </div>
+                <div class="cost-row highlight">
+                    <span class="cost-item"><strong>Workaway年会費</strong></span>
+                    <span class="cost-value">約9,000円/年</span>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <p><strong>Workawayゲスト1名の滞在がもたらす価値（試算）：</strong></p>
+                <p>・人手確保：1日4〜5時間 × 2〜4週間 = 短期アルバイト換算で10〜20万円相当</p>
+                <p>・SNS発信：Instagram投稿1件のリーチが1,000〜5,000人 × 滞在中10投稿 = 広告換算で5,000〜5万円相当</p>
+                <p>・口コミ効果：Workawayレビュー、ブログ記事、友人への紹介 = プライスレス</p>
+            </div>
+
+            <p>もちろん、ゲストは「労働力」ではなく「交流を求める旅行者」です。しかし結果として、採用・広告・PRの各領域でコストを抑えながら成果を得られる可能性があります。</p>
         </section>
 
         <!-- 連携のお願い -->
