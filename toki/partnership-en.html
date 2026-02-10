@@ -11,20 +11,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
+            /* Brand — synced with index.css */
             --toki-blue: #2563EB;
+            --toki-blue-light: #3B82F6;
             --toki-blue-dark: #1D4ED8;
             --toki-blue-pale: #EFF6FF;
+            --toki-blue-glow: rgba(37, 99, 235, 0.12);
             --toki-gold: #C9A962;
             --toki-gold-pale: #FDF8E8;
-            --emerald: #059669;
-            --emerald-pale: #ECFDF5;
-            --slate-800: #1E293B;
-            --slate-700: #334155;
-            --slate-500: #64748B;
-            --slate-400: #94A3B8;
-            --slate-200: #E2E8F0;
-            --slate-100: #F1F5F9;
+            --emerald: #16A34A;
+            --emerald-pale: #F0FDF4;
+            /* Backgrounds */
             --bg-white: #FFFFFF;
+            --bg-page: #F8FAFC;
+            --bg-section: #F1F5F9;
+            --bg-card: #FFFFFF;
+            /* Text */
+            --text-primary: #1E293B;
+            --text-secondary: #475569;
+            --text-muted: #94A3B8;
+            --text-dim: #CBD5E1;
+            /* Borders */
+            --border: #E2E8F0;
+            --border-light: #F1F5F9;
+            /* Shadows */
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.06);
+            /* Fonts */
             --font-display: 'Shippori Mincho', serif;
             --font-body: 'Zen Kaku Gothic New', sans-serif;
         }
@@ -36,7 +49,7 @@
             font-family: var(--font-body);
             font-weight: 400;
             background: var(--bg-white);
-            color: var(--slate-700);
+            color: var(--text-primary);
             line-height: 1.9;
             font-size: 16px;
         }
@@ -47,7 +60,7 @@
             z-index: 1000;
             background: rgba(255,255,255,0.95);
             backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--slate-200);
+            border-bottom: 1px solid var(--border);
             padding: 0.6rem 1.2rem;
             display: flex;
             align-items: center;
@@ -67,7 +80,7 @@
         }
         .pp-nav .nav-label {
             font-size: 0.6rem;
-            color: var(--slate-400);
+            color: var(--text-muted);
             letter-spacing: 0.08em;
         }
         .pp-nav .lang-switch {
@@ -86,7 +99,7 @@
         .pp-hero {
             padding: 8rem 2rem 4rem;
             text-align: center;
-            background: linear-gradient(180deg, var(--slate-800) 0%, #1a2744 100%);
+            background: linear-gradient(180deg, var(--text-primary) 0%, #1a2744 100%);
             color: #fff;
         }
         .pp-hero-label {
@@ -104,7 +117,7 @@
         }
         .pp-hero-sub {
             font-size: 1rem;
-            color: var(--slate-400);
+            color: var(--text-muted);
             max-width: 600px;
             margin: 0 auto;
             line-height: 2;
@@ -123,17 +136,17 @@
             font-size: 1.4rem;
             font-weight: 600;
             margin-bottom: 0.5rem;
-            color: var(--slate-800);
+            color: var(--text-primary);
         }
         .pp-section-sub {
             font-size: 0.9rem;
-            color: var(--slate-500);
+            color: var(--text-secondary);
             margin-bottom: 2.5rem;
         }
-        .pp-section-border { border-top: 1px solid var(--slate-200); }
+        .pp-section-border { border-top: 1px solid var(--border); }
 
         .problem-card {
-            background: var(--slate-100);
+            background: var(--bg-section);
             border-radius: 12px;
             padding: 2rem;
             margin-bottom: 1.5rem;
@@ -142,12 +155,12 @@
             font-family: var(--font-display);
             font-size: 1.05rem;
             font-weight: 600;
-            color: var(--slate-800);
+            color: var(--text-primary);
             margin-bottom: 0.75rem;
         }
         .problem-card p {
             font-size: 0.9rem;
-            color: var(--slate-500);
+            color: var(--text-secondary);
         }
 
         .bring-grid {
@@ -157,7 +170,7 @@
             margin-bottom: 2rem;
         }
         .bring-card {
-            border: 1px solid var(--slate-200);
+            border: 1px solid var(--border);
             border-radius: 12px;
             padding: 1.5rem;
         }
@@ -166,12 +179,12 @@
             font-family: var(--font-display);
             font-size: 0.95rem;
             font-weight: 600;
-            color: var(--slate-800);
+            color: var(--text-primary);
             margin-bottom: 0.5rem;
         }
         .bring-card p {
             font-size: 0.85rem;
-            color: var(--slate-500);
+            color: var(--text-secondary);
             line-height: 1.7;
         }
 
@@ -184,7 +197,7 @@
             display: flex;
             align-items: flex-start;
             gap: 1.5rem;
-            border: 1px solid var(--slate-200);
+            border: 1px solid var(--border);
             border-radius: 12px;
             padding: 1.5rem;
             transition: border-color 0.2s;
@@ -213,12 +226,12 @@
             font-family: var(--font-display);
             font-size: 1rem;
             font-weight: 600;
-            color: var(--slate-800);
+            color: var(--text-primary);
             margin-bottom: 0.3rem;
         }
         .model-body p {
             font-size: 0.85rem;
-            color: var(--slate-500);
+            color: var(--text-secondary);
             line-height: 1.7;
         }
         .model-example {
@@ -234,7 +247,7 @@
             gap: 1rem;
         }
         .client-card {
-            background: var(--slate-100);
+            background: var(--bg-section);
             border-radius: 10px;
             padding: 1.2rem;
             text-align: center;
@@ -244,12 +257,12 @@
             font-family: var(--font-display);
             font-size: 0.85rem;
             font-weight: 600;
-            color: var(--slate-700);
+            color: var(--text-primary);
             margin-bottom: 0.3rem;
         }
         .client-card p {
             font-size: 0.75rem;
-            color: var(--slate-500);
+            color: var(--text-secondary);
             line-height: 1.6;
         }
 
@@ -262,17 +275,17 @@
         .diff-table th, .diff-table td {
             padding: 0.75rem 1rem;
             text-align: left;
-            border-bottom: 1px solid var(--slate-200);
+            border-bottom: 1px solid var(--border);
         }
         .diff-table th {
             font-family: var(--font-display);
             font-weight: 600;
-            color: var(--slate-800);
+            color: var(--text-primary);
             font-size: 0.8rem;
             white-space: nowrap;
         }
-        .diff-table thead th { border-bottom: 2px solid var(--slate-200); }
-        .diff-table td { color: var(--slate-500); }
+        .diff-table thead th { border-bottom: 2px solid var(--border); }
+        .diff-table td { color: var(--text-secondary); }
         .diff-table .highlight { color: var(--toki-blue); font-weight: 500; }
 
         .revenue-flow {
@@ -300,16 +313,16 @@
         }
         .revenue-box p {
             font-size: 0.75rem;
-            color: var(--slate-500);
+            color: var(--text-secondary);
         }
         .revenue-arrow {
             font-size: 1.2rem;
-            color: var(--slate-400);
+            color: var(--text-muted);
             padding: 0 0.5rem;
         }
 
         .pp-cta {
-            background: var(--slate-800);
+            background: var(--text-primary);
             color: #fff;
             text-align: center;
             padding: 4rem 2rem;
@@ -322,7 +335,7 @@
         }
         .pp-cta p {
             font-size: 0.9rem;
-            color: var(--slate-400);
+            color: var(--text-muted);
             max-width: 500px;
             margin: 0 auto 2rem;
             line-height: 1.8;
@@ -344,11 +357,11 @@
         }
         .pp-cta-links a:hover {
             background: var(--toki-gold);
-            color: var(--slate-800);
+            color: var(--text-primary);
         }
 
         .founder-section {
-            background: var(--slate-100);
+            background: var(--bg-section);
             border-radius: 12px;
             padding: 2rem;
             display: flex;
@@ -373,12 +386,12 @@
             font-family: var(--font-display);
             font-size: 1rem;
             font-weight: 600;
-            color: var(--slate-800);
+            color: var(--text-primary);
             margin-bottom: 0.3rem;
         }
         .founder-body p {
             font-size: 0.85rem;
-            color: var(--slate-500);
+            color: var(--text-secondary);
             line-height: 1.7;
         }
         .founder-tags {
@@ -391,19 +404,19 @@
             font-size: 0.65rem;
             padding: 0.2rem 0.6rem;
             background: var(--bg-white);
-            border: 1px solid var(--slate-200);
+            border: 1px solid var(--border);
             border-radius: 4px;
-            color: var(--slate-500);
+            color: var(--text-secondary);
         }
 
         .pp-footer {
             text-align: center;
             padding: 2rem;
-            border-top: 1px solid var(--slate-200);
+            border-top: 1px solid var(--border);
         }
         .pp-footer p {
             font-size: 0.75rem;
-            color: var(--slate-400);
+            color: var(--text-muted);
         }
         .pp-footer a {
             color: var(--toki-blue);
