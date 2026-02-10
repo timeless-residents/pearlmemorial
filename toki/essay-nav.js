@@ -67,6 +67,7 @@
     { id: 'future', ja: 'AI時代', en: 'AI Era' },
     { id: 'perspective', ja: '視座の本質', en: 'The Essence of Perspective' },
     { id: 'chief-timeless', ja: 'Chief Timeless Officer', en: 'Chief Timeless Officer' },
+    { id: 'hands', ja: '手で刻む', en: 'Inscribed by Hand' },
     { id: 'legacy', ja: '技術設計', en: 'Technical Design' },
     { id: 'deposition', ja: '金属蒸着', en: 'Deposition' },
     { id: 'voice-future', ja: '音声復元', en: 'Voice Restoration' },
