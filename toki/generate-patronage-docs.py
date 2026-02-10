@@ -310,17 +310,6 @@ def generate_invoice():
 
     pdf.set_y(y0 + 38)
 
-    # Invoice registration
-    pdf.section_title("適格請求書発行事業者")
-    pdf.set_font("JP", "", 8)
-    pdf.set_text_color(*SECONDARY)
-    pdf.cell(0, 5, "登録番号：T XXXX-XXXX-XXXX", ln=True)
-    pdf.set_font("JP", "", 7)
-    pdf.set_text_color(*MUTED)
-    pdf.cell(0, 5, "※ 本請求書は適格請求書（インボイス）の要件を満たしています。", ln=True)
-
-    pdf.ln(6)
-
     # Issuer
     pdf.set_font("JP", "", 8)
     pdf.set_text_color(*DARK)
@@ -400,13 +389,6 @@ def generate_receipt():
     pdf.cell(40, 7, "¥ ------", border="B", align="R")
     pdf.cell(40, 7, "¥ ------", border="B", align="R")
     pdf.cell(40, 7, "¥ ------", border="B", align="R")
-    pdf.ln(12)
-
-    # Invoice registration
-    pdf.section_title("適格請求書発行事業者")
-    pdf.set_font("JP", "", 8)
-    pdf.set_text_color(*SECONDARY)
-    pdf.cell(0, 5, "登録番号：T XXXX-XXXX-XXXX", ln=True)
     pdf.ln(12)
 
     # Issuer block
