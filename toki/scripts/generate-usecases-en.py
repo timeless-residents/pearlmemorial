@@ -378,7 +378,7 @@ TEMPLATE = '''<!DOCTYPE html>
         </div>
         <div class="footer-links-group">
             <h4>Company</h4>
-            <p>Universal Need Inc.</p>
+            <p>TokiStorage</p>
             <p>&copy; 2026 All rights reserved.</p>
         </div>
     </div>
