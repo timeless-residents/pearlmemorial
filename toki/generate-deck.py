@@ -90,12 +90,13 @@ def add_rect(slide, left, top, width, height, fill=None, border_color=None, bord
     return shape
 
 
-def set_text(tf, text, font_name, size, color=TEXT_PRIMARY, bold=False, align=PP_ALIGN.LEFT):
+def set_text(tf, text, font_name, size, color=TEXT_PRIMARY, bold=False, align=PP_ALIGN.LEFT, line_spacing=1.35):
     tf.word_wrap = True
     for p in tf.paragraphs:
         p.clear()
     p = tf.paragraphs[0]
     p.alignment = align
+    p.line_spacing = line_spacing
     run = p.add_run()
     run.text = text
     run.font.name = font_name
@@ -105,9 +106,10 @@ def set_text(tf, text, font_name, size, color=TEXT_PRIMARY, bold=False, align=PP
     return p
 
 
-def add_para(tf, text, font_name, size, color=TEXT_PRIMARY, bold=False, align=PP_ALIGN.LEFT, space_before=0):
+def add_para(tf, text, font_name, size, color=TEXT_PRIMARY, bold=False, align=PP_ALIGN.LEFT, space_before=0, line_spacing=1.35):
     p = tf.add_paragraph()
     p.alignment = align
+    p.line_spacing = line_spacing
     if space_before:
         p.space_before = Pt(space_before)
     run = p.add_run()
@@ -178,7 +180,7 @@ def draw_col_card(slide, x, y, w, h, num, title, body, font):
                 num, font, 15, TOKI_BLUE, bold=True)
     add_textbox(slide, x + Inches(0.15), y + Inches(0.45), w - Inches(0.3), Inches(0.3),
                 title, font, 12, TEXT_PRIMARY, bold=True)
-    add_textbox(slide, x + Inches(0.15), y + Inches(0.78), w - Inches(0.3), h - Inches(0.88),
+    add_textbox(slide, x + Inches(0.15), y + Inches(0.88), w - Inches(0.3), h - Inches(0.98),
                 body, font, 12, TEXT_SECONDARY)
 
 
@@ -194,7 +196,7 @@ def draw_grid_card(slide, x, y, w, h, icon_letter, title, body, font):
                 icon_letter, font, 12, TOKI_BLUE, bold=True, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
     add_textbox(slide, x + Inches(0.65), y + Inches(0.15), w - Inches(0.8), Inches(0.45),
                 title, font, 12, TEXT_PRIMARY, bold=True)
-    add_textbox(slide, x + Inches(0.65), y + Inches(0.62), w - Inches(0.8), h - Inches(0.72),
+    add_textbox(slide, x + Inches(0.65), y + Inches(0.72), w - Inches(0.8), h - Inches(0.82),
                 body, font, 11, TEXT_SECONDARY)
 
 
@@ -209,9 +211,9 @@ def draw_model_item(slide, x, y, w, h, badge_text, badge_color, title, body, exa
     tw = w - Inches(1.3)
     add_textbox(slide, tx, y + Inches(0.08), tw, Inches(0.28),
                 title, font, 11, TEXT_PRIMARY, bold=True)
-    add_textbox(slide, tx, y + Inches(0.36), tw, Inches(0.35),
+    add_textbox(slide, tx, y + Inches(0.42), tw, Inches(0.32),
                 body, font, 10, TEXT_SECONDARY)
-    add_textbox(slide, tx, y + Inches(0.7), tw, Inches(0.25),
+    add_textbox(slide, tx, y + Inches(0.76), tw, Inches(0.22),
                 example, font, 9, TOKI_BLUE)
 
 
@@ -219,7 +221,7 @@ def draw_flow_box(slide, x, y, w, h, title, body, bg_color, title_color, font):
     add_rect(slide, x, y, w, h, fill=bg_color, border_color=BORDER)
     add_textbox(slide, x + Inches(0.1), y + Inches(0.08), w - Inches(0.2), Inches(0.3),
                 title, font, 11, title_color, bold=True, align=PP_ALIGN.CENTER)
-    add_textbox(slide, x + Inches(0.1), y + Inches(0.4), w - Inches(0.2), h - Inches(0.48),
+    add_textbox(slide, x + Inches(0.1), y + Inches(0.46), w - Inches(0.2), h - Inches(0.54),
                 body, font, 10, TEXT_SECONDARY, align=PP_ALIGN.CENTER)
 
 
@@ -235,7 +237,7 @@ def draw_sector_card(slide, x, y, w, h, icon_letter, title, body, font):
                 icon_letter, font, 12, TOKI_BLUE, bold=True, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
     add_textbox(slide, x + Inches(0.08), y + Inches(0.56), w - Inches(0.16), Inches(0.26),
                 title, font, 11, TEXT_PRIMARY, bold=True, align=PP_ALIGN.CENTER)
-    add_textbox(slide, x + Inches(0.08), y + Inches(0.82), w - Inches(0.16), h - Inches(0.9),
+    add_textbox(slide, x + Inches(0.08), y + Inches(0.9), w - Inches(0.16), h - Inches(0.98),
                 body, font, 9, TEXT_SECONDARY, align=PP_ALIGN.CENTER)
 
 
@@ -647,7 +649,7 @@ def build_slide6(prs, d):
     add_rect(slide, cx, cy, Inches(0.06), ch, fill=TOKI_BLUE)
     add_textbox(slide, cx + Inches(0.25), cy + Inches(0.1), cw - Inches(0.35), Inches(0.28),
                 s["callout_title"], font, 11, TEXT_PRIMARY, bold=True)
-    add_textbox(slide, cx + Inches(0.25), cy + Inches(0.4), cw - Inches(0.35), ch - Inches(0.5),
+    add_textbox(slide, cx + Inches(0.25), cy + Inches(0.45), cw - Inches(0.35), ch - Inches(0.55),
                 s["callout_body"], font, 10, TEXT_SECONDARY)
     add_footer(slide, s["footer"], 6, font)
 
@@ -717,7 +719,7 @@ def build_slide8(prs, d):
     add_rect(slide, cx, cy, Inches(0.06), ch, fill=TOKI_BLUE)
     add_textbox(slide, cx + Inches(0.25), cy + Inches(0.08), cw - Inches(0.35), Inches(0.26),
                 s["ind_title"], font, 10, TEXT_PRIMARY, bold=True)
-    add_textbox(slide, cx + Inches(0.25), cy + Inches(0.36), cw - Inches(0.35), ch - Inches(0.42),
+    add_textbox(slide, cx + Inches(0.25), cy + Inches(0.42), cw - Inches(0.35), ch - Inches(0.48),
                 s["ind_body"], font, 10, TEXT_SECONDARY)
     add_footer(slide, s["footer"], 8, font)
 
