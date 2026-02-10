@@ -38,6 +38,7 @@
     { id: 'consumption', ja: '消費', en: 'Consumption' },
     { id: 'gift-economy', ja: '贈与経済', en: 'Gift Economy' },
     { id: 'novelty-soap', ja: 'ノベルティ石鹸', en: 'Novelty Soap' },
+    { id: 'fragrance', ja: '香りの科学', en: 'Science of Scent' },
     { id: 'advertising', ja: '広告とROI', en: 'Advertising & ROI' },
     { id: 'finance', ja: '金融', en: 'Finance' },
     { id: 'ownership', ja: '所有権', en: 'Ownership' },
@@ -57,6 +58,7 @@
     { id: 'history', ja: '歴史学', en: 'History' },
 
     // ── 自然・宇宙 ──
+    { id: 'animal-welfare', ja: '動物愛護', en: 'Animal Welfare' },
     { id: 'ecology', ja: '生態系', en: 'Ecology' },
     { id: 'geology', ja: '地質学', en: 'Geology' },
     { id: 'space', ja: '宇宙', en: 'Space' },
