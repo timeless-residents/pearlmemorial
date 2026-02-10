@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate government/municipal proposal template PDFs (事業者概要書, 見積書)."""
+"""Generate government/municipal proposal template PDFs (事業者概要書, 見積書, 業務仕様書, 企画提案書)."""
 
 from fpdf import FPDF
 import os
@@ -317,6 +317,204 @@ def generate_estimate():
 
 
 # ---------------------------------------------------------------------------
+# Document 3: 業務仕様書 (Service Specification)
+# ---------------------------------------------------------------------------
+
+def generate_specification():
+    """業務仕様書 template."""
+    pdf = GovPDF()
+    pdf.add_page()
+    pdf.template_stamp()
+    pdf.header_block("業務仕様書", "Service Specification")
+
+    # ── 業務名称 ──
+    pdf.section_title("1. 業務名称")
+    pdf.body_text("〇〇市 〇〇事業に係る石英ガラス記録プレート制作業務")
+
+    # ── 業務目的 ──
+    pdf.section_title("2. 業務目的")
+    pdf.body_text(
+        "本業務は、〇〇の記録を石英ガラスプレートに半永久的に保存することを目的とする。"
+        "石英ガラスは電源・サーバー不要で1,000年以上の耐久性を有し、"
+        "デジタルアーカイブの構造的課題であるマイグレーションリスクを根本的に解消する。"
+    )
+
+    # ── 業務内容 ──
+    pdf.section_title("3. 業務内容")
+    items = [
+        ("3-1", "コンテンツ設計", "記録対象の選定・テキスト編集・QRコードリンク先コンテンツの構成"),
+        ("3-2", "石英ガラスプレート制作", "金属蒸着によるQRコード刻印（1枚あたり約XX mm × XX mm）"),
+        ("3-3", "動作検証", "QRコード読取テスト・リンク先表示確認"),
+        ("3-4", "設置・取付", "指定場所への取付工事（屋内 / 屋外）"),
+        ("3-5", "納品・報告", "完了報告書の提出"),
+    ]
+    for num, title, desc in items:
+        pdf.set_font("JP", "B", 8.5)
+        pdf.set_text_color(*DARK)
+        pdf.cell(10, 6, num, align="L")
+        pdf.cell(50, 6, title, align="L")
+        pdf.set_font("JP", "", 8)
+        pdf.set_text_color(*SECONDARY)
+        pdf.cell(0, 6, desc, ln=True, align="L")
+
+    pdf.ln(2)
+
+    # ── 成果物 ──
+    pdf.section_title("4. 成果物")
+    pdf.body_text(
+        "・石英ガラスプレート ×〇〇枚\n"
+        "・QRコードリンク先コンテンツ（Webホスティング1年間含む）\n"
+        "・完了報告書 1部"
+    )
+
+    # ── 履行期間 ──
+    pdf.section_title("5. 履行期間")
+    pdf.body_text("契約締結日から　　年　　月　　日まで")
+
+    # ── 品質要件 ──
+    pdf.section_title("6. 品質・耐久性要件")
+    pdf.body_text(
+        "・石英ガラスの理論耐久性: 1,000年以上\n"
+        "・QRコード読取: 市販スマートフォンカメラで読取可能であること\n"
+        "・屋外設置の場合: 耐候性処理を施すこと"
+    )
+
+    # ── 契約根拠 ──
+    pdf.section_title("7. 随意契約の根拠")
+    pdf.body_text(
+        "石英ガラスへの千年記録は高度に専門的な技術であり、"
+        "「その性質又は目的が競争入札に適しないもの」に該当する。\n"
+        "・地方自治体: 地方自治法施行令 第167条の2 第1項第2号\n"
+        "・国の機関: 予算決算及び会計令 第99条第2号"
+    )
+
+    out = os.path.join(OUT_DIR, "government-template-specification.pdf")
+    pdf.output(out)
+    print(f"  -> {out}")
+
+
+# ---------------------------------------------------------------------------
+# Document 4: 企画提案書 (Project Proposal)
+# ---------------------------------------------------------------------------
+
+def generate_proposal():
+    """企画提案書 template."""
+    pdf = GovPDF()
+    pdf.add_page()
+    pdf.template_stamp()
+    pdf.header_block("企画提案書", "Project Proposal")
+
+    # ── 宛先 ──
+    pdf.set_font("JP", "B", 11)
+    pdf.set_text_color(*DARK)
+    pdf.cell(0, 8, "〇〇市 〇〇課 御中", ln=True)
+    pdf.ln(2)
+
+    # ── Meta ──
+    pdf.label_value("提案番号", "PROP-2026-XXXX")
+    pdf.label_value("日付", "2026年　　月　　日")
+    pdf.label_value("提案者", "TokiStorage　佐藤卓也")
+    pdf.ln(2)
+
+    pdf.set_draw_color(*BORDER)
+    pdf.line(15, pdf.get_y(), 195, pdf.get_y())
+    pdf.ln(4)
+
+    pdf.set_draw_color(*BORDER)
+    pdf.line(15, pdf.get_y(), 195, pdf.get_y())
+    pdf.ln(4)
+
+    # ── 提案概要 ──
+    pdf.section_title("1. 提案概要")
+    pdf.body_text(
+        "〇〇市の〇〇に関する記録を石英ガラスに千年保存するプロジェクトを提案いたします。"
+        "デジタル媒体のマイグレーションリスクを根本的に排除し、"
+        "サーバー・電源・維持費不要の半永久的なアーカイブを実現します。"
+    )
+
+    # ── Page 2 ──
+    pdf.add_page()
+
+    # ── 背景と課題 ──
+    pdf.section_title("2. 背景と課題")
+    pdf.body_text(
+        "・既存のデジタルアーカイブは5〜10年ごとのマイグレーションが必要\n"
+        "・予算途絶によりデータが消失するリスクが構造的に存在\n"
+        "・紙・フィルム等のアナログ媒体も劣化・散逸のリスクを抱える"
+    )
+
+    # ── 提案内容 ──
+    pdf.section_title("3. 提案内容")
+    pdf.body_text(
+        "石英ガラスプレートにQRコードを金属蒸着で刻印。"
+        "1枚のプレートにテキスト・音声・画像・映像へのリンクを格納。\n\n"
+        "【想定ユースケース】\n"
+        "・地域記憶アーカイブ（祭り、方言、伝承）\n"
+        "・無縁墓・身元不明遺骨の記録保全\n"
+        "・災害伝承碑・教訓の永続的保存\n"
+        "・文化財・歴史的建造物の記録\n"
+        "・市民参加型ワークショップ"
+    )
+
+    # ── 技術的優位性 ──
+    pdf.section_title("4. 技術的優位性")
+
+    pdf.set_fill_color(*BG_LIGHT)
+    pdf.set_draw_color(*BORDER)
+    col_w = [60, 60, 60]
+    headers = ["", "従来型デジタル", "石英ガラス記録"]
+    pdf.set_font("JP", "B", 7.5)
+    pdf.set_text_color(*DARK)
+    for i, h in enumerate(headers):
+        pdf.cell(col_w[i], 7, h, border="TB", fill=True, align="C")
+    pdf.ln()
+
+    rows = [
+        ("耐久年数", "5〜10年（要移行）", "1,000年以上"),
+        ("維持費", "サーバー・電気代", "ゼロ"),
+        ("マイグレーション", "定期的に必要", "不要"),
+        ("データ消失リスク", "予算途絶で消失", "物理破壊のみ"),
+    ]
+    pdf.set_font("JP", "", 7.5)
+    for label, old, new in rows:
+        pdf.set_text_color(*DARK)
+        pdf.cell(col_w[0], 7, "  " + label, border="B")
+        pdf.set_text_color(*SECONDARY)
+        pdf.cell(col_w[1], 7, old, border="B", align="C")
+        pdf.set_text_color(*TOKI_BLUE)
+        pdf.cell(col_w[2], 7, new, border="B", align="C")
+        pdf.ln()
+
+    pdf.ln(3)
+
+    # ── 概算費用 ──
+    pdf.section_title("5. 概算費用")
+    pdf.body_text("別紙「御見積書」をご参照ください。正式な見積は仕様確定後に提出いたします。")
+
+    # ── スケジュール ──
+    pdf.section_title("6. スケジュール（想定）")
+    phases = [
+        ("Phase 1", "ヒアリング・要件定義", "〇週間"),
+        ("Phase 2", "コンテンツ設計・制作", "〇週間"),
+        ("Phase 3", "プレート制作・検証", "〇週間"),
+        ("Phase 4", "設置・納品・報告", "〇週間"),
+    ]
+    for phase, desc, duration in phases:
+        pdf.set_font("JP", "B", 8)
+        pdf.set_text_color(*TOKI_BLUE)
+        pdf.cell(22, 6, phase, align="L")
+        pdf.set_font("JP", "", 8)
+        pdf.set_text_color(*DARK)
+        pdf.cell(80, 6, desc, align="L")
+        pdf.set_text_color(*MUTED)
+        pdf.cell(0, 6, duration, ln=True, align="L")
+
+    out = os.path.join(OUT_DIR, "government-template-proposal.pdf")
+    pdf.output(out)
+    print(f"  -> {out}")
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
@@ -324,4 +522,6 @@ if __name__ == "__main__":
     print("Generating government document templates...")
     generate_overview()
     generate_estimate()
+    generate_specification()
+    generate_proposal()
     print("Done.")
