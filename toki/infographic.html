@@ -548,6 +548,62 @@
             font-size: 0.8rem;
         }
 
+        /* Principles (vertical list) */
+        .principles-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .principle-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.2rem;
+            background: var(--bg-white);
+            border: 1px solid var(--slate-200);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .principle-card:hover {
+            border-color: var(--toki-blue);
+            box-shadow: 0 4px 16px rgba(37,99,235,0.1);
+        }
+        .principle-num {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            background: var(--toki-blue);
+            color: #fff;
+            font-family: var(--font-display);
+            font-size: 1rem;
+            font-weight: 700;
+        }
+        .principle-body {
+            flex: 1;
+        }
+        .principle-icon {
+            font-size: 1.3rem;
+            margin-bottom: 0.3rem;
+        }
+        .principle-body h4 {
+            font-family: var(--font-display);
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--slate-700);
+            margin-bottom: 0.3rem;
+        }
+        .principle-body p {
+            font-size: 0.8rem;
+            color: var(--slate-500);
+            line-height: 1.6;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .ig-hero { padding: 6rem 1.2rem 3rem; }
@@ -889,31 +945,46 @@
     <h2 class="ig-section-title">1000年設計の5原則</h2>
     <p class="ig-section-sub">なぜTokiStorageは「制度外の設計」を選ぶのか</p>
 
-    <div class="activity-ring" style="grid-template-columns: repeat(5, 1fr);">
-        <div class="activity-card">
-            <div class="activity-icon">&#x1FAA8;</div>
-            <h4>素材の永続性</h4>
-            <p>石英ガラス（SiO&#8322; 98%）は風化も腐食もしない。地球上で最も安定した記録媒体。</p>
+    <div class="principles-grid">
+        <div class="principle-card">
+            <div class="principle-num">1</div>
+            <div class="principle-body">
+                <div class="principle-icon">&#x1FAA8;</div>
+                <h4>素材の永続性</h4>
+                <p>石英ガラス（SiO&#8322; 98%）は風化も腐食もしない。地球上で最も安定した記録媒体。</p>
+            </div>
         </div>
-        <div class="activity-card">
-            <div class="activity-icon">&#x1F50C;</div>
-            <h4>電源ゼロ</h4>
-            <p>サーバーもクラウドも不要。千年後の技術環境を予測しない設計。</p>
+        <div class="principle-card">
+            <div class="principle-num">2</div>
+            <div class="principle-body">
+                <div class="principle-icon">&#x1F50C;</div>
+                <h4>電源ゼロ</h4>
+                <p>サーバーもクラウドも不要。千年後の技術環境を予測しない設計。</p>
+            </div>
         </div>
-        <div class="activity-card">
-            <div class="activity-icon">&#x1F4F1;</div>
-            <h4>QRの普遍性</h4>
-            <p>スマートフォンをかざすだけ。最もシンプルな読み取り方法を選択。</p>
+        <div class="principle-card">
+            <div class="principle-num">3</div>
+            <div class="principle-body">
+                <div class="principle-icon">&#x1F4F1;</div>
+                <h4>QRの普遍性</h4>
+                <p>スマートフォンをかざすだけ。最もシンプルな読み取り方法を選択。</p>
+            </div>
         </div>
-        <div class="activity-card">
-            <div class="activity-icon">&#x1F310;</div>
-            <h4>分散管理</h4>
-            <p>メタデータはGitHubで公開・分散。単一障害点を持たない。</p>
+        <div class="principle-card">
+            <div class="principle-num">4</div>
+            <div class="principle-body">
+                <div class="principle-icon">&#x1F310;</div>
+                <h4>分散管理</h4>
+                <p>メタデータはGitHubで公開・分散。単一障害点を持たない。</p>
+            </div>
         </div>
-        <div class="activity-card">
-            <div class="activity-icon">&#x1F3DB;</div>
-            <h4>制度外設計</h4>
-            <p>国家・企業・通貨——千年後に存在する保証がない制度には依存しない。</p>
+        <div class="principle-card">
+            <div class="principle-num">5</div>
+            <div class="principle-body">
+                <div class="principle-icon">&#x1F3DB;</div>
+                <h4>制度外設計</h4>
+                <p>国家・企業・通貨——千年後に存在する保証がない制度には依存しない。</p>
+            </div>
         </div>
     </div>
 </section>

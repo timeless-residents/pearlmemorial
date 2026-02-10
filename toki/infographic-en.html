@@ -472,6 +472,56 @@
         }
         .footer-links a { font-size: 0.8rem; }
 
+        .principles-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .principle-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.2rem;
+            background: var(--bg-white);
+            border: 1px solid var(--slate-200);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .principle-card:hover {
+            border-color: var(--toki-blue);
+            box-shadow: 0 4px 16px rgba(37,99,235,0.1);
+        }
+        .principle-num {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            background: var(--toki-blue);
+            color: #fff;
+            font-family: var(--font-display);
+            font-size: 1rem;
+            font-weight: 700;
+        }
+        .principle-body { flex: 1; }
+        .principle-icon { font-size: 1.3rem; margin-bottom: 0.3rem; }
+        .principle-body h4 {
+            font-family: var(--font-display);
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--slate-700);
+            margin-bottom: 0.3rem;
+        }
+        .principle-body p {
+            font-size: 0.8rem;
+            color: var(--slate-500);
+            line-height: 1.6;
+        }
+
         @media (max-width: 768px) {
             .ig-hero { padding: 6rem 1.2rem 3rem; }
             .ig-hero h1 { font-size: 1.6rem; }
@@ -798,31 +848,46 @@
     <h2 class="ig-section-title">Five Principles of 1,000-Year Design</h2>
     <p class="ig-section-sub">Why TokiStorage chooses to design outside institutional frameworks</p>
 
-    <div class="activity-ring" style="grid-template-columns: repeat(5, 1fr);">
-        <div class="activity-card">
-            <div class="activity-icon">&#x1FAA8;</div>
-            <h4>Material Permanence</h4>
-            <p>Quartz glass (98% SiO&#8322;) resists weathering and corrosion. Earth's most stable recording medium.</p>
+    <div class="principles-grid">
+        <div class="principle-card">
+            <div class="principle-num">1</div>
+            <div class="principle-body">
+                <div class="principle-icon">&#x1FAA8;</div>
+                <h4>Material Permanence</h4>
+                <p>Quartz glass (98% SiO&#8322;) resists weathering and corrosion. Earth's most stable recording medium.</p>
+            </div>
         </div>
-        <div class="activity-card">
-            <div class="activity-icon">&#x1F50C;</div>
-            <h4>Zero Power</h4>
-            <p>No servers, no cloud. Designed without predicting the technology landscape a millennium from now.</p>
+        <div class="principle-card">
+            <div class="principle-num">2</div>
+            <div class="principle-body">
+                <div class="principle-icon">&#x1F50C;</div>
+                <h4>Zero Power</h4>
+                <p>No servers, no cloud. Designed without predicting the technology landscape a millennium from now.</p>
+            </div>
         </div>
-        <div class="activity-card">
-            <div class="activity-icon">&#x1F4F1;</div>
-            <h4>QR Universality</h4>
-            <p>Just hold up a smartphone. The simplest possible reading method was chosen by design.</p>
+        <div class="principle-card">
+            <div class="principle-num">3</div>
+            <div class="principle-body">
+                <div class="principle-icon">&#x1F4F1;</div>
+                <h4>QR Universality</h4>
+                <p>Just hold up a smartphone. The simplest possible reading method was chosen by design.</p>
+            </div>
         </div>
-        <div class="activity-card">
-            <div class="activity-icon">&#x1F310;</div>
-            <h4>Distributed Custody</h4>
-            <p>Metadata published and distributed on GitHub. No single point of failure.</p>
+        <div class="principle-card">
+            <div class="principle-num">4</div>
+            <div class="principle-body">
+                <div class="principle-icon">&#x1F310;</div>
+                <h4>Distributed Custody</h4>
+                <p>Metadata published and distributed on GitHub. No single point of failure.</p>
+            </div>
         </div>
-        <div class="activity-card">
-            <div class="activity-icon">&#x1F3DB;</div>
-            <h4>Extra-Institutional</h4>
-            <p>Governments, companies, currencies — none guaranteed to exist in 1,000 years. We depend on none.</p>
+        <div class="principle-card">
+            <div class="principle-num">5</div>
+            <div class="principle-body">
+                <div class="principle-icon">&#x1F3DB;</div>
+                <h4>Extra-Institutional</h4>
+                <p>Governments, companies, currencies — none guaranteed to exist in 1,000 years. We depend on none.</p>
+            </div>
         </div>
     </div>
 </section>
