@@ -10,7 +10,7 @@ from pptx.util import Inches, Pt, Emu
 from pptx.dml.color import RGBColor
 from pptx.enum.text import PP_ALIGN, MSO_ANCHOR
 from pptx.enum.shapes import MSO_SHAPE
-import subprocess, os, sys
+import subprocess, os, sys, re, zipfile, io
 
 # ── Design tokens (matched to index.css :root) ────────────────────────
 TOKI_BLUE     = RGBColor(0x25, 0x63, 0xEB)  # --toki-blue
@@ -721,8 +721,29 @@ def generate(lang):
 
     pptx_path = os.path.join(OUT_DIR, f"{d['filename']}.pptx")
     prs.save(pptx_path)
+    _strip_theme_shadows(pptx_path)
     print(f"  PPTX saved: {pptx_path}")
     return pptx_path
+
+
+def _strip_theme_shadows(pptx_path):
+    """Remove default outerShdw / 3D effects from theme1.xml."""
+    clean = '<a:effectStyleLst>' + \
+            '<a:effectStyle><a:effectLst/></a:effectStyle>' * 3 + \
+            '</a:effectStyleLst>'
+    buf = io.BytesIO()
+    with zipfile.ZipFile(pptx_path, 'r') as zin:
+        with zipfile.ZipFile(buf, 'w', zipfile.ZIP_DEFLATED) as zout:
+            for item in zin.namelist():
+                data = zin.read(item)
+                if item == 'ppt/theme/theme1.xml':
+                    text = data.decode('utf-8')
+                    text = re.sub(r'<a:effectStyleLst>.*?</a:effectStyleLst>',
+                                  clean, text, flags=re.DOTALL)
+                    data = text.encode('utf-8')
+                zout.writestr(item, data)
+    with open(pptx_path, 'wb') as f:
+        f.write(buf.getvalue())
 
 
 def convert_to_pdf(pptx_path):
