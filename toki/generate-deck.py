@@ -1,0 +1,781 @@
+#!/usr/bin/env python3
+"""
+TokiStorage Partnership Deck Generator
+Generates PPTX files (JP + EN) and converts to PDF via LibreOffice.
+"""
+
+from pptx import Presentation
+from pptx.util import Inches, Pt, Emu
+from pptx.dml.color import RGBColor
+from pptx.enum.text import PP_ALIGN, MSO_ANCHOR
+from pptx.enum.shapes import MSO_SHAPE
+import subprocess, os, sys
+
+# ── Design tokens ──────────────────────────────────────────────────────────
+NAVY      = RGBColor(0x0A, 0x16, 0x28)
+ACCENT    = RGBColor(0x1E, 0x6F, 0xD9)
+GOLD      = RGBColor(0xB4, 0x82, 0x12)
+EMERALD   = RGBColor(0x05, 0x96, 0x69)
+WHITE     = RGBColor(0xFF, 0xFF, 0xFF)
+TEXT_DARK  = RGBColor(0x1A, 0x1A, 0x2E)
+TEXT_MID   = RGBColor(0x55, 0x55, 0x70)
+TEXT_LIGHT = RGBColor(0x99, 0x99, 0xAA)
+BG_ALT    = RGBColor(0xF8, 0xF9, 0xFB)
+BORDER    = RGBColor(0xE2, 0xE5, 0xEB)
+ACCENT_PALE = RGBColor(0xEE, 0xF4, 0xFD)
+GREEN_PALE  = RGBColor(0xEC, 0xFD, 0xF5)
+GOLD_PALE   = RGBColor(0xFE, 0xF9, 0xEE)
+HL_BG       = RGBColor(0xF0, 0xF7, 0xFF)
+
+SLIDE_W = Inches(10)
+SLIDE_H = Inches(5.625)  # 16:9
+
+FONT_JP = "IPAPGothic"
+FONT_EN = "Calibri"
+
+OUT_DIR = os.path.dirname(os.path.abspath(__file__))
+
+
+# ── Helpers ────────────────────────────────────────────────────────────────
+
+def new_prs():
+    prs = Presentation()
+    prs.slide_width = SLIDE_W
+    prs.slide_height = SLIDE_H
+    return prs
+
+
+def add_blank_slide(prs):
+    layout = prs.slide_layouts[6]  # blank
+    return prs.slides.add_slide(layout)
+
+
+def add_rect(slide, left, top, width, height, fill=None, border_color=None, border_width=None, radius=None):
+    shape = slide.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE if radius else MSO_SHAPE.RECTANGLE,
+                                   left, top, width, height)
+    shape.fill.background() if fill is None else None
+    if fill is not None:
+        shape.fill.solid()
+        shape.fill.fore_color.rgb = fill
+    else:
+        shape.fill.background()
+    if border_color:
+        shape.line.color.rgb = border_color
+        shape.line.width = border_width or Pt(0.75)
+    else:
+        shape.line.fill.background()
+    return shape
+
+
+def set_text(tf, text, font_name, size, color=TEXT_DARK, bold=False, align=PP_ALIGN.LEFT):
+    tf.word_wrap = True
+    for p in tf.paragraphs:
+        p.clear()
+    p = tf.paragraphs[0]
+    p.alignment = align
+    run = p.add_run()
+    run.text = text
+    run.font.name = font_name
+    run.font.size = Pt(size)
+    run.font.color.rgb = color
+    run.font.bold = bold
+    return p
+
+
+def add_para(tf, text, font_name, size, color=TEXT_DARK, bold=False, align=PP_ALIGN.LEFT, space_before=0):
+    p = tf.add_paragraph()
+    p.alignment = align
+    if space_before:
+        p.space_before = Pt(space_before)
+    run = p.add_run()
+    run.text = text
+    run.font.name = font_name
+    run.font.size = Pt(size)
+    run.font.color.rgb = color
+    run.font.bold = bold
+    return p
+
+
+def add_textbox(slide, left, top, width, height, text, font_name, size,
+                color=TEXT_DARK, bold=False, align=PP_ALIGN.LEFT, anchor=MSO_ANCHOR.TOP):
+    txBox = slide.shapes.add_textbox(left, top, width, height)
+    tf = txBox.text_frame
+    tf.word_wrap = True
+    tf.auto_size = None
+    try:
+        txBox.text_frame.paragraphs[0].space_before = Pt(0)
+        txBox.text_frame.paragraphs[0].space_after = Pt(0)
+    except:
+        pass
+    # Set anchor
+    from pptx.oxml.ns import qn
+    txBody = txBox.text_frame._txBody
+    bodyPr = txBody.find(qn('a:bodyPr'))
+    if anchor == MSO_ANCHOR.MIDDLE:
+        bodyPr.set('anchor', 'ctr')
+    elif anchor == MSO_ANCHOR.BOTTOM:
+        bodyPr.set('anchor', 'b')
+    set_text(tf, text, font_name, size, color, bold, align)
+    return txBox
+
+
+# ── Action bar (title bar at top of each slide) ───────────────────────────
+
+def add_action_bar(slide, text, font):
+    bar_h = Inches(0.55)
+    add_rect(slide, 0, 0, SLIDE_W, bar_h, fill=NAVY)
+    add_textbox(slide, Inches(0.5), 0, SLIDE_W - Inches(1), bar_h,
+                text, font, 9, WHITE, bold=True, anchor=MSO_ANCHOR.MIDDLE)
+
+
+# ── Footer ─────────────────────────────────────────────────────────────────
+
+def add_footer(slide, left_text, pg, font):
+    y = SLIDE_H - Inches(0.35)
+    # top border line
+    from pptx.oxml.ns import qn
+    line = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, 0, y, SLIDE_W, Pt(0.5))
+    line.fill.solid()
+    line.fill.fore_color.rgb = BORDER
+    line.line.fill.background()
+
+    add_textbox(slide, Inches(0.5), y + Pt(2), Inches(4), Inches(0.28),
+                left_text, font, 6.5, TEXT_LIGHT)
+    add_textbox(slide, Inches(4), y + Pt(2), Inches(2), Inches(0.28),
+                "Confidential", font, 6.5, TEXT_LIGHT, align=PP_ALIGN.CENTER)
+    add_textbox(slide, SLIDE_W - Inches(1), y + Pt(2), Inches(0.5), Inches(0.28),
+                str(pg), font, 6.5, TEXT_LIGHT, bold=True, align=PP_ALIGN.RIGHT)
+
+
+# ── Section label ──────────────────────────────────────────────────────────
+
+def add_section_label(slide, text, font, top):
+    add_textbox(slide, Inches(0.5), top, Inches(3), Inches(0.25),
+                text.upper(), font, 7, ACCENT, bold=True)
+
+
+# ── Card drawing helpers ───────────────────────────────────────────────────
+
+def draw_col_card(slide, x, y, w, h, num, title, body, font):
+    add_rect(slide, x, y, w, h, fill=BG_ALT, border_color=BORDER)
+    add_textbox(slide, x + Inches(0.12), y + Inches(0.08), Inches(0.5), Inches(0.25),
+                num, font, 11, ACCENT, bold=True)
+    add_textbox(slide, x + Inches(0.12), y + Inches(0.35), w - Inches(0.24), Inches(0.22),
+                title, font, 8, TEXT_DARK, bold=True)
+    add_textbox(slide, x + Inches(0.12), y + Inches(0.58), w - Inches(0.24), h - Inches(0.68),
+                body, font, 7, TEXT_MID)
+
+
+def draw_grid_card(slide, x, y, w, h, icon, title, body, font):
+    add_rect(slide, x, y, w, h, fill=BG_ALT, border_color=BORDER)
+    add_textbox(slide, x + Inches(0.1), y + Inches(0.08), Inches(0.35), Inches(0.35),
+                icon, font, 14, TEXT_DARK)
+    add_textbox(slide, x + Inches(0.45), y + Inches(0.08), w - Inches(0.6), Inches(0.2),
+                title, font, 8, TEXT_DARK, bold=True)
+    add_textbox(slide, x + Inches(0.45), y + Inches(0.3), w - Inches(0.6), h - Inches(0.38),
+                body, font, 6.5, TEXT_MID)
+
+
+def draw_model_item(slide, x, y, w, h, badge_text, badge_color, title, body, example, font):
+    add_rect(slide, x, y, w, h, fill=BG_ALT, border_color=BORDER)
+    # badge
+    bx, by, bw, bh = x + Inches(0.12), y + Inches(0.1), Inches(0.55), Inches(0.55)
+    badge = add_rect(slide, bx, by, bw, bh, fill=badge_color)
+    add_textbox(slide, bx, by, bw, bh, badge_text, font, 6, WHITE, bold=True,
+                align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
+    # text
+    tx = x + Inches(0.8)
+    tw = w - Inches(0.95)
+    add_textbox(slide, tx, y + Inches(0.08), tw, Inches(0.2),
+                title, font, 7.5, TEXT_DARK, bold=True)
+    add_textbox(slide, tx, y + Inches(0.28), tw, Inches(0.25),
+                body, font, 6.5, TEXT_MID)
+    add_textbox(slide, tx, y + Inches(0.52), tw, Inches(0.2),
+                example, font, 6, ACCENT)
+
+
+def draw_flow_box(slide, x, y, w, h, title, body, bg_color, title_color, font):
+    add_rect(slide, x, y, w, h, fill=bg_color, border_color=BORDER)
+    add_textbox(slide, x + Inches(0.08), y + Inches(0.06), w - Inches(0.16), Inches(0.22),
+                title, font, 8, title_color, bold=True, align=PP_ALIGN.CENTER)
+    add_textbox(slide, x + Inches(0.08), y + Inches(0.3), w - Inches(0.16), h - Inches(0.36),
+                body, font, 6.5, TEXT_MID, align=PP_ALIGN.CENTER)
+
+
+def draw_sector_card(slide, x, y, w, h, icon, title, body, font):
+    add_rect(slide, x, y, w, h, fill=BG_ALT, border_color=BORDER)
+    add_textbox(slide, x, y + Inches(0.05), w, Inches(0.28),
+                icon, font, 13, TEXT_DARK, align=PP_ALIGN.CENTER)
+    add_textbox(slide, x + Inches(0.06), y + Inches(0.33), w - Inches(0.12), Inches(0.2),
+                title, font, 7, TEXT_DARK, bold=True, align=PP_ALIGN.CENTER)
+    add_textbox(slide, x + Inches(0.06), y + Inches(0.52), w - Inches(0.12), h - Inches(0.57),
+                body, font, 6, TEXT_MID, align=PP_ALIGN.CENTER)
+
+
+def draw_table_row(slide, y, row_h, cells, font, is_header=False, is_first_col_header=False):
+    """Draw a table row manually (python-pptx tables don't style well for PDF)"""
+    col_widths = [Inches(1.3), Inches(3.6), Inches(3.7)]
+    x = Inches(0.7)
+    for i, (text, width) in enumerate(zip(cells, col_widths)):
+        bg = NAVY if is_header else (BG_ALT if (i == 0 and is_first_col_header) else None)
+        fg = WHITE if is_header else (TEXT_DARK if (i == 0 and is_first_col_header) else TEXT_MID)
+        bld = is_header or (i == 0 and is_first_col_header)
+        fs = 6.5 if is_header else 7
+        rect = add_rect(slide, x, y, width, row_h, fill=bg, border_color=BORDER, border_width=Pt(0.5))
+        if i == 2 and not is_header:
+            # Highlight TokiStorage column
+            rect.fill.solid()
+            rect.fill.fore_color.rgb = HL_BG
+            fg = ACCENT
+        add_textbox(slide, x + Inches(0.08), y, width - Inches(0.16), row_h,
+                    text, font, fs, fg, bold=bld, anchor=MSO_ANCHOR.MIDDLE)
+        x += width
+
+
+# ══════════════════════════════════════════════════════════════════════════
+#  CONTENT DATA
+# ══════════════════════════════════════════════════════════════════════════
+
+CONTENT = {
+    "ja": {
+        "font": FONT_JP,
+        "filename": "tokistorage-partnership-deck",
+        "cover": {
+            "label": "Partnership Proposal \u2014 Confidential",
+            "title": "貴社クライアントに、\n「千年の存在証明」を。",
+            "sub": "テクノロジーは揃っています。ユースケースも200以上。\n足りないのは、届ける仕組みです。",
+            "org": "Universal Need株式会社",
+            "product": "TokiStorage",
+        },
+        "s2": {
+            "bar": "既存のデジタルサービスは「今」に最適化されており、千年スケールの保存レイヤーが構造的に不在である",
+            "label": "Background",
+            "cards": [
+                ("01", "デジタルは「今」に最適化",
+                 "クラウドやSNSは日常の記録に極めて優秀。しかし100年・1000年スケールは設計対象外。時間軸が違えば、必要な設計も違う。"),
+                ("02", "「墓じまい」が社会課題に",
+                 "無縁墓は年間数万基。2040年には単身世帯が4割超。「誰が記憶を残すのか」は個人の問題から社会の問題へ移行。"),
+                ("03", "千年レイヤーが不在",
+                 "デジタル遺品整理、AI故人再現——市場は急成長。しかし全て既存インフラ上。補完する千年レイヤーが求められている。"),
+            ],
+            "footer": "TokiStorage \u2014 協業提案",
+        },
+        "s3": {
+            "bar": "TokiStorageは技術・ユースケース・思想基盤・展開網の4つを「設計思想ごと」提供できる",
+            "label": "Our Offering",
+            "cards": [
+                ("\U0001F48E", "石英ガラス記録技術",
+                 "金属蒸着によるQRコード刻印。サーバー・電源ゼロ。SLA 100%、1000年保証。スマホカメラで読取可能。"),
+                ("\U0001F4CA", "200+ ユースケース（業界別整理済み）",
+                 "終活・婚礼・寺社・学校・企業・自治体・NGO・ホテル・航空。提案書にそのまま転用可能な粒度。"),
+                ("\U0001F4DD", "70+ 思想エッセイ（9領域）",
+                 "存在証明を心理学・宗教・経済・AI・宇宙まで展開。知的コンテンツとしてクライアント提案に活用可能。"),
+                ("\U0001F43E", "Pearl Soap + アンバサダー網",
+                 "贈与経済の実践。全国にワークショップ展開可能な分散型運動体。エンドユーザーとの接点を提供。"),
+            ],
+            "footer": "TokiStorage \u2014 協業提案",
+        },
+        "s4": {
+            "bar": "TokiStorageは既存デジタルサービスの「競合」ではなく「千年レイヤー」として補完する位置づけである",
+            "label": "Positioning",
+            "headers": ["", "デジタルサービス（日常の記録）", "TokiStorage（千年の記録）"],
+            "rows": [
+                ("記録媒体", "クラウド / HDD", "石英ガラス（物理）"),
+                ("得意な時間軸", "今〜数十年（日常利用に最適）", "100年〜1000年（永続保存に特化）"),
+                ("インフラ", "サーバー・電源（利便性の源泉）", "不要（GitHub分散管理）"),
+                ("読み取り", "専用アプリ / ログイン", "スマホのカメラだけ"),
+                ("文化的厚み", "機能・利便性が価値の中心", "70+ エッセイ＋贈与経済の実践"),
+                ("社会的接点", "プラットフォームとしての貢献", "SoulCarrier（無縁墓・遺骨送還活動）"),
+            ],
+            "footer": "TokiStorage \u2014 協業提案",
+        },
+        "s5": {
+            "bar": "貴社のビジネスモデルに応じた3つの提携モデルを用意しており、段階的な移行も可能",
+            "label": "Partnership Models",
+            "models": [
+                ("紹介\nモデル", ACCENT,
+                 "A. クライアント紹介型パートナーシップ",
+                 "紹介ベースで連携。リファラルフィーをお支払い。クライアント対応・納品はTokiStorage側で完結。",
+                 "例：終活コンサル→存在証明を提案 / 葬祭業DX→メモリアルオプション追加"),
+                ("共同\n提案", GOLD,
+                 "B. 共同ソリューション型",
+                 "貴社コンサルにTokiStorageを組み込んだ共同提案。ESG・地方創生・文化保存の「出口」として千年記録を位置づけ。",
+                 "例：自治体DX→地域記憶アーカイブ / ホテルCX改革→ゲスト記録のアップグレード"),
+                ("事業\n共創", EMERALD,
+                 "C. 新規事業共創型",
+                 "存在証明を軸に新規事業を共同立ち上げ。技術・思想・ユースケースはTokiStorage、市場アクセス・信用・スケールは貴社。",
+                 "例：メモリアルテック新規事業 / 企業向け永続アーカイブサービス"),
+            ],
+            "footer": "TokiStorage \u2014 協業提案",
+        },
+        "s6": {
+            "bar": "クライアント・パートナー・TokiStorageの三者がWinになる収益設計を採用している",
+            "label": "Revenue Flow",
+            "flows": [
+                ("クライアント", "千年の存在証明\n社会的意義の実感", GREEN_PALE, EMERALD),
+                ("パートナー（貴社）", "紹介フィー or 共同提案収益\nクライアントLTV向上", ACCENT_PALE, ACCENT),
+                ("TokiStorage", "技術・思想・納品\n収益の一部→SoulCarrier活動", GOLD_PALE, RGBColor(0x92, 0x40, 0x0E)),
+            ],
+            "callout_title": "初期パートナー優遇",
+            "callout_body": "複数のコンサルティングファームに順次ご提案を進めています。最初に提携いただいたファームには、紹介モデルの優先条件・エリア独占権など、初期パートナーならではのインセンティブをご用意します。",
+            "footer": "TokiStorage \u2014 協業提案",
+        },
+        "s7": {
+            "bar": "葬祭・ホスピタリティ・宗教法人・自治体・ESG・金融の6領域で特に高い親和性がある",
+            "label": "Client Fit",
+            "lead": "貴社のクライアントポートフォリオに、以下のセクターはありませんか。",
+            "sectors": [
+                ("\U0001F3E5", "葬祭・メモリアル", "墓じまい代替、永代供養デジタル化、遺族向け新サービス"),
+                ("\U0001F3E8", "ホスピタリティ", "ウェディング記録、ホテルCX、記念日サービス"),
+                ("\U0001F3DB", "宗教法人・寺社", "檀家記録の永続化、参拝体験DX、文化財保存"),
+                ("\U0001F3EC", "自治体・教育", "地域アーカイブ、災害記録、学校史の永続化"),
+                ("\U0001F30F", "ESG・サステナビリティ", "1000年設計の企業理念記録、SDGs実績の永続証明"),
+                ("\U0001F4BC", "金融・保険", "終活関連サービス連携、デジタル遺品対策"),
+            ],
+            "footer": "TokiStorage \u2014 協業提案",
+        },
+        "s8": {
+            "bar": "代表はBig4出身であり、ファームのコンプライアンス要件を理解した上で提携モデルを設計している",
+            "label": "Team & Independence",
+            "name": "佐藤卓也 \u2014 Universal Need株式会社 代表",
+            "bio": "大手コンサルティングファームでの経験を経て、半導体製造装置のエンジニアリング20年超。タイムレスタウン新浦安（250世帯）の自治会長として「ゆりかごから墓場まで」のコミュニティ運営を経験。SoulCarrier活動で「記憶が消える恐怖」を目の当たりにし、TokiStorageを着想。マウイ・山中湖でのオフグリッド実証を経て、制度に依存しない千年設計の技術を完成。",
+            "tags": ["元Big4ファーム", "半導体エンジニアリング 20年+", "自治会長（250世帯）",
+                     "SoulCarrier主宰", "オフグリッド実証済み", "佐渡島移住予定（2026春）"],
+            "ind_title": "独立性（Independence）について",
+            "ind_body": "本提携はベンダーパートナーシップです。SalesforceやSAPの導入推奨と同じ構造であり、監査契約・出資関係は一切含みません。独立性に関する懸念が発生しない設計です。",
+            "footer": "TokiStorage \u2014 協業提案",
+        },
+        "s9": {
+            "bar": "Next Step",
+            "title": "まずは30分、お話ししませんか。",
+            "sub": "提携の形は柔軟に設計できます。\n貴社クライアントの具体的な課題から逆算して、\n一緒に最適なモデルを見つけましょう。",
+            "footer_left": "Universal Need株式会社 \u2014 TokiStorage",
+        },
+    },
+    "en": {
+        "font": FONT_EN,
+        "filename": "tokistorage-partnership-deck-en",
+        "cover": {
+            "label": "Partnership Proposal \u2014 Confidential",
+            "title": "Bring your clients\n1,000-year proof of existence.",
+            "sub": "The technology is ready. Over 200 use cases mapped.\nWhat's missing is the delivery network.",
+            "org": "Universal Need Inc.",
+            "product": "TokiStorage",
+        },
+        "s2": {
+            "bar": "Existing digital services are optimized for \"now\" \u2014 the millennium preservation layer is structurally absent",
+            "label": "Background",
+            "cards": [
+                ("01", "Digital is optimized for \"now\"",
+                 "Cloud and social platforms excel at everyday recording. But 100- or 1,000-year preservation is outside their design scope. Different time horizons need different architectures."),
+                ("02", "End-of-life is now societal",
+                 "Tens of thousands of graves go unclaimed yearly. By 2040, single-person households will exceed 40%. \"Who preserves memory?\" is now a social question."),
+                ("03", "The millennium layer is missing",
+                 "Digital estate management, AI recreations \u2014 the market is booming. Yet every solution runs on existing infrastructure. A complementary millennium layer is needed."),
+            ],
+            "footer": "TokiStorage \u2014 Partnership Proposal",
+        },
+        "s3": {
+            "bar": "TokiStorage delivers technology, use cases, intellectual foundation, and distribution as a unified design philosophy",
+            "label": "Our Offering",
+            "cards": [
+                ("\U0001F48E", "Quartz glass recording",
+                 "QR codes inscribed via metal deposition. Zero servers, zero power. SLA 100%, guaranteed 1,000 years. Readable by any smartphone camera."),
+                ("\U0001F4CA", "200+ use cases (organized by industry)",
+                 "End-of-life, weddings, temples, schools, corporations, municipalities, NGOs, hotels, airlines. Ready for direct proposal integration."),
+                ("\U0001F4DD", "70+ philosophical essays (9 domains)",
+                 "Proof of existence explored across psychology, religion, economics, AI, and space. Standalone intellectual content for client proposals."),
+                ("\U0001F43E", "Pearl Soap + Ambassador network",
+                 "A gift-economy practice and decentralized workshop network ready to scale nationwide. Direct end-user touchpoint."),
+            ],
+            "footer": "TokiStorage \u2014 Partnership Proposal",
+        },
+        "s4": {
+            "bar": "TokiStorage is not a \"competitor\" to digital services \u2014 it is a complementary millennium layer",
+            "label": "Positioning",
+            "headers": ["", "Digital services (everyday records)", "TokiStorage (millennium records)"],
+            "rows": [
+                ("Medium", "Cloud / HDD", "Quartz glass (physical)"),
+                ("Best horizon", "Now to decades (optimized for daily use)", "100\u20131,000 years (optimized for permanence)"),
+                ("Infrastructure", "Servers & power (source of convenience)", "None required (GitHub distributed)"),
+                ("Reading", "App / login required", "Any smartphone camera"),
+                ("Cultural depth", "Functionality & convenience at the core", "70+ essays + gift economy practice"),
+                ("Social impact", "Platform-level contribution", "SoulCarrier (unclaimed graves mission)"),
+            ],
+            "footer": "TokiStorage \u2014 Partnership Proposal",
+        },
+        "s5": {
+            "bar": "Three partnership models tailored to your business model, with progressive escalation possible",
+            "label": "Partnership Models",
+            "models": [
+                ("Referral", ACCENT,
+                 "A. Client Referral Partnership",
+                 "Introduce clients when TokiStorage fits. You receive a referral fee; we handle delivery end-to-end.",
+                 "E.g.: End-of-life consulting \u2192 offer proof of existence / Funeral DX \u2192 add memorial option"),
+                ("Joint", GOLD,
+                 "B. Joint Solution Partnership",
+                 "Embed TokiStorage into your consulting engagements. Position millennium records as the \"outcome layer\" of ESG, revitalization, or DX projects.",
+                 "E.g.: Municipal DX \u2192 community archive / Hotel CX \u2192 guest record upgrade"),
+                ("Co-Create", EMERALD,
+                 "C. New Business Co-Creation",
+                 "Launch a new venture together. We bring technology, philosophy, and use cases. You bring market access, credibility, and scale.",
+                 "E.g.: Memorial-tech startup / Enterprise perpetual archive service"),
+            ],
+            "footer": "TokiStorage \u2014 Partnership Proposal",
+        },
+        "s6": {
+            "bar": "Revenue design ensures all three parties \u2014 client, partner, and TokiStorage \u2014 win",
+            "label": "Revenue Flow",
+            "flows": [
+                ("Client", "1,000-year proof of existence\nTangible social meaning", GREEN_PALE, EMERALD),
+                ("Partner (you)", "Referral fee or joint revenue\nClient LTV increase", ACCENT_PALE, ACCENT),
+                ("TokiStorage", "Technology & delivery\nRevenue \u2192 SoulCarrier mission", GOLD_PALE, RGBColor(0x92, 0x40, 0x0E)),
+            ],
+            "callout_title": "Early Partner Advantage",
+            "callout_body": "We are approaching consulting firms sequentially. The first firm to partner receives preferential terms \u2014 including priority referral conditions and potential regional exclusivity. Early movers shape the partnership.",
+            "footer": "TokiStorage \u2014 Partnership Proposal",
+        },
+        "s7": {
+            "bar": "Six client sectors show particularly high affinity: funeral, hospitality, religious, government, ESG, and finance",
+            "label": "Client Fit",
+            "lead": "Does your client portfolio include any of these sectors?",
+            "sectors": [
+                ("\U0001F3E5", "Funeral & Memorial", "Gravestone alternatives, digital perpetual care, bereavement services"),
+                ("\U0001F3E8", "Hospitality", "Wedding records, hotel CX, anniversary services"),
+                ("\U0001F3DB", "Religious Institutions", "Perpetual congregation records, visitor DX, cultural preservation"),
+                ("\U0001F3EC", "Government & Education", "Community archives, disaster records, school history"),
+                ("\U0001F30F", "ESG & Sustainability", "1,000-year corporate purpose records, SDG impact proof"),
+                ("\U0001F4BC", "Finance & Insurance", "End-of-life service integration, digital estate"),
+            ],
+            "footer": "TokiStorage \u2014 Partnership Proposal",
+        },
+        "s8": {
+            "bar": "The founder is a Big Four alumnus who designed the partnership model with full awareness of firm compliance",
+            "label": "Team & Independence",
+            "name": "Takuya Sato \u2014 CEO, Universal Need Inc.",
+            "bio": "Former Big Four consultant \u2014 understands firm culture, client engagement, and project design from the inside. 20+ years in semiconductor manufacturing engineering. Former president of Timeless Town Shin-Urayasu residents' association (250 households). Through SoulCarrier's work with unclaimed graves, witnessed firsthand how memories vanish \u2014 and conceived TokiStorage. Validated off-grid, institution-free 1,000-year design through testing in Maui and Lake Yamanakako.",
+            "tags": ["Big Four Alumni", "Semiconductor engineering 20+ yrs", "Community president (250 households)",
+                     "SoulCarrier founder", "Off-grid validated", "Relocating to Sado Island (Spring 2026)"],
+            "ind_title": "A note on independence",
+            "ind_body": "This is a vendor partnership \u2014 structurally identical to recommending Salesforce or SAP. No audit engagement, no equity relationship, no independence concerns. Designed with full awareness of firm compliance requirements.",
+            "footer": "TokiStorage \u2014 Partnership Proposal",
+        },
+        "s9": {
+            "bar": "Next Step",
+            "title": "Let's start with a\n30-minute conversation.",
+            "sub": "Partnership structure is flexible by design.\nLet's reverse-engineer the right model\nfrom your clients' actual challenges.",
+            "footer_left": "Universal Need Inc. \u2014 TokiStorage",
+        },
+    },
+}
+
+
+# ══════════════════════════════════════════════════════════════════════════
+#  SLIDE BUILDERS
+# ══════════════════════════════════════════════════════════════════════════
+
+def build_cover(prs, d):
+    slide = add_blank_slide(prs)
+    font = d["font"]
+    c = d["cover"]
+    # Full navy background
+    add_rect(slide, 0, 0, SLIDE_W, SLIDE_H, fill=NAVY)
+    # Label
+    add_textbox(slide, Inches(1), Inches(0.8), Inches(5), Inches(0.3),
+                c["label"], font, 7, TEXT_LIGHT, align=PP_ALIGN.LEFT)
+    # Title
+    add_textbox(slide, Inches(1), Inches(1.5), Inches(8), Inches(1.2),
+                c["title"], font, 22, WHITE, bold=True)
+    # Subtitle
+    add_textbox(slide, Inches(1), Inches(2.9), Inches(7), Inches(0.8),
+                c["sub"], font, 10, RGBColor(0xBB, 0xBB, 0xCC))
+    # Bottom bar
+    stripe_y = SLIDE_H - Inches(0.6)
+    add_rect(slide, 0, stripe_y, SLIDE_W, Inches(0.04), fill=ACCENT)
+    add_textbox(slide, Inches(0.5), stripe_y + Inches(0.08), Inches(3), Inches(0.3),
+                c["org"], font, 6.5, TEXT_LIGHT)
+    add_textbox(slide, Inches(4), stripe_y + Inches(0.08), Inches(2), Inches(0.3),
+                c["product"], font, 6.5, TEXT_LIGHT, align=PP_ALIGN.CENTER)
+    add_textbox(slide, SLIDE_W - Inches(2), stripe_y + Inches(0.08), Inches(1.5), Inches(0.3),
+                "Confidential", font, 6.5, TEXT_LIGHT, align=PP_ALIGN.RIGHT)
+
+
+def build_slide2(prs, d):
+    """Problem: 3 column cards"""
+    slide = add_blank_slide(prs)
+    font = d["font"]
+    s = d["s2"]
+    add_action_bar(slide, s["bar"], font)
+    add_section_label(slide, s["label"], font, Inches(0.7))
+
+    card_w = Inches(2.85)
+    card_h = Inches(3.6)
+    gap = Inches(0.23)
+    start_x = Inches(0.5)
+    y = Inches(1.0)
+    for i, (num, title, body) in enumerate(s["cards"]):
+        x = start_x + i * (card_w + gap)
+        draw_col_card(slide, x, y, card_w, card_h, num, title, body, font)
+
+    add_footer(slide, s["footer"], 2, font)
+
+
+def build_slide3(prs, d):
+    """Solution: 2x2 grid"""
+    slide = add_blank_slide(prs)
+    font = d["font"]
+    s = d["s3"]
+    add_action_bar(slide, s["bar"], font)
+    add_section_label(slide, s["label"], font, Inches(0.7))
+
+    card_w = Inches(4.3)
+    card_h = Inches(1.7)
+    gap_x = Inches(0.25)
+    gap_y = Inches(0.2)
+    start_x = Inches(0.5)
+    start_y = Inches(1.0)
+    for i, (icon, title, body) in enumerate(s["cards"]):
+        col = i % 2
+        row = i // 2
+        x = start_x + col * (card_w + gap_x)
+        y = start_y + row * (card_h + gap_y)
+        draw_grid_card(slide, x, y, card_w, card_h, icon, title, body, font)
+
+    add_footer(slide, s["footer"], 3, font)
+
+
+def build_slide4(prs, d):
+    """Differentiator: comparison table"""
+    slide = add_blank_slide(prs)
+    font = d["font"]
+    s = d["s4"]
+    add_action_bar(slide, s["bar"], font)
+    add_section_label(slide, s["label"], font, Inches(0.7))
+
+    y = Inches(1.0)
+    row_h = Inches(0.38)
+    draw_table_row(slide, y, row_h, s["headers"], font, is_header=True)
+    y += row_h
+    for cells in s["rows"]:
+        draw_table_row(slide, y, row_h, cells, font, is_first_col_header=True)
+        y += row_h
+
+    add_footer(slide, s["footer"], 4, font)
+
+
+def build_slide5(prs, d):
+    """Partnership models: 3 rows"""
+    slide = add_blank_slide(prs)
+    font = d["font"]
+    s = d["s5"]
+    add_action_bar(slide, s["bar"], font)
+    add_section_label(slide, s["label"], font, Inches(0.7))
+
+    item_w = Inches(8.6)
+    item_h = Inches(0.75)
+    gap = Inches(0.12)
+    start_y = Inches(1.0)
+    x = Inches(0.5)
+    for i, (badge, color, title, body, ex) in enumerate(s["models"]):
+        y = start_y + i * (item_h + gap)
+        draw_model_item(slide, x, y, item_w, item_h, badge, color, title, body, ex, font)
+
+    add_footer(slide, s["footer"], 5, font)
+
+
+def build_slide6(prs, d):
+    """Revenue flow + callout"""
+    slide = add_blank_slide(prs)
+    font = d["font"]
+    s = d["s6"]
+    add_action_bar(slide, s["bar"], font)
+    add_section_label(slide, s["label"], font, Inches(0.7))
+
+    # Flow boxes
+    box_w = Inches(2.4)
+    box_h = Inches(0.85)
+    gap = Inches(0.5)
+    total = 3 * box_w + 2 * gap
+    start_x = (SLIDE_W - total) / 2
+    y = Inches(1.2)
+
+    for i, (title, body, bg, tc) in enumerate(s["flows"]):
+        x = start_x + i * (box_w + gap)
+        draw_flow_box(slide, x, y, box_w, box_h, title, body, bg, tc, font)
+        if i < 2:
+            arrow_x = x + box_w + Inches(0.1)
+            add_textbox(slide, arrow_x, y + Inches(0.2), Inches(0.3), Inches(0.3),
+                        "\u2190", font, 14, TEXT_LIGHT, align=PP_ALIGN.CENTER)
+
+    # Callout
+    cx, cy = Inches(0.5), Inches(2.4)
+    cw, ch = Inches(8.6), Inches(1.0)
+    add_rect(slide, cx, cy, cw, ch, fill=ACCENT_PALE, border_color=ACCENT, border_width=Pt(2))
+    # Left accent stripe
+    add_rect(slide, cx, cy, Inches(0.06), ch, fill=ACCENT)
+    add_textbox(slide, cx + Inches(0.2), cy + Inches(0.08), cw - Inches(0.3), Inches(0.22),
+                s["callout_title"], font, 7.5, TEXT_DARK, bold=True)
+    add_textbox(slide, cx + Inches(0.2), cy + Inches(0.32), cw - Inches(0.3), ch - Inches(0.4),
+                s["callout_body"], font, 6.5, TEXT_MID)
+
+    add_footer(slide, s["footer"], 6, font)
+
+
+def build_slide7(prs, d):
+    """Client sectors: 3x2 grid"""
+    slide = add_blank_slide(prs)
+    font = d["font"]
+    s = d["s7"]
+    add_action_bar(slide, s["bar"], font)
+    add_section_label(slide, s["label"], font, Inches(0.7))
+    add_textbox(slide, Inches(0.5), Inches(0.95), Inches(8), Inches(0.25),
+                s["lead"], font, 8, TEXT_MID)
+
+    card_w = Inches(2.85)
+    card_h = Inches(1.45)
+    gap_x = Inches(0.23)
+    gap_y = Inches(0.18)
+    start_x = Inches(0.5)
+    start_y = Inches(1.3)
+    for i, (icon, title, body) in enumerate(s["sectors"]):
+        col = i % 3
+        row = i // 3
+        x = start_x + col * (card_w + gap_x)
+        y = start_y + row * (card_h + gap_y)
+        draw_sector_card(slide, x, y, card_w, card_h, icon, title, body, font)
+
+    add_footer(slide, s["footer"], 7, font)
+
+
+def build_slide8(prs, d):
+    """Founder + independence"""
+    slide = add_blank_slide(prs)
+    font = d["font"]
+    s = d["s8"]
+    add_action_bar(slide, s["bar"], font)
+    add_section_label(slide, s["label"], font, Inches(0.7))
+
+    # Avatar circle
+    ax, ay = Inches(0.5), Inches(1.0)
+    avatar = add_rect(slide, ax, ay, Inches(0.6), Inches(0.6), fill=NAVY)
+    # use oval
+    avatar = slide.shapes.add_shape(MSO_SHAPE.OVAL, ax, ay, Inches(0.6), Inches(0.6))
+    avatar.fill.solid()
+    avatar.fill.fore_color.rgb = NAVY
+    avatar.line.fill.background()
+    initials = "佐" if d is CONTENT["ja"] else "TS"
+    add_textbox(slide, ax, ay, Inches(0.6), Inches(0.6),
+                initials, font, 12, WHITE, bold=True, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
+
+    # Name
+    add_textbox(slide, Inches(1.25), Inches(1.0), Inches(7), Inches(0.25),
+                s["name"], font, 8, TEXT_DARK, bold=True)
+    # Bio
+    add_textbox(slide, Inches(1.25), Inches(1.28), Inches(7.5), Inches(0.95),
+                s["bio"], font, 6.5, TEXT_MID)
+
+    # Tags
+    tag_x = Inches(1.25)
+    tag_y = Inches(2.2)
+    for tag in s["tags"]:
+        tw = Inches(len(tag) * 0.085 + 0.25)
+        add_rect(slide, tag_x, tag_y, tw, Inches(0.22), fill=BG_ALT, border_color=BORDER)
+        add_textbox(slide, tag_x + Inches(0.05), tag_y, tw - Inches(0.1), Inches(0.22),
+                    tag, font, 5.5, TEXT_MID, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
+        tag_x += tw + Inches(0.08)
+        if tag_x > Inches(8.5):
+            tag_x = Inches(1.25)
+            tag_y += Inches(0.28)
+
+    # Independence callout
+    cy = Inches(2.6)
+    cw, ch = Inches(8.6), Inches(0.8)
+    cx = Inches(0.5)
+    add_rect(slide, cx, cy, cw, ch, fill=ACCENT_PALE, border_color=ACCENT, border_width=Pt(2))
+    add_rect(slide, cx, cy, Inches(0.06), ch, fill=ACCENT)
+    add_textbox(slide, cx + Inches(0.2), cy + Inches(0.06), cw - Inches(0.3), Inches(0.2),
+                s["ind_title"], font, 7, TEXT_DARK, bold=True)
+    add_textbox(slide, cx + Inches(0.2), cy + Inches(0.28), cw - Inches(0.3), ch - Inches(0.35),
+                s["ind_body"], font, 6.5, TEXT_MID)
+
+    add_footer(slide, s["footer"], 8, font)
+
+
+def build_slide9(prs, d):
+    """CTA slide"""
+    slide = add_blank_slide(prs)
+    font = d["font"]
+    s = d["s9"]
+    # Full navy background
+    add_rect(slide, 0, 0, SLIDE_W, SLIDE_H, fill=NAVY)
+    # Action bar style top
+    add_textbox(slide, Inches(0.5), Inches(0.15), Inches(3), Inches(0.35),
+                s["bar"], font, 9, WHITE, bold=True)
+
+    # Title
+    add_textbox(slide, Inches(1), Inches(1.5), Inches(8), Inches(1.0),
+                s["title"], font, 18, WHITE, bold=True, align=PP_ALIGN.CENTER)
+    # Subtitle
+    add_textbox(slide, Inches(1.5), Inches(2.8), Inches(7), Inches(1.0),
+                s["sub"], font, 9, RGBColor(0xBB, 0xBB, 0xCC), align=PP_ALIGN.CENTER)
+
+    # Footer
+    stripe_y = SLIDE_H - Inches(0.5)
+    add_rect(slide, 0, stripe_y - Inches(0.04), SLIDE_W, Pt(0.5), fill=RGBColor(0x22, 0x33, 0x44))
+    add_textbox(slide, Inches(0.5), stripe_y, Inches(4), Inches(0.3),
+                s["footer_left"], font, 6.5, TEXT_LIGHT)
+    add_textbox(slide, Inches(4), stripe_y, Inches(2), Inches(0.3),
+                "Confidential", font, 6.5, TEXT_LIGHT, align=PP_ALIGN.CENTER)
+    add_textbox(slide, SLIDE_W - Inches(1), stripe_y, Inches(0.5), Inches(0.3),
+                "9", font, 6.5, TEXT_LIGHT, bold=True, align=PP_ALIGN.RIGHT)
+
+
+# ══════════════════════════════════════════════════════════════════════════
+#  MAIN
+# ══════════════════════════════════════════════════════════════════════════
+
+def generate(lang):
+    d = CONTENT[lang]
+    prs = new_prs()
+    build_cover(prs, d)
+    build_slide2(prs, d)
+    build_slide3(prs, d)
+    build_slide4(prs, d)
+    build_slide5(prs, d)
+    build_slide6(prs, d)
+    build_slide7(prs, d)
+    build_slide8(prs, d)
+    build_slide9(prs, d)
+
+    pptx_path = os.path.join(OUT_DIR, f"{d['filename']}.pptx")
+    prs.save(pptx_path)
+    print(f"  PPTX saved: {pptx_path}")
+    return pptx_path
+
+
+def convert_to_pdf(pptx_path):
+    out_dir = os.path.dirname(pptx_path)
+    env = os.environ.copy()
+    env["HOME"] = "/tmp"
+    result = subprocess.run(
+        ["libreoffice", "--headless", "--convert-to", "pdf", "--outdir", out_dir, pptx_path],
+        capture_output=True, text=True, timeout=120, env=env
+    )
+    if result.returncode != 0:
+        print(f"  ERROR: {result.stderr}")
+        return None
+    pdf_path = pptx_path.replace(".pptx", ".pdf")
+    print(f"  PDF saved: {pdf_path}")
+    return pdf_path
+
+
+if __name__ == "__main__":
+    print("=== TokiStorage Partnership Deck Generator ===\n")
+
+    for lang in ["ja", "en"]:
+        print(f"[{lang.upper()}] Generating PPTX...")
+        pptx = generate(lang)
+        print(f"[{lang.upper()}] Converting to PDF...")
+        convert_to_pdf(pptx)
+
+    print("\nDone!")
