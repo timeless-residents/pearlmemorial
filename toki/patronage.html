@@ -214,67 +214,68 @@
             line-height: 1.7;
         }
 
-        /* Tier cards */
-        .tier-list {
+        /* Amount guide */
+        .amount-guide {
             display: flex;
             flex-direction: column;
-            gap: 1.5rem;
+            gap: 1rem;
+            margin-bottom: 2rem;
         }
-        .tier-card {
+        .amount-row {
+            display: flex;
+            align-items: baseline;
+            gap: 1rem;
+            padding: 1.2rem 1.5rem;
             border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 2rem;
-            position: relative;
-            overflow: hidden;
+            border-radius: 10px;
         }
-        .tier-card::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 4px;
-        }
-        .tier-card.founding::before { background: var(--emerald); }
-        .tier-card.supporting::before { background: var(--toki-blue); }
-        .tier-card.community::before { background: var(--gold); }
-        .tier-label {
-            font-size: 0.65rem;
-            letter-spacing: 0.15em;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-        .tier-card.founding .tier-label { color: var(--emerald); }
-        .tier-card.supporting .tier-label { color: var(--toki-blue); }
-        .tier-card.community .tier-label { color: var(--gold); }
-        .tier-card h4 {
+        .amount-num {
             font-family: var(--font-display);
             font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--emerald);
+            white-space: nowrap;
+            min-width: 8rem;
+        }
+        .amount-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+        .patron-core {
+            background: var(--emerald-pale);
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            border-left: 4px solid var(--emerald);
+        }
+        .patron-core h4 {
+            font-family: var(--font-display);
+            font-size: 0.95rem;
             font-weight: 600;
             color: var(--text-primary);
             margin-bottom: 0.75rem;
         }
-        .tier-card p {
+        .patron-core-list {
+            list-style: none;
+            padding: 0;
+        }
+        .patron-core-list li {
             font-size: 0.85rem;
             color: var(--text-secondary);
-            line-height: 1.7;
-            margin-bottom: 0.75rem;
+            padding: 0.3rem 0;
+            padding-left: 1.2rem;
+            position: relative;
         }
-        .tier-benefits {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.4rem;
-            margin-top: 0.5rem;
+        .patron-core-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.7rem;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--emerald);
+            opacity: 0.5;
         }
-        .tier-benefit {
-            font-size: 0.7rem;
-            padding: 0.25rem 0.7rem;
-            border-radius: 4px;
-            color: var(--text-secondary);
-        }
-        .tier-card.founding .tier-benefit { background: var(--emerald-pale); }
-        .tier-card.supporting .tier-benefit { background: var(--toki-blue-pale); }
-        .tier-card.community .tier-benefit { background: var(--gold-pale); }
 
         /* Receive list */
         .receive-list {
@@ -505,52 +506,40 @@
     </div>
 </section>
 
-<!-- Patron Tiers -->
+<!-- How to Participate -->
 <section class="pp-section pp-section-border">
     <h2 class="pp-section-title">参画のかたち</h2>
-    <p class="pp-section-sub">あなたに合った関わり方を</p>
+    <p class="pp-section-sub">金額やかたちは、お話しながら決めましょう</p>
 
-    <div class="tier-list">
-        <div class="tier-card founding">
-            <div class="tier-label">FOUNDING PATRON ── 創設パトロン</div>
-            <h4>千年の活動を、名前とともに支える</h4>
-            <p>TokiStorageの社会的ミッション全体を支援する創設メンバー。あなたの名前と意志が、千年アーカイブの礎として刻まれます。佐藤との定期的な対話を通じて、活動の方向性にも関わっていただけます。</p>
-            <div class="tier-benefits">
-                <span class="tier-benefit">千年アーカイブへの創設者として刻印</span>
-                <span class="tier-benefit">年2回の対話セッション</span>
-                <span class="tier-benefit">年次インパクトレポート</span>
-                <span class="tier-benefit">パトロン限定イベント</span>
-                <span class="tier-benefit">ご自身の存在証明制作</span>
-            </div>
+    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.9;">パトロネージに決まった型はありません。活動に共感してくださる方が、ご自身のペースで参画する。それだけです。金額は目安です。大切なのは金額ではなく、「この活動を支えたい」という意志そのものです。</p>
+
+    <p style="font-size: 0.75rem; letter-spacing: 0.1em; color: var(--text-muted); font-weight: 600; margin-bottom: 1rem;">金額の目安</p>
+    <div class="amount-guide">
+        <div class="amount-row">
+            <span class="amount-num">月 3,000円〜</span>
+            <span class="amount-desc">個人で気軽に。お気持ちで始められます</span>
         </div>
-
-        <div class="tier-card supporting">
-            <div class="tier-label">SUPPORTING PATRON ── 支援パトロン</div>
-            <h4>社会の記憶を守る活動に継続的に参画する</h4>
-            <p>無縁墓プロジェクトやコミュニティアーカイブなど、特定のプロジェクトを継続的に支援。あなたの支援がどの記憶を救ったか、具体的にレポートします。</p>
-            <div class="tier-benefits">
-                <span class="tier-benefit">支援プロジェクトの選択</span>
-                <span class="tier-benefit">四半期インパクトレポート</span>
-                <span class="tier-benefit">パトロン認定・アーカイブ記載</span>
-                <span class="tier-benefit">年次イベント招待</span>
-            </div>
+        <div class="amount-row">
+            <span class="amount-num">月 10,000円〜</span>
+            <span class="amount-desc">もう少し深く、活動の一翼を担う</span>
         </div>
-
-        <div class="tier-card community">
-            <div class="tier-label">COMMUNITY PATRON ── コミュニティパトロン</div>
-            <h4>一人ひとりの力で、社会の記憶をつなぐ</h4>
-            <p>草の根からの支援。少額でも継続的な参画が、千年のアーカイブを支えます。ニュースレターを通じて活動の進展を共有します。</p>
-            <div class="tier-benefits">
-                <span class="tier-benefit">月次ニュースレター</span>
-                <span class="tier-benefit">パトロンコミュニティ参加</span>
-                <span class="tier-benefit">年次活動報告</span>
-            </div>
+        <div class="amount-row">
+            <span class="amount-num">年間・法人</span>
+            <span class="amount-desc">金額やかたちはご相談ください</span>
         </div>
     </div>
 
-    <div style="margin-top: 2rem; padding: 1.5rem 2rem; background: var(--emerald-pale); border-radius: 12px; border-left: 4px solid var(--emerald);">
-        <p style="font-size: 0.95rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.5rem;">パトロネージは、今日から始められます。</p>
-        <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.8;">株式投資のような複雑な契約は不要です。特別な法的手続きもありません。「この活動に共感する」——その意志ひとつで参画できます。金額やティアはいつでも変更可能。まずはお話しするところから。</p>
+    <div class="patron-core">
+        <h4>すべてのパトロンに共通</h4>
+        <ul class="patron-core-list">
+            <li>千年アーカイブへの刻印（あなたの名前と意志）</li>
+            <li>活動の進展を随時共有</li>
+            <li>いつでも金額の変更・休止が可能</li>
+        </ul>
+    </div>
+
+    <div style="margin-top: 2rem; padding: 1.5rem 2rem; background: var(--bg-section); border-radius: 12px;">
+        <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.8;">複雑な契約は不要です。特別な法的手続きもありません。「この活動に共感する」——その意志ひとつで、今日から始められます。</p>
     </div>
 </section>
 <section class="pp-section pp-section-border">
@@ -562,21 +551,14 @@
             <div class="receive-icon green">&#x1F48E;</div>
             <div class="receive-body">
                 <h4>千年アーカイブへの刻印</h4>
-                <p>あなたの名前と支援の意志が、千年アーカイブの一部として石英ガラスに刻まれます。千年後の誰かが、この活動を支えた人としてあなたに出会う。</p>
+                <p>あなたの名前と支援の意志が、石英ガラスに刻まれます。千年後の誰かが、この活動を支えた人としてあなたに出会う。それは、あなたの物語の一部になります。</p>
             </div>
         </div>
         <div class="receive-item">
-            <div class="receive-icon blue">&#x1F4CA;</div>
+            <div class="receive-icon blue">&#x1F4AC;</div>
             <div class="receive-body">
-                <h4>インパクトレポート</h4>
-                <p>あなたの支援がどの記憶を救い、どの物語を千年先に届けたか。具体的な成果を定期的にレポートします。</p>
-            </div>
-        </div>
-        <div class="receive-item">
-            <div class="receive-icon gold">&#x1F91D;</div>
-            <div class="receive-body">
-                <h4>対話とコミュニティ</h4>
-                <p>同じ志を持つパトロン同士の交流、創業者との対話。「千年の記憶を社会に届ける」というミッションを共有する仲間との繋がり。</p>
+                <h4>活動の進展の共有</h4>
+                <p>節目ごとに、活動がどこまで進んだか、どんな記憶を救えたかをお伝えします。決まったスケジュールではなく、お伝えしたいことがあるときに。</p>
             </div>
         </div>
         <div class="receive-item">
@@ -601,7 +583,7 @@
         </div>
         <div class="insight-card" style="margin-bottom: 0;">
             <h3>想定される勘定科目</h3>
-            <p><strong>協賛金・広告宣伝費</strong>として計上可能なケースが多くなります。パトロン認定による企業名の露出、インパクトレポートの受領、パトロン限定イベントへの参加など、対価性のある成果物が含まれるためです。詳細は顧問税理士にご確認ください。</p>
+            <p><strong>協賛金・広告宣伝費</strong>として計上可能なケースが多くなります。パトロン認定による企業名の露出、千年アーカイブへの刻印など、対価性のある成果物が含まれるためです。詳細は顧問税理士にご確認ください。</p>
         </div>
         <div class="insight-card" style="margin-bottom: 0;">
             <h3>お渡しする書類</h3>
@@ -647,7 +629,7 @@
         </div>
         <div style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.5rem;">
             <span style="flex-shrink:0; width:2rem; height:2rem; border-radius:50%; background:var(--emerald); color:#fff; display:flex; align-items:center; justify-content:center; font-size:0.8rem; font-weight:700;">02</span>
-            <div><strong style="color:#fff;">参画スタート</strong><br><span style="color:var(--text-muted); font-size:0.85rem;">ティアを選んで、あなたのペースで始められます。いつでも変更可能</span></div>
+            <div><strong style="color:#fff;">参画スタート</strong><br><span style="color:var(--text-muted); font-size:0.85rem;">あなたのペースで始められます。金額もかたちもいつでも変更可能</span></div>
         </div>
         <div style="display: flex; align-items: flex-start; gap: 1rem;">
             <span style="flex-shrink:0; width:2rem; height:2rem; border-radius:50%; background:var(--emerald); color:#fff; display:flex; align-items:center; justify-content:center; font-size:0.8rem; font-weight:700;">03</span>

@@ -201,65 +201,66 @@
             line-height: 1.7;
         }
 
-        .tier-list {
+        /* Amount guide */
+        .amount-guide {
             display: flex;
             flex-direction: column;
-            gap: 1.5rem;
+            gap: 1rem;
+            margin-bottom: 2rem;
         }
-        .tier-card {
+        .amount-row {
+            display: flex;
+            align-items: baseline;
+            gap: 1rem;
+            padding: 1.2rem 1.5rem;
             border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 2rem;
-            position: relative;
-            overflow: hidden;
+            border-radius: 10px;
         }
-        .tier-card::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 4px;
-        }
-        .tier-card.founding::before { background: var(--emerald); }
-        .tier-card.supporting::before { background: var(--toki-blue); }
-        .tier-card.community::before { background: var(--gold); }
-        .tier-label {
-            font-size: 0.65rem;
-            letter-spacing: 0.15em;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-        .tier-card.founding .tier-label { color: var(--emerald); }
-        .tier-card.supporting .tier-label { color: var(--toki-blue); }
-        .tier-card.community .tier-label { color: var(--gold); }
-        .tier-card h4 {
+        .amount-num {
             font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--emerald);
+            white-space: nowrap;
+            min-width: 8rem;
+        }
+        .amount-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+        .patron-core {
+            background: var(--emerald-pale);
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            border-left: 4px solid var(--emerald);
+        }
+        .patron-core h4 {
+            font-size: 0.95rem;
             font-weight: 600;
             color: var(--text-primary);
             margin-bottom: 0.75rem;
         }
-        .tier-card p {
+        .patron-core-list {
+            list-style: none;
+            padding: 0;
+        }
+        .patron-core-list li {
             font-size: 0.85rem;
             color: var(--text-secondary);
-            line-height: 1.7;
-            margin-bottom: 0.75rem;
+            padding: 0.3rem 0;
+            padding-left: 1.2rem;
+            position: relative;
         }
-        .tier-benefits {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.4rem;
-            margin-top: 0.5rem;
+        .patron-core-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.7rem;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--emerald);
+            opacity: 0.5;
         }
-        .tier-benefit {
-            font-size: 0.7rem;
-            padding: 0.25rem 0.7rem;
-            border-radius: 4px;
-            color: var(--text-secondary);
-        }
-        .tier-card.founding .tier-benefit { background: var(--emerald-pale); }
-        .tier-card.supporting .tier-benefit { background: var(--toki-blue-pale); }
-        .tier-card.community .tier-benefit { background: var(--gold-pale); }
 
         .receive-list {
             display: flex;
@@ -483,52 +484,40 @@
     </div>
 </section>
 
-<!-- Patron Tiers -->
+<!-- How to Participate -->
 <section class="pp-section pp-section-border">
     <h2 class="pp-section-title">Ways to participate</h2>
-    <p class="pp-section-sub">Find the level of engagement that fits you</p>
+    <p class="pp-section-sub">Let's figure out the right shape together</p>
 
-    <div class="tier-list">
-        <div class="tier-card founding">
-            <div class="tier-label">FOUNDING PATRON</div>
-            <h4>Support the millennium mission with your name</h4>
-            <p>A founding member supporting TokiStorage's entire social mission. Your name and intention are inscribed as a cornerstone of the millennium archive. Regular dialogue with the founder shapes the direction of the mission.</p>
-            <div class="tier-benefits">
-                <span class="tier-benefit">Inscribed as founder in millennium archive</span>
-                <span class="tier-benefit">Biannual dialogue sessions</span>
-                <span class="tier-benefit">Annual impact report</span>
-                <span class="tier-benefit">Patron-exclusive events</span>
-                <span class="tier-benefit">Your own proof of existence</span>
-            </div>
+    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.9;">There is no fixed formula for patronage. If the mission resonates with you, participate at your own pace. That's all it takes. The amounts below are reference points. What matters is not the number, but the intention: "I want to support this."</p>
+
+    <p style="font-size: 0.75rem; letter-spacing: 0.1em; color: var(--text-muted); font-weight: 600; margin-bottom: 1rem;">REFERENCE AMOUNTS</p>
+    <div class="amount-guide">
+        <div class="amount-row">
+            <span class="amount-num">&yen;3,000/mo</span>
+            <span class="amount-desc">A casual start. Begin with what feels right</span>
         </div>
-
-        <div class="tier-card supporting">
-            <div class="tier-label">SUPPORTING PATRON</div>
-            <h4>Continuously participate in preserving society's memory</h4>
-            <p>Ongoing support for specific projects such as the Unclaimed Graves Project or Community Archives. We report concretely which memories your support has saved.</p>
-            <div class="tier-benefits">
-                <span class="tier-benefit">Choose your project</span>
-                <span class="tier-benefit">Quarterly impact reports</span>
-                <span class="tier-benefit">Patron recognition in archive</span>
-                <span class="tier-benefit">Annual event invitation</span>
-            </div>
+        <div class="amount-row">
+            <span class="amount-num">&yen;10,000/mo</span>
+            <span class="amount-desc">A deeper commitment to the mission</span>
         </div>
-
-        <div class="tier-card community">
-            <div class="tier-label">COMMUNITY PATRON</div>
-            <h4>Connect society's memory, one person at a time</h4>
-            <p>Grassroots support. Even small, consistent contributions sustain the millennium archive. Stay connected through our newsletter sharing mission progress.</p>
-            <div class="tier-benefits">
-                <span class="tier-benefit">Monthly newsletter</span>
-                <span class="tier-benefit">Patron community access</span>
-                <span class="tier-benefit">Annual activity report</span>
-            </div>
+        <div class="amount-row">
+            <span class="amount-num">Annual / Corporate</span>
+            <span class="amount-desc">Let's discuss the right arrangement</span>
         </div>
     </div>
 
-    <div style="margin-top: 2rem; padding: 1.5rem 2rem; background: var(--emerald-pale); border-radius: 12px; border-left: 4px solid var(--emerald);">
-        <p style="font-size: 0.95rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.5rem;">You can become a patron today.</p>
-        <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.8;">No complex contracts. No legal paperwork. No equity structures. All it takes is your intention to support this mission. Tiers and amounts can be adjusted anytime. Let's start with a conversation.</p>
+    <div class="patron-core">
+        <h4>Every patron receives</h4>
+        <ul class="patron-core-list">
+            <li>Inscription in the millennium archive (your name and intention)</li>
+            <li>Mission progress updates as milestones are reached</li>
+            <li>Freedom to adjust amounts or pause anytime</li>
+        </ul>
+    </div>
+
+    <div style="margin-top: 2rem; padding: 1.5rem 2rem; background: var(--bg-section); border-radius: 12px;">
+        <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.8;">No complex contracts. No legal paperwork. No equity structures. All it takes is your intention to support this mission. You can become a patron today.</p>
     </div>
 </section>
 <section class="pp-section pp-section-border">
@@ -540,21 +529,14 @@
             <div class="receive-icon green">&#x1F48E;</div>
             <div class="receive-body">
                 <h4>Inscription in the millennium archive</h4>
-                <p>Your name and the intention behind your support are inscribed in quartz glass as part of the millennium archive. A thousand years from now, someone will encounter you as a person who supported this mission.</p>
+                <p>Your name and the intention behind your support are inscribed in quartz glass. A thousand years from now, someone will encounter you as a person who supported this mission. That becomes part of your story.</p>
             </div>
         </div>
         <div class="receive-item">
-            <div class="receive-icon blue">&#x1F4CA;</div>
+            <div class="receive-icon blue">&#x1F4AC;</div>
             <div class="receive-body">
-                <h4>Impact reports</h4>
-                <p>Which memories your support saved. Which stories it delivered to a millennium from now. Concrete outcomes reported regularly.</p>
-            </div>
-        </div>
-        <div class="receive-item">
-            <div class="receive-icon gold">&#x1F91D;</div>
-            <div class="receive-body">
-                <h4>Dialogue and community</h4>
-                <p>Connection with fellow patrons who share the mission. Dialogue with the founder. A community united by the vision of delivering millennium memories to society.</p>
+                <h4>Mission progress updates</h4>
+                <p>As the work moves forward, we'll share what's happening &mdash; which memories were saved, which milestones were reached. Not on a fixed schedule, but when there's something worth telling.</p>
             </div>
         </div>
         <div class="receive-item">
@@ -579,7 +561,7 @@
         </div>
         <div class="insight-card" style="margin-bottom: 0;">
             <h3>Typical accounting treatment</h3>
-            <p>Often classifiable as <strong>sponsorship fees or marketing/CSR expenses</strong>. The patronage includes tangible deliverables: patron recognition, impact reports, and exclusive event access, supporting business expense treatment. Please confirm specifics with your tax advisor.</p>
+            <p>Often classifiable as <strong>sponsorship fees or marketing/CSR expenses</strong>. The patronage includes tangible deliverables: patron recognition and inscription in the millennium archive, supporting business expense treatment. Please confirm specifics with your tax advisor.</p>
         </div>
         <div class="insight-card" style="margin-bottom: 0;">
             <h3>Documentation provided</h3>
@@ -625,7 +607,7 @@
         </div>
         <div style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.5rem;">
             <span style="flex-shrink:0; width:2rem; height:2rem; border-radius:50%; background:var(--emerald); color:#fff; display:flex; align-items:center; justify-content:center; font-size:0.8rem; font-weight:700;">02</span>
-            <div><strong style="color:#fff;">Start participating</strong><br><span style="color:var(--text-muted); font-size:0.85rem;">Choose your tier and begin at your own pace. Change anytime</span></div>
+            <div><strong style="color:#fff;">Start participating</strong><br><span style="color:var(--text-muted); font-size:0.85rem;">Begin at your own pace. Amounts and arrangements can change anytime</span></div>
         </div>
         <div style="display: flex; align-items: flex-start; gap: 1rem;">
             <span style="flex-shrink:0; width:2rem; height:2rem; border-radius:50%; background:var(--emerald); color:#fff; display:flex; align-items:center; justify-content:center; font-size:0.8rem; font-weight:700;">03</span>
