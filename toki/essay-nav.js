@@ -92,8 +92,8 @@
 
   // Pearl Soap・100 Scenes・ユースケース・トキストレージ への導線
   const specialLinks = isEnglish
-    ? `<br><br><a href="pearl-soap.html" style="color: var(--toki-gold);">Pearl Soap</a> · <a href="100-scenes.html" style="color: var(--toki-gold);">100 Scenes</a> · <a href="usecases-en.html">Use Cases</a> · <a href="index-en.html">Toki Storage</a>`
-    : `<br><br><a href="pearl-soap.html" style="color: var(--toki-gold);">Pearl Soap</a> · <a href="100-scenes.html" style="color: var(--toki-gold);">100のシーン</a> · <a href="usecases.html">ユースケース</a> · <a href="index.html">トキストレージ</a>`;
+    ? `<br><br><a href="pearl-soap.html" style="color: var(--toki-gold);">Pearl Soap</a> · <a href="100-scenes.html" style="color: var(--toki-gold);">100 Scenes</a> · <a href="usecases-en.html">Use Cases</a> · <a href="government-proposal-en.html">Government Proposal</a> · <a href="index-en.html">Toki Storage</a>`
+    : `<br><br><a href="pearl-soap.html" style="color: var(--toki-gold);">Pearl Soap</a> · <a href="100-scenes.html" style="color: var(--toki-gold);">100のシーン</a> · <a href="usecases.html">ユースケース</a> · <a href="government-proposal.html">行政提案</a> · <a href="index.html">トキストレージ</a>`;
 
   document.addEventListener('DOMContentLoaded', function() {
     const container = document.getElementById('essay-nav-links');
