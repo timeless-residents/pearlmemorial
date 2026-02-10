@@ -178,9 +178,9 @@ def draw_col_card(slide, x, y, w, h, num, title, body, font):
     add_rect(slide, x, y, w, h, fill=WHITE, border_color=BORDER)
     add_textbox(slide, x + Inches(0.15), y + Inches(0.1), Inches(0.6), Inches(0.35),
                 num, font, 15, TOKI_BLUE, bold=True)
-    add_textbox(slide, x + Inches(0.15), y + Inches(0.45), w - Inches(0.3), Inches(0.3),
+    add_textbox(slide, x + Inches(0.15), y + Inches(0.45), w - Inches(0.3), Inches(0.5),
                 title, font, 12, TEXT_PRIMARY, bold=True)
-    add_textbox(slide, x + Inches(0.15), y + Inches(0.88), w - Inches(0.3), h - Inches(0.98),
+    add_textbox(slide, x + Inches(0.15), y + Inches(1.05), w - Inches(0.3), h - Inches(1.15),
                 body, font, 12, TEXT_SECONDARY)
 
 
@@ -202,18 +202,18 @@ def draw_grid_card(slide, x, y, w, h, icon_letter, title, body, font):
 
 def draw_model_item(slide, x, y, w, h, badge_text, badge_color, title, body, example, font):
     add_rect(slide, x, y, w, h, fill=WHITE, border_color=BORDER)
-    # Badge
-    bx, by, bw, bh = x + Inches(0.15), y + Inches(0.12), Inches(0.85), Inches(0.8)
+    # Badge (vertically centered in card)
+    bx, by, bw, bh = x + Inches(0.15), y + Inches(0.13), Inches(0.85), Inches(0.9)
     badge = add_rect(slide, bx, by, bw, bh, fill=badge_color)
     add_textbox(slide, bx, by, bw, bh, badge_text, font, 8, WHITE, bold=True,
                 align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
     tx = x + Inches(1.15)
     tw = w - Inches(1.3)
-    add_textbox(slide, tx, y + Inches(0.08), tw, Inches(0.28),
+    add_textbox(slide, tx, y + Inches(0.08), tw, Inches(0.38),
                 title, font, 11, TEXT_PRIMARY, bold=True)
-    add_textbox(slide, tx, y + Inches(0.42), tw, Inches(0.32),
+    add_textbox(slide, tx, y + Inches(0.5), tw, Inches(0.34),
                 body, font, 10, TEXT_SECONDARY)
-    add_textbox(slide, tx, y + Inches(0.76), tw, Inches(0.22),
+    add_textbox(slide, tx, y + Inches(0.88), tw, Inches(0.22),
                 example, font, 9, TOKI_BLUE)
 
 
@@ -612,7 +612,7 @@ def build_slide5(prs, d):
     add_action_bar(slide, s["bar"], font)
     add_section_label(slide, s["label"], font, Inches(0.8))
     item_w = Inches(8.6)
-    item_h = Inches(1.05)
+    item_h = Inches(1.15)
     gap = Inches(0.12)
     start_y = Inches(1.15)
     x = Inches(0.5)
@@ -685,8 +685,10 @@ def build_slide8(prs, d):
     s = d["s8"]
     add_action_bar(slide, s["bar"], font)
     add_section_label(slide, s["label"], font, Inches(0.8))
-    # Profile photo (circular) or fallback initials
-    ax, ay, asize = Inches(0.5), Inches(1.15), Inches(0.8)
+
+    # ── Profile section ──────────────────────────────────
+    # Photo (circular, 1.0" diameter)
+    ax, ay, asize = Inches(0.5), Inches(1.12), Inches(1.0)
     photo_path = os.path.join(OUT_DIR, "asset", "IMG_4310-2.jpeg")
     if os.path.exists(photo_path):
         try:
@@ -696,30 +698,42 @@ def build_slide8(prs, d):
             _draw_avatar_fallback(slide, ax, ay, asize, d, font)
     else:
         _draw_avatar_fallback(slide, ax, ay, asize, d, font)
-    add_textbox(slide, Inches(1.45), Inches(1.15), Inches(7), Inches(0.35),
-                s["name"], font, 12, TEXT_PRIMARY, bold=True)
-    add_textbox(slide, Inches(1.45), Inches(1.52), Inches(7.5), Inches(0.95),
+    # Name (right of photo)
+    name_x = Inches(1.65)
+    add_textbox(slide, name_x, Inches(1.18), Inches(7.3), Inches(0.35),
+                s["name"], font, 13, TEXT_PRIMARY, bold=True)
+    # Bio (right of photo, below name)
+    bio_y = 1.58
+    add_textbox(slide, name_x, Inches(bio_y), Inches(7.3), Inches(1.2),
                 s["bio"], font, 10, TEXT_SECONDARY)
-    # Tags (with comfortable inner padding)
-    tag_x = Inches(1.45)
-    tag_y = Inches(2.5)
+
+    # ── Tags section (full width, positioned below bio) ──
+    # Estimate bio rendered height to avoid overlap
+    cpl = 48 if font == FONT_JP else 85  # approx chars per line
+    bio_lines = (len(s["bio"]) + cpl - 1) // cpl
+    bio_h_est = bio_lines * 0.19  # 10pt * 1.35 line spacing
+    tag_start_x = Inches(0.5)
+    tag_x = tag_start_x
+    tag_y = Inches(max(2.5, bio_y + bio_h_est + 0.22))
+    tag_h = Inches(0.28)
     for tag in s["tags"]:
         tw = Inches(len(tag) * 0.075 + 0.4)
         if tag_x + tw > Inches(9.3):
-            tag_x = Inches(1.45)
-            tag_y += Inches(0.35)
-        add_rect(slide, tag_x, tag_y, tw, Inches(0.3), fill=BG_SECTION, border_color=BORDER)
-        add_textbox(slide, tag_x + Inches(0.1), tag_y, tw - Inches(0.2), Inches(0.3),
-                    tag, font, 7.5, TEXT_SECONDARY, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
-        tag_x += tw + Inches(0.1)
-    # Independence callout (left accent stripe, fixed height)
-    cy = tag_y + Inches(0.48)
-    cx, cw, ch = Inches(0.5), Inches(8.6), Inches(0.85)
+            tag_x = tag_start_x
+            tag_y += Inches(0.38)
+        add_rect(slide, tag_x, tag_y, tw, tag_h, fill=BG_SECTION, border_color=BORDER)
+        add_textbox(slide, tag_x + Inches(0.1), tag_y, tw - Inches(0.2), tag_h,
+                    tag, font, 8, TEXT_SECONDARY, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
+        tag_x += tw + Inches(0.12)
+
+    # ── Independence callout ─────────────────────────────
+    cy = tag_y + Inches(0.55)
+    cx, cw, ch = Inches(0.5), Inches(8.6), Inches(0.88)
     add_rect(slide, cx, cy, cw, ch, fill=TOKI_BLUE_PALE)
     add_rect(slide, cx, cy, Inches(0.06), ch, fill=TOKI_BLUE)
-    add_textbox(slide, cx + Inches(0.25), cy + Inches(0.08), cw - Inches(0.35), Inches(0.26),
+    add_textbox(slide, cx + Inches(0.25), cy + Inches(0.1), cw - Inches(0.35), Inches(0.28),
                 s["ind_title"], font, 10, TEXT_PRIMARY, bold=True)
-    add_textbox(slide, cx + Inches(0.25), cy + Inches(0.42), cw - Inches(0.35), ch - Inches(0.48),
+    add_textbox(slide, cx + Inches(0.25), cy + Inches(0.44), cw - Inches(0.35), ch - Inches(0.52),
                 s["ind_body"], font, 10, TEXT_SECONDARY)
     add_footer(slide, s["footer"], 8, font)
 
