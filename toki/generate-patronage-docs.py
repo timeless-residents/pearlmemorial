@@ -24,7 +24,18 @@ class DocPDF(FPDF):
         super().__init__()
         self.add_font("JP", "", FONT_PATH, uni=True)
         self.add_font("JP", "B", FONT_PATH, uni=True)
-        self.set_auto_page_break(auto=True, margin=20)
+        self.set_auto_page_break(auto=False)
+
+    def footer(self):
+        """Auto-called footer on every page — keeps everything on 1 page."""
+        self.set_y(-18)
+        self.set_draw_color(*BORDER)
+        self.line(15, self.get_y(), 195, self.get_y())
+        self.ln(2)
+        self.set_font("JP", "", 6.5)
+        self.set_text_color(*MUTED)
+        self.cell(0, 3.5, "ユニバーサルニード株式会社  |  TokiStorage Patronage Program", ln=True, align="C")
+        self.cell(0, 3.5, "本書は見本です。実際の書類は内容確定後に発行いたします。", ln=True, align="C")
 
     def header_block(self, title, subtitle=None):
         """Company header + document title."""
@@ -81,18 +92,18 @@ class DocPDF(FPDF):
 
     def section_title(self, title):
         """Section heading."""
-        self.ln(3)
-        self.set_font("JP", "B", 10)
+        self.ln(1.5)
+        self.set_font("JP", "B", 9.5)
         self.set_text_color(*DARK)
-        self.cell(0, 8, title, ln=True)
-        self.ln(2)
+        self.cell(0, 7, title, ln=True)
+        self.ln(1)
 
     def body_text(self, text):
         """Normal body text."""
         self.set_font("JP", "", 8.5)
         self.set_text_color(*SECONDARY)
-        self.multi_cell(0, 5.5, text)
-        self.ln(2)
+        self.multi_cell(0, 5, text)
+        self.ln(1)
 
     def template_stamp(self):
         """'TEMPLATE / 見本' watermark-style label."""
@@ -100,17 +111,6 @@ class DocPDF(FPDF):
         self.set_text_color(*MUTED)
         self.set_xy(150, 12)
         self.cell(45, 5, "TEMPLATE / 見本", align="R")
-
-    def footer_block(self):
-        """Standard footer."""
-        self.set_y(-25)
-        self.set_draw_color(*BORDER)
-        self.line(15, self.get_y(), 195, self.get_y())
-        self.ln(3)
-        self.set_font("JP", "", 6.5)
-        self.set_text_color(*MUTED)
-        self.cell(0, 4, "ユニバーサルニード株式会社  |  TokiStorage Patronage Program", ln=True, align="C")
-        self.cell(0, 4, "本書は見本です。実際の書類は内容確定後に発行いたします。", ln=True, align="C")
 
 
 def generate_agreement():
@@ -123,7 +123,7 @@ def generate_agreement():
     # Date & number
     pdf.label_value("契約番号", "PAT-2026-XXXX")
     pdf.label_value("締結日", "2026年　　月　　日")
-    pdf.ln(4)
+    pdf.ln(2)
 
     # Parties
     pdf.section_title("第1条（当事者）")
@@ -168,7 +168,7 @@ def generate_agreement():
         "第三者に開示または漏洩しないものとする。"
     )
 
-    pdf.ln(6)
+    pdf.ln(4)
 
     # Signature blocks
     pdf.set_font("JP", "", 8)
@@ -203,8 +203,6 @@ def generate_agreement():
     pdf.set_font("JP", "", 7)
     pdf.set_text_color(*MUTED)
     pdf.cell(80, 5, "署名 ____________________________")
-
-    pdf.footer_block()
 
     out = os.path.join(OUT_DIR, "patronage-template-agreement.pdf")
     pdf.output(out)
@@ -331,8 +329,6 @@ def generate_invoice():
     pdf.set_text_color(*SECONDARY)
     pdf.cell(0, 5, "代表取締役　佐藤 卓也", ln=True)
 
-    pdf.footer_block()
-
     out = os.path.join(OUT_DIR, "patronage-template-invoice.pdf")
     pdf.output(out)
     print(f"  -> {out}")
@@ -435,8 +431,6 @@ def generate_receipt():
     pdf.rect(150, y_stamp, 30, 30)
     pdf.set_xy(150, y_stamp + 12)
     pdf.cell(30, 5, "印", align="C")
-
-    pdf.footer_block()
 
     out = os.path.join(OUT_DIR, "patronage-template-receipt.pdf")
     pdf.output(out)
