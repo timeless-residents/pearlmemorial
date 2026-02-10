@@ -34,7 +34,7 @@ class DocPDF(FPDF):
         self.ln(2)
         self.set_font("JP", "", 6.5)
         self.set_text_color(*MUTED)
-        self.cell(0, 3.5, "ユニバーサルニード株式会社  |  TokiStorage Patronage Program", ln=True, align="C")
+        self.cell(0, 3.5, "TokiStorage  |  Patronage Program", ln=True, align="C")
         self.cell(0, 3.5, "本書は見本です。実際の書類は内容確定後に発行いたします。", ln=True, align="C")
 
     def header_block(self, title, subtitle=None):
@@ -47,10 +47,10 @@ class DocPDF(FPDF):
         # Company name
         self.set_font("JP", "B", 9)
         self.set_text_color(*DARK)
-        self.cell(0, 5, "ユニバーサルニード株式会社", ln=True, align="L")
+        self.cell(0, 5, "TokiStorage（佐藤卓也）", ln=True, align="L")
         self.set_font("JP", "", 7)
         self.set_text_color(*SECONDARY)
-        self.cell(0, 4, "Universal Need Inc.", ln=True, align="L")
+        self.cell(0, 4, "TokiStorage", ln=True, align="L")
 
         self.ln(8)
 
@@ -128,7 +128,7 @@ def generate_agreement():
     # Parties
     pdf.section_title("第1条（当事者）")
     pdf.body_text(
-        "甲：ユニバーサルニード株式会社（以下「甲」）\n"
+        "甲：TokiStorage（佐藤卓也）（以下「甲」）\n"
         "乙：【　　　　　　　　　　　　　　　　　】（以下「乙」）"
     )
 
@@ -177,9 +177,9 @@ def generate_agreement():
     y = pdf.get_y()
     # Left column (甲)
     pdf.set_xy(15, y)
-    pdf.cell(80, 6, "甲：ユニバーサルニード株式会社", ln=True)
+    pdf.cell(80, 6, "甲：TokiStorage（佐藤卓也）", ln=True)
     pdf.set_x(15)
-    pdf.cell(80, 6, "代表取締役　佐藤 卓也", ln=True)
+    pdf.cell(80, 6, "佐藤 卓也", ln=True)
     pdf.set_x(15)
     pdf.set_draw_color(*BORDER)
     pdf.cell(80, 6, "")
@@ -306,17 +306,17 @@ def generate_invoice():
     pdf.set_x(20)
     pdf.cell(0, 5.5, "口座番号：XXXXXXX", ln=True)
     pdf.set_x(20)
-    pdf.cell(0, 5.5, "口座名義：ユニバーサルニード（カ", ln=True)
+    pdf.cell(0, 5.5, "口座名義：サトウ タクヤ", ln=True)
 
     pdf.set_y(y0 + 38)
 
     # Issuer
     pdf.set_font("JP", "", 8)
     pdf.set_text_color(*DARK)
-    pdf.cell(0, 5, "ユニバーサルニード株式会社", ln=True)
+    pdf.cell(0, 5, "TokiStorage（佐藤卓也）", ln=True)
     pdf.set_font("JP", "", 7)
     pdf.set_text_color(*SECONDARY)
-    pdf.cell(0, 5, "代表取締役　佐藤 卓也", ln=True)
+    pdf.cell(0, 5, "佐藤 卓也", ln=True)
 
     out = os.path.join(OUT_DIR, "patronage-template-invoice.pdf")
     pdf.output(out)
@@ -398,10 +398,10 @@ def generate_receipt():
 
     pdf.set_font("JP", "B", 9)
     pdf.set_text_color(*DARK)
-    pdf.cell(0, 6, "ユニバーサルニード株式会社", ln=True)
+    pdf.cell(0, 6, "TokiStorage（佐藤卓也）", ln=True)
     pdf.set_font("JP", "", 8)
     pdf.set_text_color(*SECONDARY)
-    pdf.cell(0, 5, "代表取締役　佐藤 卓也", ln=True)
+    pdf.cell(0, 5, "佐藤 卓也", ln=True)
     pdf.ln(4)
 
     # Stamp area
