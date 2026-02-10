@@ -214,6 +214,62 @@
             line-height: 1.7;
         }
 
+        /* Comparison grid */
+        .compare-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+        .compare-card {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            position: relative;
+        }
+        .compare-card.is-patron {
+            border-color: var(--emerald);
+            background: var(--emerald-pale);
+        }
+        .compare-label {
+            font-size: 0.6rem;
+            letter-spacing: 0.15em;
+            font-weight: 700;
+            color: var(--text-muted);
+            margin-bottom: 0.6rem;
+        }
+        .compare-card.is-patron .compare-label {
+            color: var(--emerald);
+        }
+        .compare-card h4 {
+            font-family: var(--font-display);
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+        .compare-card p {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        .compare-row {
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+            margin-top: 0.6rem;
+        }
+        .compare-key {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            white-space: nowrap;
+            min-width: 3rem;
+        }
+        .compare-val {
+            font-size: 0.8rem;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
         /* Patron core */
         .patron-core {
             background: var(--emerald-pale);
@@ -397,6 +453,7 @@
             .pt-hero h1 { font-size: 1.5rem; }
             .pp-section { padding: 3rem 1.2rem; }
             .impact-grid { grid-template-columns: 1fr; }
+            .compare-grid { grid-template-columns: 1fr; }
             .founder-section { flex-direction: column; }
             .pp-nav .nav-label { display: none; }
         }
@@ -445,6 +502,72 @@
         <h3>活動を支えること自体が、あなたの存在証明になる。</h3>
         <p>パトロネージは投資でも寄付でもありません。「千年の記憶を社会に届ける」という活動に、あなたの名前と意志が刻まれます。あなたが支えた活動が千年続くとき、それ自体があなたの存在証明になる——そういう構造です。</p>
     </div>
+</section>
+
+<!-- Comparison -->
+<section class="pp-section pp-section-border">
+    <h2 class="pp-section-title">4つの関わり方</h2>
+    <p class="pp-section-sub">TokiStorageとの関係は、一つではない</p>
+
+    <div class="compare-grid">
+        <div class="compare-card">
+            <div class="compare-label">INVESTOR ── 投資家</div>
+            <h4>事業の成長に賭ける</h4>
+            <p>TokiStorageを事業として評価し、株式を通じて成長に参画する。</p>
+            <div class="compare-row">
+                <span class="compare-key">動機</span>
+                <span class="compare-val">事業成長・金銭的リターン</span>
+            </div>
+            <div class="compare-row">
+                <span class="compare-key">関係</span>
+                <span class="compare-val">株主</span>
+            </div>
+        </div>
+
+        <div class="compare-card">
+            <div class="compare-label">PARTNER ── 協業パートナー</div>
+            <h4>事業機会を共に創る</h4>
+            <p>コンサルティングファーム等が、自社クライアントにTokiStorageを提案する。</p>
+            <div class="compare-row">
+                <span class="compare-key">動機</span>
+                <span class="compare-val">事業連携・相互の顧客価値</span>
+            </div>
+            <div class="compare-row">
+                <span class="compare-key">関係</span>
+                <span class="compare-val">業務提携</span>
+            </div>
+        </div>
+
+        <div class="compare-card">
+            <div class="compare-label">CLIENT ── クライアント</div>
+            <h4>自身の存在証明を託す</h4>
+            <p>Timeless Consultingを通じて、ご自身や大切な方の記憶を千年先に届ける。</p>
+            <div class="compare-row">
+                <span class="compare-key">動機</span>
+                <span class="compare-val">自身・家族の存在証明</span>
+            </div>
+            <div class="compare-row">
+                <span class="compare-key">関係</span>
+                <span class="compare-val">サービス利用</span>
+            </div>
+        </div>
+
+        <div class="compare-card is-patron">
+            <div class="compare-label">PATRON ── パトロン</div>
+            <h4>活動そのものに参画する</h4>
+            <p>存在証明を社会に届けるという活動を支え、その活動自体があなたの存在証明になる。</p>
+            <div class="compare-row">
+                <span class="compare-key">動機</span>
+                <span class="compare-val">ミッションへの共感</span>
+            </div>
+            <div class="compare-row">
+                <span class="compare-key">関係</span>
+                <span class="compare-val">活動の参画者</span>
+            </div>
+        </div>
+    </div>
+
+    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 1.5rem; line-height: 1.7;">もちろん、これらは排他的ではありません。クライアントでありながらパトロンとして活動を支える方も、パートナーとして事業連携しながらパトロンでもある方もいます。</p>
 </section>
 
 <!-- Vision -->

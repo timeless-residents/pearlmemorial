@@ -201,6 +201,61 @@
             line-height: 1.7;
         }
 
+        /* Comparison grid */
+        .compare-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+        .compare-card {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            position: relative;
+        }
+        .compare-card.is-patron {
+            border-color: var(--emerald);
+            background: var(--emerald-pale);
+        }
+        .compare-label {
+            font-size: 0.6rem;
+            letter-spacing: 0.15em;
+            font-weight: 700;
+            color: var(--text-muted);
+            margin-bottom: 0.6rem;
+        }
+        .compare-card.is-patron .compare-label {
+            color: var(--emerald);
+        }
+        .compare-card h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+        .compare-card p {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        .compare-row {
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+            margin-top: 0.6rem;
+        }
+        .compare-key {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            white-space: nowrap;
+            min-width: 3.5rem;
+        }
+        .compare-val {
+            font-size: 0.8rem;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
         /* Patron core */
         .patron-core {
             background: var(--emerald-pale);
@@ -376,6 +431,7 @@
             .pt-hero h1 { font-size: 1.5rem; }
             .pp-section { padding: 3rem 1.2rem; }
             .impact-grid { grid-template-columns: 1fr; }
+            .compare-grid { grid-template-columns: 1fr; }
             .founder-section { flex-direction: column; }
             .pp-nav .nav-label { display: none; }
         }
@@ -424,6 +480,72 @@
         <h3>Supporting the mission becomes your own proof of existence.</h3>
         <p>Patronage is neither investment nor charity. Your name and intention are inscribed in the millennium archive as part of this mission. When the activity you supported endures for a thousand years, that itself becomes your proof of existence.</p>
     </div>
+</section>
+
+<!-- Comparison -->
+<section class="pp-section pp-section-border">
+    <h2 class="pp-section-title">Four ways to relate</h2>
+    <p class="pp-section-sub">Your relationship with TokiStorage can take many forms</p>
+
+    <div class="compare-grid">
+        <div class="compare-card">
+            <div class="compare-label">INVESTOR</div>
+            <h4>Bet on the business</h4>
+            <p>Evaluate TokiStorage as a venture and participate in its growth through equity.</p>
+            <div class="compare-row">
+                <span class="compare-key">Motive</span>
+                <span class="compare-val">Business growth &amp; financial return</span>
+            </div>
+            <div class="compare-row">
+                <span class="compare-key">Relation</span>
+                <span class="compare-val">Shareholder</span>
+            </div>
+        </div>
+
+        <div class="compare-card">
+            <div class="compare-label">PARTNER</div>
+            <h4>Co-create business opportunity</h4>
+            <p>Consulting firms and advisors who introduce TokiStorage to their own clients.</p>
+            <div class="compare-row">
+                <span class="compare-key">Motive</span>
+                <span class="compare-val">Business collaboration &amp; mutual value</span>
+            </div>
+            <div class="compare-row">
+                <span class="compare-key">Relation</span>
+                <span class="compare-val">Business alliance</span>
+            </div>
+        </div>
+
+        <div class="compare-card">
+            <div class="compare-label">CLIENT</div>
+            <h4>Entrust your own proof of existence</h4>
+            <p>Through Timeless Consulting, preserve your story or the memory of someone you love for a thousand years.</p>
+            <div class="compare-row">
+                <span class="compare-key">Motive</span>
+                <span class="compare-val">Personal or family legacy</span>
+            </div>
+            <div class="compare-row">
+                <span class="compare-key">Relation</span>
+                <span class="compare-val">Service user</span>
+            </div>
+        </div>
+
+        <div class="compare-card is-patron">
+            <div class="compare-label">PATRON</div>
+            <h4>Participate in the mission itself</h4>
+            <p>Support the work of delivering proof of existence to society. That support itself becomes your proof of existence.</p>
+            <div class="compare-row">
+                <span class="compare-key">Motive</span>
+                <span class="compare-val">Resonance with the mission</span>
+            </div>
+            <div class="compare-row">
+                <span class="compare-key">Relation</span>
+                <span class="compare-val">Mission participant</span>
+            </div>
+        </div>
+    </div>
+
+    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 1.5rem; line-height: 1.7;">These are not mutually exclusive. You can be a client and a patron. A partner and a patron. The roles overlap naturally.</p>
 </section>
 
 <!-- Vision -->
