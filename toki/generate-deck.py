@@ -211,7 +211,7 @@ def draw_model_item(slide, x, y, w, h, badge_text, badge_color, title, body, exa
     tw = w - Inches(1.3)
     add_textbox(slide, tx, y + Inches(0.08), tw, Inches(0.38),
                 title, font, 11, TEXT_PRIMARY, bold=True)
-    add_textbox(slide, tx, y + Inches(0.44), tw, Inches(0.34),
+    add_textbox(slide, tx, y + Inches(0.40), tw, Inches(0.34),
                 body, font, 10, TEXT_SECONDARY)
     add_textbox(slide, tx, y + Inches(0.8), tw, Inches(0.22),
                 example, font, 9, TOKI_BLUE)
@@ -715,12 +715,12 @@ def build_slide8(prs, d):
     tag_start_x = Inches(0.5)
     tag_x = tag_start_x
     tag_y = Inches(max(2.6, bio_y + bio_h_est + 0.35))
-    tag_h = Inches(0.34)
+    tag_h = Inches(0.38)
     for tag in s["tags"]:
         tw = Inches(len(tag) * 0.075 + 0.45)
         if tag_x + tw > Inches(9.3):
             tag_x = tag_start_x
-            tag_y += Inches(0.42)
+            tag_y += Inches(0.46)
         add_rect(slide, tag_x, tag_y, tw, tag_h, fill=BG_SECTION, border_color=BORDER)
         add_textbox(slide, tag_x + Inches(0.1), tag_y, tw - Inches(0.2), tag_h,
                     tag, font, 8, TEXT_SECONDARY, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
@@ -728,7 +728,7 @@ def build_slide8(prs, d):
 
     # ── Independence callout ─────────────────────────────
     cy = tag_y + Inches(0.55)
-    cx, cw, ch = Inches(0.5), Inches(8.6), Inches(0.88)
+    cx, cw, ch = Inches(0.5), Inches(8.6), Inches(1.0)
     add_rect(slide, cx, cy, cw, ch, fill=TOKI_BLUE_PALE)
     add_rect(slide, cx, cy, Inches(0.06), ch, fill=TOKI_BLUE)
     add_textbox(slide, cx + Inches(0.25), cy + Inches(0.1), cw - Inches(0.35), Inches(0.28),
