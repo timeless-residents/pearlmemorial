@@ -103,22 +103,23 @@
         /* ── Action title bar ── */
         .action-bar {
             background: var(--navy);
-            padding: 0.9rem 2rem;
+            padding: 0.6rem 2rem;
             flex-shrink: 0;
         }
         .action-bar h2 {
-            font-size: 0.9rem;
+            font-size: 0.82rem;
             font-weight: 600;
             color: #fff;
-            line-height: 1.5;
+            line-height: 1.4;
         }
 
         /* ── Slide body ── */
         .slide-body {
             flex: 1;
-            padding: 1.4rem 2rem 0.5rem;
+            padding: 1rem 2rem 0.3rem;
             display: flex;
             flex-direction: column;
+            overflow: hidden;
         }
         .slide-content { flex: 1; }
 
@@ -127,10 +128,11 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 2rem 0.6rem;
+            padding: 0 2rem 0.4rem;
             border-top: 1px solid var(--border);
             margin-top: auto;
-            padding-top: 0.4rem;
+            padding-top: 0.3rem;
+            flex-shrink: 0;
         }
         .slide-footer span {
             font-size: 0.55rem;
@@ -242,86 +244,86 @@
             letter-spacing: 0.2em;
             color: var(--accent);
             text-transform: uppercase;
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.5rem;
         }
         .body-lead {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: var(--text-mid);
-            line-height: 1.7;
-            margin-bottom: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 0.8rem;
         }
 
         /* ── 3-column cards ── */
         .cols3 {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
+            gap: 0.8rem;
         }
         .col-card {
             background: var(--bg-alt);
             border: 1px solid var(--border);
             border-radius: 4px;
-            padding: 1rem;
+            padding: 0.7rem 0.8rem;
         }
         .col-card-num {
-            font-size: 1.2rem;
+            font-size: 1rem;
             font-weight: 700;
             color: var(--accent);
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.2rem;
         }
         .col-card h4 {
-            font-size: 0.78rem;
+            font-size: 0.72rem;
             font-weight: 600;
             color: var(--text);
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.2rem;
         }
         .col-card p {
-            font-size: 0.68rem;
+            font-size: 0.62rem;
             color: var(--text-mid);
-            line-height: 1.55;
+            line-height: 1.5;
         }
 
         /* ── 2x2 grid ── */
         .grid2x2 {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 0.9rem;
+            gap: 0.7rem;
         }
         .grid-card {
             background: var(--bg-alt);
             border: 1px solid var(--border);
             border-radius: 4px;
-            padding: 0.9rem 1rem;
+            padding: 0.6rem 0.8rem;
             display: flex;
             align-items: flex-start;
-            gap: 0.7rem;
+            gap: 0.6rem;
         }
         .grid-card-icon {
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             flex-shrink: 0;
             line-height: 1;
             margin-top: 0.1rem;
         }
         .grid-card h4 {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 600;
             color: var(--text);
-            margin-bottom: 0.2rem;
+            margin-bottom: 0.15rem;
         }
         .grid-card p {
-            font-size: 0.65rem;
+            font-size: 0.6rem;
             color: var(--text-mid);
-            line-height: 1.5;
+            line-height: 1.45;
         }
 
         /* ── Table ── */
         .dk-table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 0.72rem;
+            font-size: 0.65rem;
         }
         .dk-table th, .dk-table td {
-            padding: 0.55rem 0.75rem;
+            padding: 0.35rem 0.6rem;
             text-align: left;
             border-bottom: 1px solid var(--border);
         }
@@ -329,7 +331,7 @@
             background: var(--navy);
             color: #fff;
             font-weight: 600;
-            font-size: 0.65rem;
+            font-size: 0.6rem;
             border-bottom: none;
         }
         .dk-table tbody th {
@@ -347,26 +349,26 @@
         .model-row {
             display: flex;
             flex-direction: column;
-            gap: 0.8rem;
+            gap: 0.5rem;
         }
         .model-item {
             display: flex;
             align-items: flex-start;
-            gap: 0.8rem;
+            gap: 0.6rem;
             background: var(--bg-alt);
             border: 1px solid var(--border);
             border-radius: 4px;
-            padding: 0.75rem 1rem;
+            padding: 0.5rem 0.8rem;
         }
         .model-badge {
             flex-shrink: 0;
-            width: 2.8rem;
-            height: 2.8rem;
+            width: 2.4rem;
+            height: 2.4rem;
             border-radius: 4px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 0.5rem;
+            font-size: 0.45rem;
             font-weight: 700;
             text-align: center;
             line-height: 1.2;
@@ -377,20 +379,20 @@
         .model-badge.b3 { background: var(--emerald); }
         .model-text { flex: 1; }
         .model-text h4 {
-            font-size: 0.73rem;
+            font-size: 0.68rem;
             font-weight: 600;
             color: var(--text);
-            margin-bottom: 0.15rem;
+            margin-bottom: 0.1rem;
         }
         .model-text p {
-            font-size: 0.63rem;
+            font-size: 0.58rem;
             color: var(--text-mid);
-            line-height: 1.5;
+            line-height: 1.4;
         }
         .model-text .ex {
-            font-size: 0.6rem;
+            font-size: 0.55rem;
             color: var(--accent);
-            margin-top: 0.2rem;
+            margin-top: 0.15rem;
         }
 
         /* ── Revenue flow ── */
@@ -399,24 +401,24 @@
             align-items: center;
             justify-content: center;
             gap: 0;
-            margin: 1.2rem 0;
+            margin: 0.8rem 0;
         }
         .flow-box {
             text-align: center;
-            padding: 1rem 1.5rem;
+            padding: 0.7rem 1.2rem;
             border-radius: 4px;
             border: 1px solid var(--border);
-            min-width: 180px;
+            min-width: 160px;
         }
         .flow-box h4 {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 600;
-            margin-bottom: 0.2rem;
+            margin-bottom: 0.15rem;
         }
         .flow-box p {
-            font-size: 0.6rem;
+            font-size: 0.55rem;
             color: var(--text-mid);
-            line-height: 1.4;
+            line-height: 1.35;
         }
         .flow-box.fc { background: #ECFDF5; }
         .flow-box.fc h4 { color: var(--emerald); }
@@ -435,86 +437,86 @@
             background: var(--accent-pale);
             border-left: 3px solid var(--accent);
             border-radius: 0 4px 4px 0;
-            padding: 0.7rem 1rem;
-            margin-top: 0.9rem;
+            padding: 0.5rem 0.8rem;
+            margin-top: 0.6rem;
         }
         .callout h4 {
-            font-size: 0.7rem;
+            font-size: 0.63rem;
             font-weight: 600;
             color: var(--text);
-            margin-bottom: 0.2rem;
+            margin-bottom: 0.15rem;
         }
         .callout p {
-            font-size: 0.63rem;
+            font-size: 0.58rem;
             color: var(--text-mid);
-            line-height: 1.5;
+            line-height: 1.4;
         }
 
         /* ── Sector grid ── */
         .sector-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 0.8rem;
+            gap: 0.6rem;
         }
         .sector-card {
             background: var(--bg-alt);
             border: 1px solid var(--border);
             border-radius: 4px;
-            padding: 0.7rem 0.8rem;
+            padding: 0.5rem 0.6rem;
             text-align: center;
         }
-        .sector-icon { font-size: 1.3rem; margin-bottom: 0.3rem; }
+        .sector-icon { font-size: 1.1rem; margin-bottom: 0.2rem; }
         .sector-card h4 {
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             font-weight: 600;
             color: var(--text);
-            margin-bottom: 0.15rem;
+            margin-bottom: 0.1rem;
         }
         .sector-card p {
-            font-size: 0.58rem;
+            font-size: 0.53rem;
             color: var(--text-mid);
-            line-height: 1.4;
+            line-height: 1.35;
         }
 
         /* ── Founder ── */
         .founder-row {
             display: flex;
             align-items: flex-start;
-            gap: 1.2rem;
+            gap: 0.8rem;
         }
         .founder-avatar {
             flex-shrink: 0;
-            width: 3.2rem;
-            height: 3.2rem;
+            width: 2.6rem;
+            height: 2.6rem;
             border-radius: 50%;
             background: var(--navy);
             color: #fff;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1rem;
+            font-size: 0.85rem;
             font-weight: 700;
         }
         .founder-info h4 {
-            font-size: 0.78rem;
+            font-size: 0.7rem;
             font-weight: 600;
             color: var(--text);
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.2rem;
         }
         .founder-info p {
-            font-size: 0.63rem;
+            font-size: 0.56rem;
             color: var(--text-mid);
-            line-height: 1.6;
+            line-height: 1.5;
         }
         .tag-row {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.3rem;
-            margin-top: 0.5rem;
+            gap: 0.25rem;
+            margin-top: 0.35rem;
         }
         .tag-pill {
-            font-size: 0.55rem;
-            padding: 0.15rem 0.5rem;
+            font-size: 0.5rem;
+            padding: 0.1rem 0.4rem;
             background: var(--bg-alt);
             border: 1px solid var(--border);
             border-radius: 3px;
@@ -910,7 +912,7 @@
                 </div>
             </div>
 
-            <div class="callout" style="margin-top: 0.9rem;">
+            <div class="callout" style="margin-top: 0.6rem;">
                 <h4>A note on independence</h4>
                 <p>This is a vendor partnership &mdash; structurally identical to recommending Salesforce or SAP. No audit engagement, no equity relationship, no independence concerns. Designed with full awareness of firm compliance requirements.</p>
             </div>
