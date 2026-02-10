@@ -550,7 +550,7 @@
             color: var(--text-mid);
         }
 
-        /* ── Responsive ── */
+        /* ── Responsive: always maintain 16:9 ── */
         @media (max-width: 1000px) {
             .slide {
                 width: 100%;
@@ -561,19 +561,50 @@
             }
             .slide.cover, .slide.cta-slide { aspect-ratio: 16 / 9; }
             body { background: #fff; }
-        }
-        @media (max-width: 640px) {
-            .slide { aspect-ratio: auto; height: auto; min-height: 320px; }
-            .cols3 { grid-template-columns: 1fr; }
-            .grid2x2 { grid-template-columns: 1fr; }
-            .sector-grid { grid-template-columns: 1fr 1fr; }
-            .flow-row { flex-direction: column; gap: 0.4rem; }
-            .flow-arrow { transform: rotate(90deg); }
-            .model-item { flex-direction: column; gap: 0.5rem; }
-            .model-badge { width: auto; height: auto; padding: 0.3rem 0.8rem; }
-            .founder-row { flex-direction: column; }
-            .action-bar h2 { font-size: 0.8rem; }
+            .action-bar { padding: 0.6rem 1.2rem; }
+            .action-bar h2 { font-size: 0.75rem; }
+            .slide-body { padding: 0.8rem 1.2rem 0.3rem; }
+            .slide-footer { padding: 0 1.2rem 0.4rem; }
+            .section-label { margin-bottom: 0.4rem; }
+            .cols3 { gap: 0.5rem; }
+            .col-card { padding: 0.6rem; }
+            .col-card-num { font-size: 0.9rem; }
+            .col-card h4 { font-size: 0.65rem; }
+            .col-card p { font-size: 0.55rem; }
+            .grid2x2 { gap: 0.5rem; }
+            .grid-card { padding: 0.5rem 0.6rem; gap: 0.4rem; }
+            .grid-card-icon { font-size: 1rem; }
+            .grid-card h4 { font-size: 0.62rem; }
+            .grid-card p { font-size: 0.52rem; }
+            .dk-table { font-size: 0.58rem; }
+            .dk-table th, .dk-table td { padding: 0.35rem 0.5rem; }
+            .model-item { padding: 0.5rem 0.6rem; gap: 0.5rem; }
+            .model-badge { width: 2.2rem; height: 2.2rem; font-size: 0.4rem; }
+            .model-text h4 { font-size: 0.6rem; }
+            .model-text p, .model-text .ex { font-size: 0.5rem; }
+            .flow-box { padding: 0.6rem 0.8rem; min-width: 120px; }
+            .flow-box h4 { font-size: 0.6rem; }
+            .flow-box p { font-size: 0.48rem; }
+            .callout { padding: 0.5rem 0.7rem; }
+            .callout h4 { font-size: 0.58rem; }
+            .callout p { font-size: 0.5rem; }
+            .sector-card { padding: 0.4rem 0.5rem; }
+            .sector-icon { font-size: 1rem; margin-bottom: 0.15rem; }
+            .sector-card h4 { font-size: 0.58rem; }
+            .sector-card p { font-size: 0.46rem; }
+            .body-lead { font-size: 0.6rem; margin-bottom: 0.6rem; }
+            .founder-avatar { width: 2.4rem; height: 2.4rem; font-size: 0.8rem; }
+            .founder-info h4 { font-size: 0.65rem; }
+            .founder-info p { font-size: 0.5rem; }
+            .tag-pill { font-size: 0.45rem; }
             .toolbar-brand { font-size: 0.6rem; }
+            .cover-body { padding: 1.5rem 2rem; }
+            .cover-title { font-size: 1.3rem; }
+            .cover-sub { font-size: 0.65rem; }
+            .cover-label { font-size: 0.45rem; margin-bottom: 0.8rem; }
+            .cta-body h3 { font-size: 1rem; }
+            .cta-body p { font-size: 0.6rem; }
+            .cta-links a { font-size: 0.55rem; padding: 0.3rem 0.7rem; }
         }
 
         /* ── Print / PDF ── */
@@ -583,6 +614,7 @@
             .slide {
                 width: 100%;
                 height: 100vh;
+                aspect-ratio: 16 / 9;
                 margin: 0;
                 box-shadow: none;
                 page-break-after: always;
@@ -601,14 +633,14 @@
                 -webkit-print-color-adjust: exact;
                 print-color-adjust: exact;
             }
-            .dk-table thead th {
+            .dk-table thead th, .dk-table tbody th {
                 -webkit-print-color-adjust: exact;
                 print-color-adjust: exact;
             }
         }
 
         @page {
-            size: 254mm 143mm;
+            size: landscape;
             margin: 0;
         }
     </style>
