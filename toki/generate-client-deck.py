@@ -295,6 +295,7 @@ CONTENT = {
             "bio": "大手コンサルティングファームでの経験を経て、半導体製造装置のエンジニアリング20年超。タイムレスタウン新浦安（250世帯）の自治会長として「ゆりかごから墓場まで」のコミュニティ運営を経験。SoulCarrier活動で「記憶が消える恐怖」を目の当たりにし、TokiStorageを着想。マウイ・山中湖でのオフグリッド実証を経て、制度に依存しない千年設計の技術を完成。70以上の思想エッセイを執筆し、9つの知的領域から存在証明の意味を探究し続けている。",
             "tags": ["元Big4ファーム", "半導体エンジニアリング 20年+", "自治会長（250世帯）",
                      "SoulCarrier主宰", "70+思想エッセイ執筆", "オフグリッド実証済み", "佐渡島移住予定（2026春）"],
+            "story": "無縁墓の調査で、何百もの墓石を一つずつ読みました。名前も、生きた証も、風化して消えていく。ご遺族の骨を届けた時、「もう誰も覚えていない」という言葉に胸が詰まりました。記憶は消えるのです——放っておけば。だから千年残る仕組みを作ると決めました。",
             "footer": "Timeless Consulting",
         },
         "s8": {
@@ -403,6 +404,7 @@ CONTENT = {
             "bio": "Former Big Four consultant \u2014 understands executive dialogue and strategic thinking from the inside. 20+ years in semiconductor manufacturing engineering. Former president of Timeless Town Shin-Urayasu residents' association (250 households). Through SoulCarrier's work with unclaimed graves, witnessed firsthand how memories vanish \u2014 and conceived TokiStorage. Validated off-grid, institution-free 1,000-year design through testing in Maui and Lake Yamanakako. Author of 70+ philosophical essays exploring proof of existence across 9 intellectual domains.",
             "tags": ["Big Four Alumni", "Semiconductor engineering 20+ yrs", "Community president (250 households)",
                      "SoulCarrier founder", "70+ philosophical essays", "Off-grid validated", "Relocating to Sado Island (Spring 2026)"],
+            "story": "I read hundreds of gravestones one by one, searching for unclaimed remains. Names weathered away. Lives erased. When I finally delivered a family's bones home, they said: \"No one remembers her anymore.\" Those words broke something in me. Memories vanish if you let them. That's when I decided to build something that lasts a thousand years.",
             "footer": "Timeless Consulting",
         },
         "s8": {
@@ -511,15 +513,15 @@ def build_slide4(prs, d):
     add_action_bar(slide, s["bar"], font)
     add_section_label(slide, s["label"], font, Inches(0.8))
     step_w = Inches(8.6)
-    step_h = Inches(0.88)
-    gap = Inches(0.08)
+    step_h = Inches(0.96)
+    gap = Inches(0.06)
     start_y = Inches(1.15)
     x = Inches(0.5)
     for i, (num, title, desc) in enumerate(s["steps"]):
         y = start_y + i * (step_h + gap)
         add_rect(slide, x, y, step_w, step_h, fill=WHITE, border_color=BORDER)
         # Number circle
-        cx, cy = x + Inches(0.18), y + Inches(0.18)
+        cx, cy = x + Inches(0.18), y + Inches(0.2)
         circ = slide.shapes.add_shape(MSO_SHAPE.OVAL, cx, cy, Inches(0.5), Inches(0.5))
         circ.fill.solid()
         circ.fill.fore_color.rgb = TOKI_BLUE
@@ -527,10 +529,10 @@ def build_slide4(prs, d):
         add_textbox(slide, cx, cy, Inches(0.5), Inches(0.5),
                     num, font, 12, WHITE, bold=True, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
         # Title
-        add_textbox(slide, x + Inches(0.85), y + Inches(0.08), step_w - Inches(1.0), Inches(0.32),
+        add_textbox(slide, x + Inches(0.85), y + Inches(0.08), step_w - Inches(1.0), Inches(0.3),
                     title, font, 12, TEXT_PRIMARY, bold=True)
         # Description
-        add_textbox(slide, x + Inches(0.85), y + Inches(0.42), step_w - Inches(1.0), Inches(0.42),
+        add_textbox(slide, x + Inches(0.85), y + Inches(0.36), step_w - Inches(1.0), Inches(0.52),
                     desc, font, 10, TEXT_SECONDARY)
     add_footer(slide, s["footer"], 4, font)
 
@@ -583,6 +585,10 @@ def build_slide7(prs, d):
     add_action_bar(slide, s["bar"], font)
     add_section_label(slide, s["label"], font, Inches(0.8))
 
+    # Compact mode for EN with story (bio is longer, needs space savings)
+    has_story = "story" in s
+    compact = (font == FONT_EN and has_story)
+
     # Photo (circular, 1.0")
     ax, ay, asize = Inches(0.5), Inches(1.12), Inches(1.0)
     photo_path = os.path.join(OUT_DIR, "asset", "IMG_4310-2.jpeg")
@@ -599,28 +605,45 @@ def build_slide7(prs, d):
     name_x = Inches(1.65)
     add_textbox(slide, name_x, Inches(1.18), Inches(7.3), Inches(0.35),
                 s["name"], font, 13, TEXT_PRIMARY, bold=True)
-    # Bio
+    # Bio — 9pt in compact mode to save vertical space
     bio_y = 1.58
+    bio_size = 9 if compact else 10
     add_textbox(slide, name_x, Inches(bio_y), Inches(7.3), Inches(1.2),
-                s["bio"], font, 10, TEXT_SECONDARY)
+                s["bio"], font, bio_size, TEXT_SECONDARY)
 
     # Tags (dynamic positioning)
-    cpl = 48 if font == FONT_JP else 85
+    cpl = 48 if font == FONT_JP else (95 if compact else 85)
     bio_lines = (len(s["bio"]) + cpl - 1) // cpl
-    bio_h_est = bio_lines * 0.19
+    bio_h_est = bio_lines * (0.17 if compact else 0.19)
     tag_start_x = Inches(0.5)
     tag_x = tag_start_x
-    tag_y = Inches(max(2.6, bio_y + bio_h_est + 0.35))
-    tag_h = Inches(0.44)
+    tag_y = Inches(max(2.6, bio_y + bio_h_est + 0.30))
+    tag_h = Inches(0.38 if compact else 0.44)
+    tag_row_gap = Inches(0.42 if compact else 0.52)
     for tag in s["tags"]:
         tw = Inches(len(tag) * 0.075 + 0.45)
         if tag_x + tw > Inches(9.3):
             tag_x = tag_start_x
-            tag_y += Inches(0.52)
+            tag_y += tag_row_gap
         add_rect(slide, tag_x, tag_y, tw, tag_h, fill=BG_SECTION, border_color=BORDER)
         add_textbox(slide, tag_x + Inches(0.1), tag_y, tw - Inches(0.2), tag_h,
                     tag, font, 8, TEXT_SECONDARY, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
         tag_x += tw + Inches(0.12)
+
+    # Story callout (emotional origin) — dynamically sized to fit
+    if has_story:
+        footer_y = SLIDE_H - Inches(0.38)
+        sy = tag_y + Inches(0.48)
+        available = footer_y - sy - Inches(0.1)
+        sh = min(Inches(0.85), available)
+        if sh >= Inches(0.45):
+            story_font = 9 if sh >= Inches(0.65) else 8
+            sx, sw = Inches(0.5), Inches(8.6)
+            add_rect(slide, sx, sy, sw, sh, fill=TOKI_BLUE_PALE)
+            add_rect(slide, sx, sy, Inches(0.06), sh, fill=GOLD)
+            add_textbox(slide, sx + Inches(0.25), sy + Inches(0.08), sw - Inches(0.35), sh - Inches(0.16),
+                        s["story"], font, story_font, TEXT_PRIMARY, bold=False)
+
     add_footer(slide, s["footer"], 7, font)
 
 
