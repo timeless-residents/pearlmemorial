@@ -10,7 +10,25 @@ from pptx.util import Inches, Pt, Emu
 from pptx.dml.color import RGBColor
 from pptx.enum.text import PP_ALIGN, MSO_ANCHOR
 from pptx.enum.shapes import MSO_SHAPE
-import subprocess, os, sys, re, zipfile, io
+import subprocess, os, sys, re, zipfile, io, tempfile
+
+# ── Circular photo helper ─────────────────────────────────────────────
+
+def _prepare_circular_photo(src_path, size=300):
+    """Crop photo to circle with transparent background. Returns temp PNG path."""
+    from PIL import Image, ImageDraw
+    img = Image.open(src_path).convert("RGBA")
+    w, h = img.size
+    s = min(w, h)
+    left, top = (w - s) // 2, (h - s) // 2
+    img = img.crop((left, top, left + s, top + s)).resize((size, size), Image.LANCZOS)
+    mask = Image.new("L", (size, size), 0)
+    ImageDraw.Draw(mask).ellipse((0, 0, size, size), fill=255)
+    result = Image.new("RGBA", (size, size), (0, 0, 0, 0))
+    result.paste(img, mask=mask)
+    tmp = os.path.join(tempfile.gettempdir(), "_deck_profile.png")
+    result.save(tmp, "PNG")
+    return tmp
 
 # ── Design tokens (matched to index.css :root) ────────────────────────
 TOKI_BLUE     = RGBColor(0x25, 0x63, 0xEB)  # --toki-blue
@@ -255,15 +273,15 @@ CONTENT = {
             "product": "TokiStorage",
         },
         "s2": {
-            "bar": "既存のデジタルサービスは「今」に最適化されており、千年スケールの保存レイヤーが構造的に不在である",
+            "bar": "AIとビッグテックの台頭は、コンサルティングファームに「コモディティ化しない問い」の獲得を迫っている",
             "label": "Background",
             "cards": [
-                ("01", "デジタルは「今」に最適化",
-                 "クラウドやSNSは日常の記録に極めて優秀。しかし100年・1000年スケールは設計対象外。時間軸が違えば、必要な設計も違う。"),
-                ("02", "「墓じまい」が社会課題に",
-                 "無縁墓は年間数万基。2040年には単身世帯が4割超。「誰が記憶を残すのか」は個人の問題から社会の問題へ移行。"),
-                ("03", "千年レイヤーが不在",
-                 "デジタル遺品整理、AI故人再現——市場は急成長。しかし全て既存インフラ上。補完する千年レイヤーが求められている。"),
+                ("01", "AIがコンサルティングを変える",
+                 "生成AIにより、調査・分析・戦略フレームワーク作成は急速にコモディティ化。知識の非対称性に依存した価値提供モデルは構造的転換期にある。"),
+                ("02", "差別化の源泉が縮小",
+                 "業界分析、ベンチマーク、DX——どのファームも同じツールで同じ提案に収束しがち。「何を提案するか」ではなく「どんな問いを立てるか」が差別化の核になる。"),
+                ("03", "「千年の問い」という機会",
+                 "「100年後に何を残すか」——AIが生成できない問い。クライアントの本質的ニーズに触れ、構造的にコモディティ化しない提案の起点になる。"),
             ],
             "footer": "TokiStorage \u2014 協業提案",
         },
@@ -354,8 +372,20 @@ CONTENT = {
         },
         "s9": {
             "bar": "Next Step",
-            "title": "まずは30分、お話ししませんか。",
-            "sub": "提携の形は柔軟に設計できます。\n貴社クライアントの具体的な課題から逆算して、\n一緒に最適なモデルを見つけましょう。",
+            "title": "ご検討のステップ",
+            "steps": [
+                ("01", "初回ミーティング（30分）", "貴社クライアントの課題感・ポートフォリオを共有"),
+                ("02", "ユースケース選定", "貴社クライアントとの親和性が高い領域を整理"),
+                ("03", "提携モデル設計", "最適なモデルの選択・条件・スコープの整理"),
+                ("04", "パイロット実施", "1〜2件のクライアントで実証・フィードバック"),
+            ],
+            "contact": "Universal Need株式会社　代表取締役　佐藤卓也",
+            "footer_left": "Universal Need株式会社 \u2014 TokiStorage",
+        },
+        "s10": {
+            "title": "Confidential / Disclaimer",
+            "body": "本資料は、Universal Need株式会社（以下「当社」）がパートナーシップのご検討のために作成した機密資料です。\n\n本資料に含まれる情報は、当社の現時点における見解および計画に基づくものであり、その正確性、完全性、または将来の結果を保証するものではありません。\n\n本資料は情報提供を目的としており、法的助言、投資助言、その他いかなる専門的助言を構成するものでもありません。\n\n本資料の全部または一部を、当社の事前の書面による同意なく、第三者に開示、複製、または配布することを禁じます。",
+            "copyright": "\u00a9 2026 Universal Need株式会社. All rights reserved.",
             "footer_left": "Universal Need株式会社 \u2014 TokiStorage",
         },
     },
@@ -370,15 +400,15 @@ CONTENT = {
             "product": "TokiStorage",
         },
         "s2": {
-            "bar": "Existing digital services are optimized for \"now\" \u2014 the millennium preservation layer is structurally absent",
+            "bar": "The rise of AI and Big Tech demands consulting firms find questions that resist commoditization",
             "label": "Background",
             "cards": [
-                ("01", "Digital is optimized for \"now\"",
-                 "Cloud and social platforms excel at everyday recording. But 100- or 1,000-year preservation is outside their design scope. Different time horizons need different architectures."),
-                ("02", "End-of-life is now societal",
-                 "Tens of thousands of graves go unclaimed yearly. By 2040, single-person households will exceed 40%. \"Who preserves memory?\" is now a social question."),
-                ("03", "The millennium layer is missing",
-                 "Digital estate management, AI recreations \u2014 the market is booming. Yet every solution runs on existing infrastructure. A complementary millennium layer is needed."),
+                ("01", "AI is transforming consulting",
+                 "Generative AI is rapidly commoditizing research, analysis, and strategy frameworks. Value models built on information asymmetry face structural disruption."),
+                ("02", "Differentiation is shrinking",
+                 "Industry analysis, benchmarks, digital transformation\u2014every firm converges on similar proposals with similar tools. The differentiator is shifting from what to propose to what questions to ask."),
+                ("03", "The millennium question",
+                 "\"What will you preserve for 1,000 years?\"\u2014a question AI cannot generate. It touches clients' fundamental needs and creates proposals structurally immune to commoditization."),
             ],
             "footer": "TokiStorage \u2014 Partnership Proposal",
         },
@@ -469,8 +499,20 @@ CONTENT = {
         },
         "s9": {
             "bar": "Next Step",
-            "title": "Let's start with a\n30-minute conversation.",
-            "sub": "Partnership structure is flexible by design.\nLet's reverse-engineer the right model\nfrom your clients' actual challenges.",
+            "title": "Proposed Timeline",
+            "steps": [
+                ("01", "Initial Meeting (30 min)", "Share your client landscape and current challenges"),
+                ("02", "Use Case Selection", "Identify high-affinity sectors from your portfolio"),
+                ("03", "Partnership Design", "Select model, define scope and terms"),
+                ("04", "Pilot Engagement", "Prove value with 1\u20132 client engagements"),
+            ],
+            "contact": "Takuya Sato \u2014 CEO, Universal Need Inc.",
+            "footer_left": "Universal Need Inc. \u2014 TokiStorage",
+        },
+        "s10": {
+            "title": "Confidential / Disclaimer",
+            "body": "This document has been prepared by Universal Need Inc. (the \"Company\") solely for the purpose of evaluating a potential partnership.\n\nThe information contained herein reflects the Company's current views and plans and does not constitute a guarantee of accuracy, completeness, or future outcomes.\n\nThis document is provided for informational purposes only and does not constitute legal, investment, or other professional advice.\n\nNo part of this document may be disclosed, reproduced, or distributed to any third party without the prior written consent of the Company.",
+            "copyright": "\u00a9 2026 Universal Need Inc. All rights reserved.",
             "footer_left": "Universal Need Inc. \u2014 TokiStorage",
         },
     },
@@ -641,37 +683,36 @@ def build_slide8(prs, d):
     s = d["s8"]
     add_action_bar(slide, s["bar"], font)
     add_section_label(slide, s["label"], font, Inches(0.8))
-    # Avatar circle
-    ax, ay = Inches(0.5), Inches(1.15)
-    avatar = slide.shapes.add_shape(MSO_SHAPE.OVAL, ax, ay, Inches(0.7), Inches(0.7))
-    avatar.fill.solid()
-    avatar.fill.fore_color.rgb = DARK_BG
-    avatar.line.fill.background()
-    initials = "佐" if d is CONTENT["ja"] else "TS"
-    add_textbox(slide, ax, ay, Inches(0.7), Inches(0.7),
-                initials, font, 15, WHITE, bold=True, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
-    add_textbox(slide, Inches(1.35), Inches(1.15), Inches(7), Inches(0.32),
+    # Profile photo (circular) or fallback initials
+    ax, ay, asize = Inches(0.5), Inches(1.15), Inches(0.8)
+    photo_path = os.path.join(OUT_DIR, "asset", "IMG_4310-2.jpeg")
+    if os.path.exists(photo_path):
+        try:
+            circ_path = _prepare_circular_photo(photo_path)
+            slide.shapes.add_picture(circ_path, ax, ay, asize, asize)
+        except Exception:
+            _draw_avatar_fallback(slide, ax, ay, asize, d, font)
+    else:
+        _draw_avatar_fallback(slide, ax, ay, asize, d, font)
+    add_textbox(slide, Inches(1.45), Inches(1.15), Inches(7), Inches(0.35),
                 s["name"], font, 12, TEXT_PRIMARY, bold=True)
-    add_textbox(slide, Inches(1.35), Inches(1.48), Inches(7.5), Inches(1.0),
+    add_textbox(slide, Inches(1.45), Inches(1.52), Inches(7.5), Inches(0.95),
                 s["bio"], font, 10, TEXT_SECONDARY)
-    # Tags
-    tag_x = Inches(1.35)
+    # Tags (with comfortable inner padding)
+    tag_x = Inches(1.45)
     tag_y = Inches(2.5)
     for tag in s["tags"]:
-        tw = Inches(len(tag) * 0.075 + 0.25)
-        # Wrap to next row if tag would extend past right margin
+        tw = Inches(len(tag) * 0.075 + 0.4)
         if tag_x + tw > Inches(9.3):
-            tag_x = Inches(1.35)
-            tag_y += Inches(0.32)
-        add_rect(slide, tag_x, tag_y, tw, Inches(0.26), fill=BG_SECTION, border_color=BORDER)
-        add_textbox(slide, tag_x + Inches(0.05), tag_y, tw - Inches(0.1), Inches(0.26),
+            tag_x = Inches(1.45)
+            tag_y += Inches(0.35)
+        add_rect(slide, tag_x, tag_y, tw, Inches(0.3), fill=BG_SECTION, border_color=BORDER)
+        add_textbox(slide, tag_x + Inches(0.1), tag_y, tw - Inches(0.2), Inches(0.3),
                     tag, font, 7.5, TEXT_SECONDARY, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
-        tag_x += tw + Inches(0.08)
-    # Independence callout (left accent stripe only, no outer border)
-    cy = tag_y + Inches(0.42)
-    cw = Inches(8.6)
-    ch = SLIDE_H - Inches(0.38) - cy - Inches(0.1)  # fill to footer
-    cx = Inches(0.5)
+        tag_x += tw + Inches(0.1)
+    # Independence callout (left accent stripe, fixed height)
+    cy = tag_y + Inches(0.48)
+    cx, cw, ch = Inches(0.5), Inches(8.6), Inches(0.85)
     add_rect(slide, cx, cy, cw, ch, fill=TOKI_BLUE_PALE)
     add_rect(slide, cx, cy, Inches(0.06), ch, fill=TOKI_BLUE)
     add_textbox(slide, cx + Inches(0.25), cy + Inches(0.08), cw - Inches(0.35), Inches(0.26),
@@ -681,18 +722,48 @@ def build_slide8(prs, d):
     add_footer(slide, s["footer"], 8, font)
 
 
+def _draw_avatar_fallback(slide, ax, ay, asize, d, font):
+    avatar = slide.shapes.add_shape(MSO_SHAPE.OVAL, ax, ay, asize, asize)
+    avatar.fill.solid()
+    avatar.fill.fore_color.rgb = DARK_BG
+    avatar.line.fill.background()
+    initials = "佐" if d is CONTENT["ja"] else "TS"
+    add_textbox(slide, ax, ay, asize, asize,
+                initials, font, 16, WHITE, bold=True, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
+
+
 def build_slide9(prs, d):
-    """CTA slide"""
+    """Next Steps — structured"""
     slide = add_blank_slide(prs)
     font = d["font"]
     s = d["s9"]
     add_rect(slide, 0, 0, SLIDE_W, SLIDE_H, fill=DARK_BG)
     add_textbox(slide, Inches(0.5), Inches(0.15), Inches(4), Inches(0.45),
                 s["bar"], font, 13, WHITE, bold=True)
-    add_textbox(slide, Inches(1), Inches(1.3), Inches(8), Inches(1.2),
-                s["title"], font, 26, WHITE, bold=True, align=PP_ALIGN.CENTER)
-    add_textbox(slide, Inches(1.5), Inches(2.8), Inches(7), Inches(1.2),
-                s["sub"], font, 13, RGBColor(0xBB, 0xBB, 0xCC), align=PP_ALIGN.CENTER)
+    add_textbox(slide, Inches(0.5), Inches(0.85), Inches(8), Inches(0.5),
+                s["title"], font, 20, WHITE, bold=True)
+    # 4 numbered steps
+    step_y = Inches(1.6)
+    step_h = Inches(0.62)
+    step_gap = Inches(0.1)
+    for i, (num, title, desc) in enumerate(s["steps"]):
+        y = step_y + i * (step_h + step_gap)
+        circ = slide.shapes.add_shape(MSO_SHAPE.OVAL,
+                                       Inches(0.8), y + Inches(0.1),
+                                       Inches(0.42), Inches(0.42))
+        circ.fill.solid()
+        circ.fill.fore_color.rgb = TOKI_BLUE
+        circ.line.fill.background()
+        add_textbox(slide, Inches(0.8), y + Inches(0.1), Inches(0.42), Inches(0.42),
+                    num, font, 10, WHITE, bold=True,
+                    align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
+        add_textbox(slide, Inches(1.4), y + Inches(0.06), Inches(4), Inches(0.3),
+                    title, font, 12, WHITE, bold=True)
+        add_textbox(slide, Inches(1.4), y + Inches(0.34), Inches(7), Inches(0.26),
+                    desc, font, 10, RGBColor(0xBB, 0xBB, 0xCC))
+    # Contact
+    add_textbox(slide, Inches(0.8), SLIDE_H - Inches(1.0), Inches(8), Inches(0.3),
+                s["contact"], font, 10, TEXT_MUTED)
     # Footer
     stripe_y = SLIDE_H - Inches(0.55)
     add_rect(slide, 0, stripe_y - Inches(0.03), SLIDE_W, Pt(0.5), fill=RGBColor(0x33, 0x44, 0x55))
@@ -702,6 +773,22 @@ def build_slide9(prs, d):
                 "Confidential", font, 9, TEXT_MUTED, align=PP_ALIGN.CENTER)
     add_textbox(slide, SLIDE_W - Inches(1), stripe_y, Inches(0.5), Inches(0.35),
                 "9", font, 9, TEXT_MUTED, bold=True, align=PP_ALIGN.RIGHT)
+
+
+def build_slide10(prs, d):
+    """Disclaimer"""
+    slide = add_blank_slide(prs)
+    font = d["font"]
+    s = d["s10"]
+    add_rect(slide, 0, 0, SLIDE_W, SLIDE_H, fill=BG_PAGE)
+    add_textbox(slide, Inches(1), Inches(1.0), Inches(8), Inches(0.45),
+                s["title"], font, 14, TEXT_MUTED, bold=True)
+    add_rect(slide, Inches(1), Inches(1.5), Inches(8), Pt(0.5), fill=BORDER)
+    add_textbox(slide, Inches(1), Inches(1.7), Inches(8), Inches(2.8),
+                s["body"], font, 9, TEXT_SECONDARY)
+    add_textbox(slide, Inches(1), SLIDE_H - Inches(1.2), Inches(8), Inches(0.3),
+                s["copyright"], font, 8, TEXT_MUTED)
+    add_footer(slide, s["footer_left"], 10, font)
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -720,6 +807,7 @@ def generate(lang):
     build_slide7(prs, d)
     build_slide8(prs, d)
     build_slide9(prs, d)
+    build_slide10(prs, d)
 
     pptx_path = os.path.join(OUT_DIR, f"{d['filename']}.pptx")
     prs.save(pptx_path)
