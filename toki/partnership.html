@@ -451,7 +451,8 @@
             .revenue-arrow { transform: rotate(90deg); }
             .founder-section { flex-direction: column; }
             .pp-nav .nav-label { display: none; }
-            .diff-table { font-size: 0.75rem; }
+            .diff-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+            .diff-table { font-size: 0.75rem; min-width: 480px; }
             .diff-table th, .diff-table td { padding: 0.5rem; }
         }
 
@@ -535,6 +536,7 @@
     <h2 class="pp-section-title">なぜ「組む」価値があるのか</h2>
     <p class="pp-section-sub">既存デジタルサービスを補完する「千年レイヤー」という位置づけ</p>
 
+    <div class="diff-table-wrap">
     <table class="diff-table">
         <thead>
             <tr>
@@ -576,6 +578,7 @@
             </tr>
         </tbody>
     </table>
+    </div>
 </section>
 
 <!-- Partnership Models -->

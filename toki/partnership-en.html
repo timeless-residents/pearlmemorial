@@ -422,7 +422,8 @@
             .revenue-arrow { transform: rotate(90deg); }
             .founder-section { flex-direction: column; }
             .pp-nav .nav-label { display: none; }
-            .diff-table { font-size: 0.75rem; }
+            .diff-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+            .diff-table { font-size: 0.75rem; min-width: 480px; }
             .diff-table th, .diff-table td { padding: 0.5rem; }
         }
 
@@ -506,6 +507,7 @@
     <h2 class="pp-section-title">Why partner with us</h2>
     <p class="pp-section-sub">A complementary "millennium layer" for today's digital services</p>
 
+    <div class="diff-table-wrap">
     <table class="diff-table">
         <thead>
             <tr>
@@ -547,6 +549,7 @@
             </tr>
         </tbody>
     </table>
+    </div>
 </section>
 
 <!-- Partnership Models -->
