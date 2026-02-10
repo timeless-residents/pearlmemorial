@@ -103,26 +103,35 @@
         /* ── Action title bar ── */
         .action-bar {
             background: var(--navy);
-            padding: 0.6rem 2rem;
+            padding: 0.5rem 2rem;
             flex-shrink: 0;
+            max-height: 52px;
+            overflow: hidden;
         }
         .action-bar h2 {
-            font-size: 0.82rem;
+            font-size: 0.78rem;
             font-weight: 600;
             color: #fff;
-            line-height: 1.4;
+            line-height: 1.35;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
 
         /* ── Slide body ── */
         .slide-body {
-            flex: 1;
-            padding: 1rem 2rem 0.3rem;
+            flex: 1 1 0%;
+            min-height: 0;
+            padding: 0.8rem 2rem 0.25rem;
             display: flex;
             flex-direction: column;
             overflow: hidden;
         }
         .slide-content {
-            flex: 1;
+            flex: 1 1 0%;
+            min-height: 0;
+            overflow: hidden;
         }
 
         /* ── Slide footer ── */
@@ -130,14 +139,14 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 2rem 0.4rem;
+            padding: 0 2rem 0.35rem;
             border-top: 1px solid var(--border);
             margin-top: auto;
-            padding-top: 0.3rem;
+            padding-top: 0.25rem;
             flex-shrink: 0;
         }
         .slide-footer span {
-            font-size: 0.55rem;
+            font-size: 0.5rem;
             color: var(--text-light);
             letter-spacing: 0.03em;
         }
@@ -252,91 +261,99 @@
 
         /* ── Typography helpers ── */
         .section-label {
-            font-size: 0.55rem;
+            font-size: 0.5rem;
             font-weight: 700;
             letter-spacing: 0.2em;
             color: var(--accent);
             text-transform: uppercase;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.35rem;
+            flex-shrink: 0;
         }
         .body-lead {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             color: var(--text-mid);
-            line-height: 1.6;
-            margin-bottom: 0.8rem;
+            line-height: 1.5;
+            margin-bottom: 0.6rem;
+            flex-shrink: 0;
         }
 
         /* ── 3-column cards ── */
         .cols3 {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 0.8rem;
+            gap: 0.6rem;
+            flex: 1 1 0%;
+            min-height: 0;
         }
         .col-card {
             background: var(--bg-alt);
             border: 1px solid var(--border);
             border-radius: 4px;
-            padding: 0.7rem 0.8rem;
+            padding: 0.55rem 0.7rem;
+            overflow: hidden;
         }
         .col-card-num {
-            font-size: 1rem;
+            font-size: 0.9rem;
             font-weight: 700;
             color: var(--accent);
-            margin-bottom: 0.2rem;
+            margin-bottom: 0.15rem;
         }
         .col-card h4 {
-            font-size: 0.72rem;
+            font-size: 0.68rem;
             font-weight: 600;
             color: var(--text);
-            margin-bottom: 0.2rem;
+            margin-bottom: 0.15rem;
         }
         .col-card p {
-            font-size: 0.62rem;
+            font-size: 0.58rem;
             color: var(--text-mid);
-            line-height: 1.5;
+            line-height: 1.45;
         }
 
         /* ── 2x2 grid ── */
         .grid2x2 {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 0.7rem;
+            gap: 0.55rem;
+            flex: 1 1 0%;
+            min-height: 0;
         }
         .grid-card {
             background: var(--bg-alt);
             border: 1px solid var(--border);
             border-radius: 4px;
-            padding: 0.6rem 0.8rem;
+            padding: 0.5rem 0.7rem;
             display: flex;
             align-items: flex-start;
-            gap: 0.6rem;
+            gap: 0.5rem;
+            overflow: hidden;
         }
         .grid-card-icon {
-            font-size: 1.1rem;
+            font-size: 1rem;
             flex-shrink: 0;
             line-height: 1;
             margin-top: 0.1rem;
         }
         .grid-card h4 {
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             font-weight: 600;
             color: var(--text);
-            margin-bottom: 0.15rem;
+            margin-bottom: 0.1rem;
         }
         .grid-card p {
-            font-size: 0.6rem;
+            font-size: 0.56rem;
             color: var(--text-mid);
-            line-height: 1.45;
+            line-height: 1.4;
         }
 
         /* ── Table ── */
         .dk-table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 0.65rem;
+            font-size: 0.6rem;
         }
         .dk-table th, .dk-table td {
-            padding: 0.35rem 0.6rem;
+            padding: 0.3rem 0.5rem;
             text-align: left;
             border-bottom: 1px solid var(--border);
         }
@@ -344,7 +361,7 @@
             background: var(--navy);
             color: #fff;
             font-weight: 600;
-            font-size: 0.6rem;
+            font-size: 0.55rem;
             border-bottom: none;
         }
         .dk-table tbody th {
@@ -367,26 +384,29 @@
         .model-row {
             display: flex;
             flex-direction: column;
-            gap: 0.5rem;
+            gap: 0.4rem;
+            flex: 1 1 0%;
+            min-height: 0;
         }
         .model-item {
             display: flex;
             align-items: flex-start;
-            gap: 0.6rem;
+            gap: 0.5rem;
             background: var(--bg-alt);
             border: 1px solid var(--border);
             border-radius: 4px;
-            padding: 0.5rem 0.8rem;
+            padding: 0.4rem 0.7rem;
+            overflow: hidden;
         }
         .model-badge {
             flex-shrink: 0;
-            width: 2.4rem;
-            height: 2.4rem;
+            width: 2.1rem;
+            height: 2.1rem;
             border-radius: 4px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 0.45rem;
+            font-size: 0.4rem;
             font-weight: 700;
             text-align: center;
             line-height: 1.2;
@@ -395,22 +415,22 @@
         .model-badge.b1 { background: var(--accent); }
         .model-badge.b2 { background: var(--gold); }
         .model-badge.b3 { background: var(--emerald); }
-        .model-text { flex: 1; }
+        .model-text { flex: 1; min-width: 0; }
         .model-text h4 {
-            font-size: 0.68rem;
+            font-size: 0.64rem;
             font-weight: 600;
             color: var(--text);
-            margin-bottom: 0.1rem;
+            margin-bottom: 0.05rem;
         }
         .model-text p {
-            font-size: 0.58rem;
+            font-size: 0.54rem;
             color: var(--text-mid);
-            line-height: 1.4;
+            line-height: 1.35;
         }
         .model-text .ex {
-            font-size: 0.55rem;
+            font-size: 0.5rem;
             color: var(--accent);
-            margin-top: 0.15rem;
+            margin-top: 0.1rem;
         }
 
         /* ── Revenue flow ── */
@@ -419,24 +439,24 @@
             align-items: center;
             justify-content: center;
             gap: 0;
-            margin: 0.8rem 0;
+            margin: 0.6rem 0;
         }
         .flow-box {
             text-align: center;
-            padding: 0.7rem 1.2rem;
+            padding: 0.55rem 1rem;
             border-radius: 4px;
             border: 1px solid var(--border);
-            min-width: 160px;
+            min-width: 150px;
         }
         .flow-box h4 {
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             font-weight: 600;
-            margin-bottom: 0.15rem;
+            margin-bottom: 0.1rem;
         }
         .flow-box p {
-            font-size: 0.55rem;
+            font-size: 0.5rem;
             color: var(--text-mid);
-            line-height: 1.35;
+            line-height: 1.3;
         }
         .flow-box.fc { background: #ECFDF5; }
         .flow-box.fc h4 { color: var(--emerald); }
@@ -445,9 +465,9 @@
         .flow-box.ft { background: #FEF9EE; }
         .flow-box.ft h4 { color: #92400E; }
         .flow-arrow {
-            font-size: 1rem;
+            font-size: 0.9rem;
             color: var(--text-light);
-            padding: 0 0.4rem;
+            padding: 0 0.3rem;
         }
 
         /* ── Callout ── */
@@ -455,86 +475,91 @@
             background: var(--accent-pale);
             border-left: 3px solid var(--accent);
             border-radius: 0 4px 4px 0;
-            padding: 0.5rem 0.8rem;
-            margin-top: 0.6rem;
+            padding: 0.4rem 0.7rem;
+            margin-top: 0.5rem;
+            flex-shrink: 0;
         }
         .callout h4 {
-            font-size: 0.63rem;
+            font-size: 0.58rem;
             font-weight: 600;
             color: var(--text);
-            margin-bottom: 0.15rem;
+            margin-bottom: 0.1rem;
         }
         .callout p {
-            font-size: 0.58rem;
+            font-size: 0.52rem;
             color: var(--text-mid);
-            line-height: 1.4;
+            line-height: 1.35;
         }
 
         /* ── Sector grid ── */
         .sector-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 0.6rem;
+            gap: 0.5rem;
+            flex: 1 1 0%;
+            min-height: 0;
         }
         .sector-card {
             background: var(--bg-alt);
             border: 1px solid var(--border);
             border-radius: 4px;
-            padding: 0.5rem 0.6rem;
+            padding: 0.4rem 0.5rem;
             text-align: center;
+            overflow: hidden;
         }
-        .sector-icon { font-size: 1.1rem; margin-bottom: 0.2rem; }
+        .sector-icon { font-size: 0.95rem; margin-bottom: 0.15rem; }
         .sector-card h4 {
-            font-size: 0.65rem;
+            font-size: 0.6rem;
             font-weight: 600;
             color: var(--text);
-            margin-bottom: 0.1rem;
+            margin-bottom: 0.05rem;
         }
         .sector-card p {
-            font-size: 0.53rem;
+            font-size: 0.5rem;
             color: var(--text-mid);
-            line-height: 1.35;
+            line-height: 1.3;
         }
 
         /* ── Founder ── */
         .founder-row {
             display: flex;
             align-items: flex-start;
-            gap: 0.8rem;
+            gap: 0.6rem;
         }
         .founder-avatar {
             flex-shrink: 0;
-            width: 2.6rem;
-            height: 2.6rem;
+            width: 2.2rem;
+            height: 2.2rem;
             border-radius: 50%;
             background: var(--navy);
             color: #fff;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             font-weight: 700;
         }
+        .founder-info { flex: 1; min-width: 0; }
         .founder-info h4 {
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             font-weight: 600;
             color: var(--text);
-            margin-bottom: 0.2rem;
+            margin-bottom: 0.15rem;
         }
         .founder-info p {
-            font-size: 0.56rem;
+            font-size: 0.52rem;
             color: var(--text-mid);
-            line-height: 1.5;
+            line-height: 1.4;
         }
         .tag-row {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.25rem;
-            margin-top: 0.35rem;
+            gap: 0.2rem;
+            margin-top: 0.25rem;
         }
         .tag-pill {
-            font-size: 0.5rem;
-            padding: 0.1rem 0.4rem;
+            font-size: 0.45rem;
+            padding: 0.08rem 0.35rem;
             background: var(--bg-alt);
             border: 1px solid var(--border);
             border-radius: 3px;
