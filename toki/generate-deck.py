@@ -211,9 +211,9 @@ def draw_model_item(slide, x, y, w, h, badge_text, badge_color, title, body, exa
     tw = w - Inches(1.3)
     add_textbox(slide, tx, y + Inches(0.08), tw, Inches(0.38),
                 title, font, 11, TEXT_PRIMARY, bold=True)
-    add_textbox(slide, tx, y + Inches(0.5), tw, Inches(0.34),
+    add_textbox(slide, tx, y + Inches(0.44), tw, Inches(0.34),
                 body, font, 10, TEXT_SECONDARY)
-    add_textbox(slide, tx, y + Inches(0.88), tw, Inches(0.22),
+    add_textbox(slide, tx, y + Inches(0.8), tw, Inches(0.22),
                 example, font, 9, TOKI_BLUE)
 
 
@@ -714,13 +714,13 @@ def build_slide8(prs, d):
     bio_h_est = bio_lines * 0.19  # 10pt * 1.35 line spacing
     tag_start_x = Inches(0.5)
     tag_x = tag_start_x
-    tag_y = Inches(max(2.5, bio_y + bio_h_est + 0.22))
-    tag_h = Inches(0.28)
+    tag_y = Inches(max(2.6, bio_y + bio_h_est + 0.35))
+    tag_h = Inches(0.34)
     for tag in s["tags"]:
-        tw = Inches(len(tag) * 0.075 + 0.4)
+        tw = Inches(len(tag) * 0.075 + 0.45)
         if tag_x + tw > Inches(9.3):
             tag_x = tag_start_x
-            tag_y += Inches(0.38)
+            tag_y += Inches(0.42)
         add_rect(slide, tag_x, tag_y, tw, tag_h, fill=BG_SECTION, border_color=BORDER)
         add_textbox(slide, tag_x + Inches(0.1), tag_y, tw - Inches(0.2), tag_h,
                     tag, font, 8, TEXT_SECONDARY, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
