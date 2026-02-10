@@ -126,115 +126,115 @@ def add_textbox(slide, left, top, width, height, text, font_name, size,
 # ── Action bar ─────────────────────────────────────────────────────────
 
 def add_action_bar(slide, text, font):
-    bar_h = Inches(0.55)
+    bar_h = Inches(0.65)
     add_rect(slide, 0, 0, SLIDE_W, bar_h, fill=DARK_BG)
     add_textbox(slide, Inches(0.5), 0, SLIDE_W - Inches(1), bar_h,
-                text, font, 9, WHITE, bold=True, anchor=MSO_ANCHOR.MIDDLE)
+                text, font, 12, WHITE, bold=True, anchor=MSO_ANCHOR.MIDDLE)
 
 
 # ── Footer ─────────────────────────────────────────────────────────────
 
 def add_footer(slide, left_text, pg, font):
-    y = SLIDE_H - Inches(0.35)
+    y = SLIDE_H - Inches(0.38)
     add_rect(slide, 0, y, SLIDE_W, Pt(0.5), fill=BORDER)
-    add_textbox(slide, Inches(0.5), y + Pt(2), Inches(4), Inches(0.28),
-                left_text, font, 6.5, TEXT_MUTED)
-    add_textbox(slide, Inches(4), y + Pt(2), Inches(2), Inches(0.28),
-                "Confidential", font, 6.5, TEXT_MUTED, align=PP_ALIGN.CENTER)
-    add_textbox(slide, SLIDE_W - Inches(1), y + Pt(2), Inches(0.5), Inches(0.28),
-                str(pg), font, 6.5, TEXT_MUTED, bold=True, align=PP_ALIGN.RIGHT)
+    add_textbox(slide, Inches(0.5), y + Pt(2), Inches(4), Inches(0.3),
+                left_text, font, 9, TEXT_MUTED)
+    add_textbox(slide, Inches(4), y + Pt(2), Inches(2), Inches(0.3),
+                "Confidential", font, 9, TEXT_MUTED, align=PP_ALIGN.CENTER)
+    add_textbox(slide, SLIDE_W - Inches(1), y + Pt(2), Inches(0.5), Inches(0.3),
+                str(pg), font, 9, TEXT_MUTED, bold=True, align=PP_ALIGN.RIGHT)
 
 
 # ── Section label ──────────────────────────────────────────────────────
 
 def add_section_label(slide, text, font, top):
-    add_textbox(slide, Inches(0.5), top, Inches(3), Inches(0.25),
-                text.upper(), font, 7, TOKI_BLUE, bold=True)
+    add_textbox(slide, Inches(0.5), top, Inches(3), Inches(0.3),
+                text.upper(), font, 10, TOKI_BLUE, bold=True)
 
 
 # ── Card helpers (all use single border style: BORDER, 0.75pt) ────────
 
 def draw_col_card(slide, x, y, w, h, num, title, body, font):
     add_rect(slide, x, y, w, h, fill=WHITE, border_color=BORDER)
-    add_textbox(slide, x + Inches(0.12), y + Inches(0.08), Inches(0.5), Inches(0.25),
-                num, font, 11, TOKI_BLUE, bold=True)
-    add_textbox(slide, x + Inches(0.12), y + Inches(0.35), w - Inches(0.24), Inches(0.22),
-                title, font, 8, TEXT_PRIMARY, bold=True)
-    add_textbox(slide, x + Inches(0.12), y + Inches(0.58), w - Inches(0.24), h - Inches(0.68),
-                body, font, 7, TEXT_SECONDARY)
+    add_textbox(slide, x + Inches(0.15), y + Inches(0.1), Inches(0.6), Inches(0.35),
+                num, font, 15, TOKI_BLUE, bold=True)
+    add_textbox(slide, x + Inches(0.15), y + Inches(0.45), w - Inches(0.3), Inches(0.3),
+                title, font, 12, TEXT_PRIMARY, bold=True)
+    add_textbox(slide, x + Inches(0.15), y + Inches(0.78), w - Inches(0.3), h - Inches(0.88),
+                body, font, 12, TEXT_SECONDARY)
 
 
 def draw_grid_card(slide, x, y, w, h, icon_letter, title, body, font):
     add_rect(slide, x, y, w, h, fill=WHITE, border_color=BORDER)
     # Icon circle
-    ix, iy = x + Inches(0.12), y + Inches(0.12)
-    circ = slide.shapes.add_shape(MSO_SHAPE.OVAL, ix, iy, Inches(0.32), Inches(0.32))
+    ix, iy = x + Inches(0.15), y + Inches(0.15)
+    circ = slide.shapes.add_shape(MSO_SHAPE.OVAL, ix, iy, Inches(0.4), Inches(0.4))
     circ.fill.solid()
     circ.fill.fore_color.rgb = TOKI_BLUE_PALE
     circ.line.fill.background()
-    add_textbox(slide, ix, iy, Inches(0.32), Inches(0.32),
-                icon_letter, font, 9, TOKI_BLUE, bold=True, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
-    add_textbox(slide, x + Inches(0.52), y + Inches(0.12), w - Inches(0.65), Inches(0.2),
-                title, font, 8, TEXT_PRIMARY, bold=True)
-    add_textbox(slide, x + Inches(0.52), y + Inches(0.34), w - Inches(0.65), h - Inches(0.42),
-                body, font, 6.5, TEXT_SECONDARY)
+    add_textbox(slide, ix, iy, Inches(0.4), Inches(0.4),
+                icon_letter, font, 12, TOKI_BLUE, bold=True, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
+    add_textbox(slide, x + Inches(0.65), y + Inches(0.15), w - Inches(0.8), Inches(0.45),
+                title, font, 12, TEXT_PRIMARY, bold=True)
+    add_textbox(slide, x + Inches(0.65), y + Inches(0.62), w - Inches(0.8), h - Inches(0.72),
+                body, font, 11, TEXT_SECONDARY)
 
 
 def draw_model_item(slide, x, y, w, h, badge_text, badge_color, title, body, example, font):
     add_rect(slide, x, y, w, h, fill=WHITE, border_color=BORDER)
     # Badge
-    bx, by, bw, bh = x + Inches(0.12), y + Inches(0.1), Inches(0.55), Inches(0.55)
+    bx, by, bw, bh = x + Inches(0.15), y + Inches(0.12), Inches(0.85), Inches(0.8)
     badge = add_rect(slide, bx, by, bw, bh, fill=badge_color)
-    add_textbox(slide, bx, by, bw, bh, badge_text, font, 6, WHITE, bold=True,
+    add_textbox(slide, bx, by, bw, bh, badge_text, font, 8, WHITE, bold=True,
                 align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
-    tx = x + Inches(0.8)
-    tw = w - Inches(0.95)
-    add_textbox(slide, tx, y + Inches(0.08), tw, Inches(0.2),
-                title, font, 7.5, TEXT_PRIMARY, bold=True)
-    add_textbox(slide, tx, y + Inches(0.28), tw, Inches(0.25),
-                body, font, 6.5, TEXT_SECONDARY)
-    add_textbox(slide, tx, y + Inches(0.52), tw, Inches(0.2),
-                example, font, 6, TOKI_BLUE)
+    tx = x + Inches(1.15)
+    tw = w - Inches(1.3)
+    add_textbox(slide, tx, y + Inches(0.08), tw, Inches(0.28),
+                title, font, 11, TEXT_PRIMARY, bold=True)
+    add_textbox(slide, tx, y + Inches(0.36), tw, Inches(0.35),
+                body, font, 10, TEXT_SECONDARY)
+    add_textbox(slide, tx, y + Inches(0.7), tw, Inches(0.25),
+                example, font, 9, TOKI_BLUE)
 
 
 def draw_flow_box(slide, x, y, w, h, title, body, bg_color, title_color, font):
     add_rect(slide, x, y, w, h, fill=bg_color, border_color=BORDER)
-    add_textbox(slide, x + Inches(0.08), y + Inches(0.06), w - Inches(0.16), Inches(0.22),
-                title, font, 8, title_color, bold=True, align=PP_ALIGN.CENTER)
-    add_textbox(slide, x + Inches(0.08), y + Inches(0.3), w - Inches(0.16), h - Inches(0.36),
-                body, font, 6.5, TEXT_SECONDARY, align=PP_ALIGN.CENTER)
+    add_textbox(slide, x + Inches(0.1), y + Inches(0.08), w - Inches(0.2), Inches(0.3),
+                title, font, 11, title_color, bold=True, align=PP_ALIGN.CENTER)
+    add_textbox(slide, x + Inches(0.1), y + Inches(0.4), w - Inches(0.2), h - Inches(0.48),
+                body, font, 10, TEXT_SECONDARY, align=PP_ALIGN.CENTER)
 
 
 def draw_sector_card(slide, x, y, w, h, icon_letter, title, body, font):
     add_rect(slide, x, y, w, h, fill=WHITE, border_color=BORDER)
     # Icon circle
-    circ_x = x + (w - Inches(0.36)) / 2
-    circ = slide.shapes.add_shape(MSO_SHAPE.OVAL, circ_x, y + Inches(0.08), Inches(0.36), Inches(0.36))
+    circ_x = x + (w - Inches(0.42)) / 2
+    circ = slide.shapes.add_shape(MSO_SHAPE.OVAL, circ_x, y + Inches(0.1), Inches(0.42), Inches(0.42))
     circ.fill.solid()
     circ.fill.fore_color.rgb = TOKI_BLUE_PALE
     circ.line.fill.background()
-    add_textbox(slide, circ_x, y + Inches(0.08), Inches(0.36), Inches(0.36),
-                icon_letter, font, 9, TOKI_BLUE, bold=True, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
-    add_textbox(slide, x + Inches(0.06), y + Inches(0.48), w - Inches(0.12), Inches(0.2),
-                title, font, 7, TEXT_PRIMARY, bold=True, align=PP_ALIGN.CENTER)
-    add_textbox(slide, x + Inches(0.06), y + Inches(0.68), w - Inches(0.12), h - Inches(0.73),
-                body, font, 6, TEXT_SECONDARY, align=PP_ALIGN.CENTER)
+    add_textbox(slide, circ_x, y + Inches(0.1), Inches(0.42), Inches(0.42),
+                icon_letter, font, 12, TOKI_BLUE, bold=True, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
+    add_textbox(slide, x + Inches(0.08), y + Inches(0.56), w - Inches(0.16), Inches(0.26),
+                title, font, 11, TEXT_PRIMARY, bold=True, align=PP_ALIGN.CENTER)
+    add_textbox(slide, x + Inches(0.08), y + Inches(0.82), w - Inches(0.16), h - Inches(0.9),
+                body, font, 9, TEXT_SECONDARY, align=PP_ALIGN.CENTER)
 
 
 def draw_table_row(slide, y, row_h, cells, font, is_header=False, is_first_col_header=False):
-    col_widths = [Inches(1.3), Inches(3.6), Inches(3.7)]
+    col_widths = [Inches(1.5), Inches(3.5), Inches(3.6)]
     x = Inches(0.7)
     for i, (text, width) in enumerate(zip(cells, col_widths)):
         bg = DARK_BG if is_header else (BG_SECTION if (i == 0 and is_first_col_header) else WHITE)
         fg = WHITE if is_header else (TEXT_PRIMARY if (i == 0 and is_first_col_header) else TEXT_SECONDARY)
         bld = is_header or (i == 0 and is_first_col_header)
-        fs = 6.5 if is_header else 7
+        fs = 9 if is_header else 10
         rect = add_rect(slide, x, y, width, row_h, fill=bg, border_color=BORDER, border_width=Pt(0.5))
         if i == 2 and not is_header:
             rect.fill.solid()
             rect.fill.fore_color.rgb = TOKI_BLUE_PALE
             fg = TOKI_BLUE_DK
-        add_textbox(slide, x + Inches(0.08), y, width - Inches(0.16), row_h,
+        add_textbox(slide, x + Inches(0.1), y, width - Inches(0.2), row_h,
                     text, font, fs, fg, bold=bld, anchor=MSO_ANCHOR.MIDDLE)
         x += width
 
@@ -486,21 +486,21 @@ def build_cover(prs, d):
     font = d["font"]
     c = d["cover"]
     add_rect(slide, 0, 0, SLIDE_W, SLIDE_H, fill=DARK_BG)
-    add_textbox(slide, Inches(1), Inches(0.8), Inches(5), Inches(0.3),
-                c["label"], font, 7, TEXT_MUTED, align=PP_ALIGN.LEFT)
-    add_textbox(slide, Inches(1), Inches(1.5), Inches(8), Inches(1.2),
-                c["title"], font, 22, WHITE, bold=True)
-    add_textbox(slide, Inches(1), Inches(2.9), Inches(7), Inches(0.8),
-                c["sub"], font, 10, RGBColor(0xBB, 0xBB, 0xCC))
+    add_textbox(slide, Inches(1), Inches(0.7), Inches(5), Inches(0.35),
+                c["label"], font, 10, TEXT_MUTED, align=PP_ALIGN.LEFT)
+    add_textbox(slide, Inches(1), Inches(1.3), Inches(8), Inches(1.5),
+                c["title"], font, 30, WHITE, bold=True)
+    add_textbox(slide, Inches(1), Inches(3.0), Inches(7), Inches(0.9),
+                c["sub"], font, 14, RGBColor(0xBB, 0xBB, 0xCC))
     # Bottom accent line
-    stripe_y = SLIDE_H - Inches(0.6)
+    stripe_y = SLIDE_H - Inches(0.65)
     add_rect(slide, 0, stripe_y, SLIDE_W, Inches(0.03), fill=TOKI_BLUE)
-    add_textbox(slide, Inches(0.5), stripe_y + Inches(0.08), Inches(3), Inches(0.3),
-                c["org"], font, 6.5, TEXT_MUTED)
-    add_textbox(slide, Inches(4), stripe_y + Inches(0.08), Inches(2), Inches(0.3),
-                c["product"], font, 6.5, TEXT_MUTED, align=PP_ALIGN.CENTER)
-    add_textbox(slide, SLIDE_W - Inches(2), stripe_y + Inches(0.08), Inches(1.5), Inches(0.3),
-                "Confidential", font, 6.5, TEXT_MUTED, align=PP_ALIGN.RIGHT)
+    add_textbox(slide, Inches(0.5), stripe_y + Inches(0.1), Inches(3), Inches(0.35),
+                c["org"], font, 9, TEXT_MUTED)
+    add_textbox(slide, Inches(4), stripe_y + Inches(0.1), Inches(2), Inches(0.35),
+                c["product"], font, 9, TEXT_MUTED, align=PP_ALIGN.CENTER)
+    add_textbox(slide, SLIDE_W - Inches(2), stripe_y + Inches(0.1), Inches(1.5), Inches(0.35),
+                "Confidential", font, 9, TEXT_MUTED, align=PP_ALIGN.RIGHT)
 
 
 def build_slide2(prs, d):
@@ -509,12 +509,12 @@ def build_slide2(prs, d):
     font = d["font"]
     s = d["s2"]
     add_action_bar(slide, s["bar"], font)
-    add_section_label(slide, s["label"], font, Inches(0.7))
+    add_section_label(slide, s["label"], font, Inches(0.8))
     card_w = Inches(2.85)
-    card_h = Inches(3.6)
+    card_h = Inches(3.7)
     gap = Inches(0.23)
     start_x = Inches(0.5)
-    y = Inches(1.0)
+    y = Inches(1.15)
     for i, (num, title, body) in enumerate(s["cards"]):
         x = start_x + i * (card_w + gap)
         draw_col_card(slide, x, y, card_w, card_h, num, title, body, font)
@@ -527,13 +527,13 @@ def build_slide3(prs, d):
     font = d["font"]
     s = d["s3"]
     add_action_bar(slide, s["bar"], font)
-    add_section_label(slide, s["label"], font, Inches(0.7))
+    add_section_label(slide, s["label"], font, Inches(0.8))
     card_w = Inches(4.3)
-    card_h = Inches(1.7)
+    card_h = Inches(1.95)
     gap_x = Inches(0.25)
-    gap_y = Inches(0.2)
+    gap_y = Inches(0.15)
     start_x = Inches(0.5)
-    start_y = Inches(1.0)
+    start_y = Inches(1.15)
     for i, (icon, title, body) in enumerate(s["cards"]):
         col = i % 2
         row = i // 2
@@ -549,9 +549,9 @@ def build_slide4(prs, d):
     font = d["font"]
     s = d["s4"]
     add_action_bar(slide, s["bar"], font)
-    add_section_label(slide, s["label"], font, Inches(0.7))
-    y = Inches(1.0)
-    row_h = Inches(0.38)
+    add_section_label(slide, s["label"], font, Inches(0.8))
+    y = Inches(1.15)
+    row_h = Inches(0.5)
     draw_table_row(slide, y, row_h, s["headers"], font, is_header=True)
     y += row_h
     for cells in s["rows"]:
@@ -566,11 +566,11 @@ def build_slide5(prs, d):
     font = d["font"]
     s = d["s5"]
     add_action_bar(slide, s["bar"], font)
-    add_section_label(slide, s["label"], font, Inches(0.7))
+    add_section_label(slide, s["label"], font, Inches(0.8))
     item_w = Inches(8.6)
-    item_h = Inches(0.75)
+    item_h = Inches(1.05)
     gap = Inches(0.12)
-    start_y = Inches(1.0)
+    start_y = Inches(1.15)
     x = Inches(0.5)
     for i, (badge, color, title, body, ex) in enumerate(s["models"]):
         y = start_y + i * (item_h + gap)
@@ -584,10 +584,10 @@ def build_slide6(prs, d):
     font = d["font"]
     s = d["s6"]
     add_action_bar(slide, s["bar"], font)
-    add_section_label(slide, s["label"], font, Inches(0.7))
-    box_w = Inches(2.4)
-    box_h = Inches(0.85)
-    gap = Inches(0.5)
+    add_section_label(slide, s["label"], font, Inches(0.8))
+    box_w = Inches(2.5)
+    box_h = Inches(1.05)
+    gap = Inches(0.4)
     total = 3 * box_w + 2 * gap
     start_x = (SLIDE_W - total) / 2
     y = Inches(1.2)
@@ -595,18 +595,18 @@ def build_slide6(prs, d):
         x = start_x + i * (box_w + gap)
         draw_flow_box(slide, x, y, box_w, box_h, title, body, bg, tc, font)
         if i < 2:
-            arrow_x = x + box_w + Inches(0.1)
-            add_textbox(slide, arrow_x, y + Inches(0.2), Inches(0.3), Inches(0.3),
-                        "\u2190", font, 14, TEXT_MUTED, align=PP_ALIGN.CENTER)
+            arrow_x = x + box_w + Inches(0.05)
+            add_textbox(slide, arrow_x, y + Inches(0.3), Inches(0.3), Inches(0.35),
+                        "\u2190", font, 18, TEXT_MUTED, align=PP_ALIGN.CENTER)
     # Callout (left accent stripe only, no outer border)
-    cx, cy = Inches(0.5), Inches(2.4)
-    cw, ch = Inches(8.6), Inches(1.0)
+    cx, cy = Inches(0.5), Inches(2.65)
+    cw, ch = Inches(8.6), Inches(1.15)
     add_rect(slide, cx, cy, cw, ch, fill=TOKI_BLUE_PALE)
-    add_rect(slide, cx, cy, Inches(0.05), ch, fill=TOKI_BLUE)
-    add_textbox(slide, cx + Inches(0.2), cy + Inches(0.08), cw - Inches(0.3), Inches(0.22),
-                s["callout_title"], font, 7.5, TEXT_PRIMARY, bold=True)
-    add_textbox(slide, cx + Inches(0.2), cy + Inches(0.32), cw - Inches(0.3), ch - Inches(0.4),
-                s["callout_body"], font, 6.5, TEXT_SECONDARY)
+    add_rect(slide, cx, cy, Inches(0.06), ch, fill=TOKI_BLUE)
+    add_textbox(slide, cx + Inches(0.25), cy + Inches(0.1), cw - Inches(0.35), Inches(0.28),
+                s["callout_title"], font, 11, TEXT_PRIMARY, bold=True)
+    add_textbox(slide, cx + Inches(0.25), cy + Inches(0.4), cw - Inches(0.35), ch - Inches(0.5),
+                s["callout_body"], font, 10, TEXT_SECONDARY)
     add_footer(slide, s["footer"], 6, font)
 
 
@@ -616,15 +616,15 @@ def build_slide7(prs, d):
     font = d["font"]
     s = d["s7"]
     add_action_bar(slide, s["bar"], font)
-    add_section_label(slide, s["label"], font, Inches(0.7))
-    add_textbox(slide, Inches(0.5), Inches(0.95), Inches(8), Inches(0.25),
-                s["lead"], font, 8, TEXT_SECONDARY)
+    add_section_label(slide, s["label"], font, Inches(0.8))
+    add_textbox(slide, Inches(0.5), Inches(1.1), Inches(8), Inches(0.3),
+                s["lead"], font, 11, TEXT_SECONDARY)
     card_w = Inches(2.85)
-    card_h = Inches(1.45)
+    card_h = Inches(1.55)
     gap_x = Inches(0.23)
-    gap_y = Inches(0.18)
+    gap_y = Inches(0.15)
     start_x = Inches(0.5)
-    start_y = Inches(1.3)
+    start_y = Inches(1.5)
     for i, (icon, title, body) in enumerate(s["sectors"]):
         col = i % 3
         row = i // 3
@@ -640,42 +640,44 @@ def build_slide8(prs, d):
     font = d["font"]
     s = d["s8"]
     add_action_bar(slide, s["bar"], font)
-    add_section_label(slide, s["label"], font, Inches(0.7))
+    add_section_label(slide, s["label"], font, Inches(0.8))
     # Avatar circle
-    ax, ay = Inches(0.5), Inches(1.0)
-    avatar = slide.shapes.add_shape(MSO_SHAPE.OVAL, ax, ay, Inches(0.6), Inches(0.6))
+    ax, ay = Inches(0.5), Inches(1.15)
+    avatar = slide.shapes.add_shape(MSO_SHAPE.OVAL, ax, ay, Inches(0.7), Inches(0.7))
     avatar.fill.solid()
     avatar.fill.fore_color.rgb = DARK_BG
     avatar.line.fill.background()
     initials = "佐" if d is CONTENT["ja"] else "TS"
-    add_textbox(slide, ax, ay, Inches(0.6), Inches(0.6),
-                initials, font, 12, WHITE, bold=True, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
-    add_textbox(slide, Inches(1.25), Inches(1.0), Inches(7), Inches(0.25),
-                s["name"], font, 8, TEXT_PRIMARY, bold=True)
-    add_textbox(slide, Inches(1.25), Inches(1.28), Inches(7.5), Inches(0.95),
-                s["bio"], font, 6.5, TEXT_SECONDARY)
+    add_textbox(slide, ax, ay, Inches(0.7), Inches(0.7),
+                initials, font, 15, WHITE, bold=True, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
+    add_textbox(slide, Inches(1.35), Inches(1.15), Inches(7), Inches(0.32),
+                s["name"], font, 12, TEXT_PRIMARY, bold=True)
+    add_textbox(slide, Inches(1.35), Inches(1.48), Inches(7.5), Inches(1.0),
+                s["bio"], font, 10, TEXT_SECONDARY)
     # Tags
-    tag_x = Inches(1.25)
-    tag_y = Inches(2.2)
+    tag_x = Inches(1.35)
+    tag_y = Inches(2.5)
     for tag in s["tags"]:
-        tw = Inches(len(tag) * 0.085 + 0.25)
-        add_rect(slide, tag_x, tag_y, tw, Inches(0.22), fill=BG_SECTION, border_color=BORDER)
-        add_textbox(slide, tag_x + Inches(0.05), tag_y, tw - Inches(0.1), Inches(0.22),
-                    tag, font, 5.5, TEXT_SECONDARY, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
+        tw = Inches(len(tag) * 0.075 + 0.25)
+        # Wrap to next row if tag would extend past right margin
+        if tag_x + tw > Inches(9.3):
+            tag_x = Inches(1.35)
+            tag_y += Inches(0.32)
+        add_rect(slide, tag_x, tag_y, tw, Inches(0.26), fill=BG_SECTION, border_color=BORDER)
+        add_textbox(slide, tag_x + Inches(0.05), tag_y, tw - Inches(0.1), Inches(0.26),
+                    tag, font, 7.5, TEXT_SECONDARY, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
         tag_x += tw + Inches(0.08)
-        if tag_x > Inches(8.5):
-            tag_x = Inches(1.25)
-            tag_y += Inches(0.28)
     # Independence callout (left accent stripe only, no outer border)
-    cy = Inches(2.6)
-    cw, ch = Inches(8.6), Inches(0.8)
+    cy = tag_y + Inches(0.42)
+    cw = Inches(8.6)
+    ch = SLIDE_H - Inches(0.38) - cy - Inches(0.1)  # fill to footer
     cx = Inches(0.5)
     add_rect(slide, cx, cy, cw, ch, fill=TOKI_BLUE_PALE)
-    add_rect(slide, cx, cy, Inches(0.05), ch, fill=TOKI_BLUE)
-    add_textbox(slide, cx + Inches(0.2), cy + Inches(0.06), cw - Inches(0.3), Inches(0.2),
-                s["ind_title"], font, 7, TEXT_PRIMARY, bold=True)
-    add_textbox(slide, cx + Inches(0.2), cy + Inches(0.28), cw - Inches(0.3), ch - Inches(0.35),
-                s["ind_body"], font, 6.5, TEXT_SECONDARY)
+    add_rect(slide, cx, cy, Inches(0.06), ch, fill=TOKI_BLUE)
+    add_textbox(slide, cx + Inches(0.25), cy + Inches(0.08), cw - Inches(0.35), Inches(0.26),
+                s["ind_title"], font, 10, TEXT_PRIMARY, bold=True)
+    add_textbox(slide, cx + Inches(0.25), cy + Inches(0.36), cw - Inches(0.35), ch - Inches(0.42),
+                s["ind_body"], font, 10, TEXT_SECONDARY)
     add_footer(slide, s["footer"], 8, font)
 
 
@@ -685,21 +687,21 @@ def build_slide9(prs, d):
     font = d["font"]
     s = d["s9"]
     add_rect(slide, 0, 0, SLIDE_W, SLIDE_H, fill=DARK_BG)
-    add_textbox(slide, Inches(0.5), Inches(0.15), Inches(3), Inches(0.35),
-                s["bar"], font, 9, WHITE, bold=True)
-    add_textbox(slide, Inches(1), Inches(1.5), Inches(8), Inches(1.0),
-                s["title"], font, 18, WHITE, bold=True, align=PP_ALIGN.CENTER)
-    add_textbox(slide, Inches(1.5), Inches(2.8), Inches(7), Inches(1.0),
-                s["sub"], font, 9, RGBColor(0xBB, 0xBB, 0xCC), align=PP_ALIGN.CENTER)
+    add_textbox(slide, Inches(0.5), Inches(0.15), Inches(4), Inches(0.45),
+                s["bar"], font, 13, WHITE, bold=True)
+    add_textbox(slide, Inches(1), Inches(1.3), Inches(8), Inches(1.2),
+                s["title"], font, 26, WHITE, bold=True, align=PP_ALIGN.CENTER)
+    add_textbox(slide, Inches(1.5), Inches(2.8), Inches(7), Inches(1.2),
+                s["sub"], font, 13, RGBColor(0xBB, 0xBB, 0xCC), align=PP_ALIGN.CENTER)
     # Footer
-    stripe_y = SLIDE_H - Inches(0.5)
+    stripe_y = SLIDE_H - Inches(0.55)
     add_rect(slide, 0, stripe_y - Inches(0.03), SLIDE_W, Pt(0.5), fill=RGBColor(0x33, 0x44, 0x55))
-    add_textbox(slide, Inches(0.5), stripe_y, Inches(4), Inches(0.3),
-                s["footer_left"], font, 6.5, TEXT_MUTED)
-    add_textbox(slide, Inches(4), stripe_y, Inches(2), Inches(0.3),
-                "Confidential", font, 6.5, TEXT_MUTED, align=PP_ALIGN.CENTER)
-    add_textbox(slide, SLIDE_W - Inches(1), stripe_y, Inches(0.5), Inches(0.3),
-                "9", font, 6.5, TEXT_MUTED, bold=True, align=PP_ALIGN.RIGHT)
+    add_textbox(slide, Inches(0.5), stripe_y, Inches(4), Inches(0.35),
+                s["footer_left"], font, 9, TEXT_MUTED)
+    add_textbox(slide, Inches(4), stripe_y, Inches(2), Inches(0.35),
+                "Confidential", font, 9, TEXT_MUTED, align=PP_ALIGN.CENTER)
+    add_textbox(slide, SLIDE_W - Inches(1), stripe_y, Inches(0.5), Inches(0.35),
+                "9", font, 9, TEXT_MUTED, bold=True, align=PP_ALIGN.RIGHT)
 
 
 # ══════════════════════════════════════════════════════════════════════
