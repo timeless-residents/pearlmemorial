@@ -2,6 +2,7 @@
 """
 TokiStorage Partnership Deck Generator
 Generates PPTX files (JP + EN) and converts to PDF via LibreOffice.
+Design aligned with TokiStorage landing page (index.css).
 """
 
 from pptx import Presentation
@@ -11,21 +12,27 @@ from pptx.enum.text import PP_ALIGN, MSO_ANCHOR
 from pptx.enum.shapes import MSO_SHAPE
 import subprocess, os, sys
 
-# ── Design tokens ──────────────────────────────────────────────────────────
-NAVY      = RGBColor(0x0A, 0x16, 0x28)
-ACCENT    = RGBColor(0x1E, 0x6F, 0xD9)
-GOLD      = RGBColor(0xB4, 0x82, 0x12)
-EMERALD   = RGBColor(0x05, 0x96, 0x69)
-WHITE     = RGBColor(0xFF, 0xFF, 0xFF)
-TEXT_DARK  = RGBColor(0x1A, 0x1A, 0x2E)
-TEXT_MID   = RGBColor(0x55, 0x55, 0x70)
-TEXT_LIGHT = RGBColor(0x99, 0x99, 0xAA)
-BG_ALT    = RGBColor(0xF8, 0xF9, 0xFB)
-BORDER    = RGBColor(0xE2, 0xE5, 0xEB)
-ACCENT_PALE = RGBColor(0xEE, 0xF4, 0xFD)
-GREEN_PALE  = RGBColor(0xEC, 0xFD, 0xF5)
-GOLD_PALE   = RGBColor(0xFE, 0xF9, 0xEE)
-HL_BG       = RGBColor(0xF0, 0xF7, 0xFF)
+# ── Design tokens (matched to index.css :root) ────────────────────────
+TOKI_BLUE     = RGBColor(0x25, 0x63, 0xEB)  # --toki-blue
+TOKI_BLUE_DK  = RGBColor(0x1D, 0x4E, 0xD8)  # --toki-blue-dark
+TOKI_BLUE_PALE= RGBColor(0xEF, 0xF6, 0xFF)  # --toki-blue-pale
+GOLD          = RGBColor(0xC9, 0xA9, 0x62)  # --toki-gold
+GOLD_PALE     = RGBColor(0xFD, 0xF8, 0xE8)  # --toki-gold-pale
+EMERALD       = RGBColor(0x16, 0xA3, 0x4A)  # green-600 (check marks in LP)
+GREEN_PALE    = RGBColor(0xF0, 0xFD, 0xF4)  # green-50
+
+TEXT_PRIMARY  = RGBColor(0x1E, 0x29, 0x3B)  # --text-primary
+TEXT_SECONDARY= RGBColor(0x47, 0x55, 0x69)  # --text-secondary
+TEXT_MUTED    = RGBColor(0x94, 0xA3, 0xB8)  # --text-muted
+WHITE         = RGBColor(0xFF, 0xFF, 0xFF)
+
+BG_PAGE       = RGBColor(0xF8, 0xFA, 0xFC)  # --bg-page
+BG_SECTION    = RGBColor(0xF1, 0xF5, 0xF9)  # --bg-section
+BORDER        = RGBColor(0xE2, 0xE8, 0xF0)  # --border
+
+# Dark backgrounds (LP hero / footer)
+DARK_BG       = RGBColor(0x1E, 0x29, 0x3B)  # --text-primary as bg (LP footer)
+DARK_BG2      = RGBColor(0x0F, 0x17, 0x2A)  # LP footer gradient start
 
 SLIDE_W = Inches(10)
 SLIDE_H = Inches(5.625)  # 16:9
@@ -36,7 +43,7 @@ FONT_EN = "Calibri"
 OUT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
-# ── Helpers ────────────────────────────────────────────────────────────────
+# ── Helpers ────────────────────────────────────────────────────────────
 
 def new_prs():
     prs = Presentation()
@@ -50,10 +57,8 @@ def add_blank_slide(prs):
     return prs.slides.add_slide(layout)
 
 
-def add_rect(slide, left, top, width, height, fill=None, border_color=None, border_width=None, radius=None):
-    shape = slide.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE if radius else MSO_SHAPE.RECTANGLE,
-                                   left, top, width, height)
-    shape.fill.background() if fill is None else None
+def add_rect(slide, left, top, width, height, fill=None, border_color=None, border_width=None):
+    shape = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, left, top, width, height)
     if fill is not None:
         shape.fill.solid()
         shape.fill.fore_color.rgb = fill
@@ -67,7 +72,7 @@ def add_rect(slide, left, top, width, height, fill=None, border_color=None, bord
     return shape
 
 
-def set_text(tf, text, font_name, size, color=TEXT_DARK, bold=False, align=PP_ALIGN.LEFT):
+def set_text(tf, text, font_name, size, color=TEXT_PRIMARY, bold=False, align=PP_ALIGN.LEFT):
     tf.word_wrap = True
     for p in tf.paragraphs:
         p.clear()
@@ -82,7 +87,7 @@ def set_text(tf, text, font_name, size, color=TEXT_DARK, bold=False, align=PP_AL
     return p
 
 
-def add_para(tf, text, font_name, size, color=TEXT_DARK, bold=False, align=PP_ALIGN.LEFT, space_before=0):
+def add_para(tf, text, font_name, size, color=TEXT_PRIMARY, bold=False, align=PP_ALIGN.LEFT, space_before=0):
     p = tf.add_paragraph()
     p.alignment = align
     if space_before:
@@ -97,7 +102,7 @@ def add_para(tf, text, font_name, size, color=TEXT_DARK, bold=False, align=PP_AL
 
 
 def add_textbox(slide, left, top, width, height, text, font_name, size,
-                color=TEXT_DARK, bold=False, align=PP_ALIGN.LEFT, anchor=MSO_ANCHOR.TOP):
+                color=TEXT_PRIMARY, bold=False, align=PP_ALIGN.LEFT, anchor=MSO_ANCHOR.TOP):
     txBox = slide.shapes.add_textbox(left, top, width, height)
     tf = txBox.text_frame
     tf.word_wrap = True
@@ -107,7 +112,6 @@ def add_textbox(slide, left, top, width, height, text, font_name, size,
         txBox.text_frame.paragraphs[0].space_after = Pt(0)
     except:
         pass
-    # Set anchor
     from pptx.oxml.ns import qn
     txBody = txBox.text_frame._txBody
     bodyPr = txBody.find(qn('a:bodyPr'))
@@ -119,79 +123,78 @@ def add_textbox(slide, left, top, width, height, text, font_name, size,
     return txBox
 
 
-# ── Action bar (title bar at top of each slide) ───────────────────────────
+# ── Action bar ─────────────────────────────────────────────────────────
 
 def add_action_bar(slide, text, font):
     bar_h = Inches(0.55)
-    add_rect(slide, 0, 0, SLIDE_W, bar_h, fill=NAVY)
+    add_rect(slide, 0, 0, SLIDE_W, bar_h, fill=DARK_BG)
     add_textbox(slide, Inches(0.5), 0, SLIDE_W - Inches(1), bar_h,
                 text, font, 9, WHITE, bold=True, anchor=MSO_ANCHOR.MIDDLE)
 
 
-# ── Footer ─────────────────────────────────────────────────────────────────
+# ── Footer ─────────────────────────────────────────────────────────────
 
 def add_footer(slide, left_text, pg, font):
     y = SLIDE_H - Inches(0.35)
-    # top border line
-    from pptx.oxml.ns import qn
-    line = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, 0, y, SLIDE_W, Pt(0.5))
-    line.fill.solid()
-    line.fill.fore_color.rgb = BORDER
-    line.line.fill.background()
-
+    add_rect(slide, 0, y, SLIDE_W, Pt(0.5), fill=BORDER)
     add_textbox(slide, Inches(0.5), y + Pt(2), Inches(4), Inches(0.28),
-                left_text, font, 6.5, TEXT_LIGHT)
+                left_text, font, 6.5, TEXT_MUTED)
     add_textbox(slide, Inches(4), y + Pt(2), Inches(2), Inches(0.28),
-                "Confidential", font, 6.5, TEXT_LIGHT, align=PP_ALIGN.CENTER)
+                "Confidential", font, 6.5, TEXT_MUTED, align=PP_ALIGN.CENTER)
     add_textbox(slide, SLIDE_W - Inches(1), y + Pt(2), Inches(0.5), Inches(0.28),
-                str(pg), font, 6.5, TEXT_LIGHT, bold=True, align=PP_ALIGN.RIGHT)
+                str(pg), font, 6.5, TEXT_MUTED, bold=True, align=PP_ALIGN.RIGHT)
 
 
-# ── Section label ──────────────────────────────────────────────────────────
+# ── Section label ──────────────────────────────────────────────────────
 
 def add_section_label(slide, text, font, top):
     add_textbox(slide, Inches(0.5), top, Inches(3), Inches(0.25),
-                text.upper(), font, 7, ACCENT, bold=True)
+                text.upper(), font, 7, TOKI_BLUE, bold=True)
 
 
-# ── Card drawing helpers ───────────────────────────────────────────────────
+# ── Card helpers (all use single border style: BORDER, 0.75pt) ────────
 
 def draw_col_card(slide, x, y, w, h, num, title, body, font):
-    add_rect(slide, x, y, w, h, fill=BG_ALT, border_color=BORDER)
+    add_rect(slide, x, y, w, h, fill=WHITE, border_color=BORDER)
     add_textbox(slide, x + Inches(0.12), y + Inches(0.08), Inches(0.5), Inches(0.25),
-                num, font, 11, ACCENT, bold=True)
+                num, font, 11, TOKI_BLUE, bold=True)
     add_textbox(slide, x + Inches(0.12), y + Inches(0.35), w - Inches(0.24), Inches(0.22),
-                title, font, 8, TEXT_DARK, bold=True)
+                title, font, 8, TEXT_PRIMARY, bold=True)
     add_textbox(slide, x + Inches(0.12), y + Inches(0.58), w - Inches(0.24), h - Inches(0.68),
-                body, font, 7, TEXT_MID)
+                body, font, 7, TEXT_SECONDARY)
 
 
-def draw_grid_card(slide, x, y, w, h, icon, title, body, font):
-    add_rect(slide, x, y, w, h, fill=BG_ALT, border_color=BORDER)
-    add_textbox(slide, x + Inches(0.1), y + Inches(0.08), Inches(0.35), Inches(0.35),
-                icon, font, 14, TEXT_DARK)
-    add_textbox(slide, x + Inches(0.45), y + Inches(0.08), w - Inches(0.6), Inches(0.2),
-                title, font, 8, TEXT_DARK, bold=True)
-    add_textbox(slide, x + Inches(0.45), y + Inches(0.3), w - Inches(0.6), h - Inches(0.38),
-                body, font, 6.5, TEXT_MID)
+def draw_grid_card(slide, x, y, w, h, icon_letter, title, body, font):
+    add_rect(slide, x, y, w, h, fill=WHITE, border_color=BORDER)
+    # Icon circle
+    ix, iy = x + Inches(0.12), y + Inches(0.12)
+    circ = slide.shapes.add_shape(MSO_SHAPE.OVAL, ix, iy, Inches(0.32), Inches(0.32))
+    circ.fill.solid()
+    circ.fill.fore_color.rgb = TOKI_BLUE_PALE
+    circ.line.fill.background()
+    add_textbox(slide, ix, iy, Inches(0.32), Inches(0.32),
+                icon_letter, font, 9, TOKI_BLUE, bold=True, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
+    add_textbox(slide, x + Inches(0.52), y + Inches(0.12), w - Inches(0.65), Inches(0.2),
+                title, font, 8, TEXT_PRIMARY, bold=True)
+    add_textbox(slide, x + Inches(0.52), y + Inches(0.34), w - Inches(0.65), h - Inches(0.42),
+                body, font, 6.5, TEXT_SECONDARY)
 
 
 def draw_model_item(slide, x, y, w, h, badge_text, badge_color, title, body, example, font):
-    add_rect(slide, x, y, w, h, fill=BG_ALT, border_color=BORDER)
-    # badge
+    add_rect(slide, x, y, w, h, fill=WHITE, border_color=BORDER)
+    # Badge
     bx, by, bw, bh = x + Inches(0.12), y + Inches(0.1), Inches(0.55), Inches(0.55)
     badge = add_rect(slide, bx, by, bw, bh, fill=badge_color)
     add_textbox(slide, bx, by, bw, bh, badge_text, font, 6, WHITE, bold=True,
                 align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
-    # text
     tx = x + Inches(0.8)
     tw = w - Inches(0.95)
     add_textbox(slide, tx, y + Inches(0.08), tw, Inches(0.2),
-                title, font, 7.5, TEXT_DARK, bold=True)
+                title, font, 7.5, TEXT_PRIMARY, bold=True)
     add_textbox(slide, tx, y + Inches(0.28), tw, Inches(0.25),
-                body, font, 6.5, TEXT_MID)
+                body, font, 6.5, TEXT_SECONDARY)
     add_textbox(slide, tx, y + Inches(0.52), tw, Inches(0.2),
-                example, font, 6, ACCENT)
+                example, font, 6, TOKI_BLUE)
 
 
 def draw_flow_box(slide, x, y, w, h, title, body, bg_color, title_color, font):
@@ -199,42 +202,46 @@ def draw_flow_box(slide, x, y, w, h, title, body, bg_color, title_color, font):
     add_textbox(slide, x + Inches(0.08), y + Inches(0.06), w - Inches(0.16), Inches(0.22),
                 title, font, 8, title_color, bold=True, align=PP_ALIGN.CENTER)
     add_textbox(slide, x + Inches(0.08), y + Inches(0.3), w - Inches(0.16), h - Inches(0.36),
-                body, font, 6.5, TEXT_MID, align=PP_ALIGN.CENTER)
+                body, font, 6.5, TEXT_SECONDARY, align=PP_ALIGN.CENTER)
 
 
-def draw_sector_card(slide, x, y, w, h, icon, title, body, font):
-    add_rect(slide, x, y, w, h, fill=BG_ALT, border_color=BORDER)
-    add_textbox(slide, x, y + Inches(0.05), w, Inches(0.28),
-                icon, font, 13, TEXT_DARK, align=PP_ALIGN.CENTER)
-    add_textbox(slide, x + Inches(0.06), y + Inches(0.33), w - Inches(0.12), Inches(0.2),
-                title, font, 7, TEXT_DARK, bold=True, align=PP_ALIGN.CENTER)
-    add_textbox(slide, x + Inches(0.06), y + Inches(0.52), w - Inches(0.12), h - Inches(0.57),
-                body, font, 6, TEXT_MID, align=PP_ALIGN.CENTER)
+def draw_sector_card(slide, x, y, w, h, icon_letter, title, body, font):
+    add_rect(slide, x, y, w, h, fill=WHITE, border_color=BORDER)
+    # Icon circle
+    circ_x = x + (w - Inches(0.36)) / 2
+    circ = slide.shapes.add_shape(MSO_SHAPE.OVAL, circ_x, y + Inches(0.08), Inches(0.36), Inches(0.36))
+    circ.fill.solid()
+    circ.fill.fore_color.rgb = TOKI_BLUE_PALE
+    circ.line.fill.background()
+    add_textbox(slide, circ_x, y + Inches(0.08), Inches(0.36), Inches(0.36),
+                icon_letter, font, 9, TOKI_BLUE, bold=True, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
+    add_textbox(slide, x + Inches(0.06), y + Inches(0.48), w - Inches(0.12), Inches(0.2),
+                title, font, 7, TEXT_PRIMARY, bold=True, align=PP_ALIGN.CENTER)
+    add_textbox(slide, x + Inches(0.06), y + Inches(0.68), w - Inches(0.12), h - Inches(0.73),
+                body, font, 6, TEXT_SECONDARY, align=PP_ALIGN.CENTER)
 
 
 def draw_table_row(slide, y, row_h, cells, font, is_header=False, is_first_col_header=False):
-    """Draw a table row manually (python-pptx tables don't style well for PDF)"""
     col_widths = [Inches(1.3), Inches(3.6), Inches(3.7)]
     x = Inches(0.7)
     for i, (text, width) in enumerate(zip(cells, col_widths)):
-        bg = NAVY if is_header else (BG_ALT if (i == 0 and is_first_col_header) else None)
-        fg = WHITE if is_header else (TEXT_DARK if (i == 0 and is_first_col_header) else TEXT_MID)
+        bg = DARK_BG if is_header else (BG_SECTION if (i == 0 and is_first_col_header) else WHITE)
+        fg = WHITE if is_header else (TEXT_PRIMARY if (i == 0 and is_first_col_header) else TEXT_SECONDARY)
         bld = is_header or (i == 0 and is_first_col_header)
         fs = 6.5 if is_header else 7
         rect = add_rect(slide, x, y, width, row_h, fill=bg, border_color=BORDER, border_width=Pt(0.5))
         if i == 2 and not is_header:
-            # Highlight TokiStorage column
             rect.fill.solid()
-            rect.fill.fore_color.rgb = HL_BG
-            fg = ACCENT
+            rect.fill.fore_color.rgb = TOKI_BLUE_PALE
+            fg = TOKI_BLUE_DK
         add_textbox(slide, x + Inches(0.08), y, width - Inches(0.16), row_h,
                     text, font, fs, fg, bold=bld, anchor=MSO_ANCHOR.MIDDLE)
         x += width
 
 
-# ══════════════════════════════════════════════════════════════════════════
+# ══════════════════════════════════════════════════════════════════════
 #  CONTENT DATA
-# ══════════════════════════════════════════════════════════════════════════
+# ══════════════════════════════════════════════════════════════════════
 
 CONTENT = {
     "ja": {
@@ -264,13 +271,13 @@ CONTENT = {
             "bar": "TokiStorageは技術・ユースケース・思想基盤・展開網の4つを「設計思想ごと」提供できる",
             "label": "Our Offering",
             "cards": [
-                ("\U0001F48E", "石英ガラス記録技術",
+                ("Q", "石英ガラス記録技術",
                  "金属蒸着によるQRコード刻印。サーバー・電源ゼロ。SLA 100%、1000年保証。スマホカメラで読取可能。"),
-                ("\U0001F4CA", "200+ ユースケース（業界別整理済み）",
+                ("U", "200+ ユースケース（業界別整理済み）",
                  "終活・婚礼・寺社・学校・企業・自治体・NGO・ホテル・航空。提案書にそのまま転用可能な粒度。"),
-                ("\U0001F4DD", "70+ 思想エッセイ（9領域）",
+                ("E", "70+ 思想エッセイ（9領域）",
                  "存在証明を心理学・宗教・経済・AI・宇宙まで展開。知的コンテンツとしてクライアント提案に活用可能。"),
-                ("\U0001F43E", "Pearl Soap + アンバサダー網",
+                ("A", "Pearl Soap + アンバサダー網",
                  "贈与経済の実践。全国にワークショップ展開可能な分散型運動体。エンドユーザーとの接点を提供。"),
             ],
             "footer": "TokiStorage \u2014 協業提案",
@@ -293,7 +300,7 @@ CONTENT = {
             "bar": "貴社のビジネスモデルに応じた3つの提携モデルを用意しており、段階的な移行も可能",
             "label": "Partnership Models",
             "models": [
-                ("紹介\nモデル", ACCENT,
+                ("紹介\nモデル", TOKI_BLUE,
                  "A. クライアント紹介型パートナーシップ",
                  "紹介ベースで連携。リファラルフィーをお支払い。クライアント対応・納品はTokiStorage側で完結。",
                  "例：終活コンサル→存在証明を提案 / 葬祭業DX→メモリアルオプション追加"),
@@ -313,7 +320,7 @@ CONTENT = {
             "label": "Revenue Flow",
             "flows": [
                 ("クライアント", "千年の存在証明\n社会的意義の実感", GREEN_PALE, EMERALD),
-                ("パートナー（貴社）", "紹介フィー or 共同提案収益\nクライアントLTV向上", ACCENT_PALE, ACCENT),
+                ("パートナー（貴社）", "紹介フィー or 共同提案収益\nクライアントLTV向上", TOKI_BLUE_PALE, TOKI_BLUE),
                 ("TokiStorage", "技術・思想・納品\n収益の一部→SoulCarrier活動", GOLD_PALE, RGBColor(0x92, 0x40, 0x0E)),
             ],
             "callout_title": "初期パートナー優遇",
@@ -325,12 +332,12 @@ CONTENT = {
             "label": "Client Fit",
             "lead": "貴社のクライアントポートフォリオに、以下のセクターはありませんか。",
             "sectors": [
-                ("\U0001F3E5", "葬祭・メモリアル", "墓じまい代替、永代供養デジタル化、遺族向け新サービス"),
-                ("\U0001F3E8", "ホスピタリティ", "ウェディング記録、ホテルCX、記念日サービス"),
-                ("\U0001F3DB", "宗教法人・寺社", "檀家記録の永続化、参拝体験DX、文化財保存"),
-                ("\U0001F3EC", "自治体・教育", "地域アーカイブ、災害記録、学校史の永続化"),
-                ("\U0001F30F", "ESG・サステナビリティ", "1000年設計の企業理念記録、SDGs実績の永続証明"),
-                ("\U0001F4BC", "金融・保険", "終活関連サービス連携、デジタル遺品対策"),
+                ("M", "葬祭・メモリアル", "墓じまい代替、永代供養デジタル化、遺族向け新サービス"),
+                ("H", "ホスピタリティ", "ウェディング記録、ホテルCX、記念日サービス"),
+                ("R", "宗教法人・寺社", "檀家記録の永続化、参拝体験DX、文化財保存"),
+                ("G", "自治体・教育", "地域アーカイブ、災害記録、学校史の永続化"),
+                ("E", "ESG・サステナビリティ", "1000年設計の企業理念記録、SDGs実績の永続証明"),
+                ("F", "金融・保険", "終活関連サービス連携、デジタル遺品対策"),
             ],
             "footer": "TokiStorage \u2014 協業提案",
         },
@@ -379,13 +386,13 @@ CONTENT = {
             "bar": "TokiStorage delivers technology, use cases, intellectual foundation, and distribution as a unified design philosophy",
             "label": "Our Offering",
             "cards": [
-                ("\U0001F48E", "Quartz glass recording",
+                ("Q", "Quartz glass recording",
                  "QR codes inscribed via metal deposition. Zero servers, zero power. SLA 100%, guaranteed 1,000 years. Readable by any smartphone camera."),
-                ("\U0001F4CA", "200+ use cases (organized by industry)",
+                ("U", "200+ use cases (organized by industry)",
                  "End-of-life, weddings, temples, schools, corporations, municipalities, NGOs, hotels, airlines. Ready for direct proposal integration."),
-                ("\U0001F4DD", "70+ philosophical essays (9 domains)",
+                ("E", "70+ philosophical essays (9 domains)",
                  "Proof of existence explored across psychology, religion, economics, AI, and space. Standalone intellectual content for client proposals."),
-                ("\U0001F43E", "Pearl Soap + Ambassador network",
+                ("A", "Pearl Soap + Ambassador network",
                  "A gift-economy practice and decentralized workshop network ready to scale nationwide. Direct end-user touchpoint."),
             ],
             "footer": "TokiStorage \u2014 Partnership Proposal",
@@ -408,7 +415,7 @@ CONTENT = {
             "bar": "Three partnership models tailored to your business model, with progressive escalation possible",
             "label": "Partnership Models",
             "models": [
-                ("Referral", ACCENT,
+                ("Referral", TOKI_BLUE,
                  "A. Client Referral Partnership",
                  "Introduce clients when TokiStorage fits. You receive a referral fee; we handle delivery end-to-end.",
                  "E.g.: End-of-life consulting \u2192 offer proof of existence / Funeral DX \u2192 add memorial option"),
@@ -428,7 +435,7 @@ CONTENT = {
             "label": "Revenue Flow",
             "flows": [
                 ("Client", "1,000-year proof of existence\nTangible social meaning", GREEN_PALE, EMERALD),
-                ("Partner (you)", "Referral fee or joint revenue\nClient LTV increase", ACCENT_PALE, ACCENT),
+                ("Partner (you)", "Referral fee or joint revenue\nClient LTV increase", TOKI_BLUE_PALE, TOKI_BLUE),
                 ("TokiStorage", "Technology & delivery\nRevenue \u2192 SoulCarrier mission", GOLD_PALE, RGBColor(0x92, 0x40, 0x0E)),
             ],
             "callout_title": "Early Partner Advantage",
@@ -440,12 +447,12 @@ CONTENT = {
             "label": "Client Fit",
             "lead": "Does your client portfolio include any of these sectors?",
             "sectors": [
-                ("\U0001F3E5", "Funeral & Memorial", "Gravestone alternatives, digital perpetual care, bereavement services"),
-                ("\U0001F3E8", "Hospitality", "Wedding records, hotel CX, anniversary services"),
-                ("\U0001F3DB", "Religious Institutions", "Perpetual congregation records, visitor DX, cultural preservation"),
-                ("\U0001F3EC", "Government & Education", "Community archives, disaster records, school history"),
-                ("\U0001F30F", "ESG & Sustainability", "1,000-year corporate purpose records, SDG impact proof"),
-                ("\U0001F4BC", "Finance & Insurance", "End-of-life service integration, digital estate"),
+                ("M", "Funeral & Memorial", "Gravestone alternatives, digital perpetual care, bereavement services"),
+                ("H", "Hospitality", "Wedding records, hotel CX, anniversary services"),
+                ("R", "Religious Institutions", "Perpetual congregation records, visitor DX, cultural preservation"),
+                ("G", "Government & Education", "Community archives, disaster records, school history"),
+                ("E", "ESG & Sustainability", "1,000-year corporate purpose records, SDG impact proof"),
+                ("F", "Finance & Insurance", "End-of-life service integration, digital estate"),
             ],
             "footer": "TokiStorage \u2014 Partnership Proposal",
         },
@@ -470,34 +477,30 @@ CONTENT = {
 }
 
 
-# ══════════════════════════════════════════════════════════════════════════
+# ══════════════════════════════════════════════════════════════════════
 #  SLIDE BUILDERS
-# ══════════════════════════════════════════════════════════════════════════
+# ══════════════════════════════════════════════════════════════════════
 
 def build_cover(prs, d):
     slide = add_blank_slide(prs)
     font = d["font"]
     c = d["cover"]
-    # Full navy background
-    add_rect(slide, 0, 0, SLIDE_W, SLIDE_H, fill=NAVY)
-    # Label
+    add_rect(slide, 0, 0, SLIDE_W, SLIDE_H, fill=DARK_BG)
     add_textbox(slide, Inches(1), Inches(0.8), Inches(5), Inches(0.3),
-                c["label"], font, 7, TEXT_LIGHT, align=PP_ALIGN.LEFT)
-    # Title
+                c["label"], font, 7, TEXT_MUTED, align=PP_ALIGN.LEFT)
     add_textbox(slide, Inches(1), Inches(1.5), Inches(8), Inches(1.2),
                 c["title"], font, 22, WHITE, bold=True)
-    # Subtitle
     add_textbox(slide, Inches(1), Inches(2.9), Inches(7), Inches(0.8),
                 c["sub"], font, 10, RGBColor(0xBB, 0xBB, 0xCC))
-    # Bottom bar
+    # Bottom accent line
     stripe_y = SLIDE_H - Inches(0.6)
-    add_rect(slide, 0, stripe_y, SLIDE_W, Inches(0.04), fill=ACCENT)
+    add_rect(slide, 0, stripe_y, SLIDE_W, Inches(0.03), fill=TOKI_BLUE)
     add_textbox(slide, Inches(0.5), stripe_y + Inches(0.08), Inches(3), Inches(0.3),
-                c["org"], font, 6.5, TEXT_LIGHT)
+                c["org"], font, 6.5, TEXT_MUTED)
     add_textbox(slide, Inches(4), stripe_y + Inches(0.08), Inches(2), Inches(0.3),
-                c["product"], font, 6.5, TEXT_LIGHT, align=PP_ALIGN.CENTER)
+                c["product"], font, 6.5, TEXT_MUTED, align=PP_ALIGN.CENTER)
     add_textbox(slide, SLIDE_W - Inches(2), stripe_y + Inches(0.08), Inches(1.5), Inches(0.3),
-                "Confidential", font, 6.5, TEXT_LIGHT, align=PP_ALIGN.RIGHT)
+                "Confidential", font, 6.5, TEXT_MUTED, align=PP_ALIGN.RIGHT)
 
 
 def build_slide2(prs, d):
@@ -507,7 +510,6 @@ def build_slide2(prs, d):
     s = d["s2"]
     add_action_bar(slide, s["bar"], font)
     add_section_label(slide, s["label"], font, Inches(0.7))
-
     card_w = Inches(2.85)
     card_h = Inches(3.6)
     gap = Inches(0.23)
@@ -516,7 +518,6 @@ def build_slide2(prs, d):
     for i, (num, title, body) in enumerate(s["cards"]):
         x = start_x + i * (card_w + gap)
         draw_col_card(slide, x, y, card_w, card_h, num, title, body, font)
-
     add_footer(slide, s["footer"], 2, font)
 
 
@@ -527,7 +528,6 @@ def build_slide3(prs, d):
     s = d["s3"]
     add_action_bar(slide, s["bar"], font)
     add_section_label(slide, s["label"], font, Inches(0.7))
-
     card_w = Inches(4.3)
     card_h = Inches(1.7)
     gap_x = Inches(0.25)
@@ -540,7 +540,6 @@ def build_slide3(prs, d):
         x = start_x + col * (card_w + gap_x)
         y = start_y + row * (card_h + gap_y)
         draw_grid_card(slide, x, y, card_w, card_h, icon, title, body, font)
-
     add_footer(slide, s["footer"], 3, font)
 
 
@@ -551,7 +550,6 @@ def build_slide4(prs, d):
     s = d["s4"]
     add_action_bar(slide, s["bar"], font)
     add_section_label(slide, s["label"], font, Inches(0.7))
-
     y = Inches(1.0)
     row_h = Inches(0.38)
     draw_table_row(slide, y, row_h, s["headers"], font, is_header=True)
@@ -559,7 +557,6 @@ def build_slide4(prs, d):
     for cells in s["rows"]:
         draw_table_row(slide, y, row_h, cells, font, is_first_col_header=True)
         y += row_h
-
     add_footer(slide, s["footer"], 4, font)
 
 
@@ -570,7 +567,6 @@ def build_slide5(prs, d):
     s = d["s5"]
     add_action_bar(slide, s["bar"], font)
     add_section_label(slide, s["label"], font, Inches(0.7))
-
     item_w = Inches(8.6)
     item_h = Inches(0.75)
     gap = Inches(0.12)
@@ -579,7 +575,6 @@ def build_slide5(prs, d):
     for i, (badge, color, title, body, ex) in enumerate(s["models"]):
         y = start_y + i * (item_h + gap)
         draw_model_item(slide, x, y, item_w, item_h, badge, color, title, body, ex, font)
-
     add_footer(slide, s["footer"], 5, font)
 
 
@@ -590,34 +585,28 @@ def build_slide6(prs, d):
     s = d["s6"]
     add_action_bar(slide, s["bar"], font)
     add_section_label(slide, s["label"], font, Inches(0.7))
-
-    # Flow boxes
     box_w = Inches(2.4)
     box_h = Inches(0.85)
     gap = Inches(0.5)
     total = 3 * box_w + 2 * gap
     start_x = (SLIDE_W - total) / 2
     y = Inches(1.2)
-
     for i, (title, body, bg, tc) in enumerate(s["flows"]):
         x = start_x + i * (box_w + gap)
         draw_flow_box(slide, x, y, box_w, box_h, title, body, bg, tc, font)
         if i < 2:
             arrow_x = x + box_w + Inches(0.1)
             add_textbox(slide, arrow_x, y + Inches(0.2), Inches(0.3), Inches(0.3),
-                        "\u2190", font, 14, TEXT_LIGHT, align=PP_ALIGN.CENTER)
-
-    # Callout
+                        "\u2190", font, 14, TEXT_MUTED, align=PP_ALIGN.CENTER)
+    # Callout (left accent stripe only, no outer border)
     cx, cy = Inches(0.5), Inches(2.4)
     cw, ch = Inches(8.6), Inches(1.0)
-    add_rect(slide, cx, cy, cw, ch, fill=ACCENT_PALE, border_color=ACCENT, border_width=Pt(2))
-    # Left accent stripe
-    add_rect(slide, cx, cy, Inches(0.06), ch, fill=ACCENT)
+    add_rect(slide, cx, cy, cw, ch, fill=TOKI_BLUE_PALE)
+    add_rect(slide, cx, cy, Inches(0.05), ch, fill=TOKI_BLUE)
     add_textbox(slide, cx + Inches(0.2), cy + Inches(0.08), cw - Inches(0.3), Inches(0.22),
-                s["callout_title"], font, 7.5, TEXT_DARK, bold=True)
+                s["callout_title"], font, 7.5, TEXT_PRIMARY, bold=True)
     add_textbox(slide, cx + Inches(0.2), cy + Inches(0.32), cw - Inches(0.3), ch - Inches(0.4),
-                s["callout_body"], font, 6.5, TEXT_MID)
-
+                s["callout_body"], font, 6.5, TEXT_SECONDARY)
     add_footer(slide, s["footer"], 6, font)
 
 
@@ -629,8 +618,7 @@ def build_slide7(prs, d):
     add_action_bar(slide, s["bar"], font)
     add_section_label(slide, s["label"], font, Inches(0.7))
     add_textbox(slide, Inches(0.5), Inches(0.95), Inches(8), Inches(0.25),
-                s["lead"], font, 8, TEXT_MID)
-
+                s["lead"], font, 8, TEXT_SECONDARY)
     card_w = Inches(2.85)
     card_h = Inches(1.45)
     gap_x = Inches(0.23)
@@ -643,7 +631,6 @@ def build_slide7(prs, d):
         x = start_x + col * (card_w + gap_x)
         y = start_y + row * (card_h + gap_y)
         draw_sector_card(slide, x, y, card_w, card_h, icon, title, body, font)
-
     add_footer(slide, s["footer"], 7, font)
 
 
@@ -654,50 +641,41 @@ def build_slide8(prs, d):
     s = d["s8"]
     add_action_bar(slide, s["bar"], font)
     add_section_label(slide, s["label"], font, Inches(0.7))
-
     # Avatar circle
     ax, ay = Inches(0.5), Inches(1.0)
-    avatar = add_rect(slide, ax, ay, Inches(0.6), Inches(0.6), fill=NAVY)
-    # use oval
     avatar = slide.shapes.add_shape(MSO_SHAPE.OVAL, ax, ay, Inches(0.6), Inches(0.6))
     avatar.fill.solid()
-    avatar.fill.fore_color.rgb = NAVY
+    avatar.fill.fore_color.rgb = DARK_BG
     avatar.line.fill.background()
     initials = "佐" if d is CONTENT["ja"] else "TS"
     add_textbox(slide, ax, ay, Inches(0.6), Inches(0.6),
                 initials, font, 12, WHITE, bold=True, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
-
-    # Name
     add_textbox(slide, Inches(1.25), Inches(1.0), Inches(7), Inches(0.25),
-                s["name"], font, 8, TEXT_DARK, bold=True)
-    # Bio
+                s["name"], font, 8, TEXT_PRIMARY, bold=True)
     add_textbox(slide, Inches(1.25), Inches(1.28), Inches(7.5), Inches(0.95),
-                s["bio"], font, 6.5, TEXT_MID)
-
+                s["bio"], font, 6.5, TEXT_SECONDARY)
     # Tags
     tag_x = Inches(1.25)
     tag_y = Inches(2.2)
     for tag in s["tags"]:
         tw = Inches(len(tag) * 0.085 + 0.25)
-        add_rect(slide, tag_x, tag_y, tw, Inches(0.22), fill=BG_ALT, border_color=BORDER)
+        add_rect(slide, tag_x, tag_y, tw, Inches(0.22), fill=BG_SECTION, border_color=BORDER)
         add_textbox(slide, tag_x + Inches(0.05), tag_y, tw - Inches(0.1), Inches(0.22),
-                    tag, font, 5.5, TEXT_MID, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
+                    tag, font, 5.5, TEXT_SECONDARY, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
         tag_x += tw + Inches(0.08)
         if tag_x > Inches(8.5):
             tag_x = Inches(1.25)
             tag_y += Inches(0.28)
-
-    # Independence callout
+    # Independence callout (left accent stripe only, no outer border)
     cy = Inches(2.6)
     cw, ch = Inches(8.6), Inches(0.8)
     cx = Inches(0.5)
-    add_rect(slide, cx, cy, cw, ch, fill=ACCENT_PALE, border_color=ACCENT, border_width=Pt(2))
-    add_rect(slide, cx, cy, Inches(0.06), ch, fill=ACCENT)
+    add_rect(slide, cx, cy, cw, ch, fill=TOKI_BLUE_PALE)
+    add_rect(slide, cx, cy, Inches(0.05), ch, fill=TOKI_BLUE)
     add_textbox(slide, cx + Inches(0.2), cy + Inches(0.06), cw - Inches(0.3), Inches(0.2),
-                s["ind_title"], font, 7, TEXT_DARK, bold=True)
+                s["ind_title"], font, 7, TEXT_PRIMARY, bold=True)
     add_textbox(slide, cx + Inches(0.2), cy + Inches(0.28), cw - Inches(0.3), ch - Inches(0.35),
-                s["ind_body"], font, 6.5, TEXT_MID)
-
+                s["ind_body"], font, 6.5, TEXT_SECONDARY)
     add_footer(slide, s["footer"], 8, font)
 
 
@@ -706,33 +684,27 @@ def build_slide9(prs, d):
     slide = add_blank_slide(prs)
     font = d["font"]
     s = d["s9"]
-    # Full navy background
-    add_rect(slide, 0, 0, SLIDE_W, SLIDE_H, fill=NAVY)
-    # Action bar style top
+    add_rect(slide, 0, 0, SLIDE_W, SLIDE_H, fill=DARK_BG)
     add_textbox(slide, Inches(0.5), Inches(0.15), Inches(3), Inches(0.35),
                 s["bar"], font, 9, WHITE, bold=True)
-
-    # Title
     add_textbox(slide, Inches(1), Inches(1.5), Inches(8), Inches(1.0),
                 s["title"], font, 18, WHITE, bold=True, align=PP_ALIGN.CENTER)
-    # Subtitle
     add_textbox(slide, Inches(1.5), Inches(2.8), Inches(7), Inches(1.0),
                 s["sub"], font, 9, RGBColor(0xBB, 0xBB, 0xCC), align=PP_ALIGN.CENTER)
-
     # Footer
     stripe_y = SLIDE_H - Inches(0.5)
-    add_rect(slide, 0, stripe_y - Inches(0.04), SLIDE_W, Pt(0.5), fill=RGBColor(0x22, 0x33, 0x44))
+    add_rect(slide, 0, stripe_y - Inches(0.03), SLIDE_W, Pt(0.5), fill=RGBColor(0x33, 0x44, 0x55))
     add_textbox(slide, Inches(0.5), stripe_y, Inches(4), Inches(0.3),
-                s["footer_left"], font, 6.5, TEXT_LIGHT)
+                s["footer_left"], font, 6.5, TEXT_MUTED)
     add_textbox(slide, Inches(4), stripe_y, Inches(2), Inches(0.3),
-                "Confidential", font, 6.5, TEXT_LIGHT, align=PP_ALIGN.CENTER)
+                "Confidential", font, 6.5, TEXT_MUTED, align=PP_ALIGN.CENTER)
     add_textbox(slide, SLIDE_W - Inches(1), stripe_y, Inches(0.5), Inches(0.3),
-                "9", font, 6.5, TEXT_LIGHT, bold=True, align=PP_ALIGN.RIGHT)
+                "9", font, 6.5, TEXT_MUTED, bold=True, align=PP_ALIGN.RIGHT)
 
 
-# ══════════════════════════════════════════════════════════════════════════
+# ══════════════════════════════════════════════════════════════════════
 #  MAIN
-# ══════════════════════════════════════════════════════════════════════════
+# ══════════════════════════════════════════════════════════════════════
 
 def generate(lang):
     d = CONTENT[lang]
