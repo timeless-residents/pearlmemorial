@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partnership Deck | TokiStorage</title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="TokiStorage partnership proposal slide deck. For consulting firms and enterprises.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0F172A;
+            --navy-light: #1E293B;
+            --blue: #2563EB;
+            --blue-pale: #EFF6FF;
+            --gold: #C9A962;
+            --gold-pale: #FDF8E8;
+            --emerald: #059669;
+            --emerald-pale: #ECFDF5;
+            --slate-700: #334155;
+            --slate-500: #64748B;
+            --slate-400: #94A3B8;
+            --slate-300: #CBD5E1;
+            --slate-200: #E2E8F0;
+            --slate-100: #F1F5F9;
+            --white: #FFFFFF;
+            --font-display: 'Shippori Mincho', serif;
+            --font-body: 'Zen Kaku Gothic New', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-snap-type: y mandatory; }
+
+        body {
+            font-family: var(--font-body);
+            font-weight: 400;
+            background: var(--navy);
+            color: var(--slate-700);
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        /* ── Toolbar ── */
+        .deck-toolbar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            background: rgba(15, 23, 42, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            padding: 0.5rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .deck-brand {
+            font-family: var(--font-display);
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--gold);
+            text-decoration: none;
+            letter-spacing: 0.05em;
+        }
+        .deck-tools {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .deck-tools a, .deck-tools button {
+            font-family: var(--font-body);
+            font-size: 0.7rem;
+            color: var(--slate-400);
+            text-decoration: none;
+            padding: 0.3rem 0.8rem;
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 4px;
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .deck-tools a:hover, .deck-tools button:hover {
+            color: var(--white);
+            border-color: rgba(255,255,255,0.4);
+        }
+        .deck-tools .btn-pdf {
+            color: var(--gold);
+            border-color: var(--gold);
+        }
+        .deck-tools .btn-pdf:hover {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        /* ── Slide ── */
+        .slide {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            scroll-snap-align: start;
+            overflow: hidden;
+        }
+        .slide-inner {
+            width: 100%;
+            max-width: 960px;
+            padding: 5rem 3rem 3rem;
+        }
+
+        .slide-num {
+            position: absolute;
+            bottom: 2rem;
+            right: 3rem;
+            font-size: 0.65rem;
+            color: rgba(255,255,255,0.2);
+            letter-spacing: 0.1em;
+        }
+        .slide.light .slide-num { color: rgba(0,0,0,0.12); }
+
+        .slide.dark { background: var(--navy); color: var(--white); }
+        .slide.dark-alt { background: var(--navy-light); color: var(--white); }
+        .slide.light { background: var(--white); color: var(--slate-700); }
+        .slide.light-alt { background: var(--slate-100); color: var(--slate-700); }
+        .slide.accent { background: linear-gradient(135deg, var(--navy) 0%, #1a2744 100%); color: var(--white); }
+
+        /* ── Typography ── */
+        .slide-label {
+            font-size: 0.6rem;
+            font-weight: 700;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            color: var(--gold);
+        }
+        .slide.light .slide-label,
+        .slide.light-alt .slide-label { color: var(--blue); }
+
+        .slide-title {
+            font-family: var(--font-display);
+            font-size: 2.4rem;
+            font-weight: 700;
+            line-height: 1.4;
+            margin-bottom: 1.5rem;
+        }
+        .slide.dark .slide-title,
+        .slide.dark-alt .slide-title,
+        .slide.accent .slide-title { color: var(--white); }
+        .slide.light .slide-title,
+        .slide.light-alt .slide-title { color: var(--navy); }
+
+        .slide-subtitle {
+            font-size: 1rem;
+            line-height: 2;
+            max-width: 680px;
+        }
+        .slide.dark .slide-subtitle,
+        .slide.dark-alt .slide-subtitle,
+        .slide.accent .slide-subtitle { color: var(--slate-400); }
+        .slide.light .slide-subtitle,
+        .slide.light-alt .slide-subtitle { color: var(--slate-500); }
+
+        .slide-subtitle strong { color: var(--gold); }
+        .slide.light .slide-subtitle strong,
+        .slide.light-alt .slide-subtitle strong { color: var(--blue); }
+
+        .slide-lead {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 500;
+            line-height: 1.9;
+            margin-bottom: 2.5rem;
+        }
+        .slide.dark .slide-lead { color: var(--slate-300); }
+        .slide.light .slide-lead,
+        .slide.light-alt .slide-lead { color: var(--slate-500); }
+
+        /* ── Cards ── */
+        .card-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 0.5rem;
+        }
+        .card-row.cols-2 { grid-template-columns: repeat(2, 1fr); }
+        .card-row.cols-4 { grid-template-columns: repeat(2, 1fr); }
+
+        .dk-card {
+            border-radius: 12px;
+            padding: 1.8rem;
+        }
+        .slide.dark .dk-card,
+        .slide.dark-alt .dk-card {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+        .slide.light .dk-card,
+        .slide.light-alt .dk-card {
+            background: var(--white);
+            border: 1px solid var(--slate-200);
+        }
+        .slide.light-alt .dk-card { background: var(--white); }
+
+        .dk-card-num {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .slide.dark .dk-card-num { color: var(--gold); }
+        .slide.light .dk-card-num,
+        .slide.light-alt .dk-card-num { color: var(--blue); }
+
+        .dk-card h3 {
+            font-family: var(--font-display);
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .slide.dark .dk-card h3,
+        .slide.dark-alt .dk-card h3 { color: var(--white); }
+        .slide.light .dk-card h3,
+        .slide.light-alt .dk-card h3 { color: var(--navy); }
+
+        .dk-card p {
+            font-size: 0.8rem;
+            line-height: 1.7;
+        }
+        .slide.dark .dk-card p,
+        .slide.dark-alt .dk-card p { color: var(--slate-400); }
+        .slide.light .dk-card p,
+        .slide.light-alt .dk-card p { color: var(--slate-500); }
+
+        .dk-card-icon {
+            font-size: 1.6rem;
+            margin-bottom: 0.75rem;
+        }
+
+        /* ── Table ── */
+        .dk-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            margin-top: 1.5rem;
+        }
+        .dk-table th, .dk-table td {
+            padding: 0.8rem 1rem;
+            text-align: left;
+        }
+        .slide.dark .dk-table th,
+        .slide.dark-alt .dk-table th {
+            font-family: var(--font-display);
+            font-weight: 600;
+            color: var(--slate-300);
+            font-size: 0.75rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .slide.dark .dk-table thead th,
+        .slide.dark-alt .dk-table thead th {
+            border-bottom: 2px solid rgba(255,255,255,0.15);
+            color: var(--gold);
+        }
+        .slide.dark .dk-table td,
+        .slide.dark-alt .dk-table td {
+            color: var(--slate-400);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .slide.dark .dk-table .hl,
+        .slide.dark-alt .dk-table .hl {
+            color: var(--gold);
+            font-weight: 500;
+        }
+        .slide.light .dk-table th,
+        .slide.light-alt .dk-table th {
+            font-family: var(--font-display);
+            font-weight: 600;
+            color: var(--slate-700);
+            font-size: 0.75rem;
+            border-bottom: 1px solid var(--slate-200);
+        }
+        .slide.light .dk-table thead th,
+        .slide.light-alt .dk-table thead th {
+            border-bottom: 2px solid var(--slate-200);
+            color: var(--blue);
+        }
+        .slide.light .dk-table td,
+        .slide.light-alt .dk-table td {
+            color: var(--slate-500);
+            border-bottom: 1px solid var(--slate-100);
+        }
+        .slide.light .dk-table .hl,
+        .slide.light-alt .dk-table .hl {
+            color: var(--blue);
+            font-weight: 500;
+        }
+
+        /* ── Model badges ── */
+        .model-row {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            margin-top: 1rem;
+        }
+        .model-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.2rem;
+        }
+        .model-badge {
+            flex-shrink: 0;
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-body);
+            font-size: 0.55rem;
+            font-weight: 700;
+            text-align: center;
+            line-height: 1.3;
+            color: var(--white);
+        }
+        .model-badge.blue { background: var(--blue); }
+        .model-badge.gold { background: var(--gold); }
+        .model-badge.emerald { background: var(--emerald); }
+        .model-text h4 {
+            font-family: var(--font-display);
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+        }
+        .model-text p {
+            font-size: 0.8rem;
+            line-height: 1.7;
+        }
+        .slide.dark .model-text h4 { color: var(--white); }
+        .slide.dark .model-text p { color: var(--slate-400); }
+        .slide.light .model-text h4 { color: var(--navy); }
+        .slide.light .model-text p { color: var(--slate-500); }
+        .model-ex {
+            font-size: 0.75rem;
+            color: var(--blue);
+            margin-top: 0.3rem;
+        }
+        .slide.dark .model-ex { color: var(--gold); }
+
+        /* ── Revenue flow ── */
+        .flow-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+            margin: 2.5rem 0 1.5rem;
+            flex-wrap: wrap;
+        }
+        .flow-box {
+            text-align: center;
+            padding: 1.5rem 2rem;
+            border-radius: 12px;
+            min-width: 160px;
+        }
+        .flow-box h4 {
+            font-family: var(--font-display);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+        .flow-box p {
+            font-size: 0.75rem;
+            line-height: 1.6;
+        }
+        .flow-box.fc { background: var(--emerald-pale); }
+        .flow-box.fc h4 { color: var(--emerald); }
+        .flow-box.fc p { color: var(--slate-500); }
+        .flow-box.fp { background: var(--blue-pale); }
+        .flow-box.fp h4 { color: var(--blue); }
+        .flow-box.fp p { color: var(--slate-500); }
+        .flow-box.ft { background: var(--gold-pale); }
+        .flow-box.ft h4 { color: #92400E; }
+        .flow-box.ft p { color: var(--slate-500); }
+        .flow-arrow {
+            font-size: 1.5rem;
+            color: var(--slate-300);
+            padding: 0 0.75rem;
+        }
+
+        /* ── Sector grid ── */
+        .sector-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .sector-card {
+            border-radius: 10px;
+            padding: 1.3rem;
+            text-align: center;
+        }
+        .slide.dark .sector-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); }
+        .slide.light-alt .sector-card { background: var(--white); border: 1px solid var(--slate-200); }
+        .sector-icon { font-size: 1.6rem; margin-bottom: 0.5rem; }
+        .sector-card h4 {
+            font-family: var(--font-display);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        .slide.dark .sector-card h4 { color: var(--white); }
+        .slide.light-alt .sector-card h4 { color: var(--navy); }
+        .sector-card p { font-size: 0.7rem; line-height: 1.5; }
+        .slide.dark .sector-card p { color: var(--slate-400); }
+        .slide.light-alt .sector-card p { color: var(--slate-500); }
+
+        /* ── Founder ── */
+        .founder-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+        .founder-avatar {
+            flex-shrink: 0;
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            background: var(--blue);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        .founder-info h4 {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .slide.dark .founder-info h4 { color: var(--white); }
+        .founder-info p {
+            font-size: 0.85rem;
+            line-height: 1.8;
+        }
+        .slide.dark .founder-info p { color: var(--slate-400); }
+        .tag-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-top: 0.75rem;
+        }
+        .tag-pill {
+            font-size: 0.65rem;
+            padding: 0.25rem 0.7rem;
+            border-radius: 4px;
+        }
+        .slide.dark .tag-pill {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: var(--slate-400);
+        }
+
+        /* ── CTA slide ── */
+        .cta-center {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .cta-center .slide-title {
+            font-size: 2rem;
+        }
+        .cta-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        .cta-links a {
+            font-size: 0.8rem;
+            color: var(--gold);
+            text-decoration: none;
+            padding: 0.5rem 1.2rem;
+            border: 1px solid var(--gold);
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+        .cta-links a:hover {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        /* ── Callout ── */
+        .callout {
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        .callout.blue-accent {
+            background: rgba(37, 99, 235, 0.08);
+            border-left: 4px solid var(--blue);
+        }
+        .slide.dark .callout.blue-accent {
+            background: rgba(37, 99, 235, 0.12);
+        }
+        .callout h4 {
+            font-family: var(--font-display);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+        }
+        .slide.dark .callout h4 { color: var(--white); }
+        .slide.light .callout h4 { color: var(--navy); }
+        .callout p {
+            font-size: 0.8rem;
+            line-height: 1.7;
+        }
+        .slide.dark .callout p { color: var(--slate-400); }
+        .slide.light .callout p { color: var(--slate-500); }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+            .slide-inner { padding: 4.5rem 1.5rem 2rem; }
+            .slide-title { font-size: 1.6rem; }
+            .card-row { grid-template-columns: 1fr; }
+            .card-row.cols-4 { grid-template-columns: 1fr; }
+            .sector-grid { grid-template-columns: 1fr 1fr; }
+            .flow-row { flex-direction: column; gap: 0.5rem; }
+            .flow-arrow { transform: rotate(90deg); }
+            .founder-row { flex-direction: column; }
+            .model-item { flex-direction: column; gap: 0.75rem; }
+            .model-badge { width: auto; height: auto; padding: 0.4rem 1rem; border-radius: 6px; }
+            .deck-toolbar .deck-brand { font-size: 0.7rem; }
+            .dk-table { font-size: 0.75rem; }
+            .dk-table th, .dk-table td { padding: 0.5rem; }
+        }
+
+        /* ── Print / PDF ── */
+        @media print {
+            html { scroll-snap-type: none; }
+            .deck-toolbar { display: none; }
+            .slide {
+                min-height: auto;
+                height: auto;
+                page-break-after: always;
+                page-break-inside: avoid;
+                padding: 2rem 0;
+            }
+            .slide:last-child { page-break-after: auto; }
+            .slide-inner { padding: 1.5rem 2rem; max-width: 100%; }
+            .slide-num { display: none; }
+            body { background: white; }
+            .slide.dark, .slide.dark-alt, .slide.accent {
+                background: var(--navy) !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .slide.light, .slide.light-alt {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .dk-card, .sector-card, .flow-box, .callout, .model-badge, .founder-avatar, .tag-pill {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+
+        @page {
+            size: A4 landscape;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Toolbar -->
+<nav class="deck-toolbar">
+    <a href="partnership-en.html" class="deck-brand">TOKISTORAGE ── Partnership Proposal</a>
+    <div class="deck-tools">
+        <a href="deck.html">JP</a>
+        <a href="partnership-en.html">Full Version</a>
+        <button class="btn-pdf" onclick="window.print()">Download PDF</button>
+    </div>
+</nav>
+
+<!-- ═══════════════════════════════════════
+     SLIDE 01 — COVER
+     ═══════════════════════════════════════ -->
+<section class="slide accent" id="s1">
+    <div class="slide-inner" style="text-align: center;">
+        <p class="slide-label">Partnership Proposal</p>
+        <h1 class="slide-title" style="font-size: 2.8rem;">Bring your clients<br>1,000-year proof of existence.</h1>
+        <p class="slide-subtitle" style="max-width: 560px; margin: 0 auto;">
+            The technology is ready. Over 200 use cases mapped.<br>
+            What's missing is the <strong>delivery network</strong>.
+        </p>
+        <p style="margin-top: 3rem; font-size: 0.7rem; color: var(--slate-400); letter-spacing: 0.1em;">
+            Universal Need Inc. &nbsp;|&nbsp; TokiStorage &nbsp;|&nbsp; Confidential
+        </p>
+    </div>
+    <span class="slide-num">01</span>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SLIDE 02 — PROBLEM
+     ═══════════════════════════════════════ -->
+<section class="slide light" id="s2">
+    <div class="slide-inner">
+        <p class="slide-label">Background</p>
+        <h2 class="slide-title">The hidden challenge<br>your clients face</h2>
+        <p class="slide-lead">Beyond AI, DX, and ESG lies a more fundamental question</p>
+
+        <div class="card-row">
+            <div class="dk-card">
+                <div class="dk-card-num">01</div>
+                <h3>Digital is optimized for "now"</h3>
+                <p>Cloud and social platforms excel at everyday recording. But 100- or 1,000-year preservation is not in their design scope. Different time horizons need different architectures.</p>
+            </div>
+            <div class="dk-card">
+                <div class="dk-card-num">02</div>
+                <h3>End-of-life is now societal</h3>
+                <p>Tens of thousands of graves go unclaimed each year. By 2040, single-person households will exceed 40%. "Who preserves memory?" is now a social question.</p>
+            </div>
+            <div class="dk-card">
+                <div class="dk-card-num">03</div>
+                <h3>The millennium layer is missing</h3>
+                <p>Digital estate management, AI recreations — the market is booming. Yet every solution sits on existing infrastructure. A complementary millennium layer is needed.</p>
+            </div>
+        </div>
+    </div>
+    <span class="slide-num">02</span>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SLIDE 03 — SOLUTION
+     ═══════════════════════════════════════ -->
+<section class="slide dark" id="s3">
+    <div class="slide-inner">
+        <p class="slide-label">Solution</p>
+        <h2 class="slide-title">What TokiStorage<br>brings to the table</h2>
+        <p class="slide-lead">Not just technology — an entire design philosophy, ready to deploy</p>
+
+        <div class="card-row cols-4">
+            <div class="dk-card">
+                <div class="dk-card-icon">&#x1F48E;</div>
+                <h3>Quartz glass recording</h3>
+                <p>QR codes via metal deposition. Zero servers, zero power. SLA 100%, guaranteed 1,000 years.</p>
+            </div>
+            <div class="dk-card">
+                <div class="dk-card-icon">&#x1F4CA;</div>
+                <h3>200+ use cases</h3>
+                <p>End-of-life, weddings, temples, schools, corporations, municipalities, NGOs, hotels, airlines — organized by industry.</p>
+            </div>
+            <div class="dk-card">
+                <div class="dk-card-icon">&#x1F4DD;</div>
+                <h3>70+ philosophical essays</h3>
+                <p>Proof of existence explored across 9 domains: psychology, religion, economics, AI, space. Standalone intellectual content.</p>
+            </div>
+            <div class="dk-card">
+                <div class="dk-card-icon">&#x1F43E;</div>
+                <h3>Pearl Soap + Ambassador network</h3>
+                <p>A gift-economy practice and decentralized workshop network ready to scale nationwide.</p>
+            </div>
+        </div>
+    </div>
+    <span class="slide-num">03</span>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SLIDE 04 — DIFFERENTIATOR
+     ═══════════════════════════════════════ -->
+<section class="slide light-alt" id="s4">
+    <div class="slide-inner">
+        <p class="slide-label">Positioning</p>
+        <h2 class="slide-title">Why partner with us</h2>
+        <p class="slide-lead">A complementary "millennium layer" for today's digital services</p>
+
+        <table class="dk-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Digital services (everyday records)</th>
+                    <th>TokiStorage (millennium records)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Medium</th>
+                    <td>Cloud / HDD</td>
+                    <td class="hl">Quartz glass (physical)</td>
+                </tr>
+                <tr>
+                    <th>Best time horizon</th>
+                    <td>Now to decades</td>
+                    <td class="hl">100–1,000 years</td>
+                </tr>
+                <tr>
+                    <th>Infrastructure</th>
+                    <td>Servers &amp; power</td>
+                    <td class="hl">None required (GitHub distributed)</td>
+                </tr>
+                <tr>
+                    <th>Reading</th>
+                    <td>App / login required</td>
+                    <td class="hl">Any smartphone camera</td>
+                </tr>
+                <tr>
+                    <th>Cultural depth</th>
+                    <td>Functionality &amp; convenience</td>
+                    <td class="hl">70+ essays + gift economy</td>
+                </tr>
+                <tr>
+                    <th>Social connection</th>
+                    <td>Platform-level contribution</td>
+                    <td class="hl">SoulCarrier mission</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <span class="slide-num">04</span>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SLIDE 05 — PARTNERSHIP MODELS
+     ═══════════════════════════════════════ -->
+<section class="slide dark-alt" id="s5">
+    <div class="slide-inner">
+        <p class="slide-label">Partnership Models</p>
+        <h2 class="slide-title">Three ways to<br>work together</h2>
+        <p class="slide-lead">Tailored to your business model</p>
+
+        <div class="model-row">
+            <div class="model-item">
+                <div class="model-badge blue">Referral</div>
+                <div class="model-text">
+                    <h4>Client Referral Partnership</h4>
+                    <p>Introduce clients when TokiStorage fits. You receive a referral fee; we handle delivery end-to-end.</p>
+                    <p class="model-ex">E.g.: End-of-life consulting &rarr; offer proof of existence, funeral DX &rarr; add memorial option</p>
+                </div>
+            </div>
+            <div class="model-item">
+                <div class="model-badge gold">Joint</div>
+                <div class="model-text">
+                    <h4>Joint Solution Partnership</h4>
+                    <p>Embed TokiStorage into your consulting engagements. Position millennium records as the "outcome layer" of ESG, revitalization, or DX projects.</p>
+                    <p class="model-ex">E.g.: Municipal DX &rarr; community archive, hotel CX &rarr; guest record upgrade</p>
+                </div>
+            </div>
+            <div class="model-item">
+                <div class="model-badge emerald">Co-Create</div>
+                <div class="model-text">
+                    <h4>New Business Co-Creation</h4>
+                    <p>Launch a new venture together. We bring technology, philosophy, and use cases. You bring market access, credibility, and scale.</p>
+                    <p class="model-ex">E.g.: Memorial-tech startup, enterprise perpetual archive service</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <span class="slide-num">05</span>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SLIDE 06 — REVENUE FLOW
+     ═══════════════════════════════════════ -->
+<section class="slide light" id="s6">
+    <div class="slide-inner">
+        <p class="slide-label">Revenue</p>
+        <h2 class="slide-title">Revenue flow</h2>
+        <p class="slide-lead">Designed so all three parties win</p>
+
+        <div class="flow-row">
+            <div class="flow-box fc">
+                <h4>Client</h4>
+                <p>1,000-year proof of existence<br>Tangible social meaning</p>
+            </div>
+            <span class="flow-arrow">&larr;</span>
+            <div class="flow-box fp">
+                <h4>Partner (you)</h4>
+                <p>Referral fee or joint revenue<br>Client LTV increase</p>
+            </div>
+            <span class="flow-arrow">&larr;</span>
+            <div class="flow-box ft">
+                <h4>TokiStorage</h4>
+                <p>Technology &amp; delivery<br>Revenue &rarr; SoulCarrier mission</p>
+            </div>
+        </div>
+
+        <div class="callout blue-accent">
+            <h4>Early Partner Advantage</h4>
+            <p>The first firm to partner receives preferential terms — including priority referral conditions and potential regional exclusivity. Early movers shape the partnership.</p>
+        </div>
+    </div>
+    <span class="slide-num">06</span>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SLIDE 07 — CLIENT SECTORS
+     ═══════════════════════════════════════ -->
+<section class="slide dark" id="s7">
+    <div class="slide-inner">
+        <p class="slide-label">Client Fit</p>
+        <h2 class="slide-title">High-affinity<br>client sectors</h2>
+        <p class="slide-lead">Does your client portfolio include any of these?</p>
+
+        <div class="sector-grid">
+            <div class="sector-card">
+                <div class="sector-icon">&#x1F3E5;</div>
+                <h4>Funeral &amp; Memorial</h4>
+                <p>Gravestone alternatives, digital perpetual care</p>
+            </div>
+            <div class="sector-card">
+                <div class="sector-icon">&#x1F3E8;</div>
+                <h4>Hospitality</h4>
+                <p>Wedding records, hotel CX</p>
+            </div>
+            <div class="sector-card">
+                <div class="sector-icon">&#x1F3DB;</div>
+                <h4>Religious Institutions</h4>
+                <p>Perpetual records, cultural preservation</p>
+            </div>
+            <div class="sector-card">
+                <div class="sector-icon">&#x1F3EC;</div>
+                <h4>Government &amp; Education</h4>
+                <p>Community archives, disaster records</p>
+            </div>
+            <div class="sector-card">
+                <div class="sector-icon">&#x1F30F;</div>
+                <h4>ESG &amp; Sustainability</h4>
+                <p>Corporate purpose records, SDG proof</p>
+            </div>
+            <div class="sector-card">
+                <div class="sector-icon">&#x1F4BC;</div>
+                <h4>Finance &amp; Insurance</h4>
+                <p>End-of-life services, digital estate</p>
+            </div>
+        </div>
+    </div>
+    <span class="slide-num">07</span>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SLIDE 08 — FOUNDER
+     ═══════════════════════════════════════ -->
+<section class="slide dark-alt" id="s8">
+    <div class="slide-inner">
+        <p class="slide-label">Team</p>
+        <h2 class="slide-title">About the founder</h2>
+        <p class="slide-lead">Why this person, and why this mission</p>
+
+        <div class="founder-row">
+            <div class="founder-avatar">TS</div>
+            <div class="founder-info">
+                <h4>Takuya Sato — CEO, Universal Need Inc.</h4>
+                <p>Former Big Four consultant — understands firm culture, client engagement, and project design from the inside. 20+ years in semiconductor manufacturing engineering. Former president of Timeless Town Shin-Urayasu residents' association (250 households). Through SoulCarrier's work with unclaimed graves, witnessed firsthand how memories vanish — and conceived TokiStorage. Validated off-grid, institution-free 1,000-year design through real-world testing in Maui and Lake Yamanakako.</p>
+                <div class="tag-row">
+                    <span class="tag-pill">Big Four Alumni</span>
+                    <span class="tag-pill">Semiconductor engineering 20+ yrs</span>
+                    <span class="tag-pill">Community president (250 households)</span>
+                    <span class="tag-pill">SoulCarrier founder</span>
+                    <span class="tag-pill">Off-grid validated</span>
+                    <span class="tag-pill">Relocating to Sado Island (Spring 2026)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="callout blue-accent" style="margin-top: 2.5rem;">
+            <h4>A note on independence</h4>
+            <p>This partnership is a vendor partnership — structurally identical to recommending Salesforce or SAP. No audit engagement, no equity relationship, no independence concerns. Our founder has designed the model with full awareness of firm compliance requirements.</p>
+        </div>
+    </div>
+    <span class="slide-num">08</span>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SLIDE 09 — CTA
+     ═══════════════════════════════════════ -->
+<section class="slide accent" id="s9">
+    <div class="slide-inner">
+        <div class="cta-center">
+            <p class="slide-label">Next Step</p>
+            <h2 class="slide-title">Let's start with a<br>30-minute conversation.</h2>
+            <p class="slide-subtitle" style="margin: 0 auto;">
+                Partnership structure is flexible by design.<br>
+                Let's reverse-engineer the right model<br>
+                from your clients' actual challenges.
+            </p>
+            <div class="cta-links">
+                <a href="partnership-en.html">Full version</a>
+                <a href="infographic-en.html">Ecosystem overview</a>
+                <a href="usecases-en.html">200+ use cases</a>
+            </div>
+            <p style="margin-top: 3rem; font-size: 0.65rem; color: var(--slate-400); letter-spacing: 0.08em;">
+                Universal Need Inc. &nbsp;|&nbsp; TokiStorage &nbsp;|&nbsp; Confidential
+            </p>
+        </div>
+    </div>
+    <span class="slide-num">09</span>
+</section>
+
+</body>
+</html>
