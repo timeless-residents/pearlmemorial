@@ -206,6 +206,35 @@
             margin-bottom: 0.5rem;
         }
 
+        .status-done {
+            display: inline-block;
+            font-size: 0.6rem;
+            background: var(--green-pale);
+            color: var(--green);
+            padding: 0.1rem 0.35rem;
+            border-radius: 3px;
+            font-weight: 700;
+            margin-right: 0.2rem;
+        }
+        .status-wip {
+            display: inline-block;
+            font-size: 0.6rem;
+            background: var(--toki-blue-pale);
+            color: var(--toki-blue);
+            padding: 0.1rem 0.35rem;
+            border-radius: 3px;
+            font-weight: 700;
+            margin-right: 0.2rem;
+        }
+        .status-legend {
+            background: var(--bg-section);
+            border-radius: 6px;
+            padding: 0.8rem 1.2rem;
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
         .comparison-table {
             width: 100%;
             border-collapse: collapse;
@@ -293,6 +322,9 @@
         <p class="article-category">TRUST DESIGN</p>
         <h1>信頼設計 37項目 — 具体的施策リスト</h1>
         <p class="article-subtitle">「大丈夫かな？」を「応援したい」に変える設計。<br>37項目すべてに対し、解消できるもの（✅）と構造的に残るもの（🔒）を分類し、具体施策を列挙する。</p>
+        <div class="status-legend">
+            <p style="margin-bottom:0;"><span class="status-done">済</span> 実施済み　<span class="status-wip">着手中</span> 着手・進行中　マーカーなし＝今後の予定</p>
+        </div>
     </header>
 
     <div class="article-body">
@@ -308,9 +340,9 @@
         <div class="answer-box">
             <p class="answer-label">施策</p>
             <ul>
-                <li>LP・広告の導線を「理念 → 共感 → 参加方法」の順に再設計する</li>
+                <li><span class="status-wip">着手中</span>LP・広告の導線を「理念 → 共感 → 参加方法」の順に再設計する</li>
                 <li>価格表を独立ページ化し、理念コンテンツからの遷移でのみ到達可能にする</li>
-                <li>トップページから「今すぐ購入」系CTAを撤去し、「もっと知る」に差し替え</li>
+                <li><span class="status-done">済</span>トップページから「今すぐ購入」系CTAを撤去し、「もっと知る」に差し替え</li>
                 <li>ファーストビューに創設者の動機（個人的な喪失体験）を配置する</li>
             </ul>
         </div>
@@ -323,8 +355,8 @@
         <div class="answer-box">
             <p class="answer-label">施策</p>
             <ul>
-                <li>エッセイ・動画ページから購入リンクを完全に分離する（同一ページ内にCTAを置かない）</li>
-                <li>感動コンテンツの末尾は「関連エッセイへの導線」のみにする</li>
+                <li><span class="status-done">済</span>エッセイ・動画ページから購入リンクを完全に分離する（同一ページ内にCTAを置かない）</li>
+                <li><span class="status-done">済</span>感動コンテンツの末尾は「関連エッセイへの導線」のみにする</li>
                 <li>購入導線には独立した「参加の仕方」ページを設け、感情的表現を抑えた事務的トーンで書く</li>
                 <li>ユーザーレビューや体験談は「売り」目的ではなく独立コンテンツとして掲載する</li>
             </ul>
@@ -340,7 +372,7 @@
             <ul>
                 <li>葬儀直後・命日前後のターゲティング広告を禁止するポリシーを明文化・公開する</li>
                 <li>「今すぐ決めなくていい」を全ページのフッターに常設する</li>
-                <li>無料で完結するコンテンツ（エッセイ、ワークショップ記録、哲学ノート）を充実させ、支払いなしでも価値を受け取れる状態をつくる</li>
+                <li><span class="status-done">済</span>無料で完結するコンテンツ（エッセイ、ワークショップ記録、哲学ノート）を充実させ、支払いなしでも価値を受け取れる状態をつくる</li>
                 <li>冷却期間（申込後30日間のキャンセル無料）を明示する</li>
             </ul>
         </div>
@@ -353,8 +385,8 @@
         <div class="answer-box">
             <p class="answer-label">施策</p>
             <ul>
-                <li>コピーから「忘れられる」「消える」等の恐怖喚起ワードを全面監査・除去する</li>
-                <li>代わりに「すでにある記憶を形にする」というポジティブフレームに統一する</li>
+                <li><span class="status-wip">着手中</span>コピーから「忘れられる」「消える」等の恐怖喚起ワードを全面監査・除去する</li>
+                <li><span class="status-wip">着手中</span>代わりに「すでにある記憶を形にする」というポジティブフレームに統一する</li>
                 <li>「Soul Carrierを使わなくても記憶は残る。私たちはその選択肢の一つにすぎない」と明記する</li>
                 <li>競合・代替手段（散骨、樹木葬、デジタルアーカイブ等）への誠実なリンク集を設ける</li>
             </ul>
@@ -532,8 +564,8 @@
             <ul>
                 <li>「事業継続計画（BCP）」を正式に策定し公開する</li>
                 <li>運営者不在時の承継プラン（法人格、信託、コミュニティへの移管）を明文化する</li>
-                <li>データ・設計図・プロセスすべてのオープンソース化を段階的に進める</li>
-                <li>「私たちがいなくなっても続けられる仕組み」を設計思想の中核として発信する</li>
+                <li><span class="status-wip">着手中</span>データ・設計図・プロセスすべてのオープンソース化を段階的に進める</li>
+                <li><span class="status-wip">着手中</span>「私たちがいなくなっても続けられる仕組み」を設計思想の中核として発信する</li>
             </ul>
         </div>
 
@@ -654,7 +686,7 @@
         <div class="answer-box">
             <p class="answer-label">施策</p>
             <ul>
-                <li>「まだ小さいプロジェクトです」を隠さず、現在のコミュニティ規模を正直に公開する</li>
+                <li><span class="status-wip">着手中</span>「まだ小さいプロジェクトです」を隠さず、現在のコミュニティ規模を正直に公開する</li>
                 <li>初期参加者を「創設メンバー」として尊重し、彼らの声を定期発信する</li>
                 <li>学術機関・研究者との連携を優先し、「専門家が関心を持っている」実績を積む</li>
                 <li>メディア露出を計画的に狙い、第三者視点の記事を増やす</li>
@@ -855,7 +887,7 @@
             <p class="answer-label">施策</p>
             <ul>
                 <li>「両方感じているあなたは、健全です」というメッセージを公式に発信する</li>
-                <li>「疑ってください」ページで、37項目すべてを自ら列挙し回答する（このドキュメントのWeb版）</li>
+                <li><span class="status-done">済</span>「疑ってください」ページで、37項目すべてを自ら列挙し回答する（このドキュメントのWeb版）</li>
                 <li>「私たちを疑うための情報」セクションを設け、第三者チェックツール（法人登記確認、消費者相談窓口等）へのリンクを貼る</li>
                 <li>「それでも参加を選んだ理由」を既存メンバーのインタビュー形式で掲載する</li>
             </ul>
@@ -867,7 +899,7 @@
         <div class="cross-cutting">
             <h3>X-1. 「疑ってください」ページの新設</h3>
             <ul>
-                <li>37項目をそのまま掲載し、各項目に対する回答と対策を書く</li>
+                <li><span class="status-done">済</span>37項目をそのまま掲載し、各項目に対する回答と対策を書く</li>
                 <li>「このプロジェクトが詐欺でないことを証明する方法」セクションを設ける</li>
                 <li>定期的に更新し、新たな懸念にも対応する</li>
             </ul>
@@ -880,14 +912,14 @@
                 <li>意思決定議事録の公開</li>
                 <li>失敗事例の公開</li>
                 <li>外部監査報告書の公開</li>
-                <li>コードベースの段階的オープンソース化</li>
+                <li><span class="status-wip">着手中</span>コードベースの段階的オープンソース化</li>
             </ul>
         </div>
 
         <div class="cross-cutting">
             <h3>X-3. 出会いの導線設計</h3>
             <ul>
-                <li>理念コンテンツ → 活動実績 → 参加者の声 → FAQ → 参加方法 → 価格</li>
+                <li><span class="status-wip">着手中</span>理念コンテンツ → 活動実績 → 参加者の声 → FAQ → 参加方法 → 価格</li>
                 <li>広告出稿時はエッセイ・哲学ページへの誘導のみ（商品ページへの直接広告を禁止）</li>
                 <li>SNS発信は活動報告と思索が中心、商品告知は月1回以下</li>
             </ul>
