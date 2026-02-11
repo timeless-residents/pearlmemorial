@@ -23,6 +23,7 @@
 
     // ── 信仰・思想 ──
     { id: 'religion', ja: '宗教・神話', en: 'Religion' },
+    { id: 'existentialism', ja: '存在主義経済', en: 'Existentialism' },
     { id: 'dimension', ja: '5次元という視点', en: 'The Fifth Dimension' },
 
     // ── 社会制度（小→大）──
@@ -61,6 +62,7 @@
     { id: 'animal-welfare', ja: '動物愛護', en: 'Animal Welfare' },
     { id: 'ecology', ja: '生態系', en: 'Ecology' },
     { id: 'geology', ja: '地質学', en: 'Geology' },
+    { id: 'hyoutanjima', ja: 'ひょうたん島の蓋然性', en: 'The Probability of Gourd Island' },
     { id: 'space', ja: '宇宙', en: 'Space' },
 
     // ── 技術・設計 ──
