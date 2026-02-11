@@ -2159,6 +2159,66 @@ th.highlight-col {
     margin-bottom: 0.6rem;
 }
 
+.footer-refund {
+    font-size: 0.7rem;
+    color: #059669;
+    font-weight: 500;
+    margin-top: 0.3rem;
+}
+
+/* =============================================
+   Pricing Transparency Box
+   ============================================= */
+.pricing-transparency {
+    max-width: 640px;
+    margin: 1.5rem auto 2rem;
+    padding: 1.2rem 1.5rem;
+    background: #ECFDF5;
+    border-left: 3px solid #059669;
+    border-radius: 0 8px 8px 0;
+    font-size: 0.85rem;
+    line-height: 1.8;
+}
+.pricing-transparency-title {
+    font-weight: 600;
+    color: #059669;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.3rem;
+}
+.pricing-transparency a {
+    color: var(--toki-blue);
+}
+.pricing-transparency-refund {
+    margin-top: 0.5rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+/* =============================================
+   CTA No-Rush & Transparency Link
+   ============================================= */
+.cta-no-rush {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+}
+.cta-transparency-link {
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+}
+.cta-transparency-link a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.1rem;
+    transition: color 0.2s, border-color 0.2s;
+}
+.cta-transparency-link a:hover {
+    color: var(--toki-blue);
+    border-color: var(--toki-blue);
+}
+
 /* =============================================
    Driver Section
    ============================================= */
