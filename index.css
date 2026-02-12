@@ -265,40 +265,309 @@ footer { padding: 3rem 2rem; text-align: center; border-top: 1px solid rgba(201,
 @media (max-width: 1024px) { .packages-grid, .donation-tiers { grid-template-columns: 1fr 1fr; } .pillars-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 768px) { section { padding: 4rem 1.5rem; } .two-types, .contrast-grid, .packages-grid, .donation-tiers, .pillars-grid, .family-grid, .preserve-grid, .sustain-grid { grid-template-columns: 1fr; } .cta-buttons, .services-extras { flex-direction: column; align-items: center; } .lang-switch { top: 1rem; right: 1rem; } }
 
-/* Print: simple black & white */
+/* ========================================
+   Print Stylesheet
+   ======================================== */
 @media print {
-    /* base: white background, black text */
-    html, body { background: #fff !important; color: #000 !important; -webkit-print-color-adjust: exact; }
-    * { background: transparent !important; color: #000 !important; text-shadow: none !important; box-shadow: none !important; -webkit-text-fill-color: #000 !important; }
-
-    /* show animated elements (fix opacity: 0) */
-    .hero-tagline, .hero h1, .hero-sub, .hero-cta,
-    [style*="animation"], [class*="fade"] {
-        opacity: 1 !important;
-        animation: none !important;
+    /* --- Reset: white background, black text --- */
+    html, body {
+        background: #fff !important;
+        color: #222 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    * {
+        background: transparent !important;
+        text-shadow: none !important;
+        box-shadow: none !important;
+        -webkit-text-fill-color: initial !important;
     }
 
-    /* fix hero section height (prevent blank first page) */
+    /* --- Kill all animations and restore visibility --- */
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+        opacity: 1 !important;
+    }
+
+    /* --- Base typography for print --- */
+    body {
+        font-size: 11pt;
+        line-height: 1.5;
+        font-family: 'Zen Kaku Gothic New', 'Hiragino Kaku Gothic ProN', sans-serif;
+    }
+    h1, h2, h3, h4 {
+        font-family: 'Cormorant Garamond', 'Georgia', serif;
+        color: #000 !important;
+    }
+    p, li, span, div {
+        color: #333 !important;
+    }
+    strong, b {
+        color: #000 !important;
+    }
+
+    /* --- Visual hierarchy with borders instead of colors --- */
+    .gold, h2 .gold, h2 .highlight,
+    .section-label,
+    .pillar-sub, .family-role,
+    .soul-carrier-section h2, .engrave-section h2,
+    .preserve-section h2, .sustain-section h2 {
+        color: #000 !important;
+        font-weight: 500 !important;
+    }
+    .section-label {
+        border-bottom: 1px solid #999;
+        display: inline-block;
+        padding-bottom: 2px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* --- Hero: compact, no full-page height --- */
     .hero {
         min-height: auto !important;
         height: auto !important;
-        padding: 2rem 1rem !important;
+        padding: 1.5cm 1cm 1cm !important;
+        page-break-after: always;
     }
-    .hero::before { display: none !important; }
+    .hero::before, .hero::after { display: none !important; }
+    .hero h1 { font-size: 24pt !important; }
+    .hero-tagline { font-size: 8pt !important; letter-spacing: 0.3em !important; }
+    .hero-sub { font-size: 11pt !important; color: #555 !important; }
+    .registered-badge { font-size: 7pt !important; border: 1px solid #999 !important; color: #555 !important; }
 
-    /* make links readable on paper */
-    a[href]:after { content: " (" attr(href) ")"; color: #000; font-size: 0.9em; }
+    /* --- Links: only show URL for external links --- */
+    a { color: #000 !important; text-decoration: underline !important; }
+    a[href^="http"]:not([href*="pearlmemorial"]):not([href*="pearl.memorial"])::after {
+        content: " [" attr(href) "]";
+        font-size: 7pt;
+        color: #666 !important;
+        word-break: break-all;
+    }
+    /* suppress URL display for internal/relative links */
+    a[href^="#"]::after,
+    a[href$=".pdf"]::after,
+    a[href$=".html"]::after {
+        content: none !important;
+    }
 
-    /* images and decorative graphics: grayscale and remove heavy effects */
-    img, .pearl-image { filter: grayscale(100%) !important; -webkit-filter: grayscale(100%) !important; background: none !important; box-shadow: none !important; }
+    /* --- Hide interactive / non-print elements --- */
+    .lang-switch,
+    .scroll-hint,
+    .campaign-cta,
+    .footer-payment,
+    .hero-cta,
+    .cta-buttons,
+    .cta-section .cta-buttons,
+    .consultation-flow {
+        display: none !important;
+    }
 
-    /* hide non-essential interactive UI */
-    .lang-switch, .hero-cta, .cta-buttons, .scroll-hint, .campaign-cta, .footer-payment, .donation-tiers, .packages-grid { display: none !important; }
+    /* --- Sections: allow breaks within long sections --- */
+    section {
+        padding: 0.8cm 0 !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        page-break-inside: auto;
+    }
+    /* keep short sections together */
+    .fact-summary-section,
+    .maui-gratitude-section,
+    .business-info-section,
+    .pearl-section,
+    .family-section {
+        page-break-inside: avoid;
+    }
+    /* headings should not be orphaned at bottom of page */
+    h1, h2, h3, h4 {
+        page-break-after: avoid;
+        orphans: 3;
+        widows: 3;
+    }
+    p { orphans: 2; widows: 2; }
 
-    /* prevent awkward page breaks */
-    section { page-break-inside: avoid; }
-    h1, h2, h3, p { orphans: 3; widows: 3; }
+    /* --- Grids: reflow to print-friendly columns --- */
 
-    /* print-friendly type scale */
-    body { font-size: 12pt; line-height: 1.4; }
+    /* 2-column grids: keep 2 columns */
+    .two-types,
+    .contrast-grid,
+    .testimonials-container {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 0.5cm !important;
+    }
+
+    /* 4-column → 2-column for plans & pillars */
+    .packages-grid,
+    .pillars-grid,
+    .donation-tiers {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 0.4cm !important;
+    }
+
+    /* 3-column → 3-column (narrow enough to fit) */
+    .family-grid,
+    .sustain-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr 1fr !important;
+        gap: 0.4cm !important;
+    }
+    .preserve-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 0.4cm !important;
+    }
+
+    /* --- Cards: visible borders for print --- */
+    .type-card,
+    .contrast-card,
+    .package-card,
+    .pillar,
+    .testimonial-section,
+    .preserve-item,
+    .sustain-item,
+    .walls-section,
+    .why-us-section,
+    .our-story,
+    .pricing-note {
+        border: 1px solid #ccc !important;
+        padding: 0.4cm !important;
+        page-break-inside: avoid;
+    }
+    .type-card:hover, .pillar:hover, .package-card:hover,
+    .contrast-card:hover, .donation-tier:hover {
+        transform: none !important;
+    }
+
+    /* type card distinction */
+    .type-card.outside { border-left: 3px solid #666 !important; }
+    .type-card.inside { border-left: 3px solid #000 !important; }
+    .contrast-card.fail { border-left: 3px solid #999 !important; }
+    .contrast-card.success { border-left: 3px solid #000 !important; }
+
+    /* experience items */
+    .experience-item {
+        border-left: 2px solid #999 !important;
+        background: none !important;
+        padding: 0.15cm 0.3cm !important;
+    }
+    .type-card.inside .experience-item { border-left-color: #555 !important; }
+
+    /* --- Specific section fixes --- */
+
+    /* Contrast section */
+    .contrast-section {
+        padding: 0.8cm 0 !important;
+        page-break-inside: auto;
+    }
+    .contrast-insight {
+        border: 1px solid #ccc !important;
+        padding: 0.3cm !important;
+        margin-top: 0.4cm !important;
+    }
+
+    /* Services section: very long, must allow breaks */
+    .services-section {
+        padding: 0.8cm 0 !important;
+        page-break-inside: auto !important;
+    }
+    .services-content { max-width: 100% !important; }
+    .soul-carrier-section,
+    .engrave-section,
+    .preserve-section,
+    .sustain-section {
+        page-break-inside: avoid;
+        border-top: 1px solid #ddd !important;
+        padding-top: 0.5cm !important;
+        margin-top: 0.5cm !important;
+    }
+    /* Soul Carrier list */
+    .soul-carrier-list li {
+        border-left: 2px solid #555 !important;
+        background: none !important;
+    }
+
+    /* Process flow */
+    .process-flow {
+        border: 1px solid #ccc !important;
+        page-break-inside: avoid;
+    }
+    .process-step {
+        border: 1px solid #ddd !important;
+    }
+    .process-arrow { color: #000 !important; }
+
+    /* Service stats */
+    .service-stats {
+        border: 1px solid #ccc !important;
+        page-break-inside: avoid;
+    }
+    .stat-number { color: #000 !important; }
+
+    /* Why Us section */
+    .why-us-list li::before { color: #000 !important; }
+    .why-us-story {
+        border-left: 2px solid #555 !important;
+        background: none !important;
+    }
+
+    /* Pearl section */
+    .pearl-section { padding: 0.8cm 0 !important; }
+    .pearl-image {
+        border: 2px solid #000 !important;
+        width: 60px !important;
+        height: 60px !important;
+        font-size: 1.5rem !important;
+    }
+    .pearl-highlight {
+        border-left: 2px solid #555 !important;
+        background: none !important;
+        padding: 0.3cm !important;
+    }
+
+    /* Fact items */
+    .fact-item {
+        border: 1px solid #ddd !important;
+        padding: 0.2cm 0.3cm !important;
+        color: #000 !important;
+    }
+
+    /* Business info */
+    .business-info-item {
+        border-bottom: 1px solid #eee !important;
+    }
+    .business-info-label { color: #666 !important; }
+
+    /* --- Footer: minimal --- */
+    footer {
+        border-top: 1px solid #ccc !important;
+        padding: 0.5cm 0 !important;
+        page-break-inside: avoid;
+    }
+    .footer-links {
+        gap: 0.3cm !important;
+    }
+    .footer-links a { font-size: 8pt !important; }
+    .footer-memorial { font-size: 9pt !important; color: #555 !important; }
+    .footer-location { font-size: 7pt !important; color: #777 !important; }
+
+    /* --- Sustain stack border --- */
+    .sustain-stack { border-left: 2px solid #555 !important; }
+
+    /* --- CTA section: show text but hide buttons --- */
+    .cta-section {
+        page-break-inside: avoid;
+    }
+    .cta-section h2, .cta-subtitle, .cta-note { display: block !important; }
+
+    /* --- Maui gratitude --- */
+    .maui-gratitude-section { page-break-inside: avoid; }
+
+    /* --- Page margins --- */
+    @page {
+        margin: 1.5cm 1.5cm 2cm 1.5cm;
+        size: A4;
+    }
 }
