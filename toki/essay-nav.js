@@ -12,6 +12,7 @@
     { id: 'integrity', ja: '誠実さ', en: 'Integrity' },
     { id: 'solitude', ja: '孤独の変容', en: 'Solitude' },
     { id: 'pathology', ja: '継承の病理', en: 'Pathology' },
+    { id: 'emotion', ja: '感情の変容', en: 'Emotions as Transformation' },
 
     // ── 人生の節目 ──
     { id: 'lifecycle', ja: '生老病死', en: 'Life Cycle' },
