@@ -567,6 +567,29 @@ h2 {
     margin-bottom: 0;
 }
 
+/* ---- Three-Layer Storage (Dark) ---- */
+.three-layer-storage {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%);
+    border-color: rgba(59, 130, 246, 0.15);
+}
+
+.three-layer-storage h3 {
+    color: var(--text-main);
+}
+
+.layer-card {
+    background: var(--bg-card);
+    border-color: rgba(255, 255, 255, 0.06);
+}
+
+.layer-card:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+.layer-card h4 {
+    color: var(--text-main);
+}
+
 /* ---- Science Section ---- */
 .science-section {
     background: var(--bg-subtle);
@@ -900,6 +923,11 @@ th.highlight-col {
 .pricing-card:hover {
     transform: translateY(-4px);
     border-color: rgba(59, 130, 246, 0.25);
+}
+
+.pricing-card.trial {
+    border-color: var(--toki-accent);
+    background: linear-gradient(180deg, rgba(126, 184, 201, 0.08) 0%, var(--bg-card) 100%);
 }
 
 .pricing-card.recommended {

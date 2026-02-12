@@ -1754,6 +1754,42 @@ th.highlight-col {
     font-size: 1rem;
 }
 
+/* Trial Pricing Card */
+.pricing-card.trial {
+    border-color: var(--toki-accent);
+    background: linear-gradient(135deg, #F0F9FC 0%, var(--bg-card) 100%);
+    box-shadow: 0 4px 16px rgba(126, 184, 201, 0.12);
+}
+
+.pricing-card.trial:hover {
+    box-shadow: 0 8px 24px rgba(126, 184, 201, 0.2);
+}
+
+.trial-badge {
+    position: absolute;
+    top: -0.65rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.25rem 1.3rem;
+    background: var(--toki-accent);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    border-radius: 1rem;
+    white-space: nowrap;
+}
+
+.pricing-trial-note {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-top: 0.8rem;
+    margin-bottom: 1.2rem;
+    padding-top: 0.8rem;
+    border-top: 1px solid var(--border);
+}
+
 /* Premium Pricing Card */
 .pricing-card.premium {
     grid-column: 1 / -1;
@@ -2283,6 +2319,107 @@ th.highlight-col {
 }
 
 /* =============================================
+   Three-Layer Distributed Storage
+   ============================================= */
+.three-layer-storage {
+    margin-top: 3rem;
+    padding: 2.5rem 2.2rem;
+    background: linear-gradient(135deg, #F8FAFC 0%, #EFF6FF 100%);
+    border: 1px solid rgba(37, 99, 235, 0.12);
+    border-radius: 1.2rem;
+    text-align: center;
+}
+
+.three-layer-storage h3 {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.6rem;
+}
+
+.three-layer-lead {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.three-layer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.layer-card {
+    padding: 1.8rem 1.4rem;
+    background: var(--bg-card);
+    border-radius: 0.8rem;
+    border: 1px solid var(--border);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.layer-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.layer-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.layer-label {
+    display: inline-block;
+    padding: 0.2rem 0.8rem;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    border-radius: 1rem;
+    margin-bottom: 0.6rem;
+}
+
+.layer-physical .layer-label {
+    background: rgba(201, 169, 98, 0.15);
+    color: var(--gold);
+}
+
+.layer-national .layer-label {
+    background: rgba(220, 38, 38, 0.1);
+    color: #DC2626;
+}
+
+.layer-private .layer-label {
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--toki-blue);
+}
+
+.layer-card h4 {
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.layer-card p {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.three-layer-summary {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 680px;
+    margin: 0 auto;
+    font-weight: 500;
+}
+
+/* =============================================
    Sengu Box (式年遷宮)
    ============================================= */
 .sengu-box {
@@ -2617,6 +2754,8 @@ th.highlight-col {
     .sado-option-includes { flex-direction: column; gap: 0.4rem; }
     .footer-inner { grid-template-columns: 1fr 1fr; }
     .driver-summary { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
+    .three-layer-grid { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
+    .three-layer-storage { padding: 2rem 1.5rem; }
 }
 
 @media (max-width: 768px) {
