@@ -236,6 +236,16 @@ footer { padding: 3rem 2rem; text-align: center; border-top: 1px solid rgba(201,
 .footer-payment a { color: var(--text-dim); text-decoration: none; font-size: 0.7rem; padding: 0.4rem 0.8rem; border: 1px solid rgba(201, 169, 98, 0.15); transition: all 0.3s ease; }
 .footer-payment a:hover { border-color: var(--gold); color: var(--gold); }
 .footer-location { font-size: 0.65rem; letter-spacing: 0.2em; color: var(--text-dim); }
+/* Registered Badge */
+.registered-badge { display: inline-block; margin-top: 1.5rem; padding: 0.35rem 1.2rem; font-size: 0.65rem; letter-spacing: 0.2em; color: var(--text-muted); border: 1px solid rgba(201, 169, 98, 0.25); border-radius: 2rem; opacity: 0; animation: fadeUp 1s ease forwards 1s; }
+/* Business Info Section */
+.business-info-section { padding: 4rem 2rem; border-top: 1px solid rgba(201, 169, 98, 0.1); }
+.business-info-content { max-width: 600px; margin: 0 auto; }
+.business-info-grid { display: flex; flex-direction: column; gap: 0.6rem; }
+.business-info-item { display: flex; gap: 1.5rem; padding: 0.5rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.04); font-size: 0.8rem; }
+.business-info-item:last-child { border-bottom: none; }
+.business-info-label { min-width: 7rem; color: var(--text-dim); letter-spacing: 0.1em; flex-shrink: 0; }
+.business-info-value { color: var(--text-muted); }
 @keyframes fadeUp { from { opacity: 0; transform: translateY(25px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes float { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(-8px); } }
 /* Sample Report Link */

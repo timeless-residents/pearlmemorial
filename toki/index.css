@@ -2139,6 +2139,15 @@ th.highlight-col {
     line-height: 1.8;
 }
 
+.footer-registration {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-top: 0.6rem;
+    padding-top: 0.6rem;
+    border-top: 1px solid var(--border);
+}
+
 .footer-bottom {
     max-width: 960px;
     margin: 2.5rem auto 0;
