@@ -1754,6 +1754,42 @@ th.highlight-col {
     font-size: 1rem;
 }
 
+/* Trial Pricing Card */
+.pricing-card.trial {
+    border-color: var(--toki-accent);
+    background: linear-gradient(135deg, #F0F9FC 0%, var(--bg-card) 100%);
+    box-shadow: 0 4px 16px rgba(126, 184, 201, 0.12);
+}
+
+.pricing-card.trial:hover {
+    box-shadow: 0 8px 24px rgba(126, 184, 201, 0.2);
+}
+
+.trial-badge {
+    position: absolute;
+    top: -0.65rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.25rem 1.3rem;
+    background: var(--toki-accent);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    border-radius: 1rem;
+    white-space: nowrap;
+}
+
+.pricing-trial-note {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-top: 0.8rem;
+    margin-bottom: 1.2rem;
+    padding-top: 0.8rem;
+    border-top: 1px solid var(--border);
+}
+
 /* Premium Pricing Card */
 .pricing-card.premium {
     grid-column: 1 / -1;
