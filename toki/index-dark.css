@@ -590,6 +590,25 @@ h2 {
     color: var(--text-main);
 }
 
+/* ---- Voice-to-Archive (Dark) ---- */
+.voice-to-archive {
+    background: linear-gradient(135deg, rgba(201, 169, 98, 0.06) 0%, rgba(15, 23, 42, 0.9) 100%);
+    border-color: rgba(201, 169, 98, 0.2);
+}
+
+.voice-to-archive h3 {
+    color: var(--text-main);
+}
+
+.voice-to-archive strong {
+    color: var(--text-main);
+}
+
+.flow-step {
+    background: var(--bg-card);
+    border-color: rgba(255, 255, 255, 0.06);
+}
+
 /* ---- Science Section ---- */
 .science-section {
     background: var(--bg-subtle);

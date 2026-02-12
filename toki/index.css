@@ -2420,6 +2420,80 @@ th.highlight-col {
 }
 
 /* =============================================
+   Voice-to-Archive
+   ============================================= */
+.voice-to-archive {
+    margin-top: 2.5rem;
+    padding: 2.5rem 2.2rem;
+    background: linear-gradient(135deg, #FDF8E8 0%, #FFFDF5 50%, #EFF6FF 100%);
+    border: 1px solid rgba(201, 169, 98, 0.25);
+    border-radius: 1.2rem;
+    text-align: center;
+}
+
+.voice-to-archive-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-bottom: 1.8rem;
+    flex-wrap: wrap;
+}
+
+.flow-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.8rem 1rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 0.6rem;
+    min-width: 5rem;
+}
+
+.flow-icon {
+    font-size: 1.5rem;
+}
+
+.flow-step span {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    white-space: nowrap;
+}
+
+.flow-arrow {
+    font-size: 1.2rem;
+    color: var(--gold);
+    font-weight: 700;
+}
+
+.voice-to-archive h3 {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.voice-to-archive p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 680px;
+    margin: 0 auto 0.8rem;
+}
+
+.voice-to-archive p:last-child {
+    margin-bottom: 0;
+}
+
+.voice-to-archive strong {
+    color: var(--text-primary);
+}
+
+/* =============================================
    Sengu Box (式年遷宮)
    ============================================= */
 .sengu-box {
@@ -2791,6 +2865,10 @@ th.highlight-col {
 
     .features-grid,
     .stats-grid { grid-template-columns: 1fr 1fr; }
+
+    .voice-to-archive-flow { flex-direction: column; gap: 0.4rem; }
+    .flow-arrow { transform: rotate(90deg); font-size: 1rem; }
+    .voice-to-archive { padding: 2rem 1.5rem; }
 
     .testimonials-grid { grid-template-columns: 1fr; max-width: 520px; }
 
