@@ -72,6 +72,7 @@
     { id: 'hands', ja: '手で刻む', en: 'Inscribed by Hand' },
     { id: 'departure', ja: 'トレンドからの離脱', en: 'Departure from Trends' },
     { id: 'openness', ja: '公開主義', en: 'Openism' },
+    { id: 'akashic-record', ja: 'アカシックレコード', en: 'Akashic Record' },
     { id: 'legacy', ja: '技術設計', en: 'Technical Design' },
     { id: 'deposition', ja: '金属蒸着', en: 'Deposition' },
     { id: 'voice-future', ja: '音声復元', en: 'Voice Restoration' },
