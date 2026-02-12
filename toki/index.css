@@ -2493,6 +2493,39 @@ th.highlight-col {
     color: var(--text-primary);
 }
 
+/* Legal Uniqueness Block */
+.legal-uniqueness {
+    margin-top: 2rem;
+    padding: 1.8rem 2rem;
+    background: var(--toki-gold-pale);
+    border: 1px solid rgba(201, 169, 98, 0.25);
+    border-left: 4px solid var(--toki-gold);
+    border-radius: 0.75rem;
+}
+
+.legal-uniqueness h4 {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.legal-uniqueness p {
+    font-size: 0.95rem;
+    line-height: 1.85;
+    color: var(--text-secondary);
+    margin-bottom: 0.8rem;
+}
+
+.legal-uniqueness p:last-child {
+    margin-bottom: 0;
+}
+
+.legal-uniqueness strong {
+    color: var(--text-primary);
+}
+
 /* =============================================
    Sengu Box (式年遷宮)
    ============================================= */
