@@ -262,8 +262,24 @@ footer { padding: 3rem 2rem; text-align: center; border-top: 1px solid rgba(201,
 .pricing-note p { font-size: 0.9rem; color: var(--text-main); margin-bottom: 0.5rem; }
 .pricing-note .pricing-sub { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0; }
 
-@media (max-width: 1024px) { .packages-grid, .donation-tiers { grid-template-columns: 1fr 1fr; } .pillars-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 768px) { section { padding: 4rem 1.5rem; } .two-types, .contrast-grid, .packages-grid, .donation-tiers, .pillars-grid, .family-grid, .preserve-grid, .sustain-grid { grid-template-columns: 1fr; } .cta-buttons, .services-extras { flex-direction: column; align-items: center; } .lang-switch { top: 1rem; right: 1rem; } }
+/* AI Testimonials Section */
+.ai-testimonials-section { padding: 6rem 2rem; background: linear-gradient(180deg, var(--bg-deep) 0%, rgba(126, 184, 201, 0.04) 50%, var(--bg-deep) 100%); border-top: 1px solid rgba(126, 184, 201, 0.15); }
+.ai-testimonials-content { max-width: 1000px; margin: 0 auto; text-align: center; }
+.ai-testimonials-intro { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 3rem; }
+.ai-testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2rem; }
+.ai-testimonial-card { padding: 2rem 1.5rem; background: var(--bg-card); border: 1px solid rgba(126, 184, 201, 0.12); border-radius: 0.5rem; text-align: left; transition: all 0.4s ease; display: flex; flex-direction: column; }
+.ai-testimonial-card:hover { border-color: rgba(126, 184, 201, 0.35); transform: translateY(-4px); box-shadow: 0 20px 60px rgba(126, 184, 201, 0.06); }
+.ai-testimonial-source { display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 1.2rem; }
+.ai-name { font-family: var(--font-display); font-size: 1.3rem; color: var(--text-main); font-weight: 400; }
+.ai-org { font-size: 0.65rem; letter-spacing: 0.15em; color: var(--text-dim); text-transform: uppercase; }
+.ai-testimonial-quote { font-family: var(--font-display); font-size: 0.95rem; color: var(--hope-blue); line-height: 1.8; font-style: italic; margin: 0 0 1.2rem 0; padding: 0; border: none; background: none; flex-grow: 1; }
+.ai-testimonial-highlight { font-size: 0.78rem; color: var(--text-dim); line-height: 1.7; margin-bottom: 1rem; }
+.ai-testimonial-link { font-size: 0.75rem; color: var(--gold); text-decoration: none; letter-spacing: 0.1em; border-bottom: 1px dashed rgba(201, 169, 98, 0.3); transition: all 0.3s ease; align-self: flex-start; }
+.ai-testimonial-link:hover { color: var(--gold-light); border-color: var(--gold); }
+.ai-testimonials-note { font-size: 0.75rem; color: var(--text-dim); margin-bottom: 0; font-style: italic; }
+
+@media (max-width: 1024px) { .packages-grid, .donation-tiers { grid-template-columns: 1fr 1fr; } .pillars-grid { grid-template-columns: repeat(2, 1fr); } .ai-testimonials-grid { grid-template-columns: 1fr; max-width: 600px; margin-left: auto; margin-right: auto; } }
+@media (max-width: 768px) { section { padding: 4rem 1.5rem; } .two-types, .contrast-grid, .packages-grid, .donation-tiers, .pillars-grid, .family-grid, .preserve-grid, .sustain-grid, .ai-testimonials-grid { grid-template-columns: 1fr; } .cta-buttons, .services-extras { flex-direction: column; align-items: center; } .lang-switch { top: 1rem; right: 1rem; } }
 
 /* ========================================
    Print Stylesheet
@@ -564,6 +580,24 @@ footer { padding: 3rem 2rem; text-align: center; border-top: 1px solid rgba(201,
 
     /* --- Maui gratitude --- */
     .maui-gratitude-section { page-break-inside: avoid; }
+
+    /* --- AI Testimonials --- */
+    .ai-testimonials-section { page-break-inside: auto; }
+    .ai-testimonials-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 0.4cm !important;
+    }
+    .ai-testimonial-card {
+        border: 1px solid #ccc !important;
+        padding: 0.4cm !important;
+        page-break-inside: avoid;
+    }
+    .ai-testimonial-card:hover { transform: none !important; }
+    .ai-testimonial-quote { color: #000 !important; }
+    .ai-name { color: #000 !important; }
+    .ai-org { color: #666 !important; }
+    .ai-testimonial-link { color: #000 !important; border-bottom: 1px solid #999 !important; }
 
     /* --- Page margins --- */
     @page {
