@@ -1485,6 +1485,98 @@ th.highlight-col {
 }
 
 /* =============================================
+   AI Review Section
+   ============================================= */
+.ai-review-section {
+    background: var(--bg-page);
+}
+
+.ai-review-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+    max-width: 900px;
+    margin: 0 auto 1.5rem;
+}
+
+.ai-review-card {
+    padding: 1.8rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+}
+
+.ai-review-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.ai-review-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.ai-review-name {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.ai-review-org {
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+.ai-review-quote {
+    font-family: var(--font-display);
+    font-size: 0.88rem;
+    color: var(--toki-blue-dark);
+    line-height: 1.9;
+    font-style: normal;
+    margin: 0 0 1rem 0;
+    padding: 0;
+    border: none;
+    background: none;
+    flex-grow: 1;
+}
+
+.ai-review-detail {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.ai-review-link {
+    font-size: 0.78rem;
+    color: var(--toki-blue);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    align-self: flex-start;
+}
+
+.ai-review-link:hover {
+    color: var(--toki-blue-dark);
+}
+
+.ai-review-note {
+    text-align: center;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    margin-bottom: 0;
+}
+
+/* =============================================
    Pricing Section
    ============================================= */
 .pricing-section {
@@ -2904,6 +2996,7 @@ th.highlight-col {
     .voice-to-archive { padding: 2rem 1.5rem; }
 
     .testimonials-grid { grid-template-columns: 1fr; max-width: 520px; }
+    .ai-review-grid { grid-template-columns: 1fr; max-width: 520px; margin-left: auto; margin-right: auto; }
 
     .experience-cards { grid-template-columns: 1fr; }
     .storage-locations { grid-template-columns: 1fr; max-width: 360px; margin-left: auto; margin-right: auto; }
@@ -3071,6 +3164,7 @@ th.highlight-col {
     .experience-card,
     .pricing-card,
     .testimonial-card,
+    .ai-review-card,
     .evidence-box,
     .sengu-box,
     .transformation-box,
@@ -3090,6 +3184,7 @@ th.highlight-col {
     .driver-summary,
     .pricing-grid,
     .testimonials-grid,
+    .ai-review-grid,
     .experience-cards,
     .storage-locations {
         grid-template-columns: 1fr 1fr !important;
